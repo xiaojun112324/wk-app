@@ -6,6 +6,9 @@ export const apiOrder = {
     createMachineOrder: async (params: { machineId: number; quantity: number }) => {
         return await $post("/api/order/machine", params);
     },
+    buyByP: async (params: { coinSymbol: string; pCount: number | string }) => {
+        return await $post("/api/order/machine/buy-by-p", params);
+    },
     listMachineOrders: async () => {
         return await $get("/api/order/machine/list", {}, { toast: false });
     },

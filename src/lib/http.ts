@@ -7,6 +7,7 @@ import axios, {
 } from 'axios'
 import { toast } from 'sonner'
 import qs from 'qs'
+import { getToken } from '@/lib/token'
 
 let timer: any = null
 let toastId: any = null
@@ -49,7 +50,7 @@ http.interceptors.request.use(
             config.headers = new AxiosHeaders()
         }
 
-        const token = localStorage.getItem('token');
+        const token = getToken();
         const KEY = localStorage.getItem('key');
         const lng = localStorage.getItem('lng') || DEFAULTLANG;
 

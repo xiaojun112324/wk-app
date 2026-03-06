@@ -3,19 +3,20 @@ import { connectFactory, useAppContext } from '@/contexts/contextFactory'
 import { apiUser } from '@/apis/user'
 import { useQuery } from '@/hooks/useQuery'
 import BigNumber from 'bignumber.js'
+import { clearToken, getToken } from '@/lib/token'
 
 /* =========================
- * 数据结构定义
+ * 鏁版嵁缁撴瀯瀹氫箟
  * ========================= */
 
-// 单个资产
+// 鍗曚釜璧勪骇
 export interface UserAssetItem {
     tokenName: string
     tokenLogoUrl: string
     userAmount: number
 }
 
-// 用户基础信息
+// 鐢ㄦ埛鍩虹淇℃伅
 export interface UserInfo {
     userId: number
     agentId: number
@@ -23,7 +24,7 @@ export interface UserInfo {
     phone: string
     nickName?: string
     realName?: string
-    isActive: number //0 待认证 1 待审核 2 认证成功 3 驳回 
+    isActive: number //0 寰呰璇?1 寰呭鏍?2 璁よ瘉鎴愬姛 3 椹冲洖 
     isLock: number
     regTime: number
     idCard: string
@@ -35,7 +36,7 @@ export interface UserInfo {
 
 }
 
-// 资金概览
+// 璧勯噾姒傝
 export interface UserAmountInfo {
     userAmt: number
     enableAmt: number
@@ -51,7 +52,7 @@ export interface UserAmountInfo {
     positionRate: number
 }
 
-// Context 最终结构
+// Context 鏈€缁堢粨鏋?
 export interface UserContextValue {
     userInfo?: UserInfo
     amountInfo?: UserAmountInfo
@@ -62,7 +63,7 @@ export interface UserContextValue {
 }
 
 /* =========================
- * 默认 Store
+ * 榛樿 Store
  * ========================= */
 
 const KEY = 'user'
@@ -83,7 +84,7 @@ const defaultStore: UserContextValue = {
 export const connectUser = connectFactory(KEY, defaultStore)
 
 /* =========================
- * 接口数据 → Store 映射
+ * 鎺ュ彛鏁版嵁 鈫?Store 鏄犲皠
  * ========================= */
 
 const mapUserResponseToStore = (res: any): Partial<UserContextValue> => {
@@ -121,7 +122,7 @@ const mapUserResponseToStore = (res: any): Partial<UserContextValue> => {
             positionRate: Number(res.ositionRate ?? 0),
             userCNYTotal: new BigNumber(res.canWithdrawAmt ?? 0)
                 .plus(res.markValue ?? 0)
-                .decimalPlaces(2, BigNumber.ROUND_DOWN) // 关键：直接舍去
+                .decimalPlaces(2, BigNumber.ROUND_DOWN) // 鍏抽敭锛氱洿鎺ヨ垗鍘?
                 .toFixed(2)
         },
 
@@ -144,6 +145,15 @@ export const useUserContext = () => {
     })
 
     const fetchUser = async () => {
+        const token = getToken()
+        if (!token) {
+            setStore({
+                ...defaultStore,
+                loading: false,
+                refetchHandler: fetchUser,
+            })
+            return
+        }
         setStore({
             ...store,
             loading: true,
@@ -170,14 +180,14 @@ export const useUserContext = () => {
     }
 
     /**
-     * 退出登录
+     * 閫€鍑虹櫥褰?
      */
     const logout = () => {
-        // 清除本地 token / 登录态
-        localStorage.removeItem('token')
+        // 娓呴櫎鏈湴 token / 鐧诲綍鎬?
+        clearToken()
         localStorage.removeItem('refreshToken')
-        // 如果使用 cookie，也可以在这里清理
-        // 重置 Store
+        // 濡傛灉浣跨敤 cookie锛屼篃鍙互鍦ㄨ繖閲屾竻鐞?
+        // 閲嶇疆 Store
         setStore({
             ...defaultStore,
             loading: false,
@@ -190,6 +200,6 @@ export const useUserContext = () => {
         loading: store.loading || queryLoading,
         refresh: fetchUser,
         fetchUser,
-        logout, // 新增退出登录
+        logout, // 鏂板閫€鍑虹櫥褰?
     }
 }

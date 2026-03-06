@@ -1,11 +1,8 @@
 // lib/api.ts
-import { $post } from "@/lib/http";
+import { $get } from "@/lib/http";
 
 export const apiOther = {
-    getBannerList: async (params: any) => {
-        return await $post("/api/customer/banner/getBannerList", { params }, { isCheckToken: false, toast: false });
-
+    getBannerList: async () => {
+        return await $get("/api/public/banner/list", {}, { isCheckToken: false, toast: false });
     },
-
-
 };

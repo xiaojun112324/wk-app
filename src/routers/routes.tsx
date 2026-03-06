@@ -61,6 +61,7 @@ const FollowBuy = lazy(() => import('@/pages/follow/buy'))
 const Lang = lazy(() => import('@/pages/agreement/lang'))
 
 const CoinDetail=lazy(() => import('@/pages/coin-detail'))
+const CoinBuyDetail=lazy(() => import('@/pages/coin-detail/buy'))
 const Calculator=lazy(()=>import('@/pages/calculator'))
 
 export const routes = [
@@ -78,6 +79,14 @@ export const routes = [
     title: "",
     isUserInfo: true,
     permission: 'CoinDetail',
+    meta: {},
+  },
+  {
+    path: '/coin-detail/:id/buy',
+    element: <CoinBuyDetail />,
+    title: "",
+    isUserInfo: true,
+    permission: 'CoinBuyDetail',
     meta: {},
   },
       {

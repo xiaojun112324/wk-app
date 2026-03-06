@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Checkbox, Form, Input, Select, Space, message } from "antd";
-import { useNavigate, Link, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/Button";
 import { apiUser } from "@/apis/user";
 import { useMutation } from "@/hooks/useMutation";
@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { useQuery } from "@/hooks/useQuery";
 import { apiCommon } from "@/apis/common";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 export default function Register() {
     const [searchParams] = useSearchParams();
@@ -17,6 +18,7 @@ export default function Register() {
     const nav = useNavigate();
     const [form] = Form.useForm();
     const [currentCode, setCurrentCode] = useState<any>(null)
+    const [isLeaving, setIsLeaving] = useState(false);
     const codes = [{
         label: 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/A/icons/code1.png',
         value: '3n3d'
@@ -79,8 +81,18 @@ export default function Register() {
         doRegister(params);
     };
 
+    const goLogin = () => {
+        setIsLeaving(true);
+        setTimeout(() => nav("/login"), 220);
+    };
+
     return (
-        <div className=" min-h-full max-w-6xl mx-auto mt-10 px-5">
+        <motion.div
+            className=" min-h-full max-w-6xl mx-auto mt-10 px-5"
+            initial={{ opacity: 0, y: 10 }}
+            animate={isLeaving ? { opacity: 0, y: -10 } : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.22, ease: "easeInOut" }}
+        >
             <div className="mt-10">
                 <Form
                     form={form}
@@ -165,7 +177,7 @@ export default function Register() {
 
 
                     <Form.Item>
-                        <Button type="submit" className="w-full" loading={loading}>
+                        <Button type="submit" className="w-full !text-white" loading={loading}>
                             {t('register.registerButton')}
                         </Button>
                     </Form.Item>
@@ -173,13 +185,13 @@ export default function Register() {
                     <div className="flex items-center mb-5 mt-3 justify-center">
                         <div className="text-sm text-gray-500">
                             {t('register.hasAccount')}&nbsp;
-                            <Link to="/login" className="text-gray-900">
+                            <button type="button" onClick={goLogin} className="text-gray-900">
                                 {t('register.login')}
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </Form>
             </div>
-        </div>
+        </motion.div>
     );
 }

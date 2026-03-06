@@ -1,6 +1,6 @@
 
 import { BrowserRouter, useRoutes } from 'react-router-dom'; // 引入路由相关组件
-import { Toaster, toast } from 'sonner'
+import { Toaster } from 'sonner'
 
 import MainLayout from "@/layouts/MainLayout";
 import MineLayout from './layouts/MineLayout';
@@ -91,7 +91,11 @@ function App() {
         </AliveScope>
 
       </BrowserRouter>
-      <Toaster position="top-right" />
+      <Toaster
+        position="top-right"
+        offset="calc(env(safe-area-inset-top) + 16px)"
+        mobileOffset="calc(env(safe-area-inset-top) + 20px)"
+      />
       <ScrollToTopButton />
 
     </>
