@@ -1,8 +1,24 @@
 
 // lib/api.ts
-import { $post } from "@/lib/http";
+import { $get, $post } from "@/lib/http";
 
 export const apiOrder = {
+    createMachineOrder: async (params: { machineId: number; quantity: number }) => {
+        return await $post("/api/order/machine", params);
+    },
+    listMachineOrders: async () => {
+        return await $get("/api/order/machine/list", {}, { toast: false });
+    },
+    machineOrderDetail: async (id: number | string) => {
+        return await $get(`/api/order/machine/${id}`, {}, { toast: false });
+    },
+    sellMachineOrder: async (id: number | string, params: any = {}) => {
+        return await $post(`/api/order/machine/${id}/sell`, params);
+    },
+    cancelMachineOrder: async (id: number | string, params: any = {}) => {
+        return await $post(`/api/order/machine/${id}/cancel`, params);
+    },
+
     selectOrderList: async (params: any) => {
         return await $post("/api/customer/order/selectOrderList", params);
 

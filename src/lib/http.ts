@@ -53,7 +53,11 @@ http.interceptors.request.use(
         const KEY = localStorage.getItem('key');
         const lng = localStorage.getItem('lng') || DEFAULTLANG;
 
-        (config.headers as AxiosHeaders).set('Authorization', `Bearer ${token}`);
+        if (token) {
+            (config.headers as AxiosHeaders).set('Authorization', `Bearer ${token}`);
+        } else {
+            (config.headers as AxiosHeaders).delete('Authorization');
+        }
         (config.headers as AxiosHeaders).set('Accept-Language', lng);
 
         // 只有 KEY 和 token 都存在时才设置
@@ -104,7 +108,7 @@ export const request = async <T = any>(
         const res: AxiosResponse<any> = await http.request(config)
         const data = res.data;
 
-        if (data?.code === 0) {
+        if (data?.code === 200) {
             config.onSuccess?.(data?.data)
         } else {
             const msg = data?.msg || data?.message || '请求失败'

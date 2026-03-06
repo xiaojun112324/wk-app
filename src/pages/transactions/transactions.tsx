@@ -1,100 +1,76 @@
-import { useTranslation } from "react-i18next";
-import AppNav from "@/components/AppNav";
-import { useQuery } from "@/hooks/useQuery";
-import { News } from "@/apis/news";
-import { useParams } from "react-router-dom";
-import LoadingOrEmpty from "@/components/LoadingOrEmpty";
-import { formatDate } from "@/lib/format-time";
+﻿import AppNav from "@/components/AppNav";
 import TabsScroll from "@/components/TabsScroll";
+import { useQuery } from "@/hooks/useQuery";
 import { useState } from "react";
 import { apiCash } from "@/apis/cash";
-import { usePaginatedQuery } from "@/hooks/usePagination";
-import InfiniteScroll from "@/components/InfiniteScroll";
-import TradeConfirmCard from "./components/TradeConfirmCard";
-import DepositItem from "./components/DepositItem";
-import DrawItem from "./components/DrawItem";
-
 
 const Transactions = () => {
-    const { t } = useTranslation();
-    const { id } = useParams<{ id: string }>();
-    const {
-        data,
-        total,
-        initLoading,
-        page,
-        pageSize,
-        loading,
-        run,
-        hasMore,
-        isEmpty,
-        setPage,
-        refresh: refreshStore
-    } = usePaginatedQuery({
-        fetcher: apiCash.fundOrderList,
-    });
     const [tab, setTab] = useState(1);
-    const tabs = [
-        { key: 1, label: '资金明细', api: apiCash.fundOrderList },
-        /*   { key: 3, label: '保证金追加' }, */
-        { key: 4, label: '充值记录', api: apiCash.rechargeList },
-        { key: 5, label: '提现记录', api: apiCash.withdrawList },
-        /*    { key: 6, label: '转换记录' }, */
 
+    const { data: fundRows, refresh: refreshFund } = useQuery({
+        fetcher: () => apiCash.fundOrderList({ coin: "BTC" }),
+    });
+
+    const { data: rechargeRows, refresh: refreshRecharge } = useQuery({
+        fetcher: () => apiCash.rechargeList({}),
+    });
+
+    const { data: withdrawRows, refresh: refreshWithdraw } = useQuery({
+        fetcher: () => apiCash.withdrawList({}),
+    });
+
+    const tabs = [
+        { key: 1, label: "资金明细" },
+        { key: 4, label: "充值记录" },
+        { key: 5, label: "提现记录" },
     ];
 
-    const onGetData = () => {
-        setPage(page + 1)
-    }
-    const onTypeChange = (key: any) => {
+    const rows = tab === 1 ? fundRows || [] : tab === 4 ? rechargeRows || [] : withdrawRows || [];
 
-        setTab(key)
-        const fetcher = tabs.find((item: any) => item.key == key)?.api;
+    return (
+        <main className="min-h-screen px-4 pb-8">
+            <AppNav title="资金流水" />
+            <div className="mt-3">
+                <TabsScroll tabs={tabs} value={tab} onChange={(rawKey) => {
+                    const key = Number(rawKey);
+                    setTab(key);
+                    if (key === 1) refreshFund();
+                    if (key === 4) refreshRecharge();
+                    if (key === 5) refreshWithdraw();
+                }} />
+            </div>
 
-        run({ newParams: {}, newPagination: { page: 1, pageSize }, overrideFetcher: fetcher });
-    }
-    return <main className=" min-h-screen px-5">
-        <AppNav title="资金流水" />
-        <TabsScroll tabs={tabs}
-            value={tab}
-            onChange={onTypeChange}
-        />
-        <div className="h-5" />
-
-        <InfiniteScroll hasMore={hasMore} empty={isEmpty} loadMore={onGetData} loading={loading} initLoading={initLoading}  >
-
-            {
-                data?.length > 0 ?
-                    <>
-
-                        {
-                            tab == 1 ? <>
-                                {
-                                    data.map((item: any, idx: number) => <TradeConfirmCard className="mb-2" key={item.id} data={item} />)
-                                }</> : ''
-                        }
-                        {
-                            tab == 4 ? <>
-                                {
-                                    data.map((item: any, idx: number) => <DepositItem className="mb-2" key={item.id} item={item} />)
-                                }</> : ''
-                        }
-                        {
-                            tab == 5 ? <>
-                                {
-                                    data.map((item: any, idx: number) => <DrawItem className="mb-2" key={item.id} item={item} />)
-                                }</> : ''
-                        }
-                    </> : ''
-            }
-
-        </InfiniteScroll>
-
-
-
-
-
-    </main>
-}
+            <section className="mt-3 border rounded-xl p-3 text-xs">
+                {rows.length === 0 && <div className="text-gray-400">暂无数据</div>}
+                {rows.map((item: any, idx: number) => (
+                    <div key={item.id || idx} className="py-2 border-b">
+                        {tab === 1 && (
+                            <div className="flex justify-between">
+                                <span>{item.coinSymbol || "BTC"} / type {item.type}</span>
+                                <span>{item.amount}</span>
+                            </div>
+                        )}
+                        {tab === 4 && (
+                            <div className="grid grid-cols-2 gap-y-1">
+                                <div>资产网络: {item.asset}/{item.network}</div>
+                                <div>金额(CNY): {item.amountCny}</div>
+                                <div>状态: {item.status}</div>
+                                <div>时间: {item.createTime || "-"}</div>
+                            </div>
+                        )}
+                        {tab === 5 && (
+                            <div className="grid grid-cols-2 gap-y-1">
+                                <div>资产网络: {item.asset}/{item.network}</div>
+                                <div>金额(CNY): {item.amountCny}</div>
+                                <div>状态: {item.status}</div>
+                                <div>时间: {item.createTime || "-"}</div>
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </section>
+        </main>
+    );
+};
 
 export default Transactions;

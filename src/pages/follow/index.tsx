@@ -1,79 +1,81 @@
-
-import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
-
-import { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import TabsScroll from "@/components/TabsScroll";
-import { useUserContext } from "@/contexts/user/userContext";
-import SelectBi from "@/components/SelectBi";
-import UserAccount from "@/components/UserAccount";
-
-
+import { useQuery } from "@/hooks/useQuery";
+import { apiUser } from "@/apis/user";
 
 const Follow = () => {
-    const [isOpenBi, setIsOpenBi] = useState(false);
-    const [isOpenUsers, setIsOpenUsers] = useState(false);
-    const [searchParams] = useSearchParams();
-    const page = searchParams.get("page");
-       const [tab, setTab] = useState(1);
+    const [tab, setTab] = useState(1);
     const tabs = [
-        { key: 1, label: '收益' },
-        { key: 2, label: '支付' },
-    
-
+        { key: 1, label: "收益明细" },
+        { key: 2, label: "返利明细" },
     ];
-   const onTabChange = (key: any) => {
-        setTab(key)
-    }
-    const userContext = useUserContext();
-    const { loading: userLoading, userInfo, amountInfo } = userContext.store;
-    console.log(userInfo)
 
+    const { data: financeAccount } = useQuery({
+        fetcher: () => apiUser.getFinanceAccount({ coin: "BTC" }),
+    });
 
-    return <main className="pb-10 text-sm">
-        <section className="flex justify-between">
-            <div onClick={() => setIsOpenUsers(true)}>{userInfo?.username}</div>
-            <div className=" border-1 rounded-full text-xs px-2 py-1" onClick={() => setIsOpenBi(true)}>币</div>
-        </section>
-        <div className="px-4">
-            <section className="flex text-xs text-gray-400 px-4 py-5 rounded ">
-                <div className="flex-1 text-center">
-                    <div>总收入</div>
-                    <div className=" text-blue-700 mb-5"><span className=" text-lg">0.00</span> KDA</div>
-                    <div>账户余额</div>
-                    <div className=" text-blue-700"><span className=" text-lg">0.00</span> KDA</div>
-                </div>
-                <div className="flex-1 text-center">
-                        <div>总支出</div>
-                    <div className=" text-blue-700 mb-5"><span className=" text-lg">0.00</span> KDA</div>
-                
-                    <div className="mt-5">今日已挖（预估）</div>
-                    <div className=" text-blue-700"><span className=" text-lg">0.00</span> KDA</div>
+    const { data: billList } = useQuery({
+        fetcher: () => apiUser.getFinanceBillList({ coin: "BTC" }),
+    });
+
+    const { data: inviteSummary } = useQuery({
+        fetcher: apiUser.getInviteSummary,
+    });
+
+    const { data: rebateList } = useQuery({
+        fetcher: apiUser.getInviteRebateList,
+    });
+
+    const rows = useMemo(() => (tab === 1 ? billList || [] : rebateList || []), [tab, billList, rebateList]);
+
+    return (
+        <main className="pb-10 text-sm px-4">
+            <section className="rounded-xl border p-4 mt-3">
+                <div className="text-base font-semibold mb-3">收益总览</div>
+                <div className="grid grid-cols-2 gap-y-2 text-xs">
+                    <div>总收益: {financeAccount?.totalRevenue ?? 0}</div>
+                    <div>总支出: {financeAccount?.totalPaid ?? 0}</div>
+                    <div>账户余额: {financeAccount?.balance ?? 0}</div>
+                    <div>币种: {financeAccount?.coinSymbol || "BTC"}</div>
                 </div>
             </section>
-        </div>
 
-
-            <section className="flex justify-center">
-                <TabsScroll
-                   className="w-"
-                    tabs={tabs}
-                    value={tab}
-                    onChange={onTabChange}
-                />
+            <section className="rounded-xl border p-4 mt-3">
+                <div className="text-base font-semibold mb-2">邀请返利</div>
+                <div className="grid grid-cols-2 gap-y-2 text-xs">
+                    <div>总邀请人数: {inviteSummary?.totalInviteCount ?? 0}</div>
+                    <div>一级/二级: {inviteSummary?.level1Count ?? 0} / {inviteSummary?.level2Count ?? 0}</div>
+                    <div>一级比例: {inviteSummary?.level1Rate ?? 0}</div>
+                    <div>二级比例: {inviteSummary?.level2Rate ?? 0}</div>
+                    <div>总返利(CNY): {inviteSummary?.totalRebateCny ?? 0}</div>
+                    <div>下级总充值(CNY): {inviteSummary?.totalSourceRechargeCny ?? 0}</div>
+                </div>
             </section>
 
-      
-
-
-
-        <SelectBi open={isOpenBi} onOpenChange={setIsOpenBi} />
-        <UserAccount open={isOpenUsers} onOpenChange={setIsOpenUsers} />
-
-
-
-
-
-    </main>
-}
+            <section className="mt-4">
+                <TabsScroll tabs={tabs} value={tab} onChange={(key) => setTab(Number(key))} />
+                <div className="mt-3 rounded-xl border p-3">
+                    {rows.length === 0 && <div className="text-xs text-gray-400">暂无数据</div>}
+                    {rows.map((item: any, idx: number) => (
+                        <div key={item.id || idx} className="py-2 border-b text-xs">
+                            {tab === 1 ? (
+                                <div className="flex justify-between">
+                                    <span>{item.coinSymbol || "BTC"} / type {item.type}</span>
+                                    <span>{item.amount}</span>
+                                </div>
+                            ) : (
+                                <div className="space-y-1">
+                                    <div className="flex justify-between"><span>来源用户</span><span>{item.sourceUsername || item.sourceUserId}</span></div>
+                                    <div className="flex justify-between"><span>返利金额(CNY)</span><span>{item.rebateAmountCny}</span></div>
+                                    <div className="flex justify-between"><span>层级/比例</span><span>L{item.level} / {item.rebateRate}</span></div>
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </section>
+        </main>
+    );
+};
 
 export default Follow;

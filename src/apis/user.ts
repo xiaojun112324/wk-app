@@ -37,11 +37,11 @@ export const apiUser = {
 
     },
     withdraw: async (params: any) => {
-        return await $post("/user/withdraw/outMoney.do", params);
+        return await $post("/api/wallet/withdraw/submit", params);
 
     },
     recharge: async (params: any) => {
-        return await $post("/api/recharge/add.do", params);
+        return await $post("/api/wallet/recharge/submit", params);
 
     },
     updateUserPhoto: async (params: any) => {
@@ -49,9 +49,36 @@ export const apiUser = {
 
     },
 
-    getSetting: async (params: any) => {
-        return await $post("/api/admin/getSetting.do", params);
-
+    getWalletAccount: async () => {
+        return await $get("/api/wallet/account", {}, { toast: false });
+    },
+    getRechargeAddress: async () => {
+        return await $get("/api/wallet/recharge/address", {}, { toast: false });
+    },
+    getRechargeList: async (params?: any) => {
+        return await $get("/api/wallet/recharge/list", params || {}, { toast: false });
+    },
+    getWithdrawList: async (params?: any) => {
+        return await $get("/api/wallet/withdraw/list", params || {}, { toast: false });
+    },
+    getInviteSummary: async () => {
+        return await $get("/api/wallet/invite/summary", {}, { toast: false });
+    },
+    getInviteHierarchy: async () => {
+        return await $get("/api/wallet/invite/hierarchy", {}, { toast: false });
+    },
+    getInviteRebateList: async (params?: any) => {
+        return await $get("/api/wallet/invite/rebate/list", params || {}, { toast: false });
+    },
+    getFinanceAccount: async (params?: { coin?: string }) => {
+        return await $get("/api/finance/account", params || {}, { toast: false });
+    },
+    getFinanceBillList: async (params?: { coin?: string; type?: number }) => {
+        return await $get("/api/finance/bill/list", params || {}, { toast: false });
+    },
+    getSetting: async (_params: any) => {
+        // 兼容旧页面调用，返回空配置避免报错
+        return { code: 200, msg: "success", data: {} } as any;
     },
 
 };
