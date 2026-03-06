@@ -1,0 +1,1225 @@
+{
+  "common": { "store": "Cửa hàng",
+  "goods": "Hàng hóa",
+    "category": "Danh mục",
+    "categories": "Tất cả danh mục",
+    "wishlist": "Danh sách yêu thích",
+    "checkout": "Thanh toán",
+    "order": "Đơn hàng",
+    "account": "Tài khoản",
+    "settings": "Cài đặt",
+    "language": "Ngôn ngữ",
+    "currency": "Tiền tệ",
+    "search": "Tìm kiếm",
+    "searchPlaceholder": "Tìm kiếm sản phẩm, thương hiệu hoặc danh mục",
+    "buyNow": "Mua ngay",
+    "viewMore": "Xem thêm",
+    "viewAll": "Xem tất cả",
+    "loadMore": "Tải thêm",
+    "confirm": "Xác nhận",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Chỉnh sửa",
+    "save": "Lưu",
+    "submit": "Gửi",
+    "back": "Quay lại",
+    "next": "Tiếp theo",
+    "previous": "Trước đó",
+    "yes": "Có",
+    "no": "Không",
+    "success": "Thành công",
+    "failed": "Thất bại",
+    "loading": "Đang tải...",
+    "noData": "Không có dữ liệu",
+    "outOfStock": "Hết hàng",
+    "inStock": "Còn hàng",
+    "soldOut": "Đã bán hết",
+    "newArrival": "Hàng mới về",
+    "bestSeller": "Bán chạy nhất",
+    "discount": "Giảm giá",
+    "price": "Giá",
+    "quantity": "Số lượng",
+    "total": "Tổng",
+    "subtotal": "Tạm tính",
+    "shipping": "Vận chuyển",
+    "tax": "Thuế",
+    "grandTotal": "Tổng cộng",
+    "payment": "Thanh toán",
+    "paymentMethod": "Phương thức thanh toán",
+    "delivery": "Giao hàng",
+    "contactUs": "Liên hệ chúng tôi",
+    "helpCenter": "Trung tâm hỗ trợ",
+    "privacyPolicy": "Chính sách bảo mật",
+    "termsOfService": "Điều khoản dịch vụ",
+    "logout": "Đăng xuất",
+    "forgotPassword": "Quên mật khẩu?",
+    "rememberMe": "Ghi nhớ tôi",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "password": "Mật khẩu",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "welcomeBack": "Chào mừng quay lại",
+    "or": "hoặc",
+    "continue": "Tiếp tục",
+    "filter": "Bộ lọc",
+    "sort": "Sắp xếp",
+    "clear": "Xóa",
+    "viewDetails": "Xem chi tiết",
+    "reviews": "Đánh giá",
+    "addReview": "Thêm đánh giá",
+    "rating": "Xếp hạng",
+    "share": "Chia sẻ",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép",
+    "backToHome": "Quay về trang chủ",
+    "404Title": "Không tìm thấy trang",
+    "404Desc": "Xin lỗi, trang bạn truy cập không tồn tại.",
+    "retry": "Thử lại"
+  },
+  "login": {
+    "title": "Đăng nhập vào tài khoản của bạn",
+    "subtitle": "Chào mừng bạn! Vui lòng nhập thông tin tài khoản",
+    "tabEmail": "Đăng nhập bằng email",
+    "tabPhone": "Đăng nhập bằng điện thoại",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Nhập email",
+    "emailRequired": "Vui lòng nhập email",
+    "phoneLabel": "Điện thoại",
+    "phonePlaceholder": "Nhập số điện thoại",
+    "phoneRequired": "Vui lòng nhập số điện thoại",
+    "areaCodePlaceholder": "Mã vùng",
+    "areaCodeRequired": "Vui lòng chọn mã vùng",
+    "passwordLabel": "Mật khẩu",
+    "passwordPlaceholder": "Nhập mật khẩu",
+    "passwordRequired": "Vui lòng nhập mật khẩu",
+    "passwordPattern": "Mật khẩu phải từ 6 đến 12 ký tự và không được chứa khoảng trắng",
+    "noAccount": "Chưa có tài khoản?",
+    "register": "Đăng ký",
+    "forgotPassword": "Quên mật khẩu?",
+    "loginButton": "Đăng nhập",
+    "successMessage": "Đăng nhập thành công!"
+  },
+  "register": {
+    "title": "Đăng ký tài khoản",
+    "subtitle": "Chào mừng bạn! Vui lòng nhập thông tin",
+    "tabEmail": "Email",
+    "tabPhone": "Điện thoại",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Nhập email",
+    "emailRequired": "Vui lòng nhập email",
+    "emailInvalid": "Định dạng email không đúng",
+    "phoneLabel": "Điện thoại",
+    "phonePlaceholder": "Nhập số điện thoại",
+    "phoneRequired": "Vui lòng nhập số điện thoại",
+    "areaCodePlaceholder": "Mã vùng",
+    "areaCodeRequired": "Vui lòng chọn mã vùng",
+    "passwordLabel": "Mật khẩu",
+    "passwordPlaceholder": "Nhập mật khẩu",
+    "passwordRequired": "Vui lòng nhập mật khẩu",
+    "passwordPattern": "Mật khẩu phải từ 6 đến 12 ký tự và không được chứa khoảng trắng",
+    "confirmPasswordLabel": "Xác nhận mật khẩu",
+    "confirmPasswordPlaceholder": "Nhập lại mật khẩu",
+    "confirmPasswordRequired": "Vui lòng nhập lại mật khẩu",
+    "passwordMismatch": "Mật khẩu nhập lại không khớp!",
+    "hasAccount": "Đã có tài khoản?",
+    "login": "Đăng nhập",
+    "registerButton": "Đăng ký",
+    "successMessage": "Đăng ký thành công!"
+  },
+  "home": {
+    "bannerTitleLine1": "Nâng tầm phong cách",
+    "bannerTitleLine2": "Ôm trọn sự sang trọng",
+    "bannerSubtitle": "Khám phá bộ sưu tập mới nhất được thiết kế cho sự thanh lịch hiện đại. Định nghĩa lại tủ đồ của bạn với thời trang vượt thời gian.",
+    "recommendCategory": "Danh mục đề xuất",
+    "dailyNewArrival": "Hàng mới mỗi ngày",
+    "recommendProduct": "Sản phẩm đề xuất",
+    "recommendStore": "Cửa hàng đề xuất",
+    "hotRecommend": "Đề xuất nổi bật",
+    "featureAuthentic": "100% Chính hãng",
+    "featureReturn7Days": "Đổi trả trong 7 ngày",
+    "featureShippingDiscount": "Ưu đãi vận chuyển",
+    "featureSecurePayment": "Thanh toán an toàn"
+  },
+  "products": {
+    "category": "Danh mục",
+    "allProducts": "Tất cả sản phẩm",
+    "comprehensive": "Tổng hợp",
+    "sales": "Doanh số",
+    "price": "Giá",
+    "newArrival": "Hàng mới"
+  },
+  "merchantRegister": {
+    "title": "Đăng ký nhà bán hàng",
+    "header": "Đăng ký nhà bán APP-NAME",
+    "loginTipPrefix": "Nếu đã là nhà bán hàng, ",
+    "login": "nhấn để đăng nhập",
+    "description": "Chương trình đối tác của chúng tôi cung cấp hỗ trợ marketing toàn diện và dịch vụ. Đội ngũ chăm sóc khách hàng sẽ cung cấp hỗ trợ và gợi ý chuyên nghiệp để tối ưu hóa cách trình bày và chiến lược bán hàng của sản phẩm. Hãy tham gia ngay! Cùng nhau tạo cơ hội kinh doanh lớn hơn và phát triển!",
+    "merchantInfo": "Thông tin nhà bán hàng",
+    "storeLogo": "Logo cửa hàng",
+    "storeLogoTip": "Tải lên logo cửa hàng",
+    "shopName": "Tên cửa hàng",
+    "shopNameTip": "Nhập tên cửa hàng",
+    "shopNamePlaceholder": "Nhập tên cửa hàng, không chứa ký tự đặc biệt",
+    "shopAddress": "Địa chỉ cửa hàng",
+    "shopAddressTip": "Nhập địa chỉ cửa hàng",
+    "shopAddressPlaceholder": "Nhập địa chỉ cửa hàng, không chứa ký tự đặc biệt",
+    "country": "Quốc gia",
+    "countryTip": "Chọn quốc gia",
+    "countryPlaceholder": "Chọn quốc gia",
+    "idNumber": "Số CMND/Hộ chiếu",
+    "idNumberTip": "Nhập số CMND",
+    "idNumberPlaceholder": "Nhập số CMND",
+    "realName": "Họ tên thật",
+    "realNameTip": "Nhập họ tên thật",
+    "realNamePlaceholder": "Nhập họ tên thật",
+    "idCardFront": "Ảnh mặt trước CMND",
+    "idCardFrontTip": "Tải lên ảnh mặt trước CMND",
+    "idCardBack": "Ảnh mặt sau CMND",
+    "idCardBackTip": "Tải lên ảnh mặt sau CMND",
+    "verifyType": "Phương thức xác minh",
+    "verifyTypeTip": "Chọn phương thức xác minh",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "contact": "Tên người dùng (email hoặc điện thoại)",
+    "contactTip": "Nhập tên người dùng",
+    "contactPlaceholder": "Nhập email hoặc điện thoại",
+    "password": "Mật khẩu đăng nhập",
+    "passwordTip": "Nhập mật khẩu đăng nhập",
+    "passwordPattern": "Mật khẩu phải từ 6 đến 12 ký tự và không được chứa khoảng trắng",
+    "passwordPlaceholder": "Nhập mật khẩu đăng nhập",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "confirmPasswordTip": "Mật khẩu nhập lại không khớp",
+    "confirmPasswordPlaceholder": "Nhập lại mật khẩu đăng nhập",
+    "inviteCode": "Mã mời",
+    "inviteCodePlaceholder": "Nhập mã mời (tùy chọn)",
+    "submit": "Gửi yêu cầu",
+    "submitSuccess": "Gửi thành công, đang chờ duyệt!",
+    "areaCodeTip": "Chọn mã vùng",
+    "areaCodePlaceholder": "Chọn mã vùng",
+    "phonePlaceholder": "Nhập số điện thoại"
+  },
+  "mineDetail": {
+    "goodsCollect": "Bộ sưu tập sản phẩm",
+    "storeCollect": "Cửa hàng theo dõi",
+    "defaultAddress": "Địa chỉ mặc định",
+    "addAddress": "Thêm địa chỉ",
+    "followedStores": "Cửa hàng đã theo dõi",
+    "collectedGoods": "Sản phẩm đã sưu tầm"
+  },
+  "favoriteProducts": {
+    "collectedGoods": "Sản phẩm đã sưu tầm"
+  },
+  "mineMerchant": {
+    "followedShops": "Cửa hàng đã theo dõi"
+  },
+  "mine": {
+    "shop": "Đăng ký nhà bán hàng",
+    "userIdPrefix": "ID:",
+    "balanceLabel": "Số dư",
+    "deposit": "Nạp tiền",
+    "withdraw": "Rút tiền",
+    "myOrders": "Đơn hàng của tôi",
+    "all": "Tất cả",
+    "orderStatus": {
+      "pending": "Chờ thanh toán",
+      "shipping": "Chờ giao hàng",
+      "receiving": "Chờ nhận hàng",
+      "review": "Chờ đánh giá",
+      "refund": "Hoàn tiền/Dịch vụ hậu mãi"
+    },
+    "moreFeatures": "Tính năng khác",
+    "setting": "Cài đặt",
+    "language": "Ngôn ngữ",
+    "wallet": "Ví tiền",
+    "favorite": "Yêu thích"
+  },
+  "OrderDetail": {
+    "myOrders": "Đơn hàng của tôi",
+    "orderInfo": "Thông tin đơn hàng",
+    "orderNo": "Mã đơn hàng",
+    "time": "Thời gian",
+    "orderPrice": "Số tiền đơn hàng",
+    "orderState": "Trạng thái đơn hàng",
+    "refundState": "Trạng thái hoàn tiền",
+    "recipientInfo": "Thông tin người nhận",
+    "name": "Tên",
+    "phone": "Điện thoại",
+    "country": "Quốc gia",
+    "addressDetail": "Địa chỉ chi tiết",
+    "productInfo": "Thông tin sản phẩm",
+    "unitPrice": "Đơn giá",
+    "quantity": "Số lượng",
+    "subtotal": "Tạm tính",
+    "total": "Tổng",
+    "unknown": "Trạng thái không xác định"
+  },
+  "Orders": {
+    "all": "Tất cả",
+    "pending": "Chờ thanh toán",
+    "shipping": "Chờ giao hàng",
+    "receiving": "Chờ nhận hàng",
+    "review": "Chờ đánh giá",
+    "refund": "Hoàn tiền/Dịch vụ hậu mãi",
+    "confirmReceivingTitle": "Xác nhận đã nhận hàng?",
+    "confirm": "Xác nhận",
+    "cancel": "Hủy",
+    "orderNo": "Mã đơn hàng",
+    "orderDesc": "Mô tả đơn hàng",
+    "orderPrice": "Số tiền",
+    "status": "Trạng thái",
+    "actions": "Hành động",
+    "viewOrder": "Xem đơn hàng",
+    "remindShipping": "Nhắc giao hàng",
+    "remindShippingSuccess": "Nhà bán đã nhận được nhắc nhở của bạn",
+    "refundRequest": "Yêu cầu hoàn tiền",
+    "confirmReceiving": "Xác nhận nhận hàng",
+    "addComment": "Thêm bình luận",
+    "unknown": "Không xác định"
+  },
+  "Wallet": {
+    "balance": "Số dư",
+    "recharge": "Nạp tiền",
+    "withdraw": "Rút tiền",
+    "history": "Lịch sử ví",
+    "createTime": "Ngày tạo",
+    "rechargeNo": "Mã nạp",
+    "rechargeAmount": "Số tiền nạp",
+    "rechargeType": "Giao thức tiền tệ",
+    "rechargeAddress": "Địa chỉ nạp",
+    "withdrawNo": "Mã rút",
+    "withdrawAmount": "Số tiền rút",
+    "withdrawType": "Giao thức tiền tệ",
+    "withdrawAddress": "Địa chỉ nhận",
+    "fee": "Phí",
+    "realAmount": "Số tiền thực nhận",
+    "status": "Trạng thái",
+    "unpaid": "Chưa thanh toán",
+    "success": "Thành công",
+    "fail": "Thất bại",
+    "pending": "Đang xử lý",
+    "processed": "Đã xử lý",
+    "rejected": "Bị từ chối",
+    "orderNo": "Mã"
+  },
+  "AccountPanel": {
+    "balance": "Số dư",
+    "recharge": "Nạp tiền",
+    "withdraw": "Rút tiền"
+  },
+  "LogisticsDialog": {
+    "title": "Thông tin vận chuyển",
+    "empty": "Không có thông tin vận chuyển",
+    "close": "Đóng"
+  },
+  "OrderCard": {
+    "viewOrder": "Xem đơn hàng",
+    "remindShipping": "Nhắc giao hàng",
+    "requestRefund": "Yêu cầu hoàn tiền",
+    "confirmReceiving": "Xác nhận nhận hàng",
+    "payNow": "Thanh toán ngay",
+    "cancelOrder": "Hủy đơn hàng",
+    "addComment": "Thêm bình luận",
+    "refunded": "Đã hoàn tiền"
+  },
+  "RefundDialog": {
+    "title": "Yêu cầu hoàn tiền",
+    "refundReason": "Lý do hoàn tiền",
+    "refundReasonPlaceholder": "Nhập lý do hoàn tiền",
+    "refundRemark": "Giải thích trả hàng",
+    "refundRemarkPlaceholder": "Nhập giải thích trả hàng",
+    "cancel": "Hủy",
+    "submit": "Gửi"
+  },
+  "Search": {
+    "comprehensive": "Tổng hợp",
+    "soldNum": "Doanh số",
+    "price": "Giá",
+    "newest": "Mới nhất"
+  },
+  "Address": {
+    "setting": "Cài đặt",
+    "defaultAddress": "Địa chỉ mặc định",
+    "addAddress": "Thêm địa chỉ",
+    "confirmDelete": "Xác nhận xóa",
+    "confirmDeleteContent": "Bạn có chắc chắn muốn xóa địa chỉ này?",
+    "ok": "Xác nhận",
+    "cancel": "Hủy",
+    "edit": "Chỉnh sửa",
+    "delete": "Xóa",
+    "deleted": "Đã xóa"
+  },
+  "DeleteAccount": {
+    "setting": "Cài đặt",
+    "title": "Hủy tài khoản",
+    "description": "Hủy vĩnh viễn tài khoản APP-NAME của bạn, xóa toàn bộ thông tin cá nhân và dữ liệu liên quan. Sau khi hủy, dữ liệu không thể khôi phục, vui lòng thận trọng. Hãy đảm bảo hoàn tất các thao tác cần thiết trước khi hủy, như lưu thông tin quan trọng hoặc xử lý việc chưa hoàn tất.",
+    "account": "Tài khoản của bạn",
+    "enterAccount": "Nhập",
+    "reason": "Lý do bạn muốn rời đi",
+    "submit": "Gửi yêu cầu",
+    "submitSuccess": "Gửi thành công"
+  },
+  "Setting": {
+    "title": "Cài đặt",
+    "description": "Quản lý tài khoản APP-NAME dễ dàng, an toàn và tiện lợi! Thay đổi mật khẩu đăng nhập chỉ với một cú nhấp, khuyến nghị dùng mật khẩu mạnh có chữ cái, số và ký hiệu, cập nhật định kỳ để đảm bảo an toàn tài khoản; thiết lập mật khẩu giao dịch riêng để đảm bảo an toàn cho các thao tác nhạy cảm; cập nhật địa chỉ nhận hàng chính xác để đảm bảo thông báo và giao hàng suôn sẻ trên nền tảng. Thao tác đơn giản, trải nghiệm yên tâm!",
+    "loginPassword": "Mật khẩu đăng nhập",
+    "tradePassword": "Mật khẩu giao dịch",
+    "address": "Địa chỉ nhận hàng",
+    "deleteAccount": "Hủy tài khoản",
+    "submitSuccess": "Gửi thành công!"
+  },
+  "LoginPassword": {
+    "setting": "Cài đặt",
+    "title": "Mật khẩu đăng nhập",
+    "description": "Thay đổi hoặc đặt lại mật khẩu, khuyến nghị dùng mật khẩu mạnh có chữ cái, số và ký hiệu, cập nhật định kỳ để bảo vệ an toàn tài khoản.",
+    "oldPassword": "Mật khẩu cũ",
+    "newPassword": "Mật khẩu mới",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "enterOldPassword": "Nhập mật khẩu cũ",
+    "enterNewPassword": "Nhập mật khẩu mới",
+    "passwordMinLength": "Mật khẩu phải có ít nhất 6 ký tự",
+    "confirmPasswordMsg": "Xác nhận mật khẩu",
+    "passwordMismatch": "Mật khẩu nhập lại không khớp",
+    "submit": "Gửi yêu cầu",
+    "success": "Thao tác thành công"
+  },
+  "PayPassword": {
+    "setting": "Cài đặt",
+    "title": "Mật khẩu giao dịch",
+    "description": "Thiết lập mật khẩu giao dịch độc lập với mật khẩu đăng nhập, dùng để xác nhận đấu giá, rút tiền, v.v., tăng cường an toàn giao dịch.",
+    "oldPassword": "Mật khẩu cũ",
+    "newPassword": "Mật khẩu mới",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "enterOldPassword": "Nhập mật khẩu cũ",
+    "enterNewPassword": "Nhập mật khẩu mới",
+    "passwordMinLength": "Mật khẩu phải có ít nhất 6 ký tự",
+    "confirmPasswordMsg": "Xác nhận mật khẩu",
+    "passwordMismatch": "Mật khẩu nhập lại không khớp",
+    "submit": "Gửi yêu cầu",
+    "success": "Thao tác thành công"
+  },
+  "MerchantHeader": {
+    "follow": "Theo dõi cửa hàng",
+    "followed": "Đã theo dõi",
+    "followSuccess": "Theo dõi thành công",
+    "unfollow": "Bỏ theo dõi",
+    "products": "Sản phẩm",
+    "sales": "Doanh số",
+    "rate": "Tỷ lệ đánh giá tốt"
+  },
+  "Products": {
+    "allProducts": "Tất cả sản phẩm",
+    "category": "Danh mục",
+    "comprehensive": "Tổng hợp",
+    "sales": "Doanh số",
+    "price": "Giá",
+    "newArrival": "Hàng mới"
+  },
+  "Store": {
+    "recommend": "Đề xuất",
+    "allProducts": "Tất cả sản phẩm"
+  },
+  "Withdraw": {
+    "myWallet": "Ví của tôi",
+    "withdraw": "Rút tiền",
+    "description": "Hỗ trợ nhiều kênh nhận tiền, xử lý nhanh yêu cầu rút tiền, an toàn và tuân thủ đảm bảo an toàn cho mỗi lần rút."
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Không tìm thấy trang",
+    "description": "Xin lỗi, chúng tôi không thể tìm thấy trang bạn muốn truy cập.",
+    "backHome": "Quay về trang chủ"
+  },
+  "CheckForms": {
+    "checkout": "Thanh toán",
+    "addressTitle": "1. Địa chỉ nhận hàng",
+    "changeAddress": "Thay đổi địa chỉ",
+    "addressInfo": "Thông tin nhận hàng",
+    "recipientName": "Tên người nhận",
+    "phone": "Số điện thoại liên hệ",
+    "nation": "Quốc gia/Khu vực",
+    "addressDetail": "Địa chỉ chi tiết",
+    "noAddress": "Chưa có địa chỉ",
+    "addAddress": "Thêm địa chỉ",
+    "paymentTitle": "2. Phương thức thanh toán",
+    "selectPayment": "Chọn phương thức thanh toán",
+    "balance": "Số dư",
+    "paypal": "PayPal (chưa khả dụng)",
+    "visa": "VISA (chưa khả dụng)",
+    "mastercard": "MasterCard (chưa khả dụng)",
+    "orderSummary": "Tóm tắt đơn hàng",
+    "total": "Tổng",
+    "submitOrder": "Gửi đơn hàng",
+    "submitSuccess": "Gửi thành công",
+    "tip": "Mẹo",
+    "selectAddressFirst": "Vui lòng chọn địa chỉ nhận hàng trước",
+    "selectAddress": "Chọn địa chỉ nhận hàng",
+    "noAvailableAddress": "Không có địa chỉ khả dụng"
+  },
+  "OrderResult": {
+    "paymentSuccess": "Thanh toán thành công",
+    "recipient": "Người nhận",
+    "address": "Địa chỉ nhận hàng",
+    "continueShopping": "Tiếp tục mua sắm",
+    "viewOrders": "Xem đơn hàng"
+  },
+  "Deposit": {
+    "myWallet": "Ví của tôi",
+    "deposit": "Nạp tiền",
+    "description": "Nạp tiền nhanh và ổn định, thao tác đơn giản và mượt mà, bổ sung số dư tài khoản bất cứ lúc nào để sử dụng không lo."
+  },
+  "BottomNav": {
+    "home": "Trang chủ",
+    "products": "Sản phẩm",
+    "cart": "Giỏ hàng",
+    "mine": "Cá nhân"
+  },
+  "Footer": {
+    "solutions": {
+      "title": "Dịch vụ khách hàng",
+      "contactUs": "Liên hệ chúng tôi"
+    },
+    "support": {
+      "title": "Đổi trả & Hoàn tiền",
+      "privacyPolicy": "Chính sách bảo mật",
+      "returnsPolicy": "Chính sách đổi trả",
+      "deliveryInformation": "Giao hàng & Nhận hàng",
+      "sellerScoreSystem": "Chính sách nhà bán"
+    },
+    "company": {
+      "title": "Trung tâm người dùng",
+      "register": "Đăng ký người dùng",
+      "orderQuery": "Tra cứu đơn hàng",
+      "favoriteProducts": "Bộ sưu tập sản phẩm",
+      "wallet": "Ví của tôi"
+    },
+    "legal": {
+      "title": "Về chúng tôi",
+      "aboutUs": "Giới thiệu",
+      "careers": "Tuyển dụng",
+      "news": "Tin tức",
+      "modernSlavery": "Tuyên bố về nô lệ hiện đại"
+    },
+    "description": "Người dùng toàn cầu của APP-NAME đến từ 112 quốc gia, sử dụng USDT/ETH/BTC để thanh toán. USDT/ETH/BTC là phương thức giao dịch không biên giới, cho phép giao dịch tức thì với chi phí thấp trên toàn thế giới, không chờ đợi và không phí quốc tế.",
+    "copyright": "© APP-NAME Limited 2023 Bảo lưu mọi quyền."
+  },
+  "Header": {
+    "title": "APP-NAME",
+    "home": "Trang chủ",
+    "category": "Danh mục",
+    "products": "Sản phẩm",
+    "sales": "Sản phẩm giảm giá",
+    "merchantOnboarding": "Đăng ký nhà bán",
+    "profile": "Trung tâm cá nhân",
+    "logout": "Đăng xuất",
+    "logoutSuccess": "Đã đăng xuất",
+    "search": "Tìm kiếm"
+  },
+  "SearchWithHistory": {
+    "placeholder": "Nội dung tìm kiếm",
+    "clearAll": "Xóa tất cả"
+  },
+  "CartDrawer": {
+    "items": "món",
+    "myCart": "Giỏ hàng của tôi"
+  },
+  "CartPanel": {
+    "totalItems": "Tổng sản phẩm",
+    "items": "món",
+    "totalPrice": "Tổng tiền",
+    "submitOrder": "Gửi đơn hàng"
+  },
+  "MerchantCard": {
+    "unfollow": "Bỏ theo dõi",
+    "follow": "Theo dõi",
+    "visitNow": "Ghé thăm ngay",
+    "sold": "Đã bán",
+    "views": "Lượt xem",
+    "rating": "Đánh giá cửa hàng"
+  },
+  "Mine": {
+    "dashboard": "Bảng điều khiển",
+    "wallet": "Ví của tôi",
+    "orders": "Đơn hàng của tôi",
+    "favoriteProducts": "Bộ sưu tập sản phẩm",
+    "followedMerchants": "Cửa hàng đã theo dõi",
+    "settings": "Cài đặt",
+    "userId": "ID"
+  },
+  "PageTitle": {
+    "more": "Thêm"
+  },
+  "ProductCard": {
+    "addCartSuccess": "Đã thêm vào giỏ hàng",
+    "collected": "Đã sưu tầm",
+    "unCollected": "Hủy sưu tầm",
+    "off": "GIẢM GIÁ",
+    "addToCart": "Thêm vào giỏ",
+    "soldViews": "Doanh số",
+    "viewsNum": "Lượt xem"
+  },
+  "AddGoodsCommentDialog": {
+    "title": "Đánh giá",
+    "addCommentSuccess": "Thêm bình luận thành công",
+    "selectProduct": "Chọn sản phẩm",
+    "selectProductRequired": "Vui lòng chọn trạng thái đánh giá",
+    "selectPlaceholder": "Chọn",
+    "userName": "Email/điện thoại thành viên",
+    "userNameRequired": "Vui lòng nhập email hoặc điện thoại thành viên",
+    "userNamePlaceholder": "Nhập email hoặc điện thoại thành viên",
+    "commentContent": "Nội dung bình luận",
+    "commentContentRequired": "Vui lòng nhập nội dung bình luận",
+    "commentContentPlaceholder": "Nhập nội dung bình luận",
+    "rating": "Xếp hạng",
+    "ratingRequired": "Vui lòng chọn xếp hạng",
+    "commentImages": "Hình ảnh bình luận",
+    "cancel": "Hủy",
+    "confirm": "Xác nhận"
+  },
+  "AddressDialog": {
+    "editAddress": "Chỉnh sửa địa chỉ nhận hàng",
+    "addAddress": "Thêm địa chỉ nhận hàng",
+    "recipientName": "Tên người nhận",
+    "recipientNameRequired": "Vui lòng nhập tên người nhận",
+    "recipientNamePlaceholder": "Nhập tên người nhận",
+    "phone": "Điện thoại",
+    "nationRequired": "Vui lòng chọn mã quốc gia",
+    "nationPlaceholder": "Mã quốc gia",
+    "phoneRequired": "Vui lòng nhập điện thoại",
+    "phonePlaceholder": "Nhập điện thoại",
+    "email": "Email",
+    "emailPlaceholder": "Nhập email",
+    "region": "Quốc gia/Tỉnh/Thành phố",
+    "regionRequired": "Vui lòng chọn khu vực",
+    "regionPlaceholder": "Chọn quốc gia/tỉnh/thành phố",
+    "postCode": "Mã bưu điện",
+    "postCodePlaceholder": "Nhập mã bưu điện",
+    "addressDetail": "Địa chỉ chi tiết",
+    "addressDetailPlaceholder": "Nhập địa chỉ chi tiết",
+    "isDefault": "Địa chỉ mặc định",
+    "cancel": "Hủy",
+    "confirm": "Xác nhận"
+  },
+  "CustomerServiceChat": {
+    "title": "Hỗ trợ khách hàng",
+    "inputPlaceholder": "Nhập nội dung",
+    "noMessage": "Chưa có tin nhắn",
+    "imageAlt": "Hình ảnh",
+    "heicUnsupported": "Trình duyệt hiện tại không hỗ trợ tải file HEIC",
+    "heicUploadFailed": "Không thể tải file HEIC"
+  },
+  "DepositForm": {
+    "currency": "Tiền tệ nạp",
+    "selectCurrency": "Chọn tiền tệ nạp",
+    "network": "Mạng blockchain",
+    "selectNetwork": "Chọn mạng blockchain",
+    "addressLabel": "Địa chỉ nạp",
+    "amount": "Số tiền nạp",
+    "enterAmount": "Nhập số tiền nạp",
+    "estimatedArrival": "Ước tính đến nơi (tỷ giá hiện tại {{rate}})",
+    "proof": "Chứng từ thanh toán (tải ảnh chụp màn hình)",
+    "uploadProof": "Tải lên chứng từ thanh toán",
+    "submit": "Xác nhận",
+    "success": "Thao tác thành công",
+    "addressCopied": "Đã sao chép địa chỉ!"
+  },
+  "OtpModal": {
+    "enterTransactionPassword": "Nhập mật khẩu giao dịch",
+    "enter6Digits": "Nhập mã xác minh 6 chữ số",
+    "verifyFailed": "Xác minh thất bại, vui lòng thử lại",
+    "cancel": "Hủy",
+    "confirm": "Xác nhận"
+  },
+  "ProductDetailMain": {
+    "basicInfo": "Thông tin cơ bản",
+    "sales": "Doanh số",
+    "views": "Lượt xem",
+    "originalPrice": "Giá gốc",
+    "currentPrice": "Giá hiện tại",
+    "shipping": "Vận chuyển",
+    "freeShipping": "Miễn phí vận chuyển",
+    "quantity": "Số lượng",
+    "totalPrice": "Tổng giá",
+    "buyNow": "Mua ngay",
+    "addToCart": "Thêm vào giỏ",
+    "pleaseSelect": "Vui lòng chọn",
+    "noStock": "Hết hàng",
+    "shippingDesc": "Sản phẩm sẽ được gửi trong vòng 24 giờ sau khi đặt hàng. Nếu có kiểm soát logistics trên đơn hàng, đơn hàng có thể bị trì hoãn, vui lòng chú ý thông tin logistics của đơn hàng hoặc liên hệ dịch vụ khách hàng"
+  },
+  "ProductDetailModal": {
+    "title": "Chi tiết sản phẩm",
+    "noGoods": "Không có thông tin sản phẩm",
+    "addSuccess": "Thêm thành công"
+  },
+  "UploadImg": {
+    "upload": "Tải lên",
+    "preview": "Xem trước ảnh",
+    "onlyImage": "Chỉ được tải lên ảnh định dạng JPG/PNG/WEBP/HEIC!",
+    "maxSize": "Kích thước ảnh không được vượt quá",
+    "unsupportedHeic": "Trình duyệt hiện tại không hỗ trợ tải file HEIC",
+    "uploadFailed": "Tải lên thất bại, vui lòng thử lại sau"
+  },
+  "UploadMultiple": {
+    "upload": "Tải lên",
+    "uploadSuccess": "Tải lên thành công",
+    "uploadFailed": "Tải lên thất bại"
+  },
+  "WithdrawForm": {
+    "withdrawMethod": "Phương thức rút tiền",
+    "selectWithdrawMethod": "Chọn phương thức rút tiền",
+    "crypto": "Tiền điện tử",
+    "bankCard": "Thẻ ngân hàng",
+    "coinType": "Loại tiền rút",
+    "selectCoin": "Chọn loại tiền",
+    "enterUSDT": "Nhập USDT",
+    "blockchainNetwork": "Mạng blockchain",
+    "withdrawAddress": "Địa chỉ rút tiền",
+    "enterWithdrawAddress": "Nhập địa chỉ rút tiền",
+    "copy": "Sao chép",
+    "bankName": "Tên ngân hàng",
+    "enterBankName": "Nhập tên ngân hàng",
+    "bankBranch": "Chi nhánh ngân hàng",
+    "enterBankBranch": "Nhập chi nhánh ngân hàng",
+    "bankCardNumber": "Số thẻ ngân hàng",
+    "enterBankCardNumber": "Nhập số thẻ ngân hàng",
+    "withdrawAmount": "Số tiền rút",
+    "enterWithdrawAmount": "Nhập số tiền rút",
+    "amountMustBeGreaterZero": "Số tiền rút phải lớn hơn 0",
+    "currentBalance": "Số dư hiện tại",
+    "actualReceived": "Số tiền thực nhận",
+    "fee": "Phí",
+    "confirmSubmit": "Xác nhận gửi",
+    "copied": "Đã sao chép!",
+    "inputAddressFirst": "Vui lòng nhập địa chỉ rút/số thẻ ngân hàng trước",
+    "operationSuccess": "Thao tác thành công"
+  },
+  "order": {
+    "pendingPayment": "Chờ thanh toán",
+    "pendingShipment": "Chờ giao hàng",
+    "pendingReceive": "Chờ nhận hàng",
+    "pendingReview": "Chờ đánh giá",
+    "refund": "Hoàn tiền/Dịch vụ hậu mãi"
+  },
+  "refund": {
+    "pending": "Đang xem xét",
+    "success": "Thành công",
+    "failed": "Thất bại"
+  },
+  "DeliveryInformation": {
+    "title": "Chúng tôi giao hàng ở đâu?",
+    "desc1": "Để biết chúng tôi có giao hàng đến khu vực của bạn không, hãy nhập mã bưu điện vào sản phẩm bạn muốn mua.",
+    "desc2": "Sản phẩm được gửi trực tiếp từ nhà cung cấp, với kho hàng toàn cầu tại 112 quốc gia/khu vực.",
+    "pickup": {
+      "title": "Nhận hàng ở đâu?",
+      "desc1": "Chúng tôi có điểm nhận hàng 24 giờ tại",
+      "highlight1": "cửa hàng APP-NAME, siêu thị Sainsbury's",
+      "desc2": "và kho hàng toàn cầu.",
+      "desc3": "Đối với các mặt hàng có sẵn giao nhanh, chọn trong nhiều khung giờ tùy theo vị trí của bạn. Đơn hàng sẽ được giao đến cửa và đặt ở nơi an toàn và đáng tin cậy.",
+      "alert1": "Tại Anh, Scotland và Wales, chúng tôi cung cấp các mặt hàng lớn và nặng (các mặt hàng cần hai hoặc nhiều người vận chuyển, như ghế sofa và giường), để chúng tôi có thể giao an toàn đến bất kỳ nơi nào bạn chọn.",
+      "alert2": "Một trong những tài xế thân thiện của chúng tôi sẽ liên hệ với bạn trong ngày để thảo luận chi tiết giao hàng. Nếu bạn đang tự cách ly, hãy cho chúng tôi biết để có thể sắp xếp lại ngày giao hàng.",
+      "warning": "Hiện tại, chúng tôi có nhu cầu cao về giao hàng các mặt hàng lớn. Nếu giao hàng của bạn bị trì hoãn, chúng tôi sẽ gửi tin nhắn cho bạn sớm nhất có thể. Chúng tôi đang nỗ lực hết mình để mang đến dịch vụ tốt nhất cho khách hàng, cảm ơn sự kiên nhẫn và ủng hộ liên tục của bạn."
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "q1": "Điều gì xảy ra nếu tôi đặt hàng các mặt hàng lớn và nhỏ cùng lúc?",
+      "a1_1": "Cách nhanh nhất để giao chúng là gửi riêng lẻ.",
+      "a1_2": "Đừng lo; bạn chỉ trả phí vận chuyển một lần.",
+      "a1_3": "Xem email xác nhận đơn hàng của bạn để biết thêm thông tin.",
+      "q2": "Điều gì xảy ra nếu tôi không ở nhà?",
+      "a2_1": "Các mặt hàng nhỏ sẽ được để ở nơi an toàn và kín đáo, hoặc giao cho hàng xóm của bạn, theo yêu cầu.",
+      "a2_2": "Đường dây hỗ trợ",
+      "a2_3": "Liên hệ với chúng tôi để sắp xếp lại giao hàng và chọn ngày giờ phù hợp nhất với bạn!",
+      "q3": "Có bao nhiêu người giao các mặt hàng lớn?",
+      "a3_1": "Các mặt hàng lớn, như ghế sofa, tủ đông, v.v., có thể được",
+      "a3_2": "giao bởi hai người",
+      "a3_3": ". Một trong những tài xế thân thiện của chúng tôi sẽ liên hệ với bạn vào ngày giao hàng và giao đơn hàng của bạn an toàn đến nơi bạn chọn.",
+      "q4": "COVID-19: ảnh hưởng đến giao hàng như thế nào?",
+      "a4_1": "Chúng tôi vẫn cung cấp dịch vụ giao hàng cho nhiều mặt hàng, bao gồm cả các mặt hàng đặt trước như máy chơi game. Bạn sẽ nhận được tin nhắn nhắc nhở và số theo dõi của đơn vị vận chuyển trước khi giao hàng.",
+      "a4_2": "Các mặt hàng sẽ được giao ở khu vực an toàn; các mặt hàng lớn sẽ được đặt ở nơi an toàn. Một trong những tài xế thân thiện của chúng tôi sẽ liên hệ với bạn trong ngày để thảo luận chi tiết vận chuyển các mặt hàng lớn. Nếu bạn đang tự cách ly, hãy cho chúng tôi biết để sắp xếp lại ngày giao hàng."
+    },
+    "cta": "Xem vùng phủ sóng giao hàng"
+  },
+  "PrivacyPolicy": {
+    "header": {
+      "label": "Chính sách bảo mật",
+      "title": "Chính sách bảo mật APP-NAME",
+      "desc": "Cập nhật lần cuối: tháng 10 năm 2025 | Bảo vệ quyền riêng tư của bạn là ưu tiên hàng đầu của chúng tôi"
+    },
+    "sections": {
+      "1": {
+        "title": "1、Giới thiệu",
+        "content": {
+          "welcome": "1.1 Chào mừng bạn đến với trang web cửa hàng APP-NAME",
+          "desc1": "APP-NAME tuân thủ nghiêm ngặt các trách nhiệm được quy định bởi luật và quy định bảo mật áp dụng (\"Luật Bảo mật\") và cam kết tôn trọng quyền riêng tư và mối quan tâm của tất cả người dùng trang web APP-NAME và ứng dụng di động của chúng tôi (\"Nền tảng\").",
+          "alert": "Chúng tôi nhận thức được tầm quan trọng của dữ liệu cá nhân mà bạn tin tưởng giao phó cho chúng tôi và tin rằng chúng tôi có trách nhiệm quản lý, bảo vệ và xử lý dữ liệu cá nhân của bạn một cách thích hợp.",
+          "definition": "Dữ liệu cá nhân là dữ liệu về một cá nhân có thể được xác định từ dữ liệu đó hoặc từ dữ liệu đó và thông tin khác mà tổ chức có hoặc có thể có quyền truy cập.",
+          "consent": "Bằng cách sử dụng các dịch vụ, bạn đồng ý rõ ràng rằng chúng tôi thu thập, sử dụng, tiết lộ và xử lý dữ liệu cá nhân của bạn theo chính sách bảo mật này."
+        }
+      },
+      "2": {
+        "title": "2、APP-NAME thu thập dữ liệu cá nhân khi nào?",
+        "content": {
+          "scenariosTitle": "Các tình huống thu thập phổ biến",
+          "online": "Tương tác trực tuyến",
+          "onlineItems": [
+            "Truy cập trang web",
+            "Gửi biểu mẫu",
+            "Ghi nhận cookie"
+          ],
+          "offline": "Tương tác ngoại tuyến",
+          "offlineItems": [
+            "Giao tiếp qua điện thoại",
+            "Cuộc gặp trực tiếp",
+            "Trao đổi email"
+          ],
+          "thirdParty": "Chúng tôi cũng có thể nhận thông tin của bạn từ bên thứ ba (logistics, nhà cung cấp thanh toán, v.v.)"
+        }
+      },
+      "3": {
+        "title": "3、APP-NAME thu thập dữ liệu cá nhân nào?",
+        "categories": [
+          {
+            "icon": "Thông tin cơ bản",
+            "label": "Thông tin cơ bản",
+            "items": [
+              "Tên",
+              "Email",
+              "Điện thoại",
+              "Địa chỉ"
+            ]
+          },
+          {
+            "icon": "Thông tin định danh",
+            "label": "Thông tin định danh",
+            "items": [
+              "Ngày sinh",
+              "Giới tính"
+            ]
+          },
+          {
+            "icon": "Đa phương tiện",
+            "label": "Đa phương tiện",
+            "items": [
+              "Ảnh",
+              "Âm thanh",
+              "Video"
+            ]
+          },
+          {
+            "icon": "Thông tin chuyên môn",
+            "label": "Thông tin chuyên môn",
+            "items": [
+              "Lịch sử học tập",
+              "Lịch sử công việc"
+            ]
+          },
+          {
+            "icon": "Dữ liệu vị trí",
+            "label": "Dữ liệu vị trí",
+            "items": [
+              "Vị trí địa lý"
+            ]
+          },
+          {
+            "icon": "Dữ liệu hành vi",
+            "label": "Dữ liệu hành vi",
+            "items": [
+              "Lịch sử duyệt web",
+              "Cài đặt tùy chọn"
+            ]
+          }
+        ],
+        "warning": "Bạn có thể chọn không tham gia thu thập dữ liệu bất kỳ lúc nào, nhưng điều này có thể ảnh hưởng đến việc sử dụng một số tính năng"
+      },
+      "4": {
+        "title": "4、Thu thập các dữ liệu khác",
+        "device": {
+          "title": "Thông tin thiết bị",
+          "items": [
+            "Địa chỉ IP",
+            "Hệ điều hành",
+            "Loại trình duyệt",
+            "ID thiết bị duy nhất"
+          ]
+        },
+        "location": {
+          "title": "Dịch vụ định vị",
+          "desc": "Sử dụng GPS/Wi-Fi để thu thập thông tin vị trí chính xác",
+          "note": "Bạn có thể tắt bất kỳ lúc nào trong cài đặt thiết bị"
+        }
+      },
+      "5": {
+        "title": "5、Cookie",
+        "titleLabel": "Chính sách cookie",
+        "purpose": {
+          "title": "Mục đích",
+          "items": [
+            "Gợi ý nội dung cá nhân hóa",
+            "Tối ưu hóa quảng cáo",
+            "Phân tích sử dụng trang web"
+          ]
+        },
+        "management": {
+          "title": "Quản lý",
+          "items": [
+            "Tắt trong cài đặt trình duyệt",
+            "Thoát quảng cáo cá nhân hóa trên thiết bị di động",
+            "Có thể ảnh hưởng đến một số tính năng"
+          ]
+        }
+      },
+      "6": {
+        "title": "6、Chúng tôi sử dụng thông tin bạn cung cấp như thế nào?",
+        "mainUse": "Các mục đích sử dụng chính",
+        "items": [
+          {
+            "icon": "Cung cấp dịch vụ"
+          },
+          {
+            "icon": "Giao tiếp"
+          },
+          {
+            "icon": "Phân tích dữ liệu"
+          },
+          {
+            "icon": "Tối ưu hóa tính năng"
+          },
+          {
+            "icon": "Tiếp thị"
+          },
+          {
+            "icon": "Tuân thủ pháp luật"
+          }
+        ],
+        "unsubscribe": "Bạn có thể hủy đăng ký nhận thông tin tiếp thị bất kỳ lúc nào"
+      },
+      "7": {
+        "title": "7、Chúng tôi lưu giữ thông tin nào và APP-NAME bảo vệ thông tin người dùng như thế nào?",
+        "security": {
+          "title": "Biện pháp bảo mật",
+          "items": [
+            "Bảo vệ vật lý an ninh",
+            "Đảm bảo hệ thống quản lý",
+            "Công nghệ mã hóa điện tử",
+            "Kiểm soát truy cập theo quyền"
+          ]
+        },
+        "retention": {
+          "title": "Thời gian lưu giữ",
+          "desc": "Chúng tôi chỉ lưu giữ trong thời gian cần thiết, xóa sau khi đáp ứng các điều kiện sau:",
+          "items": [
+            "Chấm dứt quan hệ",
+            "Hoàn thành mục đích",
+            "Đáp ứng yêu cầu pháp lý"
+          ]
+        }
+      },
+      "8": {
+        "title": "8、APP-NAME có tiết lộ thông tin thu thập được từ khách truy cập cho bên thứ ba không?",
+        "recipients": [
+          "Công ty con/công ty liên kết",
+          "Bên giao dịch",
+          "Nhà cung cấp dịch vụ",
+          "Cơ quan chính phủ",
+          "Bên sáp nhập/mua lại",
+          "Đối tác quảng cáo"
+        ],
+        "note": "Chúng tôi đảm bảo tất cả bên thứ ba tuân thủ cùng tiêu chuẩn bảo vệ dữ liệu"
+      }
+    },
+    "quickAccess": {
+      "title": "Truy cập nhanh",
+      "items": [
+        {
+          "label": "Rút lại sự đồng ý",
+          "icon": "Rút lại"
+        },
+        {
+          "label": "Truy cập dữ liệu",
+          "icon": "Xem"
+        },
+        {
+          "label": "Cài đặt cookie",
+          "icon": "Cookie"
+        },
+        {
+          "label": "Liên hệ chúng tôi",
+          "icon": "Email"
+        }
+      ]
+    },
+    "footer": {
+      "contact": "Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với nhân viên bảo vệ dữ liệu của chúng tôi",
+      "email": "support@APP-NAME.com",
+      "copyright": "© 2025 APP-NAME. Bảo lưu mọi quyền."
+    },
+    "toggle": {
+      "expand": "Mở rộng",
+      "collapse": "Thu gọn"
+    }
+  },
+  "PrivacyPolicyPage": {
+    "header": "Chính sách bảo mật",
+    "title": "Chính sách bảo mật APP-NAME",
+    "lastUpdated": "Cập nhật lần cuối: tháng 10 năm 2025 | Bảo vệ quyền riêng tư của bạn là ưu tiên hàng đầu của chúng tôi",
+    "expand": "Mở rộng",
+    "collapse": "Thu gọn",
+    "section1Title": "1、Giới thiệu",
+    "section1_1": "1.1 Chào mừng bạn đến với trang web cửa hàng APP-NAME",
+    "section1_2": "APP-NAME tuân thủ nghiêm ngặt các trách nhiệm được quy định bởi luật bảo mật áp dụng (\"Luật Bảo mật\") và cam kết tôn trọng quyền riêng tư của tất cả người dùng nền tảng APP-NAME của chúng tôi.",
+    "section1_3": "Chúng tôi nhận thức được tầm quan trọng của dữ liệu cá nhân mà bạn tin tưởng giao phó và tin rằng chúng tôi có trách nhiệm quản lý, bảo vệ và xử lý dữ liệu cá nhân của bạn một cách thích hợp.",
+    "section1_4": "Dữ liệu cá nhân là dữ liệu về một cá nhân có thể nhận dạng.",
+    "section1_5": "Bằng cách sử dụng các dịch vụ, bạn đồng ý rằng chúng tôi thu thập, sử dụng, tiết lộ và xử lý dữ liệu cá nhân của bạn theo chính sách bảo mật này.",
+    "section2Title": "2、APP-NAME thu thập dữ liệu cá nhân khi nào?",
+    "section2_1": "Các tình huống thu thập phổ biến",
+    "section2_2": "Tương tác trực tuyến",
+    "section2_3": "Truy cập trang web",
+    "section2_4": "Gửi biểu mẫu",
+    "section2_5": "Ghi nhận cookie",
+    "section2_6": "Tương tác ngoại tuyến",
+    "section2_7": "Giao tiếp qua điện thoại",
+    "section2_8": "Cuộc gặp trực tiếp",
+    "section2_9": "Trao đổi email",
+    "section2_10": "Chúng tôi cũng có thể nhận thông tin của bạn từ bên thứ ba",
+    "section3Title": "3、APP-NAME thu thập dữ liệu cá nhân nào?",
+    "section3_1_label": "Thông tin cơ bản",
+    "section3_1_1": "Tên",
+    "section3_1_2": "Email",
+    "section3_1_3": "Điện thoại",
+    "section3_1_4": "Địa chỉ",
+    "section3_2_label": "Thông tin định danh",
+    "section3_2_1": "Ngày sinh",
+    "section3_2_2": "Giới tính",
+    "section3_3_label": "Đa phương tiện",
+    "section3_3_1": "Ảnh",
+    "section3_3_2": "Âm thanh",
+    "section3_3_3": "Video",
+    "section3_4_label": "Thông tin chuyên môn",
+    "section3_4_1": "Lịch sử học tập",
+    "section3_4_2": "Lịch sử công việc",
+    "section3_5_label": "Dữ liệu vị trí",
+    "section3_5_1": "Vị trí địa lý",
+    "section3_6_label": "Dữ liệu hành vi",
+    "section3_6_1": "Lịch sử duyệt web",
+    "section3_6_2": "Cài đặt tùy chọn",
+    "section3_warning": "Bạn có thể chọn không tham gia thu thập dữ liệu bất kỳ lúc nào, nhưng điều này có thể ảnh hưởng đến việc sử dụng một số tính năng",
+    "section4Title": "4、Cách sử dụng dữ liệu",
+    "section4_1": "Cách chúng tôi sử dụng dữ liệu của bạn",
+    "section4_2": "Cung cấp và cải thiện dịch vụ",
+    "section4_3": "Gợi ý cá nhân hóa",
+    "section4_4": "Bảo vệ an toàn",
+    "section4_5": "Tuân thủ pháp luật",
+    "section4_6": "Chia sẻ dữ liệu",
+    "section4_7": "Chúng tôi có thể chia sẻ thông tin với bên thứ ba để cung cấp dịch vụ.",
+    "section4_8": "Thông tin được chia sẻ sẽ tuân thủ nghiêm ngặt chính sách bảo mật và luật pháp.",
+    "section5Title": "5、Cookie và công nghệ theo dõi",
+    "section5_1": "Cách chúng tôi sử dụng cookie",
+    "section5_2": "Cookie cần thiết",
+    "section5_3": "Đảm bảo các chức năng cơ bản của trang web",
+    "section5_4": "Nhận diện trạng thái đăng nhập",
+    "section5_5": "Ngăn chặn gian lận",
+    "section5_6": "Cookie hiệu suất",
+    "section5_7": "Phân tích việc sử dụng trang web",
+    "section5_8": "Tối ưu hóa dịch vụ",
+    "section5_9": "Bạn có thể chọn tắt",
+    "section6Title": "6、Biện pháp bảo vệ dữ liệu",
+    "section6_1": "Các biện pháp bảo mật được áp dụng",
+    "section6_2": "Kiểm soát truy cập",
+    "section6_3": "Công nghệ mã hóa",
+    "section6_4": "Sao lưu định kỳ",
+    "section6_5": "Đào tạo an ninh",
+    "section6_6": "Giám sát hệ thống",
+    "section6_7": "Kiểm toán và tuân thủ",
+    "section6_8": "Không chia sẻ mật khẩu tài khoản của bạn, đảm bảo an toàn dữ liệu cá nhân",
+    "section7Title": "7、Quyền của người dùng",
+    "section7_1": "Quyền truy cập và kiểm soát",
+    "section7_2": "Xem thông tin cá nhân được lưu giữ",
+    "section7_3": "Sửa dữ liệu không chính xác",
+    "section7_4": "Yêu cầu xóa dữ liệu",
+    "section7_5": "Hạn chế hoặc từ chối xử lý",
+    "section7_6": "Các quyền khác",
+    "section7_7": "Bạn có quyền rút lại sự đồng ý bất kỳ lúc nào và đặt câu hỏi về quyền riêng tư.",
+    "section7_8": "Quyền chuyển dữ liệu",
+    "section7_9": "Quyền phản đối xử lý",
+    "section7_10": "Quyền khiếu nại",
+    "section8Title": "8、Liên hệ chúng tôi",
+    "section8_1": "Nếu bạn có thắc mắc về chính sách bảo mật",
+    "section8_2": "Liên hệ qua email hỗ trợ khách hàng",
+    "section8_3": "Gọi đường dây dịch vụ",
+    "section8_4": "Qua chat trực tuyến",
+    "section8_5": "Qua các tài khoản mạng xã hội",
+    "section8_6": "Thư viết tay",
+    "section8_7": "Gửi biểu mẫu phản hồi trang web",
+    "section8_warning": "Chúng tôi sẽ xử lý yêu cầu của bạn trong thời gian hợp lý, nhưng một số thao tác có thể cần xác minh bổ sung"
+  },
+  "ReturnsPolicy": {
+    "title": "Tôi đã đổi ý",
+    "subtitle1": "Bạn có thể trả lại ",
+    "subtitle2": "trong vòng 15 ngày",
+    "subtitle3": " sau khi nhận hoặc giao hàng.",
+    "mustBe": "Các mặt hàng của bạn phải:",
+    "refundMethod": "Hoàn tiền sẽ được xử lý qua phương thức thanh toán ban đầu:",
+    "refundUsdtEth": "Sử dụng USDT hoặc ETH, sẽ hiển thị trong tài khoản của bạn trong một ngày làm việc",
+    "refundWire": "Sử dụng chuyển khoản ngân hàng, hoàn tiền có thể mất đến 30 ngày, tùy thuộc vào ngân hàng của bạn",
+    "requirements1": "Chưa sử dụng và có đầy đủ linh kiện gốc",
+    "requirements2": "Trong bao bì gốc (nếu có, có gắn nhãn)",
+    "requirements3": "Trong tình trạng có thể bán lại",
+    "requirements4": "Có hóa đơn mua hàng",
+    "requirements5": "Cùng với bất kỳ quà tặng nào đi kèm sản phẩm",
+    "productSupport": "Hỗ trợ sản phẩm",
+    "productSupportDesc1": "Trong hầu hết các trường hợp, nếu bạn gặp sự cố với mặt hàng nào, bạn có thể dễ dàng tham khảo từ nhà tại",
+    "productSupportDesc2": "trang hỗ trợ sản phẩm",
+    "productSupportDesc3": " của chúng tôi, để xem liệu chúng tôi có thể giải quyết vấn đề không. Tại đó, bạn có thể truy cập các câu hỏi thường gặp về sản phẩm và công ty, giao hàng và nhận hàng, đổi trả và hoàn tiền của chúng tôi.",
+    "goodsIssue": "Mặt hàng của tôi có vấn đề",
+    "issueNotice1": "Nếu bạn vẫn cần trả lại (trong 15 ngày đầu tiên), chúng tôi sẽ cung cấp đổi, thay thế hoặc hoàn tiền.",
+    "issueNotice2": "Sau thời hạn này, miễn là sản phẩm vẫn còn bảo hành, chúng tôi sẽ sắp xếp sửa chữa thông qua đại lý sửa chữa chuyên nghiệp của chúng tôi, hoặc nếu không thể sửa chữa, thay thế hoặc đổi mặt hàng của bạn.",
+    "issueDesc": "Cách trả hàng nhanh nhất là qua các trung tâm lưu trữ toàn cầu của chúng tôi tại 112 quốc gia/khu vực. Chúng tôi chấp nhận hầu hết các mặt hàng, trừ các mặt hàng lớn, ngay cả khi chúng ban đầu được giao tận cửa. Nếu bạn muốn trả lại các mặt hàng lớn, hãy cuộn xuống để bắt đầu chat trực tiếp hoặc truy cập đường dây hỗ trợ của chúng tôi.",
+    "precautionsTitle": "Lưu ý",
+    "precautionsDesc": "Một số mặt hàng, như thực phẩm, trang sức đeo lỗ và đồ lót, chỉ có thể đổi hoặc hoàn tiền nếu bị lỗi. Trang web của chúng tôi sẽ chỉ rõ mặt hàng nào không được hoàn tiền.",
+    "precautions1": "Nếu bạn trả lại DVD, nhạc hoặc sản phẩm phần mềm, chúng phải chưa sử dụng và trong bao bì niêm phong gốc",
+    "precautions2": "Nếu mặt hàng hoặc bao bì bị hư hỏng nghiêm trọng, chúng tôi có quyền giảm số tiền hoàn lại",
+    "precautions3": "Chúng tôi có thể yêu cầu số sê-ri sản phẩm hoặc thông tin tương tự để xác minh liệu chúng tôi có cung cấp mặt hàng đó không",
+    "precautions4": "Tất nhiên, không có gì ảnh hưởng đến quyền lợi người tiêu dùng của bạn",
+    "precautionsNote": "Nếu chúng tôi nhận được mặt hàng của bạn, chúng tôi sẽ kiểm tra trước khi hoàn tiền. Xin lưu ý rằng, nếu các mặt hàng được kiểm tra nhưng không được trả lại theo hướng dẫn, chúng tôi có quyền từ chối hoàn tiền hoặc cung cấp hoàn tiền một phần, tùy thuộc vào tình trạng của các mặt hàng được trả lại.",
+    "proof1_1": "Hóa đơn tiền mặt",
+    "proof1_2": "Hóa đơn điện tử",
+    "proof1_3": "Mã đơn hàng của bạn",
+    "proof1_4": "Email xác nhận",
+    "proof2_1": "Hóa đơn giao dịch của bạn",
+    "proof2_2": "Địa chỉ email được sử dụng để mua mặt hàng",
+    "faqTitle": "Câu hỏi thường gặp",
+    "cta": "Bắt đầu quy trình trả hàng"
+  },
+  "sellerRating": {
+    "title": "Hệ thống đánh giá nhà bán hàng",
+    "intro": "Giới thiệu",
+    "introContent": "Tại đây, chúng tôi sẽ giới thiệu hệ thống đánh giá nhà bán hàng và cách nó được tạo ra và sử dụng.",
+    "website": "Trang web liên quan",
+    "parties": "Các bên liên quan",
+    "allSellers": "Tất cả nhà bán hàng",
+    "section1": {
+      "title": "Làm thế nào để truy cập hệ thống đánh giá nhà bán hàng?",
+      "encourage": "Hệ thống đánh giá nhà bán hàng khuyến khích các nhà bán hàng duy trì tiêu chuẩn dịch vụ cao, tạo ra trải nghiệm mua sắm tốt cho người mua của chúng tôi.",
+      "deduction": "Không đạt được các mục tiêu đã hứa sẽ dẫn đến trừ điểm.",
+      "accessPath": {
+        "prefix": "Bạn có thể xem đánh giá của mình tại trang [",
+        "path": "Trung tâm nhà bán >> Đánh giá tín dụng nhà bán",
+        "suffix": "]."
+      }
+    },
+    "section2": {
+      "title": "Đánh giá được tạo ra như thế nào?",
+      "deductionCondition": "Điểm chỉ bị trừ khi không đáp ứng kỳ vọng tối thiểu của người mua. Điều này cũng cảnh báo các nhà bán hàng về những lĩnh vực vẫn cần cải thiện.",
+      "updateTime": "Hệ thống đánh giá nhà bán hàng được cập nhật vào ngày đầu tiên của mỗi tháng dựa trên các vi phạm của nhà bán hàng trong tháng trước. Bạn có thể nhấp vào từ khóa của chiều đánh giá tương ứng để xem toàn bộ chính sách."
+    },
+    "table1": {
+      "headers": {
+        "measure": "Biện pháp chấm điểm",
+        "spec": "Thông số",
+        "deduction": "Trừ điểm hàng tháng"
+      },
+      "max10": "Tối đa 10 điểm",
+      "max20": "Tối đa 20 điểm",
+      "rows": {
+        "nfr": {
+          "title": "Tỷ lệ không thực hiện, NFR",
+          "desc": "Trong 7 ngày gần nhất, số đơn hàng bị hủy hoặc trả lại bởi nhà bán chiếm 30% tổng số đơn hàng"
+        },
+        "lsr": {
+          "title": "Tỷ lệ giao hàng trễ, LSR",
+          "desc": "Trong 7 ngày gần nhất, số đơn hàng bị trễ quá 72 giờ chiếm 20% tổng số đơn hàng"
+        },
+        "customerService": {
+          "title": "Dịch vụ khách hàng",
+          "rude": "Chat hoặc bình luận thô lỗ hoặc xúc phạm",
+          "cancelRequests": "Yêu cầu hủy đơn hàng của người mua vượt quá 5 lần trong tháng này"
+        },
+        "breach": {
+          "title": "Vi phạm",
+          "lowResponse": "Tỷ lệ phản hồi của người mua dưới 80%",
+          "violatePromise": "Nhà bán không cung cấp dịch vụ đã hứa với người mua, gây thiệt hại cho quyền lợi của người mua"
+        }
+      }
+    },
+    "section3": {
+      "title": "Các hình phạt nào liên quan đến một số điểm nhất định?"
+    },
+    "table2": {
+      "headers": {
+        "points": "Tổng điểm",
+        "level": "Cấp độ hình phạt"
+      },
+      "level1": "Cấp 1",
+      "level2": "Cấp 2",
+      "level3": "Cấp 3",
+      "level4": "Cấp 4",
+      "level5": "Cấp 5",
+      "level6": "Cấp 6",
+      "penalties": {
+        "marketingBan": "Cấm hoạt động tiếp thị (28 ngày)",
+        "freeShippingRemoval": "Xóa miễn phí vận chuyển hoặc hoàn tiền vận chuyển (28 ngày)",
+        "deboost": "Giảm hiển thị danh sách (28 ngày)",
+        "loanRestriction": "Hạn chế vay cho nhà bán (28 ngày)",
+        "listingBlock": "Chặn tạo và chỉnh sửa danh sách (28 ngày)",
+        "accountFreeze": "Đóng băng tài khoản (28 ngày)"
+      }
+    },
+    "section4": {
+      "title": "Quy tắc và chi tiết thực hiện dịch vụ khách hàng",
+      "rudeQuestion": "Chat hoặc bình luận thô lỗ hoặc xúc phạm là gì?",
+      "rudeDefinition": "Quấy rối ác ý là hành vi của thành viên xúc phạm, chửi bới, đe dọa, bình luận, v.v., hoặc sử dụng phương tiện không phù hợp để quấy rối người khác, gây thiệt hại cho quyền lợi hợp pháp của người khác.",
+      "rudeHandling": "Cách xử lý chat hoặc bình luận thô lỗ hoặc xúc phạm?",
+      "rudePenalty": "Trừ điểm cho vi phạm thông thường và nghiêm trọng về quyền kinh doanh, quản lý và kiểm soát.",
+      "rudeScenario": "Tình huống áp dụng: Quấy rối ác ý là hành vi của thành viên xúc phạm, chửi bới, đe dọa, v.v., hoặc quấy rối người khác bằng phương tiện không phù hợp, gây thiệt hại cho quyền lợi hợp pháp của người khác."
+    },
+    "section5": {
+      "title": "Các biện pháp áp dụng cho vi phạm",
+      "breachQuestion": "Vi phạm là gì?",
+      "breachDefinition": "Vi phạm là việc nhà bán không cung cấp dịch vụ cho người mua, vi phạm quyền lợi của người mua, không thực hiện các nghĩa vụ đã hứa với APP-NAME. Nhà bán phải tiếp tục thực hiện các nghĩa vụ pháp lý hoặc đã thỏa thuận về thay thế, trả hàng và hoàn tiền.",
+      "measure": "Biện pháp áp dụng: Trừ điểm",
+      "specificMeasures": "Biện pháp cụ thể",
+      "generalViolation": "1、Nếu nhà bán có các cam kết khác cần thực hiện cho đơn hàng đã thanh toán hoặc sản phẩm hoặc dịch vụ tương ứng trong các tình huống cụ thể, mỗi vi phạm thông thường trừ 5 điểm.",
+      "seriousViolation": {
+        "prefix": "2、Nhà bán vi phạm một trong các cam kết sau, trừ 10 điểm cho mỗi vi phạm nghiêm trọng:",
+        "item1": "1) APP-NAME phán định nhà bán phải chịu trách nhiệm hoàn tiền và các bảo đảm hậu mãi khác, nhưng nhà bán từ chối;",
+        "item2": "2) APP-NAME phán định nhà bán phải chịu trách nhiệm bảo đảm hậu mãi đổi/trả không lý do trong 7 ngày, nhưng nhà bán từ chối;",
+        "item3": "3) Không có sự thương lượng giữa người mua và nhà bán, từ chối hoặc trì hoãn gửi sản phẩm dùng thử đã hứa cho người mua;",
+        "item4": "4) Nhà bán không xử lý đơn hàng trong vòng 72 giờ sau khi thanh toán;",
+        "activity": "Nhà bán tham gia các hoạt động chính thức của APP-NAME, không tuân thủ yêu cầu của hoạt động (ngoại trừ thời gian giao hàng), vi phạm các nội dung quản lý khác được APP-NAME công bố chính thức (bao gồm nhưng không giới hạn ở quy tắc, quy định, tiêu chuẩn quản lý danh mục, tiêu chuẩn ngành). Nếu các quy định cụ thể phù hợp với tình huống cụ thể, thì tuân theo các quy định đó."
+      }
+    },
+    "section6": {
+      "title": "Hình phạt kéo dài bao lâu?",
+      "duration": {
+        "prefix": "Hình phạt sẽ kết thúc sau ",
+        "days": "28 ngày",
+        "suffix": ". Miễn là thực hiện các biện pháp tương ứng, cải thiện hiệu suất hiện tại của cửa hàng và duy trì tuân thủ, các nhà bán bị phạt sẽ khôi phục một số quyền của nhà bán."
+      }
+    },
+    "section7": {
+      "title": "Xử lý vi phạm",
+      "generalCase": "Nếu tình huống thông thường",
+      "generalDesc": "Người tiêu dùng khởi xướng khiếu nại, APP-NAME phán định khiếu nại hợp lệ. Mỗi vi phạm thông thường trừ 5 điểm. Hoàn thành 5 đơn hàng có thể khôi phục 5 điểm.",
+      "seriousCase": "Nếu tình huống nghiêm trọng",
+      "seriousDesc": "Người tiêu dùng khiếu nại, APP-NAME phán định khiếu nại hợp lệ và nghiêm trọng, trừ 20 điểm cho mỗi mục. Hoàn thành 20 đơn hàng có thể khôi phục 20 điểm.",
+      "extremeCase": "Nếu tình huống cực kỳ nghiêm trọng",
+      "extremeDesc": "Đóng băng tài khoản, đóng cửa hàng trong vòng 28 ngày.",
+      "example1": {
+        "title": "Ví dụ 1: Nhà bán A bị trừ 3 điểm vào tuần thứ 3, sẽ khôi phục quyền vào tuần thứ 7"
+      },
+      "example2": {
+        "title": "Ví dụ 2: Nhà bán B bị trừ 3 điểm vào tuần thứ 3 và 3 điểm vào tuần thứ 5. Các điểm này được cộng dồn để xác định cấp độ, khôi phục quyền vào tuần thứ 9"
+      },
+      "example3": {
+        "title": "Ví dụ 3: Nhà bán C bị trừ 3 điểm một tuần trước khi bắt đầu quý mới và 3 điểm sau khi bắt đầu quý, các điểm mới sẽ xác định lại cấp độ"
+      }
+    },
+    "section8": {
+      "title": "Làm thế nào để kháng cáo đánh giá?",
+      "appeal": {
+        "prefix": "Nhấp vào ",
+        "link": "liên kết đường dây hỗ trợ",
+        "suffix": " để kháng cáo. Nếu kháng cáo của bạn thành công, chúng tôi sẽ hủy trừ điểm và khôi phục các quyền nhà bán tương ứng của bạn."
+      }
+    }
+  }
+}

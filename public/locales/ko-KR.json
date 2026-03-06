@@ -1,0 +1,1226 @@
+{
+  "common": {
+     "store": "상점",
+  "goods": "상품",
+    "category": "카테고리",
+    "categories": "모든 카테고리",
+    "wishlist": "위시리스트",
+    "checkout": "결제하기",
+    "order": "주문",
+    "account": "계정",
+    "settings": "설정",
+    "language": "언어",
+    "currency": "통화",
+    "search": "검색",
+    "searchPlaceholder": "상품, 브랜드 또는 카테고리 검색",
+    "buyNow": "지금 구매",
+    "viewMore": "더 보기",
+    "viewAll": "모두 보기",
+    "loadMore": "더 로드",
+    "confirm": "확인",
+    "cancel": "취소",
+    "delete": "삭제",
+    "edit": "편집",
+    "save": "저장",
+    "submit": "제출",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "yes": "예",
+    "no": "아니요",
+    "success": "성공",
+    "failed": "실패",
+    "loading": "로딩 중...",
+    "noData": "데이터 없음",
+    "outOfStock": "재고 없음",
+    "inStock": "재고 있음",
+    "soldOut": "매진",
+    "newArrival": "신상품",
+    "bestSeller": "베스트셀러",
+    "discount": "할인",
+    "price": "가격",
+    "quantity": "수량",
+    "total": "합계",
+    "subtotal": "소계",
+    "shipping": "배송비",
+    "tax": "세금",
+    "grandTotal": "총계",
+    "payment": "결제",
+    "paymentMethod": "결제 수단",
+    "delivery": "배송",
+    "contactUs": "문의하기",
+    "helpCenter": "고객 센터",
+    "privacyPolicy": "개인정보 처리방침",
+    "termsOfService": "이용 약관",
+    "logout": "로그아웃",
+    "forgotPassword": "비밀번호를 잊으셨나요?",
+    "rememberMe": "자동 로그인",
+    "email": "이메일",
+    "phone": "전화번호",
+    "password": "비밀번호",
+    "confirmPassword": "비밀번호 확인",
+    "welcomeBack": "다시 오신 것을 환영합니다",
+    "or": "또는",
+    "continue": "계속",
+    "filter": "필터",
+    "sort": "정렬",
+    "clear": "지우기",
+    "viewDetails": "상세 보기",
+    "reviews": "리뷰",
+    "addReview": "리뷰 작성",
+    "rating": "평점",
+    "share": "공유",
+    "copy": "복사",
+    "copied": "복사됨",
+    "backToHome": "홈으로 돌아가기",
+    "404Title": "페이지를 찾을 수 없음",
+    "404Desc": "죄송합니다. 요청하신 페이지를 찾을 수 없습니다.",
+    "retry": "재시도"
+  },
+  "login": {
+    "title": "계정 로그인",
+    "subtitle": "환영합니다! 계정 정보를 입력해 주세요.",
+    "tabEmail": "이메일 로그인",
+    "tabPhone": "전화번호 로그인",
+    "emailLabel": "이메일",
+    "emailPlaceholder": "이메일을 입력하세요",
+    "emailRequired": "이메일을 입력해 주세요",
+    "phoneLabel": "전화번호",
+    "phonePlaceholder": "전화번호를 입력하세요",
+    "phoneRequired": "전화번호를 입력해 주세요",
+    "areaCodePlaceholder": "국가 코드",
+    "areaCodeRequired": "국가 코드를 선택해 주세요",
+    "passwordLabel": "비밀번호",
+    "passwordPlaceholder": "비밀번호를 입력하세요",
+    "passwordRequired": "비밀번호를 입력해 주세요",
+    "passwordPattern": "비밀번호는 6~12자이며 공백을 포함할 수 없습니다.",
+    "noAccount": "계정이 없으신가요?",
+    "register": "회원가입",
+    "forgotPassword": "비밀번호를 잊으셨나요?",
+    "loginButton": "로그인",
+    "successMessage": "로그인 성공!"
+  },
+  "register": {
+    "title": "회원가입",
+    "subtitle": "환영합니다! 정보를 입력해 주세요.",
+    "tabEmail": "이메일",
+    "tabPhone": "전화번호",
+    "emailLabel": "이메일",
+    "emailPlaceholder": "이메일을 입력하세요",
+    "emailRequired": "이메일을 입력해 주세요",
+    "emailInvalid": "이메일 형식이 올바르지 않습니다.",
+    "phoneLabel": "전화번호",
+    "phonePlaceholder": "전화번호를 입력하세요",
+    "phoneRequired": "전화번호를 입력해 주세요",
+    "areaCodePlaceholder": "국가 코드",
+    "areaCodeRequired": "국가 코드를 선택해 주세요",
+    "passwordLabel": "비밀번호",
+    "passwordPlaceholder": "비밀번호를 입력하세요",
+    "passwordRequired": "비밀번호를 입력해 주세요",
+    "passwordPattern": "비밀번호는 6~12자이며 공백을 포함할 수 없습니다.",
+    "confirmPasswordLabel": "비밀번호 확인",
+    "confirmPasswordPlaceholder": "비밀번호를 다시 입력하세요",
+    "confirmPasswordRequired": "비밀번호를 다시 입력해 주세요",
+    "passwordMismatch": "비밀번호가 일치하지 않습니다!",
+    "hasAccount": "이미 계정이 있으신가요?",
+    "login": "로그인",
+    "registerButton": "회원가입",
+    "successMessage": "회원가입 성공!"
+  },
+  "home": {
+    "bannerTitleLine1": "스타일을 업그레이드하세요",
+    "bannerTitleLine2": "럭셔리를 받아들이세요",
+    "bannerSubtitle": "현대적인 우아함을 위해 디자인된 최신 컬렉션을 탐색하세요. 시대를 초월한 패션으로 옷장을 새롭게 정의하세요.",
+    "recommendCategory": "추천 카테고리",
+    "dailyNewArrival": "매일 신상품",
+    "recommendProduct": "추천 상품",
+    "recommendStore": "추천 스토어",
+    "hotRecommend": "인기 추천",
+    "featureAuthentic": "100% 정품",
+    "featureReturn7Days": "7일 이내 반품",
+    "featureShippingDiscount": "배송비 할인",
+    "featureSecurePayment": "안전 결제"
+  },
+  "products": {
+    "category": "카테고리",
+    "allProducts": "모든 상품",
+    "comprehensive": "종합",
+    "sales": "판매량",
+    "price": "가격",
+    "newArrival": "신상품"
+  },
+  "merchantRegister": {
+    "title": "판매자 등록",
+    "header": "APP-NAME 판매자 등록",
+    "loginTipPrefix": "이미 판매자 계정이 있으시면 ",
+    "login": "클릭하여 로그인",
+    "description": "저희 파트너 프로그램은 포괄적인 마케팅 지원과 서비스를 제공합니다. 고객 지원 팀이 전문적인 지원과 조언을 제공하여 상품 노출과 판매 전략을 최적화합니다. 지금 저희와 함께하세요! 더 큰 비즈니스 기회를 창출하고 함께 성장하세요!",
+    "merchantInfo": "판매자 정보",
+    "storeLogo": "스토어 로고",
+    "storeLogoTip": "스토어 로고 업로드",
+    "shopName": "스토어 이름",
+    "shopNameTip": "스토어 이름을 입력하세요",
+    "shopNamePlaceholder": "스토어 이름 입력, 특수 문자 금지",
+    "shopAddress": "스토어 주소",
+    "shopAddressTip": "스토어 주소를 입력하세요",
+    "shopAddressPlaceholder": "스토어 주소 입력, 특수 문자 금지",
+    "country": "국가",
+    "countryTip": "국가를 선택하세요",
+    "countryPlaceholder": "국가 선택",
+    "idNumber": "신분증/여권 번호",
+    "idNumberTip": "신분증 번호 입력",
+    "idNumberPlaceholder": "신분증 번호 입력",
+    "realName": "실명",
+    "realNameTip": "실명 입력",
+    "realNamePlaceholder": "실명 입력",
+    "idCardFront": "신분증 앞면",
+    "idCardFrontTip": "신분증 앞면 업로드",
+    "idCardBack": "신분증 뒷면",
+    "idCardBackTip": "신분증 뒷면 업로드",
+    "verifyType": "인증 방식",
+    "verifyTypeTip": "인증 방식을 선택하세요",
+    "email": "이메일",
+    "phone": "전화번호",
+    "contact": "사용자명 (이메일 또는 전화번호)",
+    "contactTip": "사용자명 입력",
+    "contactPlaceholder": "이메일 또는 전화번호 입력",
+    "password": "로그인 비밀번호",
+    "passwordTip": "로그인 비밀번호 입력",
+    "passwordPattern": "비밀번호는 6~12자이며 공백을 포함할 수 없습니다.",
+    "passwordPlaceholder": "로그인 비밀번호 입력",
+    "confirmPassword": "비밀번호 확인",
+    "confirmPasswordTip": "비밀번호가 일치하지 않습니다",
+    "confirmPasswordPlaceholder": "로그인 비밀번호 다시 입력",
+    "inviteCode": "초대 코드",
+    "inviteCodePlaceholder": "초대 코드 입력 (선택 사항)",
+    "submit": "신청 제출",
+    "submitSuccess": "제출 성공, 승인 대기 중!",
+    "areaCodeTip": "국가 코드 선택",
+    "areaCodePlaceholder": "국가 코드 선택",
+    "phonePlaceholder": "전화번호 입력"
+  },
+  "mineDetail": {
+    "goodsCollect": "상품 컬렉션",
+    "storeCollect": "팔로우한 스토어",
+    "defaultAddress": "기본 주소",
+    "addAddress": "주소 추가",
+    "followedStores": "팔로우한 스토어",
+    "collectedGoods": "컬렉션 상품"
+  },
+  "favoriteProducts": {
+    "collectedGoods": "컬렉션 상품"
+  },
+  "mineMerchant": {
+    "followedShops": "팔로우한 스토어"
+  },
+  "mine": {
+    "shop": "판매자 등록",
+    "userIdPrefix": "ID:",
+    "balanceLabel": "잔액",
+    "deposit": "충전",
+    "withdraw": "출금",
+    "myOrders": "내 주문",
+    "all": "전체",
+    "orderStatus": {
+      "pending": "결제 대기",
+      "shipping": "배송 대기",
+      "receiving": "수령 대기",
+      "review": "리뷰 대기",
+      "refund": "환불/사후 서비스"
+    },
+    "moreFeatures": "더 많은 기능",
+    "setting": "설정",
+    "language": "언어",
+    "wallet": "지갑",
+    "favorite": "즐겨찾기"
+  },
+  "OrderDetail": {
+    "myOrders": "내 주문",
+    "orderInfo": "주문 정보",
+    "orderNo": "주문 번호",
+    "time": "시간",
+    "orderPrice": "주문 금액",
+    "orderState": "주문 상태",
+    "refundState": "환불 상태",
+    "recipientInfo": "수령인 정보",
+    "name": "이름",
+    "phone": "전화번호",
+    "country": "국가",
+    "addressDetail": "상세 주소",
+    "productInfo": "상품 정보",
+    "unitPrice": "단가",
+    "quantity": "수량",
+    "subtotal": "소계",
+    "total": "합계",
+    "unknown": "알 수 없음"
+  },
+  "Orders": {
+    "all": "전체",
+    "pending": "결제 대기",
+    "shipping": "배송 대기",
+    "receiving": "수령 대기",
+    "review": "리뷰 대기",
+    "refund": "환불/사후 서비스",
+    "confirmReceivingTitle": "상품 수령 확인?",
+    "confirm": "확인",
+    "cancel": "취소",
+    "orderNo": "주문 번호",
+    "orderDesc": "주문 설명",
+    "orderPrice": "금액",
+    "status": "상태",
+    "actions": "작업",
+    "viewOrder": "주문 보기",
+    "remindShipping": "배송 알림",
+    "remindShippingSuccess": "판매자에게 알림이 전달되었습니다.",
+    "refundRequest": "환불 요청",
+    "confirmReceiving": "상품 수령 확인",
+    "addComment": "댓글 추가",
+    "unknown": "알 수 없음"
+  },
+  "Wallet": {
+    "balance": "잔액",
+    "recharge": "충전",
+    "withdraw": "출금",
+    "history": "지갑 내역",
+    "createTime": "생성 날짜",
+    "rechargeNo": "충전 번호",
+    "rechargeAmount": "충전 금액",
+    "rechargeType": "통화 프로토콜",
+    "rechargeAddress": "충전 주소",
+    "withdrawNo": "출금 번호",
+    "withdrawAmount": "출금 금액",
+    "withdrawType": "통화 프로토콜",
+    "withdrawAddress": "수령 주소",
+    "fee": "수수료",
+    "realAmount": "실제 금액",
+    "status": "상태",
+    "unpaid": "미결제",
+    "success": "성공",
+    "fail": "실패",
+    "pending": "처리 중",
+    "processed": "처리됨",
+    "rejected": "거부됨",
+    "orderNo": "번호"
+  },
+  "AccountPanel": {
+    "balance": "잔액",
+    "recharge": "충전",
+    "withdraw": "출금"
+  },
+  "LogisticsDialog": {
+    "title": "물류 정보",
+    "empty": "물류 정보 없음",
+    "close": "닫기"
+  },
+  "OrderCard": {
+    "viewOrder": "주문 보기",
+    "remindShipping": "배송 알림",
+    "requestRefund": "환불 요청",
+    "confirmReceiving": "상품 수령 확인",
+    "payNow": "지금 결제",
+    "cancelOrder": "주문 취소",
+    "addComment": "댓글 추가",
+    "refunded": "환불 완료"
+  },
+  "RefundDialog": {
+    "title": "환불 요청",
+    "refundReason": "환불 사유",
+    "refundReasonPlaceholder": "환불 사유를 입력하세요",
+    "refundRemark": "반품 설명",
+    "refundRemarkPlaceholder": "반품 설명을 입력하세요",
+    "cancel": "취소",
+    "submit": "제출"
+  },
+  "Search": {
+    "comprehensive": "종합",
+    "soldNum": "판매량",
+    "price": "가격",
+    "newest": "최신"
+  },
+  "Address": {
+    "setting": "설정",
+    "defaultAddress": "기본 주소",
+    "addAddress": "주소 추가",
+    "confirmDelete": "삭제 확인",
+    "confirmDeleteContent": "이 주소를 삭제하시겠습니까?",
+    "ok": "확인",
+    "cancel": "취소",
+    "edit": "편집",
+    "delete": "삭제",
+    "deleted": "삭제됨"
+  },
+  "DeleteAccount": {
+    "setting": "설정",
+    "title": "계정 삭제",
+    "description": "APP-NAME 계정을 영구적으로 삭제하고 모든 개인 정보 및 관련 데이터를 제거합니다. 삭제 후 데이터는 복구할 수 없습니다. 신중하게 진행해 주세요. 삭제 전에 중요한 데이터를 백업하거나 미결 사항을 처리해 주세요.",
+    "account": "귀하의 계정",
+    "enterAccount": "입력",
+    "reason": "탈퇴 사유",
+    "submit": "요청 제출",
+    "submitSuccess": "제출 성공"
+  },
+  "Setting": {
+    "title": "설정",
+    "description": "APP-NAME 계정을 쉽게, 안전하고 편리하게 관리하세요! 한 번의 클릭으로 로그인 비밀번호를 변경할 수 있습니다. 문자, 숫자, 기호를 포함한 강력한 비밀번호를 사용하고 정기적으로 업데이트하여 계정 보안을 강화하세요. 민감한 작업을 위한 별도의 거래 비밀번호를 설정하세요. 플랫폼에서 원활한 알림과 배송을 위해 정확한 수령 주소를 업데이트하세요. 간단한 작업으로 편안한 경험을 즐기세요!",
+    "loginPassword": "로그인 비밀번호",
+    "tradePassword": "거래 비밀번호",
+    "address": "수령 주소",
+    "deleteAccount": "계정 삭제",
+    "submitSuccess": "제출 성공!"
+  },
+  "LoginPassword": {
+    "setting": "설정",
+    "title": "로그인 비밀번호",
+    "description": "비밀번호를 변경하거나 재설정하세요. 문자, 숫자, 기호를 포함한 강력한 비밀번호를 사용하고 정기적으로 업데이트하여 계정 보안을 보호하세요.",
+    "oldPassword": "기존 비밀번호",
+    "newPassword": "새 비밀번호",
+    "confirmPassword": "비밀번호 확인",
+    "enterOldPassword": "기존 비밀번호 입력",
+    "enterNewPassword": "새 비밀번호 입력",
+    "passwordMinLength": "비밀번호는 최소 6자 이상이어야 합니다.",
+    "confirmPasswordMsg": "비밀번호 확인",
+    "passwordMismatch": "비밀번호가 일치하지 않습니다.",
+    "submit": "요청 제출",
+    "success": "처리 성공"
+  },
+  "PayPassword": {
+    "setting": "설정",
+    "title": "거래 비밀번호",
+    "description": "로그인 비밀번호와 별도로 거래 비밀번호를 설정하여 경매, 출금 등에 사용하세요. 거래 보안을 강화합니다.",
+    "oldPassword": "기존 비밀번호",
+    "newPassword": "새 비밀번호",
+    "confirmPassword": "비밀번호 확인",
+    "enterOldPassword": "기존 비밀번호 입력",
+    "enterNewPassword": "새 비밀번호 입력",
+    "passwordMinLength": "비밀번호는 최소 6자 이상이어야 합니다.",
+    "confirmPasswordMsg": "비밀번호 확인",
+    "passwordMismatch": "비밀번호가 일치하지 않습니다.",
+    "submit": "요청 제출",
+    "success": "처리 성공"
+  },
+  "MerchantHeader": {
+    "follow": "스토어 팔로우",
+    "followed": "팔로우됨",
+    "followSuccess": "팔로우 성공",
+    "unfollow": "팔로우 취소",
+    "products": "상품",
+    "sales": "판매량",
+    "rate": "만족도"
+  },
+  "Products": {
+    "allProducts": "모든 상품",
+    "category": "카테고리",
+    "comprehensive": "종합",
+    "sales": "판매량",
+    "price": "가격",
+    "newArrival": "신상품"
+  },
+  "Store": {
+    "recommend": "추천",
+    "allProducts": "모든 상품"
+  },
+  "Withdraw": {
+    "myWallet": "내 지갑",
+    "withdraw": "출금",
+    "description": "다양한 수령 채널 지원, 빠른 출금 요청 처리, 안전 및 규정 준수로 모든 출금의 안전을 보장합니다."
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "페이지를 찾을 수 없음",
+    "description": "죄송합니다. 요청하신 페이지를 찾을 수 없습니다.",
+    "backHome": "홈으로 돌아가기"
+  },
+  "CheckForms": {
+    "checkout": "결제하기",
+    "addressTitle": "1. 수령 주소",
+    "changeAddress": "주소 변경",
+    "addressInfo": "수령 정보",
+    "recipientName": "수령인 이름",
+    "phone": "연락처",
+    "nation": "국가/지역",
+    "addressDetail": "상세 주소",
+    "noAddress": "주소 없음",
+    "addAddress": "주소 추가",
+    "paymentTitle": "2. 결제 수단",
+    "selectPayment": "결제 수단 선택",
+    "balance": "잔액",
+    "paypal": "PayPal (준비 중)",
+    "visa": "VISA (준비 중)",
+    "mastercard": "MasterCard (준비 중)",
+    "orderSummary": "주문 요약",
+    "total": "합계",
+    "submitOrder": "주문 제출",
+    "submitSuccess": "제출 성공",
+    "tip": "팁",
+    "selectAddressFirst": "먼저 수령 주소를 선택해 주세요",
+    "selectAddress": "수령 주소 선택",
+    "noAvailableAddress": "사용 가능한 주소 없음"
+  },
+  "OrderResult": {
+    "paymentSuccess": "결제 성공",
+    "recipient": "수령인",
+    "address": "수령 주소",
+    "continueShopping": "쇼핑 계속하기",
+    "viewOrders": "주문 보기"
+  },
+  "Deposit": {
+    "myWallet": "내 지갑",
+    "deposit": "충전",
+    "description": "빠르고 안정적인 충전, 간단하고 원활한 처리, 언제든지 계정 잔액을 충전하여 걱정 없이 사용하세요."
+  },
+  "BottomNav": {
+    "home": "홈",
+    "products": "상품",
+    "cart": "장바구니",
+    "mine": "마이페이지"
+  },
+  "Footer": {
+    "solutions": {
+      "title": "고객 서비스",
+      "contactUs": "문의하기"
+    },
+    "support": {
+      "title": "반품 및 교환",
+      "privacyPolicy": "개인정보 처리방침",
+      "returnsPolicy": "반품 정책",
+      "deliveryInformation": "배송 및 수령",
+      "sellerScoreSystem": "판매자 정책"
+    },
+    "company": {
+      "title": "사용자 센터",
+      "register": "사용자 등록",
+      "orderQuery": "주문 조회",
+      "favoriteProducts": "상품 컬렉션",
+      "wallet": "내 지갑"
+    },
+    "legal": {
+      "title": "회사 소개",
+      "aboutUs": "회사 소개",
+      "careers": "채용",
+      "news": "뉴스",
+      "modernSlavery": "현대 노예 제도 선언"
+    },
+    "description": "APP-NAME의 전 세계 사용자는 112개 국가에서 왔으며 USDT/ETH/BTC로 결제합니다. USDT/ETH/BTC는 국경 없는 거래 방식으로 전 세계적으로 즉시, 저비용 거래를 가능하게 하며 대기나 국제 수수료가 없습니다.",
+    "copyright": "© APP-NAME Limited 2023 모든 권리 보유"
+  },
+  "Header": {
+    "title": "APP-NAME",
+    "home": "홈",
+    "category": "카테고리",
+    "products": "상품",
+    "sales": "세일 상품",
+    "merchantOnboarding": "판매자 등록",
+    "profile": "개인 센터",
+    "logout": "로그아웃",
+    "logoutSuccess": "로그아웃 성공",
+    "search": "검색"
+  },
+  "SearchWithHistory": {
+    "placeholder": "검색 내용",
+    "clearAll": "모두 지우기"
+  },
+  "CartDrawer": {
+    "items": "항목",
+    "myCart": "내 장바구니"
+  },
+  "CartPanel": {
+    "totalItems": "총 상품",
+    "items": "항목",
+    "totalPrice": "총액",
+    "submitOrder": "주문 제출"
+  },
+  "MerchantCard": {
+    "unfollow": "팔로우 취소",
+    "follow": "팔로우",
+    "visitNow": "지금 방문",
+    "sold": "판매됨",
+    "views": "조회수",
+    "rating": "스토어 평점"
+  },
+  "Mine": {
+    "dashboard": "대시보드",
+    "wallet": "내 지갑",
+    "orders": "내 주문",
+    "favoriteProducts": "상품 컬렉션",
+    "followedMerchants": "팔로우한 스토어",
+    "settings": "설정",
+    "userId": "ID"
+  },
+  "PageTitle": {
+    "more": "더 보기"
+  },
+  "ProductCard": {
+    "addCartSuccess": "장바구니에 추가됨",
+    "collected": "컬렉션됨",
+    "unCollected": "컬렉션 취소",
+    "off": "할인",
+    "addToCart": "장바구니에 추가",
+    "soldViews": "판매량",
+    "viewsNum": "조회수"
+  },
+  "AddGoodsCommentDialog": {
+    "title": "리뷰",
+    "addCommentSuccess": "댓글 추가 성공",
+    "selectProduct": "상품 선택",
+    "selectProductRequired": "리뷰 상태를 선택해 주세요",
+    "selectPlaceholder": "선택",
+    "userName": "회원 이메일/전화번호",
+    "userNameRequired": "회원 이메일 또는 전화번호를 입력해 주세요",
+    "userNamePlaceholder": "회원 이메일 또는 전화번호 입력",
+    "commentContent": "리뷰 내용",
+    "commentContentRequired": "리뷰 내용을 입력해 주세요",
+    "commentContentPlaceholder": "리뷰 내용 입력",
+    "rating": "평점",
+    "ratingRequired": "평점을 선택해 주세요",
+    "commentImages": "리뷰 이미지",
+    "cancel": "취소",
+    "confirm": "확인"
+  },
+  "AddressDialog": {
+    "editAddress": "수령 주소 편집",
+    "addAddress": "수령 주소 추가",
+    "recipientName": "수령인 이름",
+    "recipientNameRequired": "수령인 이름을 입력해 주세요",
+    "recipientNamePlaceholder": "수령인 이름 입력",
+    "phone": "전화번호",
+    "nationRequired": "국가 코드를 선택해 주세요",
+    "nationPlaceholder": "국가 코드",
+    "phoneRequired": "전화번호를 입력해 주세요",
+    "phonePlaceholder": "전화번호 입력",
+    "email": "이메일",
+    "emailPlaceholder": "이메일 입력",
+    "region": "국가/도/시",
+    "regionRequired": "지역을 선택해 주세요",
+    "regionPlaceholder": "국가/도/시 선택",
+    "postCode": "우편번호",
+    "postCodePlaceholder": "우편번호 입력",
+    "addressDetail": "상세 주소",
+    "addressDetailPlaceholder": "상세 주소 입력",
+    "isDefault": "기본 주소",
+    "cancel": "취소",
+    "confirm": "확인"
+  },
+  "CustomerServiceChat": {
+    "title": "고객 서비스",
+    "inputPlaceholder": "입력",
+    "noMessage": "메시지 없음",
+    "imageAlt": "이미지",
+    "heicUnsupported": "현재 브라우저는 HEIC 파일 업로드를 지원하지 않습니다.",
+    "heicUploadFailed": "HEIC 파일을 업로드할 수 없습니다."
+  },
+  "DepositForm": {
+    "currency": "충전 통화",
+    "selectCurrency": "충전 통화 선택",
+    "network": "블록체인 네트워크",
+    "selectNetwork": "블록체인 네트워크 선택",
+    "addressLabel": "충전 주소",
+    "amount": "충전 금액",
+    "enterAmount": "충전 금액 입력",
+    "estimatedArrival": "예상 도착 (현재 환율 {{rate}})",
+    "proof": "결제 증빙 (스크린샷 업로드)",
+    "uploadProof": "결제 증빙 업로드",
+    "submit": "확인",
+    "success": "처리 성공",
+    "addressCopied": "주소 복사됨!"
+  },
+  "OtpModal": {
+    "enterTransactionPassword": "거래 비밀번호 입력",
+    "enter6Digits": "6자리 인증 코드를 입력하세요",
+    "verifyFailed": "인증 실패, 다시 시도해 주세요",
+    "cancel": "취소",
+    "confirm": "확인"
+  },
+  "ProductDetailMain": {
+    "basicInfo": "기본 정보",
+    "sales": "판매량",
+    "views": "조회수",
+    "originalPrice": "원래 가격",
+    "currentPrice": "현재 가격",
+    "shipping": "배송",
+    "freeShipping": "무료 배송",
+    "quantity": "수량",
+    "totalPrice": "총 가격",
+    "buyNow": "지금 구매",
+    "addToCart": "장바구니에 추가",
+    "pleaseSelect": "선택해 주세요",
+    "noStock": "재고 없음",
+    "shippingDesc": "주문 후 24시간 이내에 배송됩니다. 주문에 물류 제어가 있는 경우 주문이 지연될 수 있습니다. 주문의 물류 정보를 추적하거나 고객 서비스에 문의해 주세요."
+  },
+  "ProductDetailModal": {
+    "title": "상품 상세",
+    "noGoods": "상품 정보 없음",
+    "addSuccess": "추가 성공"
+  },
+  "UploadImg": {
+    "upload": "업로드",
+    "preview": "이미지 미리보기",
+    "onlyImage": "JPG/PNG/WEBP/HEIC 형식의 이미지만 업로드 가능!",
+    "maxSize": "이미지 크기는 초과할 수 없습니다.",
+    "unsupportedHeic": "현재 브라우저는 HEIC 파일 업로드를 지원하지 않습니다.",
+    "uploadFailed": "업로드 실패, 나중에 다시 시도해 주세요"
+  },
+  "UploadMultiple": {
+    "upload": "업로드",
+    "uploadSuccess": "업로드 성공",
+    "uploadFailed": "업로드 실패"
+  },
+  "WithdrawForm": {
+    "withdrawMethod": "출금 방법",
+    "selectWithdrawMethod": "출금 방법 선택",
+    "crypto": "암호화폐",
+    "bankCard": "은행 카드",
+    "coinType": "출금 통화",
+    "selectCoin": "통화 선택",
+    "enterUSDT": "USDT 입력",
+    "blockchainNetwork": "블록체인 네트워크",
+    "withdrawAddress": "출금 주소",
+    "enterWithdrawAddress": "출금 주소 입력",
+    "copy": "복사",
+    "bankName": "은행 이름",
+    "enterBankName": "은행 이름 입력",
+    "bankBranch": "은행 지점",
+    "enterBankBranch": "은행 지점 입력",
+    "bankCardNumber": "은행 카드 번호",
+    "enterBankCardNumber": "은행 카드 번호 입력",
+    "withdrawAmount": "출금 금액",
+    "enterWithdrawAmount": "출금 금액 입력",
+    "amountMustBeGreaterZero": "출금 금액은 0보다 커야 합니다.",
+    "currentBalance": "현재 잔액",
+    "actualReceived": "실제 수령 금액",
+    "fee": "수수료",
+    "confirmSubmit": "제출 확인",
+    "copied": "복사됨!",
+    "inputAddressFirst": "출금 주소/은행 카드 번호를 먼저 입력해 주세요",
+    "operationSuccess": "처리 성공"
+  },
+  "order": {
+    "pendingPayment": "결제 대기",
+    "pendingShipment": "배송 대기",
+    "pendingReceive": "수령 대기",
+    "pendingReview": "리뷰 대기",
+    "refund": "환불/사후 서비스"
+  },
+  "refund": {
+    "pending": "검토 중",
+    "success": "성공",
+    "failed": "실패"
+  },
+  "DeliveryInformation": {
+    "title": "어디로 배송하나요?",
+    "desc1": "구매하려는 상품의 우편번호를 입력하여 귀하의 지역으로 배송 가능한지 확인해 주세요.",
+    "desc2": "상품은 공급업체에서 직접 발송되며, 112개 국가/지역에 글로벌 창고가 있습니다.",
+    "pickup": {
+      "title": "어디서 수령하나요?",
+      "desc1": "24시간 수령 가능한 지점이 있습니다.",
+      "highlight1": "APP-NAME 매장, Sainsbury's 슈퍼마켓",
+      "desc2": "및 글로벌 창고",
+      "desc3": "즉시 배송 가능한 상품의 경우, 귀하의 위치에 따라 여러 시간대를 선택할 수 있습니다. 주문은 문 앞에 배송되며 안전하고 신뢰할 수 있는 장소에 놓입니다.",
+      "alert1": "잉글랜드, 스코틀랜드, 웨일스에서는 대형 및 무거운 상품(2명 이상이 필요한 상품, 예: 소파, 침대)을 배송하며, 안전하게 원하는 장소에 배송할 수 있습니다.",
+      "alert2": "친절한 운전기사가 당일 연락하여 배송 세부 사항을 논의합니다. 자가격리 중이라면 새 배송일을 정할 수 있도록 알려주세요.",
+      "warning": "현재 대형 상품 배송 수요가 높습니다. 배송이 지연되면 최대한 빨리 메시지를 보내드리겠습니다. 고객에게 최상의 서비스를 제공하기 위해 열심히 노력하고 있습니다. 지속적인 인내와 지원에 감사드립니다."
+    },
+    "faq": {
+      "title": "자주 묻는 질문",
+      "q1": "대형 및 소형 상품을 동시에 주문하면 어떻게 되나요?",
+      "a1_1": "가장 빠른 배송 방법은 별도로 발송하는 것입니다.",
+      "a1_2": "걱정 마세요, 배송비는 한 번만 지불합니다.",
+      "a1_3": "주문 확인 이메일에서 자세한 내용을 확인하세요.",
+      "q2": "집에 없을 때는 어떻게 되나요?",
+      "a2_1": "소형 상품은 안전하고 눈에 띄지 않는 곳에 놓거나 요청 시 이웃에게 전달됩니다.",
+      "a2_2": "핫라인",
+      "a2_3": "문의하여 가장 편리한 날짜와 시간으로 재배송을 예약하세요!",
+      "q3": "대형 상품은 몇 명이 배송하나요?",
+      "a3_1": "소파, 냉동고 등 대형 상품은",
+      "a3_2": "2명",
+      "a3_3": "이 배송할 수 있습니다. 친절한 운전기사가 배송 당일 연락하여 원하는 장소에 안전하게 배송합니다.",
+      "q4": "COVID-19: 배송에 어떤 영향을 미치나요?",
+      "a4_1": "여전히 많은 상품에 대해 배송 서비스를 제공하며, 게임 콘솔 사전 주문도 포함됩니다. 배송 전에 알림 메시지와 운송업체 추적 번호를 받게 됩니다.",
+      "a4_2": "상품은 안전한 장소에 배송됩니다. 대형 상품은 안전한 장소에 놓이며, 친절한 운전기사가 당일 연락하여 대형 상품 운송 세부 사항을 논의합니다. 자가격리 중이라면 새 배송일을 정할 수 있도록 알려주세요."
+    },
+    "cta": "배송 커버리지 영역 보기"
+  },
+  "PrivacyPolicy": {
+    "header": {
+      "label": "개인정보 처리방침",
+      "title": "APP-NAME 개인정보 처리방침",
+      "desc": "최종 업데이트: 2025년 10월 | 귀하의 개인정보 보호는 우리의 최우선 과제입니다."
+    },
+    "sections": {
+      "1": {
+        "title": "1. 서문",
+        "content": {
+          "welcome": "1.1 APP-NAME 쇼핑 웹사이트에 오신 것을 환영합니다.",
+          "desc1": "APP-NAME은 관련 개인정보 보호법 및 규정(‘개인정보 보호법’)에 의해 정의된 책임을 엄격히 준수하며, APP-NAME 웹사이트 및 모바일 애플리케이션(‘플랫폼’)의 모든 사용자에 대한 개인정보 보호 권리와 우려를 존중하기 위해 최선을 다하고 있습니다.",
+          "alert": "당사는 귀하가 신뢰한 개인정보의 중요성을 인식하고 있으며, 이를 적절히 관리, 보호, 처리하는 것이 우리의 책임이라고 믿습니다.",
+          "definition": "개인정보는 해당 정보 또는 조직이 보유하거나 접근할 수 있는 기타 정보로부터 식별 가능한 개인에 관한 정보를 의미합니다.",
+          "consent": "서비스를 사용함으로써 귀하는 본 개인정보 처리방침에 따라 당사가 귀하의 개인정보를 수집, 사용, 공개, 처리하는 데 명시적으로 동의합니다."
+        }
+      },
+      "2": {
+        "title": "2. APP-NAME은 언제 개인정보를 수집하나요?",
+        "content": {
+          "scenariosTitle": "일반적인 수집 상황",
+          "online": "온라인 상호작용",
+          "onlineItems": [
+            "웹사이트 접근",
+            "양식 제출",
+            "쿠키 저장"
+          ],
+          "offline": "오프라인 상호작용",
+          "offlineItems": [
+            "전화 통신",
+            "대면 회의",
+            "이메일 교환"
+          ],
+          "thirdParty": "당사는 제3자(물류, 결제 서비스 제공업체 등)로부터 귀하의 정보를 받을 수 있습니다."
+        }
+      },
+      "3": {
+        "title": "3. APP-NAME은 어떤 개인정보를 수집하나요?",
+        "categories": [
+          {
+            "icon": "기본 정보",
+            "label": "기본 정보",
+            "items": [
+              "이름",
+              "이메일",
+              "전화번호",
+              "주소"
+            ]
+          },
+          {
+            "icon": "신원 정보",
+            "label": "신원 정보",
+            "items": [
+              "생년월일",
+              "성별"
+            ]
+          },
+          {
+            "icon": "멀티미디어",
+            "label": "멀티미디어",
+            "items": [
+              "사진",
+              "오디오",
+              "비디오"
+            ]
+          },
+          {
+            "icon": "전문 정보",
+            "label": "전문 정보",
+            "items": [
+              "학력",
+              "경력"
+            ]
+          },
+          {
+            "icon": "위치 정보",
+            "label": "위치 정보",
+            "items": [
+              "지리적 위치"
+            ]
+          },
+          {
+            "icon": "행동 정보",
+            "label": "행동 정보",
+            "items": [
+              "브라우징 기록",
+              "선호도 설정"
+            ]
+          }
+        ],
+        "warning": "언제든지 정보 수집에 참여하지 않을 수 있지만, 일부 기능 사용에 영향을 미칠 수 있습니다."
+      },
+      "4": {
+        "title": "4. 기타 정보 수집",
+        "device": {
+          "title": "기기 정보",
+          "items": [
+            "IP 주소",
+            "운영 체제",
+            "브라우저 유형",
+            "고유 기기 ID"
+          ]
+        },
+        "location": {
+          "title": "위치 서비스",
+          "desc": "GPS/Wi-Fi를 사용하여 정확한 위치 정보를 수집합니다.",
+          "note": "기기 설정에서 언제든지 비활성화할 수 있습니다."
+        }
+      },
+      "5": {
+        "title": "5. 쿠키",
+        "titleLabel": "쿠키 정책",
+        "purpose": {
+          "title": "목적",
+          "items": [
+            "맞춤형 콘텐츠 추천",
+            "광고 맞춤화",
+            "웹사이트 사용 분석"
+          ]
+        },
+        "management": {
+          "title": "관리",
+          "items": [
+            "브라우저 설정에서 비활성화",
+            "모바일 기기에서 맞춤형 광고 비활성화",
+            "일부 기능에 영향을 미칠 수 있음"
+          ]
+        }
+      },
+      "6": {
+        "title": "6. 제공한 정보를 어떻게 사용하나요?",
+        "mainUse": "주요 사용",
+        "items": [
+          {
+            "icon": "서비스 제공"
+          },
+          {
+            "icon": "커뮤니케이션"
+          },
+          {
+            "icon": "데이터 분석"
+          },
+          {
+            "icon": "기능 개선"
+          },
+          {
+            "icon": "마케팅"
+          },
+          {
+            "icon": "법적 준수"
+          }
+        ],
+        "unsubscribe": "마케팅 정보 수신을 언제든지 취소할 수 있습니다."
+      },
+      "7": {
+        "title": "7. 어떤 정보를 보관하며 APP-NAME은 사용자 정보를 어떻게 보호하나요?",
+        "security": {
+          "title": "보안 조치",
+          "items": [
+            "물리적 보호",
+            "관리 시스템 보장",
+            "전자 암호화 기술",
+            "권한 기반 접근 제어"
+          ]
+        },
+        "retention": {
+          "title": "보관 기간",
+          "desc": "필요한 기간 동안만 보관하며, 다음 조건이 충족되면 삭제합니다:",
+          "items": [
+            "관계 종료",
+            "목적 달성",
+            "법적 요구사항 충족"
+          ]
+        }
+      },
+      "8": {
+        "title": "8. APP-NAME은 방문자로부터 수집한 정보를 제3자에게 공개하나요?",
+        "recipients": [
+          "계열사/관련 회사",
+          "계약업체",
+          "서비스 제공업체",
+          "정부 기관",
+          "합병/인수 계약업체",
+          "광고 파트너"
+        ],
+        "note": "모든 제3자는 동일한 데이터 보호 기준을 준수하도록 보장합니다."
+      }
+    },
+    "quickAccess": {
+      "title": "빠른 액세스",
+      "items": [
+        {
+          "label": "동의 철회",
+          "icon": "철회"
+        },
+        {
+          "label": "정보 액세스",
+          "icon": "보기"
+        },
+        {
+          "label": "쿠키 설정",
+          "icon": "쿠키"
+        },
+        {
+          "label": "문의하기",
+          "icon": "이메일"
+        }
+      ]
+    },
+    "footer": {
+      "contact": "질문이 있으시면 당사 데이터 보호 담당자에게 문의해 주세요.",
+      "email": "support@APP-NAME.com",
+      "copyright": "© 2025 APP-NAME 모든 권리 보유"
+    },
+    "toggle": {
+      "expand": "확장",
+      "collapse": "접기"
+    }
+  },
+  "PrivacyPolicyPage": {
+    "header": "개인정보 처리방침",
+    "title": "APP-NAME 개인정보 처리방침",
+    "lastUpdated": "최종 업데이트: 2025년 10월 | 귀하의 개인정보 보호는 우리의 최우선 과제입니다.",
+    "expand": "확장",
+    "collapse": "접기",
+    "section1Title": "1. 서문",
+    "section1_1": "1.1 APP-NAME 쇼핑 웹사이트에 오신 것을 환영합니다.",
+    "section1_2": "APP-NAME은 관련 개인정보 보호법 및 규정(‘개인정보 보호법’)에 의해 정의된 책임을 엄격히 준수하며, 플랫폼의 모든 사용자에 대한 개인정보 보호 권리를 존중하기 위해 최선을 다하고 있습니다.",
+    "section1_3": "당사는 귀하가 신뢰한 개인정보의 중요성을 인식하고 있으며, 이를 적절히 관리, 보호, 처리하는 것이 우리의 책임이라고 믿습니다.",
+    "section1_4": "개인정보는 식별 가능한 개인에 관한 정보입니다.",
+    "section1_5": "서비스를 사용함으로써 귀하는 본 개인정보 처리방침에 따라 당사가 귀하의 개인정보를 수집, 사용, 공개, 처리하는 데 동의합니다.",
+    "section2Title": "2. APP-NAME은 언제 개인정보를 수집하나요?",
+    "section2_1": "일반적인 수집 상황",
+    "section2_2": "온라인 상호작용",
+    "section2_3": "웹사이트 접근",
+    "section2_4": "양식 제출",
+    "section2_5": "쿠키 저장",
+    "section2_6": "오프라인 상호작용",
+    "section2_7": "전화 통신",
+    "section2_8": "대면 회의",
+    "section2_9": "이메일 교환",
+    "section2_10": "당사는 제3자로부터 귀하의 정보를 받을 수 있습니다.",
+    "section3Title": "3. APP-NAME은 어떤 개인정보를 수집하나요?",
+    "section3_1_label": "기본 정보",
+    "section3_1_1": "이름",
+    "section3_1_2": "이메일",
+    "section3_1_3": "전화번호",
+    "section3_1_4": "주소",
+    "section3_2_label": "신원 정보",
+    "section3_2_1": "생년월일",
+    "section3_2_2": "성별",
+    "section3_3_label": "멀티미디어",
+    "section3_3_1": "사진",
+    "section3_3_2": "오디오",
+    "section3_3_3": "비디오",
+    "section3_4_label": "전문 정보",
+    "section3_4_1": "학력",
+    "section3_4_2": "경력",
+    "section3_5_label": "위치 정보",
+    "section3_5_1": "지리적 위치",
+    "section3_6_label": "행동 정보",
+    "section3_6_1": "브라우징 기록",
+    "section3_6_2": "선호도 설정",
+    "section3_warning": "언제든지 정보 수집에 참여하지 않을 수 있지만, 일부 기능 사용에 영향을 미칠 수 있습니다.",
+    "section4Title": "4. 정보 사용 방법",
+    "section4_1": "정보 사용 방식",
+    "section4_2": "서비스 제공 및 개선",
+    "section4_3": "맞춤형 추천",
+    "section4_4": "보안 보호",
+    "section4_5": "법적 준수",
+    "section4_6": "정보 공유",
+    "section4_7": "서비스 제공을 위해 제3자와 정보를 공유할 수 있습니다.",
+    "section4_8": "공유된 정보는 개인정보 처리방침 및 법률을 엄격히 준수합니다.",
+    "section5Title": "5. 쿠키 및 추적 기술",
+    "section5_1": "쿠키 사용 방식",
+    "section5_2": "필수 쿠키",
+    "section5_3": "웹사이트 기본 기능 보장",
+    "section5_4": "로그인 상태 기억",
+    "section5_5": "사기 방지",
+    "section5_6": "성능 쿠키",
+    "section5_7": "웹사이트 사용 분석",
+    "section5_8": "서비스 개선",
+    "section5_9": "비활성화 가능",
+    "section6Title": "6. 데이터 보호 조치",
+    "section6_1": "채택된 보안 조치",
+    "section6_2": "접근 제어",
+    "section6_3": "암호화 기술",
+    "section6_4": "정기 백업",
+    "section6_5": "보안 교육",
+    "section6_6": "시스템 모니터링",
+    "section6_7": "감사 및 준수",
+    "section6_8": "계정 비밀번호를 공유하지 말고 개인정보 보안을 보장하세요.",
+    "section7Title": "7. 사용자 권리",
+    "section7_1": "액세스 및 제어 권리",
+    "section7_2": "보관된 개인정보 보기",
+    "section7_3": "부정확한 정보 수정",
+    "section7_4": "정보 삭제 요청",
+    "section7_5": "처리 제한 또는 거부",
+    "section7_6": "기타 권리",
+    "section7_7": "언제든지 동의를 철회하고 개인정보 관련 질문을 제기할 수 있습니다.",
+    "section7_8": "데이터 이동 권리",
+    "section7_9": "처리 반대 권리",
+    "section7_10": "불만 제기 권리",
+    "section8Title": "8. 문의하기",
+    "section8_1": "개인정보 처리방침에 대한 의문이 있으시면",
+    "section8_2": "고객 지원 이메일로 문의",
+    "section8_3": "서비스 핫라인 전화",
+    "section8_4": "온라인 채팅",
+    "section8_5": "소셜 미디어 계정",
+    "section8_6": "서면 우편",
+    "section8_7": "웹사이트 피드백 양식 제출",
+    "section8_warning": "요청은 적절한 시간 내에 처리되지만, 일부 작업은 추가 확인이 필요할 수 있습니다."
+  },
+  "ReturnsPolicy": {
+    "title": "마음이 바뀌었어요",
+    "subtitle1": "수령 또는 배송 후 ",
+    "subtitle2": "15일 이내",
+    "subtitle3": "에 반품 가능",
+    "mustBe": "상품은 다음 조건을 충족해야 합니다:",
+    "refundMethod": "환불은 원래 결제 수단으로 처리됩니다:",
+    "refundUsdtEth": "USDT 또는 ETH 사용 시 영업일 1일 이내에 계정에 표시됩니다.",
+    "refundWire": "은행 송금 사용 시 은행에 따라 최대 30일 소요될 수 있습니다.",
+    "requirements1": "사용되지 않았으며 모든 원래 구성 요소 포함",
+    "requirements2": "원래 포장(가능한 경우 라벨 포함)",
+    "requirements3": "재판매 가능한 상태",
+    "requirements4": "구매 증빙 포함",
+    "requirements5": "상품과 함께 제공된 선물 포함",
+    "productSupport": "상품 지원",
+    "productSupportDesc1": "대부분의 경우 상품에 문제가 있으면 집에서 편리하게",
+    "productSupportDesc2": "상품 지원 웹사이트",
+    "productSupportDesc3": "를 통해 문제를 해결할 수 있는지 확인할 수 있습니다. 여기서 상품 및 회사에 대한 FAQ, 배송 및 수령, 반품 및 환불에 액세스할 수 있습니다.",
+    "goodsIssue": "상품에 문제가 있어요",
+    "issueNotice1": "첫 15일 이내에 반품을 원하시면 교환, 변경 또는 환불을 제공합니다.",
+    "issueNotice2": "이 기간 이후에는 상품이 보증 기간 내인 한 당사 전문 수리 대리점을 통해 수리를 제공하거나, 수리가 불가능한 경우 상품을 교체 또는 교환합니다.",
+    "issueDesc": "가장 빠른 반품 방법은 112개 국가/지역의 글로벌 창고 센터를 통하는 것입니다. 대부분의 상품을 수락하며, 대형 상품은 제외됩니다. 처음에 문 앞 배송된 경우에도 대형 상품 반품을 원하시면 아래로 스크롤하여 실시간 채팅을 시작하거나 핫라인에 액세스해 주세요.",
+    "precautionsTitle": "주의사항",
+    "precautionsDesc": "식품, 피어싱 주얼리, 속옷 등 일부 상품은 결함이 있는 경우에만 교환 또는 환불 가능합니다. 웹사이트에서 환불 불가 상품을 명시합니다.",
+    "precautions1": "DVD, 음악 또는 소프트웨어 상품을 반품하는 경우 사용되지 않았으며 원래 밀봉 포장에 있어야 합니다.",
+    "precautions2": "상품 또는 포장이 심하게 손상된 경우 환불 금액을 줄일 권리가 있습니다.",
+    "precautions3": "당사가 상품을 공급했는지 확인하기 위해 상품의 일련번호 또는 유사 정보를 요청할 수 있습니다.",
+    "precautions4": "물론, 귀하의 소비자 권리에 영향을 미치지 않습니다.",
+    "precautionsNote": "상품을 받으면 환불 전에 검사를 진행합니다. 상품이 지침에 따라 반품되지 않은 것으로 확인되면 환불을 거부하거나 상품 상태에 따라 부분 환불을 제공할 권리가 있습니다.",
+    "proof1_1": "현금 영수증",
+    "proof1_2": "전자 영수증",
+    "proof1_3": "주문 번호",
+    "proof1_4": "확인 이메일",
+    "proof2_1": "거래 송장",
+    "proof2_2": "상품 구매에 사용된 이메일 주소",
+    "faqTitle": "자주 묻는 질문",
+    "cta": "반품 프로세스 시작"
+  },
+  "sellerRating": {
+    "title": "판매자 평가 시스템",
+    "intro": "소개",
+    "introContent": "여기서는 판매자 평가 시스템과 생성 및 사용 방법을 소개합니다.",
+    "website": "관련 웹사이트",
+    "parties": "관련 당사자",
+    "allSellers": "모든 판매자",
+    "section1": {
+      "title": "판매자 평가 시스템에 어떻게 접근하나요?",
+      "encourage": "판매자 평가 시스템은 판매자가 높은 서비스 표준을 유지하도록 장려하여 당사 구매자에게 좋은 구매 경험을 제공합니다.",
+      "deduction": "약속된 목표를 달성하지 못하면 점수 차감으로 이어집니다.",
+      "accessPath": {
+        "prefix": "[",
+        "path": "판매자 센터 >> 판매자 신용 점수",
+        "suffix": "] 페이지에서 점수를 확인할 수 있습니다."
+      }
+    },
+    "section2": {
+      "title": "점수는 어떻게 생성되나요?",
+      "deductionCondition": "점수는 구매자의 최소 기대치를 충족하지 못할 때만 차감되며, 판매자에게 개선이 필요한 영역을 경고합니다.",
+      "updateTime": "판매자 평가 시스템은 매월 1일에 전월 판매자의 위반 사항에 따라 업데이트됩니다. 관련 평가 차원의 키워드를 클릭하여 전체 정책을 확인할 수 있습니다."
+    },
+    "table1": {
+      "headers": {
+        "measure": "평가 조치",
+        "spec": "세부 사항",
+        "deduction": "월간 차감 점수"
+      },
+      "max10": "최대 10점",
+      "max20": "최대 20점",
+      "rows": {
+        "nfr": {
+          "title": "NFR 미이행률",
+          "desc": "최근 7일 동안 판매자가 취소하거나 반품한 주문 수가 전체 주문의 30%를 차지"
+        },
+        "lsr": {
+          "title": "지연 배송률 LSR",
+          "desc": "최근 7일 동안 72시간 이상 지연된 주문 수가 전체 주문의 20%를 차지"
+        },
+        "customerService": {
+          "title": "고객 서비스",
+          "rude": "채팅 또는 댓글에서 무례하거나 모욕적",
+          "cancelRequests": "이번 달 구매자의 주문 취소 요청이 5회를 초과"
+        },
+        "breach": {
+          "title": "위반",
+          "lowResponse": "구매자 응답률이 80% 미만",
+          "violatePromise": "판매자가 구매자와 약속한 서비스를 제공하지 않아 구매자 권리를 침해"
+        }
+      }
+    },
+    "section3": {
+      "title": "특정 점수와 관련된 처벌은 무엇인가요?"
+    },
+    "table2": {
+      "headers": {
+        "points": "총 점수",
+        "level": "처벌 수준"
+      },
+      "level1": "레벨 1",
+      "level2": "레벨 2",
+      "level3": "레벨 3",
+      "level4": "레벨 4",
+      "level5": "레벨 5",
+      "level6": "레벨 6",
+      "penalties": {
+        "marketingBan": "마케팅 활동 금지 (28일)",
+        "freeShippingRemoval": "무료 배송 또는 배송비 환불 제거 (28일)",
+        "deboost": "상품 노출 감소 (28일)",
+        "loanRestriction": "판매자 대출 제한 (28일)",
+        "listingBlock": "상품 등록 및 편집 차단 (28일)",
+        "accountFreeze": "계정 정지 (28일)"
+      }
+    },
+    "section4": {
+      "title": "고객 서비스 위반에 대한 규칙 및 세부 사항",
+      "rudeQuestion": "무례하거나 모욕적인 채팅 또는 댓글이란 무엇인가요?",
+      "rudeDefinition": "악의적인 위협은 회원이 타인을 모욕, 욕설, 위협, 댓글 등으로 또는 부적절한 수단으로 타인을 위협하여 타인의 합법적 권리를 침해하는 행위를 의미합니다.",
+      "rudeHandling": "무례하거나 모욕적인 채팅 또는 댓글은 어떻게 처리하나요?",
+      "rudePenalty": "일반 및 심각한 위반에 대해 사업 권리, 관리, 통제와 관련된 점수를 차감합니다.",
+      "rudeScenario": "적용 상황: 악의적인 위협은 회원이 타인을 모욕, 욕설, 위협 등으로 또는 부적절한 수단으로 타인을 위협하여 타인의 합법적 권리를 침해하는 행위를 의미합니다."
+    },
+    "section5": {
+      "title": "위반에 대한 조치",
+      "breachQuestion": "위반이란 무엇인가요?",
+      "breachDefinition": "위반은 판매자가 구매자에게 서비스를 제공하지 않거나, 구매자 권리를 침해하거나, APP-NAME과 약속한 의무를 이행하지 않는 사실을 의미합니다. 판매자는 변경, 반품, 환불에 대한 법적 또는 합의된 의무를 준수해야 합니다.",
+      "measure": "적용 조치: 점수 차감",
+      "specificMeasures": "구체적 조치",
+      "generalViolation": "1. 특정 상황에서 결제 완료된 주문 또는 관련 상품/서비스에 대해 판매자가 이행해야 할 기타 약속이 있는 경우, 일반 위반당 5점 차감",
+      "seriousViolation": {
+        "prefix": "2. 판매자가 다음 약속 중 하나를 위반한 경우, 심각한 위반당 10점 차감:",
+        "item1": "1) APP-NAME이 판매자가 환불 및 기타 사후 보증 책임을 져야 한다고 판단했으나 판매자가 거부",
+        "item2": "2) APP-NAME이 판매자가 7일 이내 이유 없는 반품/교환 사후 보증 책임을 져야 한다고 판단했으나 판매자가 거부",
+        "item3": "3) 구매자와 판매자 간 협의 없이 구매자와 약속한 시험 상품 배송을 거부하거나 지연",
+        "item4": "4) 판매자가 결제 후 72시간 이내에 주문을 처리하지 않음",
+        "activity": "APP-NAME의 공식 활동에 참여한 판매자가 활동 요구사항을 준수하지 않음(배송 시간 제외), APP-NAME이 공식적으로 발표한 기타 관리 내용(카테고리 관리 표준, 산업 표준 등 포함, 이에 국한되지 않음) 위반. 특정 요구사항이 특정 상황과 일치하면 해당 요구사항을 따름"
+      }
+    },
+    "section6": {
+      "title": "처벌 기간은 얼마나 되나요?",
+      "duration": {
+        "prefix": "처벌은 ",
+        "days": "28일",
+        "suffix": " 후 종료됩니다. 관련 조치를 취하고 현재 스토어 성과를 개선하며 준수를 유지하면 처벌받은 판매자는 일부 판매자 권리를 복구합니다."
+      }
+    },
+    "section7": {
+      "title": "위반 관리",
+      "generalCase": "일반 상황인 경우",
+      "generalDesc": "소비자가 불만을 제기하고 APP-NAME이 불만이 유효하다고 판단하면 일반 위반당 5점 차감, 5개 주문 완료 시 5점 복구",
+      "seriousCase": "심각한 상황인 경우",
+      "seriousDesc": "소비자가 불만을 제기하고 APP-NAME이 불만이 유효하고 심각하다고 판단하면 항목당 20점 차감, 20개 주문 완료 시 20점 복구",
+      "extremeCase": "극히 심각한 상황인 경우",
+      "extremeDesc": "28일 이내 계정 정지, 스토어 폐쇄",
+      "example1": {
+        "title": "예시 1: 판매자 A가 3주차에 3점 차감되면 7주차에 권리 복구"
+      },
+      "example2": {
+        "title": "예시 2: 판매자 B가 3주차에 3점, 5주차에 3점 차감되면 이 점수는 누적되어 수준을 결정하며 9주차에 권리 복구"
+      },
+      "example3": {
+        "title": "예시 3: 판매자 C가 분기 시작 전 1주에 3점, 분기 시작 후 3점 차감되면 새 점수가 새 수준을 결정"
+      }
+    },
+    "section8": {
+      "title": "평가에 어떻게 항소하나요?",
+      "appeal": {
+        "prefix": " ",
+        "link": "핫라인 링크",
+        "suffix": "를 클릭하여 항소하세요. 항소가 성공하면 점수 차감을 취소하고 관련 판매자 권리를 복구합니다."
+      }
+    }
+  }
+}

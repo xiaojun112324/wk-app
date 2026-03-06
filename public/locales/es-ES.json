@@ -1,0 +1,1232 @@
+{
+  "common": {
+     "store": "Tienda",
+  "goods": "Productos",
+    "category": "Categoría",
+    "categories": "Todas las categorías",
+    "wishlist": "Lista de deseos",
+    "checkout": "Finalizar compra",
+    "order": "Pedido",
+    "account": "Cuenta",
+    "settings": "Configuración",
+    "language": "Idioma",
+    "currency": "Moneda",
+    "search": "Buscar",
+    "searchPlaceholder": "Buscar productos, marcas o categorías",
+    "buyNow": "Comprar ahora",
+    "viewMore": "Ver más",
+    "viewAll": "Ver todo",
+    "loadMore": "Cargar más",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "save": "Guardar",
+    "submit": "Enviar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "yes": "Sí",
+    "no": "No",
+    "success": "Operación exitosa",
+    "failed": "Operación fallida",
+    "loading": "Cargando...",
+    "noData": "Sin datos",
+    "outOfStock": "Sin stock",
+    "inStock": "En stock",
+    "soldOut": "Agotado",
+    "newArrival": "Novedad",
+    "bestSeller": "Más vendidos",
+    "discount": "Descuento",
+    "price": "Precio",
+    "quantity": "Cantidad",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "shipping": "Envío",
+    "tax": "Impuesto",
+    "grandTotal": "Total general",
+    "payment": "Pago",
+    "paymentMethod": "Método de pago",
+    "delivery": "Entrega",
+    "contactUs": "Contáctenos",
+    "helpCenter": "Centro de ayuda",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio",
+    "logout": "Cerrar sesión",
+    "forgotPassword": "¿Olvidó su contraseña?",
+    "rememberMe": "Recuérdame",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "welcomeBack": "Bienvenido de nuevo",
+    "or": "o",
+    "continue": "Continuar",
+    "filter": "Filtro",
+    "sort": "Ordenar",
+    "clear": "Limpiar",
+    "viewDetails": "Ver detalles",
+    "reviews": "Reseñas",
+    "addReview": "Añadir reseña",
+    "rating": "Calificación",
+    "share": "Compartir",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "backToHome": "Volver al inicio",
+    "404Title": "Página no encontrada",
+    "404Desc": "Lo sentimos, la página que visitó no existe.",
+    "retry": "Reintentar"
+  },
+  "login": {
+    "title": "Iniciar sesión en su cuenta",
+    "subtitle": "¡Bienvenido! Introduzca la información de su cuenta",
+    "tabEmail": "Inicio de sesión por correo",
+    "tabPhone": "Inicio de sesión por teléfono",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "Introduzca el correo electrónico",
+    "emailRequired": "Introduzca el correo electrónico",
+    "phoneLabel": "Teléfono",
+    "phonePlaceholder": "Introduzca el teléfono",
+    "phoneRequired": "Introduzca el teléfono",
+    "areaCodePlaceholder": "Código de área",
+    "areaCodeRequired": "Seleccione el código de área",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "Introduzca la contraseña",
+    "passwordRequired": "Introduzca la contraseña",
+    "passwordPattern": "La contraseña debe tener entre 6 y 12 caracteres y no puede contener espacios",
+    "noAccount": "¿No tiene cuenta?",
+    "register": "Registrarse",
+    "forgotPassword": "¿Olvidó su contraseña?",
+    "loginButton": "Iniciar sesión",
+    "successMessage": "¡Inicio de sesión exitoso!"
+  },
+  "register": {
+    "title": "Registrar su cuenta",
+    "subtitle": "¡Bienvenido! Introduzca sus datos",
+    "tabEmail": "Correo electrónico",
+    "tabPhone": "Teléfono",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "Introduzca el correo electrónico",
+    "emailRequired": "Introduzca el correo electrónico",
+    "emailInvalid": "Formato de correo electrónico incorrecto",
+    "phoneLabel": "Teléfono",
+    "phonePlaceholder": "Introduzca el teléfono",
+    "phoneRequired": "Introduzca el teléfono",
+    "areaCodePlaceholder": "Código de área",
+    "areaCodeRequired": "Seleccione el código de área",
+    "passwordLabel": "Contraseña",
+    "passwordPlaceholder": "Introduzca la contraseña",
+    "passwordRequired": "Introduzca la contraseña",
+    "passwordPattern": "La contraseña debe tener entre 6 y 12 caracteres y no puede contener espacios",
+    "confirmPasswordLabel": "Confirmar contraseña",
+    "confirmPasswordPlaceholder": "Vuelva a introducir la contraseña",
+    "confirmPasswordRequired": "Vuelva a introducir la contraseña",
+    "passwordMismatch": "¡Las contraseñas introducidas no coinciden!",
+    "hasAccount": "¿Ya tiene cuenta?",
+    "login": "Iniciar sesión",
+    "registerButton": "Registrarse",
+    "successMessage": "¡Registro exitoso!"
+  },
+  "home": {
+    "bannerTitleLine1": "Eleva tu estilo",
+    "bannerTitleLine2": "Abraza el lujo",
+    "bannerSubtitle": "Explora la última colección diseñada para la elegancia moderna. Redefine tu armario con moda atemporal.",
+    "recommendCategory": "Categorías recomendadas",
+    "dailyNewArrival": "Novedades diarias",
+    "recommendProduct": "Productos recomendados",
+    "recommendStore": "Tiendas recomendadas",
+    "hotRecommend": "Recomendaciones populares",
+    "featureAuthentic": "100% Auténtico",
+    "featureReturn7Days": "Devolución en 7 días",
+    "featureShippingDiscount": "Descuento en envío",
+    "featureSecurePayment": "Pago seguro"
+  },
+  "products": {
+    "category": "Categoría",
+    "allProducts": "Todos los productos",
+    "comprehensive": "General",
+    "sales": "Volumen de ventas",
+    "price": "Precio",
+    "newArrival": "Novedades"
+  },
+  "merchantRegister": {
+    "title": "Registro de comerciante",
+    "header": "Registro de comerciante APP-NAME",
+    "loginTipPrefix": "Si ya es vendedor, ",
+    "login": "haga clic para iniciar sesión",
+    "description": "Nuestro programa de socios le ofrece soporte de marketing completo y servicios. Nuestro equipo de atención al cliente proporcionará soporte y sugerencias profesionales para optimizar la presentación y estrategias de ventas de sus productos. ¡Únase a nosotros ahora! ¡Creemos mayores oportunidades de negocio y crezcamos juntos!",
+    "merchantInfo": "Información del comerciante",
+    "storeLogo": "Logotipo de la tienda",
+    "storeLogoTip": "Cargue el logotipo de la tienda",
+    "shopName": "Nombre de la tienda",
+    "shopNameTip": "Introduzca el nombre de la tienda",
+    "shopNamePlaceholder": "Introduzca el nombre de la tienda, sin caracteres especiales",
+    "shopAddress": "Dirección de la tienda",
+    "shopAddressTip": "Introduzca la dirección de la tienda",
+    "shopAddressPlaceholder": "Introduzca la dirección de la tienda, sin caracteres especiales",
+    "country": "País",
+    "countryTip": "Seleccione el país",
+    "countryPlaceholder": "Seleccione el país",
+    "idNumber": "Número de documento/pasaporte",
+    "idNumberTip": "Introduzca el número de documento",
+    "idNumberPlaceholder": "Introduzca el número de documento",
+    "realName": "Nombre real",
+    "realNameTip": "Introduzca el nombre real",
+    "realNamePlaceholder": "Introduzca el nombre real",
+    "idCardFront": "Foto del anverso del documento",
+    "idCardFrontTip": "Cargue la foto del anverso del documento",
+    "idCardBack": "Foto del reverso del documento",
+    "idCardBackTip": "Cargue la foto del reverso del documento",
+    "verifyType": "Método de verificación",
+    "verifyTypeTip": "Seleccione el método de verificación",
+    "email": "Correo electrónico",
+    "phone": "Número de teléfono",
+    "contact": "Nombre de usuario (correo o teléfono)",
+    "contactTip": "Introduzca el nombre de usuario",
+    "contactPlaceholder": "Introduzca el correo o teléfono",
+    "password": "Contraseña de inicio de sesión",
+    "passwordTip": "Introduzca la contraseña de inicio de sesión",
+    "passwordPattern": "La contraseña debe tener entre 6 y 12 caracteres y no puede contener espacios",
+    "passwordPlaceholder": "Introduzca la contraseña de inicio de sesión",
+    "confirmPassword": "Confirmar contraseña",
+    "confirmPasswordTip": "Las contraseñas introducidas no coinciden",
+    "confirmPasswordPlaceholder": "Vuelva a introducir la contraseña de inicio de sesión",
+    "inviteCode": "Código de invitación",
+    "inviteCodePlaceholder": "Introduzca el código de invitación (opcional)",
+    "submit": "Enviar solicitud",
+    "submitSuccess": "¡Enviado con éxito, espere la aprobación!",
+    "areaCodeTip": "Seleccione el código de área",
+    "areaCodePlaceholder": "Seleccione el código de área",
+    "phonePlaceholder": "Introduzca el teléfono"
+  },
+  "mineDetail": {
+    "goodsCollect": "Colección de productos",
+    "storeCollect": "Tiendas seguidas",
+    "defaultAddress": "Dirección predeterminada",
+    "addAddress": "Añadir dirección",
+    "followedStores": "Tiendas seguidas",
+    "collectedGoods": "Productos coleccionados"
+  },
+  "favoriteProducts": {
+    "collectedGoods": "Productos coleccionados"
+  },
+  "mineMerchant": {
+    "followedShops": "Tiendas seguidas"
+  },
+  "mine": {
+    "shop": "Registro de comerciante",
+    "userIdPrefix": "ID:",
+    "balanceLabel": "Saldo",
+    "deposit": "Depósito",
+    "withdraw": "Retirar",
+    "myOrders": "Mis pedidos",
+    "all": "Todo",
+    "orderStatus": {
+      "pending": "Pago pendiente",
+      "shipping": "Envío pendiente",
+      "receiving": "Recepción pendiente",
+      "review": "Evaluación pendiente",
+      "refund": "Reembolso/Postventa"
+    },
+    "moreFeatures": "Más funciones",
+    "setting": "Configuración",
+    "language": "Idioma",
+    "wallet": "Cartera",
+    "favorite": "Favoritos"
+  },
+  "OrderDetail": {
+    "myOrders": "Mis pedidos",
+    "orderInfo": "Información del pedido",
+    "orderNo": "Número de pedido",
+    "time": "Hora",
+    "orderPrice": "Importe del pedido",
+    "orderState": "Estado del pedido",
+    "refundState": "Estado del reembolso",
+    "recipientInfo": "Información del destinatario",
+    "name": "Nombre",
+    "phone": "Teléfono",
+    "country": "País",
+    "addressDetail": "Dirección detallada",
+    "productInfo": "Información del producto",
+    "unitPrice": "Precio unitario",
+    "quantity": "Cantidad",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "unknown": "Estado desconocido"
+  },
+  "Orders": {
+    "all": "Todo",
+    "pending": "Pago pendiente",
+    "shipping": "Envío pendiente",
+    "receiving": "Recepción pendiente",
+    "review": "Evaluación pendiente",
+    "refund": "Reembolso/Postventa",
+    "confirmReceivingTitle": "¿Confirmar recepción?",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "orderNo": "Número de pedido",
+    "orderDesc": "Descripción del pedido",
+    "orderPrice": "Importe",
+    "status": "Estado",
+    "actions": "Acciones",
+    "viewOrder": "Ver pedido",
+    "remindShipping": "Recordatorio de envío",
+    "remindShippingSuccess": "El vendedor ha recibido su recordatorio",
+    "refundRequest": "Solicitud de reembolso",
+    "confirmReceiving": "Confirmar recepción",
+    "addComment": "Añadir comentario",
+    "unknown": "Desconocido"
+  },
+  "Wallet": {
+    "balance": "Saldo",
+    "recharge": "Recargar",
+    "withdraw": "Retirar",
+    "history": "Historial de la cartera",
+    "createTime": "Fecha de creación",
+    "rechargeNo": "Número de recarga",
+    "rechargeAmount": "Cantidad de recarga",
+    "rechargeType": "Protocolo de moneda",
+    "rechargeAddress": "Dirección de recarga",
+    "withdrawNo": "Número de retiro",
+    "withdrawAmount": "Cantidad de retiro",
+    "withdrawType": "Protocolo de moneda",
+    "withdrawAddress": "Dirección de llegada",
+    "fee": "Comisión",
+    "realAmount": "Importe real",
+    "status": "Estado",
+    "unpaid": "No pagado",
+    "success": "Éxito",
+    "fail": "Fallo",
+    "pending": "Pendiente",
+    "processed": "Procesado",
+    "rejected": "Rechazado",
+    "orderNo": "Número"
+  },
+  "AccountPanel": {
+    "balance": "Saldo",
+    "recharge": "Recargar",
+    "withdraw": "Retirar"
+  },
+  "LogisticsDialog": {
+    "title": "Información logística",
+    "empty": "Sin información logística",
+    "close": "Cerrar"
+  },
+  "OrderCard": {
+    "viewOrder": "Ver pedido",
+    "remindShipping": "Recordatorio de envío",
+    "requestRefund": "Solicitud de reembolso",
+    "confirmReceiving": "Confirmar recepción",
+    "payNow": "Pagar ahora",
+    "cancelOrder": "Cancelar pedido",
+    "addComment": "Añadir comentario",
+    "refunded": "Reembolsado"
+  },
+  "RefundDialog": {
+    "title": "Solicitar reembolso",
+    "refundReason": "Motivo del reembolso",
+    "refundReasonPlaceholder": "Introduzca el motivo del reembolso",
+    "refundRemark": "Explicación de la devolución",
+    "refundRemarkPlaceholder": "Introduzca la explicación de la devolución",
+    "cancel": "Cancelar",
+    "submit": "Enviar"
+  },
+  "Search": {
+    "comprehensive": "General",
+    "soldNum": "Volumen de ventas",
+    "price": "Precio",
+    "newest": "Novedades"
+  },
+  "Address": {
+    "setting": "Configuración",
+    "defaultAddress": "Dirección predeterminada",
+    "addAddress": "Añadir dirección",
+    "confirmDelete": "Confirmar eliminación",
+    "confirmDeleteContent": "¿Está seguro de que desea eliminar esta dirección?",
+    "ok": "Confirmar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "deleted": "Eliminado"
+  },
+  "DeleteAccount": {
+    "setting": "Configuración",
+    "title": "Cancelación de cuenta",
+    "description": "Cancele permanentemente su cuenta APP-NAME, eliminando toda la información personal y datos relacionados. Después de la cancelación, los datos no se pueden recuperar, proceda con precaución. Asegúrese de completar las operaciones necesarias antes de la cancelación, como guardar información importante o procesar asuntos pendientes.",
+    "account": "Su cuenta",
+    "enterAccount": "Introduzca",
+    "reason": "Por qué desea irse",
+    "submit": "Enviar solicitud",
+    "submitSuccess": "Enviado con éxito"
+  },
+  "Setting": {
+    "title": "Configuración",
+    "description": "¡Gestione fácilmente su cuenta APP-NAME, de forma segura y conveniente! Cambie la contraseña de inicio de sesión con un clic, recomendando una contraseña fuerte con letras, números y símbolos, actualizando regularmente para garantizar la seguridad de la cuenta; configure una contraseña de transacción independiente para garantizar la seguridad de operaciones sensibles; actualice la dirección de recepción precisa para garantizar notificaciones y entregas sin problemas en la plataforma. ¡Operaciones simples, disfrute de una experiencia tranquila!",
+    "loginPassword": "Contraseña de inicio de sesión",
+    "tradePassword": "Contraseña de transacción",
+    "address": "Dirección de recepción",
+    "deleteAccount": "Cancelación de cuenta",
+    "submitSuccess": "¡Enviado con éxito!"
+  },
+  "LoginPassword": {
+    "setting": "Configuración",
+    "title": "Contraseña de inicio de sesión",
+    "description": "Cambie o restablezca la contraseña, recomendando una contraseña fuerte con letras, números y símbolos, actualizando regularmente para proteger la seguridad de la cuenta.",
+    "oldPassword": "Contraseña antigua",
+    "newPassword": "Nueva contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "enterOldPassword": "Introduzca la contraseña antigua",
+    "enterNewPassword": "Introduzca la nueva contraseña",
+    "passwordMinLength": "La contraseña debe tener al menos 6 caracteres",
+    "confirmPasswordMsg": "Confirme la contraseña",
+    "passwordMismatch": "Las contraseñas introducidas no coinciden",
+    "submit": "Enviar solicitud",
+    "success": "Operación exitosa"
+  },
+  "PayPassword": {
+    "setting": "Configuración",
+    "title": "Contraseña de transacción",
+    "description": "Configure una contraseña de transacción independiente de la contraseña de inicio de sesión, utilizada para confirmar subastas, retiros de fondos, etc., mejorando la seguridad de las transacciones.",
+    "oldPassword": "Contraseña antigua",
+    "newPassword": "Nueva contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "enterOldPassword": "Introduzca la contraseña antigua",
+    "enterNewPassword": "Introduzca la nueva contraseña",
+    "passwordMinLength": "La contraseña debe tener al menos 6 caracteres",
+    "confirmPasswordMsg": "Confirme la contraseña",
+    "passwordMismatch": "Las contraseñas introducidas no coinciden",
+    "submit": "Enviar solicitud",
+    "success": "Operación exitosa"
+  },
+  "MerchantHeader": {
+    "follow": "Seguir tienda",
+    "followed": "Seguida",
+    "followSuccess": "Seguida con éxito",
+    "unfollow": "Dejar de seguir",
+    "products": "Productos",
+    "sales": "Ventas",
+    "rate": "Tasa de aprobación"
+  },
+  "Products": {
+    "allProducts": "Todos los productos",
+    "category": "Categoría",
+    "comprehensive": "General",
+    "sales": "Volumen de ventas",
+    "price": "Precio",
+    "newArrival": "Novedades"
+  },
+  "Store": {
+    "recommend": "Recomendado",
+    "allProducts": "Todos los productos"
+  },
+  "Withdraw": {
+    "myWallet": "Mi cartera",
+    "withdraw": "Retiro",
+    "description": "Admite varios canales de llegada, procesa rápidamente solicitudes de fondos, seguridad y cumplimiento garantizan la seguridad de cada retiro."
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Página no encontrada",
+    "description": "Lo sentimos, no pudimos encontrar la página que desea visitar.",
+    "backHome": "Volver al inicio"
+  },
+  "CheckForms": {
+    "checkout": "Finalizar",
+    "addressTitle": "1. Dirección de recepción",
+    "changeAddress": "Cambiar dirección",
+    "addressInfo": "Información de recepción",
+    "recipientName": "Nombre del destinatario",
+    "phone": "Teléfono de contacto",
+    "nation": "País/Región",
+    "addressDetail": "Dirección detallada",
+    "noAddress": "Sin dirección",
+    "addAddress": "Añadir dirección",
+    "paymentTitle": "2. Método de pago",
+    "selectPayment": "Seleccione el método de pago",
+    "balance": "Saldo",
+    "paypal": "PayPal (no disponible)",
+    "visa": "VISA (no disponible)",
+    "mastercard": "MasterCard (no disponible)",
+    "orderSummary": "Resumen del pedido",
+    "total": "Total",
+    "submitOrder": "Enviar pedido",
+    "submitSuccess": "Enviado con éxito",
+    "tip": "Consejo",
+    "selectAddressFirst": "Seleccione primero la dirección de recepción",
+    "selectAddress": "Seleccione la dirección de recepción",
+    "noAvailableAddress": "Sin dirección disponible"
+  },
+  "OrderResult": {
+    "paymentSuccess": "Pago exitoso",
+    "recipient": "Destinatario",
+    "address": "Dirección de recepción",
+    "continueShopping": "Continuar comprando",
+    "viewOrders": "Ver pedidos"
+  },
+  "Deposit": {
+    "myWallet": "Mi cartera",
+    "deposit": "Depósito",
+    "description": "Recarga rápida y estable, operación simple y fluida, complemente el saldo de la cuenta en cualquier momento para uso sin preocupaciones."
+  },
+  "BottomNav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "cart": "Carrito",
+    "mine": "Mío"
+  },
+  "Footer": {
+    "solutions": {
+      "title": "Servicio al cliente",
+      "contactUs": "Contáctenos"
+    },
+    "support": {
+      "title": "Devoluciones y cambios",
+      "privacyPolicy": "Política de privacidad",
+      "returnsPolicy": "Política de devoluciones",
+      "deliveryInformation": "Envío y recogida",
+      "sellerScoreSystem": "Política del vendedor"
+    },
+    "company": {
+      "title": "Centro de usuario",
+      "register": "Registro de usuario",
+      "orderQuery": "Consulta de pedidos",
+      "favoriteProducts": "Colección de productos",
+      "wallet": "Mi cartera"
+    },
+    "legal": {
+      "title": "Sobre nosotros",
+      "aboutUs": "Sobre nosotros",
+      "careers": "Carreras",
+      "news": "Noticias",
+      "modernSlavery": "Declaración sobre esclavitud moderna"
+    },
+    "description": "Los usuarios de la estación global APP-NAME provienen de 112 países, utilizando USDT/ETH/BTC para liquidación. USDT/ETH/BTC es un método de transacción sin fronteras, permitiendo transacciones instantáneas de bajo costo en todo el mundo, sin espera y sin tarifas internacionales.",
+    "copyright": "© APP-NAME Limited 2023 Todos los derechos reservados."
+  },
+  "Header": {
+    "title": "APP-NAME",
+    "home": "Inicio",
+    "category": "Categoría",
+    "products": "Productos",
+    "sales": "Productos en descuento",
+    "merchantOnboarding": "Registro de comerciante",
+    "profile": "Centro personal",
+    "logout": "Cerrar sesión",
+    "logoutSuccess": "Sesión cerrada",
+    "search": "Buscar"
+  },
+  "SearchWithHistory": {
+    "placeholder": "Contenido de búsqueda",
+    "clearAll": "Limpiar todo"
+  },
+  "CartDrawer": {
+    "items": "artículos",
+    "myCart": "Mi carrito"
+  },
+  "CartPanel": {
+    "totalItems": "Total de productos",
+    "items": "artículos",
+    "totalPrice": "Total",
+    "submitOrder": "Enviar pedido"
+  },
+  "MerchantCard": {
+    "unfollow": "Dejar de seguir",
+    "follow": "Seguir",
+    "visitNow": "Visitar ahora",
+    "sold": "Vendido",
+    "views": "Visitas",
+    "rating": "Calificación de la tienda"
+  },
+  "Mine": {
+    "dashboard": "Panel",
+    "wallet": "Mi cartera",
+    "orders": "Mis pedidos",
+    "favoriteProducts": "Colección de productos",
+    "followedMerchants": "Tiendas seguidas",
+    "settings": "Configuración",
+    "userId": "ID"
+  },
+  "PageTitle": {
+    "more": "Más"
+  },
+  "ProductCard": {
+    "addCartSuccess": "Añadido al carrito",
+    "collected": "Coleccionado",
+    "unCollected": "Cancelada la colección",
+    "off": "DESCUENTO",
+    "addToCart": "Añadir al carrito",
+    "soldViews": "Volumen de ventas",
+    "viewsNum": "Visitas"
+  },
+  "AddGoodsCommentDialog": {
+    "title": "Evaluación",
+    "addCommentSuccess": "Comentario añadido con éxito",
+    "selectProduct": "Seleccionar producto",
+    "selectProductRequired": "Seleccione el estado de revisión",
+    "selectPlaceholder": "Seleccione",
+    "userName": "Correo/teléfono del miembro",
+    "userNameRequired": "Introduzca el correo o teléfono del miembro",
+    "userNamePlaceholder": "Introduzca el correo o teléfono del miembro",
+    "commentContent": "Contenido del comentario",
+    "commentContentRequired": "Introduzca el contenido del comentario",
+    "commentContentPlaceholder": "Introduzca el contenido del comentario",
+    "rating": "Calificación",
+    "ratingRequired": "Seleccione la calificación",
+    "commentImages": "Imágenes del comentario",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar"
+  },
+  "AddressDialog": {
+    "editAddress": "Editar dirección de recepción",
+    "addAddress": "Añadir dirección de recepción",
+    "recipientName": "Nombre del destinatario",
+    "recipientNameRequired": "Introduzca el nombre del destinatario",
+    "recipientNamePlaceholder": "Introduzca el nombre del destinatario",
+    "phone": "Teléfono",
+    "nationRequired": "Seleccione el código de país",
+    "nationPlaceholder": "Código de país",
+    "phoneRequired": "Introduzca el teléfono",
+    "phonePlaceholder": "Introduzca el teléfono",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "Introduzca el correo electrónico",
+    "region": "País/Provincia/Ciudad",
+    "regionRequired": "Seleccione la región",
+    "regionPlaceholder": "Seleccione el país/provincia/ciudad",
+    "postCode": "Código postal",
+    "postCodePlaceholder": "Introduzca el código postal",
+    "addressDetail": "Dirección detallada",
+    "addressDetailPlaceholder": "Introduzca la dirección detallada",
+    "isDefault": "Dirección predeterminada",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar"
+  },
+  "CustomerServiceChat": {
+    "title": "Atención al cliente",
+    "inputPlaceholder": "Introduzca",
+    "noMessage": "Sin mensajes",
+    "imageAlt": "Imagen",
+    "heicUnsupported": "El navegador actual no admite la carga de archivos HEIC",
+    "heicUploadFailed": "No se puede cargar el archivo HEIC"
+  },
+  "DepositForm": {
+    "currency": "Moneda de recarga",
+    "selectCurrency": "Seleccione la moneda de recarga",
+    "network": "Red blockchain",
+    "selectNetwork": "Seleccione la red blockchain",
+    "addressLabel": "Dirección de recarga",
+    "amount": "Cantidad de recarga",
+    "enterAmount": "Introduzca la cantidad de recarga",
+    "estimatedArrival": "Llegada estimada (tasa actual {{rate}})",
+    "proof": "Comprobante de pago (cargar captura de pantalla)",
+    "uploadProof": "Cargue el comprobante de pago",
+    "submit": "Confirmar",
+    "success": "Operación exitosa",
+    "addressCopied": "¡Dirección copiada!"
+  },
+  "OtpModal": {
+    "enterTransactionPassword": "Introduzca la contraseña de transacción",
+    "enter6Digits": "Introduzca el código de verificación de 6 dígitos",
+    "verifyFailed": "Verificación fallida, intente de nuevo",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar"
+  },
+  "ProductDetailMain": {
+    "basicInfo": "Información básica",
+    "sales": "Volumen de ventas",
+    "views": "Visitas",
+    "originalPrice": "Precio original",
+    "currentPrice": "Precio actual",
+    "shipping": "Envío",
+    "freeShipping": "Envío gratis",
+    "quantity": "Cantidad",
+    "totalPrice": "Precio total",
+    "buyNow": "Comprar ahora",
+    "addToCart": "Añadir al carrito",
+    "pleaseSelect": "Seleccione",
+    "noStock": "Sin stock",
+    "shippingDesc": "El producto se enviará dentro de las 24 horas posteriores al pedido. Si hay control logístico en el pedido, el pedido puede retrasarse, preste atención a la información logística del pedido o contacte al servicio al cliente"
+  },
+  "ProductDetailModal": {
+    "title": "Detalles del producto",
+    "noGoods": "Sin información del producto",
+    "addSuccess": "Añadido con éxito"
+  },
+  "UploadImg": {
+    "upload": "Cargar",
+    "preview": "Vista previa de la imagen",
+    "onlyImage": "¡Solo se pueden cargar imágenes en formatos JPG/PNG/WEBP/HEIC!",
+    "maxSize": "El tamaño de la imagen no puede exceder",
+    "unsupportedHeic": "El navegador actual no admite la carga de archivos HEIC",
+    "uploadFailed": "Carga fallida, intente de nuevo más tarde"
+  },
+  "UploadMultiple": {
+    "upload": "Cargar",
+    "uploadSuccess": "Carga exitosa",
+    "uploadFailed": "Carga fallida"
+  },
+  "WithdrawForm": {
+    "withdrawMethod": "Método de retiro",
+    "selectWithdrawMethod": "Seleccione el método de retiro",
+    "crypto": "Criptomoneda",
+    "bankCard": "Tarjeta bancaria",
+    "coinType": "Moneda de retiro",
+    "selectCoin": "Seleccione la moneda",
+    "enterUSDT": "Introduzca USDT",
+    "blockchainNetwork": "Red blockchain",
+    "withdrawAddress": "Dirección de retiro",
+    "enterWithdrawAddress": "Introduzca la dirección de retiro",
+    "copy": "Copiar",
+    "bankName": "Nombre del banco",
+    "enterBankName": "Introduzca el nombre del banco",
+    "bankBranch": "Sucursal bancaria",
+    "enterBankBranch": "Introduzca la sucursal bancaria",
+    "bankCardNumber": "Número de tarjeta bancaria",
+    "enterBankCardNumber": "Introduzca el número de tarjeta bancaria",
+    "withdrawAmount": "Importe de retiro",
+    "enterWithdrawAmount": "Introduzca el importe de retiro",
+    "amountMustBeGreaterZero": "El importe de retiro debe ser mayor que 0",
+    "currentBalance": "Saldo actual",
+    "actualReceived": "Importe real recibido",
+    "fee": "Comisión",
+    "confirmSubmit": "Confirmar envío",
+    "copied": "¡Copiado!",
+    "inputAddressFirst": "Introduzca primero la dirección de retiro/número de tarjeta bancaria",
+    "operationSuccess": "Operación exitosa"
+  },
+  "order": {
+    "pendingPayment": "Pago pendiente",
+    "pendingShipment": "Envío pendiente",
+    "pendingReceive": "Recepción pendiente",
+    "pendingReview": "Evaluación pendiente",
+    "refund": "Reembolso/Postventa"
+  },
+  "refund": {
+    "pending": "En revisión",
+    "success": "Éxito",
+    "failed": "Fallo"
+  },
+  "DeliveryInformation": {
+    "title": "¿Dónde entregamos?",
+    "desc1": "Para saber si entregamos en su región, introduzca su código postal en el producto que desea comprar.",
+    "desc2": "Los productos se envían directamente desde nuestros proveedores, con almacenes globales en 112 países/regiones.",
+    "pickup": {
+      "title": "¿Dónde recoger?",
+      "desc1": "Tenemos puntos de recogida 24 horas en",
+      "highlight1": "tiendas APP-NAME, supermercados Sainsbury's",
+      "desc2": "y almacenes globales.",
+      "desc3": "Para artículos disponibles para entrega rápida, seleccione entre varios intervalos de tiempo según su ubicación. El pedido se entregará en la puerta y se colocará en un lugar seguro y confiable.",
+      "alert1": "En Inglaterra, Escocia y Gales, proporcionamos artículos grandes y pesados (artículos que requieren dos o más personas para transportar, como sofás y camas), para que podamos entregarlos de manera segura en cualquier lugar de su elección.",
+      "alert2": "Uno de nuestros amables conductores se pondrá en contacto con usted el mismo día para discutir los detalles de la entrega. Si está en autoaislamiento, infórmenos para que podamos reprogramar la fecha de entrega.",
+      "warning": "Actualmente, tenemos una alta demanda de entregas de artículos grandes. Si su entrega se retrasa, le enviaremos un mensaje lo antes posible. Estamos trabajando arduamente para ofrecer el mejor servicio a nuestros clientes, gracias por su paciencia y apoyo continuo."
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "q1": "¿Qué pasa si pido artículos grandes y pequeños al mismo tiempo?",
+      "a1_1": "La forma más rápida de entregarlos es enviarlos por separado.",
+      "a1_2": "No se preocupe; solo pagará los gastos de envío una vez.",
+      "a1_3": "Consulte su correo electrónico de confirmación del pedido para obtener más información.",
+      "q2": "¿Qué pasa si no estoy en casa?",
+      "a2_1": "Los artículos pequeños se dejarán en un lugar seguro y discreto, o se entregarán a su vecino, según lo solicitado.",
+      "a2_2": "Línea de ayuda",
+      "a2_3": "¡Contáctenos para reprogramar la entrega y elegir la fecha y hora que más le convenga!",
+      "q3": "¿Cuántas personas entregan artículos grandes?",
+      "a3_1": "Artículos grandes, como sofás, congeladores, etc., pueden ser",
+      "a3_2": "entregados por dos personas",
+      "a3_3": ". Uno de nuestros amables conductores se pondrá en contacto con usted el día de la entrega y entregará su pedido de manera segura en el lugar elegido.",
+      "q4": "COVID-19: ¿impacto en las entregas?",
+      "a4_1": "Seguimos ofreciendo servicios de entrega para muchos artículos, incluidas las preventas de consolas de juegos. Recibirá un recordatorio por SMS y el número de seguimiento del mensajero antes de la entrega.",
+      "a4_2": "Los artículos se entregarán en un área segura; los artículos grandes se colocarán en un lugar seguro. Uno de nuestros amables conductores se pondrá en contacto con usted el mismo día para discutir los detalles de transporte de artículos grandes. Si está en autoaislamiento, infórmenos para reprogramar la fecha de entrega."
+    },
+    "cta": "Ver cobertura de entrega"
+  },
+  "PrivacyPolicy": {
+    "header": {
+      "label": "📜 Política de privacidad",
+      "title": "Política de privacidad APP-NAME",
+      "desc": "Última actualización: octubre de 2025 | Proteger su privacidad es nuestra máxima prioridad"
+    },
+    "sections": {
+      "1": {
+        "title": "1、Introducción",
+        "content": {
+          "welcome": "1.1 Bienvenido al sitio web de la tienda APP-NAME",
+          "desc1": "APP-NAME cumple rigurosamente con las responsabilidades prescritas por las leyes y regulaciones de privacidad aplicables (\"Leyes de Privacidad\") y se compromete a respetar los derechos de privacidad y preocupaciones de todos los usuarios de nuestro sitio web APP-NAME y aplicaciones móviles (\"Plataforma\").",
+          "alert": "Reconocemos la importancia de los datos personales que nos confía y creemos que es nuestra responsabilidad gestionar, proteger y procesar adecuadamente sus datos personales.",
+          "definition": "Los datos personales se refieren a datos sobre un individuo que puede identificarse a partir de esos datos o de esos datos y otra información a la que la organización tiene o puede llegar a tener acceso.",
+          "consent": "Al utilizar los servicios, acepta expresamente que recopilemos, usemos, divulguemos y procesemos sus datos personales de acuerdo con esta política de privacidad."
+        }
+      },
+      "2": {
+        "title": "2、¿Cuándo recopila APP-NAME datos personales?",
+        "content": {
+          "scenariosTitle": "Escenarios comunes de recopilación",
+          "online": "📱 Interacciones en línea",
+          "onlineItems": [
+            "Acceder al sitio web",
+            "Enviar formularios",
+            "Registro de cookies"
+          ],
+          "offline": "🤝 Interacciones fuera de línea",
+          "offlineItems": [
+            "Comunicación telefónica",
+            "Reuniones presenciales",
+            "Intercambio de correos electrónicos"
+          ],
+          "thirdParty": "También podemos obtener su información de terceros (logística, proveedores de pago, etc.)"
+        }
+      },
+      "3": {
+        "title": "3、¿Qué datos personales recopila APP-NAME?",
+        "categories": [
+          {
+            "icon": "👤",
+            "label": "Información básica",
+            "items": [
+              "Nombre",
+              "Correo electrónico",
+              "Teléfono",
+              "Dirección"
+            ]
+          },
+          {
+            "icon": "🎂",
+            "label": "Información de identidad",
+            "items": [
+              "Fecha de nacimiento",
+              "Género"
+            ]
+          },
+          {
+            "icon": "📸",
+            "label": "Multimedia",
+            "items": [
+              "Fotos",
+              "Audio",
+              "Vídeo"
+            ]
+          },
+          {
+            "icon": "💼",
+            "label": "Información profesional",
+            "items": [
+              "Historial educativo",
+              "Historial laboral"
+            ]
+          },
+          {
+            "icon": "📍",
+            "label": "Datos de ubicación",
+            "items": [
+              "Ubicación geográfica"
+            ]
+          },
+          {
+            "icon": "📊",
+            "label": "Datos de comportamiento",
+            "items": [
+              "Historial de navegación",
+              "Configuraciones de preferencia"
+            ]
+          }
+        ],
+        "warning": "Puede optar por salir de la recopilación de datos en cualquier momento, pero esto puede afectar el uso de algunas funciones"
+      },
+      "4": {
+        "title": "4、Recopilación de otros datos",
+        "device": {
+          "title": "Información del dispositivo",
+          "items": [
+            "Dirección IP",
+            "Sistema operativo",
+            "Tipo de navegador",
+            "ID único del dispositivo"
+          ]
+        },
+        "location": {
+          "title": "Servicios de ubicación",
+          "desc": "Utiliza GPS/Wi-Fi para recopilar información de ubicación precisa",
+          "note": "Puede desactivar en cualquier momento en la configuración del dispositivo"
+        }
+      },
+      "5": {
+        "title": "5、Cookies",
+        "titleLabel": "Política de cookies",
+        "purpose": {
+          "title": "Finalidades",
+          "items": [
+            "Recomendaciones de contenido personalizado",
+            "Optimización de publicidad",
+            "Análisis de uso del sitio web"
+          ]
+        },
+        "management": {
+          "title": "Gestión",
+          "items": [
+            "Desactivar en la configuración del navegador",
+            "Salir de publicidad personalizada en dispositivos móviles",
+            "Puede afectar algunas funciones"
+          ]
+        }
+      },
+      "6": {
+        "title": "6、¿Cómo utilizamos la información que nos proporciona?",
+        "mainUse": "Usos principales",
+        "items": [
+          {
+            "icon": "✅",
+            "label": "Prestación de servicios"
+          },
+          {
+            "icon": "📧",
+            "label": "Comunicación"
+          },
+          {
+            "icon": "🔍",
+            "label": "Análisis de datos"
+          },
+          {
+            "icon": "🚀",
+            "label": "Optimización de funciones"
+          },
+          {
+            "icon": "📈",
+            "label": "Marketing"
+          },
+          {
+            "icon": "⚖️",
+            "label": "Cumplimiento legal"
+          }
+        ],
+        "unsubscribe": "Puede cancelar la suscripción a información de marketing en cualquier momento"
+      },
+      "7": {
+        "title": "7、¿Qué información retenemos y cómo protege APP-NAME la información de los usuarios?",
+        "security": {
+          "title": "Medidas de seguridad",
+          "items": [
+            "Protección física de seguridad",
+            "Garantía de sistemas de gestión",
+            "Tecnología de encriptación electrónica",
+            "Control de acceso por permisos"
+          ]
+        },
+        "retention": {
+          "title": "Período de retención",
+          "desc": "Retenemos solo durante el período necesario, eliminando después de satisfacer las siguientes condiciones:",
+          "items": [
+            "Terminación de la relación",
+            "Cumplimiento del propósito",
+            "Satisfacción de los requisitos legales"
+          ]
+        }
+      },
+      "8": {
+        "title": "8、¿Divulga APP-NAME a terceros la información recopilada de los visitantes?",
+        "recipients": [
+          "Subsidiarias/empresas asociadas",
+          "Partes transaccionales",
+          "Proveedores de servicios",
+          "Autoridades gubernamentales",
+          "Partes de fusión/adquisición",
+          "Socios de publicidad"
+        ],
+        "note": "Garantizamos que todos los terceros cumplan con los mismos estándares de protección de datos"
+      }
+    },
+    "quickAccess": {
+      "title": "Acceso rápido",
+      "items": [
+        {
+          "label": "Retirar consentimiento",
+          "icon": "↩️"
+        },
+        {
+          "label": "Acceso a datos",
+          "icon": "👁️"
+        },
+        {
+          "label": "Configuración de cookies",
+          "icon": "🍪"
+        },
+        {
+          "label": "Contáctenos",
+          "icon": "📧"
+        }
+      ]
+    },
+    "footer": {
+      "contact": "Si tiene alguna pregunta, contacte a nuestro responsable de protección de datos",
+      "email": "support@APP-NAME.com",
+      "copyright": "© 2025 APP-NAME. Todos los derechos reservados."
+    },
+    "toggle": {
+      "expand": "Expandir",
+      "collapse": "Contraer"
+    }
+  },
+  "PrivacyPolicyPage": {
+    "header": "Política de privacidad",
+    "title": "Política de privacidad APP-NAME",
+    "lastUpdated": "Última actualización: octubre de 2025 | Proteger su privacidad es nuestra máxima prioridad",
+    "expand": "Expandir",
+    "collapse": "Contraer",
+    "section1Title": "1、Introducción",
+    "section1_1": "1.1 Bienvenido al sitio web de la tienda APP-NAME",
+    "section1_2": "APP-NAME cumple rigurosamente con las responsabilidades prescritas por las leyes de privacidad aplicables (\"Leyes de Privacidad\") y se compromete a respetar los derechos de privacidad de todos los usuarios de nuestra plataforma APP-NAME.",
+    "section1_3": "🔒 Reconocemos la importancia de los datos personales que nos confía y creemos que es nuestra responsabilidad gestionar, proteger y procesar adecuadamente sus datos personales.",
+    "section1_4": "Los datos personales son datos sobre un individuo identificable.",
+    "section1_5": "Al utilizar los servicios, acepta que recopilemos, usemos, divulguemos y procesemos sus datos personales de acuerdo con esta política de privacidad.",
+    "section2Title": "2、¿Cuándo recopila APP-NAME datos personales?",
+    "section2_1": "Escenarios comunes de recopilación",
+    "section2_2": "📱 Interacciones en línea",
+    "section2_3": "Acceder al sitio web",
+    "section2_4": "Enviar formularios",
+    "section2_5": "Registro de cookies",
+    "section2_6": "🤝 Interacciones fuera de línea",
+    "section2_7": "Comunicación telefónica",
+    "section2_8": "Reuniones presenciales",
+    "section2_9": "Intercambio de correos electrónicos",
+    "section2_10": "También podemos obtener su información de terceros",
+    "section3Title": "3、¿Qué datos personales recopila APP-NAME?",
+    "section3_1_label": "Información básica",
+    "section3_1_1": "Nombre",
+    "section3_1_2": "Correo electrónico",
+    "section3_1_3": "Teléfono",
+    "section3_1_4": "Dirección",
+    "section3_2_label": "Información de identidad",
+    "section3_2_1": "Fecha de nacimiento",
+    "section3_2_2": "Género",
+    "section3_3_label": "Multimedia",
+    "section3_3_1": "Fotos",
+    "section3_3_2": "Audio",
+    "section3_3_3": "Vídeo",
+    "section3_4_label": "Información profesional",
+    "section3_4_1": "Historial educativo",
+    "section3_4_2": "Historial laboral",
+    "section3_5_label": "Datos de ubicación",
+    "section3_5_1": "Ubicación geográfica",
+    "section3_6_label": "Datos de comportamiento",
+    "section3_6_1": "Historial de navegación",
+    "section3_6_2": "Configuraciones de preferencia",
+    "section3_warning": "⚠️ Puede optar por salir de la recopilación de datos en cualquier momento, pero esto puede afectar el uso de algunas funciones",
+    "section4Title": "4、Forma de uso de los datos",
+    "section4_1": "Cómo usamos sus datos",
+    "section4_2": "Prestación y mejora de servicios",
+    "section4_3": "Recomendaciones personalizadas",
+    "section4_4": "Protección de seguridad",
+    "section4_5": "Cumplimiento legal",
+    "section4_6": "Compartir datos",
+    "section4_7": "Podemos compartir información con terceros para prestar servicios.",
+    "section4_8": "La información compartida cumplirá estrictamente con la política de privacidad y las leyes y regulaciones.",
+    "section5Title": "5、Cookies y tecnologías de seguimiento",
+    "section5_1": "Cómo usamos cookies",
+    "section5_2": "Cookies necesarias",
+    "section5_3": "Garantizan las funciones básicas del sitio web",
+    "section5_4": "Reconocen el estado de inicio de sesión",
+    "section5_5": "Previenen fraudes",
+    "section5_6": "Cookies de rendimiento",
+    "section5_7": "Analizan el uso del sitio web",
+    "section5_8": "Optimizan los servicios",
+    "section5_9": "Puede optar por desactivar",
+    "section6Title": "6、Medidas de protección de datos",
+    "section6_1": "Medidas de seguridad adoptadas",
+    "section6_2": "Control de acceso",
+    "section6_3": "Tecnología de encriptación",
+    "section6_4": "Copias de seguridad regulares",
+    "section6_5": "Formación de seguridad",
+    "section6_6": "Monitoreo de sistemas",
+    "section6_7": "Auditoría y cumplimiento",
+    "section6_8": "No comparta la contraseña de su cuenta, garantice la seguridad de los datos personales",
+    "section7Title": "7、Derechos del usuario",
+    "section7_1": "Derechos de acceso y control",
+    "section7_2": "Consultar información personal retenida",
+    "section7_3": "Corregir datos inexactos",
+    "section7_4": "Solicitar eliminación de datos",
+    "section7_5": "Restringir o rechazar procesamiento",
+    "section7_6": "Otros derechos",
+    "section7_7": "Tiene derecho a retirar el consentimiento en cualquier momento y plantear cuestiones de privacidad.",
+    "section7_8": "Derecho a la portabilidad de datos",
+    "section7_9": "Derecho de oposición al procesamiento",
+    "section7_10": "Derecho de reclamación",
+    "section8Title": "8、Contáctenos",
+    "section8_1": "Si tiene dudas sobre la política de privacidad",
+    "section8_2": "Contáctenos a través del correo de soporte al cliente",
+    "section8_3": "Llame a la línea de servicio",
+    "section8_4": "A través del chat en línea",
+    "section8_5": "A través de las cuentas de redes sociales",
+    "section8_6": "Carta escrita",
+    "section8_7": "Envíe el formulario de retroalimentación de la página web",
+    "section8_warning": "⚠️ Procesaremos su solicitud en un plazo razonable, pero algunas operaciones pueden requerir verificación adicional"
+  },
+  "ReturnsPolicy": {
+    "title": "He cambiado de opinión",
+    "subtitle1": "Puede devolver ",
+    "subtitle2": "dentro de 15 días",
+    "subtitle3": " después de la recogida o entrega.",
+    "mustBe": "Sus artículos deben estar:",
+    "refundMethod": "El reembolso se procesará por el método de pago original:",
+    "refundUsdtEth": "Usando USDT o ETH, se mostrará en su cuenta en un día hábil",
+    "refundWire": "Usando transferencia bancaria, el reembolso puede tardar hasta 30 días, dependiendo de su banco",
+    "requirements1": "Sin usar y con todos los componentes originales",
+    "requirements2": "En el embalaje original (si aplica, con etiquetas)",
+    "requirements3": "En estado de reventa",
+    "requirements4": "Con comprobante de compra",
+    "requirements5": "Junto con cualquier regalo incluido con el producto",
+    "productSupport": "Soporte de producto",
+    "productSupportDesc1": "En la mayoría de los casos, si tiene problemas con algún artículo, puede consultar cómodamente desde casa nuestro",
+    "productSupportDesc2": "sitio de soporte de producto",
+    "productSupportDesc3": ", para ver si podemos resolver el problema. Allí, puede acceder a preguntas frecuentes sobre productos y nuestra empresa, envío y recogida, devoluciones y reembolsos.",
+    "goodsIssue": "Mi artículo tiene un problema",
+    "issueNotice1": "Si aún necesita devolver (en los primeros 15 días), ofreceremos intercambio, reemplazo o reembolso.",
+    "issueNotice2": "Después de este plazo, siempre que el producto esté aún en garantía, organizaremos la reparación a través de nuestro agente de reparación profesional, o, si no es reparable, reemplazaremos o cambiaremos su artículo.",
+    "issueDesc": "La forma más rápida de devolución es a través de nuestros centros de almacenamiento globales en 112 países/regiones. Aceptamos la mayoría de los artículos, excepto artículos grandes, incluso si fueron entregados inicialmente a la puerta. Si desea devolver artículos grandes, desplácese hacia abajo para iniciar un chat en tiempo real o acceda a nuestra línea de ayuda.",
+    "precautionsTitle": "Medidas de precaución",
+    "precautionsDesc": "Algunos artículos, como alimentos, joyas perforadas y ropa interior, solo se pueden cambiar o reembolsar si están defectuosos. Nuestro sitio web indicará qué artículos no son reembolsables.",
+    "precautions1": "Si devuelve DVDs, música o productos de software, deben estar sin usar y en el embalaje sellado original",
+    "precautions2": "Si el artículo o el embalaje están gravemente dañados, nos reservamos el derecho de reducir el importe del reembolso",
+    "precautions3": "Podemos solicitar el número de serie del producto o información similar para verificar si proporcionamos el artículo",
+    "precautions4": "Por supuesto, nada de esto afecta sus derechos de consumidor",
+    "precautionsNote": "Si recibimos sus artículos, los verificaremos antes del reembolso. Tenga en cuenta que, si los artículos son verificados pero no devueltos según las indicaciones, nos reservamos el derecho de rechazar el reembolso o ofrecer un reembolso parcial, dependiendo del estado de los artículos devueltos.",
+    "proof1_1": "Recibo de caja",
+    "proof1_2": "Recibo electrónico",
+    "proof1_3": "Su número de pedido",
+    "proof1_4": "Confirmación por correo electrónico",
+    "proof2_1": "Su factura de transacción",
+    "proof2_2": "La dirección de correo electrónico utilizada para comprar el artículo",
+    "faqTitle": "Preguntas frecuentes",
+    "cta": "Iniciar proceso de devolución"
+  },
+  "sellerRating": {
+    "title": "Sistema de calificación de vendedores",
+    "intro": "Introducción",
+    "introContent": "Aquí, le presentaremos el sistema de calificación de vendedores y cómo se genera y utiliza.",
+    "website": "Sitio web relacionado",
+    "parties": "Partes relacionadas",
+    "allSellers": "Todos los vendedores",
+    "section1": {
+      "title": "¿Cómo acceder al sistema de calificación de vendedores?",
+      "encourage": "El sistema de calificación de vendedores incentiva a los vendedores a mantener altos estándares de servicio, creando una buena experiencia de compra para nuestros compradores.",
+      "deduction": "No alcanzar los objetivos prometidos resultará en deducción de puntos.",
+      "accessPath": {
+        "prefix": "Puede ver su calificación en la página [",
+        "path": "Centro del vendedor >> Calificación de crédito del vendedor",
+        "suffix": "]."
+      }
+    },
+    "section2": {
+      "title": "¿Cómo se genera la calificación?",
+      "deductionCondition": "Los puntos solo se deducen cuando no se cumplen las expectativas mínimas del comprador. Esto también alerta a los vendedores sobre áreas que aún necesitan mejora.",
+      "updateTime": "El sistema de calificación de vendedores se actualiza el primer día de cada mes según las violaciones del vendedor en el mes anterior. Puede hacer clic en las palabras clave de la dimensión de calificación correspondiente para ver la política completa."
+    },
+    "table1": {
+      "headers": {
+        "measure": "Medida de puntuación",
+        "spec": "Especificación",
+        "deduction": "Deducción mensual"
+      },
+      "max10": "Máximo 10 puntos",
+      "max20": "Máximo 20 puntos",
+      "rows": {
+        "nfr": {
+          "title": "Tasa de no cumplimiento, NFR",
+          "desc": "En los últimos 7 días, el número de pedidos cancelados o devueltos por el vendedor representa el 30% del total de pedidos"
+        },
+        "lsr": {
+          "title": "Tasa de envío tardío, LSR",
+          "desc": "En los últimos 7 días, el número de pedidos con retraso superior a 72 horas representa el 20% del total de pedidos"
+        },
+        "customerService": {
+          "title": "Servicio al cliente",
+          "rude": "Chat o comentarios groseros o insultantes",
+          "cancelRequests": "Solicitudes de cancelación de pedidos por el comprador exceden 5 veces este mes"
+        },
+        "breach": {
+          "title": "Incumplimiento",
+          "lowResponse": "Tasa de respuesta del comprador inferior al 80%",
+          "violatePromise": "El vendedor no presta el servicio prometido al comprador, perjudicando los derechos del comprador"
+        }
+      }
+    },
+    "section3": {
+      "title": "¿Cuáles son las penalizaciones asociadas a ciertos puntos?"
+    },
+    "table2": {
+      "headers": {
+        "points": "Puntos totales",
+        "level": "Nivel de penalización"
+      },
+      "level1": "Nivel 1",
+      "level2": "Nivel 2",
+      "level3": "Nivel 3",
+      "level4": "Nivel 4",
+      "level5": "Nivel 5",
+      "level6": "Nivel 6",
+      "penalties": {
+        "marketingBan": "Prohibición de actividades de marketing (28 días)",
+        "freeShippingRemoval": "Eliminación de envío gratis o reembolso de envío (28 días)",
+        "deboost": "Reducción de visibilidad de listados (28 días)",
+        "loanRestriction": "Restricción de préstamos al vendedor (28 días)",
+        "listingBlock": "Bloqueo de creación y edición de listados (28 días)",
+        "accountFreeze": "Congelación de cuenta (28 días)"
+      }
+    },
+    "section4": {
+      "title": "Reglas y detalles de implementación del servicio al cliente",
+      "rudeQuestion": "¿Qué es chat o comentario grosero o insultante?",
+      "rudeDefinition": "Acoso malicioso se refiere a actos de miembros que insultan, maldicen, amenazan, comentan, etc., o adoptan medios inadecuados para acosar a otros, perjudicando los derechos legítimos de otros.",
+      "rudeHandling": "¿Cómo manejar chat o comentarios groseros o insultantes?",
+      "rudePenalty": "Deducción de puntos por violaciones generales y graves de permisos comerciales, gestión y control.",
+      "rudeScenario": "Escenarios aplicables: Acoso malicioso se refiere a actos de miembros que insultan, maldicen, amenazan, etc., o acosan a otros con medios inadecuados, perjudicando los derechos legítimos de otros."
+    },
+    "section5": {
+      "title": "Medidas aplicables al incumplimiento",
+      "breachQuestion": "¿Qué es incumplimiento?",
+      "breachDefinition": "Incumplimiento se refiere al hecho de que el vendedor no presta servicios al comprador, violando los derechos del comprador, sin cumplir las obligaciones prometidas a APP-NAME. El vendedor debe continuar cumpliendo las obligaciones legales o acordadas de reemplazo, devolución y reembolso.",
+      "measure": "Medidas aplicables: Deducción de puntos",
+      "specificMeasures": "Medidas específicas",
+      "generalViolation": "1、Si el vendedor tiene otras promesas que cumplir para pedidos pagados o productos o servicios correspondientes en situaciones específicas, cada violación general deduce 5 puntos.",
+      "seriousViolation": {
+        "prefix": "2、El vendedor viola una de las siguientes promesas, deduciendo 10 puntos por cada violación grave:",
+        "item1": "1) APP-NAME juzga que el vendedor debe asumir la responsabilidad de reembolso y otras garantías postventa, pero el vendedor se niega;",
+        "item2": "2) APP-NAME juzga que el vendedor debe asumir la responsabilidad de garantía postventa de devolución/cambio sin motivo en 7 días, pero el vendedor se niega;",
+        "item3": "3) Sin negociación entre comprador y vendedor, se niega o retrasa el envío de productos de prueba prometidos al comprador;",
+        "item4": "4) El vendedor no procesa el pedido dentro de las 72 horas posteriores al pago;",
+        "activity": "Vendedores que participan en actividades oficiales de APP-NAME, no cumplen con los requisitos de la actividad (excepto tiempo de envío), violan otros contenidos de gestión publicados oficialmente por APP-NAME (incluyendo, pero no limitado a reglas, normas, normas de gestión de categorías, estándares de la industria). Si las disposiciones específicas cumplen con situaciones específicas, se siguen esas disposiciones."
+      }
+    },
+    "section6": {
+      "title": "¿Cuánto dura la penalización?",
+      "duration": {
+        "prefix": "La penalización terminará después de ",
+        "days": "28 días",
+        "suffix": ". Siempre que se tomen medidas correspondientes, se mejore el rendimiento actual de la tienda y se mantenga el cumplimiento, los vendedores penalizados recuperarán ciertos derechos de vendedor."
+      }
+    },
+    "section7": {
+      "title": "Procesamiento de violaciones",
+      "generalCase": "Si la situación es general",
+      "generalDesc": "El consumidor inicia una queja, APP-NAME juzga que la queja es válida. Cada violación general deduce 5 puntos. Completar 5 pedidos puede recuperar 5 puntos.",
+      "seriousCase": "Si la situación es grave",
+      "seriousDesc": "El consumidor se queja, APP-NAME juzga que la queja es válida y grave, deduciendo 20 puntos por ítem. Completar 20 pedidos puede recuperar 20 puntos.",
+      "extremeCase": "Si la situación es extremadamente grave",
+      "extremeDesc": "Congelar la cuenta, cerrar la tienda dentro de 28 días.",
+      "example1": {
+        "title": "Ejemplo 1: El vendedor A obtiene 3 puntos en la 3ª semana, recuperará los derechos en la 7ª semana"
+      },
+      "example2": {
+        "title": "Ejemplo 2: El vendedor B obtiene 3 puntos en la 3ª semana y 3 puntos en la 5ª semana. Estos puntos se acumulan para definir el nivel, recuperando los derechos en la 9ª semana"
+      },
+      "example3": {
+        "title": "Ejemplo 3: El vendedor C obtiene 3 puntos una semana antes del inicio del nuevo trimestre y 3 puntos después del inicio del trimestre, los puntos recién obtenidos redefinirán el nivel"
+      }
+    },
+    "section8": {
+      "title": "¿Cómo apelar la calificación?",
+      "appeal": {
+        "prefix": "Haga clic en ",
+        "link": "enlace de la línea de ayuda",
+        "suffix": " para apelar. Si su apelación es exitosa, cancelaremos la deducción de puntos y restauraremos sus derechos de vendedor correspondientes."
+      }
+    }
+  }
+}

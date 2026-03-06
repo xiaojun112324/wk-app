@@ -1,0 +1,1226 @@
+{
+  "common": {
+     "store": "店舗",
+  "goods": "商品",
+    "category": "カテゴリ",
+    "categories": "すべてのカテゴリ",
+    "wishlist": "ウィッシュリスト",
+    "checkout": "決済",
+    "order": "注文",
+    "account": "アカウント",
+    "settings": "設定",
+    "language": "言語",
+    "currency": "通貨",
+    "search": "検索",
+    "searchPlaceholder": "商品、ブランドまたはカテゴリを検索",
+    "buyNow": "今すぐ購入",
+    "viewMore": "さらに表示",
+    "viewAll": "すべて表示",
+    "loadMore": "さらに読み込む",
+    "confirm": "確認",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "save": "保存",
+    "submit": "送信",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "yes": "はい",
+    "no": "いいえ",
+    "success": "成功",
+    "failed": "失敗",
+    "loading": "読み込み中...",
+    "noData": "データなし",
+    "outOfStock": "在庫切れ",
+    "inStock": "在庫あり",
+    "soldOut": "完売",
+    "newArrival": "新着商品",
+    "bestSeller": "ベストセラー",
+    "discount": "割引",
+    "price": "価格",
+    "quantity": "数量",
+    "total": "合計",
+    "subtotal": "小計",
+    "shipping": "送料",
+    "tax": "税金",
+    "grandTotal": "合計金額",
+    "payment": "お支払い",
+    "paymentMethod": "支払い方法",
+    "delivery": "配送",
+    "contactUs": "お問い合わせ",
+    "helpCenter": "ヘルプセンター",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "logout": "ログアウト",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "rememberMe": "ログイン情報を記憶",
+    "email": "メールアドレス",
+    "phone": "電話番号",
+    "password": "パスワード",
+    "confirmPassword": "パスワード確認",
+    "welcomeBack": "おかえりなさい",
+    "or": "または",
+    "continue": "続ける",
+    "filter": "フィルター",
+    "sort": "並び替え",
+    "clear": "クリア",
+    "viewDetails": "詳細を見る",
+    "reviews": "レビュー",
+    "addReview": "レビューを追加",
+    "rating": "評価",
+    "share": "共有",
+    "copy": "コピー",
+    "copied": "コピーしました",
+    "backToHome": "ホームに戻る",
+    "404Title": "ページが見つかりません",
+    "404Desc": "申し訳ありません。お探しのページは存在しません。",
+    "retry": "再試行"
+  },
+  "login": {
+    "title": "アカウントログイン",
+    "subtitle": "ようこそ！アカウント情報を入力してください。",
+    "tabEmail": "メールでログイン",
+    "tabPhone": "電話番号でログイン",
+    "emailLabel": "メールアドレス",
+    "emailPlaceholder": "メールアドレスを入力",
+    "emailRequired": "メールアドレスを入力してください",
+    "phoneLabel": "電話番号",
+    "phonePlaceholder": "電話番号を入力",
+    "phoneRequired": "電話番号を入力してください",
+    "areaCodePlaceholder": "国コード",
+    "areaCodeRequired": "国コードを選択してください",
+    "passwordLabel": "パスワード",
+    "passwordPlaceholder": "パスワードを入力",
+    "passwordRequired": "パスワードを入力してください",
+    "passwordPattern": "パスワードは6～12文字で、スペースを含められません。",
+    "noAccount": "アカウントをお持ちでない方？",
+    "register": "会員登録",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "loginButton": "ログイン",
+    "successMessage": "ログイン成功！"
+  },
+  "register": {
+    "title": "会員登録",
+    "subtitle": "ようこそ！情報を入力してください。",
+    "tabEmail": "メール",
+    "tabPhone": "電話番号",
+    "emailLabel": "メールアドレス",
+    "emailPlaceholder": "メールアドレスを入力",
+    "emailRequired": "メールアドレスを入力してください",
+    "emailInvalid": "メールアドレスの形式が正しくありません。",
+    "phoneLabel": "電話番号",
+    "phonePlaceholder": "電話番号を入力",
+    "phoneRequired": "電話番号を入力してください",
+    "areaCodePlaceholder": "国コード",
+    "areaCodeRequired": "国コードを選択してください",
+    "passwordLabel": "パスワード",
+    "passwordPlaceholder": "パスワードを入力",
+    "passwordRequired": "パスワードを入力してください",
+    "passwordPattern": "パスワードは6～12文字で、スペースを含められません。",
+    "confirmPasswordLabel": "パスワード確認",
+    "confirmPasswordPlaceholder": "パスワードを再入力",
+    "confirmPasswordRequired": "パスワードを再入力してください",
+    "passwordMismatch": "パスワードが一致しません！",
+    "hasAccount": "すでにアカウントをお持ちの方？",
+    "login": "ログイン",
+    "registerButton": "会員登録",
+    "successMessage": "会員登録成功！"
+  },
+  "home": {
+    "bannerTitleLine1": "スタイルをアップグレード",
+    "bannerTitleLine2": "ラグジュアリーを体現",
+    "bannerSubtitle": "現代的なエレガンスのためにデザインされた最新コレクションをご覧ください。時代を超えたファッションでワードローブを再定義。",
+    "recommendCategory": "おすすめカテゴリ",
+    "dailyNewArrival": "毎日新着",
+    "recommendProduct": "おすすめ商品",
+    "recommendStore": "おすすめストア",
+    "hotRecommend": "人気おすすめ",
+    "featureAuthentic": "100% 正規品",
+    "featureReturn7Days": "7日以内返品",
+    "featureShippingDiscount": "送料割引",
+    "featureSecurePayment": "安全な決済"
+  },
+  "products": {
+    "category": "カテゴリ",
+    "allProducts": "すべての商品",
+    "comprehensive": "総合",
+    "sales": "販売数",
+    "price": "価格",
+    "newArrival": "新着"
+  },
+  "merchantRegister": {
+    "title": "出店者登録",
+    "header": "APP-NAME 出店者登録",
+    "loginTipPrefix": "すでに販売者アカウントをお持ちの方は ",
+    "login": "クリックしてログイン",
+    "description": "当社のパートナープログラムは包括的なマーケティングサポートとサービスを提供します。カスタマーサポートチームが専門的なサポートとアドバイスを提供し、商品露出と販売戦略を最適化します。今すぐご参加ください！より大きなビジネスチャンスを創出し、一緒に成長しましょう！",
+    "merchantInfo": "出店者情報",
+    "storeLogo": "ストアロゴ",
+    "storeLogoTip": "ストアロゴをアップロード",
+    "shopName": "ストア名",
+    "shopNameTip": "ストア名を入力",
+    "shopNamePlaceholder": "ストア名を入力、特殊文字禁止",
+    "shopAddress": "ストア住所",
+    "shopAddressTip": "ストア住所を入力",
+    "shopAddressPlaceholder": "ストア住所を入力、特殊文字禁止",
+    "country": "国",
+    "countryTip": "国を選択",
+    "countryPlaceholder": "国を選択",
+    "idNumber": "身分証/パスポート番号",
+    "idNumberTip": "身分証番号を入力",
+    "idNumberPlaceholder": "身分証番号を入力",
+    "realName": "実名",
+    "realNameTip": "実名を入力",
+    "realNamePlaceholder": "実名を入力",
+    "idCardFront": "身分証表面",
+    "idCardFrontTip": "身分証表面をアップロード",
+    "idCardBack": "身分証裏面",
+    "idCardBackTip": "身分証裏面をアップロード",
+    "verifyType": "認証方式",
+    "verifyTypeTip": "認証方式を選択",
+    "email": "メールアドレス",
+    "phone": "電話番号",
+    "contact": "ユーザー名（メールまたは電話番号）",
+    "contactTip": "ユーザー名を入力",
+    "contactPlaceholder": "メールまたは電話番号を入力",
+    "password": "ログインパスワード",
+    "passwordTip": "ログインパスワードを入力",
+    "passwordPattern": "パスワードは6～12文字で、スペースを含められません。",
+    "passwordPlaceholder": "ログインパスワードを入力",
+    "confirmPassword": "パスワード確認",
+    "confirmPasswordTip": "パスワードが一致しません",
+    "confirmPasswordPlaceholder": "ログインパスワードを再入力",
+    "inviteCode": "招待コード",
+    "inviteCodePlaceholder": "招待コードを入力（任意）",
+    "submit": "申請を送信",
+    "submitSuccess": "送信成功、承認待ち！",
+    "areaCodeTip": "国コードを選択",
+    "areaCodePlaceholder": "国コードを選択",
+    "phonePlaceholder": "電話番号を入力"
+  },
+  "mineDetail": {
+    "goodsCollect": "商品コレクション",
+    "storeCollect": "フォローしたストア",
+    "defaultAddress": "デフォルト住所",
+    "addAddress": "住所を追加",
+    "followedStores": "フォローしたストア",
+    "collectedGoods": "コレクション商品"
+  },
+  "favoriteProducts": {
+    "collectedGoods": "コレクション商品"
+  },
+  "mineMerchant": {
+    "followedShops": "フォローしたストア"
+  },
+  "mine": {
+    "shop": "出店者登録",
+    "userIdPrefix": "ID:",
+    "balanceLabel": "残高",
+    "deposit": "入金",
+    "withdraw": "出金",
+    "myOrders": "マイオーダー",
+    "all": "すべて",
+    "orderStatus": {
+      "pending": "支払い待ち",
+      "shipping": "発送待ち",
+      "receiving": "受取待ち",
+      "review": "レビュー待ち",
+      "refund": "返金/アフターサービス"
+    },
+    "moreFeatures": "その他の機能",
+    "setting": "設定",
+    "language": "言語",
+    "wallet": "ウォレット",
+    "favorite": "お気に入り"
+  },
+  "OrderDetail": {
+    "myOrders": "マイオーダー",
+    "orderInfo": "注文情報",
+    "orderNo": "注文番号",
+    "time": "時間",
+    "orderPrice": "注文金額",
+    "orderState": "注文ステータス",
+    "refundState": "返金ステータス",
+    "recipientInfo": "受取人情報",
+    "name": "名前",
+    "phone": "電話番号",
+    "country": "国",
+    "addressDetail": "詳細住所",
+    "productInfo": "商品情報",
+    "unitPrice": "単価",
+    "quantity": "数量",
+    "subtotal": "小計",
+    "total": "合計",
+    "unknown": "不明"
+  },
+  "Orders": {
+    "all": "すべて",
+    "pending": "支払い待ち",
+    "shipping": "発送待ち",
+    "receiving": "受取待ち",
+    "review": "レビュー待ち",
+    "refund": "返金/アフターサービス",
+    "confirmReceivingTitle": "商品受取確認？",
+    "confirm": "確認",
+    "cancel": "キャンセル",
+    "orderNo": "注文番号",
+    "orderDesc": "注文説明",
+    "orderPrice": "金額",
+    "status": "ステータス",
+    "actions": "操作",
+    "viewOrder": "注文を見る",
+    "remindShipping": "発送を催促",
+    "remindShippingSuccess": "販売者に催促が送信されました。",
+    "refundRequest": "返金を申請",
+    "confirmReceiving": "商品受取確認",
+    "addComment": "コメントを追加",
+    "unknown": "不明"
+  },
+  "Wallet": {
+    "balance": "残高",
+    "recharge": "チャージ",
+    "withdraw": "出金",
+    "history": "ウォレット履歴",
+    "createTime": "作成日",
+    "rechargeNo": "チャージ番号",
+    "rechargeAmount": "チャージ金額",
+    "rechargeType": "通貨プロトコル",
+    "rechargeAddress": "チャージアドレス",
+    "withdrawNo": "出金番号",
+    "withdrawAmount": "出金額",
+    "withdrawType": "通貨プロトコル",
+    "withdrawAddress": "受取アドレス",
+    "fee": "手数料",
+    "realAmount": "実額",
+    "status": "ステータス",
+    "unpaid": "未払い",
+    "success": "成功",
+    "fail": "失敗",
+    "pending": "処理中",
+    "processed": "処理済み",
+    "rejected": "拒否",
+    "orderNo": "番号"
+  },
+  "AccountPanel": {
+    "balance": "残高",
+    "recharge": "チャージ",
+    "withdraw": "出金"
+  },
+  "LogisticsDialog": {
+    "title": "物流情報",
+    "empty": "物流情報なし",
+    "close": "閉じる"
+  },
+  "OrderCard": {
+    "viewOrder": "注文を見る",
+    "remindShipping": "発送を催促",
+    "requestRefund": "返金を申請",
+    "confirmReceiving": "商品受取確認",
+    "payNow": "今すぐ支払う",
+    "cancelOrder": "注文をキャンセル",
+    "addComment": "コメントを追加",
+    "refunded": "返金済み"
+  },
+  "RefundDialog": {
+    "title": "返金申請",
+    "refundReason": "返金理由",
+    "refundReasonPlaceholder": "返金理由を入力",
+    "refundRemark": "返品説明",
+    "refundRemarkPlaceholder": "返品説明を入力",
+    "cancel": "キャンセル",
+    "submit": "送信"
+  },
+  "Search": {
+    "comprehensive": "総合",
+    "soldNum": "販売数",
+    "price": "価格",
+    "newest": "最新"
+  },
+  "Address": {
+    "setting": "設定",
+    "defaultAddress": "デフォルト住所",
+    "addAddress": "住所を追加",
+    "confirmDelete": "削除確認",
+    "confirmDeleteContent": "この住所を削除しますか？",
+    "ok": "確認",
+    "cancel": "キャンセル",
+    "edit": "編集",
+    "delete": "削除",
+    "deleted": "削除済み"
+  },
+  "DeleteAccount": {
+    "setting": "設定",
+    "title": "アカウント削除",
+    "description": "APP-NAMEアカウントを永久に削除し、すべての個人情報と関連データを削除します。削除後は復元できません。慎重に進めてください。削除前に重要なデータをバックアップするか、未処理事項を処理してください。",
+    "account": "あなたのアカウント",
+    "enterAccount": "入力",
+    "reason": "退会理由",
+    "submit": "リクエストを送信",
+    "submitSuccess": "送信成功"
+  },
+  "Setting": {
+    "title": "設定",
+    "description": "APP-NAMEアカウントを簡単に、安全かつ便利に管理！ワンクリックでログインパスワードを変更できます。文字、数字、記号を含む強力なパスワードを使用し、定期的に更新してアカウントのセキュリティを強化してください。機密操作には別途取引パスワードを設定してください。プラットフォームでのスムーズな通知と配送のために正確な受取住所を更新してください。簡単な操作で快適な体験をお楽しみください！",
+    "loginPassword": "ログインパスワード",
+    "tradePassword": "取引パスワード",
+    "address": "受取住所",
+    "deleteAccount": "アカウント削除",
+    "submitSuccess": "送信成功！"
+  },
+  "LoginPassword": {
+    "setting": "設定",
+    "title": "ログインパスワード",
+    "description": "パスワードを変更またはリセットします。文字、数字、記号を含む強力なパスワードを使用し、定期的に更新してアカウントのセキュリティを保護してください。",
+    "oldPassword": "旧パスワード",
+    "newPassword": "新パスワード",
+    "confirmPassword": "パスワード確認",
+    "enterOldPassword": "旧パスワードを入力",
+    "enterNewPassword": "新パスワードを入力",
+    "passwordMinLength": "パスワードは最低6文字以上必要です。",
+    "confirmPasswordMsg": "パスワード確認",
+    "passwordMismatch": "パスワードが一致しません。",
+    "submit": "リクエストを送信",
+    "success": "処理成功"
+  },
+  "PayPassword": {
+    "setting": "設定",
+    "title": "取引パスワード",
+    "description": "ログインパスワードとは別に取引パスワードを設定し、入札、出金などに使用します。取引のセキュリティを強化します。",
+    "oldPassword": "旧パスワード",
+    "newPassword": "新パスワード",
+    "confirmPassword": "パスワード確認",
+    "enterOldPassword": "旧パスワードを入力",
+    "enterNewPassword": "新パスワードを入力",
+    "passwordMinLength": "パスワードは最低6文字以上必要です。",
+    "confirmPasswordMsg": "パスワード確認",
+    "passwordMismatch": "パスワードが一致しません。",
+    "submit": "リクエストを送信",
+    "success": "処理成功"
+  },
+  "MerchantHeader": {
+    "follow": "ストアをフォロー",
+    "followed": "フォロー済み",
+    "followSuccess": "フォロー成功",
+    "unfollow": "フォロー解除",
+    "products": "商品",
+    "sales": "販売数",
+    "rate": "満足度"
+  },
+  "Products": {
+    "allProducts": "すべての商品",
+    "category": "カテゴリ",
+    "comprehensive": "総合",
+    "sales": "販売数",
+    "price": "価格",
+    "newArrival": "新着"
+  },
+  "Store": {
+    "recommend": "おすすめ",
+    "allProducts": "すべての商品"
+  },
+  "Withdraw": {
+    "myWallet": "マイウォレット",
+    "withdraw": "出金",
+    "description": "複数の受取チャネルをサポートし、迅速な出金リクエスト処理、安全性と規制遵守によりすべての出金の安全を保証します。"
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "ページが見つかりません",
+    "description": "申し訳ありません。お探しのページは見つかりません。",
+    "backHome": "ホームに戻る"
+  },
+  "CheckForms": {
+    "checkout": "決済",
+    "addressTitle": "1. 受取住所",
+    "changeAddress": "住所を変更",
+    "addressInfo": "受取情報",
+    "recipientName": "受取人名",
+    "phone": "連絡先",
+    "nation": "国/地域",
+    "addressDetail": "詳細住所",
+    "noAddress": "住所なし",
+    "addAddress": "住所を追加",
+    "paymentTitle": "2. 支払い方法",
+    "selectPayment": "支払い方法を選択",
+    "balance": "残高",
+    "paypal": "PayPal（準備中）",
+    "visa": "VISA（準備中）",
+    "mastercard": "MasterCard（準備中）",
+    "orderSummary": "注文概要",
+    "total": "合計",
+    "submitOrder": "注文を送信",
+    "submitSuccess": "送信成功",
+    "tip": "ヒント",
+    "selectAddressFirst": "まず受取住所を選択してください",
+    "selectAddress": "受取住所を選択",
+    "noAvailableAddress": "利用可能な住所なし"
+  },
+  "OrderResult": {
+    "paymentSuccess": "支払い成功",
+    "recipient": "受取人",
+    "address": "受取住所",
+    "continueShopping": "ショッピングを続ける",
+    "viewOrders": "注文を見る"
+  },
+  "Deposit": {
+    "myWallet": "マイウォレット",
+    "deposit": "入金",
+    "description": "迅速かつ安定したチャージ、簡単でスムーズな処理、いつでもアカウント残高をチャージして安心してご利用ください。"
+  },
+  "BottomNav": {
+    "home": "ホーム",
+    "products": "商品",
+    "cart": "カート",
+    "mine": "マイページ"
+  },
+  "Footer": {
+    "solutions": {
+      "title": "カスタマーサービス",
+      "contactUs": "お問い合わせ"
+    },
+    "support": {
+      "title": "返品・交換",
+      "privacyPolicy": "プライバシーポリシー",
+      "returnsPolicy": "返品ポリシー",
+      "deliveryInformation": "配送と受取",
+      "sellerScoreSystem": "販売者ポリシー"
+    },
+    "company": {
+      "title": "ユーザーセンター",
+      "register": "ユーザー登録",
+      "orderQuery": "注文照会",
+      "favoriteProducts": "商品コレクション",
+      "wallet": "マイウォレット"
+    },
+    "legal": {
+      "title": "当社について",
+      "aboutUs": "当社について",
+      "careers": "採用情報",
+      "news": "ニュース",
+      "modernSlavery": "現代奴隷制度宣言"
+    },
+    "description": "APP-NAMEの全世界ユーザーは112カ国から来ており、USDT/ETH/BTCで決済します。USDT/ETH/BTCは国境のない取引方法で、世界中で即時、低コストの取引を可能にし、待機や国際手数料がありません。",
+    "copyright": "© APP-NAME Limited 2023 すべての権利を保有"
+  },
+  "Header": {
+    "title": "APP-NAME",
+    "home": "ホーム",
+    "category": "カテゴリ",
+    "products": "商品",
+    "sales": "セール商品",
+    "merchantOnboarding": "出店者登録",
+    "profile": "個人センター",
+    "logout": "ログアウト",
+    "logoutSuccess": "ログアウト成功",
+    "search": "検索"
+  },
+  "SearchWithHistory": {
+    "placeholder": "検索内容",
+    "clearAll": "すべてクリア"
+  },
+  "CartDrawer": {
+    "items": "アイテム",
+    "myCart": "マイカート"
+  },
+  "CartPanel": {
+    "totalItems": "合計商品",
+    "items": "アイテム",
+    "totalPrice": "合計金額",
+    "submitOrder": "注文を送信"
+  },
+  "MerchantCard": {
+    "unfollow": "フォロー解除",
+    "follow": "フォロー",
+    "visitNow": "今すぐ訪問",
+    "sold": "販売済み",
+    "views": "閲覧数",
+    "rating": "ストア評価"
+  },
+  "Mine": {
+    "dashboard": "ダッシュボード",
+    "wallet": "マイウォレット",
+    "orders": "マイオーダー",
+    "favoriteProducts": "商品コレクション",
+    "followedMerchants": "フォローしたストア",
+    "settings": "設定",
+    "userId": "ID"
+  },
+  "PageTitle": {
+    "more": "さらに表示"
+  },
+  "ProductCard": {
+    "addCartSuccess": "カートに追加しました",
+    "collected": "コレクション済み",
+    "unCollected": "コレクション解除",
+    "off": "割引",
+    "addToCart": "カートに追加",
+    "soldViews": "販売数",
+    "viewsNum": "閲覧数"
+  },
+  "AddGoodsCommentDialog": {
+    "title": "レビュー",
+    "addCommentSuccess": "コメント追加成功",
+    "selectProduct": "商品を選択",
+    "selectProductRequired": "レビュー状態を選択してください",
+    "selectPlaceholder": "選択",
+    "userName": "会員メール/電話番号",
+    "userNameRequired": "会員メールまたは電話番号を入力してください",
+    "userNamePlaceholder": "会員メールまたは電話番号を入力",
+    "commentContent": "レビュー内容",
+    "commentContentRequired": "レビュー内容を入力してください",
+    "commentContentPlaceholder": "レビュー内容を入力",
+    "rating": "評価",
+    "ratingRequired": "評価を選択してください",
+    "commentImages": "レビュー画像",
+    "cancel": "キャンセル",
+    "confirm": "確認"
+  },
+  "AddressDialog": {
+    "editAddress": "受取住所を編集",
+    "addAddress": "受取住所を追加",
+    "recipientName": "受取人名",
+    "recipientNameRequired": "受取人名を入力してください",
+    "recipientNamePlaceholder": "受取人名を入力",
+    "phone": "電話番号",
+    "nationRequired": "国コードを選択してください",
+    "nationPlaceholder": "国コード",
+    "phoneRequired": "電話番号を入力してください",
+    "phonePlaceholder": "電話番号を入力",
+    "email": "メールアドレス",
+    "emailPlaceholder": "メールアドレスを入力",
+    "region": "国/都道府県/市",
+    "regionRequired": "地域を選択してください",
+    "regionPlaceholder": "国/都道府県/市を選択",
+    "postCode": "郵便番号",
+    "postCodePlaceholder": "郵便番号を入力",
+    "addressDetail": "詳細住所",
+    "addressDetailPlaceholder": "詳細住所を入力",
+    "isDefault": "デフォルト住所",
+    "cancel": "キャンセル",
+    "confirm": "確認"
+  },
+  "CustomerServiceChat": {
+    "title": "カスタマーサービス",
+    "inputPlaceholder": "入力",
+    "noMessage": "メッセージなし",
+    "imageAlt": "画像",
+    "heicUnsupported": "現在のブラウザはHEICファイルのアップロードをサポートしていません。",
+    "heicUploadFailed": "HEICファイルをアップロードできません。"
+  },
+  "DepositForm": {
+    "currency": "チャージ通貨",
+    "selectCurrency": "チャージ通貨を選択",
+    "network": "ブロックチェーンネットワーク",
+    "selectNetwork": "ブロックチェーンネットワークを選択",
+    "addressLabel": "チャージアドレス",
+    "amount": "チャージ金額",
+    "enterAmount": "チャージ金額を入力",
+    "estimatedArrival": "予想到着（現在のレート {{rate}}）",
+    "proof": "支払い証明（スクリーンショットをアップロード）",
+    "uploadProof": "支払い証明をアップロード",
+    "submit": "確認",
+    "success": "処理成功",
+    "addressCopied": "アドレスをコピーしました！"
+  },
+  "OtpModal": {
+    "enterTransactionPassword": "取引パスワードを入力",
+    "enter6Digits": "6桁の認証コードを入力",
+    "verifyFailed": "認証失敗、もう一度お試しください",
+    "cancel": "キャンセル",
+    "confirm": "確認"
+  },
+  "ProductDetailMain": {
+    "basicInfo": "基本情報",
+    "sales": "販売数",
+    "views": "閲覧数",
+    "originalPrice": "元値",
+    "currentPrice": "現在の価格",
+    "shipping": "配送",
+    "freeShipping": "送料無料",
+    "quantity": "数量",
+    "totalPrice": "合計価格",
+    "buyNow": "今すぐ購入",
+    "addToCart": "カートに追加",
+    "pleaseSelect": "選択してください",
+    "noStock": "在庫切れ",
+    "shippingDesc": "注文後24時間以内に発送されます。注文に物流管理がある場合、注文が遅れることがあります。注文の物流情報を追跡するか、カスタマーサービスにお問い合わせください。"
+  },
+  "ProductDetailModal": {
+    "title": "商品詳細",
+    "noGoods": "商品情報なし",
+    "addSuccess": "追加成功"
+  },
+  "UploadImg": {
+    "upload": "アップロード",
+    "preview": "画像プレビュー",
+    "onlyImage": "JPG/PNG/WEBP/HEIC形式の画像のみアップロード可能！",
+    "maxSize": "画像サイズはを超えてはいけません。",
+    "unsupportedHeic": "現在のブラウザはHEICファイルのアップロードをサポートしていません。",
+    "uploadFailed": "アップロード失敗、後で再試行してください"
+  },
+  "UploadMultiple": {
+    "upload": "アップロード",
+    "uploadSuccess": "アップロード成功",
+    "uploadFailed": "アップロード失敗"
+  },
+  "WithdrawForm": {
+    "withdrawMethod": "出金方法",
+    "selectWithdrawMethod": "出金方法を選択",
+    "crypto": "暗号通貨",
+    "bankCard": "銀行カード",
+    "coinType": "出金通貨",
+    "selectCoin": "通貨を選択",
+    "enterUSDT": "USDTを入力",
+    "blockchainNetwork": "ブロックチェーンネットワーク",
+    "withdrawAddress": "出金アドレス",
+    "enterWithdrawAddress": "出金アドレスを入力",
+    "copy": "コピー",
+    "bankName": "銀行名",
+    "enterBankName": "銀行名を入力",
+    "bankBranch": "支店名",
+    "enterBankBranch": "支店名を入力",
+    "bankCardNumber": "銀行カード番号",
+    "enterBankCardNumber": "銀行カード番号を入力",
+    "withdrawAmount": "出金額",
+    "enterWithdrawAmount": "出金額を入力",
+    "amountMustBeGreaterZero": "出金額は0より大きくなければなりません。",
+    "currentBalance": "現在の残高",
+    "actualReceived": "実際受取金額",
+    "fee": "手数料",
+    "confirmSubmit": "送信を確認",
+    "copied": "コピーしました！",
+    "inputAddressFirst": "出金アドレス/銀行カード番号を先に入力してください",
+    "operationSuccess": "処理成功"
+  },
+  "order": {
+    "pendingPayment": "支払い待ち",
+    "pendingShipment": "発送待ち",
+    "pendingReceive": "受取待ち",
+    "pendingReview": "レビュー待ち",
+    "refund": "返金/アフターサービス"
+  },
+  "refund": {
+    "pending": "審査中",
+    "success": "成功",
+    "failed": "失敗"
+  },
+  "DeliveryInformation": {
+    "title": "どこに配送しますか？",
+    "desc1": "購入したい商品の郵便番号を入力して、お住まいの地域に配送可能かご確認ください。",
+    "desc2": "商品はサプライヤーから直接発送され、112カ国/地域にグローバル倉庫があります。",
+    "pickup": {
+      "title": "どこで受け取れますか？",
+      "desc1": "24時間受取可能なポイントがあります。",
+      "highlight1": "APP-NAMEストア、Sainsbury'sスーパーマーケット",
+      "desc2": "およびグローバル倉庫",
+      "desc3": "即時発送可能な商品の場合、お住まいの位置に応じて複数の時間帯を選択できます。注文は玄関先に配送され、安全で信頼できる場所に置かれます。",
+      "alert1": "イングランド、スコットランド、ウェールズでは大型・重量物（2人以上が必要な商品、例：ソファ、ベッド）を配送し、希望の場所に安全に配送できます。",
+      "alert2": "親切なドライバーが当日連絡し、配送の詳細を話し合います。自己隔離中の場合は、新しい配送日を設定できるようお知らせください。",
+      "warning": "現在、大型商品の配送需要が高いです。配送が遅れる場合はできるだけ早くメッセージをお送りします。お客様に最高のサービスを提供するために懸命に取り組んでいます。継続的な忍耐とサポートに感謝します。"
+    },
+    "faq": {
+      "title": "よくある質問",
+      "q1": "大型と小型商品を同時に注文するとどうなりますか？",
+      "a1_1": "最も速い配送方法は別々に発送することです。",
+      "a1_2": "ご心配なく、送料は1回のみお支払いいただきます。",
+      "a1_3": "注文確認メールで詳細をご確認ください。",
+      "q2": "自宅にいない場合はどうなりますか？",
+      "a2_1": "小型商品は安全で目立たない場所に置かれるか、依頼があれば近隣に届けられます。",
+      "a2_2": "ホットライン",
+      "a2_3": "お問い合わせいただき、最も都合の良い日時で再配送を手配してください！",
+      "q3": "大型商品は何人で配送しますか？",
+      "a3_1": "ソファ、冷凍庫などの大型商品は",
+      "a3_2": "2人",
+      "a3_3": "で配送可能です。親切なドライバーが配送当日に連絡し、希望の場所に安全に配送します。",
+      "q4": "COVID-19：配送にどのような影響がありますか？",
+      "a4_1": "依然として多くの商品について配送サービスを提供しており、ゲームコンソールの事前注文も含まれます。配送前に通知メッセージと運送業者の追跡番号を受け取ります。",
+      "a4_2": "商品は安全な場所に配送されます。大型商品は安全な場所に置かれ、親切なドライバーが当日連絡し、大型商品の輸送詳細を話し合います。自己隔離中の場合は、新しい配送日を設定できるようお知らせください。"
+    },
+    "cta": "配送カバレッジエリアを見る"
+  },
+  "PrivacyPolicy": {
+    "header": {
+      "label": "プライバシーポリシー",
+      "title": "APP-NAME プライバシーポリシー",
+      "desc": "最終更新：2025年10月 | あなたのプライバシーの保護は私たちの最優先事項です。"
+    },
+    "sections": {
+      "1": {
+        "title": "1. はじめに",
+        "content": {
+          "welcome": "1.1 APP-NAMEショッピングウェブサイトへようこそ。",
+          "desc1": "APP-NAMEは関連するプライバシー法および規制（「プライバシー法」）によって定義された責任を厳格に遵守し、APP-NAMEウェブサイトおよびモバイルアプリケーション（「プラットフォーム」）のすべてのユーザーのプライバシー権と懸念を尊重するために最善を尽くしています。",
+          "alert": "私たちはあなたが信頼してくれた個人情報の重要性を認識しており、それを適切に管理、保護、処理することが私たちの責任であると信じています。",
+          "definition": "個人情報とは、その情報または組織が保有またはアクセス可能な他の情報から識別可能な個人に関する情報を意味します。",
+          "consent": "サービスを利用することにより、あなたは本プライバシーポリシーに従って当社があなたの個人情報を収集、使用、開示、処理することに明確に同意します。"
+        }
+      },
+      "2": {
+        "title": "2. APP-NAMEはいつ個人情報を収集しますか？",
+        "content": {
+          "scenariosTitle": "一般的な収集状況",
+          "online": "オンライン相互作用",
+          "onlineItems": [
+            "ウェブサイトへのアクセス",
+            "フォームの送信",
+            "クッキーの保存"
+          ],
+          "offline": "オフライン相互作用",
+          "offlineItems": [
+            "電話通信",
+            "対面ミーティング",
+            "メール交換"
+          ],
+          "thirdParty": "当社は第三者（物流、決済サービスプロバイダーなど）からあなたの情報を受領することがあります。"
+        }
+      },
+      "3": {
+        "title": "3. APP-NAMEはどのような個人情報を収集しますか？",
+        "categories": [
+          {
+            "icon": "基本情報",
+            "label": "基本情報",
+            "items": [
+              "名前",
+              "メールアドレス",
+              "電話番号",
+              "住所"
+            ]
+          },
+          {
+            "icon": "身元情報",
+            "label": "身元情報",
+            "items": [
+              "生年月日",
+              "性別"
+            ]
+          },
+          {
+            "icon": "マルチメディア",
+            "label": "マルチメディア",
+            "items": [
+              "写真",
+              "音声",
+              "動画"
+            ]
+          },
+          {
+            "icon": "専門情報",
+            "label": "専門情報",
+            "items": [
+              "学歴",
+              "職歴"
+            ]
+          },
+          {
+            "icon": "位置情報",
+            "label": "位置情報",
+            "items": [
+              "地理的位置"
+            ]
+          },
+          {
+            "icon": "行動情報",
+            "label": "行動情報",
+            "items": [
+              "閲覧履歴",
+              "好み設定"
+            ]
+          }
+        ],
+        "warning": "いつでも情報収集に参加しないことを選択できますが、一部の機能の使用に影響する可能性があります。"
+      },
+      "4": {
+        "title": "4. その他の情報収集",
+        "device": {
+          "title": "デバイス情報",
+          "items": [
+            "IPアドレス",
+            "オペレーティングシステム",
+            "ブラウザタイプ",
+            "ユニークデバイスID"
+          ]
+        },
+        "location": {
+          "title": "位置サービス",
+          "desc": "GPS/Wi-Fiを使用して正確な位置情報を収集します。",
+          "note": "デバイス設定でいつでも無効化できます。"
+        }
+      },
+      "5": {
+        "title": "5. クッキー",
+        "titleLabel": "クッキーポリシー",
+        "purpose": {
+          "title": "目的",
+          "items": [
+            "カスタマイズされたコンテンツの推奨",
+            "広告のカスタマイズ",
+            "ウェブサイト使用分析"
+          ]
+        },
+        "management": {
+          "title": "管理",
+          "items": [
+            "ブラウザ設定で無効化",
+            "モバイルデバイスでカスタマイズ広告を無効化",
+            "一部の機能に影響する可能性あり"
+          ]
+        }
+      },
+      "6": {
+        "title": "6. 提供された情報をどのように使用しますか？",
+        "mainUse": "主な使用",
+        "items": [
+          {
+            "icon": "サービス提供"
+          },
+          {
+            "icon": "コミュニケーション"
+          },
+          {
+            "icon": "データ分析"
+          },
+          {
+            "icon": "機能改善"
+          },
+          {
+            "icon": "マーケティング"
+          },
+          {
+            "icon": "法的遵守"
+          }
+        ],
+        "unsubscribe": "マーケティング情報の受信はいつでもキャンセルできます。"
+      },
+      "7": {
+        "title": "7. どのような情報を保持し、APP-NAMEはユーザー情報をどのように保護しますか？",
+        "security": {
+          "title": "セキュリティ対策",
+          "items": [
+            "物理的保護",
+            "管理システム保証",
+            "電子暗号化技術",
+            "権限ベースのアクセス制御"
+          ]
+        },
+        "retention": {
+          "title": "保持期間",
+          "desc": "必要な期間のみ保持し、以下の条件が満たされると削除します：",
+          "items": [
+            "関係の終了",
+            "目的の達成",
+            "法的要件の対応"
+          ]
+        }
+      },
+      "8": {
+        "title": "8. APP-NAMEは訪問者から収集した情報を第三者に開示しますか？",
+        "recipients": [
+          "関連会社/関連会社",
+          "契約先",
+          "サービスプロバイダー",
+          "政府機関",
+          "合併/買収契約先",
+          "広告パートナー"
+        ],
+        "note": "すべての第三者が同じデータ保護基準を遵守することを保証します。"
+      }
+    },
+    "quickAccess": {
+      "title": "クイックアクセス",
+      "items": [
+        {
+          "label": "同意の撤回",
+          "icon": "撤回"
+        },
+        {
+          "label": "情報アクセス",
+          "icon": "閲覧"
+        },
+        {
+          "label": "クッキー設定",
+          "icon": "クッキー"
+        },
+        {
+          "label": "お問い合わせ",
+          "icon": "メール"
+        }
+      ]
+    },
+    "footer": {
+      "contact": "ご質問がある場合は、当社のデータ保護担当者にお問い合わせください。",
+      "email": "support@APP-NAME.com",
+      "copyright": "© 2025 APP-NAME すべての権利を保有"
+    },
+    "toggle": {
+      "expand": "展開",
+      "collapse": "折りたたむ"
+    }
+  },
+  "PrivacyPolicyPage": {
+    "header": "プライバシーポリシー",
+    "title": "APP-NAME プライバシーポリシー",
+    "lastUpdated": "最終更新：2025年10月 | あなたのプライバシーの保護は私たちの最優先事項です。",
+    "expand": "展開",
+    "collapse": "折りたたむ",
+    "section1Title": "1. はじめに",
+    "section1_1": "1.1 APP-NAMEショッピングウェブサイトへようこそ。",
+    "section1_2": "APP-NAMEは関連するプライバシー法および規制（「プライバシー法」）によって定義された責任を厳格に遵守し、プラットフォームのすべてのユーザーのプライバシー権を尊重するために最善を尽くしています。",
+    "section1_3": "私たちはあなたが信頼してくれた個人情報の重要性を認識しており、それを適切に管理、保護、処理することが私たちの責任であると信じています。",
+    "section1_4": "個人情報とは識別可能な個人に関する情報です。",
+    "section1_5": "サービスを利用することにより、あなたは本プライバシーポリシーに従って当社があなたの個人情報を収集、使用、開示、処理することに同意します。",
+    "section2Title": "2. APP-NAMEはいつ個人情報を収集しますか？",
+    "section2_1": "一般的な収集状況",
+    "section2_2": "オンライン相互作用",
+    "section2_3": "ウェブサイトへのアクセス",
+    "section2_4": "フォームの送信",
+    "section2_5": "クッキーの保存",
+    "section2_6": "オフライン相互作用",
+    "section2_7": "電話通信",
+    "section2_8": "対面ミーティング",
+    "section2_9": "メール交換",
+    "section2_10": "当社は第三者からあなたの情報を受領することがあります。",
+    "section3Title": "3. APP-NAMEはどのような個人情報を収集しますか？",
+    "section3_1_label": "基本情報",
+    "section3_1_1": "名前",
+    "section3_1_2": "メールアドレス",
+    "section3_1_3": "電話番号",
+    "section3_1_4": "住所",
+    "section3_2_label": "身元情報",
+    "section3_2_1": "生年月日",
+    "section3_2_2": "性別",
+    "section3_3_label": "マルチメディア",
+    "section3_3_1": "写真",
+    "section3_3_2": "音声",
+    "section3_3_3": "動画",
+    "section3_4_label": "専門情報",
+    "section3_4_1": "学歴",
+    "section3_4_2": "職歴",
+    "section3_5_label": "位置情報",
+    "section3_5_1": "地理的位置",
+    "section3_6_label": "行動情報",
+    "section3_6_1": "閲覧履歴",
+    "section3_6_2": "好み設定",
+    "section3_warning": "いつでも情報収集に参加しないことを選択できますが、一部の機能の使用に影響する可能性があります。",
+    "section4Title": "4. 情報使用方法",
+    "section4_1": "情報の使用方法",
+    "section4_2": "サービス提供と改善",
+    "section4_3": "カスタマイズされた推奨",
+    "section4_4": "セキュリティ保護",
+    "section4_5": "法的遵守",
+    "section4_6": "情報共有",
+    "section4_7": "サービス提供のために第三者と情報を共有することがあります。",
+    "section4_8": "共有された情報はプライバシーポリシーと法律を厳格に遵守します。",
+    "section5Title": "5. クッキーと追跡技術",
+    "section5_1": "クッキーの使用方法",
+    "section5_2": "必須クッキー",
+    "section5_3": "ウェブサイトの基本機能を保証",
+    "section5_4": "ログイン状態を記憶",
+    "section5_5": "詐欺防止",
+    "section5_6": "パフォーマンスクッキー",
+    "section5_7": "ウェブサイト使用分析",
+    "section5_8": "サービス改善",
+    "section5_9": "無効化可能",
+    "section6Title": "6. データ保護対策",
+    "section6_1": "採用されたセキュリティ対策",
+    "section6_2": "アクセス制御",
+    "section6_3": "暗号化技術",
+    "section6_4": "定期バックアップ",
+    "section6_5": "セキュリティトレーニング",
+    "section6_6": "システム監視",
+    "section6_7": "監査と遵守",
+    "section6_8": "アカウントパスワードを共有せず、個人情報のセキュリティを確保してください。",
+    "section7Title": "7. ユーザーの権利",
+    "section7_1": "アクセスと制御の権利",
+    "section7_2": "保持された個人情報を閲覧",
+    "section7_3": "不正確な情報を修正",
+    "section7_4": "情報の削除をリクエスト",
+    "section7_5": "処理を制限または拒否",
+    "section7_6": "その他の権利",
+    "section7_7": "いつでも同意を撤回し、プライバシーに関する質問を提起できます。",
+    "section7_8": "データ移行の権利",
+    "section7_9": "処理に反対する権利",
+    "section7_10": "苦情を申し立てる権利",
+    "section8Title": "8. お問い合わせ",
+    "section8_1": "プライバシーポリシーに関する疑問がある場合",
+    "section8_2": "カスタマーサポートメールでお問い合わせ",
+    "section8_3": "サービスホットライン電話",
+    "section8_4": "オンラインチャット",
+    "section8_5": "ソーシャルメディアアカウント",
+    "section8_6": "書面郵送",
+    "section8_7": "ウェブサイトフィードバックフォームを送信",
+    "section8_warning": "リクエストは適切な時間内に処理されますが、一部の操作には追加の確認が必要な場合があります。"
+  },
+  "ReturnsPolicy": {
+    "title": "気が変わりました",
+    "subtitle1": "受取または配送後 ",
+    "subtitle2": "15日以内",
+    "subtitle3": " に返品可能",
+    "mustBe": "商品は以下の条件を満たす必要があります：",
+    "refundMethod": "返金は元の支払い方法で処理されます：",
+    "refundUsdtEth": "USDTまたはETHを使用した場合、営業日1日以内にアカウントに表示されます。",
+    "refundWire": "銀行振込を使用した場合、銀行により最大30日かかることがあります。",
+    "requirements1": "未使用で、すべてのオリジナル構成要素を含む",
+    "requirements2": "オリジナルパッケージ（可能な場合、ラベル付き）",
+    "requirements3": "再販可能な状態",
+    "requirements4": "購入証明を含む",
+    "requirements5": "商品と一緒に提供されたギフトを含む",
+    "productSupport": "商品サポート",
+    "productSupportDesc1": "ほとんどの場合、商品に問題がある場合、自宅から便利に",
+    "productSupportDesc2": "商品サポートウェブサイト",
+    "productSupportDesc3": "を通じて問題を解決できるか確認できます。ここで商品および当社に関するFAQ、配送と受取、返品と返金にアクセスできます。",
+    "goodsIssue": "商品に問題があります",
+    "issueNotice1": "最初の15日以内に返品を希望する場合、交換、変更または返金を提供します。",
+    "issueNotice2": "この期間後、商品が保証期間内である限り、当社の専門修理代理店を通じて修理を手配するか、修理不能な場合は商品を交換または交換します。",
+    "issueDesc": "最も速い返品方法は112カ国/地域のグローバル倉庫センターを通すことです。ほとんどの商品を受け付けますが、大型商品は除きます。最初に玄関先に配送された場合でも大型商品の返品を希望する場合は、下にスクロールしてリアルタイムチャットを開始するか、ホットラインにアクセスしてください。",
+    "precautionsTitle": "注意事項",
+    "precautionsDesc": "食品、ピアスジュエリー、下着などの一部の商品は欠陥がある場合にのみ交換または返金可能です。ウェブサイトで返金不可の商品を明記します。",
+    "precautions1": "DVD、音楽またはソフトウェア商品を返品する場合、未使用でオリジナル密閉パッケージである必要があります。",
+    "precautions2": "商品またはパッケージが著しく損傷している場合、返金額を減らす権利を有します。",
+    "precautions3": "当社がその商品を供給したことを確認するために商品のシリアル番号または類似情報を要求することがあります。",
+    "precautions4": "もちろん、あなたの消費者権利に影響しません。",
+    "precautionsNote": "商品を受け取ったら返金前に検査を行います。商品が指示に従って返品されていないと判断された場合、返金を拒否するか、商品の状態に応じて一部返金を提供する権利を有します。",
+    "proof1_1": "現金領収書",
+    "proof1_2": "電子領収書",
+    "proof1_3": "注文番号",
+    "proof1_4": "確認メール",
+    "proof2_1": "取引請求書",
+    "proof2_2": "商品購入に使用したメールアドレス",
+    "faqTitle": "よくある質問",
+    "cta": "返品プロセスを開始"
+  },
+  "sellerRating": {
+    "title": "販売者評価システム",
+    "intro": "導入",
+    "introContent": "ここでは販売者評価システムとその作成および使用方法を紹介します。",
+    "website": "関連ウェブサイト",
+    "parties": "関連当事者",
+    "allSellers": "すべての販売者",
+    "section1": {
+      "title": "販売者評価システムにどのようにアクセスしますか？",
+      "encourage": "販売者評価システムは販売者が高いサービス基準を維持することを奨励し、当社の購入者に良い購入体験を提供します。",
+      "deduction": "約束された目標を達成しないと点数減点につながります。",
+      "accessPath": {
+        "prefix": "[",
+        "path": "販売者センター >> 販売者クレジットスコア",
+        "suffix": "] ページでスコアを確認できます。"
+      }
+    },
+    "section2": {
+      "title": "スコアはどのように生成されますか？",
+      "deductionCondition": "スコアは購入者の最低期待値を満たさない場合にのみ減点され、販売者に改善が必要な領域を警告します。",
+      "updateTime": "販売者評価システムは毎月1日に前月の販売者の違反に基づいて更新されます。関連する評価次元のキーワードをクリックして全ポリシーを確認できます。"
+    },
+    "table1": {
+      "headers": {
+        "measure": "評価措置",
+        "spec": "詳細",
+        "deduction": "月間減点"
+      },
+      "max10": "最大10点",
+      "max20": "最大20点",
+      "rows": {
+        "nfr": {
+          "title": "NFR不履行率",
+          "desc": "直近7日間で販売者がキャンセルまたは返品した注文数が全注文の30%を占める"
+        },
+        "lsr": {
+          "title": "遅延配送率 LSR",
+          "desc": "直近7日間で72時間以上遅延した注文数が全注文の20%を占める"
+        },
+        "customerService": {
+          "title": "カスタマーサービス",
+          "rude": "チャットまたはコメントで無礼または侮辱的",
+          "cancelRequests": "今月の購入者の注文キャンセルリクエストが5回を超える"
+        },
+        "breach": {
+          "title": "違反",
+          "lowResponse": "購入者応答率が80%未満",
+          "violatePromise": "販売者が購入者と約束したサービスを提供せず、購入者の権利を侵害"
+        }
+      }
+    },
+    "section3": {
+      "title": "特定のスコアに関連する処罰は何ですか？"
+    },
+    "table2": {
+      "headers": {
+        "points": "合計スコア",
+        "level": "処罰レベル"
+      },
+      "level1": "レベル1",
+      "level2": "レベル2",
+      "level3": "レベル3",
+      "level4": "レベル4",
+      "level5": "レベル5",
+      "level6": "レベル6",
+      "penalties": {
+        "marketingBan": "マーケティング活動禁止（28日間）",
+        "freeShippingRemoval": "送料無料または送料返金の削除（28日間）",
+        "deboost": "商品露出の減少（28日間）",
+        "loanRestriction": "販売者融資の制限（28日間）",
+        "listingBlock": "商品登録および編集のブロック（28日間）",
+        "accountFreeze": "アカウント凍結（28日間）"
+      }
+    },
+    "section4": {
+      "title": "カスタマーサービス違反に関するルールおよび詳細",
+      "rudeQuestion": "無礼または侮辱的なチャットまたはコメントとは何ですか？",
+      "rudeDefinition": "悪意ある脅迫とは、メンバーが他人を侮辱、罵倒、脅迫、コメントなどで、または不適切な手段で他人を脅迫し、他人の合法的権利を侵害する行為を意味します。",
+      "rudeHandling": "無礼または侮辱的なチャットまたはコメントはどのように処理されますか？",
+      "rudePenalty": "一般および重大な違反について、事業権利、管理、制御に関連する点数を減点します。",
+      "rudeScenario": "適用状況：悪意ある脅迫とは、メンバーが他人を侮辱、罵倒、脅迫などで、または不適切な手段で他人を脅迫し、他人の合法的権利を侵害する行為を意味します。"
+    },
+    "section5": {
+      "title": "違反に対する措置",
+      "breachQuestion": "違反とは何ですか？",
+      "breachDefinition": "違反とは、販売者が購入者にサービスを提供せず、購入者の権利を侵害するか、APP-NAMEと約束した義務を履行しない事実を意味します。販売者は変更、返品、返金に関する法的または合意された義務を遵守する必要があります。",
+      "measure": "適用措置：点数減点",
+      "specificMeasures": "具体的な措置",
+      "generalViolation": "1. 特定の状況で支払い完了した注文または関連商品/サービスについて販売者が履行すべきその他の約束がある場合、一般違反ごとに5点減点",
+      "seriousViolation": {
+        "prefix": "2. 販売者が以下の約束のいずれかを違反した場合、重大違反ごとに10点減点：",
+        "item1": "1) APP-NAMEが販売者が返金およびその他のアフター保証責任を負うべきと判断したが、販売者が拒否",
+        "item2": "2) APP-NAMEが販売者が7日以内の理由なし返品/交換アフター保証責任を負うべきと判断したが、販売者が拒否",
+        "item3": "3) 購入者と販売者の協議なしに購入者と約束した試供品の配送を拒否または遅延",
+        "item4": "4) 販売者が支払い後72時間以内に注文を処理しない",
+        "activity": "APP-NAMEの公式活動に参加した販売者が活動要件を遵守しない（配送時間を除く）、APP-NAMEが公式に発表したその他の管理内容（カテゴリ管理基準、業界基準などを含むがこれに限定されない）違反。特定の要件が特定の状況と一致する場合、その要件に従う"
+      }
+    },
+    "section6": {
+      "title": "処罰期間はどれくらいですか？",
+      "duration": {
+        "prefix": "処罰は ",
+        "days": "28日間",
+        "suffix": " 後に終了します。関連措置を講じ、現在のストアパフォーマンスを改善し、遵守を維持すれば、処罰された販売者は一部の販売者権利を回復します。"
+      }
+    },
+    "section7": {
+      "title": "違反管理",
+      "generalCase": "一般的な場合",
+      "generalDesc": "消費者が苦情を提起し、APP-NAMEが苦情が有効と判断した場合、一般違反ごとに5点減点、5件の注文完了で5点回復",
+      "seriousCase": "重大な場合",
+      "seriousDesc": "消費者が苦情を提起し、APP-NAMEが苦情が有効かつ重大と判断した場合、項目ごとに20点減点、20件の注文完了で20点回復",
+      "extremeCase": "極めて重大な場合",
+      "extremeDesc": "28日以内にアカウント凍結、ストア閉鎖",
+      "example1": {
+        "title": "例1：販売者Aが3週目に3点減点された場合、7週目に権利回復"
+      },
+      "example2": {
+        "title": "例2：販売者Bが3週目に3点、5週目に3点減点された場合、これらの点数は累積されてレベルを決定し、9週目に権利回復"
+      },
+      "example3": {
+        "title": "例3：販売者Cが四半期開始前1週に3点、四半期開始後に3点減点された場合、新しい点数が新しいレベルを決定"
+      }
+    },
+    "section8": {
+      "title": "評価にどのように異議を申し立てますか？",
+      "appeal": {
+        "prefix": " ",
+        "link": "ホットラインリンク",
+        "suffix": "をクリックして異議を申し立ててください。異議が成功した場合、点数減点をキャンセルし、関連する販売者権利を回復します。"
+      }
+    }
+  }
+}

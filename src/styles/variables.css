@@ -1,0 +1,132 @@
+:root {
+    /* 圆角基准值（用于卡片、按钮、输入框等） */
+    --radius: 0.625rem;
+
+    /* 全局页面背景色 */
+    --background: oklch(1 0 0);
+
+    /* 全局默认前景色（正文文字颜色） */
+    --foreground: oklch(24.776% 0.00003 271.152);
+
+    /* 卡片背景色 */
+    --card: oklch(1 0 0);
+
+    /* 卡片中的文字 / 图标颜色 */
+    --card-foreground: oklch(0.145 0 0);
+
+    /* 弹出层背景色（Popover、Dropdown、Tooltip 等） */
+    --popover: oklch(1 0 0);
+
+    /* 弹出层中的文字 / 图标颜色 */
+    --popover-foreground: oklch(0.145 0 0);
+
+    /* 主色（品牌色 / 主要按钮 / 高亮操作） */
+    --primary: rgb(247, 78, 81);
+
+    /* 主色背景上的文字 / 图标颜色 */
+    --primary-foreground: oklch(0.985 0 0);
+
+    /* 次要背景色（用于次级按钮、区块背景等） */
+    --secondary: oklch(0.97 0 0);
+
+    /* 次要背景上的文字 / 图标颜色 */
+    --secondary-foreground: oklch(0.205 0 0);
+
+    /* 弱化背景色（禁用态、占位区、辅助区域） */
+    --muted: oklch(0.97 0 0);
+
+    /* 弱化背景上的文字颜色（说明性文字、次要信息） */
+    --muted-foreground: oklch(0.556 0 0);
+
+    /* 强调背景色（选中态、Hover、强调区块） */
+    --accent: oklch(0.97 0 0);
+
+    /* 强调背景上的文字 / 图标颜色 */
+    --accent-foreground: oklch(0.205 0 0);
+
+    /* 危险 / 破坏性操作颜色（删除、警告） */
+    --destructive: oklch(0.577 0.245 27.325);
+
+    /* 边框颜色（卡片、分割线、表单边框） */
+    --border: oklch(0.922 0 0);
+
+    /* 输入框背景或边框颜色 */
+    --input: oklch(0.922 0 0);
+
+    /* 焦点高亮颜色（Focus Ring、Outline） */
+    --ring: oklch(0.708 0 0);
+
+    /* 图表配色 1（数据可视化） */
+    --chart-1: oklch(0.646 0.222 41.116);
+
+    /* 图表配色 2 */
+    --chart-2: oklch(0.6 0.118 184.704);
+
+    /* 图表配色 3 */
+    --chart-3: oklch(0.398 0.07 227.392);
+
+    /* 图表配色 4 */
+    --chart-4: oklch(0.828 0.189 84.429);
+
+    /* 图表配色 5 */
+    --chart-5: oklch(0.769 0.188 70.08);
+
+    /* 侧边栏背景色 */
+    --sidebar: oklch(0.985 0 0);
+
+    /* 侧边栏默认文字 / 图标颜色 */
+    --sidebar-foreground: oklch(0.145 0 0);
+
+    /* 侧边栏主色（当前菜单、激活项） */
+    --sidebar-primary: oklch(0.205 0 0);
+
+    /* 侧边栏主色上的文字 / 图标颜色 */
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+
+    /* 侧边栏强调背景色（Hover、选中辅助态） */
+    --sidebar-accent: oklch(0.97 0 0);
+
+    /* 侧边栏强调背景上的文字 / 图标颜色 */
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+
+    /* 侧边栏边框颜色 */
+    --sidebar-border: oklch(0.922 0 0);
+
+    /* 侧边栏焦点高亮颜色 */
+    --sidebar-ring: oklch(0.708 0 0);
+
+}
+
+.dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: #fe6145;
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: rgba(255,255,255,0.85);
+    --accent: oklch(0.269 0 0); 
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.488 0.243 264.376);
+    --chart-2: oklch(0.696 0.17 162.48);
+    --chart-3: oklch(0.769 0.188 70.08);
+    --chart-4: oklch(0.627 0.265 303.9);
+    --chart-5: oklch(0.645 0.246 16.439);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+}

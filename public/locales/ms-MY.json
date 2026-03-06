@@ -1,0 +1,1226 @@
+{
+  "common": {
+     "store": "Kedai",
+  "goods": "Barangan",
+    "category": "Kategori",
+    "categories": "Semua Kategori",
+    "wishlist": "Senarai Hajat",
+    "checkout": "Daftar Keluar",
+    "order": "Pesanan",
+    "account": "Akaun",
+    "settings": "Tetapan",
+    "language": "Bahasa",
+    "currency": "Mata Wang",
+    "search": "Cari",
+    "searchPlaceholder": "Cari produk, jenama atau kategori",
+    "buyNow": "Beli Sekarang",
+    "viewMore": "Lihat Lagi",
+    "viewAll": "Lihat Semua",
+    "loadMore": "Muat Lagi",
+    "confirm": "Sahkan",
+    "cancel": "Batal",
+    "delete": "Padam",
+    "edit": "Edit",
+    "save": "Simpan",
+    "submit": "Hantar",
+    "back": "Kembali",
+    "next": "Seterusnya",
+    "previous": "Sebelumnya",
+    "yes": "Ya",
+    "no": "Tidak",
+    "success": "Berjaya",
+    "failed": "Gagal",
+    "loading": "Memuatkan...",
+    "noData": "Tiada Data",
+    "outOfStock": "Kehabisan Stok",
+    "inStock": "Ada Stok",
+    "soldOut": "Habis Terjual",
+    "newArrival": "Ketibaan Baru",
+    "bestSeller": "Terlaris",
+    "discount": "Diskaun",
+    "price": "Harga",
+    "quantity": "Kuantiti",
+    "total": "Jumlah",
+    "subtotal": "Jumlah Kecil",
+    "shipping": "Penghantaran",
+    "tax": "Cukai",
+    "grandTotal": "Jumlah Keseluruhan",
+    "payment": "Bayaran",
+    "paymentMethod": "Kaedah Bayaran",
+    "delivery": "Penghantaran",
+    "contactUs": "Hubungi Kami",
+    "helpCenter": "Pusat Bantuan",
+    "privacyPolicy": "Dasar Privasi",
+    "termsOfService": "Terma Perkhidmatan",
+    "logout": "Log Keluar",
+    "forgotPassword": "Lupa Kata Laluan?",
+    "rememberMe": "Ingat Saya",
+    "email": "E-mel",
+    "phone": "Telefon",
+    "password": "Kata Laluan",
+    "confirmPassword": "Sahkan Kata Laluan",
+    "welcomeBack": "Selamat Kembali",
+    "or": "atau",
+    "continue": "Teruskan",
+    "filter": "Tapis",
+    "sort": "Susun",
+    "clear": "Kosongkan",
+    "viewDetails": "Lihat Butiran",
+    "reviews": "Ulasan",
+    "addReview": "Tambah Ulasan",
+    "rating": "Penilaian",
+    "share": "Kongsi",
+    "copy": "Salin",
+    "copied": "Disalin",
+    "backToHome": "Kembali ke Laman Utama",
+    "404Title": "Halaman Tidak Ditemui",
+    "404Desc": "Maaf, halaman yang anda cari tidak wujud.",
+    "retry": "Cuba Lagi"
+  },
+  "login": {
+    "title": "Log Masuk Akaun",
+    "subtitle": "Selamat datang! Sila masukkan butiran akaun anda.",
+    "tabEmail": "Log Masuk dengan E-mel",
+    "tabPhone": "Log Masuk dengan Telefon",
+    "emailLabel": "E-mel",
+    "emailPlaceholder": "Masukkan e-mel",
+    "emailRequired": "Sila masukkan e-mel",
+    "phoneLabel": "Nombor Telefon",
+    "phonePlaceholder": "Masukkan nombor telefon",
+    "phoneRequired": "Sila masukkan nombor telefon",
+    "areaCodePlaceholder": "Kod Negara",
+    "areaCodeRequired": "Sila pilih kod negara",
+    "passwordLabel": "Kata Laluan",
+    "passwordPlaceholder": "Masukkan kata laluan",
+    "passwordRequired": "Sila masukkan kata laluan",
+    "passwordPattern": "Kata laluan mestilah 6-12 aksara, tiada ruang.",
+    "noAccount": "Tiada akaun?",
+    "register": "Daftar",
+    "forgotPassword": "Lupa kata laluan?",
+    "loginButton": "Log Masuk",
+    "successMessage": "Log masuk berjaya!"
+  },
+  "register": {
+    "title": "Daftar",
+    "subtitle": "Selamat datang! Sila masukkan maklumat anda.",
+    "tabEmail": "E-mel",
+    "tabPhone": "Telefon",
+    "emailLabel": "E-mel",
+    "emailPlaceholder": "Masukkan e-mel",
+    "emailRequired": "Sila masukkan e-mel",
+    "emailInvalid": "Format e-mel tidak sah.",
+    "phoneLabel": "Nombor Telefon",
+    "phonePlaceholder": "Masukkan nombor telefon",
+    "phoneRequired": "Sila masukkan nombor telefon",
+    "areaCodePlaceholder": "Kod Negara",
+    "areaCodeRequired": "Sila pilih kod negara",
+    "passwordLabel": "Kata Laluan",
+    "passwordPlaceholder": "Masukkan kata laluan",
+    "passwordRequired": "Sila masukkan kata laluan",
+    "passwordPattern": "Kata laluan mestilah 6-12 aksara, tiada ruang.",
+    "confirmPasswordLabel": "Sahkan Kata Laluan",
+    "confirmPasswordPlaceholder": "Masukkan semula kata laluan",
+    "confirmPasswordRequired": "Sila masukkan semula kata laluan",
+    "passwordMismatch": "Kata laluan tidak sepadan!",
+    "hasAccount": "Sudah ada akaun?",
+    "login": "Log Masuk",
+    "registerButton": "Daftar",
+    "successMessage": "Pendaftaran berjaya!"
+  },
+  "home": {
+    "bannerTitleLine1": "Naik Taraf Gaya Anda",
+    "bannerTitleLine2": "Hayati Kemewahan",
+    "bannerSubtitle": "Terokai koleksi terkini yang direka untuk keanggunan moden. Tetapkan semula almari pakaian anda dengan fesyen abadi.",
+    "recommendCategory": "Kategori Disyorkan",
+    "dailyNewArrival": "Ketibaan Baru Harian",
+    "recommendProduct": "Produk Disyorkan",
+    "recommendStore": "Kedai Disyorkan",
+    "hotRecommend": "Disyorkan Popular",
+    "featureAuthentic": "100% Asli",
+    "featureReturn7Days": "Pulangan dalam 7 Hari",
+    "featureShippingDiscount": "Diskaun Penghantaran",
+    "featureSecurePayment": "Bayaran Selamat"
+  },
+  "products": {
+    "category": "Kategori",
+    "allProducts": "Semua Produk",
+    "comprehensive": "Menyeluruh",
+    "sales": "Jualan",
+    "price": "Harga",
+    "newArrival": "Ketibaan Baru"
+  },
+  "merchantRegister": {
+    "title": "Pendaftaran Penjual",
+    "header": "Pendaftaran Penjual APP-NAME",
+    "loginTipPrefix": "Jika anda sudah mempunyai akaun penjual, ",
+    "login": "klik untuk log masuk",
+    "description": "Program rakan kongsi kami menyediakan sokongan pemasaran dan perkhidmatan yang menyeluruh. Pasukan sokongan pelanggan menyediakan bantuan dan nasihat profesional untuk mengoptimumkan pendedahan produk dan strategi jualan. Sertai kami sekarang! Cipta peluang perniagaan yang lebih besar dan berkembang bersama!",
+    "merchantInfo": "Maklumat Penjual",
+    "storeLogo": "Logo Kedai",
+    "storeLogoTip": "Muat naik logo kedai",
+    "shopName": "Nama Kedai",
+    "shopNameTip": "Masukkan nama kedai",
+    "shopNamePlaceholder": "Masukkan nama kedai, aksara khas dilarang",
+    "shopAddress": "Alamat Kedai",
+    "shopAddressTip": "Masukkan alamat kedai",
+    "shopAddressPlaceholder": "Masukkan alamat kedai, aksara khas dilarang",
+    "country": "Negara",
+    "countryTip": "Pilih negara",
+    "countryPlaceholder": "Pilih negara",
+    "idNumber": "Nombor ID/Pasport",
+    "idNumberTip": "Masukkan nombor ID",
+    "idNumberPlaceholder": "Masukkan nombor ID",
+    "realName": "Nama Sebenar",
+    "realNameTip": "Masukkan nama sebenar",
+    "realNamePlaceholder": "Masukkan nama sebenar",
+    "idCardFront": "Kad ID Depan",
+    "idCardFrontTip": "Muat naik bahagian depan kad ID",
+    "idCardBack": "Kad ID Belakang",
+    "idCardBackTip": "Muat naik bahagian belakang kad ID",
+    "verifyType": "Kaedah Pengesahan",
+    "verifyTypeTip": "Pilih kaedah pengesahan",
+    "email": "E-mel",
+    "phone": "Telefon",
+    "contact": "Nama Pengguna (e-mel atau telefon)",
+    "contactTip": "Masukkan nama pengguna",
+    "contactPlaceholder": "Masukkan e-mel atau telefon",
+    "password": "Kata Laluan Log Masuk",
+    "passwordTip": "Masukkan kata laluan log masuk",
+    "passwordPattern": "Kata laluan mestilah 6-12 aksara, tiada ruang.",
+    "passwordPlaceholder": "Masukkan kata laluan log masuk",
+    "confirmPassword": "Sahkan Kata Laluan",
+    "confirmPasswordTip": "Kata laluan tidak sepadan",
+    "confirmPasswordPlaceholder": "Masukkan semula kata laluan log masuk",
+    "inviteCode": "Kod Jemputan",
+    "inviteCodePlaceholder": "Masukkan kod jemputan (pilihan)",
+    "submit": "Hantar Permohonan",
+    "submitSuccess": "Hantaran berjaya, menunggu kelulusan!",
+    "areaCodeTip": "Pilih kod negara",
+    "areaCodePlaceholder": "Pilih kod negara",
+    "phonePlaceholder": "Masukkan nombor telefon"
+  },
+  "mineDetail": {
+    "goodsCollect": "Koleksi Produk",
+    "storeCollect": "Kedai Diikuti",
+    "defaultAddress": "Alamat Lalai",
+    "addAddress": "Tambah Alamat",
+    "followedStores": "Kedai Diikuti",
+    "collectedGoods": "Produk Dikoleksi"
+  },
+  "favoriteProducts": {
+    "collectedGoods": "Produk Dikoleksi"
+  },
+  "mineMerchant": {
+    "followedShops": "Kedai Diikuti"
+  },
+  "mine": {
+    "shop": "Pendaftaran Penjual",
+    "userIdPrefix": "ID:",
+    "balanceLabel": "Baki",
+    "deposit": "Deposit",
+    "withdraw": "Pengeluaran",
+    "myOrders": "Pesanan Saya",
+    "all": "Semua",
+    "orderStatus": {
+      "pending": "Menunggu Bayaran",
+      "shipping": "Menunggu Penghantaran",
+      "receiving": "Menunggu Penerimaan",
+      "review": "Menunggu Ulasan",
+      "refund": "Refund/Perkhidmatan Selepas Jualan"
+    },
+    "moreFeatures": "Ciri Lagi",
+    "setting": "Tetapan",
+    "language": "Bahasa",
+    "wallet": "Dompet",
+    "favorite": "Kegemaran"
+  },
+  "OrderDetail": {
+    "myOrders": "Pesanan Saya",
+    "orderInfo": "Maklumat Pesanan",
+    "orderNo": "Nombor Pesanan",
+    "time": "Masa",
+    "orderPrice": "Jumlah Pesanan",
+    "orderState": "Status Pesanan",
+    "refundState": "Status Refund",
+    "recipientInfo": "Maklumat Penerima",
+    "name": "Nama",
+    "phone": "Telefon",
+    "country": "Negara",
+    "addressDetail": "Alamat Terperinci",
+    "productInfo": "Maklumat Produk",
+    "unitPrice": "Harga Unit",
+    "quantity": "Kuantiti",
+    "subtotal": "Jumlah Kecil",
+    "total": "Jumlah",
+    "unknown": "Tidak Diketahui"
+  },
+  "Orders": {
+    "all": "Semua",
+    "pending": "Menunggu Bayaran",
+    "shipping": "Menunggu Penghantaran",
+    "receiving": "Menunggu Penerimaan",
+    "review": "Menunggu Ulasan",
+    "refund": "Refund/Perkhidmatan Selepas Jualan",
+    "confirmReceivingTitle": "Sahkan Penerimaan Produk?",
+    "confirm": "Sahkan",
+    "cancel": "Batal",
+    "orderNo": "Nombor Pesanan",
+    "orderDesc": "Perihalan Pesanan",
+    "orderPrice": "Jumlah",
+    "status": "Status",
+    "actions": "Tindakan",
+    "viewOrder": "Lihat Pesanan",
+    "remindShipping": "Ingatkan Penghantaran",
+    "remindShippingSuccess": "Penjual telah diingatkan.",
+    "refundRequest": "Permohonan Refund",
+    "confirmReceiving": "Sahkan Penerimaan Produk",
+    "addComment": "Tambah Komen",
+    "unknown": "Tidak Diketahui"
+  },
+  "Wallet": {
+    "balance": "Baki",
+    "recharge": "Isi Semula",
+    "withdraw": "Pengeluaran",
+    "history": "Sejarah Dompet",
+    "createTime": "Tarikh Dibuat",
+    "rechargeNo": "Nombor Isi Semula",
+    "rechargeAmount": "Jumlah Isi Semula",
+    "rechargeType": "Protokol Mata Wang",
+    "rechargeAddress": "Alamat Isi Semula",
+    "withdrawNo": "Nombor Pengeluaran",
+    "withdrawAmount": "Jumlah Pengeluaran",
+    "withdrawType": "Protokol Mata Wang",
+    "withdrawAddress": "Alamat Penerimaan",
+    "fee": "Yuran",
+    "realAmount": "Jumlah Sebenar",
+    "status": "Status",
+    "unpaid": "Belum Dibayar",
+    "success": "Berjaya",
+    "fail": "Gagal",
+    "pending": "Sedang Diproses",
+    "processed": "Diproses",
+    "rejected": "Ditolak",
+    "orderNo": "Nombor"
+  },
+  "AccountPanel": {
+    "balance": "Baki",
+    "recharge": "Isi Semula",
+    "withdraw": "Pengeluaran"
+  },
+  "LogisticsDialog": {
+    "title": "Maklumat Logistik",
+    "empty": "Tiada maklumat logistik",
+    "close": "Tutup"
+  },
+  "OrderCard": {
+    "viewOrder": "Lihat Pesanan",
+    "remindShipping": "Ingatkan Penghantaran",
+    "requestRefund": "Permohonan Refund",
+    "confirmReceiving": "Sahkan Penerimaan Produk",
+    "payNow": "Bayar Sekarang",
+    "cancelOrder": "Batal Pesanan",
+    "addComment": "Tambah Komen",
+    "refunded": "Telah Direfund"
+  },
+  "RefundDialog": {
+    "title": "Permohonan Refund",
+    "refundReason": "Sebab Refund",
+    "refundReasonPlaceholder": "Masukkan sebab refund",
+    "refundRemark": "Perihalan Pemulangan",
+    "refundRemarkPlaceholder": "Masukkan perihalan pemulangan",
+    "cancel": "Batal",
+    "submit": "Hantar"
+  },
+  "Search": {
+    "comprehensive": "Menyeluruh",
+    "soldNum": "Bilangan Jualan",
+    "price": "Harga",
+    "newest": "Terbaru"
+  },
+  "Address": {
+    "setting": "Tetapan",
+    "defaultAddress": "Alamat Lalai",
+    "addAddress": "Tambah Alamat",
+    "confirmDelete": "Sahkan Padam",
+    "confirmDeleteContent": "Adakah anda mahu memadam alamat ini?",
+    "ok": "OK",
+    "cancel": "Batal",
+    "edit": "Edit",
+    "delete": "Padam",
+    "deleted": "Dipadam"
+  },
+  "DeleteAccount": {
+    "setting": "Tetapan",
+    "title": "Padam Akaun",
+    "description": "Padam akaun APP-NAME secara kekal dan semua maklumat peribadi serta data berkaitan akan dipadam. Data tidak boleh dipulihkan selepas dipadam. Sila teruskan dengan berhati-hati. Sila sandarkan data penting atau selesaikan perkara yang belum selesai sebelum memadam.",
+    "account": "Akaun anda",
+    "enterAccount": "Masukkan",
+    "reason": "Sebab Keluar",
+    "submit": "Hantar Permintaan",
+    "submitSuccess": "Hantaran berjaya"
+  },
+  "Setting": {
+    "title": "Tetapan",
+    "description": "Urus akaun APP-NAME anda dengan mudah, selamat dan mudah! Tukar kata laluan log masuk dengan satu klik. Gunakan kata laluan kuat yang mengandungi huruf, nombor, simbol dan kemas kini secara berkala untuk meningkatkan keselamatan akaun. Tetapkan kata laluan transaksi berasingan untuk operasi sensitif. Kemas kini alamat penerimaan yang tepat untuk notifikasi dan penghantaran yang lancar di platform. Nikmati pengalaman selesa dengan operasi mudah!",
+    "loginPassword": "Kata Laluan Log Masuk",
+    "tradePassword": "Kata Laluan Transaksi",
+    "address": "Alamat Penerimaan",
+    "deleteAccount": "Padam Akaun",
+    "submitSuccess": "Hantaran berjaya!"
+  },
+  "LoginPassword": {
+    "setting": "Tetapan",
+    "title": "Kata Laluan Log Masuk",
+    "description": "Tukar atau tetapkan semula kata laluan. Gunakan kata laluan kuat yang mengandungi huruf, nombor, simbol dan kemas kini secara berkala untuk melindungi keselamatan akaun.",
+    "oldPassword": "Kata Laluan Lama",
+    "newPassword": "Kata Laluan Baru",
+    "confirmPassword": "Sahkan Kata Laluan",
+    "enterOldPassword": "Masukkan kata laluan lama",
+    "enterNewPassword": "Masukkan kata laluan baru",
+    "passwordMinLength": "Kata laluan mestilah sekurang-kurangnya 6 aksara.",
+    "confirmPasswordMsg": "Sahkan kata laluan",
+    "passwordMismatch": "Kata laluan tidak sepadan.",
+    "submit": "Hantar Permintaan",
+    "success": "Pemprosesan berjaya"
+  },
+  "PayPassword": {
+    "setting": "Tetapan",
+    "title": "Kata Laluan Transaksi",
+    "description": "Tetapkan kata laluan transaksi berasingan daripada kata laluan log masuk dan gunakan untuk lelongan, pengeluaran dll. Tingkatkan keselamatan transaksi.",
+    "oldPassword": "Kata Laluan Lama",
+    "newPassword": "Kata Laluan Baru",
+    "confirmPassword": "Sahkan Kata Laluan",
+    "enterOldPassword": "Masukkan kata laluan lama",
+    "enterNewPassword": "Masukkan kata laluan baru",
+    "passwordMinLength": "Kata laluan mestilah sekurang-kurangnya 6 aksara.",
+    "confirmPasswordMsg": "Sahkan kata laluan",
+    "passwordMismatch": "Kata laluan tidak sepadan.",
+    "submit": "Hantar Permintaan",
+    "success": "Pemprosesan berjaya"
+  },
+  "MerchantHeader": {
+    "follow": "Ikut Kedai",
+    "followed": "Diikuti",
+    "followSuccess": "Berjaya diikuti",
+    "unfollow": "Nyahikut",
+    "products": "Produk",
+    "sales": "Jualan",
+    "rate": "Kepuasan"
+  },
+  "Products": {
+    "allProducts": "Semua Produk",
+    "category": "Kategori",
+    "comprehensive": "Menyeluruh",
+    "sales": "Jualan",
+    "price": "Harga",
+    "newArrival": "Ketibaan Baru"
+  },
+  "Store": {
+    "recommend": "Disyorkan",
+    "allProducts": "Semua Produk"
+  },
+  "Withdraw": {
+    "myWallet": "Dompet Saya",
+    "withdraw": "Pengeluaran",
+    "description": "Menyokong pelbagai saluran penerimaan, pemprosesan permintaan pengeluaran pantas, menjamin keselamatan semua pengeluaran melalui keselamatan dan pematuhan peraturan."
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Halaman Tidak Ditemui",
+    "description": "Maaf, halaman yang anda cari tidak wujud.",
+    "backHome": "Kembali ke Laman Utama"
+  },
+  "CheckForms": {
+    "checkout": "Daftar Keluar",
+    "addressTitle": "1. Alamat Penerimaan",
+    "changeAddress": "Tukar Alamat",
+    "addressInfo": "Maklumat Penerimaan",
+    "recipientName": "Nama Penerima",
+    "phone": "Hubungan",
+    "nation": "Negara/Wilayah",
+    "addressDetail": "Alamat Terperinci",
+    "noAddress": "Tiada alamat",
+    "addAddress": "Tambah Alamat",
+    "paymentTitle": "2. Kaedah Bayaran",
+    "selectPayment": "Pilih kaedah bayaran",
+    "balance": "Baki",
+    "paypal": "PayPal (Sedang disediakan)",
+    "visa": "VISA (Sedang disediakan)",
+    "mastercard": "MasterCard (Sedang disediakan)",
+    "orderSummary": "Ringkasan Pesanan",
+    "total": "Jumlah",
+    "submitOrder": "Hantar Pesanan",
+    "submitSuccess": "Hantaran berjaya",
+    "tip": "Petua",
+    "selectAddressFirst": "Sila pilih alamat penerimaan terlebih dahulu",
+    "selectAddress": "Pilih alamat penerimaan",
+    "noAvailableAddress": "Tiada alamat tersedia"
+  },
+  "OrderResult": {
+    "paymentSuccess": "Bayaran Berjaya",
+    "recipient": "Penerima",
+    "address": "Alamat Penerimaan",
+    "continueShopping": "Teruskan Membeli-belah",
+    "viewOrders": "Lihat Pesanan"
+  },
+  "Deposit": {
+    "myWallet": "Dompet Saya",
+    "deposit": "Deposit",
+    "description": "Isi semula pantas dan stabil, pemprosesan mudah dan lancar, isi semula baki akaun pada bila-bila masa dan gunakan dengan tenang."
+  },
+  "BottomNav": {
+    "home": "Laman Utama",
+    "products": "Produk",
+    "cart": "Troli",
+    "mine": "Saya"
+  },
+  "Footer": {
+    "solutions": {
+      "title": "Perkhidmatan Pelanggan",
+      "contactUs": "Hubungi Kami"
+    },
+    "support": {
+      "title": "Pulangan dan Pertukaran",
+      "privacyPolicy": "Dasar Privasi",
+      "returnsPolicy": "Dasar Pulangan",
+      "deliveryInformation": "Penghantaran dan Penerimaan",
+      "sellerScoreSystem": "Dasar Penjual"
+    },
+    "company": {
+      "title": "Pusat Pengguna",
+      "register": "Pendaftaran Pengguna",
+      "orderQuery": "Pertanyaan Pesanan",
+      "favoriteProducts": "Koleksi Produk",
+      "wallet": "Dompet Saya"
+    },
+    "legal": {
+      "title": "Tentang Kami",
+      "aboutUs": "Tentang Kami",
+      "careers": "Kerjaya",
+      "news": "Berita",
+      "modernSlavery": "Pernyataan Perhambaan Moden"
+    },
+    "description": "Pengguna global APP-NAME datang dari 112 negara dan membayar dengan USDT/ETH/BTC. USDT/ETH/BTC adalah kaedah transaksi tanpa sempadan yang membolehkan transaksi segera, kos rendah di seluruh dunia, tanpa menunggu atau yuran antarabangsa.",
+    "copyright": "© APP-NAME Limited 2023 Semua Hak Cipta"
+  },
+  "Header": {
+    "title": "APP-NAME",
+    "home": "Laman Utama",
+    "category": "Kategori",
+    "products": "Produk",
+    "sales": "Produk Jualan",
+    "merchantOnboarding": "Pendaftaran Penjual",
+    "profile": "Pusat Peribadi",
+    "logout": "Log Keluar",
+    "logoutSuccess": "Log keluar berjaya",
+    "search": "Cari"
+  },
+  "SearchWithHistory": {
+    "placeholder": "Kandungan carian",
+    "clearAll": "Kosongkan Semua"
+  },
+  "CartDrawer": {
+    "items": "Item",
+    "myCart": "Troli Saya"
+  },
+  "CartPanel": {
+    "totalItems": "Jumlah Produk",
+    "items": "Item",
+    "totalPrice": "Jumlah Harga",
+    "submitOrder": "Hantar Pesanan"
+  },
+  "MerchantCard": {
+    "unfollow": "Nyahikut",
+    "follow": "Ikut",
+    "visitNow": "Lawati Sekarang",
+    "sold": "Terjual",
+    "views": "Dilihat",
+    "rating": "Penilaian Kedai"
+  },
+  "Mine": {
+    "dashboard": "Papan Pemuka",
+    "wallet": "Dompet Saya",
+    "orders": "Pesanan Saya",
+    "favoriteProducts": "Koleksi Produk",
+    "followedMerchants": "Kedai Diikuti",
+    "settings": "Tetapan",
+    "userId": "ID"
+  },
+  "PageTitle": {
+    "more": "Lihat Lagi"
+  },
+  "ProductCard": {
+    "addCartSuccess": "Ditambah ke troli",
+    "collected": "Dikoleksi",
+    "unCollected": "Dinyahkoleksi",
+    "off": "Diskaun",
+    "addToCart": "Tambah ke Troli",
+    "soldViews": "Jualan",
+    "viewsNum": "Dilihat"
+  },
+  "AddGoodsCommentDialog": {
+    "title": "Ulasan",
+    "addCommentSuccess": "Komen berjaya ditambah",
+    "selectProduct": "Pilih produk",
+    "selectProductRequired": "Sila pilih status ulasan",
+    "selectPlaceholder": "Pilih",
+    "userName": "E-mel/Telefon Ahli",
+    "userNameRequired": "Sila masukkan e-mel atau telefon ahli",
+    "userNamePlaceholder": "Masukkan e-mel atau telefon ahli",
+    "commentContent": "Kandungan Ulasan",
+    "commentContentRequired": "Sila masukkan kandungan ulasan",
+    "commentContentPlaceholder": "Masukkan kandungan ulasan",
+    "rating": "Penilaian",
+    "ratingRequired": "Sila pilih penilaian",
+    "commentImages": "Gambar Ulasan",
+    "cancel": "Batal",
+    "confirm": "Sahkan"
+  },
+  "AddressDialog": {
+    "editAddress": "Edit Alamat Penerimaan",
+    "addAddress": "Tambah Alamat Penerimaan",
+    "recipientName": "Nama Penerima",
+    "recipientNameRequired": "Sila masukkan nama penerima",
+    "recipientNamePlaceholder": "Masukkan nama penerima",
+    "phone": "Nombor Telefon",
+    "nationRequired": "Sila pilih kod negara",
+    "nationPlaceholder": "Kod Negara",
+    "phoneRequired": "Sila masukkan nombor telefon",
+    "phonePlaceholder": "Masukkan nombor telefon",
+    "email": "E-mel",
+    "emailPlaceholder": "Masukkan e-mel",
+    "region": "Negara/Wilayah/Bandar",
+    "regionRequired": "Sila pilih wilayah",
+    "regionPlaceholder": "Pilih negara/wilayah/bandar",
+    "postCode": "Poskod",
+    "postCodePlaceholder": "Masukkan poskod",
+    "addressDetail": "Alamat Terperinci",
+    "addressDetailPlaceholder": "Masukkan alamat terperinci",
+    "isDefault": "Alamat Lalai",
+    "cancel": "Batal",
+    "confirm": "Sahkan"
+  },
+  "CustomerServiceChat": {
+    "title": "Perkhidmatan Pelanggan",
+    "inputPlaceholder": "Input",
+    "noMessage": "Tiada mesej",
+    "imageAlt": "Gambar",
+    "heicUnsupported": "Pelayar semasa tidak menyokong muat naik fail HEIC.",
+    "heicUploadFailed": "Fail HEIC tidak dapat dimuat naik."
+  },
+  "DepositForm": {
+    "currency": "Mata Wang Isi Semula",
+    "selectCurrency": "Pilih mata wang isi semula",
+    "network": "Rangkaian Blockchain",
+    "selectNetwork": "Pilih rangkaian blockchain",
+    "addressLabel": "Alamat Isi Semula",
+    "amount": "Jumlah Isi Semula",
+    "enterAmount": "Masukkan jumlah isi semula",
+    "estimatedArrival": "Anggaran Ketibaan (kadar semasa {{rate}})",
+    "proof": "Bukti Bayaran (muat naik tangkapan skrin)",
+    "uploadProof": "Muat naik bukti bayaran",
+    "submit": "Sahkan",
+    "success": "Pemprosesan berjaya",
+    "addressCopied": "Alamat disalin!"
+  },
+  "OtpModal": {
+    "enterTransactionPassword": "Masukkan kata laluan transaksi",
+    "enter6Digits": "Masukkan kod pengesahan 6 digit",
+    "verifyFailed": "Pengesahan gagal, sila cuba lagi",
+    "cancel": "Batal",
+    "confirm": "Sahkan"
+  },
+  "ProductDetailMain": {
+    "basicInfo": "Maklumat Asas",
+    "sales": "Jualan",
+    "views": "Dilihat",
+    "originalPrice": "Harga Asal",
+    "currentPrice": "Harga Semasa",
+    "shipping": "Penghantaran",
+    "freeShipping": "Penghantaran Percuma",
+    "quantity": "Kuantiti",
+    "totalPrice": "Jumlah Harga",
+    "buyNow": "Beli Sekarang",
+    "addToCart": "Tambah ke Troli",
+    "pleaseSelect": "Sila pilih",
+    "noStock": "Kehabisan Stok",
+    "shippingDesc": "Dihantar dalam masa 24 jam selepas pesanan. Jika pesanan mempunyai kawalan logistik, pesanan mungkin ditangguhkan. Jejaki maklumat logistik pesanan atau hubungi perkhidmatan pelanggan."
+  },
+  "ProductDetailModal": {
+    "title": "Butiran Produk",
+    "noGoods": "Tiada maklumat produk",
+    "addSuccess": "Berjaya ditambah"
+  },
+  "UploadImg": {
+    "upload": "Muat Naik",
+    "preview": "Pratonton Gambar",
+    "onlyImage": "Hanya gambar format JPG/PNG/WEBP/HEIC boleh dimuat naik!",
+    "maxSize": "Saiz gambar tidak boleh melebihi.",
+    "unsupportedHeic": "Pelayar semasa tidak menyokong muat naik fail HEIC.",
+    "uploadFailed": "Muat naik gagal, sila cuba lagi kemudian"
+  },
+  "UploadMultiple": {
+    "upload": "Muat Naik",
+    "uploadSuccess": "Muat naik berjaya",
+    "uploadFailed": "Muat naik gagal"
+  },
+  "WithdrawForm": {
+    "withdrawMethod": "Kaedah Pengeluaran",
+    "selectWithdrawMethod": "Pilih kaedah pengeluaran",
+    "crypto": "Kripto",
+    "bankCard": "Kad Bank",
+    "coinType": "Mata Wang Pengeluaran",
+    "selectCoin": "Pilih mata wang",
+    "enterUSDT": "Masukkan USDT",
+    "blockchainNetwork": "Rangkaian Blockchain",
+    "withdrawAddress": "Alamat Pengeluaran",
+    "enterWithdrawAddress": "Masukkan alamat pengeluaran",
+    "copy": "Salin",
+    "bankName": "Nama Bank",
+    "enterBankName": "Masukkan nama bank",
+    "bankBranch": "Cawangan Bank",
+    "enterBankBranch": "Masukkan cawangan bank",
+    "bankCardNumber": "Nombor Kad Bank",
+    "enterBankCardNumber": "Masukkan nombor kad bank",
+    "withdrawAmount": "Jumlah Pengeluaran",
+    "enterWithdrawAmount": "Masukkan jumlah pengeluaran",
+    "amountMustBeGreaterZero": "Jumlah pengeluaran mestilah lebih daripada 0.",
+    "currentBalance": "Baki Semasa",
+    "actualReceived": "Jumlah Sebenar Diterima",
+    "fee": "Yuran",
+    "confirmSubmit": "Sahkan Hantar",
+    "copied": "Disalin!",
+    "inputAddressFirst": "Sila masukkan alamat pengeluaran/nombor kad bank terlebih dahulu",
+    "operationSuccess": "Pemprosesan berjaya"
+  },
+  "order": {
+    "pendingPayment": "Menunggu Bayaran",
+    "pendingShipment": "Menunggu Penghantaran",
+    "pendingReceive": "Menunggu Penerimaan",
+    "pendingReview": "Menunggu Ulasan",
+    "refund": "Refund/Perkhidmatan Selepas Jualan"
+  },
+  "refund": {
+    "pending": "Sedang Disemak",
+    "success": "Berjaya",
+    "failed": "Gagal"
+  },
+  "DeliveryInformation": {
+    "title": "Ke Mana Penghantaran?",
+    "desc1": "Masukkan poskod produk yang ingin dibeli untuk mengesahkan sama ada penghantaran ke kawasan anda tersedia.",
+    "desc2": "Produk dihantar terus daripada pembekal, mempunyai gudang global di 112 negara/wilayah.",
+    "pickup": {
+      "title": "Di Mana Untuk Mengambil?",
+      "desc1": "Terdapat titik penerimaan 24 jam.",
+      "highlight1": "Kedai APP-NAME, pasar raya Sainsbury's",
+      "desc2": "dan gudang global",
+      "desc3": "Untuk produk layak penghantaran segera, anda boleh memilih pelbagai slot masa berdasarkan lokasi anda. Pesanan akan dihantar ke pintu anda dan diletakkan di tempat yang selamat dan boleh dipercayai.",
+      "alert1": "Di England, Scotland, Wales, produk besar dan berat (memerlukan 2 orang atau lebih, contoh: sofa, katil) dihantar dan boleh dihantar dengan selamat ke lokasi yang diingini.",
+      "alert2": "Pemandu yang mesra akan menghubungi pada hari yang sama dan membincangkan butiran penghantaran. Jika anda dalam pengasingan diri, sila beritahu kami untuk menetapkan tarikh penghantaran baru.",
+      "warning": "Permintaan penghantaran produk besar kini tinggi. Jika terdapat kelewatan penghantaran, kami akan menghantar mesej secepat mungkin. Kami bekerja keras untuk menyediakan perkhidmatan terbaik kepada pelanggan. Terima kasih atas kesabaran dan sokongan berterusan."
+    },
+    "faq": {
+      "title": "Soalan Lazim",
+      "q1": "Apa yang berlaku jika saya memesan produk besar dan kecil bersama?",
+      "a1_1": "Kaedah penghantaran terpantas adalah menghantar secara berasingan.",
+      "a1_2": "Jangan risau, yuran penghantaran hanya dikenakan sekali.",
+      "a1_3": "Sila semak butiran dalam e-mel pengesahan pesanan.",
+      "q2": "Apa yang berlaku jika saya tiada di rumah?",
+      "a2_1": "Produk kecil akan diletakkan di tempat yang selamat dan tidak mencolok atau diserahkan kepada jiran jika diminta.",
+      "a2_2": "Talian Hotline",
+      "a2_3": "hubungi dan jadualkan semula penghantaran pada tarikh dan masa yang paling sesuai!",
+      "q3": "Berapa orang yang menghantar produk besar?",
+      "a3_1": "Produk besar seperti sofa, peti sejuk",
+      "a3_2": "2 orang",
+      "a3_3": "boleh dihantar. Pemandu mesra akan menghubungi pada hari penghantaran dan menghantar dengan selamat ke lokasi yang diingini.",
+      "q4": "COVID-19: Apakah kesan pada penghantaran?",
+      "a4_1": "Kami masih menyediakan perkhidmatan penghantaran untuk banyak produk, termasuk pra-pesanan konsol permainan. Anda akan menerima mesej notifikasi dan nombor penjejakan penghantar sebelum penghantaran.",
+      "a4_2": "Produk akan dihantar ke tempat selamat. Produk besar akan diletakkan di tempat selamat, pemandu mesra akan menghubungi pada hari yang sama dan membincangkan butiran pengangkutan produk besar. Jika anda dalam pengasingan diri, sila beritahu kami untuk menetapkan tarikh penghantaran baru."
+    },
+    "cta": "Lihat Kawasan Liputan Penghantaran"
+  },
+  "PrivacyPolicy": {
+    "header": {
+      "label": "Dasar Privasi",
+      "title": "Dasar Privasi APP-NAME",
+      "desc": "Kemas kini terakhir: Oktober 2025 | Perlindungan privasi anda adalah keutamaan utama kami."
+    },
+    "sections": {
+      "1": {
+        "title": "1. Pengenalan",
+        "content": {
+          "welcome": "1.1 Selamat datang ke laman web beli-belah APP-NAME.",
+          "desc1": "APP-NAME mematuhi dengan ketat tanggungjawab yang ditakrifkan oleh undang-undang dan peraturan privasi yang berkaitan ('Undang-undang Privasi'), dan berusaha sebaik mungkin untuk menghormati hak dan kebimbangan privasi semua pengguna laman web APP-NAME dan aplikasi mudah alih ('Platform').",
+          "alert": "Kami mengiktiraf kepentingan maklumat peribadi yang anda percayai kepada kami, dan percaya adalah tanggungjawab kami untuk mengurus, melindungi, dan memprosesnya dengan sewajarnya.",
+          "definition": "Maklumat peribadi bermaksud maklumat yang berkaitan dengan individu yang boleh dikenal pasti daripada maklumat itu atau daripada maklumat lain yang organisasi itu mempunyai atau mungkin mempunyai akses.",
+          "consent": "Dengan menggunakan perkhidmatan, anda bersetuju secara jelas bahawa kami boleh mengumpul, menggunakan, mendedahkan, dan memproses maklumat peribadi anda mengikut Dasar Privasi ini."
+        }
+      },
+      "2": {
+        "title": "2. Bilakah APP-NAME mengumpul maklumat peribadi?",
+        "content": {
+          "scenariosTitle": "Situasi pengumpulan umum",
+          "online": "Interaksi dalam talian",
+          "onlineItems": [
+            "Akses laman web",
+            "Penghantaran borang",
+            "Penyimpanan kuki"
+          ],
+          "offline": "Interaksi luar talian",
+          "offlineItems": [
+            "Komunikasi telefon",
+            "Pertemuan bersemuka",
+            "Pertukaran e-mel"
+          ],
+          "thirdParty": "Kami mungkin menerima maklumat anda daripada pihak ketiga (logistik, pembekal perkhidmatan bayaran dll)."
+        }
+      },
+      "3": {
+        "title": "3. Maklumat peribadi apa yang APP-NAME kumpul?",
+        "categories": [
+          {
+            "icon": "Maklumat Asas",
+            "label": "Maklumat Asas",
+            "items": [
+              "Nama",
+              "E-mel",
+              "Nombor Telefon",
+              "Alamat"
+            ]
+          },
+          {
+            "icon": "Maklumat Identiti",
+            "label": "Maklumat Identiti",
+            "items": [
+              "Tarikh Lahir",
+              "Jantina"
+            ]
+          },
+          {
+            "icon": "Multimedia",
+            "label": "Multimedia",
+            "items": [
+              "Foto",
+              "Audio",
+              "Video"
+            ]
+          },
+          {
+            "icon": "Maklumat Profesional",
+            "label": "Maklumat Profesional",
+            "items": [
+              "Pendidikan",
+              "Kerjaya"
+            ]
+          },
+          {
+            "icon": "Maklumat Lokasi",
+            "label": "Maklumat Lokasi",
+            "items": [
+              "Lokasi Geografi"
+            ]
+          },
+          {
+            "icon": "Maklumat Tingkah Laku",
+            "label": "Maklumat Tingkah Laku",
+            "items": [
+              "Sejarah Melayari",
+              "Tetapan Keutamaan"
+            ]
+          }
+        ],
+        "warning": "Anda boleh memilih untuk tidak mengambil bahagian dalam pengumpulan maklumat pada bila-bila masa, tetapi ini mungkin menjejaskan penggunaan beberapa fungsi."
+      },
+      "4": {
+        "title": "4. Pengumpulan maklumat lain",
+        "device": {
+          "title": "Maklumat Peranti",
+          "items": [
+            "Alamat IP",
+            "Sistem Operasi",
+            "Jenis Pelayar",
+            "ID Peranti Unik"
+          ]
+        },
+        "location": {
+          "title": "Perkhidmatan Lokasi",
+          "desc": "Mengumpul maklumat lokasi tepat menggunakan GPS/Wi-Fi.",
+          "note": "Boleh dilumpuhkan pada bila-bila masa dalam tetapan peranti."
+        }
+      },
+      "5": {
+        "title": "5. Kuki",
+        "titleLabel": "Dasar Kuki",
+        "purpose": {
+          "title": "Tujuan",
+          "items": [
+            "Cadangan kandungan yang disesuaikan",
+            "Penyesuaian iklan",
+            "Analisis penggunaan laman web"
+          ]
+        },
+        "management": {
+          "title": "Pengurusan",
+          "items": [
+            "Lumpuhkan dalam tetapan pelayar",
+            "Lumpuhkan iklan yang disesuaikan pada peranti mudah alih",
+            "Mungkin menjejaskan beberapa fungsi"
+          ]
+        }
+      },
+      "6": {
+        "title": "6. Bagaimana kami menggunakan maklumat yang diberikan?",
+        "mainUse": "Penggunaan utama",
+        "items": [
+          {
+            "icon": "Penyediaan Perkhidmatan"
+          },
+          {
+            "icon": "Komunikasi"
+          },
+          {
+            "icon": "Analisis Data"
+          },
+          {
+            "icon": "Penambahbaikan Fungsi"
+          },
+          {
+            "icon": "Pemasaran"
+          },
+          {
+            "icon": "Pematuhan Undang-undang"
+          }
+        ],
+        "unsubscribe": "Penerimaan maklumat pemasaran boleh dibatalkan pada bila-bila masa."
+      },
+      "7": {
+        "title": "7. Maklumat mana yang disimpan dan bagaimana APP-NAME melindungi maklumat pengguna?",
+        "security": {
+          "title": "Langkah Keselamatan",
+          "items": [
+            "Perlindungan fizikal",
+            "Jaminan sistem pengurusan",
+            "Teknologi penyulitan elektronik",
+            "Kawalan akses berasaskan kebenaran"
+          ]
+        },
+        "retention": {
+          "title": "Tempoh Penyimpanan",
+          "desc": "Hanya disimpan untuk tempoh yang diperlukan, dan dipadam apabila syarat berikut dipenuhi:",
+          "items": [
+            "Penamatan hubungan",
+            "Pencapaian tujuan",
+            "Memenuhi keperluan undang-undang"
+          ]
+        }
+      },
+      "8": {
+        "title": "8. Adakah APP-NAME mendedahkan maklumat yang dikumpul daripada pelawat kepada pihak ketiga?",
+        "recipients": [
+          "Syarikat berkaitan/subsidiari",
+          "Kontraktor",
+          "Pembekal perkhidmatan",
+          "Agen kerajaan",
+          "Kontraktor penggabungan/pemerolehan",
+          "Rakan kongsi iklan"
+        ],
+        "note": "Semua pihak ketiga dijamin mematuhi standard perlindungan data yang sama."
+      }
+    },
+    "quickAccess": {
+      "title": "Akses Pantas",
+      "items": [
+        {
+          "label": "Tarik Balik Persetujuan",
+          "icon": "Tarik Balik"
+        },
+        {
+          "label": "Akses Maklumat",
+          "icon": "Lihat"
+        },
+        {
+          "label": "Tetapan Kuki",
+          "icon": "Kuki"
+        },
+        {
+          "label": "Hubungi Kami",
+          "icon": "E-mel"
+        }
+      ]
+    },
+    "footer": {
+      "contact": "Jika anda mempunyai soalan, sila hubungi pegawai perlindungan data kami.",
+      "email": "support@APP-NAME.com",
+      "copyright": "© 2025 APP-NAME Semua Hak Cipta"
+    },
+    "toggle": {
+      "expand": "Kembangkan",
+      "collapse": "Lipat"
+    }
+  },
+  "PrivacyPolicyPage": {
+    "header": "Dasar Privasi",
+    "title": "Dasar Privasi APP-NAME",
+    "lastUpdated": "Kemas kini terakhir: Oktober 2025 | Perlindungan privasi anda adalah keutamaan utama kami.",
+    "expand": "Kembangkan",
+    "collapse": "Lipat",
+    "section1Title": "1. Pengenalan",
+    "section1_1": "1.1 Selamat datang ke laman web beli-belah APP-NAME.",
+    "section1_2": "APP-NAME mematuhi dengan ketat tanggungjawab yang ditakrifkan oleh undang-undang dan peraturan privasi yang berkaitan ('Undang-undang Privasi'), dan berusaha sebaik mungkin untuk menghormati hak privasi semua pengguna platform.",
+    "section1_3": "Kami mengiktiraf kepentingan maklumat peribadi yang anda percayai kepada kami, dan percaya adalah tanggungjawab kami untuk mengurus, melindungi, dan memprosesnya dengan sewajarnya.",
+    "section1_4": "Maklumat peribadi adalah maklumat yang berkaitan dengan individu yang boleh dikenal pasti.",
+    "section1_5": "Dengan menggunakan perkhidmatan, anda bersetuju bahawa kami boleh mengumpul, menggunakan, mendedahkan, dan memproses maklumat peribadi anda mengikut Dasar Privasi ini.",
+    "section2Title": "2. Bilakah APP-NAME mengumpul maklumat peribadi?",
+    "section2_1": "Situasi pengumpulan umum",
+    "section2_2": "Interaksi dalam talian",
+    "section2_3": "Akses laman web",
+    "section2_4": "Penghantaran borang",
+    "section2_5": "Penyimpanan kuki",
+    "section2_6": "Interaksi luar talian",
+    "section2_7": "Komunikasi telefon",
+    "section2_8": "Pertemuan bersemuka",
+    "section2_9": "Pertukaran e-mel",
+    "section2_10": "Kami mungkin menerima maklumat anda daripada pihak ketiga.",
+    "section3Title": "3. Maklumat peribadi apa yang APP-NAME kumpul?",
+    "section3_1_label": "Maklumat Asas",
+    "section3_1_1": "Nama",
+    "section3_1_2": "E-mel",
+    "section3_1_3": "Nombor Telefon",
+    "section3_1_4": "Alamat",
+    "section3_2_label": "Maklumat Identiti",
+    "section3_2_1": "Tarikh Lahir",
+    "section3_2_2": "Jantina",
+    "section3_3_label": "Multimedia",
+    "section3_3_1": "Foto",
+    "section3_3_2": "Audio",
+    "section3_3_3": "Video",
+    "section3_4_label": "Maklumat Profesional",
+    "section3_4_1": "Pendidikan",
+    "section3_4_2": "Kerjaya",
+    "section3_5_label": "Maklumat Lokasi",
+    "section3_5_1": "Lokasi Geografi",
+    "section3_6_label": "Maklumat Tingkah Laku",
+    "section3_6_1": "Sejarah Melayari",
+    "section3_6_2": "Tetapan Keutamaan",
+    "section3_warning": "Anda boleh memilih untuk tidak mengambil bahagian dalam pengumpulan maklumat pada bila-bila masa, tetapi ini mungkin menjejaskan penggunaan beberapa fungsi.",
+    "section4Title": "4. Kaedah penggunaan maklumat",
+    "section4_1": "Bagaimana menggunakan maklumat",
+    "section4_2": "Penyediaan dan penambahbaikan perkhidmatan",
+    "section4_3": "Cadangan yang disesuaikan",
+    "section4_4": "Perlindungan keselamatan",
+    "section4_5": "Pematuhan undang-undang",
+    "section4_6": "Perkongsian maklumat",
+    "section4_7": "Mungkin berkongsi maklumat dengan pihak ketiga untuk penyediaan perkhidmatan.",
+    "section4_8": "Maklumat yang dikongsi mematuhi dengan ketat Dasar Privasi dan undang-undang.",
+    "section5Title": "5. Kuki dan teknologi penjejakan",
+    "section5_1": "Bagaimana menggunakan kuki",
+    "section5_2": "Kuki penting",
+    "section5_3": "Menjamin fungsi asas laman web",
+    "section5_4": "Ingat status log masuk",
+    "section5_5": "Pencegahan penipuan",
+    "section5_6": "Kuki prestasi",
+    "section5_7": "Analisis penggunaan laman web",
+    "section5_8": "Penambahbaikan perkhidmatan",
+    "section5_9": "Boleh dilumpuhkan",
+    "section6Title": "6. Langkah perlindungan data",
+    "section6_1": "Langkah keselamatan yang diambil",
+    "section6_2": "Kawalan akses",
+    "section6_3": "Teknologi penyulitan",
+    "section6_4": "Sandaran berkala",
+    "section6_5": "Latihan keselamatan",
+    "section6_6": "Pemantauan sistem",
+    "section6_7": "Audit dan pematuhan",
+    "section6_8": "Jangan kongsi kata laluan akaun dan pastikan keselamatan maklumat peribadi.",
+    "section7Title": "7. Hak pengguna",
+    "section7_1": "Hak akses dan kawalan",
+    "section7_2": "Lihat maklumat peribadi yang disimpan",
+    "section7_3": "Betulkan maklumat yang tidak tepat",
+    "section7_4": "Minta pemadaman maklumat",
+    "section7_5": "Hadkan atau tolak pemprosesan",
+    "section7_6": "Hak lain",
+    "section7_7": "Tarik balik persetujuan pada bila-bila masa dan ajukan soalan privasi.",
+    "section7_8": "Hak pemindahan data",
+    "section7_9": "Hak menentang pemprosesan",
+    "section7_10": "Hak mengemukakan aduan",
+    "section8Title": "8. Hubungi Kami",
+    "section8_1": "Jika terdapat keraguan mengenai Dasar Privasi",
+    "section8_2": "Hubungi melalui e-mel sokongan pelanggan",
+    "section8_3": "Telefon talian hotline perkhidmatan",
+    "section8_4": "Sembang dalam talian",
+    "section8_5": "Akaun media sosial",
+    "section8_6": "Pos bertulis",
+    "section8_7": "Hantar borang maklum balas laman web",
+    "section8_warning": "Permintaan akan diproses dalam masa yang munasabah tetapi beberapa operasi mungkin memerlukan pengesahan tambahan."
+  },
+  "ReturnsPolicy": {
+    "title": "Berubah Fikiran",
+    "subtitle1": "Selepas penerimaan atau penghantaran ",
+    "subtitle2": "dalam 15 hari",
+    "subtitle3": " boleh dipulangkan",
+    "mustBe": "Produk mesti memenuhi syarat berikut:",
+    "refundMethod": "Refund akan diproses melalui kaedah bayaran asal:",
+    "refundUsdtEth": "Jika menggunakan USDT atau ETH, akan dipaparkan dalam akaun dalam masa 1 hari perniagaan.",
+    "refundWire": "Jika menggunakan pindahan bank, mungkin mengambil masa sehingga 30 hari bergantung pada bank.",
+    "requirements1": "Belum digunakan dan mengandungi semua komponen asal",
+    "requirements2": "Pembungkusan asal (jika boleh, dengan label)",
+    "requirements3": "Keadaan boleh dijual semula",
+    "requirements4": "Termasuk bukti pembelian",
+    "requirements5": "Termasuk hadiah yang diberikan bersama produk",
+    "productSupport": "Sokongan Produk",
+    "productSupportDesc1": "Dalam kebanyakan kes, jika terdapat masalah dengan produk, anda boleh menyelesaikannya dengan mudah dari rumah melalui",
+    "productSupportDesc2": "laman web sokongan produk",
+    "productSupportDesc3": ". Di sini anda boleh mengakses FAQ mengenai produk dan syarikat kami, penghantaran dan penerimaan, pulangan dan refund.",
+    "goodsIssue": "Produk Bermasalah",
+    "issueNotice1": "Jika anda ingin memulangkan dalam 15 hari pertama, kami menyediakan pertukaran, perubahan atau refund.",
+    "issueNotice2": "Selepas tempoh ini, selagi produk dalam tempoh jaminan, kami akan mengatur pembaikan melalui ejen pembaikan khusus kami, atau menukar atau menggantikan produk jika tidak boleh dibaiki.",
+    "issueDesc": "Kaedah pulangan terpantas adalah melalui pusat gudang global di 112 negara/wilayah. Kami menerima kebanyakan produk, tetapi produk besar dikecualikan. Jika pada mulanya dihantar ke pintu anda dan masih ingin memulangkan produk besar, tatal ke bawah untuk memulakan sembang masa nyata atau akses talian hotline.",
+    "precautionsTitle": "Perhatian",
+    "precautionsDesc": "Beberapa produk seperti makanan, barang kemas tindik, pakaian dalam hanya boleh ditukar atau direfund jika cacat. Produk yang tidak boleh direfund akan dinyatakan dengan jelas di laman web.",
+    "precautions1": "Jika memulangkan produk DVD, muzik atau perisian, mestilah belum digunakan dan dalam pembungkusan asal yang dimeterai.",
+    "precautions2": "Jika produk atau pembungkusan rosak teruk, kami berhak mengurangkan jumlah refund.",
+    "precautions3": "Kami mungkin meminta nombor siri produk atau maklumat serupa untuk mengesahkan bahawa kami yang membekalkan produk tersebut.",
+    "precautions4": "Sudah tentu, ini tidak menjejaskan hak pengguna anda.",
+    "precautionsNote": "Kami akan memeriksa produk sebelum refund. Jika produk didapati tidak dipulangkan mengikut arahan, kami berhak menolak refund atau menyediakan refund separa berdasarkan keadaan produk.",
+    "proof1_1": "Resit tunai",
+    "proof1_2": "Resit elektronik",
+    "proof1_3": "Nombor pesanan",
+    "proof1_4": "E-mel pengesahan",
+    "proof2_1": "Invois transaksi",
+    "proof2_2": "Alamat e-mel yang digunakan untuk pembelian produk",
+    "faqTitle": "Soalan Lazim",
+    "cta": "Mulakan Proses Pulangan"
+  },
+  "sellerRating": {
+    "title": "Sistem Penilaian Penjual",
+    "intro": "Pengenalan",
+    "introContent": "Di sini diperkenalkan sistem penilaian penjual serta kaedah penciptaan dan penggunaannya.",
+    "website": "Laman Web Berkaitan",
+    "parties": "Pihak Berkaitan",
+    "allSellers": "Semua Penjual",
+    "section1": {
+      "title": "Bagaimana mengakses Sistem Penilaian Penjual?",
+      "encourage": "Sistem penilaian penjual menggalakkan penjual mengekalkan standard perkhidmatan yang tinggi untuk menyediakan pengalaman pembelian yang baik kepada pembeli kami.",
+      "deduction": "Gagal mencapai matlamat yang dijanjikan akan menyebabkan potongan markah.",
+      "accessPath": {
+        "prefix": "[",
+        "path": "Pusat Penjual >> Skor Kredit Penjual",
+        "suffix": "] halaman untuk melihat skor."
+      }
+    },
+    "section2": {
+      "title": "Bagaimana skor dihasilkan?",
+      "deductionCondition": "Skor hanya dipotong apabila jangkaan minimum pembeli tidak dipenuhi, dan memberi amaran kepada penjual tentang bidang yang perlu diperbaiki.",
+      "updateTime": "Sistem penilaian penjual dikemas kini pada 1hb setiap bulan berdasarkan pelanggaran penjual pada bulan sebelumnya. Klik kata kunci dimensi penilaian berkaitan untuk melihat keseluruhan dasar."
+    },
+    "table1": {
+      "headers": {
+        "measure": "Ukuran Penilaian",
+        "spec": "Perihalan",
+        "deduction": "Potongan Bulanan"
+      },
+      "max10": "Maksimum 10 markah",
+      "max20": "Maksimum 20 markah",
+      "rows": {
+        "nfr": {
+          "title": "Kadar Tidak Memenuhi NFR",
+          "desc": "Bilangan pesanan yang dibatalkan atau dipulangkan oleh penjual dalam 7 hari terakhir mencapai 30% daripada jumlah pesanan"
+        },
+        "lsr": {
+          "title": "Kadar Penghantaran Lewat LSR",
+          "desc": "Bilangan pesanan yang ditangguhkan lebih 72 jam dalam 7 hari terakhir mencapai 20% daripada jumlah pesanan"
+        },
+        "customerService": {
+          "title": "Perkhidmatan Pelanggan",
+          "rude": "Kasar atau menghina dalam sembang atau komen",
+          "cancelRequests": "Permintaan pembatalan pesanan pembeli bulan ini melebihi 5 kali"
+        },
+        "breach": {
+          "title": "Pelanggaran",
+          "lowResponse": "Kadar respons pembeli kurang daripada 80%",
+          "violatePromise": "Penjual tidak menyediakan perkhidmatan yang dijanjikan kepada pembeli, menjejaskan hak pembeli"
+        }
+      }
+    },
+    "section3": {
+      "title": "Apakah hukuman yang berkaitan dengan skor tertentu?"
+    },
+    "table2": {
+      "headers": {
+        "points": "Jumlah Markah",
+        "level": "Tahap Hukuman"
+      },
+      "level1": "Tahap 1",
+      "level2": "Tahap 2",
+      "level3": "Tahap 3",
+      "level4": "Tahap 4",
+      "level5": "Tahap 5",
+      "level6": "Tahap 6",
+      "penalties": {
+        "marketingBan": "Larangan aktiviti pemasaran (28 hari)",
+        "freeShippingRemoval": "Penyingkiran penghantaran percuma atau refund penghantaran (28 hari)",
+        "deboost": "Pengurangan pendedahan produk (28 hari)",
+        "loanRestriction": "Sekatan pinjaman penjual (28 hari)",
+        "listingBlock": "Sekatan pendaftaran dan penyuntingan produk (28 hari)",
+        "accountFreeze": "Pembekuan akaun (28 hari)"
+      }
+    },
+    "section4": {
+      "title": "Peraturan dan butiran pelanggaran perkhidmatan pelanggan",
+      "rudeQuestion": "Apakah sembang atau komen kasar atau menghina?",
+      "rudeDefinition": "Ugutan berniat jahat bermaksud ahli menghina, memaki, mengugut, komen dll seseorang, atau mengugut seseorang dengan cara yang tidak wajar, menjejaskan hak sah pihak lain.",
+      "rudeHandling": "Bagaimana sembang atau komen kasar atau menghina diproses?",
+      "rudePenalty": "Untuk pelanggaran umum dan serius, markah berkaitan hak perniagaan, pengurusan, kawalan dipotong.",
+      "rudeScenario": "Situasi yang digunakan: Ugutan berniat jahat bermaksud ahli menghina, memaki, mengugut dll seseorang, atau mengugut seseorang dengan cara yang tidak wajar, menjejaskan hak sah pihak lain."
+    },
+    "section5": {
+      "title": "Langkah terhadap pelanggaran",
+      "breachQuestion": "Apakah pelanggaran?",
+      "breachDefinition": "Pelanggaran bermaksud penjual tidak menyediakan perkhidmatan kepada pembeli atau menjejaskan hak pembeli atau gagal memenuhi kewajipan yang dijanjikan dengan APP-NAME. Penjual mesti mematuhi kewajipan undang-undang atau yang dipersetujui mengenai perubahan, pulangan, refund.",
+      "measure": "Langkah yang digunakan: Potongan markah",
+      "specificMeasures": "Langkah khusus",
+      "generalViolation": "1. Dalam situasi tertentu, jika terdapat janji lain yang perlu dipenuhi oleh penjual untuk pesanan yang telah dibayar atau produk/perkhidmatan berkaitan, potongan 5 markah setiap pelanggaran umum",
+      "seriousViolation": {
+        "prefix": "2. Jika penjual melanggar mana-mana janji berikut, potongan 10 markah setiap pelanggaran serius:",
+        "item1": "1) APP-NAME menentukan penjual perlu bertanggungjawab untuk refund dan jaminan selepas lain tetapi penjual enggan",
+        "item2": "2) APP-NAME menentukan penjual perlu bertanggungjawab untuk pulangan/pertukaran tanpa sebab dalam 7 hari jaminan selepas tetapi penjual enggan",
+        "item3": "3) Enggan atau melengah-lengahkan penghantaran produk percubaan yang dijanjikan kepada pembeli tanpa perbincangan dengan pembeli",
+        "item4": "4) Penjual tidak memproses pesanan dalam 72 jam selepas bayaran",
+        "activity": "Penjual yang menyertai aktiviti rasmi APP-NAME tidak mematuhi keperluan aktiviti (kecuali masa penghantaran), melanggar kandungan pengurusan lain yang diumumkan secara rasmi oleh APP-NAME (termasuk tetapi tidak terhad kepada standard pengurusan kategori, standard industri dll). Jika keperluan khusus sepadan dengan situasi khusus, ikut keperluan tersebut"
+      }
+    },
+    "section6": {
+      "title": "Berapa lama tempoh hukuman?",
+      "duration": {
+        "prefix": "Hukuman tamat selepas ",
+        "days": "28 hari",
+        "suffix": ". Ambil langkah berkaitan dan perbaiki prestasi kedai semasa serta kekalkan pematuhan, penjual yang dihukum boleh memulihkan sebahagian hak penjual."
+      }
+    },
+    "section7": {
+      "title": "Pengurusan pelanggaran",
+      "generalCase": "Kes umum",
+      "generalDesc": "Pengguna mengemukakan aduan dan APP-NAME menentukan aduan sah, potongan 5 markah setiap pelanggaran umum, pulih 5 markah apabila 5 pesanan selesai",
+      "seriousCase": "Kes serius",
+      "seriousDesc": "Pengguna mengemukakan aduan dan APP-NAME menentukan aduan sah dan serius, potongan 20 markah setiap item, pulih 20 markah apabila 20 pesanan selesai",
+      "extremeCase": "Kes sangat serius",
+      "extremeDesc": "Pembekuan akaun dalam 28 hari, penutupan kedai",
+      "example1": {
+        "title": "Contoh 1: Penjual A dipotong 3 markah pada minggu ketiga, hak dipulihkan pada minggu ketujuh"
+      },
+      "example2": {
+        "title": "Contoh 2: Penjual B dipotong 3 markah pada minggu ketiga, 3 markah pada minggu kelima, markah ini terkumpul untuk menentukan tahap, hak dipulihkan pada minggu kesembilan"
+      },
+      "example3": {
+        "title": "Contoh 3: Penjual C dipotong 3 markah satu minggu sebelum permulaan suku tahun, 3 markah selepas permulaan suku tahun, markah baru menentukan tahap baru"
+      }
+    },
+    "section8": {
+      "title": "Bagaimana mengemukakan bantahan terhadap penilaian?",
+      "appeal": {
+        "prefix": " ",
+        "link": "pautan talian hotline",
+        "suffix": " untuk mengemukakan bantahan. Jika bantahan berjaya, potongan markah dibatalkan dan hak penjual berkaitan dipulihkan."
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./reset-antd.css";
+@import "./variables.css";
+@import "./theme.css";
+@import "./text.css";
+@import "./format.css";
+@import "./animate.css";
+
+
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Chrome / Safari */
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.line{
+  height: 1px;
+  background-color: #f7f7f7;
+}
+.block-line{
+    height: 8px;
+  background-color: #f7f7f7;
+}

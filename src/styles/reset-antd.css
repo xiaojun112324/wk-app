@@ -1,0 +1,59 @@
+/* .ant-input {
+    background-color: #F4F5F9 !important;
+    border: none !important;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 8px;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.ant-input-password {
+    border: none !important;
+    height: 42px;
+    line-height: 42px;
+    background-color: #F4F5F9 !important;
+    padding: 0 10px;
+    border-radius: 8px;
+    box-shadow: none;
+    outline: none !important;
+    box-shadow: none !important;
+} */
+
+.up-wrap .ant-upload-list-item-done {
+    width: 100%;
+    min-height: 120px;
+}
+
+.up-wrap .ant-upload-list-item-done .ant-upload-list-item-thumbnail {
+    width: 100% !important;
+    min-height: 120px;
+}
+
+.up-wrap .ant-upload-list-item-done .ant-upload-list-item-image {
+    width: 100%;
+    object-fit: contain;
+    min-height: 120px;
+}
+
+.up-wrap .ant-upload-list-item-name {
+    display: none;
+}
+
+.up-wrap .ant-upload-list-item-actions {
+    padding-left: 7px;
+
+}
+
+.up-sigel-mode .ant-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.up-sigel-mode .ant-upload-list{
+    display: none !important;
+}

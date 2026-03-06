@@ -1,0 +1,1235 @@
+{
+  "meta": {
+    "locale": { "code": "en-US", "label": "English" }
+  },
+  "common": {
+    "store": "Store",
+  "goods": "Goods",
+    "category": "Category",
+    "categories": "All categories",
+    "wishlist": "Wishlist",
+    "checkout": "Checkout",
+    "order": "Order",
+    "account": "Account",
+    "settings": "Settings",
+    "language": "Language",
+    "currency": "Currency",
+    "search": "Search",
+    "searchPlaceholder": "Search products, brands or categories",
+    "buyNow": "Buy now",
+    "viewMore": "View more",
+    "viewAll": "View all",
+    "loadMore": "Load more",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "save": "Save",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "yes": "Yes",
+    "no": "No",
+    "success": "Success",
+    "failed": "Failed",
+    "loading": "Loading...",
+    "noData": "No data",
+    "outOfStock": "Out of stock",
+    "inStock": "In stock",
+    "soldOut": "Sold out",
+    "newArrival": "New arrival",
+    "bestSeller": "Best seller",
+    "discount": "Discount",
+    "price": "Price",
+    "quantity": "Quantity",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "tax": "Tax",
+    "grandTotal": "Grand total",
+    "payment": "Payment",
+    "paymentMethod": "Payment method",
+    "delivery": "Delivery",
+    "contactUs": "Contact us",
+    "helpCenter": "Help center",
+    "privacyPolicy": "Privacy policy",
+    "termsOfService": "Terms of service",
+    "logout": "Log out",
+    "forgotPassword": "Forgot password?",
+    "rememberMe": "Remember me",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "welcomeBack": "Welcome back",
+    "or": "or",
+    "continue": "Continue",
+    "filter": "Filter",
+    "sort": "Sort",
+    "clear": "Clear",
+    "viewDetails": "View details",
+    "reviews": "Reviews",
+    "addReview": "Add review",
+    "rating": "Rating",
+    "share": "Share",
+    "copy": "Copy",
+    "copied": "Copied",
+    "backToHome": "Back to home",
+    "404Title": "Page not found",
+    "404Desc": "Sorry, the page you are looking for does not exist.",
+    "retry": "Retry"
+  },
+  "login": {
+    "title": "Sign in to your account",
+    "subtitle": "Welcome! Please enter your account information",
+    "tabEmail": "Email sign in",
+    "tabPhone": "Phone sign in",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Please enter your email",
+    "emailRequired": "Please enter your email",
+    "phoneLabel": "Phone number",
+    "phonePlaceholder": "Please enter your phone number",
+    "phoneRequired": "Please enter your phone number",
+    "areaCodePlaceholder": "Area code",
+    "areaCodeRequired": "Please select area code",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Please enter your password",
+    "passwordRequired": "Please enter your password",
+    "passwordPattern": "Password must be 6-12 characters and contain no spaces",
+    "noAccount": "Don't have an account?",
+    "register": "Register",
+    "forgotPassword": "Forgot password?",
+    "loginButton": "Sign in",
+    "successMessage": "Login successful!"
+  },
+  "register": {
+    "title": "Create your account",
+    "subtitle": "Welcome! Please enter your details",
+    "tabEmail": "Email",
+    "tabPhone": "Phone",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Please enter your email",
+    "emailRequired": "Please enter your email",
+    "emailInvalid": "Invalid email format",
+    "phoneLabel": "Phone number",
+    "phonePlaceholder": "Please enter your phone number",
+    "phoneRequired": "Please enter your phone number",
+    "areaCodePlaceholder": "Area code",
+    "areaCodeRequired": "Please select area code",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Please enter your password",
+    "passwordRequired": "Please enter your password",
+    "passwordPattern": "Password must be 6-12 characters and contain no spaces",
+    "confirmPasswordLabel": "Confirm password",
+    "confirmPasswordPlaceholder": "Please enter your password again",
+    "confirmPasswordRequired": "Please enter your password again",
+    "passwordMismatch": "The two passwords do not match!",
+    "hasAccount": "Already have an account?",
+    "login": "Sign in",
+    "registerButton": "Register",
+    "successMessage": "Registration successful!"
+  },
+  "home": {
+    "bannerTitleLine1": "Elevate your style",
+    "bannerTitleLine2": "Embrace luxury",
+    "bannerSubtitle": "Discover the latest collection crafted for modern elegance. Redefine your wardrobe with timeless fashion.",
+    "recommendCategory": "Recommended categories",
+    "dailyNewArrival": "Daily new arrivals",
+    "recommendProduct": "Recommended products",
+    "recommendStore": "Recommended stores",
+    "hotRecommend": "Hot picks",
+    "featureAuthentic": "100% authentic",
+    "featureReturn7Days": "7-day returns",
+    "featureShippingDiscount": "Shipping discounts",
+    "featureSecurePayment": "Secure payment"
+  },
+  "products": {
+    "category": "Category",
+    "allProducts": "All products",
+    "comprehensive": "Comprehensive",
+    "sales": "Sales",
+    "price": "Price",
+    "newArrival": "New"
+  },
+  "merchantRegister": {
+    "title": "Merchant onboarding",
+    "header": "APP-NAME Merchant Onboarding",
+    "loginTipPrefix": "If you are already a seller,",
+    "login": "click to sign in",
+    "description": "Our partner program offers comprehensive marketing support and services. Our customer service team provides professional support and advice to help you optimize product listings and sales strategies. Join us now! Let’s create bigger business opportunities and grow together!",
+    "merchantInfo": "Merchant information",
+    "storeLogo": "Store logo",
+    "storeLogoTip": "Please upload store logo",
+    "shopName": "Store name",
+    "shopNameTip": "Please enter store name",
+    "shopNamePlaceholder": "Please enter store name, no special characters",
+    "shopAddress": "Store address",
+    "shopAddressTip": "Please enter store address",
+    "shopAddressPlaceholder": "Please enter store address, no special characters",
+    "country": "Country",
+    "countryTip": "Please select country",
+    "countryPlaceholder": "Please select country",
+    "idNumber": "ID / passport number",
+    "idNumberTip": "Please enter ID number",
+    "idNumberPlaceholder": "Please enter ID number",
+    "realName": "Real name",
+    "realNameTip": "Please enter real name",
+    "realNamePlaceholder": "Please enter real name",
+    "idCardFront": "ID front photo",
+    "idCardFrontTip": "Please upload ID front photo",
+    "idCardBack": "ID back photo",
+    "idCardBackTip": "Please upload ID back photo",
+    "verifyType": "Verification method",
+    "verifyTypeTip": "Please select verification method",
+    "email": "Email",
+    "phone": "Phone number",
+    "contact": "Username (email or phone)",
+    "contactTip": "Please enter username",
+    "contactPlaceholder": "Please enter email or phone number",
+    "password": "Login password",
+    "passwordTip": "Please enter login password",
+    "passwordPattern": "Password must be 6 to 12 characters and contain no spaces",
+    "passwordPlaceholder": "Please enter login password",
+    "confirmPassword": "Confirm password",
+    "confirmPasswordTip": "The two passwords do not match",
+    "confirmPasswordPlaceholder": "Please enter login password again",
+    "inviteCode": "Invite code",
+    "inviteCodePlaceholder": "Please enter invite code (optional)",
+    "submit": "Submit application",
+    "submitSuccess": "Submission successful, please wait for review!",
+    "areaCodeTip": "Please select area code",
+    "areaCodePlaceholder": "Please select area code",
+    "phonePlaceholder": "Please enter phone number"
+  },
+  "mineDetail": {
+    "goodsCollect": "Collected products",
+    "storeCollect": "Followed stores",
+    "defaultAddress": "Default address",
+    "addAddress": "Add address",
+    "followedStores": "Followed stores",
+    "collectedGoods": "Collected items"
+  },
+  "favoriteProducts": {
+    "collectedGoods": "Collected items"
+  },
+  "mineMerchant": {
+    "followedShops": "Followed shops"
+  },
+  "mine": {
+    "shop": "Merchant onboarding",
+    "userIdPrefix": "ID:",
+    "balanceLabel": "Balance",
+    "deposit": "Deposit",
+    "withdraw": "Withdraw",
+    "myOrders": "My orders",
+    "all": "All",
+    "orderStatus": {
+      "pending": "Pending payout",
+      "shipping": "Pending shipment",
+      "receiving": "Pending receipt",
+      "review": "Pending review",
+      "refund": "Refund / after-sales"
+    },
+    "moreFeatures": "More features",
+    "setting": "Settings",
+    "language": "Language",
+    "wallet": "Wallet",
+    "favorite": "Favorites"
+  },
+  "OrderDetail": {
+    "myOrders": "My orders",
+    "orderInfo": "Order information",
+    "orderNo": "Order number",
+    "time": "Time",
+    "orderPrice": "Order amount",
+    "orderState": "Order status",
+    "refundState": "Refund status",
+    "recipientInfo": "Recipient information",
+    "name": "Name",
+    "phone": "Phone",
+    "country": "Country",
+    "addressDetail": "Detailed address",
+    "productInfo": "Product information",
+    "unitPrice": "Unit price",
+    "quantity": "Quantity",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "unknown": "Unknown status"
+  },
+  "Orders": {
+    "all": "All",
+    "pending": "Pending payment",
+    "shipping": "Pending shipment",
+    "receiving": "Pending receipt",
+    "review": "Pending review",
+    "refund": "Refund / after-sales",
+    "confirmReceivingTitle": "Confirm receipt?",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "orderNo": "Order no.",
+    "orderDesc": "Order description",
+    "orderPrice": "Amount",
+    "status": "Status",
+    "actions": "Actions",
+    "viewOrder": "View order",
+    "remindShipping": "Remind to ship",
+    "remindShippingSuccess": "Seller has received your reminder",
+    "refundRequest": "Request refund",
+    "confirmReceiving": "Confirm receipt",
+    "addComment": "Add comment",
+    "unknown": "Unknown"
+  },
+  "Wallet": {
+    "balance": "Balance",
+    "recharge": "Recharge",
+    "withdraw": "Withdraw",
+    "history": "Wallet history",
+    "createTime": "Created at",
+    "rechargeNo": "Recharge no.",
+    "rechargeAmount": "Recharge amount",
+    "rechargeType": "Currency / protocol",
+    "rechargeAddress": "Recharge address",
+    "withdrawNo": "Withdraw no.",
+    "withdrawAmount": "Withdraw amount",
+    "withdrawType": "Currency / protocol",
+    "withdrawAddress": "Destination address",
+    "fee": "Fee",
+    "realAmount": "Amount received",
+    "status": "Status",
+    "unpaid": "Unpaid",
+    "success": "Success",
+    "fail": "Failed",
+    "pending": "Pending",
+    "processed": "Processed",
+    "rejected": "Rejected",
+    "orderNo": "Reference no."
+  },
+  "AccountPanel": {
+    "balance": "Balance",
+    "recharge": "Recharge",
+    "withdraw": "Withdraw"
+  },
+  "LogisticsDialog": {
+    "title": "Logistics information",
+    "empty": "No logistics information",
+    "close": "Close"
+  },
+  "OrderCard": {
+    "viewOrder": "View order",
+    "remindShipping": "Remind to ship",
+    "requestRefund": "Request refund",
+    "confirmReceiving": "Confirm receipt",
+    "payNow": "Pay now",
+    "cancelOrder": "Cancel order",
+    "addComment": "Add comment",
+    "refunded": "Refunded"
+  },
+  "RefundDialog": {
+    "title": "Request a refund",
+    "refundReason": "Reason for refund",
+    "refundReasonPlaceholder": "Please enter reason for refund",
+    "refundRemark": "Return instructions",
+    "refundRemarkPlaceholder": "Please enter return instructions",
+    "cancel": "Cancel",
+    "submit": "Submit"
+  },
+  "Search": {
+    "comprehensive": "Comprehensive",
+    "soldNum": "Sales",
+    "price": "Price",
+    "newest": "Newest"
+  },
+  "Address": {
+    "setting": "Settings",
+    "defaultAddress": "Default address",
+    "addAddress": "Add address",
+    "confirmDelete": "Confirm deletion",
+    "confirmDeleteContent": "Are you sure you want to delete this address?",
+    "ok": "Confirm",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleted": "Deleted"
+  },
+  "DeleteAccount": {
+    "setting": "Settings",
+    "title": "Account deletion",
+    "description": "Permanently delete your APP-NAME account and all personal data. This action is irreversible. Please ensure you complete necessary tasks such as saving important information or handling pending matters before deletion.",
+    "account": "Your account",
+    "enterAccount": "Please enter",
+    "reason": "Reason for leaving",
+    "submit": "Submit request",
+    "submitSuccess": "Submission successful"
+  },
+  "Setting": {
+    "title": "Settings",
+    "description": "Manage your APP-NAME account easily and securely! Change your login password with one click — we recommend using a strong password with letters, numbers and symbols and updating it regularly; set a separate transaction password to protect sensitive operations; update your delivery address to ensure smooth notifications and deliveries. Simple operations for peace of mind!",
+    "loginPassword": "Login password",
+    "tradePassword": "Transaction password",
+    "address": "Delivery address",
+    "deleteAccount": "Delete account",
+    "submitSuccess": "Submission successful!"
+  },
+  "LoginPassword": {
+    "setting": "Settings",
+    "title": "Login password",
+    "description": "Change or reset your password. We recommend using a strong password with letters, numbers and symbols and updating regularly to protect account security.",
+    "oldPassword": "Old password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm password",
+    "enterOldPassword": "Please enter old password",
+    "enterNewPassword": "Please enter new password",
+    "passwordMinLength": "Password must be at least 6 characters",
+    "confirmPasswordMsg": "Please confirm password",
+    "passwordMismatch": "The two passwords do not match",
+    "submit": "Submit request",
+    "success": "Operation successful"
+  },
+  "PayPassword": {
+    "setting": "Settings",
+    "title": "Transaction password",
+    "description": "Set a transaction password separate from your login password for confirming auctions, withdrawals and other operations to enhance transaction security.",
+    "oldPassword": "Old password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm password",
+    "enterOldPassword": "Please enter old password",
+    "enterNewPassword": "Please enter new password",
+    "passwordMinLength": "Password must be at least 6 characters",
+    "confirmPasswordMsg": "Please confirm password",
+    "passwordMismatch": "The two passwords do not match",
+    "submit": "Submit request",
+    "success": "Operation successful"
+  },
+  "MerchantHeader": {
+    "follow": "Follow store",
+    "followed": "Following",
+    "followSuccess": "Followed successfully",
+    "unfollow": "Unfollowed",
+    "products": "Products",
+    "sales": "Sales",
+    "rate": "Rating"
+  },
+  "Products": {
+    "allProducts": "All products",
+    "category": "Category",
+    "comprehensive": "Comprehensive",
+    "sales": "Sales",
+    "price": "Price",
+    "newArrival": "New"
+  },
+  "Store": {
+    "recommend": "Recommended",
+    "allProducts": "All products"
+  },
+  "Withdraw": {
+    "myWallet": "My wallet",
+    "withdraw": "Withdraw",
+    "description": "Supports multiple payout channels, processes withdrawal requests quickly and securely in compliance with regulations."
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Page not found",
+    "description": "Sorry, we couldn't find the page you are looking for.",
+    "backHome": "Back to home"
+  },
+  "CheckForms": {
+    "checkout": "Checkout",
+    "addressTitle": "1. Shipping address",
+    "changeAddress": "Change address",
+    "addressInfo": "Shipping information",
+    "recipientName": "Recipient name",
+    "phone": "Contact number",
+    "nation": "Country / region",
+    "addressDetail": "Detailed address",
+    "noAddress": "No address",
+    "addAddress": "Add address",
+    "paymentTitle": "2. Payment method",
+    "selectPayment": "Select payment method",
+    "balance": "Balance",
+    "paypal": "PayPal (not available yet)",
+    "visa": "VISA (not available yet)",
+    "mastercard": "MasterCard (not available yet)",
+    "orderSummary": "Order summary",
+    "total": "Total",
+    "submitOrder": "Submit order",
+    "submitSuccess": "Submission successful",
+    "tip": "Tip",
+    "selectAddressFirst": "Please select a shipping address first",
+    "selectAddress": "Select shipping address",
+    "noAvailableAddress": "No available address"
+  },
+  "OrderResult": {
+    "paymentSuccess": "Payment successful",
+    "recipient": "Recipient",
+    "address": "Shipping address",
+    "continueShopping": "Continue shopping",
+    "viewOrders": "View orders"
+  },
+  "Deposit": {
+    "myWallet": "My wallet",
+    "deposit": "Deposit",
+    "description": "Fast and stable deposits with a simple and smooth process — top up your account anytime for peace of mind."
+  },
+  "BottomNav": {
+    "home": "Home",
+    "products": "Products",
+    "cart": "Cart",
+    "mine": "Me"
+  },
+  "Footer": {
+    "solutions": {
+      "title": "Customer service",
+      "contactUs": "Contact us"
+    },
+    "support": {
+      "title": "Returns & exchanges",
+      "privacyPolicy": "Privacy policy",
+      "returnsPolicy": "Returns policy",
+      "deliveryInformation": "Delivery & pickup",
+      "sellerScoreSystem": "Seller policy"
+    },
+    "company": {
+      "title": "User center",
+      "register": "User registration",
+      "orderQuery": "Order lookup",
+      "favoriteProducts": "Favorite products",
+      "wallet": "My wallet"
+    },
+    "legal": {
+      "title": "About us",
+      "aboutUs": "About us",
+      "careers": "Careers",
+      "news": "News",
+      "modernSlavery": "Modern slavery statement"
+    },
+    "description": "APP-NAME global users come from 112 countries and settle via USDT/ETH/BTC. USDT/ETH/BTC provides borderless transactions with near-instant, low-cost transfers worldwide — no waiting, no international fees.",
+    "copyright": "© APP-NAME Limited 2023. All rights reserved."
+  },
+  "Header": {
+    "title": "APP-NAME",
+    "home": "Home",
+    "category": "Category",
+    "products": "Products",
+    "sales": "Discounts",
+    "merchantOnboarding": "Merchant onboarding",
+    "profile": "Profile",
+    "logout": "Log out",
+    "logoutSuccess": "Logged out",
+    "search": "Search"
+  },
+  "SearchWithHistory": {
+    "placeholder": "Search",
+    "clearAll": "Clear all"
+  },
+  "CartDrawer": {
+    "items": "items",
+    "myCart": "My cart"
+  },
+  "CartPanel": {
+    "totalItems": "Total items",
+    "items": "pcs",
+    "totalPrice": "Total price",
+    "submitOrder": "Submit order"
+  },
+  "MerchantCard": {
+    "unfollow": "Unfollow",
+    "follow": "Follow",
+    "visitNow": "Visit now",
+    "sold": "Sold",
+    "views": "Views",
+    "rating": "Store rating"
+  },
+  "Mine": {
+    "dashboard": "Dashboard",
+    "wallet": "My wallet",
+    "orders": "My orders",
+    "favoriteProducts": "Favorite products",
+    "followedMerchants": "Followed merchants",
+    "settings": "Settings",
+    "userId": "ID"
+  },
+  "PageTitle": {
+    "more": "More"
+  },
+  "ProductCard": {
+    "addCartSuccess": "Added to cart",
+    "collected": "Collected",
+    "unCollected": "Uncollected",
+    "off": "OFF",
+    "addToCart": "Add to cart",
+    "soldViews": "Sales",
+    "viewsNum": "Views"
+  },
+  "AddGoodsCommentDialog": {
+    "title": "Review",
+    "addCommentSuccess": "Comment added successfully",
+    "selectProduct": "Select product",
+    "selectProductRequired": "Please select review status",
+    "selectPlaceholder": "Please select",
+    "userName": "Member email / phone",
+    "userNameRequired": "Please enter member email or phone",
+    "userNamePlaceholder": "Please enter member email or phone",
+    "commentContent": "Comment content",
+    "commentContentRequired": "Please enter comment content",
+    "commentContentPlaceholder": "Please enter comment content",
+    "rating": "Rating",
+    "ratingRequired": "Please select a rating",
+    "commentImages": "Comment images",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "AddressDialog": {
+    "editAddress": "Edit shipping address",
+    "addAddress": "Add shipping address",
+    "recipientName": "Recipient name",
+    "recipientNameRequired": "Please enter recipient name",
+    "recipientNamePlaceholder": "Please enter recipient name",
+    "phone": "Phone",
+    "nationRequired": "Please select country code",
+    "nationPlaceholder": "Country code",
+    "phoneRequired": "Please enter phone number",
+    "phonePlaceholder": "Please enter phone number",
+    "email": "Email",
+    "emailPlaceholder": "Please enter email",
+    "region": "Country / province / city",
+    "regionRequired": "Please select region",
+    "regionPlaceholder": "Please select country / province / city",
+    "postCode": "Postal code",
+    "postCodePlaceholder": "Please enter postal code",
+    "addressDetail": "Detailed address",
+    "addressDetailPlaceholder": "Please enter detailed address",
+    "isDefault": "Set as default",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "CustomerServiceChat": {
+    "title": "Customer service",
+    "inputPlaceholder": "Please enter",
+    "noMessage": "No messages",
+    "imageAlt": "Image",
+    "heicUnsupported": "Your browser does not support HEIC file upload",
+    "heicUploadFailed": "HEIC file failed to upload"
+  },
+  "DepositForm": {
+    "currency": "Deposit currency",
+    "selectCurrency": "Please select deposit currency",
+    "network": "Blockchain network",
+    "selectNetwork": "Please select blockchain network",
+    "addressLabel": "Deposit address",
+    "amount": "Amount",
+    "enterAmount": "Please enter amount",
+    "estimatedArrival": "Estimated arrival (current rate {{rate}})",
+    "proof": "Payment proof (upload screenshot)",
+    "uploadProof": "Please upload payment proof",
+    "submit": "Confirm",
+    "success": "Operation successful",
+    "addressCopied": "Address copied!"
+  },
+  "OtpModal": {
+    "enterTransactionPassword": "Please enter transaction password",
+    "enter6Digits": "Please enter 6-digit code",
+    "verifyFailed": "Verification failed, please try again",
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "ProductDetailMain": {
+    "basicInfo": "Basic information",
+    "sales": "Sales",
+    "views": "Views",
+    "originalPrice": "Original price",
+    "currentPrice": "Current price",
+    "shipping": "Shipping",
+    "freeShipping": "Free shipping",
+    "quantity": "Quantity",
+    "totalPrice": "Total price",
+    "buyNow": "Buy now",
+    "addToCart": "Add to cart",
+    "pleaseSelect": "Please select",
+    "noStock": "Out of stock",
+    "shippingDesc": "Orders are shipped within 24 hours. If there are logistics controls, delivery may be delayed. Please check order tracking or contact customer service."
+  },
+  "ProductDetailModal": {
+    "title": "Product details",
+    "noGoods": "No product information",
+    "addSuccess": "Added successfully"
+  },
+  "UploadImg": {
+    "upload": "Upload",
+    "preview": "Image preview",
+    "onlyImage": "Only JPG/PNG/WEBP/HEIC images are allowed!",
+    "maxSize": "Image size must not exceed",
+    "unsupportedHeic": "Your browser does not support HEIC file upload",
+    "uploadFailed": "Upload failed, please try again later"
+  },
+  "UploadMultiple": {
+    "upload": "Upload",
+    "uploadSuccess": "Upload successful",
+    "uploadFailed": "Upload failed"
+  },
+  "WithdrawForm": {
+    "withdrawMethod": "Withdrawal method",
+    "selectWithdrawMethod": "Please select withdrawal method",
+    "crypto": "Cryptocurrency",
+    "bankCard": "Bank card",
+    "coinType": "Withdrawal currency",
+    "selectCoin": "Please select currency",
+    "enterUSDT": "Please enter USDT",
+    "blockchainNetwork": "Blockchain network",
+    "withdrawAddress": "Withdrawal address",
+    "enterWithdrawAddress": "Please enter withdrawal address",
+    "copy": "Copy",
+    "bankName": "Bank name",
+    "enterBankName": "Please enter bank name",
+    "bankBranch": "Bank branch",
+    "enterBankBranch": "Please enter bank branch",
+    "bankCardNumber": "Bank card number",
+    "enterBankCardNumber": "Please enter bank card number",
+    "withdrawAmount": "Withdrawal amount",
+    "enterWithdrawAmount": "Please enter withdrawal amount",
+    "amountMustBeGreaterZero": "Withdrawal amount must be greater than 0",
+    "currentBalance": "Current balance",
+    "actualReceived": "Amount received",
+    "fee": "Fee",
+    "confirmSubmit": "Confirm submit",
+    "copied": "Copied!",
+    "inputAddressFirst": "Please enter withdrawal address / bank card number first",
+    "operationSuccess": "Operation successful"
+  },
+  "order": {
+    "pendingPayment": "Pending payment",
+    "pendingShipment": "Pending shipment",
+    "pendingReceive": "Pending receipt",
+    "pendingReview": "Pending review",
+    "refund": "Refund / after-sales"
+  },
+  "refund": {
+    "pending": "Under review",
+    "success": "Successful",
+    "failed": "Failed"
+  },
+  "DeliveryInformation": {
+    "title": "Where do we deliver?",
+    "desc1": "To check if we deliver to your area, enter your postal code on the product page you want to buy.",
+    "desc2": "Products are shipped directly from our suppliers and our global warehouses cover 112 countries/regions.",
+    "pickup": {
+      "title": "Where to pick up?",
+      "desc1": "We operate",
+      "highlight1": "APP-NAME stores, Sainsbury's supermarkets",
+      "desc2": "and collection points at global warehouses around the clock.",
+      "desc3": "For items eligible for fast-lane delivery, choose from multiple time slots based on your location. Orders will be delivered to your door and left in a safe place.",
+      "alert1": "England, Scotland and Wales offer delivery for large and heavy items (items requiring two or more people to move, such as sofas and beds), so we can deliver them safely to any location you choose.",
+      "alert2": "One of our friendly drivers will contact you the same day to discuss delivery details. If you are self-isolating, please let us know so we can reschedule your delivery.",
+      "warning": "We currently have high demand for large-item deliveries. If your delivery is delayed, we will notify you as soon as possible. We are working hard to provide the best service to our customers — thank you for your patience and support."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "What if I order large and small items at the same time?",
+      "a1_1": "The fastest way to get them to you is to ship them separately.",
+      "a1_2": "Don't worry; you only pay shipping once.",
+      "a1_3": "Please check your order confirmation email for more details.",
+      "q2": "What if I'm not at home?",
+      "a2_1": "Small items will be left in a safe place, out of sight, or handed to a neighbor at your request.",
+      "a2_2": "Help hotline",
+      "a2_3": "will contact you to reschedule delivery and choose the most convenient date and time slot!",
+      "q3": "How many people deliver large items?",
+      "a3_1": "Large items such as sofas and freezers may",
+      "a3_2": "require two people to deliver",
+      "a3_3": ". Our friendly driver will contact you on the delivery day and deliver your order safely to the chosen location.",
+      "q4": "COVID-19: Impact on delivery?",
+      "a4_1": "We continue to deliver many items, including preorders for game consoles. You will receive SMS notifications and the courier's tracking number before delivery.",
+      "a4_2": "Items will be delivered to a safe area at the door; large items will be delivered to a secure location. One of our friendly drivers will contact you the same day to discuss large-item delivery details. If you are self-isolating, please inform us so we can reschedule your delivery."
+    },
+    "cta": "Check delivery coverage"
+  },
+  "PrivacyPolicy": {
+    "header": {
+      "label": "📜 Privacy Policy",
+      "title": "APP-NAME Privacy Policy",
+      "desc": "Last updated: October 2025 | Protecting your privacy is our top priority"
+    },
+    "sections": {
+      "1": {
+        "title": "1. Introduction",
+        "content": {
+          "welcome": "1.1 Welcome to the APP-NAME store website",
+          "desc1": "APP-NAME takes its responsibilities under applicable privacy laws (the “Privacy Laws”) seriously and is committed to respecting the privacy and concerns of all users of our APP-NAME website and mobile applications (the “Platform”).",
+          "alert": "We recognize the importance of the personal data you entrust to us and believe we have a duty to manage, protect and handle your personal data responsibly.",
+          "definition": "Personal data refers to information about an individual who can be identified from that data or from that data combined with other information the organization has or may have access to.",
+          "consent": "By using the service, you hereby agree to our collection, use, disclosure and processing of your personal data in accordance with this Privacy Policy."
+        }
+      },
+      "2": {
+        "title": "2. When does APP-NAME collect personal data?",
+        "content": {
+          "scenariosTitle": "Common collection scenarios",
+          "online": "📱 Online interactions",
+          "onlineItems": [
+            "Visiting the website",
+            "Submitting forms",
+            "Cookie logging"
+          ],
+          "offline": "🤝 Offline interactions",
+          "offlineItems": [
+            "Phone communications",
+            "Face-to-face meetings",
+            "Postal correspondence"
+          ],
+          "thirdParty": "We may also obtain information from third parties (logistics, payment providers, etc.)"
+        }
+      },
+      "3": {
+        "title": "3. What personal data does APP-NAME collect?",
+        "categories": [
+          {
+            "icon": "👤",
+            "label": "Basic information",
+            "items": [
+              "Name",
+              "Email",
+              "Phone",
+              "Address"
+            ]
+          },
+          {
+            "icon": "🎂",
+            "label": "Identity information",
+            "items": [
+              "Date of birth",
+              "Gender"
+            ]
+          },
+          {
+            "icon": "📸",
+            "label": "Media",
+            "items": [
+              "Photos",
+              "Audio",
+              "Video"
+            ]
+          },
+          {
+            "icon": "💼",
+            "label": "Professional information",
+            "items": [
+              "Education",
+              "Employment history"
+            ]
+          },
+          {
+            "icon": "📍",
+            "label": "Location data",
+            "items": [
+              "Geolocation"
+            ]
+          },
+          {
+            "icon": "📊",
+            "label": "Behavioral data",
+            "items": [
+              "Browsing history",
+              "Preferences"
+            ]
+          }
+        ],
+        "warning": "You may opt out of data collection at any time, but this may affect certain features."
+      },
+      "4": {
+        "title": "4. Collection of other information",
+        "device": {
+          "title": "Device information",
+          "items": [
+            "IP address",
+            "Operating system",
+            "Browser type",
+            "Unique device ID"
+          ]
+        },
+        "location": {
+          "title": "Location services",
+          "desc": "Collects precise location via GPS/Wi‑Fi",
+          "note": "Can be disabled in device settings at any time"
+        }
+      },
+      "5": {
+        "title": "5. Cookies",
+        "titleLabel": "Cookie policy",
+        "purpose": {
+          "title": "Purpose",
+          "items": [
+            "Personalized content recommendations",
+            "Ad delivery optimization",
+            "Website analytics"
+          ]
+        },
+        "management": {
+          "title": "Management",
+          "items": [
+            "Disable via browser settings",
+            "Opt out of personalized ads on mobile",
+            "May affect certain features"
+          ]
+        }
+      },
+      "6": {
+        "title": "6. How do we use the information you provide?",
+        "mainUse": "Primary uses",
+        "items": [
+          {
+            "icon": "✅",
+            "label": "Service delivery"
+          },
+          {
+            "icon": "📧",
+            "label": "Communications"
+          },
+          {
+            "icon": "🔍",
+            "label": "Data analysis"
+          },
+          {
+            "icon": "🚀",
+            "label": "Feature improvement"
+          },
+          {
+            "icon": "📈",
+            "label": "Marketing"
+          },
+          {
+            "icon": "⚖️",
+            "label": "Legal compliance"
+          }
+        ],
+        "unsubscribe": "You may unsubscribe from marketing messages at any time"
+      },
+      "7": {
+        "title": "7. What data do we retain and how does APP-NAME protect user information?",
+        "security": {
+          "title": "Security measures",
+          "items": [
+            "Physical security protections",
+            "Management system safeguards",
+            "Electronic encryption technologies",
+            "Access control"
+          ]
+        },
+        "retention": {
+          "title": "Retention period",
+          "desc": "We retain data only as long as necessary and delete when conditions are met:",
+          "items": [
+            "End of relationship",
+            "Purpose fulfilled",
+            "Legal requirements satisfied"
+          ]
+        }
+      },
+      "8": {
+        "title": "8. Does APP-NAME disclose information collected from visitors to external parties?",
+        "recipients": [
+          "Subsidiaries / affiliates",
+          "Transaction counterparties",
+          "Service providers",
+          "Government agencies",
+          "Acquirers",
+          "Advertising partners"
+        ],
+        "note": "We ensure all third parties comply with equivalent data protection standards"
+      }
+    },
+    "quickAccess": {
+      "title": "Quick access",
+      "items": [
+        {
+          "label": "Withdraw consent",
+          "icon": "↩️"
+        },
+        {
+          "label": "Data access",
+          "icon": "👁️"
+        },
+        {
+          "label": "Cookie settings",
+          "icon": "🍪"
+        },
+        {
+          "label": "Contact us",
+          "icon": "📧"
+        }
+      ]
+    },
+    "footer": {
+      "contact": "If you have questions, contact our Data Protection Officer",
+      "email": "support@APP-NAME.com",
+      "copyright": "© 2025 APP-NAME. All rights reserved."
+    },
+    "toggle": {
+      "expand": "Expand",
+      "collapse": "Collapse"
+    }
+  },
+  "PrivacyPolicyPage": {
+    "header": "Privacy Policy",
+    "title": "APP-NAME Privacy Policy",
+    "lastUpdated": "Last updated: October 2025 | Protecting your privacy is our top priority",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "section1Title": "1. Introduction",
+    "section1_1": "1.1 Welcome to the APP-NAME store website",
+    "section1_2": "APP-NAME takes its responsibilities under applicable privacy laws (the “Privacy Laws”) seriously and is committed to respecting the privacy of all users of our Platform.",
+    "section1_3": "🔒 We recognize the importance of the personal data you entrust to us and believe we have a duty to manage, protect and handle your personal data responsibly.",
+    "section1_4": "Personal data refers to information that can identify an individual.",
+    "section1_5": "By using the service, you agree to our collection, use, disclosure and processing of your personal data in accordance with this Privacy Policy.",
+    "section2Title": "2. When does APP-NAME collect personal data?",
+    "section2_1": "Common collection scenarios",
+    "section2_2": "📱 Online interactions",
+    "section2_3": "Visiting the website",
+    "section2_4": "Submitting forms",
+    "section2_5": "Cookie logging",
+    "section2_6": "🤝 Offline interactions",
+    "section2_7": "Phone communications",
+    "section2_8": "Face-to-face meetings",
+    "section2_9": "Postal correspondence",
+    "section2_10": "We may also obtain information from third parties",
+    "section3Title": "3. What personal data does APP-NAME collect?",
+    "section3_1_label": "Basic information",
+    "section3_1_1": "Name",
+    "section3_1_2": "Email",
+    "section3_1_3": "Phone",
+    "section3_1_4": "Address",
+    "section3_2_label": "Identity information",
+    "section3_2_1": "Date of birth",
+    "section3_2_2": "Gender",
+    "section3_3_label": "Media",
+    "section3_3_1": "Photos",
+    "section3_3_2": "Audio",
+    "section3_3_3": "Video",
+    "section3_4_label": "Professional information",
+    "section3_4_1": "Education",
+    "section3_4_2": "Employment history",
+    "section3_5_label": "Location data",
+    "section3_5_1": "Geolocation",
+    "section3_6_label": "Behavioral data",
+    "section3_6_1": "Browsing history",
+    "section3_6_2": "Preferences",
+    "section3_warning": "⚠️ You may opt out of data collection at any time, but this may affect some features.",
+    "section4Title": "4. How we use data",
+    "section4_1": "How we use your data",
+    "section4_2": "Provide and improve services",
+    "section4_3": "Personalized recommendations",
+    "section4_4": "Security protection",
+    "section4_5": "Legal compliance",
+    "section4_6": "Data sharing",
+    "section4_7": "We may share information with third parties to provide services.",
+    "section4_8": "Shared information will be handled in accordance with this Privacy Policy and applicable laws.",
+    "section5Title": "5. Cookies & tracking technologies",
+    "section5_1": "How we use cookies",
+    "section5_2": "Necessary cookies",
+    "section5_3": "Ensure basic website functionality",
+    "section5_4": "Identify login status",
+    "section5_5": "Prevent fraud",
+    "section5_6": "Performance cookies",
+    "section5_7": "Analyze website usage",
+    "section5_8": "Optimize services",
+    "section5_9": "Optional to disable",
+    "section6Title": "6. Data protection measures",
+    "section6_1": "Security measures we take",
+    "section6_2": "Access control",
+    "section6_3": "Encryption technologies",
+    "section6_4": "Regular backups",
+    "section6_5": "Security training",
+    "section6_6": "System monitoring",
+    "section6_7": "Audits & compliance",
+    "section6_8": "Do not share your account password; keep your personal data safe",
+    "section7Title": "7. User rights",
+    "section7_1": "Access & control rights",
+    "section7_2": "Request access to personal data we hold",
+    "section7_3": "Correct inaccurate data",
+    "section7_4": "Request deletion of data",
+    "section7_5": "Restrict or object to processing",
+    "section7_6": "Other rights",
+    "section7_7": "You have the right to withdraw consent at any time and raise privacy concerns.",
+    "section7_8": "Data portability",
+    "section7_9": "Right to object",
+    "section7_10": "Right to lodge a complaint",
+    "section8Title": "8. Contact us",
+    "section8_1": "If you have questions about this privacy policy",
+    "section8_2": "Contact us via support email",
+    "section8_3": "Call our hotline",
+    "section8_4": "Use online chat",
+    "section8_5": "Contact via social media accounts",
+    "section8_6": "Send written correspondence",
+    "section8_7": "Submit web feedback form",
+    "section8_warning": "⚠️ We will handle your request within a reasonable time; some actions may require additional verification."
+  },
+  "ReturnsPolicy": {
+    "title": "I changed my mind",
+    "subtitle1": "You can return items within ",
+    "subtitle2": "15 days after pickup or delivery",
+    "subtitle3": ".",
+    "mustBe": "Your item must be:",
+    "refundMethod": "Refunds will be processed via the original payment method:",
+    "refundUsdtEth": "Using USDT or ETH may take one business day to appear in your account",
+    "refundWire": "Bank wire refunds may take up to 30 days depending on your bank",
+    "requirements1": "Unused and with all original components",
+    "requirements2": "In original packaging (if applicable, with tags)",
+    "requirements3": "In resalable condition",
+    "requirements4": "With proof of purchase",
+    "requirements5": "Include any free gifts that came with the product",
+    "productSupport": "Product support",
+    "productSupportDesc1": "In most cases, if you have an issue with an item, you can check our",
+    "productSupportDesc2": "product support site",
+    "productSupportDesc3": "from the comfort of your home to see if we can resolve it. There you can access FAQs about products and our company, shipping & pickup, returns and refunds.",
+    "goodsIssue": "Problems with my item",
+    "issueNotice1": "If you still need to return (within 15 days), we will offer exchange, replacement or refund.",
+    "issueNotice2": "After this period, if the product is still under warranty, we will arrange repair through our professional repair agents, or replace the item if it cannot be repaired.",
+    "issueDesc": "The fastest return route is via our global warehousing centers in 112 countries/regions. We accept most items except very large items even if they were initially delivered to your door. For large-item returns, start a live chat below or visit our help hotline link.",
+    "precautionsTitle": "Precautions",
+    "precautionsDesc": "Some items — such as food, pierced jewelry and underwear — are only eligible for exchange or refund if defective. Our website will indicate which items are non-refundable.",
+    "precautions1": "If you return DVDs, music or software products, they must be unused and in original sealed packaging",
+    "precautions2": "If the item or packaging is severely damaged, we reserve the right to reduce the refund amount",
+    "precautions3": "We may request product serial numbers or similar information to verify the item",
+    "precautions4": "This will not affect your consumer rights",
+    "precautionsNote": "If we collect your goods, we will inspect them before issuing a refund. Please note that if items are inspected but not returned according to instructions, we reserve the right to refuse a refund or issue a partial refund depending on the condition.",
+    "proof1_1": "Register receipt",
+    "proof1_2": "Electronic receipt",
+    "proof1_3": "Your order number",
+    "proof1_4": "Email confirmation",
+    "proof2_1": "Your transaction statement",
+    "proof2_2": "The email address used to purchase the item",
+    "faqTitle": "FAQ",
+    "cta": "Start return process"
+  },
+  "sellerRating": {
+    "title": "Seller rating system",
+    "intro": "Introduction",
+    "introContent": "Here we introduce the seller rating system and how it is generated and used.",
+    "website": "Related site",
+    "parties": "Parties involved",
+    "allSellers": "All sellers",
+    "section1": {
+      "title": "How to access the seller rating system?",
+      "encourage": "The seller rating system encourages sellers to maintain high service standards to create a better shopping experience for our buyers.",
+      "deduction": "Points will be deducted for failure to meet promised targets.",
+      "accessPath": {
+        "prefix": "You can view your rating on the [",
+        "path": "Seller Center >> Seller Credit Rating",
+        "suffix": "] page."
+      }
+    },
+    "section2": {
+      "title": "How are ratings generated?",
+      "deductionCondition": "Points are deducted only when buyer minimum expectations are not met. This also reminds sellers of areas needing improvement.",
+      "updateTime": "The seller rating system updates scores on the first day of each month based on the seller's violations from the previous month. Click any rating dimension keyword to view the full policy."
+    },
+    "table1": {
+      "headers": {
+        "measure": "Measurement",
+        "spec": "Specification",
+        "deduction": "Monthly deduction"
+      },
+      "max10": "Up to 10 points",
+      "max20": "Up to 20 points",
+      "rows": {
+        "nfr": {
+          "title": "Non-fulfillment rate (NFR)",
+          "desc": "Orders canceled or returned by seller in the last 7 days account for 30% of total orders"
+        },
+        "lsr": {
+          "title": "Late shipment rate (LSR)",
+          "desc": "Orders delayed by seller over 72 hours in the last 7 days account for 20% of total orders"
+        },
+        "customerService": {
+          "title": "Customer service",
+          "rude": "Rude or abusive chats or comments",
+          "cancelRequests": "Requested buyers to cancel orders more than 5 times this month"
+        },
+        "breach": {
+          "title": "Breach of promise",
+          "lowResponse": "Buyer response rate below 80%",
+          "violatePromise": "Seller failed to provide promised services to buyer, harming buyer rights"
+        }
+      }
+    },
+    "section3": {
+      "title": "What penalties are associated with certain points?"
+    },
+    "table2": {
+      "headers": {
+        "points": "Total points",
+        "level": "Penalty level"
+      },
+      "level1": "Level 1",
+      "level2": "Level 2",
+      "level3": "Level 3",
+      "level4": "Level 4",
+      "level5": "Level 5",
+      "level6": "Level 6",
+      "penalties": {
+        "marketingBan": "Banned from marketing activities (28 days)",
+        "freeShippingRemoval": "Remove free shipping or shipping discount (28 days)",
+        "deboost": "Deboost listings (28 days)",
+        "loanRestriction": "Restrict seller loans (28 days)",
+        "listingBlock": "Block creation and editing of listings (28 days)",
+        "accountFreeze": "Account freeze (28 days)"
+      }
+    },
+    "section4": {
+      "title": "Customer service rules and implementation details",
+      "rudeQuestion": "What is rude or abusive chat/comment?",
+      "rudeDefinition": "Malicious harassment refers to insulting, cursing, threatening, commenting or otherwise verbally attacking or using improper means to harass another member and infringing on their lawful rights.",
+      "rudeHandling": "How to handle rude or abusive chats/comments?",
+      "rudePenalty": "Points will be deducted for general and severe violations of business privileges, management and control.",
+      "rudeScenario": "Applicable scenarios: Malicious harassment includes insulting, cursing, threatening or other verbal attacks, or using malicious means to harass or infringe the lawful rights of others."
+    },
+    "section5": {
+      "title": "Measures applicable to breaches",
+      "breachQuestion": "What is a breach?",
+      "breachDefinition": "A breach means the seller failed to provide services to the buyer, infringed buyer rights, or failed to fulfill obligations promised to APP-NAME. The seller must continue to fulfill statutory or agreed exchanges, returns and refunds.",
+      "measure": "Applicable measure: point deduction",
+      "specificMeasures": "Specific measures",
+      "generalViolation": "1. For general violations where the seller has additional obligations for a paid order or corresponding goods/services, deduct 5 points per violation.",
+      "seriousViolation": {
+        "prefix": "2. For each serious violation of the following commitments, deduct 10 points:",
+        "item1": "1) APP-NAME determines the seller should bear after-sales responsibilities such as refunds, but the seller refuses;",
+        "item2": "2) APP-NAME determines the seller should provide 7-day no-reason returns, but the seller refuses;",
+        "item3": "3) Without buyer-seller agreement, refusing or delaying sending promised trial items;",
+        "item4": "4) Seller fails to process order within 72 hours after payment;",
+        "activity": "Sellers participating in official APP-NAME activities who fail to meet activity requirements (excluding shipping time) or violate other APP-NAME published management content (including but not limited to rules, specifications, category management norms, industry standards). Specific provisions apply as appropriate."
+      }
+    },
+    "section6": {
+      "title": "How long do penalties last?",
+      "duration": {
+        "prefix": "Penalties will end after ",
+        "days": "28 days",
+        "suffix": ". With corrective actions and improved store performance maintained, sanctioned sellers will regain certain seller privileges."
+      }
+    },
+    "section7": {
+      "title": "Violation handling",
+      "generalCase": "If the case is general",
+      "generalDesc": "When a consumer files a complaint and APP-NAME finds it justified, general violations deduct 5 points each time. Completing 5 orders can restore 5 points.",
+      "seriousCase": "If serious",
+      "seriousDesc": "When a consumer files a complaint and APP-NAME finds it justified, serious violations deduct 20 points per item. Completing 20 orders can restore 20 points.",
+      "extremeCase": "If extremely serious",
+      "extremeDesc": "Account freeze and store closure within 28 days.",
+      "example1": {
+        "title": "Example 1: Seller A receives 3 points in week 3 and will have privileges restored in week 7"
+      },
+      "example2": {
+        "title": "Example 2: Seller B receives 3 points in week 3 and 3 points in week 5. These points accumulate to define the level; privileges will be reclaimed in week 9"
+      },
+      "example3": {
+        "title": "Example 3: Seller C receives 3 points one week before the new quarter and 3 points after the quarter starts; newly acquired points will redefine the level"
+      }
+    },
+    "section8": {
+      "title": "How to appeal a rating?",
+      "appeal": {
+        "prefix": "Click ",
+        "link": "help hotline link",
+        "suffix": " to appeal. If your appeal is successful, we will cancel your deductions and restore your seller privileges."
+      }
+    }
+  }
+}

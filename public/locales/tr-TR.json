@@ -1,0 +1,1194 @@
+{
+  "common": { "store": "Mağaza",
+  "goods": "Ürünler",
+    "category": "Kategoriler",
+    "categories": "Tüm Kategoriler",
+    "wishlist": "Favoriler",
+    "checkout": "Ödeme",
+    "order": "Sipariş",
+    "account": "Hesap",
+    "settings": "Ayarlar",
+    "language": "Dil",
+    "currency": "Para Birimi",
+    "search": "Ara",
+    "searchPlaceholder": "Ürün, marka veya kategori ara",
+    "buyNow": "Hemen Satın Al",
+    "viewMore": "Daha Fazla Göster",
+    "viewAll": "Tümünü Gör",
+    "loadMore": "Daha Fazla Yükle",
+    "confirm": "Onayla",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "save": "Kaydet",
+    "submit": "Gönder",
+    "back": "Geri",
+    "next": "İleri",
+    "previous": "Önceki",
+    "yes": "Evet",
+    "no": "Hayır",
+    "success": "İşlem başarılı",
+    "failed": "İşlem başarısız",
+    "loading": "Yükleniyor...",
+    "noData": "Veri yok",
+    "outOfStock": "Stokta yok",
+    "inStock": "Stokta",
+    "soldOut": "Tükendi",
+    "newArrival": "Yeni",
+    "bestSeller": "Çok Satan",
+    "discount": "İndirim",
+    "price": "Fiyat",
+    "quantity": "Adet",
+    "total": "Toplam",
+    "subtotal": "Ara Toplam",
+    "shipping": "Kargo",
+    "tax": "Vergi",
+    "grandTotal": "Genel Toplam",
+    "payment": "Ödeme",
+    "paymentMethod": "Ödeme Yöntemi",
+    "delivery": "Teslimat",
+    "contactUs": "Bize Ulaşın",
+    "helpCenter": "Yardım Merkezi",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Hizmet Şartları",
+    "logout": "Çıkış Yap",
+    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "rememberMe": "Beni Hatırla",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "password": "Şifre",
+    "confirmPassword": "Şifreyi Onayla",
+    "welcomeBack": "Tekrar hoş geldiniz",
+    "or": "veya",
+    "continue": "Devam et",
+    "filter": "Filtrele",
+    "sort": "Sırala",
+    "clear": "Temizle",
+    "viewDetails": "Detayları Gör",
+    "reviews": "Değerlendirmeler",
+    "addReview": "Değerlendirme Ekle",
+    "rating": "Puan",
+    "share": "Paylaş",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı",
+    "backToHome": "Ana sayfaya dön",
+    "404Title": "Sayfa bulunamadı",
+    "404Desc": "Üzgünüz, aradığınız sayfa mevcut değil.",
+    "retry": "Yeniden dene"
+  },
+  "login": {
+    "title": "Hesabınıza giriş yapın",
+    "subtitle": "Hoş geldiniz! Lütfen hesap bilgilerinizi girin",
+    "tabEmail": "E-posta ile giriş",
+    "tabPhone": "Telefon ile giriş",
+    "emailLabel": "E-posta",
+    "emailPlaceholder": "E-posta girin",
+    "emailRequired": "Lütfen e-posta girin",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "Telefon numarası girin",
+    "phoneRequired": "Lütfen telefon numarası girin",
+    "areaCodePlaceholder": "Alan kodu",
+    "areaCodeRequired": "Lütfen alan kodu seçin",
+    "passwordLabel": "Şifre",
+    "passwordPlaceholder": "Şifre girin",
+    "passwordRequired": "Lütfen şifre girin",
+    "passwordPattern": "Şifre 6-12 karakter olmalı ve boşluk içeremez",
+    "noAccount": "Hesabınız yok mu?",
+    "register": "Kayıt ol",
+    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "loginButton": "Giriş yap",
+    "successMessage": "Giriş başarılı!"
+  },
+  "register": {
+    "title": "Hesabınızı oluşturun",
+    "subtitle": "Hoş geldiniz! Lütfen bilgilerinizi girin",
+    "tabEmail": "E-posta",
+    "tabPhone": "Telefon",
+    "emailLabel": "E-posta",
+    "emailPlaceholder": "E-posta girin",
+    "emailRequired": "Lütfen e-posta girin",
+    "emailInvalid": "Geçersiz e-posta formatı",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "Telefon numarası girin",
+    "phoneRequired": "Lütfen telefon numarası girin",
+    "areaCodePlaceholder": "Alan kodu",
+    "areaCodeRequired": "Lütfen alan kodu seçin",
+    "passwordLabel": "Şifre",
+    "passwordPlaceholder": "Şifre girin",
+    "passwordRequired": "Lütfen şifre girin",
+    "passwordPattern": "Şifre 6-12 karakter olmalı ve boşluk içeremez",
+    "confirmPasswordLabel": "Şifreyi Onayla",
+    "confirmPasswordPlaceholder": "Şifreyi tekrar girin",
+    "confirmPasswordRequired": "Lütfen şifreyi tekrar girin",
+    "passwordMismatch": "Şifreler eşleşmiyor!",
+    "hasAccount": "Zaten hesabınız var mı?",
+    "login": "Giriş yap",
+    "registerButton": "Kayıt ol",
+    "successMessage": "Kayıt başarılı!"
+  },
+  "home": {
+    "bannerTitleLine1": "Tarzını yükselt",
+    "bannerTitleLine2": "Lükse kucak aç",
+    "bannerSubtitle": "Modern şıklık için tasarlanan en yeni koleksiyonu keşfet. Zamansız moda ile gardırobunu yeniden tanımla.",
+    "recommendCategory": "Önerilen Kategoriler",
+    "dailyNewArrival": "Günlük Yeni Gelenler",
+    "recommendProduct": "Önerilen Ürünler",
+    "recommendStore": "Önerilen Mağazalar",
+    "hotRecommend": "Popüler Öneriler",
+    "featureAuthentic": "%100 Orijinal",
+    "featureReturn7Days": "7 Gün İade",
+    "featureShippingDiscount": "Kargo İndirimi",
+    "featureSecurePayment": "Güvenli Ödeme"
+  },
+  "products": {
+    "category": "Kategoriler",
+    "allProducts": "Tüm Ürünler",
+    "comprehensive": "Kapsamlı",
+    "sales": "Satış",
+    "price": "Fiyat",
+    "newArrival": "Yeni"
+  },
+  "merchantRegister": {
+    "title": "Mağaza Açılışı",
+    "header": "APP-NAME Mağaza Açılışı",
+    "loginTipPrefix": "Zaten satıcıysanız, lütfen",
+    "login": "giriş yapın",
+    "description": "İş ortaklığı programımız size kapsamlı pazarlama desteği ve hizmet sunar. Müşteri hizmetleri ekibimiz ürün sunumu ve satış stratejilerinizi optimize etmeniz için profesyonel destek ve öneriler sağlar. Hemen bize katılın! Birlikte daha büyük iş fırsatları yaratıp büyüyelim!",
+    "merchantInfo": "Mağaza Bilgileri",
+    "storeLogo": "Mağaza Logosu",
+    "storeLogoTip": "Lütfen mağaza logosu yükleyin",
+    "shopName": "Mağaza Adı",
+    "shopNameTip": "Lütfen mağaza adını girin",
+    "shopNamePlaceholder": "Lütfen özel karakter içermeyen mağaza adı girin",
+    "shopAddress": "Mağaza Adresi",
+    "shopAddressTip": "Lütfen mağaza adresini girin",
+    "shopAddressPlaceholder": "Lütfen özel karakter içermeyen mağaza adresi girin",
+    "country": "Ülke",
+    "countryTip": "Lütfen ülke seçin",
+    "countryPlaceholder": "Lütfen ülke seçin",
+    "idNumber": "Kimlik/Pasaport Numarası",
+    "idNumberTip": "Lütfen kimlik numarası girin",
+    "idNumberPlaceholder": "Lütfen kimlik numarası girin",
+    "realName": "Gerçek İsim",
+    "realNameTip": "Lütfen gerçek isminizi girin",
+    "realNamePlaceholder": "Lütfen gerçek isminizi girin",
+    "idCardFront": "Kimlik Ön Yüzü",
+    "idCardFrontTip": "Lütfen kimliğin ön yüzünü yükleyin",
+    "idCardBack": "Kimlik Arka Yüzü",
+    "idCardBackTip": "Lütfen kimliğin arka yüzünü yükleyin",
+    "verifyType": "Doğrulama Yöntemi",
+    "verifyTypeTip": "Lütfen doğrulama yöntemi seçin",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "contact": "Kullanıcı adı (e-posta veya telefon)",
+    "contactTip": "Lütfen kullanıcı adı girin",
+    "contactPlaceholder": "Lütfen e-posta veya telefon girin",
+    "password": "Giriş Şifresi",
+    "passwordTip": "Lütfen giriş şifresi girin",
+    "passwordPattern": "Şifre 6-12 karakter olmalı ve boşluk içermemelidir",
+    "passwordPlaceholder": "Lütfen giriş şifresi girin",
+    "confirmPassword": "Şifreyi Onayla",
+    "confirmPasswordTip": "Şifreler eşleşmiyor",
+    "confirmPasswordPlaceholder": "Lütfen giriş şifresini tekrar girin",
+    "inviteCode": "Davet Kodu",
+    "inviteCodePlaceholder": "Davet kodu girin (isteğe bağlı)",
+    "submit": "Başvuruyu Gönder",
+    "submitSuccess": "Başarıyla gönderildi, lütfen onayı bekleyin!",
+    "areaCodeTip": "Lütfen alan kodu seçin",
+    "areaCodePlaceholder": "Lütfen alan kodu seçin",
+    "phonePlaceholder": "Lütfen telefon girin"
+  },
+  "mineDetail": {
+    "goodsCollect": "Ürün Koleksiyonu",
+    "storeCollect": "Mağaza Takibi",
+    "defaultAddress": "Varsayılan Adres",
+    "addAddress": "Adres Ekle",
+    "followedStores": "Takip Edilen Mağazalar",
+    "collectedGoods": "Favori Ürünler"
+  },
+  "favoriteProducts": {
+    "collectedGoods": "Favori Ürünler"
+  },
+  "mineMerchant": {
+    "followedShops": "Takip Edilen Mağazalar"
+  },
+  "mine": {
+    "shop": "Mağaza Açılışı",
+    "userIdPrefix": "ID:",
+    "balanceLabel": "Bakiye",
+    "deposit": "Yükleme",
+    "withdraw": "Çekim",
+    "myOrders": "Siparişlerim",
+    "all": "Tümü",
+    "orderStatus": {
+      "pending": "Ödeme Bekleniyor",
+      "shipping": "Kargolanacak",
+      "receiving": "Teslim Alınacak",
+      "review": "Değerlendirilecek",
+      "refund": "İade/Satış Sonrası"
+    },
+    "moreFeatures": "Daha Fazla Özellik",
+    "setting": "Ayarlar",
+    "language": "Dil",
+    "wallet": "Cüzdan",
+    "favorite": "Favoriler"
+  },
+  "OrderDetail": {
+    "myOrders": "Siparişlerim",
+    "orderInfo": "Sipariş Bilgileri",
+    "orderNo": "Sipariş No",
+    "time": "Zaman",
+    "orderPrice": "Sipariş Tutarı",
+    "orderState": "Sipariş Durumu",
+    "refundState": "İade Durumu",
+    "recipientInfo": "Alıcı Bilgileri",
+    "name": "İsim",
+    "phone": "Telefon",
+    "country": "Ülke",
+    "addressDetail": "Adres Detayı",
+    "productInfo": "Ürün Bilgileri",
+    "unitPrice": "Birim Fiyat",
+    "quantity": "Adet",
+    "subtotal": "Ara Toplam",
+    "total": "Toplam",
+    "unknown": "Bilinmeyen durum"
+  },
+  "Orders": {
+    "all": "Tümü",
+    "pending": "Ödeme Bekleniyor",
+    "shipping": "Kargolanacak",
+    "receiving": "Teslim Alınacak",
+    "review": "Değerlendirilecek",
+    "refund": "İade/Satış Sonrası",
+    "confirmReceivingTitle": "Teslim alındı mı?",
+    "confirm": "Onayla",
+    "cancel": "İptal",
+    "orderNo": "Sipariş No",
+    "orderDesc": "Sipariş Açıklaması",
+    "orderPrice": "Tutar",
+    "status": "Durum",
+    "actions": "İşlemler",
+    "viewOrder": "Siparişi Gör",
+    "remindShipping": "Kargoyu Hatırlat",
+    "remindShippingSuccess": "Satıcı hatırlatmanızı aldı",
+    "refundRequest": "İade Talebi",
+    "confirmReceiving": "Teslimatı Onayla",
+    "addComment": "Yorum Ekle",
+    "unknown": "Bilinmiyor"
+  },
+  "Wallet": {
+    "balance": "Bakiye",
+    "recharge": "Yükleme",
+    "withdraw": "Çekim",
+    "history": "Cüzdan Geçmişi",
+    "createTime": "Oluşturma Zamanı",
+    "rechargeNo": "Yükleme No",
+    "rechargeAmount": "Yükleme Miktarı",
+    "rechargeType": "Para Birimi Protokolü",
+    "rechargeAddress": "Yükleme Adresi",
+    "withdrawNo": "Çekim No",
+    "withdrawAmount": "Çekim Miktarı",
+    "withdrawType": "Para Birimi Protokolü",
+    "withdrawAddress": "Hesap Adresi",
+    "fee": "Ücret",
+    "realAmount": "Net Tutar",
+    "status": "Durum",
+    "unpaid": "Ödenmedi",
+    "success": "Başarılı",
+    "fail": "Başarısız",
+    "pending": "Beklemede",
+    "processed": "İşlendi",
+    "rejected": "Reddedildi",
+    "orderNo": "Numara"
+  },
+  "AccountPanel": {
+    "balance": "Bakiye",
+    "recharge": "Yükleme",
+    "withdraw": "Çekim"
+  },
+  "LogisticsDialog": {
+    "title": "Lojistik Bilgisi",
+    "empty": "Lojistik bilgisi yok",
+    "close": "Kapat"
+  },
+  "OrderCard": {
+    "viewOrder": "Siparişi Gör",
+    "remindShipping": "Kargoyu Hatırlat",
+    "requestRefund": "İade Talebi",
+    "confirmReceiving": "Teslimatı Onayla",
+    "payNow": "Hemen Öde",
+    "cancelOrder": "Siparişi İptal Et",
+    "addComment": "Yorum Ekle",
+    "refunded": "İade edildi"
+  },
+  "RefundDialog": {
+    "title": "İade Talebi",
+    "refundReason": "İade Nedeni",
+    "refundReasonPlaceholder": "Lütfen iade nedenini girin",
+    "refundRemark": "İade Açıklaması",
+    "refundRemarkPlaceholder": "Lütfen iade açıklamasını girin",
+    "cancel": "İptal",
+    "submit": "Gönder"
+  },
+  "Search": {
+    "comprehensive": "Kapsamlı",
+    "soldNum": "Satış",
+    "price": "Fiyat",
+    "newest": "Yeni"
+  },
+  "Address": {
+    "setting": "Ayarlar",
+    "defaultAddress": "Varsayılan Adres",
+    "addAddress": "Adres Ekle",
+    "confirmDelete": "Silme işlemini onayla",
+    "confirmDeleteContent": "Bu adresi silmek istediğinizden emin misiniz?",
+    "ok": "Onayla",
+    "cancel": "İptal",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "deleted": "Silindi"
+  },
+  "DeleteAccount": {
+    "setting": "Ayarlar",
+    "title": "Hesap Silme",
+    "description": "APP-NAME hesabınızı kalıcı olarak silin, tüm kişisel bilgi ve ilgili veriler kaldırılır. İşlem geri alınamaz; lütfen gerekli bilgileri sakladığınızdan ve bekleyen işlemleri tamamladığınızdan emin olun.",
+    "account": "Hesabınız",
+    "enterAccount": "Lütfen girin",
+    "reason": "Neden ayrılıyorsunuz",
+    "submit": "Başvuru Gönder",
+    "submitSuccess": "Başarıyla gönderildi"
+  },
+  "Setting": {
+    "title": "Ayarlar",
+    "description": "APP-NAME hesabınızı kolay ve güvenli şekilde yönetin! Giriş şifrenizi tek tıkla değiştirin, güçlü şifre kullanın ve düzenli güncelleyin; ayrı bir işlem şifresi ayarlayarak hassas işlemleri koruyun; doğru teslimat adresini güncelleyerek bildirim ve teslimatların sorunsuz olmasını sağlayın.",
+    "loginPassword": "Giriş Şifresi",
+    "tradePassword": "İşlem Şifresi",
+    "address": "Teslimat Adresi",
+    "deleteAccount": "Hesap Silme",
+    "submitSuccess": "Başarıyla gönderildi!"
+  },
+  "LoginPassword": {
+    "setting": "Ayarlar",
+    "title": "Giriş Şifresi",
+    "description": "Şifrenizi değiştirin veya sıfırlayın. Harf, rakam ve sembol içeren güçlü bir şifre kullanmanızı ve hesap güvenliği için düzenli olarak güncellemenizi öneririz.",
+    "oldPassword": "Eski Şifre",
+    "newPassword": "Yeni Şifre",
+    "confirmPassword": "Şifreyi Onayla",
+    "enterOldPassword": "Lütfen eski şifreyi girin",
+    "enterNewPassword": "Lütfen yeni şifreyi girin",
+    "passwordMinLength": "Şifre en az 6 karakter olmalı",
+    "confirmPasswordMsg": "Lütfen şifreyi onaylayın",
+    "passwordMismatch": "Şifreler eşleşmiyor",
+    "submit": "Başvuru Gönder",
+    "success": "İşlem başarılı"
+  },
+  "PayPassword": {
+    "setting": "Ayarlar",
+    "title": "İşlem Şifresi",
+    "description": "Giriş şifresinden bağımsız bir işlem şifresi ayarlayın; açık arttırma onayı, para çekme gibi işlemlerde güvenliği artırır.",
+    "oldPassword": "Eski Şifre",
+    "newPassword": "Yeni Şifre",
+    "confirmPassword": "Şifreyi Onayla",
+    "enterOldPassword": "Lütfen eski şifreyi girin",
+    "enterNewPassword": "Lütfen yeni şifreyi girin",
+    "passwordMinLength": "Şifre en az 6 karakter olmalı",
+    "confirmPasswordMsg": "Lütfen şifreyi onaylayın",
+    "passwordMismatch": "Şifreler eşleşmiyor",
+    "submit": "Başvuru Gönder",
+    "success": "İşlem başarılı"
+  },
+  "MerchantHeader": {
+    "follow": "Mağazayı Takip Et",
+    "followed": "Takip Ediliyor",
+    "followSuccess": "Takip edildi",
+    "unfollow": "Takipten çıkarıldı",
+    "products": "Ürünler",
+    "sales": "Satış",
+    "rate": "Beğeni Oranı"
+  },
+  "Products": {
+    "allProducts": "Tüm Ürünler",
+    "category": "Kategoriler",
+    "comprehensive": "Kapsamlı",
+    "sales": "Satış",
+    "price": "Fiyat",
+    "newArrival": "Yeni"
+  },
+  "Store": {
+    "recommend": "Önerilen",
+    "allProducts": "Tüm Ürünler"
+  },
+  "Withdraw": {
+    "myWallet": "Cüzdanım",
+    "withdraw": "Para Çekme",
+    "description": "Birden fazla kanal desteklenir, talepler hızlı ve güvenli şekilde işlenir."
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Sayfa bulunamadı",
+    "description": "Üzgünüz, erişmek istediğiniz sayfayı bulamadık.",
+    "backHome": "Ana sayfaya dön"
+  },
+  "CheckForms": {
+    "checkout": "Ödeme",
+    "addressTitle": "1. Teslimat Adresi",
+    "changeAddress": "Adresi Değiştir",
+    "addressInfo": "Alıcı Bilgisi",
+    "recipientName": "Alıcı Adı",
+    "phone": "Telefon",
+    "nation": "Ülke/Bölge",
+    "addressDetail": "Adres Detayı",
+    "noAddress": "Adres yok",
+    "addAddress": "Adres Ekle",
+    "paymentTitle": "2. Ödeme Yöntemi",
+    "selectPayment": "Ödeme yöntemi seçin",
+    "balance": "Bakiye",
+    "paypal": "PayPal (henüz kullanılamıyor)",
+    "visa": "VISA (henüz kullanılamıyor)",
+    "mastercard": "MasterCard (henüz kullanılamıyor)",
+    "orderSummary": "Sipariş Özeti",
+    "total": "Toplam",
+    "submitOrder": "Siparişi Gönder",
+    "submitSuccess": "Başarıyla gönderildi",
+    "tip": "İpucu",
+    "selectAddressFirst": "Lütfen önce bir teslimat adresi seçin",
+    "selectAddress": "Teslimat adresi seçin",
+    "noAvailableAddress": "Kullanılabilir adres yok"
+  },
+  "OrderResult": {
+    "paymentSuccess": "Ödeme başarılı",
+    "recipient": "Alıcı",
+    "address": "Teslimat Adresi",
+    "continueShopping": "Alışverişe devam et",
+    "viewOrders": "Siparişleri Gör"
+  },
+  "Deposit": {
+    "myWallet": "Cüzdanım",
+    "deposit": "Bakiye Yükleme",
+    "description": "Hızlı ve kararlı yükleme; basit işlem, güvenle hesap bakiyenizi tamamlayın."
+  },
+  "BottomNav": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "cart": "Sepet",
+    "mine": "Hesabım"
+  },
+  "Footer": {
+    "solutions": {
+      "title": "Müşteri Hizmetleri",
+      "contactUs": "Bize Ulaşın"
+    },
+    "support": {
+      "title": "İade ve Değişim",
+      "privacyPolicy": "Gizlilik Politikası",
+      "returnsPolicy": "İade Politikası",
+      "deliveryInformation": "Teslimat ve Alım",
+      "sellerScoreSystem": "Satıcı Politikası"
+    },
+    "company": {
+      "title": "Kullanıcı Merkezi",
+      "register": "Kullanıcı Kaydı",
+      "orderQuery": "Sipariş Sorgu",
+      "favoriteProducts": "Favori Ürünler",
+      "wallet": "Cüzdanım"
+    },
+    "legal": {
+      "title": "Hakkımızda",
+      "aboutUs": "Hakkımızda",
+      "careers": "Kariyer",
+      "news": "Haberler",
+      "modernSlavery": "Modern Kölelik Bildirimi"
+    },
+    "description": "APP-NAME küresel sitesinin kullanıcıları 112 ülkeden gelmektedir ve ödemeler USDT/ETH/BTC ile yapılır. USDT/ETH/BTC, sınır tanımayan bir işlem yöntemidir; dünyanın her yerinde anlık ve düşük maliyetli işlem sağlar, bekleme yoktur, uluslararası ücret yoktur.",
+    "copyright": "© 2023 APP-NAME Ltd. Tüm hakları saklıdır."
+  },
+  "Header": {
+    "title": "APP-NAME",
+    "home": "Ana Sayfa",
+    "category": "Kategoriler",
+    "products": "Ürünler",
+    "sales": "İndirimli Ürünler",
+    "merchantOnboarding": "Mağaza Açılışı",
+    "profile": "Profil",
+    "logout": "Çıkış Yap",
+    "logoutSuccess": "Çıkış yapıldı",
+    "search": "Ara"
+  },
+  "SearchWithHistory": {
+    "placeholder": "Arama içeriği",
+    "clearAll": "Tümünü Temizle"
+  },
+  "CartDrawer": {
+    "items": "öğe",
+    "myCart": "Sepetim"
+  },
+  "CartPanel": {
+    "totalItems": "Toplam Ürün",
+    "items": "adet",
+    "totalPrice": "Toplam",
+    "submitOrder": "Siparişi Gönder"
+  },
+  "MerchantCard": {
+    "unfollow": "Takibi Bırak",
+    "follow": "Takip Et",
+    "visitNow": "Hemen Ziyaret Et",
+    "sold": "Satıldı",
+    "views": "Görüntülenme",
+    "rating": "Mağaza Puanı"
+  },
+  "Mine": {
+    "dashboard": "Gösterge Paneli",
+    "wallet": "Cüzdanım",
+    "orders": "Siparişlerim",
+    "favoriteProducts": "Favori Ürünler",
+    "followedMerchants": "Takip Edilen Mağazalar",
+    "settings": "Ayarlar",
+    "userId": "ID"
+  },
+  "PageTitle": {
+    "more": "Daha Fazla"
+  },
+  "ProductCard": {
+    "addCartSuccess": "Sepete eklendi",
+    "collected": "Favorilere eklendi",
+    "unCollected": "Favorilerden çıkarıldı",
+    "off": "İNDİRİM",
+    "addToCart": "Sepete Ekle",
+    "soldViews": "Satış",
+    "viewsNum": "Görüntülenme"
+  },
+  "AddGoodsCommentDialog": {
+    "title": "Değerlendirme",
+    "addCommentSuccess": "Yorum eklendi",
+    "selectProduct": "Ürün Seç",
+    "selectProductRequired": "Lütfen inceleme durumu seçin",
+    "selectPlaceholder": "Lütfen seçin",
+    "userName": "Üye e-postası/telefonu",
+    "userNameRequired": "Lütfen üye e-postası veya telefon girin",
+    "userNamePlaceholder": "Lütfen üye e-postası veya telefon girin",
+    "commentContent": "Yorum İçeriği",
+    "commentContentRequired": "Lütfen yorum içeriği girin",
+    "commentContentPlaceholder": "Lütfen yorum içeriği girin",
+    "rating": "Puan",
+    "ratingRequired": "Lütfen puan seçin",
+    "commentImages": "Yorum Görselleri",
+    "cancel": "İptal",
+    "confirm": "Onayla"
+  },
+  "AddressDialog": {
+    "editAddress": "Teslimat Adresini Düzenle",
+    "addAddress": "Teslimat Adresi Ekle",
+    "recipientName": "Alıcı Adı",
+    "recipientNameRequired": "Lütfen alıcı adını girin",
+    "recipientNamePlaceholder": "Lütfen alıcı adını girin",
+    "phone": "Telefon",
+    "nationRequired": "Lütfen ülke kodu seçin",
+    "nationPlaceholder": "Ülke Kodu",
+    "phoneRequired": "Lütfen telefon girin",
+    "phonePlaceholder": "Lütfen telefon girin",
+    "email": "E-posta",
+    "emailPlaceholder": "Lütfen e-posta girin",
+    "region": "Ülke/Eyalet/Şehir",
+    "regionRequired": "Lütfen bölge seçin",
+    "regionPlaceholder": "Lütfen ülke/eyalet/şehir seçin",
+    "postCode": "Posta Kodu",
+    "postCodePlaceholder": "Lütfen posta kodu girin",
+    "addressDetail": "Adres Detayı",
+    "addressDetailPlaceholder": "Lütfen adres detayını girin",
+    "isDefault": "Varsayılan adres mi",
+    "cancel": "İptal",
+    "confirm": "Onayla"
+  },
+  "CustomerServiceChat": {
+    "title": "Müşteri Hizmeti",
+    "inputPlaceholder": "Lütfen girin",
+    "noMessage": "Mesaj yok",
+    "imageAlt": "Görsel",
+    "heicUnsupported": "Tarayıcı HEIC dosya yüklemeyi desteklemiyor",
+    "heicUploadFailed": "HEIC dosyası yüklenemedi"
+  },
+  "DepositForm": {
+    "currency": "Yükleme Para Birimi",
+    "selectCurrency": "Lütfen para birimi seçin",
+    "network": "Blokzincir Ağı",
+    "selectNetwork": "Lütfen blokzincir ağı seçin",
+    "addressLabel": "Yükleme Adresi",
+    "amount": "Yükleme Miktarı",
+    "enterAmount": "Lütfen yükleme miktarı girin",
+    "estimatedArrival": "Tahmini varış (mevcut kur {{rate}})",
+    "proof": "Ödeme Belgesi (ekran görüntüsü)",
+    "uploadProof": "Lütfen ödeme belgesi yükleyin",
+    "submit": "Onayla",
+    "success": "İşlem başarılı",
+    "addressCopied": "Adres kopyalandı!"
+  },
+  "OtpModal": {
+    "enterTransactionPassword": "Lütfen işlem şifresini girin",
+    "enter6Digits": "Lütfen 6 haneli kodu girin",
+    "verifyFailed": "Doğrulama başarısız, lütfen tekrar deneyin",
+    "cancel": "İptal",
+    "confirm": "Onayla"
+  },
+  "ProductDetailMain": {
+    "basicInfo": "Temel Bilgiler",
+    "sales": "Satış",
+    "views": "Görüntülenme",
+    "originalPrice": "Orijinal Fiyat",
+    "currentPrice": "Güncel Fiyat",
+    "shipping": "Kargo",
+    "freeShipping": "Ücretsiz Kargo",
+    "quantity": "Adet",
+    "totalPrice": "Toplam Fiyat",
+    "buyNow": "Hemen Satın Al",
+    "addToCart": "Sepete Ekle",
+    "pleaseSelect": "Lütfen seçin",
+    "noStock": "Stok kalmadı",
+    "shippingDesc": "Siparişten sonra ürün 24 saat içinde kargolanır. Lojistik kısıtlamalar olması durumunda gönderi gecikebilir; lütfen sipariş kargo bilgilerini takip edin veya müşteri hizmetleriyle iletişime geçin."
+  },
+  "ProductDetailModal": {
+    "title": "Ürün Detayı",
+    "noGoods": "Ürün bilgisi yok",
+    "addSuccess": "Başarıyla eklendi"
+  },
+  "UploadImg": {
+    "upload": "Yükle",
+    "preview": "Önizleme",
+    "onlyImage": "Yalnızca JPG/PNG/WEBP/HEIC formatındaki görseller yüklenebilir!",
+    "maxSize": "Görsel boyutu aşılamaz",
+    "unsupportedHeic": "Tarayıcı HEIC dosya yüklemeyi desteklemiyor",
+    "uploadFailed": "Yükleme başarısız, lütfen daha sonra tekrar deneyin"
+  },
+  "UploadMultiple": {
+    "upload": "Yükle",
+    "uploadSuccess": "Yükleme başarılı",
+    "uploadFailed": "Yükleme başarısız"
+  },
+  "WithdrawForm": {
+    "withdrawMethod": "Çekim Yöntemi",
+    "selectWithdrawMethod": "Lütfen çekim yöntemi seçin",
+    "crypto": "Kripto Para",
+    "bankCard": "Banka Kartı",
+    "coinType": "Çekim Para Birimi",
+    "selectCoin": "Lütfen para birimi seçin",
+    "enterUSDT": "Lütfen USDT girin",
+    "blockchainNetwork": "Blokzincir Ağı",
+    "withdrawAddress": "Çekim Adresi",
+    "enterWithdrawAddress": "Lütfen çekim adresi girin",
+    "copy": "Kopyala",
+    "bankName": "Banka Adı",
+    "enterBankName": "Lütfen banka adını girin",
+    "bankBranch": "Şube",
+    "enterBankBranch": "Lütfen şube bilgisi girin",
+    "bankCardNumber": "Kart Numarası",
+    "enterBankCardNumber": "Lütfen kart numarası girin",
+    "withdrawAmount": "Çekim Tutarı",
+    "enterWithdrawAmount": "Lütfen çekim tutarı girin",
+    "amountMustBeGreaterZero": "Tutar 0'dan büyük olmalıdır",
+    "currentBalance": "Mevcut Bakiye",
+    "actualReceived": "Net Tutar",
+    "fee": "Ücret",
+    "confirmSubmit": "Göndermeyi Onayla",
+    "copied": "Kopyalandı!",
+    "inputAddressFirst": "Lütfen önce çekim adresi/kart numarası girin",
+    "operationSuccess": "İşlem başarılı"
+  },
+  "order": {
+    "pendingPayment": "Ödeme Bekleniyor",
+    "pendingShipment": "Kargolanacak",
+    "pendingReceive": "Teslim Alınacak",
+    "pendingReview": "Değerlendirilecek",
+    "refund": "İade/Satış Sonrası"
+  },
+  "refund": {
+    "pending": "İncelemede",
+    "success": "Başarılı",
+    "failed": "Başarısız"
+  },
+  "DeliveryInformation": {
+    "title": "Nereye teslim ediyoruz?",
+    "desc1": "Bulunduğunuz bölgeye teslimat yapıp yapmadığımızı öğrenmek için satın almak istediğiniz ürünün posta kodunu girin.",
+    "desc2": "Ürünler doğrudan tedarikçilerimizden gönderilir; küresel depolarımız 112 ülkede bulunmaktadır.",
+    "pickup": {
+      "title": "Nereden teslim alırım?",
+      "desc1": "Şu noktalarda",
+      "highlight1": "APP-NAME Mağazaları, Sainsbury's Süpermarketleri",
+      "desc2": "ve küresel depolarımızdaki teslim noktaları 7/24 hizmet verir.",
+      "desc3": "Hızlı teslimata uygun ürünlerde, konumunuza göre birden fazla zaman diliminden seçim yapabilirsiniz. Siparişler kapınıza teslim edilir ve güvenli bir alanda bırakılır.",
+      "alert1": "İngiltere, İskoçya ve Galler'de büyük ve hacimli eşyalar (iki kişi gerektiren, ör. kanepe ve yatak) için, seçtiğiniz her yere güvenle teslimat yapıyoruz.",
+      "alert2": "Sürücülerimiz aynı gün sizinle iletişime geçerek teslimat detaylarını konuşacaktır. Kendinizi izole ediyorsanız, teslimat tarihini yeniden ayarlayabilmemiz için lütfen bize bildirin.",
+      "warning": "Şu anda büyük eşyalar için yüksek talep var. Teslimatınız gecikirse, en kısa sürede size mesaj göndereceğiz. En iyi hizmeti sunmak için çalışıyoruz; sabrınız ve desteğiniz için teşekkürler."
+    },
+    "faq": {
+      "title": "SSS",
+      "q1": "Aynı anda büyük ve küçük ürünler sipariş edersem ne olur?",
+      "a1_1": "Size en hızlı ulaştırma yolu ayrı sevkiyattır.",
+      "a1_2": "Merak etmeyin; kargo ücretini yalnızca bir kez ödersiniz.",
+      "a1_3": "Daha fazla bilgi için sipariş onay e-postanızı kontrol edin.",
+      "q2": "Evde değilsem ne olur?",
+      "a2_1": "Küçük eşyalar görünmeyen, güvenli bir yere bırakılır veya isteğiniz üzerine komşunuza teslim edilir.",
+      "a2_2": "Yardım hattı",
+      "a2_3": "sizinle iletişime geçerek teslimatı yeniden planlar ve en uygun tarih/zaman aralığını seçmenize yardımcı olur!",
+      "q3": "Büyük eşyalar kaç kişiyle teslim edilir?",
+      "a3_1": "Kanepe, dondurucu gibi büyük eşyalar",
+      "a3_2": "iki kişiyle teslim edilir",
+      "a3_3": ". Sürücülerimiz teslimat günü sizinle iletişime geçer ve siparişi seçtiğiniz güvenli noktaya teslim eder.",
+      "q4": "COVID-19: Teslimata etkisi?",
+      "a4_1": "Birçok üründe teslimat hizmeti sunmaya devam ediyoruz; oyun konsolu ön siparişleri dahil. SMS uyarıları alacak ve teslimattan önce kargo takip numarası paylaşılacaktır.",
+      "a4_2": "Ürünler güvenli alana kapıda teslim edilir; büyük eşyalar güvenli bir noktaya bırakılır. Büyük eşya teslimatı için sürücülerimiz aynı gün sizinle iletişime geçer. İzolasyondaysanız, tarih ayarlamak için lütfen bize bildirin."
+    },
+    "cta": "Teslimat kapsama alanını görüntüle"
+  },
+  "PrivacyPolicy": {
+    "header": {
+      "label": "📜 Gizlilik Politikası",
+      "title": "APP-NAME Gizlilik Politikası",
+      "desc": "Son güncelleme: Ekim 2025 | Gizliliğiniz en büyük önceliğimiz"
+    },
+    "sections": {
+      "1": {
+        "title": "1. Giriş",
+        "content": {
+          "welcome": "1.1 APP-NAME Mağaza web sitesine hoş geldiniz",
+          "desc1": "APP-NAME, yürürlükteki gizlilik yasalarındaki ('Gizlilik Yasaları') sorumluluklarını ciddiyetle yerine getirir ve platformumuzun tüm kullanıcılarının gizlilik haklarına saygı göstermeyi taahhüt eder.",
+          "alert": "Bize emanet ettiğiniz kişisel verilerin önemini biliyoruz ve bu verileri uygun şekilde yönetmek, korumak ve işlemekle yükümlü olduğumuza inanıyoruz.",
+          "definition": "Kişisel veri, tek başına veya erişilebilir diğer bilgilerle bir kişiyi tanımlayabilen verilerdir.",
+          "consent": "Hizmetleri kullanarak, kişisel verilerinizin bu politika uyarınca toplanmasına, kullanılmasına, ifşa edilmesine ve işlenmesine onay vermiş olursunuz."
+        }
+      },
+      "2": {
+        "title": "2. APP-NAME kişisel verileri ne zaman toplar?",
+        "content": {
+          "scenariosTitle": "Yaygın toplama senaryoları",
+          "online": "📱 Çevrimiçi Etkileşim",
+          "onlineItems": [
+            "Site ziyareti",
+            "Form gönderimi",
+            "Çerez kayıtları"
+          ],
+          "offline": "🤝 Çevrimdışı Etkileşim",
+          "offlineItems": [
+            "Telefon görüşmesi",
+            "Yüz yüze toplantı",
+            "E-posta yazışması"
+          ],
+          "thirdParty": "Lojistik ve ödeme sağlayıcıları gibi üçüncü taraflardan da bilgi alabiliriz"
+        }
+      },
+      "3": {
+        "title": "3. APP-NAME hangi kişisel verileri toplar?",
+        "categories": [
+          {
+            "icon": "👤",
+            "label": "Temel Bilgiler",
+            "items": [
+              "İsim",
+              "E-posta",
+              "Telefon",
+              "Adres"
+            ]
+          },
+          {
+            "icon": "🎂",
+            "label": "Kimlik Bilgileri",
+            "items": [
+              "Doğum tarihi",
+              "Cinsiyet"
+            ]
+          },
+          {
+            "icon": "📸",
+            "label": "Multimedya",
+            "items": [
+              "Fotoğraf",
+              "Ses",
+              "Video"
+            ]
+          },
+          {
+            "icon": "💼",
+            "label": "Mesleki Bilgiler",
+            "items": [
+              "Eğitim geçmişi",
+              "İstihdam geçmişi"
+            ]
+          },
+          {
+            "icon": "📍",
+            "label": "Konum Verisi",
+            "items": [
+              "Coğrafi konum"
+            ]
+          },
+          {
+            "icon": "📊",
+            "label": "Davranış Verisi",
+            "items": [
+              "Göz atma geçmişi",
+              "Tercihler"
+            ]
+          }
+        ],
+        "warning": "Veri toplamayı istediğiniz zaman devre dışı bırakabilirsiniz; bazı işlevler etkilenebilir"
+      },
+      "4": {
+        "title": "4. Diğer verilerin toplanması",
+        "device": {
+          "title": "Cihaz Bilgisi",
+          "items": [
+            "IP adresi",
+            "İşletim sistemi",
+            "Tarayıcı türü",
+            "Benzersiz cihaz kimliği"
+          ]
+        },
+        "location": {
+          "title": "Konum Hizmetleri",
+          "desc": "GPS/Wi‑Fi ile hassas konum bilgisi toplanması",
+          "note": "Cihaz ayarlarından istediğiniz zaman devre dışı bırakabilirsiniz"
+        }
+      },
+      "5": {
+        "title": "5. Çerezler",
+        "titleLabel": "Çerez Politikası",
+        "purpose": {
+          "title": "Amaç",
+          "items": [
+            "Kişiselleştirilmiş içerik önerisi",
+            "Reklam optimizasyonu",
+            "Site kullanım analizi"
+          ]
+        },
+        "management": {
+          "title": "Yönetim",
+          "items": [
+            "Tarayıcı ayarlarından devre dışı bırakma",
+            "Mobilde kişiselleştirilmiş reklamdan çıkış",
+            "Bazı işlevler etkilenebilir"
+          ]
+        }
+      },
+      "6": {
+        "title": "6. Sağladığınız bilgileri nasıl kullanıyoruz?",
+        "mainUse": "Ana kullanım",
+        "items": [
+          { "icon": "✅", "label": "Hizmet sağlama" },
+          { "icon": "📧", "label": "İletişim" },
+          { "icon": "🔍", "label": "Veri analizi" },
+          { "icon": "🚀", "label": "İşlev optimizasyonu" },
+          { "icon": "📈", "label": "Pazarlama" },
+          { "icon": "⚖️", "label": "Yasal uyum" }
+        ],
+        "unsubscribe": "Pazarlama iletilerinden istediğiniz zaman çıkabilirsiniz"
+      },
+      "7": {
+        "title": "7. Hangi bilgileri saklıyoruz ve nasıl koruyoruz?",
+        "security": {
+          "title": "Güvenlik önlemleri",
+          "items": [
+            "Fiziksel güvenlik",
+            "Yönetimsel tedbirler",
+            "Elektronik şifreleme",
+            "Yetki erişim kontrolü"
+          ]
+        },
+        "retention": {
+          "title": "Saklama süresi",
+          "desc": "Yalnızca gerekli süre boyunca saklanır ve aşağıdaki koşullar sağlandığında silinir:",
+          "items": [
+            "İlişki sona ermesi",
+            "Amaç gerçekleşmesi",
+            "Yasal yükümlülüklerin tamamlanması"
+          ]
+        }
+      },
+      "8": {
+        "title": "8. APP-NAME bilgileri üçüncü taraflarla paylaşıyor mu?",
+        "recipients": [
+          "Bağlı ortaklıklar",
+          "İşlem tarafları",
+          "Hizmet sağlayıcılar",
+          "Kamu kurumları",
+          "Birleşme/devralma tarafları",
+          "Reklam ortakları"
+        ],
+        "note": "Tüm üçüncü tarafların aynı veri koruma standartlarına uymasını sağlıyoruz"
+      }
+    },
+    "quickAccess": {
+      "title": "Hızlı Erişim",
+      "items": [
+        { "label": "Onayı geri çek", "icon": "↩️" },
+        { "label": "Veri erişimi", "icon": "👁️" },
+        { "label": "Çerez ayarları", "icon": "🍪" },
+        { "label": "Bize ulaşın", "icon": "📧" }
+      ]
+    },
+    "footer": {
+      "contact": "Sorularınız için Veri Koruma Görevlimizle iletişime geçin",
+      "email": "support@APP-NAME.com",
+      "copyright": "© 2025 APP-NAME. Tüm hakları saklıdır."
+    },
+    "toggle": {
+      "expand": "Genişlet",
+      "collapse": "Daralt"
+    }
+  },
+  "PrivacyPolicyPage": {
+    "header": "Gizlilik Politikası",
+    "title": "APP-NAME Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme: Ekim 2025 | Gizliliğiniz en büyük önceliğimiz",
+    "expand": "Genişlet",
+    "collapse": "Daralt",
+    "section1Title": "1. Giriş",
+    "section1_1": "1.1 APP-NAME Mağaza web sitesine hoş geldiniz",
+    "section1_2": "APP-NAME, yürürlükteki gizlilik yasalarındaki sorumluluklarını yerine getirir ve APP-NAME platformu kullanıcılarının gizlilik haklarına saygı gösterir.",
+    "section1_3": "🔒 Bize emanet ettiğiniz kişisel verilerin önemini biliyoruz ve bunları uygun şekilde yönetmek, korumak ve işlemekle yükümlüyüz.",
+    "section1_4": "Kişisel veri, bir kişiyi tanımlayabilen veridir.",
+    "section1_5": "Hizmetleri kullanarak, bu politika uyarınca verilerinizin işlenmesine onay verirsiniz.",
+    "section2Title": "2. APP-NAME kişisel verileri ne zaman toplar?",
+    "section2_1": "Yaygın toplama senaryoları",
+    "section2_2": "📱 Çevrimiçi etkileşim",
+    "section2_3": "Site ziyareti",
+    "section2_4": "Form gönderimi",
+    "section2_5": "Çerez kayıtları",
+    "section2_6": "🤝 Çevrimdışı etkileşim",
+    "section2_7": "Telefon görüşmesi",
+    "section2_8": "Yüz yüze toplantı",
+    "section2_9": "E-posta yazışması",
+    "section2_10": "Üçüncü taraflardan da bilgi alabiliriz",
+    "section3Title": "3. APP-NAME hangi kişisel verileri toplar?",
+    "section3_1_label": "Temel Bilgiler",
+    "section3_1_1": "İsim",
+    "section3_1_2": "E-posta",
+    "section3_1_3": "Telefon",
+    "section3_1_4": "Adres",
+    "section3_2_label": "Kimlik Bilgileri",
+    "section3_2_1": "Doğum tarihi",
+    "section3_2_2": "Cinsiyet",
+    "section3_3_label": "Multimedya",
+    "section3_3_1": "Fotoğraf",
+    "section3_3_2": "Ses",
+    "section3_3_3": "Video",
+    "section3_4_label": "Mesleki Bilgiler",
+    "section3_4_1": "Eğitim geçmişi",
+    "section3_4_2": "İstihdam geçmişi",
+    "section3_5_label": "Konum Verisi",
+    "section3_5_1": "Coğrafi konum",
+    "section3_6_label": "Davranış Verisi",
+    "section3_6_1": "Göz atma geçmişi",
+    "section3_6_2": "Tercihler",
+    "section3_warning": "⚠️ Veri toplamayı istediğiniz zaman devre dışı bırakabilirsiniz; bazı işlevler etkilenebilir",
+    "section4Title": "4. Veri kullanımı",
+    "section4_1": "Verilerinizi nasıl kullanıyoruz",
+    "section4_2": "Hizmet sağlama ve iyileştirme",
+    "section4_3": "Kişiselleştirme",
+    "section4_4": "Güvenlik",
+    "section4_5": "Yasal uyum",
+    "section4_6": "Veri paylaşımı",
+    "section4_7": "Hizmet sağlamak için üçüncü taraflarla paylaşabiliriz.",
+    "section4_8": "Paylaşım, gizlilik politikası ve yasalara uygun olacaktır.",
+    "section5Title": "5. Çerezler ve izleme teknolojileri",
+    "section5_1": "Çerezleri nasıl kullanıyoruz",
+    "section5_2": "Zorunlu çerezler",
+    "section5_3": "Temel işlevleri sağlar",
+    "section5_4": "Oturum durumunu tanır",
+    "section5_5": "Sahteciliği önler",
+    "section5_6": "Performans çerezleri",
+    "section5_7": "Site kullanımını analiz eder",
+    "section5_8": "Hizmeti optimize eder",
+    "section5_9": "İsteğe bağlı kapatılabilir",
+    "section6Title": "6. Veri koruma önlemleri",
+    "section6_1": "Aldığımız güvenlik önlemleri",
+    "section6_2": "Erişim kontrolü",
+    "section6_3": "Şifreleme",
+    "section6_4": "Düzenli yedekleme",
+    "section6_5": "Güvenlik eğitimi",
+    "section6_6": "Sistem izleme",
+    "section6_7": "Denetim ve uyum",
+    "section6_8": "Hesap şifrenizi paylaşmayın; verilerinizi koruyun",
+    "section7Title": "7. Kullanıcı hakları",
+    "section7_1": "Erişim ve kontrol",
+    "section7_2": "Tutulan bilgileri görüntüleme",
+    "section7_3": "Hatalı veriyi düzeltme",
+    "section7_4": "Veri silme talebi",
+    "section7_5": "İşlemeyi sınırlama veya reddetme",
+    "section7_6": "Diğer haklar",
+    "section7_7": "Onayı istediğiniz zaman geri çekebilir ve gizlilik soruları sorabilirsiniz.",
+    "section7_8": "Veri taşınabilirliği",
+    "section7_9": "İşlemeye itiraz hakkı",
+    "section7_10": "Şikayet hakkı",
+    "section8Title": "8. Bize ulaşın",
+    "section8_1": "Gizlilik politikasıyla ilgili sorularınız varsa",
+    "section8_2": "Müşteri hizmetleri e-postamızla iletişime geçin",
+    "section8_3": "Destek hattını arayın",
+    "section8_4": "Çevrimiçi sohbet",
+    "section8_5": "Sosyal medya hesapları",
+    "section8_6": "Yazılı mektup",
+    "section8_7": "Web geri bildirim formu gönderin",
+    "section8_warning": "⚠️ Taleplerinizi makul sürede işleriz; bazı işlemler ek doğrulama gerektirebilir"
+  },
+  "ReturnsPolicy": {
+    "title": "Fikrimi değiştirdim",
+    "subtitle1": "Teslim alma veya teslimattan sonra ",
+    "subtitle2": "15 gün içinde iade",
+    "subtitle3": ".",
+    "mustBe": "Ürününüz şu durumda olmalıdır:",
+    "refundMethod": "İadeler orijinal ödeme yöntemiyle yapılır:",
+    "refundUsdtEth": "USDT veya ETH ile yapılan iadeler 1 iş günü içinde hesabınıza yansır",
+    "refundWire": "Banka havalesi iadeleri, bankanıza bağlı olarak en fazla 30 gün sürebilir",
+    "requirements1": "Kullanılmamış ve tüm orijinal bileşenleriyle",
+    "requirements2": "Orijinal ambalajında (varsa etiketli)",
+    "requirements3": "Yeniden satışa uygun durumda",
+    "requirements4": "Satın alma kanıtıyla",
+    "requirements5": "Ürünle birlikte verilen hediyelerle birlikte",
+    "productSupport": "Ürün Desteği",
+    "productSupportDesc1": "Çoğu durumda, herhangi bir ürün sorunu için evinizin rahatlığında ",
+    "productSupportDesc2": "Ürün Destek web sitemizi",
+    "productSupportDesc3": " ziyaret ederek sorunu çözebiliriz. Orada ürünler ve şirketimiz hakkında SSS, gönderim ve teslim alma, iade ve geri ödeme bilgilerine erişebilirsiniz.",
+    "goodsIssue": "Ürünümde bir sorun var",
+    "issueNotice1": "İade (ilk 15 gün içinde) gerekiyorsa, değişim veya geri ödeme sunarız.",
+    "issueNotice2": "Bu süreden sonra ve garanti süresi içindeyse, yetkili servis aracımızla onarım ayarlarız; onarım mümkün değilse ürününüzü değiştiririz.",
+    "issueDesc": "En hızlı iade yöntemi, 112 ülkedeki küresel depo merkezlerimizdir. Büyük eşyalar hariç çoğu ürünü kabul ederiz; kapıya teslim edilmiş olsa bile. Büyük eşya iadesi için aşağı kaydırarak canlı sohbet başlatın veya yardım hattı bağlantımıza gidin.",
+    "precautionsTitle": "Önlemler",
+    "precautionsDesc": "Gıda, delmeli takılar ve iç çamaşırı gibi bazı ürünler yalnızca kusurluysa değiştirilebilir veya iade edilebilir. Web sitemizde hangilerinin iade edilemez olduğu belirtilir.",
+    "precautions1": "DVD, müzik veya yazılım ürünleri iade edilecekse, kullanılmamış ve orijinal mühürlü ambalajında olmalıdır",
+    "precautions2": "Ürün veya ambalaj ciddi şekilde hasarlıysa, geri ödeme tutarını azaltma hakkını saklı tutarız",
+    "precautions3": "Ürünü bizim sağladığımızı doğrulamak için seri numarası vb. isteyebiliriz",
+    "precautions4": "Bunların hiçbiri tüketici haklarınızı etkilemez",
+    "precautionsNote": "Ürünleri teslim aldığımızda, iade öncesi kontrol ederiz. İadeler açıklamalara uygun değilse, duruma göre iade reddi veya kısmi iade hakkını saklı tutarız.",
+    "proof1_1": "Kasa fişi",
+    "proof1_2": "Elektronik fiş",
+    "proof1_3": "Sipariş numaranız",
+    "proof1_4": "E-posta onayı",
+    "proof2_1": "İşlem ekstreniz",
+    "proof2_2": "Satın alma için kullanılan e-posta adresi",
+    "faqTitle": "SSS",
+    "cta": "İade sürecini başlat"
+  },
+  "sellerRating": {
+    "title": "Satıcı Puanlama Sistemi",
+    "intro": "Giriş",
+    "introContent": "Burada satıcı puanlama sistemini ve nasıl oluşturulup kullanıldığını tanıtacağız.",
+    "website": "İlgili web sitesi",
+    "parties": "İlgili taraflar",
+    "allSellers": "Tüm satıcılar",
+    "section1": {
+      "title": "Satıcı puanlama sistemine nasıl girilir?",
+      "encourage": "Sistem, satıcıları yüksek hizmet standartlarını korumaya teşvik eder ve alıcılarımıza iyi bir alışveriş deneyimi sağlar.",
+      "deduction": "Taahhüt edilen hedeflere ulaşılamazsa puan düşer.",
+      "accessPath": {
+        "prefix": "Puanınızı 【",
+        "path": "Satıcı Merkezi >> Satıcı Kredi Puanı",
+        "suffix": "】 sayfasında görüntüleyebilirsiniz."
+      }
+    },
+    "section2": {
+      "title": "Puan nasıl oluşur?",
+      "deductionCondition": "Yalnızca alıcının asgari beklentileri karşılandığında puan kesilir; bu aynı zamanda geliştirilmesi gereken sorunlara işaret eder.",
+      "updateTime": "Sistem, her ayın ilk günü, önceki ayın ihlallerine göre puanı günceller. İlgili puan boyutunun anahtar kelimesine tıklayarak tam politikayı görebilirsiniz."
+    },
+    "table1": {
+      "headers": {
+        "measure": "Ölçüm",
+        "spec": "Özellik",
+        "deduction": "Aylık puan kesintisi"
+      },
+      "max10": "En fazla 10 puan",
+      "max20": "En fazla 20 puan",
+      "rows": {
+        "nfr": {
+          "title": "Karşılanmama Oranı, NFR",
+          "desc": "Son 7 günde satıcı tarafından iptal/iade edilen siparişlerin toplam siparişlere oranı %30"
+        },
+        "lsr": {
+          "title": "Geç Gönderim Oranı, LSR",
+          "desc": "Son 7 günde 72 saatten fazla geciken siparişlerin toplam siparişlere oranı %20"
+        },
+        "customerService": {
+          "title": "Müşteri Hizmetleri",
+          "rude": "Kaba veya hakaret içeren sohbet/yorum",
+          "cancelRequests": "Alıcıdan bir ay içinde 5'ten fazla iptal isteme"
+        },
+        "breach": {
+          "title": "Sözleşmeye Aykırılık",
+          "lowResponse": "Alıcıya yanıt oranı %80'in altında",
+          "violatePromise": "Satıcının vaat ettiği hizmeti sunmaması; alıcı haklarının ihlali"
+        }
+      }
+    },
+    "section3": { "title": "Belirli puanlarla ilgili yaptırımlar nelerdir?" },
+    "table2": {
+      "headers": {
+        "points": "Toplam Puan",
+        "level": "Yaptırım Seviyesi"
+      },
+      "level1": "Seviye 1",
+      "level2": "Seviye 2",
+      "level3": "Seviye 3",
+      "level4": "Seviye 4",
+      "level5": "Seviye 5",
+      "level6": "Seviye 6",
+      "penalties": {
+        "marketingBan": "Pazarlama etkinlik yasağı (28 gün)",
+        "freeShippingRemoval": "Ücretsiz kargo/kargo iadesinin kaldırılması (28 gün)",
+        "deboost": "Listeleme düşürme (28 gün)",
+        "loanRestriction": "Satıcı kredisi kısıtlaması (28 gün)",
+        "listingBlock": "Liste oluşturma/düzenleme engeli (28 gün)",
+        "accountFreeze": "Hesap dondurma (28 gün)"
+      }
+    },
+    "section4": {
+      "title": "Müşteri hizmetleri kuralları ve uygulama detayları",
+      "rudeQuestion": "Kaba/hakaret içeren sohbet veya yorum nedir?",
+      "rudeDefinition": "Kötü niyetli taciz; üyelerin başkalarına hakaret, küfür, tehdit vb. sözlü saldırıları veya uygunsuz yollarla rahatsız etmesi ve yasal haklara zarar vermesidir.",
+      "rudeHandling": "Kaba/hakaret içeren sohbet veya yorum nasıl ele alınır?",
+      "rudePenalty": "Genel ve ağır ihlaller için puan kesintisi uygulanır.",
+      "rudeScenario": "Uygulanabilir durumlar: hakaret, küfür, tehdit gibi sözlü saldırılar veya uygunsuz taciz davranışları."
+    },
+    "section5": {
+      "title": "Sözleşmeye aykırılıkta uygulanan önlemler",
+      "breachQuestion": "Sözleşmeye aykırılık nedir?",
+      "breachDefinition": "Satıcının alıcıya hizmet sunmaması; alıcı haklarının ihlali; APP-NAME'e karşı taahhütlerin yerine getirilmemesi. Satıcı, yasal veya sözleşmesel değişim/iade/geri ödemeleri sunmaya devam etmek zorundadır.",
+      "measure": "Uygulanan önlem: Puan kesintisi",
+      "specificMeasures": "Özel önlemler",
+      "generalViolation": "1) Belirli durumlarda ödemesi yapılan sipariş veya hizmete ilişkin taahhütlerin yerine getirilmemesi: her genel ihlal için 5 puan kesilir.",
+      "seriousViolation": {
+        "prefix": "2) Aşağıdaki taahhütlerden herhangi birinin ihlali her ciddi durumda 10 puan kesilir:",
+        "item1": "1) APP-NAME, satıcının iade gibi satış sonrası sorumlulukları üstlenmesi gerektiğine karar verdiyse ve satıcı bunu reddederse;",
+        "item2": "2) APP-NAME, 7 gün içinde koşulsuz iade/değişim hakkı tanınması gerektiğine karar verirse ve satıcı bunu reddederse;",
+        "item3": "3) Alıcı ve satıcı anlaşmadan, vaat edilen deneme ürününü göndermeyi reddetmek veya geciktirmek;",
+        "item4": "4) Satıcının ödeme sonrası 72 saat içinde siparişi işlememesi;",
+        "activity": "APP-NAME resmi etkinliğine katılan ve gereklilikleri yerine getiremeyen satıcılar (kargo hariç) diğer resmi yönetmeliklere tabidir."
+      }
+    },
+    "section6": {
+      "title": "Yaptırımlar ne kadar sürer?",
+      "duration": {
+        "prefix": "Yaptırımlar ",
+        "days": "28 gün",
+        "suffix": " sonra sona erer. Gerekli iyileştirmeler yapıldığında ve standartlar karşılandığında satıcı hakları yeniden kazanılır."
+      }
+    },
+    "section7": {
+      "title": "İhlal işlemleri",
+      "generalCase": "Durum genel ise",
+      "generalDesc": "Tüketici şikayeti ve APP-NAME'in haklı bulması halinde, her genel ihlal için 5 puan kesilir. 5 sipariş tamamlandığında 5 puan geri kazanılır.",
+      "seriousCase": "Durum ciddi ise",
+      "seriousDesc": "Tüketici şikayeti ve APP-NAME'in haklı bulması halinde, her ciddi ihlal için 20 puan kesilir. 20 sipariş tamamlandığında 20 puan geri kazanılır.",
+      "extremeCase": "Aşırı durum",
+      "extremeDesc": "Hesap dondurma, 28 gün içinde mağazanın kapatılması.",
+      "example1": { "title": "Örnek 1: Satıcı A, 3. haftada 3 puan alır; 7. haftada haklarını geri kazanır" },
+      "example2": { "title": "Örnek 2: Satıcı B, 3. haftada 3 puan, 5. haftada 3 puan alır; puanlar birikir ve 9. haftada haklar geri verilir" },
+      "example3": { "title": "Örnek 3: Satıcı C, yeni çeyrekten bir hafta önce 3 puan alır; çeyrek başladıktan sonra 3 puan daha alır; yeni puanlar seviyesi yeniden tanımlar" }
+    },
+    "section8": {
+      "title": "Puan itirazı nasıl yapılır?",
+      "appeal": {
+        "prefix": "Tıklayın ",
+        "link": "Yardım hattı bağlantısı",
+        "suffix": " üzerinden itiraz edin. İtiraz başarılı olursa, puan kesintinizi kaldırır ve ilgili satıcı haklarını iade ederiz."
+      }
+    }
+  }
+}
+

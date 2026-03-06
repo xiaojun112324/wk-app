@@ -1,0 +1,1249 @@
+{
+  "common": {
+    "store": "店铺",
+    "goods": "商品",
+    "category": "分类",
+    "categories": "所有分类",
+    "wishlist": "收藏夹",
+    "checkout": "结账",
+    "order": "订单",
+    "account": "账户",
+    "settings": "设置",
+    "language": "语言",
+    "currency": "货币",
+    "search": "搜索",
+    "searchPlaceholder": "搜索商品、品牌或分类",
+    "buyNow": "立即购买",
+    "viewMore": "查看更多",
+    "viewAll": "查看全部",
+    "loadMore": "加载更多",
+    "confirm": "确认",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "save": "保存",
+    "submit": "提交",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "yes": "是",
+    "no": "否",
+    "success": "操作成功",
+    "failed": "操作失败",
+    "loading": "加载中...",
+    "noData": "暂无数据",
+    "outOfStock": "库存不足",
+    "inStock": "有货",
+    "soldOut": "售罄",
+    "newArrival": "新品",
+    "bestSeller": "热销",
+    "discount": "折扣",
+    "price": "价格",
+    "quantity": "数量",
+    "total": "合计",
+    "subtotal": "小计",
+    "shipping": "运费",
+    "tax": "税费",
+    "grandTotal": "总计",
+    "payment": "支付",
+    "paymentMethod": "支付方式",
+    "delivery": "配送",
+    "contactUs": "联系我们",
+    "helpCenter": "帮助中心",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "logout": "退出登录",
+    "forgotPassword": "忘记密码？",
+    "rememberMe": "记住我",
+    "email": "邮箱",
+    "phone": "手机号",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "welcomeBack": "欢迎回来",
+    "or": "或",
+    "continue": "继续",
+    "filter": "筛选",
+    "sort": "排序",
+    "clear": "清除",
+    "viewDetails": "查看详情",
+    "reviews": "评价",
+    "addReview": "添加评价",
+    "rating": "评分",
+    "share": "分享",
+    "copy": "复制",
+    "copied": "已复制",
+    "backToHome": "返回首页",
+    "404Title": "页面未找到",
+    "404Desc": "抱歉，您访问的页面不存在。",
+    "retry": "重试"
+  },
+  "login": {
+    "title": "登录您的账户",
+    "subtitle": "欢迎你！请输入您账户的信息",
+    "tabEmail": "邮箱登录",
+    "tabPhone": "手机号登录",
+    "emailLabel": "邮箱",
+    "emailPlaceholder": "请输入邮箱",
+    "emailRequired": "请输入邮箱",
+    "phoneLabel": "手机号",
+    "phonePlaceholder": "请输入手机号",
+    "phoneRequired": "请输入手机号",
+    "areaCodePlaceholder": "区号",
+    "areaCodeRequired": "请选择区号",
+    "passwordLabel": "密码",
+    "passwordPlaceholder": "请输入密码",
+    "passwordRequired": "请输入密码",
+    "passwordPattern": "密码长度6-12位，且不能有空格",
+    "noAccount": "没有账号？",
+    "register": "注册",
+    "forgotPassword": "忘记密码？",
+    "loginButton": "登录",
+    "successMessage": "登录成功！",
+    "registerQui": "快捷注册",
+    "securityLabel": "安全验证",
+    "securityButton": "点击安全验证",
+    "securitySuccess": "安全验证成功",
+    "securityCheckRequired": "请先完成安全验证"
+  },
+  "register": {
+    "title": "注册您的账户",
+    "subtitle": "欢迎你！请输入您的详细信息",
+    "tabEmail": "邮箱",
+    "tabPhone": "手机号",
+    "emailLabel": "邮箱",
+    "emailPlaceholder": "请输入邮箱",
+    "emailRequired": "请输入邮箱",
+    "emailInvalid": "邮箱格式不正确",
+    "phoneLabel": "手机号",
+    "phonePlaceholder": "请输入手机号",
+    "phoneRequired": "请输入手机号",
+    "areaCodePlaceholder": "区号",
+    "areaCodeRequired": "请选择区号",
+    "passwordLabel": "密码",
+    "passwordPlaceholder": "请输入密码",
+    "passwordRequired": "请输入密码",
+    "passwordPattern": "密码长度6-12位，且不能有空格",
+    "confirmPasswordLabel": "确认密码",
+    "confirmPasswordPlaceholder": "请再次输入密码",
+    "confirmPasswordRequired": "请再次输入密码",
+    "passwordMismatch": "两次输入的密码不一致！",
+    "hasAccount": "已有账号？",
+    "login": "登录",
+    "registerButton": "注册",
+    "successMessage": "注册成功！",
+    "a1": "邀请码",
+    "a2": "请输入邀请码",
+    "a3": "验证码",
+    "a4": "请输入验证码",
+    "agreementText": "我已阅读并同意",
+    "agreementLink": "《注册协议》",
+    "agreementRequired": "请选择注册协议",
+     "username": "用户名",
+     "usernamePlaceholder": "请输入用户名",
+     "codeError":"验证码不正确"
+  },
+  "home": {
+    "bannerTitleLine1": "提升你的风格",
+    "bannerTitleLine2": "拥抱奢华",
+    "bannerSubtitle": "探索为现代优雅打造的最新系列。以永恒时尚重新定义你的衣橱。",
+    "recommendCategory": "推荐分类",
+    "dailyNewArrival": "每日新品上架",
+    "recommendProduct": "推荐产品",
+    "recommendStore": "推荐店铺",
+    "hotRecommend": "热销推荐",
+    "featureAuthentic": "100% 正品",
+    "featureReturn7Days": "7天退货",
+    "featureShippingDiscount": "运费折扣",
+    "featureSecurePayment": "安全支付"
+  },
+  "products": {
+    "category": "分类",
+    "allProducts": "全部商品",
+    "comprehensive": "综合",
+    "sales": "销售量",
+    "price": "价格",
+    "newArrival": "上新"
+  },
+  "merchantRegister": {
+    "title": "商家入驻",
+    "header": "APP-NAME 商家入驻",
+    "loginTipPrefix": "如果您已是卖家，请",
+    "login": "点击登录",
+    "description": "我们的合作伙伴计划为您提供全方位的营销支持和服务，我们的客户服务团队将提供专业的支持和建议，帮助您优化产品展示和销售策略。现在就加入我们吧！让我们一起创造更大的商业机会，共同成长！",
+    "merchantInfo": "商户信息",
+    "storeLogo": "店铺徽标",
+    "storeLogoTip": "请上传店铺 Logo",
+    "shopName": "店铺名称",
+    "shopNameTip": "请输入店铺名称",
+    "shopNamePlaceholder": "请输入店铺名称，不包含特殊字符",
+    "shopAddress": "店铺地址",
+    "shopAddressTip": "请输入店铺地址",
+    "shopAddressPlaceholder": "请输入店铺地址，不包含特殊字符",
+    "country": "国家",
+    "countryTip": "请选择国家",
+    "countryPlaceholder": "请选择国家",
+    "idNumber": "证件/护照号码",
+    "idNumberTip": "请输入证件号码",
+    "idNumberPlaceholder": "请输入证件号码",
+    "realName": "真实姓名",
+    "realNameTip": "请输入真实姓名",
+    "realNamePlaceholder": "请输入真实姓名",
+    "idCardFront": "证件正面照片",
+    "idCardFrontTip": "请上传证件正面照片",
+    "idCardBack": "证件背面照片",
+    "idCardBackTip": "请上传证件背面照片",
+    "verifyType": "验证方式",
+    "verifyTypeTip": "请选择验证方式",
+    "email": "电子邮箱",
+    "phone": "手机号码",
+    "contact": "用户名（邮箱或手机号）",
+    "contactTip": "请输入用户名",
+    "contactPlaceholder": "请输入邮箱或手机号",
+    "password": "登录密码",
+    "passwordTip": "请输入登录密码",
+    "passwordPattern": "密码长度需为6到12位，且不能包含空格",
+    "passwordPlaceholder": "请输入登录密码",
+    "confirmPassword": "确认密码",
+    "confirmPasswordTip": "两次密码输入不一致",
+    "confirmPasswordPlaceholder": "请再次输入登录密码",
+    "inviteCode": "邀请码",
+    "inviteCodePlaceholder": "请输入邀请码(可选)",
+    "submit": "提交申请",
+    "submitSuccess": "提交成功，请等待审核！",
+    "areaCodeTip": "请选择区号",
+    "areaCodePlaceholder": "请选择区号",
+    "phonePlaceholder": "请输入手机号"
+  },
+  "mineDetail": {
+    "goodsCollect": "商品收藏",
+    "storeCollect": "关注店铺",
+    "defaultAddress": "默认地址",
+    "addAddress": "新增地址",
+    "followedStores": "关注店铺",
+    "collectedGoods": "收藏商品"
+  },
+  "favoriteProducts": {
+    "collectedGoods": "收藏商品"
+  },
+  "mineMerchant": {
+    "followedShops": "关注店铺"
+  },
+  "mine": {
+    "shop": "商家入驻",
+    "userIdPrefix": "ID:",
+    "balanceLabel": "余额",
+    "deposit": "充值",
+    "withdraw": "提取",
+    "myOrders": "我的订单",
+    "all": "全部",
+    "orderStatus": {
+      "pending": "待支款",
+      "shipping": "待发货",
+      "receiving": "待收货",
+      "review": "待评价",
+      "refund": "退款/售后"
+    },
+    "moreFeatures": "更多功能",
+    "setting": "设置",
+    "language": "语言",
+    "wallet": "钱包",
+    "favorite": "收藏"
+  },
+  "OrderDetail": {
+    "myOrders": "我的订单",
+    "orderInfo": "订单信息",
+    "orderNo": "订单编号",
+    "time": "时间",
+    "orderPrice": "订单金额",
+    "orderState": "订单状态",
+    "refundState": "退款状态",
+    "recipientInfo": "收货人信息",
+    "name": "姓名",
+    "phone": "手机号",
+    "country": "国家",
+    "addressDetail": "详细地址",
+    "productInfo": "商品信息",
+    "unitPrice": "单价",
+    "quantity": "数量",
+    "subtotal": "小计",
+    "total": "合计",
+    "unknown": "未知状态"
+  },
+  "Orders": {
+    "all": "全部",
+    "pending": "待支付",
+    "shipping": "待发货",
+    "receiving": "待收货",
+    "review": "待评价",
+    "refund": "退款/售后",
+    "confirmReceivingTitle": "确认收货？",
+    "confirm": "确认",
+    "cancel": "取消",
+    "orderNo": "订单号",
+    "orderDesc": "订单描述",
+    "orderPrice": "金额",
+    "status": "状态",
+    "actions": "操作",
+    "viewOrder": "查看订单",
+    "remindShipping": "提醒发货",
+    "remindShippingSuccess": "商家已收到您的提醒",
+    "refundRequest": "退款申请",
+    "confirmReceiving": "确认收货",
+    "addComment": "添加评论",
+    "unknown": "未知"
+  },
+  "Wallet": {
+    "balance": "余额",
+    "recharge": "充值",
+    "withdraw": "提取",
+    "history": "钱包历史",
+    "createTime": "创建时间",
+    "rechargeNo": "充值单号",
+    "rechargeAmount": "充值数量",
+    "rechargeType": "币种协议",
+    "rechargeAddress": "充值地址",
+    "withdrawNo": "提现单号",
+    "withdrawAmount": "提现数量",
+    "withdrawType": "币种协议",
+    "withdrawAddress": "到账地址",
+    "fee": "手续费",
+    "realAmount": "实际到账",
+    "status": "状态",
+    "unpaid": "未支付",
+    "success": "成功",
+    "fail": "失败",
+    "pending": "待处理",
+    "processed": "已处理",
+    "rejected": "驳回",
+    "orderNo": "单号"
+  },
+  "AccountPanel": {
+    "balance": "余额",
+    "recharge": "充值",
+    "withdraw": "提取"
+  },
+  "LogisticsDialog": {
+    "title": "物流信息",
+    "empty": "暂无物流信息",
+    "close": "关闭"
+  },
+  "OrderCard": {
+    "viewOrder": "查看订单",
+    "remindShipping": "提醒发货",
+    "requestRefund": "退款申请",
+    "confirmReceiving": "确认收货",
+    "payNow": "立即付款",
+    "cancelOrder": "取消订单",
+    "addComment": "添加评论",
+    "refunded": "已退款"
+  },
+  "RefundDialog": {
+    "title": "申请退款",
+    "refundReason": "退款理由",
+    "refundReasonPlaceholder": "请输入退款理由",
+    "refundRemark": "退货说明",
+    "refundRemarkPlaceholder": "请输入退货说明",
+    "cancel": "取消",
+    "submit": "提交"
+  },
+  "Search": {
+    "comprehensive": "综合",
+    "soldNum": "销售量",
+    "price": "价格",
+    "newest": "上新"
+  },
+  "Address": {
+    "setting": "设置",
+    "defaultAddress": "默认地址",
+    "addAddress": "新增地址",
+    "confirmDelete": "确认删除",
+    "confirmDeleteContent": "确定要删除该地址吗？",
+    "ok": "确认",
+    "cancel": "取消",
+    "edit": "编辑",
+    "delete": "删除",
+    "deleted": "已删除"
+  },
+  "DeleteAccount": {
+    "setting": "设置",
+    "title": "账号注销",
+    "description": "永久注销您的 APP-NAME 账户，删除所有个人信息和相关数据。注销后，数据无法恢复，请谨慎操作。确保在注销前完成必要操作，如保存重要信息或处理未完成的事务。",
+    "account": "您的账号",
+    "enterAccount": "请输入",
+    "reason": "为什么要离开",
+    "submit": "提交申请",
+    "submitSuccess": "提交成功"
+  },
+  "Setting": {
+    "title": "设置",
+    "description": "轻松管理您的 APP-NAME 账户，安全又便捷！一键修改登录密码，建议使用字母、数字和符号组合的强密码，定期更新以确保账户安全；设置独立的交易密码，保障敏感操作的安全性；更新准确的收件地址，确保平台通知和交付顺畅无阻。简单操作，尽享安心体验！",
+    "loginPassword": "登录密码",
+    "tradePassword": "交易密码",
+    "address": "收件地址",
+    "deleteAccount": "账号注销",
+    "submitSuccess": "提交成功！"
+  },
+  "LoginPassword": {
+    "setting": "设置",
+    "title": "登录密码",
+    "description": "修改或重置密码，建议使用包含字母、数字和符号的强密码，定期更新以保护账户安全。",
+    "oldPassword": "旧密码",
+    "newPassword": "新密码",
+    "confirmPassword": "确认密码",
+    "enterOldPassword": "请输入旧密码",
+    "enterNewPassword": "请输入新密码",
+    "passwordMinLength": "密码长度至少6位",
+    "confirmPasswordMsg": "请确认密码",
+    "passwordMismatch": "两次输入的密码不一致",
+    "submit": "提交申请",
+    "success": "操作成功"
+  },
+  "PayPassword": {
+    "setting": "设置",
+    "title": "交易密码",
+    "description": "设置独立于登录密码的交易密码，用于确认拍卖、资金提取等操作，提升交易安全性。",
+    "oldPassword": "旧密码",
+    "newPassword": "新密码",
+    "confirmPassword": "确认密码",
+    "enterOldPassword": "请输入旧密码",
+    "enterNewPassword": "请输入新密码",
+    "passwordMinLength": "密码长度至少6位",
+    "confirmPasswordMsg": "请确认密码",
+    "passwordMismatch": "两次输入的密码不一致",
+    "submit": "提交申请",
+    "success": "操作成功"
+  },
+  "MerchantHeader": {
+    "follow": "关注店铺",
+    "followed": "已关注",
+    "followSuccess": "关注成功",
+    "unfollow": "已取消关注",
+    "products": "商品",
+    "sales": "销量",
+    "rate": "好评率"
+  },
+  "Products": {
+    "allProducts": "全部商品",
+    "category": "分类",
+    "comprehensive": "综合",
+    "sales": "销售量",
+    "price": "价格",
+    "newArrival": "上新"
+  },
+  "Store": {
+    "recommend": "推荐",
+    "allProducts": "所有产品"
+  },
+  "Withdraw": {
+    "myWallet": "我的钱包",
+    "withdraw": "提现",
+    "description": "支持多种到账渠道，快速处理资金请求，安全合规保障每笔提现安全。"
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "页面未找到",
+    "description": "抱歉，我们无法找到您要访问的页面。",
+    "backHome": "返回首页"
+  },
+  "CheckForms": {
+    "checkout": "结算",
+    "addressTitle": "1. 收件地址",
+    "changeAddress": "更换地址",
+    "addressInfo": "收件信息",
+    "recipientName": "收件人姓名",
+    "phone": "联系电话",
+    "nation": "国家/地区",
+    "addressDetail": "详细地址",
+    "noAddress": "暂无地址",
+    "addAddress": "添加地址",
+    "paymentTitle": "2. 支付方式",
+    "selectPayment": "选择支付方式",
+    "balance": "余额",
+    "paypal": "PayPal（暂未开放）",
+    "visa": "VISA（暂未开放）",
+    "mastercard": "MasterCard（暂未开放）",
+    "orderSummary": "订单摘要",
+    "total": "合计",
+    "submitOrder": "提交订单",
+    "submitSuccess": "提交成功",
+    "tip": "提示",
+    "selectAddressFirst": "请先选择收货地址",
+    "selectAddress": "选择收货地址",
+    "noAvailableAddress": "暂无可用地址"
+  },
+  "OrderResult": {
+    "paymentSuccess": "支付成功",
+    "recipient": "接收者",
+    "address": "收货地址",
+    "continueShopping": "继续购物",
+    "viewOrders": "查看订单"
+  },
+  "Deposit": {
+    "myWallet": "我的钱包",
+    "deposit": "充值",
+    "description": "充值快速稳定，操作简洁流畅，随时补充账户余额安心无忧使用。"
+  },
+  "BottomNav": {
+    "home": "首页",
+    "products": "商品",
+    "cart": "购物车",
+    "mine": "我的",
+    "mianban":"面板",
+    "shouyi":"收益"
+  },
+  "Footer": {
+    "solutions": {
+      "title": "客户服务",
+      "contactUs": "联系我们"
+    },
+    "support": {
+      "title": "退货和换货",
+      "privacyPolicy": "隐私政策",
+      "returnsPolicy": "退货政策",
+      "deliveryInformation": "送货和取货",
+      "sellerScoreSystem": "卖家政策"
+    },
+    "company": {
+      "title": "用户中心",
+      "register": "用户注册",
+      "orderQuery": "订单查询",
+      "favoriteProducts": "商品收藏",
+      "wallet": "我的钱包"
+    },
+    "legal": {
+      "title": "关于我们",
+      "aboutUs": "关于我们",
+      "careers": "招贤纳士",
+      "news": "新闻资讯",
+      "modernSlavery": "现代奴隶声明"
+    },
+    "description": "APP-NAME全球站的用户来自全球112个国家，使用USDT/ETH/BTC进行结算。USDT/ETH/BTC是一种无国界的交易方式，可以在全球范围内实现即时低成本交易，无需等待，没有国际费用。",
+    "copyright": "© APP-NAME 有限公司2023 版权所有."
+  },
+  "Header": {
+    "title": "APP-NAME",
+    "home": "首页",
+    "category": "分类",
+    "products": "商品",
+    "sales": "折扣商品",
+    "merchantOnboarding": "商家入驻",
+    "profile": "个人中心",
+    "logout": "退出登录",
+    "logoutSuccess": "已退出登录",
+    "search": "搜索"
+  },
+  "SearchWithHistory": {
+    "placeholder": "搜索内容",
+    "clearAll": "清空全部"
+  },
+  "CartDrawer": {
+    "items": "件物品",
+    "myCart": "我的购物车"
+  },
+  "CartPanel": {
+    "totalItems": "商品共计",
+    "items": "件",
+    "totalPrice": "合计",
+    "submitOrder": "提交订单"
+  },
+  "MerchantCard": {
+    "unfollow": "取消关注",
+    "follow": "关注",
+    "visitNow": "立即访问",
+    "sold": "已售",
+    "views": "浏览量",
+    "rating": "店铺评级"
+  },
+  "Mine": {
+    "dashboard": "仪表盘",
+    "wallet": "我的钱包",
+    "orders": "我的订单",
+    "favoriteProducts": "商品收藏",
+    "followedMerchants": "关注店铺",
+    "settings": "设置",
+    "userId": "ID"
+  },
+  "PageTitle": {
+    "more": "更多"
+  },
+  "ProductCard": {
+    "addCartSuccess": "已加入购物车",
+    "collected": "已收藏",
+    "unCollected": "已取消收藏",
+    "off": "OFF",
+    "addToCart": "添加到购物车",
+    "soldViews": "销售量",
+    "viewsNum": "浏览量"
+  },
+  "AddGoodsCommentDialog": {
+    "title": "评价",
+    "addCommentSuccess": "新增评论成功",
+    "selectProduct": "选择商品",
+    "selectProductRequired": "请选择审核状态",
+    "selectPlaceholder": "请选择",
+    "userName": "会员邮箱/手机号",
+    "userNameRequired": "请输入会员邮箱或手机号",
+    "userNamePlaceholder": "请输入会员邮箱或手机号",
+    "commentContent": "评论内容",
+    "commentContentRequired": "请输入评论内容",
+    "commentContentPlaceholder": "请输入评论内容",
+    "rating": "评分",
+    "ratingRequired": "请选择评分",
+    "commentImages": "评论图片",
+    "cancel": "取消",
+    "confirm": "确定"
+  },
+  "AddressDialog": {
+    "editAddress": "编辑收货地址",
+    "addAddress": "新增收货地址",
+    "recipientName": "收货人姓名",
+    "recipientNameRequired": "请输入收货人姓名",
+    "recipientNamePlaceholder": "请输入收货人姓名",
+    "phone": "手机号",
+    "nationRequired": "请选择国家码",
+    "nationPlaceholder": "国家码",
+    "phoneRequired": "请输入手机号",
+    "phonePlaceholder": "请输入手机号",
+    "email": "邮箱",
+    "emailPlaceholder": "请输入邮箱",
+    "region": "国家/省/市",
+    "regionRequired": "请选择地区",
+    "regionPlaceholder": "请选择国家/省/市",
+    "postCode": "邮编",
+    "postCodePlaceholder": "请输入邮编",
+    "addressDetail": "详细地址",
+    "addressDetailPlaceholder": "请输入详细地址",
+    "isDefault": "是否默认地址",
+    "cancel": "取消",
+    "confirm": "确定"
+  },
+  "CustomerServiceChat": {
+    "title": "客服",
+    "inputPlaceholder": "请输入",
+    "noMessage": "暂无消息",
+    "imageAlt": "图片",
+    "heicUnsupported": "当前浏览器不支持 HEIC 文件上传",
+    "heicUploadFailed": "HEIC 文件无法上传"
+  },
+  "DepositForm": {
+    "currency": "充值币种",
+    "selectCurrency": "请选择充值币种",
+    "network": "区块链网络",
+    "selectNetwork": "请选择区块链网络",
+    "addressLabel": "充值地址",
+    "amount": "充值数量",
+    "enterAmount": "请输入充值数量",
+    "estimatedArrival": "预估到账（当前汇率 {{rate}}）",
+    "proof": "支付凭证（上传截图）",
+    "uploadProof": "请上传支付凭证",
+    "submit": "确定",
+    "success": "操作成功",
+    "addressCopied": "地址已复制！"
+  },
+  "OtpModal": {
+    "enterTransactionPassword": "请输入交易密码",
+    "enter6Digits": "请输入 6 位验证码",
+    "verifyFailed": "验证失败，请重试",
+    "cancel": "取消",
+    "confirm": "确定"
+  },
+  "ProductDetailMain": {
+    "basicInfo": "基本信息",
+    "sales": "销售量",
+    "views": "浏览量",
+    "originalPrice": "原价",
+    "currentPrice": "现价",
+    "shipping": "运费",
+    "freeShipping": "免运费",
+    "quantity": "数量",
+    "totalPrice": "总价",
+    "buyNow": "立即购买",
+    "addToCart": "加入购物车",
+    "pleaseSelect": "请选择",
+    "noStock": "没有库存了",
+    "shippingDesc": "商品下单后，24小时内发货。如下单存在物流管控，订单可能被延时发货，请留意订单物流信息或联系客服"
+  },
+  "ProductDetailModal": {
+    "title": "商品详情",
+    "noGoods": "暂无商品信息",
+    "addSuccess": "添加成功"
+  },
+  "UploadImg": {
+    "upload": "上传",
+    "preview": "图片预览",
+    "onlyImage": "只能上传 JPG/PNG/WEBP/HEIC 格式的图片！",
+    "maxSize": "图片大小不能超过",
+    "unsupportedHeic": "当前浏览器不支持 HEIC 文件上传",
+    "uploadFailed": "上传失败，请稍后重试"
+  },
+  "UploadMultiple": {
+    "upload": "上传",
+    "uploadSuccess": "上传成功",
+    "uploadFailed": "上传失败"
+  },
+  "WithdrawForm": {
+    "withdrawMethod": "提现方式",
+    "selectWithdrawMethod": "请选择提现方式",
+    "crypto": "加密货币",
+    "bankCard": "银行卡",
+    "coinType": "提现币种",
+    "selectCoin": "请选择币种",
+    "enterUSDT": "请输入 USDT",
+    "blockchainNetwork": "区块链网络",
+    "withdrawAddress": "提现地址",
+    "enterWithdrawAddress": "请输入提现地址",
+    "copy": "复制",
+    "bankName": "银行姓名",
+    "enterBankName": "请输入银行姓名",
+    "bankBranch": "开户行",
+    "enterBankBranch": "请输入开户行",
+    "bankCardNumber": "银行卡号",
+    "enterBankCardNumber": "请输入银行卡号",
+    "withdrawAmount": "提现金额",
+    "enterWithdrawAmount": "请输入提现金额",
+    "amountMustBeGreaterZero": "提现金额必须大于0",
+    "currentBalance": "当前余额",
+    "actualReceived": "实际到账",
+    "fee": "手续费",
+    "confirmSubmit": "确认提交",
+    "copied": "已复制！",
+    "inputAddressFirst": "请先输入提现地址/银行卡号",
+    "operationSuccess": "操作成功"
+  },
+  "order": {
+    "pendingPayment": "待支付",
+    "pendingShipment": "待发货",
+    "pendingReceive": "待收货",
+    "pendingReview": "待评价",
+    "refund": "退款/售后"
+  },
+  "refund": {
+    "pending": "审核中",
+    "success": "成功",
+    "failed": "失败"
+  },
+  "DeliveryInformation": {
+    "title": "你在哪里送货？",
+    "desc1": "要了解我们是否运送到您所在的地区，请在您要购买的商品上输入您的邮政编码。",
+    "desc2": "产品直接从我们的供应商处发货，我们的全球仓库遍布 112 个国家/地区。",
+    "pickup": {
+      "title": "去哪里取？",
+      "desc1": "我们在",
+      "highlight1": "APP-NAME 商店、Sainsbury's 超市",
+      "desc2": "和全球仓库的收集点全天候运营。",
+      "desc3": "对于可用于快速通道交付的物品，请根据您所在的位置从多个时间段中进行选择。订单将送货上门并存放在安全可靠的地方。",
+      "alert1": "英格兰、苏格兰和威尔士提供大型和笨重物品（需要两人或多人搬运的物品，例如沙发和床），因此我们可以将它们安全地运送到您选择的任何地方。",
+      "alert2": "我们友好的司机之一将在同一天与您联系，讨论送货细节。如果您正在自我隔离，请告知我们，以便我们重新安排您的交货日期。",
+      "warning": "我们目前对大件物品的交付有很高的需求。如果您的交货延迟，我们会尽快给您发送消息。我们正在努力为我们的客户提供最好的服务，感谢您一直以来的耐心和支持。"
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": "如果我同时订购大件和小件商品怎么办？",
+      "a1_1": "将它们送到您手中的最快方式是单独运送。",
+      "a1_2": "不用担心; 您只需支付一次运费。",
+      "a1_3": "请查看您的订单确认电子邮件以获取更多信息。",
+      "q2": "如果我不在家怎么办？",
+      "a2_1": "小物品将留在安全可靠的地方，在看不见的地方，或应您的要求交给您的邻居。",
+      "a2_2": "帮助热线",
+      "a2_3": "联系您，以便重新安排送货时间并选择最适合您的日期和时间段！",
+      "q3": "有多少人运送大件物品？",
+      "a3_1": "大件物品，如沙发、冰柜等，可以",
+      "a3_2": "两人送货",
+      "a3_3": "。我们友好的司机将在送货当天与您联系，并将您的订单安全地送至您选择的地点。",
+      "q4": "COVID-19：对交付的影响？",
+      "a4_1": "我们仍然提供许多商品的送货服务，包括我们的游戏机预购。您将收到短信提醒，并在交货前收到快递员的跟踪号码。",
+      "a4_2": "货物将在安全区域送货上门；大件物品将被运送到安全的地方。我们友好的司机之一将在同一天与您联系，讨论大件物品的运输细节。如果您正在自我隔离，请告知我们，以便重新安排交货日期。"
+    },
+    "cta": "查看送货覆盖范围"
+  },
+  "PrivacyPolicy": {
+    "header": {
+      "label": "📜 隐私政策",
+      "title": "APP-NAME 隐私政策",
+      "desc": "最后更新：2025年10月 | 保护您的隐私是我们最优先的事项"
+    },
+    "sections": {
+      "1": {
+        "title": "1、简介",
+        "content": {
+          "welcome": "1.1 欢迎访问 APP-NAME 商店网站",
+          "desc1": "APP-NAME 认真履行适用隐私法律法规（“隐私法”）规定的责任，并承诺尊重我们 APP-NAME 网站和移动应用程序（“平台”）所有用户的隐私权和顾虑。",
+          "alert": "我们认识到您委托给我们的个人数据的重要性，并相信我们有责任妥善管理、保护和处理您的个人数据。",
+          "definition": "个人数据是指关于可以从该数据或从该数据和组织已经或可能可以访问的其他信息中识别的个人的数据。",
+          "consent": "通过使用服务，您特此同意我们按照本隐私政策收集、使用、披露和处理您的个人数据。"
+        }
+      },
+      "2": {
+        "title": "2、APP-NAME 何时收集个人数据？",
+        "content": {
+          "scenariosTitle": "常见收集场景",
+          "online": "📱 线上互动",
+          "onlineItems": [
+            "访问网站",
+            "提交表单",
+            "Cookie 记录"
+          ],
+          "offline": "🤝 线下互动",
+          "offlineItems": [
+            "电话沟通",
+            "面对面会议",
+            "邮件交流"
+          ],
+          "thirdParty": "我们还可能从第三方（物流、支付提供商等）获取您的信息"
+        }
+      },
+      "3": {
+        "title": "3、APP-NAME 收集哪些个人数据？",
+        "categories": [
+          {
+            "icon": "👤",
+            "label": "基本信息",
+            "items": [
+              "姓名",
+              "邮箱",
+              "电话",
+              "地址"
+            ]
+          },
+          {
+            "icon": "🎂",
+            "label": "身份信息",
+            "items": [
+              "出生日期",
+              "性别"
+            ]
+          },
+          {
+            "icon": "📸",
+            "label": "多媒体",
+            "items": [
+              "照片",
+              "音频",
+              "视频"
+            ]
+          },
+          {
+            "icon": "💼",
+            "label": "职业信息",
+            "items": [
+              "教育背景",
+              "就业历史"
+            ]
+          },
+          {
+            "icon": "📍",
+            "label": "位置数据",
+            "items": [
+              "地理位置"
+            ]
+          },
+          {
+            "icon": "📊",
+            "label": "行为数据",
+            "items": [
+              "浏览记录",
+              "偏好设置"
+            ]
+          }
+        ],
+        "warning": "您可以随时选择退出数据收集，但可能影响部分功能使用"
+      },
+      "4": {
+        "title": "4、其他资料的收集",
+        "device": {
+          "title": "设备信息",
+          "items": [
+            "IP 地址",
+            "操作系统",
+            "浏览器类型",
+            "唯一设备 ID"
+          ]
+        },
+        "location": {
+          "title": "位置服务",
+          "desc": "使用 GPS/Wi-Fi 收集精确位置信息",
+          "note": "可在设备设置中随时禁用"
+        }
+      },
+      "5": {
+        "title": "5、Cookies",
+        "titleLabel": "Cookie 政策",
+        "purpose": {
+          "title": "用途",
+          "items": [
+            "个性化内容推荐",
+            "广告投放优化",
+            "网站使用分析"
+          ]
+        },
+        "management": {
+          "title": "管理方式",
+          "items": [
+            "浏览器设置禁用",
+            "移动端个性化广告退出",
+            "可能影响部分功能"
+          ]
+        }
+      },
+      "6": {
+        "title": "6、我们如何使用您提供给我们的信息？",
+        "mainUse": "主要用途",
+        "items": [
+          {
+            "icon": "✅",
+            "label": "服务提供"
+          },
+          {
+            "icon": "📧",
+            "label": "沟通联系"
+          },
+          {
+            "icon": "🔍",
+            "label": "数据分析"
+          },
+          {
+            "icon": "🚀",
+            "label": "功能优化"
+          },
+          {
+            "icon": "📈",
+            "label": "市场营销"
+          },
+          {
+            "icon": "⚖️",
+            "label": "法律合规"
+          }
+        ],
+        "unsubscribe": "您可以随时取消订阅 营销信息"
+      },
+      "7": {
+        "title": "7、我们保留哪些信息，APP-NAME如何保护用户信息？",
+        "security": {
+          "title": "安全措施",
+          "items": [
+            "物理安全防护",
+            "管理制度保障",
+            "电子加密技术",
+            "权限访问控制"
+          ]
+        },
+        "retention": {
+          "title": "保留期限",
+          "desc": "仅在必要期限内保留，满足以下条件后删除：",
+          "items": [
+            "关系终止",
+            "目的达成",
+            "法律要求满足"
+          ]
+        }
+      },
+      "8": {
+        "title": "8、APP-NAME 是否向外部各方披露从访问者那里收集的信息？",
+        "recipients": [
+          "子公司/关联公司",
+          "交易对方",
+          "服务提供商",
+          "政府机构",
+          "并购方",
+          "广告合作伙伴"
+        ],
+        "note": "我们确保所有第三方遵守相同的数据保护标准"
+      }
+    },
+    "quickAccess": {
+      "title": "快速访问",
+      "items": [
+        {
+          "label": "撤回同意",
+          "icon": "↩️"
+        },
+        {
+          "label": "数据访问",
+          "icon": "👁️"
+        },
+        {
+          "label": "Cookie 设置",
+          "icon": "🍪"
+        },
+        {
+          "label": "联系我们",
+          "icon": "📧"
+        }
+      ]
+    },
+    "footer": {
+      "contact": "如有任何疑问，请联系我们的 数据保护官",
+      "email": "support@APP-NAME.com",
+      "copyright": "© 2025 APP-NAME. 保留所有权利。"
+    },
+    "toggle": {
+      "expand": "展开",
+      "collapse": "收起"
+    }
+  },
+  "PrivacyPolicyPage": {
+    "header": "隐私政策",
+    "title": "APP-NAME 隐私政策",
+    "lastUpdated": "最后更新：2025年10月 | 保护您的隐私是我们最优先的事项",
+    "expand": "展开",
+    "collapse": "收起",
+    "section1Title": "1、简介",
+    "section1_1": "1.1 欢迎访问 APP-NAME 商店网站",
+    "section1_2": "APP-NAME 认真履行适用隐私法律法规（“隐私法”）规定的责任，并承诺尊重我们 APP-NAME 平台所有用户的隐私权。",
+    "section1_3": "🔒 我们认识到您委托给我们的个人数据的重要性，并相信我们有责任妥善管理、保护和处理您的个人数据。",
+    "section1_4": "个人数据 是指关于可以识别个人的数据。",
+    "section1_5": "通过使用服务，您同意我们按照本隐私政策收集、使用、披露和处理您的个人数据。",
+    "section2Title": "2、APP-NAME 何时收集个人数据？",
+    "section2_1": "常见收集场景",
+    "section2_2": "📱 线上互动",
+    "section2_3": "访问网站",
+    "section2_4": "提交表单",
+    "section2_5": "Cookie 记录",
+    "section2_6": "🤝 线下互动",
+    "section2_7": "电话沟通",
+    "section2_8": "面对面会议",
+    "section2_9": "邮件交流",
+    "section2_10": "我们还可能从第三方获取您的信息",
+    "section3Title": "3、APP-NAME 收集哪些个人数据？",
+    "section3_1_label": "基本信息",
+    "section3_1_1": "姓名",
+    "section3_1_2": "邮箱",
+    "section3_1_3": "电话",
+    "section3_1_4": "地址",
+    "section3_2_label": "身份信息",
+    "section3_2_1": "出生日期",
+    "section3_2_2": "性别",
+    "section3_3_label": "多媒体",
+    "section3_3_1": "照片",
+    "section3_3_2": "音频",
+    "section3_3_3": "视频",
+    "section3_4_label": "职业信息",
+    "section3_4_1": "教育背景",
+    "section3_4_2": "就业历史",
+    "section3_5_label": "位置数据",
+    "section3_5_1": "地理位置",
+    "section3_6_label": "行为数据",
+    "section3_6_1": "浏览记录",
+    "section3_6_2": "偏好设置",
+    "section3_warning": "⚠️ 您可以随时选择退出数据收集，但可能影响部分功能使用",
+    "section4Title": "4、数据使用方式",
+    "section4_1": "我们如何使用您的数据",
+    "section4_2": "提供和改进服务",
+    "section4_3": "个性化推荐",
+    "section4_4": "安全保护",
+    "section4_5": "法律合规",
+    "section4_6": "数据共享",
+    "section4_7": "我们可能与第三方共享信息以提供服务。",
+    "section4_8": "共享信息将严格遵守隐私政策和法律法规。",
+    "section5Title": "5、Cookies 与追踪技术",
+    "section5_1": "我们如何使用 Cookies",
+    "section5_2": "必要 Cookies",
+    "section5_3": "保证网站基础功能",
+    "section5_4": "识别登录状态",
+    "section5_5": "防止欺诈",
+    "section5_6": "性能 Cookies",
+    "section5_7": "分析网站使用情况",
+    "section5_8": "优化服务",
+    "section5_9": "可选择关闭",
+    "section6Title": "6、数据保护措施",
+    "section6_1": "我们采取的安全措施",
+    "section6_2": "访问控制",
+    "section6_3": "加密技术",
+    "section6_4": "定期备份",
+    "section6_5": "安全培训",
+    "section6_6": "系统监控",
+    "section6_7": "审计与合规",
+    "section6_8": "请勿共享您的账户密码，确保个人数据安全",
+    "section7Title": "7、用户权利",
+    "section7_1": "访问与控制权",
+    "section7_2": "查询所持有的个人信息",
+    "section7_3": "更正不准确数据",
+    "section7_4": "请求删除数据",
+    "section7_5": "限制或拒绝处理",
+    "section7_6": "其他权利",
+    "section7_7": "您有权随时撤回同意，并提出隐私问题。",
+    "section7_8": "数据可携带权",
+    "section7_9": "反对处理权",
+    "section7_10": "投诉权",
+    "section8Title": "8、联系我们",
+    "section8_1": "如果您对隐私政策有疑问",
+    "section8_2": "通过客服邮箱联系我们",
+    "section8_3": "拨打服务热线",
+    "section8_4": "通过在线聊天",
+    "section8_5": "通过社交媒体账号",
+    "section8_6": "书面信件",
+    "section8_7": "提交网页反馈表单",
+    "section8_warning": "⚠️ 我们会在合理时间内处理您的请求，但某些操作可能需要额外验证"
+  },
+  "ReturnsPolicy": {
+    "title": "我改变主意了",
+    "subtitle1": "您可以在取货或送货后 ",
+    "subtitle2": "15 天内退货",
+    "subtitle3": "。",
+    "mustBe": "您的物品必须是：",
+    "refundMethod": "退款将通过原始付款方式处理：",
+    "refundUsdtEth": "使用 USDT 或 ETH，需要一个工作日才能显示在您的账户中",
+    "refundWire": "使用银行电汇，退款最多可能需要 30 天，具体取决于您的银行",
+    "requirements1": "未使用且具有所有原始组件",
+    "requirements2": "在原始包装中（如果适用，带有标签）",
+    "requirements3": "处于转售状态",
+    "requirements4": "有购买凭证",
+    "requirements5": "与产品随附的任何赠品一起使用",
+    "productSupport": "产品支持",
+    "productSupportDesc1": "在大多数情况下，如果您有任何物品问题，您可以在家中舒适地查看我们的",
+    "productSupportDesc2": "产品支持网站",
+    "productSupportDesc3": "，看看我们是否可以解决问题。在那里，您可以访问有关产品和我们公司的常见问题解答、运输和取件、退货和退款。",
+    "goodsIssue": "我的货物有问题",
+    "issueNotice1": "如果您仍然需要退货（前 15 天内），我们将为您提供换货、更换或退款。",
+    "issueNotice2": "在此期限之后，只要产品仍在保修期内，我们将使用我们的专业维修代理安排维修，或者如果无法维修，则更换或更换您的商品。",
+    "issueDesc": "最快的退货方式是通过我们位于 112 个国家/地区的全球仓储中心。我们可以接受除大件物品外的大多数物品，即使它们最初是送货上门的。如果您要退回大件商品，请向下滚动以开始实时聊天或前往我们的帮助热线链接。",
+    "precautionsTitle": "防范措施",
+    "precautionsDesc": "某些商品，如食品、穿孔首饰和内衣，只有在有缺陷的情况下才能换货或退款。我们的网站将指明哪些项目不可退款。",
+    "precautions1": "如果您退回 DVD、音乐或软件产品，它们必须是未使用过的并且处于原始密封包装中",
+    "precautions2": "如果商品或包装严重损坏，我们保留减少退款金额的权利",
+    "precautions3": "我们可能会要求提供产品序列号或类似信息，以检查我们是否提供了该物品",
+    "precautions4": "当然，这些都不会影响您的消费者权益",
+    "precautionsNote": "如果我们收取您的货物，我们将在退款前检查它们。请注意，如果商品已检查但未按说明退回，我们保留根据退回商品的情况拒绝退款或提供部分退款的权利。",
+    "proof1_1": "收银机收据",
+    "proof1_2": "电子收据",
+    "proof1_3": "您的订单号",
+    "proof1_4": "电子邮件确认",
+    "proof2_1": "您的交易账单",
+    "proof2_2": "用于购买商品的电子邮件地址",
+    "faqTitle": "常见问题",
+    "cta": "开始退货流程"
+  },
+  "sellerRating": {
+    "title": "卖家评分系统",
+    "intro": "简介",
+    "introContent": "在这里，我们将向您介绍卖家评分系统及其生成和使用方式。",
+    "website": "相关网站",
+    "parties": "相关方",
+    "allSellers": "所有卖家",
+    "section1": {
+      "title": "如何进入卖家评分系统？",
+      "encourage": "卖家评分系统鼓励卖家保持高服务标准，为我们的买家创造良好的购物体验。",
+      "deduction": "未达到承诺目标将扣分。",
+      "accessPath": {
+        "prefix": "您可以在【",
+        "path": "卖家中心 &gt;&gt; 卖家信用评分",
+        "suffix": "】页面查看您的评分。"
+      }
+    },
+    "section2": {
+      "title": "评分是如何产生的？",
+      "deductionCondition": "仅当满足买方的最低期望时才会收取积分。同时，这也会提醒卖家一些问题还需要改进。",
+      "updateTime": "卖家评分系统会在每个月的第一天根据卖家上月的违规情况更新评分。您可以点击对应的评分维度关键词查看完整的政策。"
+    },
+    "table1": {
+      "headers": {
+        "measure": "计分测量",
+        "spec": "规格",
+        "deduction": "每月扣分"
+      },
+      "max10": "最多10分",
+      "max20": "最多20分",
+      "rows": {
+        "nfr": {
+          "title": "不履行率，NFR",
+          "desc": "近7天卖家取消或退货的订单数量占订单总数的30%"
+        },
+        "lsr": {
+          "title": "迟发率, LSR",
+          "desc": "近7天内卖家延迟72小时以上的订单数量占订单总数的20%"
+        },
+        "customerService": {
+          "title": "客户服务",
+          "rude": "粗鲁或辱骂性的聊天或评论",
+          "cancelRequests": "要求买家本月取消订单超过 5 次"
+        },
+        "breach": {
+          "title": "不守诺言",
+          "lowResponse": "买家回复率低80%",
+          "violatePromise": "卖方未按承诺向买方提供服务，损害买方权益"
+        }
+      }
+    },
+    "section3": {
+      "title": "与一定积分相关的惩罚是什么？"
+    },
+    "table2": {
+      "headers": {
+        "points": "总积分",
+        "level": "处罚级别"
+      },
+      "level1": "1等级",
+      "level2": "2等级",
+      "level3": "3等级",
+      "level4": "4等级",
+      "level5": "5等级",
+      "level6": "6等级",
+      "penalties": {
+        "marketingBan": "禁止营销活动（28 天）",
+        "freeShippingRemoval": "删除免运费或运费回扣（28 天）",
+        "deboost": "Deboost 上市（28 天）",
+        "loanRestriction": "限制卖方贷款（28 天）",
+        "listingBlock": "阻止列表创建和编辑（28 天）",
+        "accountFreeze": "冻结账户（28天）"
+      }
+    },
+    "section4": {
+      "title": "客户服务规则及实施细则",
+      "rudeQuestion": "什么是粗鲁或辱骂性的聊天或评论？",
+      "rudeDefinition": "恶意骚扰是指会员对他人进行侮辱、诅咒、威胁、评论等言语攻击或采取不正当手段骚扰他人，损害他人合法权益的行为。",
+      "rudeHandling": "如何处理粗鲁或辱骂性的聊天或评论？",
+      "rudePenalty": "对业务权限的一般和严重违规、管理和控制进行扣分。",
+      "rudeScenario": "适用情形：恶意骚扰是指会员对他人进行辱骂、诅咒、威胁等言语攻击，或者以恶劣手段骚扰他人，损害他人合法权益的行为。"
+    },
+    "section5": {
+      "title": "违约适用的措施",
+      "breachQuestion": "什么是违约？",
+      "breachDefinition": "违约是指卖家未向买家提供服务，侵犯买家权益，未按承诺向APP-NAME履行义务。卖方必须继续履行法定或约定的更换、退货和退款。",
+      "measure": "适用措施：扣分",
+      "specificMeasures": "具体措施",
+      "generalViolation": "1、如卖家在特定情况下对已付款订单或相应商品或服务还有其他需要履行的承诺，每项一般违规扣5分。",
+      "seriousViolation": {
+        "prefix": "2、卖家违反以下承诺之一，每严重一次扣10分：",
+        "item1": "1）APP-NAME判断卖家应承担退款等售后保障责任，卖家拒不承担；",
+        "item2": "2）APP-NAME判断卖家确实应承担7天无理由退换货的售后保障责任，但卖家拒不承担；",
+        "item3": "3) 未经买卖双方协商，拒绝或延迟向买家发送承诺的试用商品；",
+        "item4": "4) 卖家在支付订单后72小时内未处理订单；",
+        "activity": "参加APP-NAME官方活动的卖家，未能完成活动要求（发货时间除外），违反APP-NAME官方发布的其他管理内容（包括但不限于规则、规范、类目管理规范、行业标准）。规定说明符合具体情况的，从其规定。"
+      }
+    },
+    "section6": {
+      "title": "处罚会持续多久？",
+      "duration": {
+        "prefix": "处罚将在 ",
+        "days": "28 天",
+        "suffix": " 后结束。只要采取相应措施，改善现有店铺业绩并保持达标，被制裁的卖家将重新获得一定的卖家权利。"
+      }
+    },
+    "section7": {
+      "title": "违规处理",
+      "generalCase": "如果情况一般",
+      "generalDesc": "消费者发起投诉，APP-NAME判断投诉有理。一般违规每次扣5分。完成 5 个订单可恢复 5 点。",
+      "seriousCase": "情节严重的",
+      "seriousDesc": "消费者投诉，APP-NAME判断投诉有理，情节严重的每项扣20分。完成 20 个订单可恢复 20 点。",
+      "extremeCase": "情节严重的",
+      "extremeDesc": "冻结账号，28日内关闭店铺。",
+      "example1": {
+        "title": "例1：卖家A在第3周获得3分，将在第7周重新获得权利"
+      },
+      "example2": {
+        "title": "例2：卖家B在第3周获得3分，第5周获得3分。这些积分会累积起来定义等级，第9周会夺回权利"
+      },
+      "example3": {
+        "title": "例3：卖家C新季度开始前一周获得3分，季度开始后获得3分，新获得的积分将重新定义等级"
+      }
+    },
+    "section8": {
+      "title": "如何进行评分申诉？",
+      "appeal": {
+        "prefix": "单击 ",
+        "link": "求助热线链接",
+        "suffix": " 进行申诉。如果您申诉成功，我们将取消您的扣分并恢复您相应的卖家权利。"
+      }
+    }
+  }
+}

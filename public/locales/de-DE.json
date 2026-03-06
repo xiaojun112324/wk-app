@@ -1,0 +1,1226 @@
+{
+  "common": {
+     "store": "Geschäft",
+  "goods": "Waren",
+    "category": "Kategorie",
+    "categories": "Alle Kategorien",
+    "wishlist": "Wunschliste",
+    "checkout": "Zur Kasse",
+    "order": "Bestellung",
+    "account": "Konto",
+    "settings": "Einstellungen",
+    "language": "Sprache",
+    "currency": "Währung",
+    "search": "Suchen",
+    "searchPlaceholder": "Produkte, Marken oder Kategorien suchen",
+    "buyNow": "Jetzt kaufen",
+    "viewMore": "Mehr anzeigen",
+    "viewAll": "Alle anzeigen",
+    "loadMore": "Mehr laden",
+    "confirm": "Bestätigen",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "save": "Speichern",
+    "submit": "Absenden",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "yes": "Ja",
+    "no": "Nein",
+    "success": "Erfolg",
+    "failed": "Fehlgeschlagen",
+    "loading": "Laden...",
+    "noData": "Keine Daten",
+    "outOfStock": "Nicht vorrätig",
+    "inStock": "Vorrätig",
+    "soldOut": "Ausverkauft",
+    "newArrival": "Neu eingetroffen",
+    "bestSeller": "Bestseller",
+    "discount": "Rabatt",
+    "price": "Preis",
+    "quantity": "Menge",
+    "total": "Gesamt",
+    "subtotal": "Zwischensumme",
+    "shipping": "Versand",
+    "tax": "Steuer",
+    "grandTotal": "Gesamtbetrag",
+    "payment": "Zahlung",
+    "paymentMethod": "Zahlungsmethode",
+    "delivery": "Lieferung",
+    "contactUs": "Kontaktieren Sie uns",
+    "helpCenter": "Hilfe-Center",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "termsOfService": "Nutzungsbedingungen",
+    "logout": "Abmelden",
+    "forgotPassword": "Passwort vergessen?",
+    "rememberMe": "Angemeldet bleiben",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "welcomeBack": "Willkommen zurück",
+    "or": "oder",
+    "continue": "Weiter",
+    "filter": "Filtern",
+    "sort": "Sortieren",
+    "clear": "Zurücksetzen",
+    "viewDetails": "Details anzeigen",
+    "reviews": "Bewertungen",
+    "addReview": "Bewertung hinzufügen",
+    "rating": "Bewertung",
+    "share": "Teilen",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "backToHome": "Zur Startseite",
+    "404Title": "Seite nicht gefunden",
+    "404Desc": "Entschuldigung, die gesuchte Seite existiert nicht.",
+    "retry": "Erneut versuchen"
+  },
+  "login": {
+    "title": "Kontoanmeldung",
+    "subtitle": "Willkommen! Bitte geben Sie Ihre Kontodaten ein.",
+    "tabEmail": "Anmeldung per E-Mail",
+    "tabPhone": "Anmeldung per Telefon",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "E-Mail eingeben",
+    "emailRequired": "Bitte E-Mail eingeben",
+    "phoneLabel": "Telefonnummer",
+    "phonePlaceholder": "Telefonnummer eingeben",
+    "phoneRequired": "Bitte Telefonnummer eingeben",
+    "areaCodePlaceholder": "Ländercode",
+    "areaCodeRequired": "Bitte Ländercode auswählen",
+    "passwordLabel": "Passwort",
+    "passwordPlaceholder": "Passwort eingeben",
+    "passwordRequired": "Bitte Passwort eingeben",
+    "passwordPattern": "Das Passwort muss 6–12 Zeichen ohne Leerzeichen enthalten.",
+    "noAccount": "Kein Konto?",
+    "register": "Registrieren",
+    "forgotPassword": "Passwort vergessen?",
+    "loginButton": "Anmelden",
+    "successMessage": "Erfolgreich angemeldet!"
+  },
+  "register": {
+    "title": "Registrierung",
+    "subtitle": "Willkommen! Bitte geben Sie Ihre Daten ein.",
+    "tabEmail": "E-Mail",
+    "tabPhone": "Telefon",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "E-Mail eingeben",
+    "emailRequired": "Bitte E-Mail eingeben",
+    "emailInvalid": "Ungültiges E-Mail-Format.",
+    "phoneLabel": "Telefonnummer",
+    "phonePlaceholder": "Telefonnummer eingeben",
+    "phoneRequired": "Bitte Telefonnummer eingeben",
+    "areaCodePlaceholder": "Ländercode",
+    "areaCodeRequired": "Bitte Ländercode auswählen",
+    "passwordLabel": "Passwort",
+    "passwordPlaceholder": "Passwort eingeben",
+    "passwordRequired": "Bitte Passwort eingeben",
+    "passwordPattern": "Das Passwort muss 6–12 Zeichen ohne Leerzeichen enthalten.",
+    "confirmPasswordLabel": "Passwort bestätigen",
+    "confirmPasswordPlaceholder": "Passwort erneut eingeben",
+    "confirmPasswordRequired": "Bitte Passwort erneut eingeben",
+    "passwordMismatch": "Passwörter stimmen nicht überein!",
+    "hasAccount": "Bereits ein Konto?",
+    "login": "Anmelden",
+    "registerButton": "Registrieren",
+    "successMessage": "Registrierung erfolgreich!"
+  },
+  "home": {
+    "bannerTitleLine1": "Aktualisieren Sie Ihren Stil",
+    "bannerTitleLine2": "Tauchen Sie ein in Luxus",
+    "bannerSubtitle": "Entdecken Sie die neuesten Kollektionen, die für moderne Eleganz entworfen wurden. Erneuern Sie Ihre Garderobe mit zeitloser Mode.",
+    "recommendCategory": "Empfohlene Kategorien",
+    "dailyNewArrival": "Tägliche Neuheiten",
+    "recommendProduct": "Empfohlene Produkte",
+    "recommendStore": "Empfohlene Shops",
+    "hotRecommend": "Beliebte Empfehlungen",
+    "featureAuthentic": "100 % Original",
+    "featureReturn7Days": "Rückgabe innerhalb von 7 Tagen",
+    "featureShippingDiscount": "Versandrabatt",
+    "featureSecurePayment": "Sichere Zahlung"
+  },
+  "products": {
+    "category": "Kategorie",
+    "allProducts": "Alle Produkte",
+    "comprehensive": "Übersicht",
+    "sales": "Verkäufe",
+    "price": "Preis",
+    "newArrival": "Neuheiten"
+  },
+  "merchantRegister": {
+    "title": "Händlerregistrierung",
+    "header": "APP-NAME Händlerregistrierung",
+    "loginTipPrefix": "Wenn Sie bereits ein Händlerkonto haben, ",
+    "login": "klicken Sie hier zum Anmelden",
+    "description": "Unser Partnerprogramm bietet umfassende Marketing- und Serviceunterstützung. Das Kundensupport-Team bietet professionelle Hilfe und Beratung zur Optimierung der Produktexposition und Verkaufsstrategien. Treten Sie jetzt bei! Schaffen Sie mehr Geschäftsmöglichkeiten und wachsen Sie gemeinsam!",
+    "merchantInfo": "Händlerinformationen",
+    "storeLogo": "Shop-Logo",
+    "storeLogoTip": "Shop-Logo hochladen",
+    "shopName": "Shop-Name",
+    "shopNameTip": "Shop-Namen eingeben",
+    "shopNamePlaceholder": "Shop-Namen eingeben, Sonderzeichen verboten",
+    "shopAddress": "Shop-Adresse",
+    "shopAddressTip": "Shop-Adresse eingeben",
+    "shopAddressPlaceholder": "Shop-Adresse eingeben, Sonderzeichen verboten",
+    "country": "Land",
+    "countryTip": "Land auswählen",
+    "countryPlaceholder": "Land auswählen",
+    "idNumber": "Ausweis-/Passnummer",
+    "idNumberTip": "Ausweisnummer eingeben",
+    "idNumberPlaceholder": "Ausweisnummer eingeben",
+    "realName": "Echter Name",
+    "realNameTip": "Echten Namen eingeben",
+    "realNamePlaceholder": "Echten Namen eingeben",
+    "idCardFront": "Ausweis Vorderseite",
+    "idCardFrontTip": "Ausweis Vorderseite hochladen",
+    "idCardBack": "Ausweis Rückseite",
+    "idCardBackTip": "Ausweis Rückseite hochladen",
+    "verifyType": "Verifizierungsmethode",
+    "verifyTypeTip": "Verifizierungsmethode auswählen",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "contact": "Benutzername (E-Mail oder Telefon)",
+    "contactTip": "Benutzernamen eingeben",
+    "contactPlaceholder": "E-Mail oder Telefon eingeben",
+    "password": "Anmeldepasswort",
+    "passwordTip": "Anmeldepasswort eingeben",
+    "passwordPattern": "Das Passwort muss 6–12 Zeichen ohne Leerzeichen enthalten.",
+    "passwordPlaceholder": "Anmeldepasswort eingeben",
+    "confirmPassword": "Passwort bestätigen",
+    "confirmPasswordTip": "Passwörter stimmen nicht überein",
+    "confirmPasswordPlaceholder": "Anmeldepasswort erneut eingeben",
+    "inviteCode": "Einladungscode",
+    "inviteCodePlaceholder": "Einladungscode eingeben (optional)",
+    "submit": "Antrag senden",
+    "submitSuccess": "Antrag erfolgreich gesendet, wartet auf Genehmigung!",
+    "areaCodeTip": "Ländercode auswählen",
+    "areaCodePlaceholder": "Ländercode auswählen",
+    "phonePlaceholder": "Telefonnummer eingeben"
+  },
+  "mineDetail": {
+    "goodsCollect": "Produktsammlung",
+    "storeCollect": "Gefolgte Shops",
+    "defaultAddress": "Standardadresse",
+    "addAddress": "Adresse hinzufügen",
+    "followedStores": "Gefolgte Shops",
+    "collectedGoods": "Gesammelte Produkte"
+  },
+  "favoriteProducts": {
+    "collectedGoods": "Gesammelte Produkte"
+  },
+  "mineMerchant": {
+    "followedShops": "Gefolgte Shops"
+  },
+  "mine": {
+    "shop": "Händlerregistrierung",
+    "userIdPrefix": "ID:",
+    "balanceLabel": "Guthaben",
+    "deposit": "Einzahlen",
+    "withdraw": "Abheben",
+    "myOrders": "Meine Bestellungen",
+    "all": "Alle",
+    "orderStatus": {
+      "pending": "Zahlung ausstehend",
+      "shipping": "Versand ausstehend",
+      "receiving": "Empfang ausstehend",
+      "review": "Bewertung ausstehend",
+      "refund": "Rückerstattung/Kundendienst"
+    },
+    "moreFeatures": "Weitere Funktionen",
+    "setting": "Einstellungen",
+    "language": "Sprache",
+    "wallet": "Wallet",
+    "favorite": "Favoriten"
+  },
+  "OrderDetail": {
+    "myOrders": "Meine Bestellungen",
+    "orderInfo": "Bestellinformationen",
+    "orderNo": "Bestellnummer",
+    "time": "Zeit",
+    "orderPrice": "Bestellbetrag",
+    "orderState": "Bestellstatus",
+    "refundState": "Rückerstattungsstatus",
+    "recipientInfo": "Empfängerinformationen",
+    "name": "Name",
+    "phone": "Telefon",
+    "country": "Land",
+    "addressDetail": "Detaillierte Adresse",
+    "productInfo": "Produktinformationen",
+    "unitPrice": "Einzelpreis",
+    "quantity": "Menge",
+    "subtotal": "Zwischensumme",
+    "total": "Gesamt",
+    "unknown": "Unbekannt"
+  },
+  "Orders": {
+    "all": "Alle",
+    "pending": "Zahlung ausstehend",
+    "shipping": "Versand ausstehend",
+    "receiving": "Empfang ausstehend",
+    "review": "Bewertung ausstehend",
+    "refund": "Rückerstattung/Kundendienst",
+    "confirmReceivingTitle": "Produktempfang bestätigen?",
+    "confirm": "Bestätigen",
+    "cancel": "Abbrechen",
+    "orderNo": "Bestellnummer",
+    "orderDesc": "Bestellbeschreibung",
+    "orderPrice": "Betrag",
+    "status": "Status",
+    "actions": "Aktionen",
+    "viewOrder": "Bestellung anzeigen",
+    "remindShipping": "Versand erinnern",
+    "remindShippingSuccess": "Verkäufer wurde benachrichtigt.",
+    "refundRequest": "Rückerstattungsantrag",
+    "confirmReceiving": "Empfang bestätigen",
+    "addComment": "Kommentar hinzufügen",
+    "unknown": "Unbekannt"
+  },
+  "Wallet": {
+    "balance": "Guthaben",
+    "recharge": "Aufladen",
+    "withdraw": "Abheben",
+    "history": "Wallet-Verlauf",
+    "createTime": "Erstellungsdatum",
+    "rechargeNo": "Aufladungsnummer",
+    "rechargeAmount": "Aufladebetrag",
+    "rechargeType": "Währungsprotokoll",
+    "rechargeAddress": "Aufladeadresse",
+    "withdrawNo": "Abhebungsnummer",
+    "withdrawAmount": "Abhebungsbetrag",
+    "withdrawType": "Währungsprotokoll",
+    "withdrawAddress": "Empfangsadresse",
+    "fee": "Gebühr",
+    "realAmount": "Tatsächlicher Betrag",
+    "status": "Status",
+    "unpaid": "Nicht bezahlt",
+    "success": "Erfolg",
+    "fail": "Fehlgeschlagen",
+    "pending": "In Bearbeitung",
+    "processed": "Verarbeitet",
+    "rejected": "Abgelehnt",
+    "orderNo": "Nummer"
+  },
+  "AccountPanel": {
+    "balance": "Guthaben",
+    "recharge": "Aufladen",
+    "withdraw": "Abheben"
+  },
+  "LogisticsDialog": {
+    "title": "Logistikinformationen",
+    "empty": "Keine Logistikinformationen",
+    "close": "Schließen"
+  },
+  "OrderCard": {
+    "viewOrder": "Bestellung anzeigen",
+    "remindShipping": "Versand erinnern",
+    "requestRefund": "Rückerstattung beantragen",
+    "confirmReceiving": "Empfang bestätigen",
+    "payNow": "Jetzt bezahlen",
+    "cancelOrder": "Bestellung stornieren",
+    "addComment": "Kommentar hinzufügen",
+    "refunded": "Rückerstattet"
+  },
+  "RefundDialog": {
+    "title": "Rückerstattungsantrag",
+    "refundReason": "Rückerstattungsgrund",
+    "refundReasonPlaceholder": "Rückerstattungsgrund eingeben",
+    "refundRemark": "Rückgabebemerkung",
+    "refundRemarkPlaceholder": "Rückgabebemerkung eingeben",
+    "cancel": "Abbrechen",
+    "submit": "Absenden"
+  },
+  "Search": {
+    "comprehensive": "Übersicht",
+    "soldNum": "Verkaufsmenge",
+    "price": "Preis",
+    "newest": "Neueste"
+  },
+  "Address": {
+    "setting": "Einstellungen",
+    "defaultAddress": "Standardadresse",
+    "addAddress": "Adresse hinzufügen",
+    "confirmDelete": "Löschen bestätigen",
+    "confirmDeleteContent": "Diese Adresse löschen?",
+    "ok": "OK",
+    "cancel": "Abbrechen",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "deleted": "Gelöscht"
+  },
+  "DeleteAccount": {
+    "setting": "Einstellungen",
+    "title": "Konto löschen",
+    "description": "Löschen Sie das APP-NAME-Konto dauerhaft, alle persönlichen Daten und zugehörigen Informationen werden gelöscht. Nach dem Löschen können die Daten nicht wiederhergestellt werden, bitte vorsichtig vorgehen. Bitte sichern Sie wichtige Daten oder schließen Sie unvollständige Angelegenheiten vor dem Löschen ab.",
+    "account": "Ihr Konto",
+    "enterAccount": "Eingeben",
+    "reason": "Grund für den Austritt",
+    "submit": "Antrag senden",
+    "submitSuccess": "Antrag erfolgreich gesendet"
+  },
+  "Setting": {
+    "title": "Einstellungen",
+    "description": "Verwalten Sie Ihr APP-NAME-Konto bequem, sicher und einfach! Ändern Sie das Anmeldepasswort mit einem Klick. Verwenden Sie ein starkes Passwort mit Buchstaben, Zahlen, Symbolen und aktualisieren Sie es regelmäßig, um die Kontosicherheit zu erhöhen. Legen Sie ein separates Transaktionspasswort für sensible Vorgänge fest. Aktualisieren Sie die genaue Lieferadresse für reibungslose Benachrichtigungen und Lieferungen auf der Plattform. Einfache Bedienung, komfortable Erfahrung!",
+    "loginPassword": "Anmeldepasswort",
+    "tradePassword": "Transaktionspasswort",
+    "address": "Lieferadresse",
+    "deleteAccount": "Konto löschen",
+    "submitSuccess": "Antrag erfolgreich gesendet!"
+  },
+  "LoginPassword": {
+    "setting": "Einstellungen",
+    "title": "Anmeldepasswort",
+    "description": "Ändern oder zurücksetzen Sie das Passwort. Verwenden Sie ein starkes Passwort mit Buchstaben, Zahlen, Symbolen und aktualisieren Sie es regelmäßig zum Schutz des Kontos.",
+    "oldPassword": "Altes Passwort",
+    "newPassword": "Neues Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "enterOldPassword": "Altes Passwort eingeben",
+    "enterNewPassword": "Neues Passwort eingeben",
+    "passwordMinLength": "Das Passwort muss mindestens 6 Zeichen enthalten.",
+    "confirmPasswordMsg": "Passwort bestätigen",
+    "passwordMismatch": "Passwörter stimmen nicht überein.",
+    "submit": "Antrag senden",
+    "success": "Verarbeitung erfolgreich"
+  },
+  "PayPassword": {
+    "setting": "Einstellungen",
+    "title": "Transaktionspasswort",
+    "description": "Legen Sie ein vom Anmeldepasswort getrenntes Transaktionspasswort fest, das für Auktionen, Abhebungen usw. verwendet wird. Erhöhen Sie die Transaktionssicherheit.",
+    "oldPassword": "Altes Passwort",
+    "newPassword": "Neues Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "enterOldPassword": "Altes Passwort eingeben",
+    "enterNewPassword": "Neues Passwort eingeben",
+    "passwordMinLength": "Das Passwort muss mindestens 6 Zeichen enthalten.",
+    "confirmPasswordMsg": "Passwort bestätigen",
+    "passwordMismatch": "Passwörter stimmen nicht überein.",
+    "submit": "Antrag senden",
+    "success": "Verarbeitung erfolgreich"
+  },
+  "MerchantHeader": {
+    "follow": "Shop folgen",
+    "followed": "Gefolgt",
+    "followSuccess": "Erfolgreich gefolgt",
+    "unfollow": "Entfolgen",
+    "products": "Produkte",
+    "sales": "Verkäufe",
+    "rate": "Zufriedenheit"
+  },
+  "Products": {
+    "allProducts": "Alle Produkte",
+    "category": "Kategorie",
+    "comprehensive": "Übersicht",
+    "sales": "Verkäufe",
+    "price": "Preis",
+    "newArrival": "Neuheiten"
+  },
+  "Store": {
+    "recommend": "Empfohlen",
+    "allProducts": "Alle Produkte"
+  },
+  "Withdraw": {
+    "myWallet": "Mein Wallet",
+    "withdraw": "Abheben",
+    "description": "Unterstützung verschiedener Empfangskanäle, schnelle Bearbeitung von Abhebungsanträgen, Sicherheit jeder Transaktion durch Sicherheits- und Compliance-Maßnahmen garantiert."
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Seite nicht gefunden",
+    "description": "Entschuldigung, die gesuchte Seite existiert nicht.",
+    "backHome": "Zur Startseite"
+  },
+  "CheckForms": {
+    "checkout": "Zur Kasse",
+    "addressTitle": "1. Lieferadresse",
+    "changeAddress": "Adresse ändern",
+    "addressInfo": "Lieferinformationen",
+    "recipientName": "Empfängername",
+    "phone": "Kontakt",
+    "nation": "Land/Region",
+    "addressDetail": "Detaillierte Adresse",
+    "noAddress": "Keine Adresse",
+    "addAddress": "Adresse hinzufügen",
+    "paymentTitle": "2. Zahlungsmethode",
+    "selectPayment": "Zahlungsmethode auswählen",
+    "balance": "Guthaben",
+    "paypal": "PayPal (in Entwicklung)",
+    "visa": "VISA (in Entwicklung)",
+    "mastercard": "MasterCard (in Entwicklung)",
+    "orderSummary": "Bestellübersicht",
+    "total": "Gesamt",
+    "submitOrder": "Bestellung absenden",
+    "submitSuccess": "Bestellung erfolgreich gesendet",
+    "tip": "Hinweis",
+    "selectAddressFirst": "Bitte zuerst Lieferadresse auswählen",
+    "selectAddress": "Lieferadresse auswählen",
+    "noAvailableAddress": "Keine verfügbaren Adressen"
+  },
+  "OrderResult": {
+    "paymentSuccess": "Zahlung erfolgreich",
+    "recipient": "Empfänger",
+    "address": "Lieferadresse",
+    "continueShopping": "Weiter einkaufen",
+    "viewOrders": "Bestellungen anzeigen"
+  },
+  "Deposit": {
+    "myWallet": "Mein Wallet",
+    "deposit": "Einzahlen",
+    "description": "Schnelle und stabile Einzahlung, einfache und reibungslose Bedienung, jederzeit Kontoguthaben aufladen, sorgenfrei nutzen."
+  },
+  "BottomNav": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "cart": "Warenkorb",
+    "mine": "Ich"
+  },
+  "Footer": {
+    "solutions": {
+      "title": "Kundenservice",
+      "contactUs": "Kontaktieren Sie uns"
+    },
+    "support": {
+      "title": "Rückgabe und Umtausch",
+      "privacyPolicy": "Datenschutzrichtlinie",
+      "returnsPolicy": "Rückgaberichtlinie",
+      "deliveryInformation": "Lieferung und Empfang",
+      "sellerScoreSystem": "Verkäuferrichtlinie"
+    },
+    "company": {
+      "title": "Benutzerzentrum",
+      "register": "Benutzerregistrierung",
+      "orderQuery": "Bestellabfrage",
+      "favoriteProducts": "Produktsammlung",
+      "wallet": "Mein Wallet"
+    },
+    "legal": {
+      "title": "Über uns",
+      "aboutUs": "Über uns",
+      "careers": "Karriere",
+      "news": "Neuigkeiten",
+      "modernSlavery": "Erklärung zur modernen Sklaverei"
+    },
+    "description": "Globale APP-NAME-Nutzer aus 112 Ländern zahlen mit USDT/ETH/BTC. USDT/ETH/BTC ist eine grenzüberschreitende Transaktionsmethode, die weltweit sofortige, kostengünstige Transaktionen ohne Wartezeit oder internationale Gebühren ermöglicht.",
+    "copyright": "© APP-NAME Limited 2023 Alle Rechte vorbehalten"
+  },
+  "Header": {
+    "title": "APP-NAME",
+    "home": "Startseite",
+    "category": "Kategorie",
+    "products": "Produkte",
+    "sales": "Rabattprodukte",
+    "merchantOnboarding": "Händlerregistrierung",
+    "profile": "Persönliches Zentrum",
+    "logout": "Abmelden",
+    "logoutSuccess": "Erfolgreich abgemeldet",
+    "search": "Suchen"
+  },
+  "SearchWithHistory": {
+    "placeholder": "Suchinhalt",
+    "clearAll": "Alles löschen"
+  },
+  "CartDrawer": {
+    "items": "Artikel",
+    "myCart": "Mein Warenkorb"
+  },
+  "CartPanel": {
+    "totalItems": "Gesamtzahl der Artikel",
+    "items": "Stk.",
+    "totalPrice": "Gesamtpreis",
+    "submitOrder": "Bestellung absenden"
+  },
+  "MerchantCard": {
+    "unfollow": "Entfolgen",
+    "follow": "Folgen",
+    "visitNow": "Jetzt besuchen",
+    "sold": "Verkauft",
+    "views": "Aufrufe",
+    "rating": "Shop-Bewertung"
+  },
+  "Mine": {
+    "dashboard": "Dashboard",
+    "wallet": "Mein Wallet",
+    "orders": "Meine Bestellungen",
+    "favoriteProducts": "Produktsammlung",
+    "followedMerchants": "Gefolgte Shops",
+    "settings": "Einstellungen",
+    "userId": "ID"
+  },
+  "PageTitle": {
+    "more": "Mehr anzeigen"
+  },
+  "ProductCard": {
+    "addCartSuccess": "Zum Warenkorb hinzugefügt",
+    "collected": "In Sammlung",
+    "unCollected": "Aus Sammlung entfernt",
+    "off": "Rabatt",
+    "addToCart": "In den Warenkorb",
+    "soldViews": "Verkäufe",
+    "viewsNum": "Aufrufe"
+  },
+  "AddGoodsCommentDialog": {
+    "title": "Bewertung",
+    "addCommentSuccess": "Bewertung erfolgreich hinzugefügt",
+    "selectProduct": "Produkt auswählen",
+    "selectProductRequired": "Bitte Bewertungsstatus auswählen",
+    "selectPlaceholder": "Auswählen",
+    "userName": "Mitglied E-Mail/Telefon",
+    "userNameRequired": "Bitte Mitglied E-Mail oder Telefon eingeben",
+    "userNamePlaceholder": "Mitglied E-Mail oder Telefon eingeben",
+    "commentContent": "Bewertungsinhalt",
+    "commentContentRequired": "Bitte Bewertungsinhalt eingeben",
+    "commentContentPlaceholder": "Bewertungsinhalt eingeben",
+    "rating": "Bewertung",
+    "ratingRequired": "Bitte Bewertung auswählen",
+    "commentImages": "Bewertungsbilder",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen"
+  },
+  "AddressDialog": {
+    "editAddress": "Lieferadresse bearbeiten",
+    "addAddress": "Lieferadresse hinzufügen",
+    "recipientName": "Empfängername",
+    "recipientNameRequired": "Bitte Empfängernamen eingeben",
+    "recipientNamePlaceholder": "Empfängernamen eingeben",
+    "phone": "Telefonnummer",
+    "nationRequired": "Bitte Ländercode auswählen",
+    "nationPlaceholder": "Ländercode",
+    "phoneRequired": "Bitte Telefonnummer eingeben",
+    "phonePlaceholder": "Telefonnummer eingeben",
+    "email": "E-Mail",
+    "emailPlaceholder": "E-Mail eingeben",
+    "region": "Land/Region/Stadt",
+    "regionRequired": "Bitte Region auswählen",
+    "regionPlaceholder": "Land/Region/Stadt auswählen",
+    "postCode": "Postleitzahl",
+    "postCodePlaceholder": "Postleitzahl eingeben",
+    "addressDetail": "Detaillierte Adresse",
+    "addressDetailPlaceholder": "Detaillierte Adresse eingeben",
+    "isDefault": "Standardadresse",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen"
+  },
+  "CustomerServiceChat": {
+    "title": "Kundenservice",
+    "inputPlaceholder": "Eingabe",
+    "noMessage": "Keine Nachrichten",
+    "imageAlt": "Bild",
+    "heicUnsupported": "Der aktuelle Browser unterstützt das Hochladen von HEIC-Dateien nicht.",
+    "heicUploadFailed": "HEIC-Datei konnte nicht hochgeladen werden."
+  },
+  "DepositForm": {
+    "currency": "Aufladewährung",
+    "selectCurrency": "Aufladewährung auswählen",
+    "network": "Blockchain-Netzwerk",
+    "selectNetwork": "Blockchain-Netzwerk auswählen",
+    "addressLabel": "Aufladeadresse",
+    "amount": "Aufladebetrag",
+    "enterAmount": "Aufladebetrag eingeben",
+    "estimatedArrival": "Geschätzte Ankunft (aktueller Kurs {{rate}})",
+    "proof": "Zahlungsnachweis (Screenshot hochladen)",
+    "uploadProof": "Zahlungsnachweis hochladen",
+    "submit": "Bestätigen",
+    "success": "Verarbeitung erfolgreich",
+    "addressCopied": "Adresse kopiert!"
+  },
+  "OtpModal": {
+    "enterTransactionPassword": "Transaktionspasswort eingeben",
+    "enter6Digits": "6-stelligen Bestätigungscode eingeben",
+    "verifyFailed": "Verifizierung fehlgeschlagen, bitte erneut versuchen",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen"
+  },
+  "ProductDetailMain": {
+    "basicInfo": "Grundinformationen",
+    "sales": "Verkäufe",
+    "views": "Aufrufe",
+    "originalPrice": "Originalpreis",
+    "currentPrice": "Aktueller Preis",
+    "shipping": "Versand",
+    "freeShipping": "Kostenloser Versand",
+    "quantity": "Menge",
+    "totalPrice": "Gesamtpreis",
+    "buyNow": "Jetzt kaufen",
+    "addToCart": "In den Warenkorb",
+    "pleaseSelect": "Bitte auswählen",
+    "noStock": "Nicht vorrätig",
+    "shippingDesc": "Versand innerhalb von 24 Stunden nach Bestellung. Bei logistischer Kontrolle kann der Versand verzögert werden. Bitte verfolgen Sie die Logistikinformationen der Bestellung oder kontaktieren Sie den Kundenservice."
+  },
+  "ProductDetailModal": {
+    "title": "Produktdetails",
+    "noGoods": "Keine Produktinformationen",
+    "addSuccess": "Erfolgreich hinzugefügt"
+  },
+  "UploadImg": {
+    "upload": "Hochladen",
+    "preview": "Bildvorschau",
+    "onlyImage": "Nur JPG/PNG/WEBP/HEIC-Formate werden unterstützt!",
+    "maxSize": "Bildgröße darf nicht überschreiten.",
+    "unsupportedHeic": "Der aktuelle Browser unterstützt das Hochladen von HEIC-Dateien nicht.",
+    "uploadFailed": "Hochladen fehlgeschlagen, bitte später erneut versuchen"
+  },
+  "UploadMultiple": {
+    "upload": "Hochladen",
+    "uploadSuccess": "Hochladen erfolgreich",
+    "uploadFailed": "Hochladen fehlgeschlagen"
+  },
+  "WithdrawForm": {
+    "withdrawMethod": "Abhebungsmethode",
+    "selectWithdrawMethod": "Abhebungsmethode auswählen",
+    "crypto": "Kryptowährung",
+    "bankCard": "Bankkarte",
+    "coinType": "Abhebungswährung",
+    "selectCoin": "Währung auswählen",
+    "enterUSDT": "USDT eingeben",
+    "blockchainNetwork": "Blockchain-Netzwerk",
+    "withdrawAddress": "Abhebungsadresse",
+    "enterWithdrawAddress": "Abhebungsadresse eingeben",
+    "copy": "Kopieren",
+    "bankName": "Bankname",
+    "enterBankName": "Banknamen eingeben",
+    "bankBranch": "Bankfiliale",
+    "enterBankBranch": "Bankfiliale eingeben",
+    "bankCardNumber": "Bankkartennummer",
+    "enterBankCardNumber": "Bankkartennummer eingeben",
+    "withdrawAmount": "Abhebungsbetrag",
+    "enterWithdrawAmount": "Abhebungsbetrag eingeben",
+    "amountMustBeGreaterZero": "Abhebungsbetrag muss größer als 0 sein.",
+    "currentBalance": "Aktuelles Guthaben",
+    "actualReceived": "Tatsächlicher Erhalt",
+    "fee": "Gebühr",
+    "confirmSubmit": "Absenden bestätigen",
+    "copied": "Kopiert!",
+    "inputAddressFirst": "Bitte zuerst Abhebungsadresse/Bankkartennummer eingeben",
+    "operationSuccess": "Operation erfolgreich"
+  },
+  "order": {
+    "pendingPayment": "Zahlung ausstehend",
+    "pendingShipment": "Versand ausstehend",
+    "pendingReceive": "Empfang ausstehend",
+    "pendingReview": "Bewertung ausstehend",
+    "refund": "Rückerstattung/Kundendienst"
+  },
+  "refund": {
+    "pending": "In Prüfung",
+    "success": "Erfolg",
+    "failed": "Fehlgeschlagen"
+  },
+  "DeliveryInformation": {
+    "title": "Wohin liefern wir?",
+    "desc1": "Geben Sie die Postleitzahl des gewünschten Produkts ein, um die Verfügbarkeit der Lieferung in Ihrer Region zu prüfen.",
+    "desc2": "Produkte werden direkt von Lieferanten mit globalen Lagern in 112 Ländern/Regionen versandt.",
+    "pickup": {
+      "title": "Wo abholen?",
+      "desc1": "24-Stunden-Abholpunkte sind verfügbar.",
+      "highlight1": "APP-NAME-Shops, Sainsbury’s-Supermärkte",
+      "desc2": "und globale Lager",
+      "desc3": "Für sofort lieferbare Produkte können Sie je nach Standort mehrere Zeitfenster wählen. Die Bestellung wird an Ihre Tür geliefert und an einem sicheren und zuverlässigen Ort platziert.",
+      "alert1": "In England, Schottland, Wales werden große und schwere Artikel (2 oder mehr Personen erforderlich, z. B.: Sofa, Bett) bis zur Haustür geliefert und sicher an den gewünschten Ort gebracht.",
+      "alert2": "Der freundliche Fahrer kontaktiert Sie am selben Tag und bespricht die Lieferdetails. Wenn Sie sich in Selbstisolation befinden, informieren Sie uns bitte, um ein neues Lieferdatum zu vereinbaren.",
+      "warning": "Die Nachfrage nach Lieferung großer Artikel ist derzeit hoch. Bei Lieferverzögerungen senden wir so schnell wie möglich eine Nachricht. Wir arbeiten hart daran, unseren Kunden den besten Service zu bieten. Vielen Dank für Ihre Geduld und fortlaufende Unterstützung."
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Was passiert, wenn ich große und kleine Artikel zusammen bestelle?",
+      "a1_1": "Der schnellste Weg ist der separate Versand.",
+      "a1_2": "Keine Sorge, Versandkosten werden nur einmal berechnet.",
+      "a1_3": "Bitte überprüfen Sie die Details in der Bestellbestätigungs-E-Mail.",
+      "q2": "Was passiert, wenn ich nicht zu Hause bin?",
+      "a2_1": "Kleine Artikel werden an einem sicheren und unauffälligen Ort platziert oder auf Ihren Wunsch einem Nachbarn übergeben.",
+      "a2_2": "Hotline",
+      "a2_3": "kontaktieren und die Lieferung auf das bequemste Datum und die bequemste Uhrzeit verschieben!",
+      "q3": "Wie viele Personen liefern große Artikel?",
+      "a3_1": "Große Artikel wie Sofas, Kühlschränke",
+      "a3_2": "werden von 2 Personen geliefert",
+      "a3_3": ". Der freundliche Fahrer kontaktiert Sie am Liefertag und bringt sie sicher an den angegebenen Ort.",
+      "q4": "COVID-19: Wie wirkt sich das auf die Lieferung aus?",
+      "a4_1": "Wir bieten weiterhin Lieferungen für viele Artikel an, einschließlich Vorbestellungen von Spielekonsolen. Sie erhalten eine Benachrichtigung und eine Sendungsverfolgungsnummer des Kuriers vor der Lieferung.",
+      "a4_2": "Artikel werden an einem sicheren Ort platziert. Große Artikel werden an einem sicheren Ort platziert, der freundliche Fahrer kontaktiert Sie am selben Tag und bespricht die Transportdetails für große Artikel. Wenn Sie sich in Selbstisolation befinden, informieren Sie uns bitte, um ein neues Lieferdatum zu vereinbaren."
+    },
+    "cta": "Lieferabdeckungsbereiche anzeigen"
+  },
+  "PrivacyPolicy": {
+    "header": {
+      "label": "Datenschutzrichtlinie",
+      "title": "APP-NAME Datenschutzrichtlinie",
+      "desc": "Letzte Aktualisierung: Oktober 2025 | Der Schutz Ihrer Privatsphäre hat für uns höchste Priorität."
+    },
+    "sections": {
+      "1": {
+        "title": "1. Einleitung",
+        "content": {
+          "welcome": "1.1 Willkommen auf der APP-NAME-Einkaufsseite.",
+          "desc1": "APP-NAME hält sich strikt an die Pflichten, die durch die relevanten Datenschutzgesetze und -vorschriften („Datenschutzgesetze“) festgelegt sind, und bemüht sich nach besten Kräften, die Rechte und Datenschutzbedenken aller Nutzer der APP-NAME-Website und der mobilen App („Plattform“) zu respektieren.",
+          "alert": "Wir erkennen die Bedeutung der persönlichen Informationen an, die Sie uns anvertrauen, und betrachten es als unsere Verantwortung, diese angemessen zu verwalten, zu schützen und zu verarbeiten.",
+          "definition": "Persönliche Informationen sind Informationen, die sich auf eine identifizierbare Person beziehen, aus diesen Informationen oder aus anderen Informationen, auf die die Organisation Zugriff hat oder haben kann.",
+          "consent": "Durch die Nutzung der Dienste stimmen Sie ausdrücklich zu, dass wir Ihre persönlichen Informationen gemäß dieser Datenschutzrichtlinie sammeln, verwenden, offenlegen und verarbeiten dürfen."
+        }
+      },
+      "2": {
+        "title": "2. Wann sammelt APP-NAME persönliche Informationen?",
+        "content": {
+          "scenariosTitle": "Allgemeine Sammelszenarien",
+          "online": "Online-Interaktionen",
+          "onlineItems": [
+            "Zugriff auf die Website",
+            "Formularabsendung",
+            "Cookie-Speicherung"
+          ],
+          "offline": "Offline-Interaktionen",
+          "offlineItems": [
+            "Telefonische Kommunikation",
+            "Persönliche Treffen",
+            "E-Mail-Austausch"
+          ],
+          "thirdParty": "Wir können Ihre Informationen von Dritten erhalten (Logistik, Zahlungsdienstleister usw.)."
+        }
+      },
+      "3": {
+        "title": "3. Welche persönlichen Informationen sammelt APP-NAME?",
+        "categories": [
+          {
+            "icon": "Grundinformationen",
+            "label": "Grundinformationen",
+            "items": [
+              "Name",
+              "E-Mail",
+              "Telefonnummer",
+              "Adresse"
+            ]
+          },
+          {
+            "icon": "Identifikationsinformationen",
+            "label": "Identifikationsinformationen",
+            "items": [
+              "Geburtsdatum",
+              "Geschlecht"
+            ]
+          },
+          {
+            "icon": "Multimedia",
+            "label": "Multimedia",
+            "items": [
+              "Fotos",
+              "Audio",
+              "Videos"
+            ]
+          },
+          {
+            "icon": "Berufliche Informationen",
+            "label": "Berufliche Informationen",
+            "items": [
+              "Bildung",
+              "Beruf"
+            ]
+          },
+          {
+            "icon": "Standortinformationen",
+            "label": "Standortinformationen",
+            "items": [
+              "Geografischer Standort"
+            ]
+          },
+          {
+            "icon": "Verhaltensinformationen",
+            "label": "Verhaltensinformationen",
+            "items": [
+              "Browsing-Verlauf",
+              "Präferenzeinstellungen"
+            ]
+          }
+        ],
+        "warning": "Sie können der Datensammlung jederzeit widersprechen, dies kann jedoch die Nutzung bestimmter Funktionen beeinträchtigen."
+      },
+      "4": {
+        "title": "4. Sammlung anderer Informationen",
+        "device": {
+          "title": "Geräteinformationen",
+          "items": [
+            "IP-Adresse",
+            "Betriebssystem",
+            "Browsertyp",
+            "Eindeutige Geräte-ID"
+          ]
+        },
+        "location": {
+          "title": "Standortdienste",
+          "desc": "Sammlung präziser Standortinformationen mittels GPS/Wi-Fi.",
+          "note": "Kann jederzeit in den Geräteeinstellungen deaktiviert werden."
+        }
+      },
+      "5": {
+        "title": "5. Cookies",
+        "titleLabel": "Cookie-Richtlinie",
+        "purpose": {
+          "title": "Zwecke",
+          "items": [
+            "Bereitstellung personalisierter Inhalte",
+            "Werbeanpassung",
+            "Analyse der Website-Nutzung"
+          ]
+        },
+        "management": {
+          "title": "Verwaltung",
+          "items": [
+            "In den Browsereinstellungen deaktivieren",
+            "Personalisierte Werbung auf Mobilgeräten deaktivieren",
+            "Kann einige Funktionen beeinträchtigen"
+          ]
+        }
+      },
+      "6": {
+        "title": "6. Wie verwenden wir die bereitgestellten Informationen?",
+        "mainUse": "Hauptnutzung",
+        "items": [
+          {
+            "icon": "Bereitstellung von Diensten"
+          },
+          {
+            "icon": "Kommunikation"
+          },
+          {
+            "icon": "Datenanalyse"
+          },
+          {
+            "icon": "Funktionsverbesserung"
+          },
+          {
+            "icon": "Marketing"
+          },
+          {
+            "icon": "Rechtliche Einhaltung"
+          }
+        ],
+        "unsubscribe": "Der Empfang von Marketinginformationen kann jederzeit abbestellt werden."
+      },
+      "7": {
+        "title": "7. Welche Informationen werden gespeichert und wie schützt APP-NAME die Nutzerinformationen?",
+        "security": {
+          "title": "Sicherheitsmaßnahmen",
+          "items": [
+            "Physischer Schutz",
+            "Systemmanagementsicherheit",
+            "Elektronische Verschlüsselungstechnologie",
+            "Zugriffskontrolle basierend auf Berechtigungen"
+          ]
+        },
+        "retention": {
+          "title": "Aufbewahrungsfrist",
+          "desc": "Wird nur für den erforderlichen Zeitraum gespeichert und gelöscht, wenn folgende Bedingungen erfüllt sind:",
+          "items": [
+            "Beendigung der Beziehung",
+            "Erreichen des Zwecks",
+            "Einhaltung gesetzlicher Anforderungen"
+          ]
+        }
+      },
+      "8": {
+        "title": "8. Gibt APP-NAME die gesammelten Informationen an Dritte weiter?",
+        "recipients": [
+          "Verbundene Unternehmen/Tochtergesellschaften",
+          "Auftragnehmer",
+          "Dienstleister",
+          "Regierungsbehörden",
+          "Auftragnehmer bei Fusionen/Übernahmen",
+          "Werbepartner"
+        ],
+        "note": "Alle Dritten sind verpflichtet, dieselben Datenschutzstandards einzuhalten."
+      }
+    },
+    "quickAccess": {
+      "title": "Schnellzugriff",
+      "items": [
+        {
+          "label": "Einwilligung widerrufen",
+          "icon": "Widerrufen"
+        },
+        {
+          "label": "Zugriff auf Informationen",
+          "icon": "Anzeigen"
+        },
+        {
+          "label": "Cookie-Einstellungen",
+          "icon": "Cookies"
+        },
+        {
+          "label": "Kontaktieren Sie uns",
+          "icon": "E-Mail"
+        }
+      ]
+    },
+    "footer": {
+      "contact": "Bei Fragen wenden Sie sich bitte an unseren Datenschutzbeauftragten.",
+      "email": "support@APP-NAME.com",
+      "copyright": "© 2025 APP-NAME Alle Rechte vorbehalten"
+    },
+    "toggle": {
+      "expand": "Erweitern",
+      "collapse": "Einklappen"
+    }
+  },
+  "PrivacyPolicyPage": {
+    "header": "Datenschutzrichtlinie",
+    "title": "APP-NAME Datenschutzrichtlinie",
+    "lastUpdated": "Letzte Aktualisierung: Oktober 2025 | Der Schutz Ihrer Privatsphäre hat für uns höchste Priorität.",
+    "expand": "Erweitern",
+    "collapse": "Einklappen",
+    "section1Title": "1. Einleitung",
+    "section1_1": "1.1 Willkommen auf der APP-NAME-Einkaufsseite.",
+    "section1_2": "APP-NAME hält sich strikt an die Pflichten, die durch die relevanten Datenschutzgesetze und -vorschriften („Datenschutzgesetze“) festgelegt sind, und bemüht sich nach besten Kräften, die Rechte der Privatsphäre aller Nutzer der Plattform zu respektieren.",
+    "section1_3": "Wir erkennen die Bedeutung der persönlichen Informationen an, die Sie uns anvertrauen, und betrachten es als unsere Verantwortung, diese angemessen zu verwalten, zu schützen und zu verarbeiten.",
+    "section1_4": "Persönliche Informationen sind Informationen, die sich auf eine identifizierbare Person beziehen.",
+    "section1_5": "Durch die Nutzung der Dienste stimmen Sie zu, dass wir Ihre persönlichen Informationen gemäß dieser Datenschutzrichtlinie sammeln, verwenden, offenlegen und verarbeiten dürfen.",
+    "section2Title": "2. Wann sammelt APP-NAME persönliche Informationen?",
+    "section2_1": "Allgemeine Sammelszenarien",
+    "section2_2": "Online-Interaktionen",
+    "section2_3": "Zugriff auf die Website",
+    "section2_4": "Formularabsendung",
+    "section2_5": "Cookie-Speicherung",
+    "section2_6": "Offline-Interaktionen",
+    "section2_7": "Telefonische Kommunikation",
+    "section2_8": "Persönliche Treffen",
+    "section2_9": "E-Mail-Austausch",
+    "section2_10": "Wir können Ihre Informationen von Dritten erhalten.",
+    "section3Title": "3. Welche persönlichen Informationen sammelt APP-NAME?",
+    "section3_1_label": "Grundinformationen",
+    "section3_1_1": "Name",
+    "section3_1_2": "E-Mail",
+    "section3_1_3": "Telefonnummer",
+    "section3_1_4": "Adresse",
+    "section3_2_label": "Identifikationsinformationen",
+    "section3_2_1": "Geburtsdatum",
+    "section3_2_2": "Geschlecht",
+    "section3_3_label": "Multimedia",
+    "section3_3_1": "Fotos",
+    "section3_3_2": "Audio",
+    "section3_3_3": "Videos",
+    "section3_4_label": "Berufliche Informationen",
+    "section3_4_1": "Bildung",
+    "section3_4_2": "Beruf",
+    "section3_5_label": "Standortinformationen",
+    "section3_5_1": "Geografischer Standort",
+    "section3_6_label": "Verhaltensinformationen",
+    "section3_6_1": "Browsing-Verlauf",
+    "section3_6_2": "Präferenzeinstellungen",
+    "section3_warning": "Sie können der Datensammlung jederzeit widersprechen, dies kann jedoch die Nutzung bestimmter Funktionen beeinträchtigen.",
+    "section4Title": "4. Verwendungsmethoden der Informationen",
+    "section4_1": "Wie Informationen verwendet werden",
+    "section4_2": "Bereitstellung und Verbesserung von Diensten",
+    "section4_3": "Personalisierte Empfehlungen",
+    "section4_4": "Sicherheitsschutz",
+    "section4_5": "Rechtliche Einhaltung",
+    "section4_6": "Informationsaustausch",
+    "section4_7": "Kann Informationen mit Dritten zum Bereitstellen von Diensten teilen.",
+    "section4_8": "Die geteilten Informationen entsprechen strikt dieser Datenschutzrichtlinie und den Gesetzen.",
+    "section5Title": "5. Cookies und Tracking-Technologien",
+    "section5_1": "Wie Cookies verwendet werden",
+    "section5_2": "Notwendige Cookies",
+    "section5_3": "Stellen grundlegende Funktionen der Website sicher",
+    "section5_4": "Merken den Anmeldestatus",
+    "section5_5": "Betrugsprävention",
+    "section5_6": "Leistungs-Cookies",
+    "section5_7": "Analyse der Website-Nutzung",
+    "section5_8": "Verbesserung der Dienste",
+    "section5_9": "Kann deaktiviert werden",
+    "section6Title": "6. Datenschutzmaßnahmen",
+    "section6_1": "Ergriffene Sicherheitsmaßnahmen",
+    "section6_2": "Zugriffskontrolle",
+    "section6_3": "Verschlüsselungstechnologie",
+    "section6_4": "Regelmäßige Sicherung",
+    "section6_5": "Sicherheitsschulung",
+    "section6_6": "Systemüberwachung",
+    "section6_7": "Audit und Compliance",
+    "section6_8": "Teilen Sie das Kontopasswort nicht und stellen Sie die Sicherheit persönlicher Informationen sicher.",
+    "section7Title": "7. Nutzerrechte",
+    "section7_1": "Zugriffs- und Kontrollrechte",
+    "section7_2": "Gespeicherte persönliche Informationen anzeigen",
+    "section7_3": "Ungenaue Informationen korrigieren",
+    "section7_4": "Löschung von Informationen beantragen",
+    "section7_5": "Verarbeitung einschränken oder ablehnen",
+    "section7_6": "Weitere Rechte",
+    "section7_7": "Kann die Einwilligung jederzeit widerrufen und Datenschutzfragen stellen.",
+    "section7_8": "Recht auf Datenübertragbarkeit",
+    "section7_9": "Widerspruchsrecht gegen die Verarbeitung",
+    "section7_10": "Beschwerderecht",
+    "section8Title": "8. Kontaktieren Sie uns",
+    "section8_1": "Bei Zweifeln an der Datenschutzrichtlinie",
+    "section8_2": "Kontaktieren Sie über die Kundenservice-E-Mail",
+    "section8_3": "Kundenservice-Hotline",
+    "section8_4": "Online-Live-Chat",
+    "section8_5": "Social-Media-Konten",
+    "section8_6": "Schriftliche Post",
+    "section8_7": "Feedback-Formular der Website absenden",
+    "section8_warning": "Anfragen werden in angemessener Frist bearbeitet, einige Vorgänge können jedoch zusätzliche Verifizierung erfordern."
+  },
+  "ReturnsPolicy": {
+    "title": "Meinungsänderung",
+    "subtitle1": "Nach Erhalt oder Lieferung ",
+    "subtitle2": "innerhalb von 15 Tagen",
+    "subtitle3": " kann zurückgegeben werden",
+    "mustBe": "Das Produkt muss folgende Bedingungen erfüllen:",
+    "refundMethod": "Die Rückerstattung wird über die ursprüngliche Zahlungsmethode verarbeitet:",
+    "refundUsdtEth": "Bei Verwendung von USDT oder ETH wird innerhalb eines Werktages auf dem Konto angezeigt.",
+    "refundWire": "Bei Banküberweisung kann es je nach Bank bis zu 30 Tage dauern.",
+    "requirements1": "Unbenutzt und mit allen Originalkomponenten",
+    "requirements2": "Originalverpackung (falls möglich, mit Etiketten)",
+    "requirements3": "Zustand zur Weiterveräußerung geeignet",
+    "requirements4": "Einschließlich Kaufbeleg",
+    "requirements5": "Einschließlich mit dem Produkt bereitgestellter Geschenke",
+    "productSupport": "Produktsupport",
+    "productSupportDesc1": "In den meisten Fällen, wenn ein Problem mit dem Produkt auftritt, können Sie es einfach von zu Hause aus über",
+    "productSupportDesc2": "die Produktsupport-Website",
+    "productSupportDesc3": " lösen. Hier haben Sie Zugriff auf FAQs zu Produkten und unserem Unternehmen, Lieferung und Empfang, Rückgabe und Rückerstattung.",
+    "goodsIssue": "Defekte Produkte",
+    "issueNotice1": "Wenn Sie innerhalb der ersten 15 Tage zurückgeben möchten, bieten wir Umtausch, Ersatz oder Rückerstattung an.",
+    "issueNotice2": "Nach diesem Zeitraum, solange das Produkt unter Garantie steht, organisieren wir die Reparatur über unseren spezialisierten Reparaturagenten oder ersetzen oder kompensieren das Produkt, falls es nicht reparierbar ist.",
+    "issueDesc": "Der schnellste Weg zur Rückgabe ist über die globalen Lagerzentren in 112 Ländern/Regionen. Wir akzeptieren die meisten Produkte, aber große Artikel sind ausgeschlossen. Wenn die ursprüngliche Lieferung bis zur Haustür erfolgte und Sie immer noch einen großen Artikel zurückgeben möchten, scrollen Sie nach unten, um einen Live-Chat zu starten oder die Hotline anzurufen.",
+    "precautionsTitle": "Vorsichtsmaßnahmen",
+    "precautionsDesc": "Einige Produkte wie Lebensmittel, Piercing-Schmuck, Unterwäsche können nur bei Defekt umgetauscht oder zurückgegeben werden. Nicht rückgabefähige Produkte werden auf der Website deutlich angegeben.",
+    "precautions1": "Bei Rückgabe von DVDs, Musik oder Software müssen diese unbenutzt und in der original versiegelten Verpackung sein.",
+    "precautions2": "Wenn das Produkt oder die Verpackung stark beschädigt ist, haben wir das Recht, den Rückerstattungsbetrag zu reduzieren.",
+    "precautions3": "Wir können die Seriennummer des Produkts oder ähnliche Informationen anfordern, um zu bestätigen, dass das Produkt von uns geliefert wurde.",
+    "precautions4": "Dies beeinträchtigt natürlich nicht Ihre gesetzlichen Rechte.",
+    "precautionsNote": "Wir überprüfen das Produkt vor der Rückerstattung. Wenn das Produkt nicht gemäß den Anweisungen zurückgegeben wird, haben wir das Recht, die Rückerstattung zu verweigern oder eine teilweise Rückerstattung je nach Produktzustand anzubieten.",
+    "proof1_1": "Kassenbon",
+    "proof1_2": "Elektronischer Beleg",
+    "proof1_3": "Bestellnummer",
+    "proof1_4": "Bestätigungs-E-Mail",
+    "proof2_1": "Transaktionsrechnung",
+    "proof2_2": "Für den Produktkauf verwendete E-Mail-Adresse",
+    "faqTitle": "Häufig gestellte Fragen",
+    "cta": "Rückgabeprozess starten"
+  },
+  "sellerRating": {
+    "title": "Verkäuferbewertungssystem",
+    "intro": "Einführung",
+    "introContent": "Hier wird das Verkäuferbewertungssystem sowie die Erstellungs- und Nutzungsmethoden vorgestellt.",
+    "website": "Zugehörige Websites",
+    "parties": "Zugehörige Parteien",
+    "allSellers": "Alle Verkäufer",
+    "section1": {
+      "title": "Wie greift man auf das Verkäuferbewertungssystem zu?",
+      "encourage": "Das Verkäuferbewertungssystem ermutigt Verkäufer, einen hohen Servicestandard aufrechtzuerhalten, um unseren Käufern ein gutes Einkaufserlebnis zu bieten.",
+      "deduction": "Das Nichteinhalten versprochener Ziele führt zu Punktabzug.",
+      "accessPath": {
+        "prefix": "[",
+        "path": "Verkäuferzentrum >> Verkäuferkreditbewertung",
+        "suffix": "] Seite zur Anzeige der Punkte."
+      }
+    },
+    "section2": {
+      "title": "Wie werden Punkte generiert?",
+      "deductionCondition": "Punkte werden nur abgezogen, wenn die Mindesterwartungen des Käufers nicht erfüllt werden, und warnen den Verkäufer vor Verbesserungsbereichen.",
+      "updateTime": "Das Verkäuferbewertungssystem wird am 1. jedes Monats basierend auf den Verstößen des Verkäufers im Vormonat aktualisiert. Klicken Sie auf die Bewertungsmessschlüsselwörter, um die vollständige Richtlinie anzuzeigen."
+    },
+    "table1": {
+      "headers": {
+        "measure": "Bewertungsmessung",
+        "spec": "Beschreibung",
+        "deduction": "Monatlicher Abzug"
+      },
+      "max10": "Maximal 10 Punkte",
+      "max20": "Maximal 20 Punkte",
+      "rows": {
+        "nfr": {
+          "title": "NFR-Nichterfüllungsrate",
+          "desc": "Die Anzahl der vom Verkäufer in den letzten 7 Tagen stornierten oder zurückgegebenen Bestellungen erreicht 30 % der Gesamtbestellungen"
+        },
+        "lsr": {
+          "title": "LSR-Versandverzögerungsrate",
+          "desc": "Die Anzahl der Bestellungen, die in den letzten 7 Tagen um mehr als 72 Stunden verzögert wurden, erreicht 20 % der Gesamtbestellungen"
+        },
+        "customerService": {
+          "title": "Kundenservice",
+          "rude": "Grobheit oder Beleidigung im Chat oder in Kommentaren",
+          "cancelRequests": "Bestellstornierungsanfragen der Käufer in diesem Monat überschreiten 5 Mal"
+        },
+        "breach": {
+          "title": "Verstoß",
+          "lowResponse": "Antwortrate auf Käufer unter 80 %",
+          "violatePromise": "Der Verkäufer hat die dem Käufer versprochenen Dienstleistungen nicht erbracht und die Rechte des Käufers beeinträchtigt"
+        }
+      }
+    },
+    "section3": {
+      "title": "Welche Strafe ist mit bestimmten Punkten verbunden?"
+    },
+    "table2": {
+      "headers": {
+        "points": "Gesamtpunktzahl",
+        "level": "Strafstufe"
+      },
+      "level1": "Stufe 1",
+      "level2": "Stufe 2",
+      "level3": "Stufe 3",
+      "level4": "Stufe 4",
+      "level5": "Stufe 5",
+      "level6": "Stufe 6",
+      "penalties": {
+        "marketingBan": "Verbot von Marketingaktivitäten (28 Tage)",
+        "freeShippingRemoval": "Entfernung des kostenlosen Versands oder der Versanderstattung (28 Tage)",
+        "deboost": "Reduzierung der Produktpräsenz (28 Tage)",
+        "loanRestriction": "Einschränkung von Verkäuferdarlehen (28 Tage)",
+        "listingBlock": "Einschränkung der Produktlistung und -bearbeitung (28 Tage)",
+        "accountFreeze": "Kontosperrung (28 Tage)"
+      }
+    },
+    "section4": {
+      "title": "Regeln und Details zu Kundenserviceverstößen",
+      "rudeQuestion": "Was ist ein grober oder beleidigender Chat oder Kommentar?",
+      "rudeDefinition": "Böswillige Bedrohung bedeutet, dass ein Mitglied jemanden beleidigt, flucht, droht, kommentiert usw. oder jemanden unangemessen bedroht und die gesetzlichen Rechte der anderen Partei beeinträchtigt.",
+      "rudeHandling": "Wie werden grobe oder beleidigende Chats oder Kommentare behandelt?",
+      "rudePenalty": "Allgemeine und schwere Verstöße führen zu entsprechenden Punktabzügen für Geschäftsrechte, Management, Kontrolle.",
+      "rudeScenario": "Anwendungsszenarien: Böswillige Bedrohung bedeutet, dass ein Mitglied jemanden beleidigt, flucht, droht usw. oder jemanden unangemessen bedroht und die gesetzlichen Rechte der anderen Partei beeinträchtigt."
+    },
+    "section5": {
+      "title": "Maßnahmen gegen Verstöße",
+      "breachQuestion": "Was ist ein Verstoß?",
+      "breachDefinition": "Ein Verstoß bedeutet, dass der Verkäufer dem Käufer keine Dienstleistungen erbracht oder die Rechte des Käufers beeinträchtigt oder die APP-NAME versprochenen Verpflichtungen nicht erfüllt hat. Der Verkäufer muss gesetzliche oder vereinbarte Verpflichtungen bezüglich Änderungen, Rückgaben, Rückerstattungen einhalten.",
+      "measure": "Ergriffene Maßnahmen: Punktabzug",
+      "specificMeasures": "Spezifische Maßnahmen",
+      "generalViolation": "1. In bestimmten Situationen, wenn der Verkäufer andere Versprechen für die bezahlte Bestellung oder zugehörige Produkte/Dienstleistungen erfüllen muss, Abzug von 5 Punkten pro allgemeinem Verstoß",
+      "seriousViolation": {
+        "prefix": "2. Wenn der Verkäufer eines der folgenden Versprechen verletzt, Abzug von 10 Punkten pro schwerem Verstoß:",
+        "item1": "1) APP-NAME bestimmt, dass der Verkäufer für Rückerstattung und Kundendienstgarantie verantwortlich ist, aber der Verkäufer verweigert",
+        "item2": "2) APP-NAME bestimmt, dass der Verkäufer für Rückgabe/Umtausch ohne Grund innerhalb der 7-tägigen Garantie verantwortlich ist, aber der Verkäufer verweigert",
+        "item3": "3) Verweigerung oder Verzögerung der Lieferung des versprochenen Testprodukts an den Käufer ohne Diskussion mit dem Käufer",
+        "item4": "4) Der Verkäufer bearbeitet die Bestellung nicht innerhalb von 72 Stunden nach Zahlung",
+        "activity": "Der Verkäufer, der an offiziellen APP-NAME-Aktivitäten teilnimmt, hält sich nicht an die Aktivitätsanforderungen (außer Versandzeit), verstößt gegen andere offiziell von APP-NAME angekündigte Managementinhalte (einschließlich, aber nicht beschränkt auf Kategorienmanagementstandards, Branchenstandards usw.). Wenn spezifische Anforderungen einer spezifischen Situation entsprechen, folgen Sie diesen Anforderungen"
+      }
+    },
+    "section6": {
+      "title": "Wie lange dauert die Strafperiode?",
+      "duration": {
+        "prefix": "Die Strafe endet nach ",
+        "days": "28 Tagen",
+        "suffix": ". Ergreifen Sie entsprechende Maßnahmen und verbessern Sie die aktuelle Shop-Leistung und halten Sie die Compliance aufrecht, der bestrafte Verkäufer kann einen Teil der Verkäuferrechte wiederherstellen."
+      }
+    },
+    "section7": {
+      "title": "Verstoßmanagement",
+      "generalCase": "Allgemeiner Fall",
+      "generalDesc": "Der Verbraucher reicht eine Beschwerde ein und APP-NAME bestimmt, dass die Beschwerde gültig ist, Abzug von 5 Punkten pro allgemeinem Verstoß, Wiederherstellung von 5 Punkten nach Abschluss von 5 Bestellungen",
+      "seriousCase": "Schwerer Fall",
+      "seriousDesc": "Der Verbraucher reicht eine Beschwerde ein und APP-NAME bestimmt, dass die Beschwerde gültig und schwerwiegend ist, Abzug von 20 Punkten pro Produkt, Wiederherstellung von 20 Punkten nach Abschluss von 20 Bestellungen",
+      "extremeCase": "Extrem schwerer Fall",
+      "extremeDesc": "Kontosperrung für 28 Tage, Shop-Schließung",
+      "example1": {
+        "title": "Beispiel 1: Verkäufer A wurde in der dritten Woche 3 Punkte abgezogen, Rechte in der siebten Woche wiederhergestellt"
+      },
+      "example2": {
+        "title": "Beispiel 2: Verkäufer B wurde in der dritten Woche 3 Punkte abgezogen, in der fünften Woche 3 Punkte, diese Punkte werden kumuliert, um die Stufe zu bestimmen, Rechte in der neunten Woche wiederhergestellt"
+      },
+      "example3": {
+        "title": "Beispiel 3: Verkäufer C wurde eine Woche vor Quartalsbeginn 3 Punkte abgezogen, 3 Punkte nach Quartalsbeginn, die neuen Punkte bestimmen die neue Stufe"
+      }
+    },
+    "section8": {
+      "title": "Wie kann man gegen eine Bewertung Einspruch erheben?",
+      "appeal": {
+        "prefix": " ",
+        "link": "Hotline-Link",
+        "suffix": " zum Einspruch. Bei erfolgreichem Einspruch wird der Punktabzug aufgehoben und die entsprechenden Verkäuferrechte wiederhergestellt."
+      }
+    }
+  }
+}

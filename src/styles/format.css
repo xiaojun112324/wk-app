@@ -1,0 +1,29 @@
+body,
+html {
+  
+    overscroll-behavior: none;
+}
+
+#tv-attr-logo {
+    display: none;
+}
+
+.ios-safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+
+img {
+    -webkit-user-drag: none;
+    /* 禁止拖动（Chrome, Safari） */
+    user-drag: none;
+    /* 标准属性 */
+    -webkit-touch-callout: none;
+    /* 禁用长按弹出菜单（iOS Safari） */
+    -moz-user-select: none;
+    /* 禁止选择 */
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    /* 禁用鼠标事件（包括右键） */
+}

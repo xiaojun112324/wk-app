@@ -1,0 +1,1226 @@
+{
+  "common": {
+    "store": "店鋪",
+  "goods": "商品",
+    "category": "類別",
+    "categories": "所有類別",
+    "wishlist": "願望清單",
+    "checkout": "結帳",
+    "order": "訂單",
+    "account": "帳戶",
+    "settings": "設定",
+    "language": "語言",
+    "currency": "貨幣",
+    "search": "搜尋",
+    "searchPlaceholder": "搜尋商品、品牌或類別",
+    "buyNow": "立即購買",
+    "viewMore": "查看更多",
+    "viewAll": "查看全部",
+    "loadMore": "載入更多",
+    "confirm": "確認",
+    "cancel": "取消",
+    "delete": "刪除",
+    "edit": "編輯",
+    "save": "儲存",
+    "submit": "提交",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "yes": "是",
+    "no": "否",
+    "success": "成功",
+    "failed": "失敗",
+    "loading": "載入中...",
+    "noData": "無資料",
+    "outOfStock": "缺貨",
+    "inStock": "有庫存",
+    "soldOut": "售罄",
+    "newArrival": "新品上架",
+    "bestSeller": "熱銷商品",
+    "discount": "折扣",
+    "price": "價格",
+    "quantity": "數量",
+    "total": "總計",
+    "subtotal": "小計",
+    "shipping": "運費",
+    "tax": "稅費",
+    "grandTotal": "總金額",
+    "payment": "付款",
+    "paymentMethod": "付款方式",
+    "delivery": "配送",
+    "contactUs": "聯絡我們",
+    "helpCenter": "幫助中心",
+    "privacyPolicy": "隱私政策",
+    "termsOfService": "服務條款",
+    "logout": "登出",
+    "forgotPassword": "忘記密碼？",
+    "rememberMe": "記住我",
+    "email": "電子郵件",
+    "phone": "電話",
+    "password": "密碼",
+    "confirmPassword": "確認密碼",
+    "welcomeBack": "歡迎回來",
+    "or": "或",
+    "continue": "繼續",
+    "filter": "篩選",
+    "sort": "排序",
+    "clear": "清除",
+    "viewDetails": "查看詳情",
+    "reviews": "評價",
+    "addReview": "新增評價",
+    "rating": "評分",
+    "share": "分享",
+    "copy": "複製",
+    "copied": "已複製",
+    "backToHome": "返回首頁",
+    "404Title": "頁面未找到",
+    "404Desc": "抱歉，您尋找的頁面不存在。",
+    "retry": "重試"
+  },
+  "login": {
+    "title": "登入帳戶",
+    "subtitle": "歡迎！請輸入您的帳戶資訊。",
+    "tabEmail": "使用電子郵件登入",
+    "tabPhone": "使用電話登入",
+    "emailLabel": "電子郵件",
+    "emailPlaceholder": "輸入電子郵件",
+    "emailRequired": "請輸入電子郵件",
+    "phoneLabel": "電話號碼",
+    "phonePlaceholder": "輸入電話號碼",
+    "phoneRequired": "請輸入電話號碼",
+    "areaCodePlaceholder": "國碼",
+    "areaCodeRequired": "請選擇國碼",
+    "passwordLabel": "密碼",
+    "passwordPlaceholder": "輸入密碼",
+    "passwordRequired": "請輸入密碼",
+    "passwordPattern": "密碼需為6-12個字元，不可包含空格。",
+    "noAccount": "沒有帳戶？",
+    "register": "註冊",
+    "forgotPassword": "忘記密碼？",
+    "loginButton": "登入",
+    "successMessage": "登入成功！"
+  },
+  "register": {
+    "title": "註冊",
+    "subtitle": "歡迎！請輸入您的資訊。",
+    "tabEmail": "電子郵件",
+    "tabPhone": "電話",
+    "emailLabel": "電子郵件",
+    "emailPlaceholder": "輸入電子郵件",
+    "emailRequired": "請輸入電子郵件",
+    "emailInvalid": "電子郵件格式無效。",
+    "phoneLabel": "電話號碼",
+    "phonePlaceholder": "輸入電話號碼",
+    "phoneRequired": "請輸入電話號碼",
+    "areaCodePlaceholder": "國碼",
+    "areaCodeRequired": "請選擇國碼",
+    "passwordLabel": "密碼",
+    "passwordPlaceholder": "輸入密碼",
+    "passwordRequired": "請輸入密碼",
+    "passwordPattern": "密碼需為6-12個字元，不可包含空格。",
+    "confirmPasswordLabel": "確認密碼",
+    "confirmPasswordPlaceholder": "再次輸入密碼",
+    "confirmPasswordRequired": "請再次輸入密碼",
+    "passwordMismatch": "密碼不一致！",
+    "hasAccount": "已有帳戶？",
+    "login": "登入",
+    "registerButton": "註冊",
+    "successMessage": "註冊成功！"
+  },
+  "home": {
+    "bannerTitleLine1": "升級您的風格",
+    "bannerTitleLine2": "擁抱奢華",
+    "bannerSubtitle": "探索最新精選系列，專為現代優雅而設計。以永恆時尚重塑您的衣櫥。",
+    "recommendCategory": "推薦類別",
+    "dailyNewArrival": "每日新品",
+    "recommendProduct": "推薦商品",
+    "recommendStore": "推薦商店",
+    "hotRecommend": "熱門推薦",
+    "featureAuthentic": "100%正品",
+    "featureReturn7Days": "7天退貨",
+    "featureShippingDiscount": "運費折扣",
+    "featureSecurePayment": "安全付款"
+  },
+  "products": {
+    "category": "類別",
+    "allProducts": "所有商品",
+    "comprehensive": "綜合",
+    "sales": "銷量",
+    "price": "價格",
+    "newArrival": "新品"
+  },
+  "merchantRegister": {
+    "title": "賣家註冊",
+    "header": "APP-NAME 賣家註冊",
+    "loginTipPrefix": "若您已有賣家帳戶，",
+    "login": "點擊登入",
+    "description": "我們的合作夥伴計劃提供全面的行銷與服務支援。客服團隊提供專業協助與建議，優化商品曝光與銷售策略。現在加入我們！創造更大商機，一起成長！",
+    "merchantInfo": "賣家資訊",
+    "storeLogo": "商店標誌",
+    "storeLogoTip": "上傳商店標誌",
+    "shopName": "店鋪名稱",
+    "shopNameTip": "輸入店鋪名稱",
+    "shopNamePlaceholder": "輸入店鋪名稱，禁止特殊字符",
+    "shopAddress": "店鋪地址",
+    "shopAddressTip": "輸入店鋪地址",
+    "shopAddressPlaceholder": "輸入店鋪地址，禁止特殊字符",
+    "country": "國家",
+    "countryTip": "選擇國家",
+    "countryPlaceholder": "選擇國家",
+    "idNumber": "身份證/護照號碼",
+    "idNumberTip": "輸入身份證號碼",
+    "idNumberPlaceholder": "輸入身份證號碼",
+    "realName": "真實姓名",
+    "realNameTip": "輸入真實姓名",
+    "realNamePlaceholder": "輸入真實姓名",
+    "idCardFront": "身份證正面",
+    "idCardFrontTip": "上傳身份證正面",
+    "idCardBack": "身份證反面",
+    "idCardBackTip": "上傳身份證反面",
+    "verifyType": "驗證方式",
+    "verifyTypeTip": "選擇驗證方式",
+    "email": "電子郵件",
+    "phone": "電話",
+    "contact": "使用者名稱（電子郵件或電話）",
+    "contactTip": "輸入使用者名稱",
+    "contactPlaceholder": "輸入電子郵件或電話",
+    "password": "登入密碼",
+    "passwordTip": "輸入登入密碼",
+    "passwordPattern": "密碼需為6-12個字元，不可包含空格。",
+    "passwordPlaceholder": "輸入登入密碼",
+    "confirmPassword": "確認密碼",
+    "confirmPasswordTip": "密碼不一致",
+    "confirmPasswordPlaceholder": "再次輸入登入密碼",
+    "inviteCode": "邀請碼",
+    "inviteCodePlaceholder": "輸入邀請碼（選填）",
+    "submit": "提交申請",
+    "submitSuccess": "提交成功，等待審核！",
+    "areaCodeTip": "選擇國碼",
+    "areaCodePlaceholder": "選擇國碼",
+    "phonePlaceholder": "輸入電話號碼"
+  },
+  "mineDetail": {
+    "goodsCollect": "商品收藏",
+    "storeCollect": "關注商店",
+    "defaultAddress": "預設地址",
+    "addAddress": "新增地址",
+    "followedStores": "關注的商店",
+    "collectedGoods": "收藏的商品"
+  },
+  "favoriteProducts": {
+    "collectedGoods": "收藏的商品"
+  },
+  "mineMerchant": {
+    "followedShops": "關注的店鋪"
+  },
+  "mine": {
+    "shop": "賣家註冊",
+    "userIdPrefix": "ID：",
+    "balanceLabel": "餘額",
+    "deposit": "充值",
+    "withdraw": "提現",
+    "myOrders": "我的訂單",
+    "all": "全部",
+    "orderStatus": {
+      "pending": "待付款",
+      "shipping": "待發貨",
+      "receiving": "待收貨",
+      "review": "待評價",
+      "refund": "退款/售後"
+    },
+    "moreFeatures": "更多功能",
+    "setting": "設定",
+    "language": "語言",
+    "wallet": "錢包",
+    "favorite": "收藏"
+  },
+  "OrderDetail": {
+    "myOrders": "我的訂單",
+    "orderInfo": "訂單資訊",
+    "orderNo": "訂單號",
+    "time": "時間",
+    "orderPrice": "訂單金額",
+    "orderState": "訂單狀態",
+    "refundState": "退款狀態",
+    "recipientInfo": "收件人資訊",
+    "name": "姓名",
+    "phone": "電話",
+    "country": "國家",
+    "addressDetail": "詳細地址",
+    "productInfo": "商品資訊",
+    "unitPrice": "單價",
+    "quantity": "數量",
+    "subtotal": "小計",
+    "total": "總計",
+    "unknown": "未知"
+  },
+  "Orders": {
+    "all": "全部",
+    "pending": "待付款",
+    "shipping": "待發貨",
+    "receiving": "待收貨",
+    "review": "待評價",
+    "refund": "退款/售後",
+    "confirmReceivingTitle": "確認收到商品？",
+    "confirm": "確認",
+    "cancel": "取消",
+    "orderNo": "訂單號",
+    "orderDesc": "訂單描述",
+    "orderPrice": "金額",
+    "status": "狀態",
+    "actions": "操作",
+    "viewOrder": "查看訂單",
+    "remindShipping": "提醒發貨",
+    "remindShippingSuccess": "已提醒賣家。",
+    "refundRequest": "申請退款",
+    "confirmReceiving": "確認收貨",
+    "addComment": "新增評論",
+    "unknown": "未知"
+  },
+  "Wallet": {
+    "balance": "餘額",
+    "recharge": "充值",
+    "withdraw": "提現",
+    "history": "錢包記錄",
+    "createTime": "建立日期",
+    "rechargeNo": "充值單號",
+    "rechargeAmount": "充值金額",
+    "rechargeType": "幣種協議",
+    "rechargeAddress": "充值地址",
+    "withdrawNo": "提現單號",
+    "withdrawAmount": "提現金額",
+    "withdrawType": "幣種協議",
+    "withdrawAddress": "收款地址",
+    "fee": "手續費",
+    "realAmount": "實收金額",
+    "status": "狀態",
+    "unpaid": "未支付",
+    "success": "成功",
+    "fail": "失敗",
+    "pending": "處理中",
+    "processed": "已處理",
+    "rejected": "已拒絕",
+    "orderNo": "單號"
+  },
+  "AccountPanel": {
+    "balance": "餘額",
+    "recharge": "充值",
+    "withdraw": "提現"
+  },
+  "LogisticsDialog": {
+    "title": "物流資訊",
+    "empty": "無物流資訊",
+    "close": "關閉"
+  },
+  "OrderCard": {
+    "viewOrder": "查看訂單",
+    "remindShipping": "提醒發貨",
+    "requestRefund": "申請退款",
+    "confirmReceiving": "確認收貨",
+    "payNow": "立即支付",
+    "cancelOrder": "取消訂單",
+    "addComment": "新增評論",
+    "refunded": "已退款"
+  },
+  "RefundDialog": {
+    "title": "申請退款",
+    "refundReason": "退款原因",
+    "refundReasonPlaceholder": "輸入退款原因",
+    "refundRemark": "退貨說明",
+    "refundRemarkPlaceholder": "輸入退貨說明",
+    "cancel": "取消",
+    "submit": "提交"
+  },
+  "Search": {
+    "comprehensive": "綜合",
+    "soldNum": "銷量",
+    "price": "價格",
+    "newest": "最新"
+  },
+  "Address": {
+    "setting": "設定",
+    "defaultAddress": "預設地址",
+    "addAddress": "新增地址",
+    "confirmDelete": "確認刪除",
+    "confirmDeleteContent": "是否要刪除此地址？",
+    "ok": "確定",
+    "cancel": "取消",
+    "edit": "編輯",
+    "delete": "刪除",
+    "deleted": "已刪除"
+  },
+  "DeleteAccount": {
+    "setting": "設定",
+    "title": "刪除帳戶",
+    "description": "永久刪除APP-NAME帳戶，所有個人資訊及相關資料將被刪除。刪除後資料無法恢復，請謹慎操作。請先備份重要資料或完成未結事項。",
+    "account": "您的帳戶",
+    "enterAccount": "輸入",
+    "reason": "退出原因",
+    "submit": "提交申請",
+    "submitSuccess": "提交成功"
+  },
+  "Setting": {
+    "title": "設定",
+    "description": "輕鬆、安全、便捷管理您的APP-NAME帳戶！一鍵更換登入密碼，使用包含字母、數字、符號的強密碼並定期更新，提升帳戶安全。設定獨立交易密碼用於敏感操作。更新精確收貨地址，確保平台通知與配送順暢。操作簡單，體驗舒適！",
+    "loginPassword": "登入密碼",
+    "tradePassword": "交易密碼",
+    "address": "收貨地址",
+    "deleteAccount": "刪除帳戶",
+    "submitSuccess": "提交成功！"
+  },
+  "LoginPassword": {
+    "setting": "設定",
+    "title": "登入密碼",
+    "description": "更改或重設密碼，使用包含字母、數字、符號的強密碼並定期更新，保護帳戶安全。",
+    "oldPassword": "舊密碼",
+    "newPassword": "新密碼",
+    "confirmPassword": "確認密碼",
+    "enterOldPassword": "輸入舊密碼",
+    "enterNewPassword": "輸入新密碼",
+    "passwordMinLength": "密碼至少6個字元。",
+    "confirmPasswordMsg": "確認密碼",
+    "passwordMismatch": "密碼不一致。",
+    "submit": "提交申請",
+    "success": "處理成功"
+  },
+  "PayPassword": {
+    "setting": "設定",
+    "title": "交易密碼",
+    "description": "設定與登入密碼不同的交易密碼，用於拍賣、提現等，提升交易安全性。",
+    "oldPassword": "舊密碼",
+    "newPassword": "新密碼",
+    "confirmPassword": "確認密碼",
+    "enterOldPassword": "輸入舊密碼",
+    "enterNewPassword": "輸入新密碼",
+    "passwordMinLength": "密碼至少6個字元。",
+    "confirmPasswordMsg": "確認密碼",
+    "passwordMismatch": "密碼不一致。",
+    "submit": "提交申請",
+    "success": "處理成功"
+  },
+  "MerchantHeader": {
+    "follow": "關注店鋪",
+    "followed": "已關注",
+    "followSuccess": "關注成功",
+    "unfollow": "取消關注",
+    "products": "商品",
+    "sales": "銷量",
+    "rate": "滿意度"
+  },
+  "Products": {
+    "allProducts": "所有商品",
+    "category": "類別",
+    "comprehensive": "綜合",
+    "sales": "銷量",
+    "price": "價格",
+    "newArrival": "新品"
+  },
+  "Store": {
+    "recommend": "推薦",
+    "allProducts": "所有商品"
+  },
+  "Withdraw": {
+    "myWallet": "我的錢包",
+    "withdraw": "提現",
+    "description": "支援多種收款渠道，提現申請快速處理，透過安全與合規保障每筆提現安全。"
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "頁面未找到",
+    "description": "抱歉，您尋找的頁面不存在。",
+    "backHome": "返回首頁"
+  },
+  "CheckForms": {
+    "checkout": "結帳",
+    "addressTitle": "1. 收貨地址",
+    "changeAddress": "更換地址",
+    "addressInfo": "收貨資訊",
+    "recipientName": "收件人姓名",
+    "phone": "聯絡方式",
+    "nation": "國家/地區",
+    "addressDetail": "詳細地址",
+    "noAddress": "無地址",
+    "addAddress": "新增地址",
+    "paymentTitle": "2. 付款方式",
+    "selectPayment": "選擇付款方式",
+    "balance": "餘額",
+    "paypal": "PayPal（開發中）",
+    "visa": "VISA（開發中）",
+    "mastercard": "MasterCard（開發中）",
+    "orderSummary": "訂單摘要",
+    "total": "總計",
+    "submitOrder": "提交訂單",
+    "submitSuccess": "提交成功",
+    "tip": "提示",
+    "selectAddressFirst": "請先選擇收貨地址",
+    "selectAddress": "選擇收貨地址",
+    "noAvailableAddress": "無可用地址"
+  },
+  "OrderResult": {
+    "paymentSuccess": "支付成功",
+    "recipient": "收件人",
+    "address": "收貨地址",
+    "continueShopping": "繼續購物",
+    "viewOrders": "查看訂單"
+  },
+  "Deposit": {
+    "myWallet": "我的錢包",
+    "deposit": "充值",
+    "description": "快速穩定充值，操作簡單順暢，隨時充值帳戶餘額，安心使用。"
+  },
+  "BottomNav": {
+    "home": "首頁",
+    "products": "商品",
+    "cart": "購物車",
+    "mine": "我的"
+  },
+  "Footer": {
+    "solutions": {
+      "title": "客戶服務",
+      "contactUs": "聯絡我們"
+    },
+    "support": {
+      "title": "退換貨",
+      "privacyPolicy": "隱私政策",
+      "returnsPolicy": "退貨政策",
+      "deliveryInformation": "配送與收貨",
+      "sellerScoreSystem": "賣家政策"
+    },
+    "company": {
+      "title": "用戶中心",
+      "register": "用戶註冊",
+      "orderQuery": "訂單查詢",
+      "favoriteProducts": "商品收藏",
+      "wallet": "我的錢包"
+    },
+    "legal": {
+      "title": "關於我們",
+      "aboutUs": "關於我們",
+      "careers": "職業機會",
+      "news": "新聞",
+      "modernSlavery": "現代奴役聲明"
+    },
+    "description": "APP-NAME全球用戶來自112個國家，使用USDT/ETH/BTC支付。USDT/ETH/BTC是無國界交易方式，實現全球即時、低成本交易，無需等待或國際手續費。",
+    "copyright": "© APP-NAME Limited 2023 版權所有"
+  },
+  "Header": {
+    "title": "APP-NAME",
+    "home": "首頁",
+    "category": "類別",
+    "products": "商品",
+    "sales": "促銷商品",
+    "merchantOnboarding": "賣家註冊",
+    "profile": "個人中心",
+    "logout": "登出",
+    "logoutSuccess": "登出成功",
+    "search": "搜尋"
+  },
+  "SearchWithHistory": {
+    "placeholder": "搜尋內容",
+    "clearAll": "清除全部"
+  },
+  "CartDrawer": {
+    "items": "件商品",
+    "myCart": "我的購物車"
+  },
+  "CartPanel": {
+    "totalItems": "商品總數",
+    "items": "件",
+    "totalPrice": "總價",
+    "submitOrder": "提交訂單"
+  },
+  "MerchantCard": {
+    "unfollow": "取消關注",
+    "follow": "關注",
+    "visitNow": "立即訪問",
+    "sold": "已售",
+    "views": "瀏覽",
+    "rating": "店鋪評分"
+  },
+  "Mine": {
+    "dashboard": "儀表板",
+    "wallet": "我的錢包",
+    "orders": "我的訂單",
+    "favoriteProducts": "商品收藏",
+    "followedMerchants": "關注的店鋪",
+    "settings": "設定",
+    "userId": "ID"
+  },
+  "PageTitle": {
+    "more": "查看更多"
+  },
+  "ProductCard": {
+    "addCartSuccess": "已加入購物車",
+    "collected": "已收藏",
+    "unCollected": "已取消收藏",
+    "off": "折",
+    "addToCart": "加入購物車",
+    "soldViews": "銷量",
+    "viewsNum": "瀏覽"
+  },
+  "AddGoodsCommentDialog": {
+    "title": "評價",
+    "addCommentSuccess": "評論新增成功",
+    "selectProduct": "選擇商品",
+    "selectProductRequired": "請選擇評價狀態",
+    "selectPlaceholder": "選擇",
+    "userName": "會員電子郵件/電話",
+    "userNameRequired": "請輸入會員電子郵件或電話",
+    "userNamePlaceholder": "輸入會員電子郵件或電話",
+    "commentContent": "評價內容",
+    "commentContentRequired": "請輸入評價內容",
+    "commentContentPlaceholder": "輸入評價內容",
+    "rating": "評分",
+    "ratingRequired": "請選擇評分",
+    "commentImages": "評價圖片",
+    "cancel": "取消",
+    "confirm": "確認"
+  },
+  "AddressDialog": {
+    "editAddress": "編輯收貨地址",
+    "addAddress": "新增收貨地址",
+    "recipientName": "收件人姓名",
+    "recipientNameRequired": "請輸入收件人姓名",
+    "recipientNamePlaceholder": "輸入收件人姓名",
+    "phone": "電話號碼",
+    "nationRequired": "請選擇國碼",
+    "nationPlaceholder": "國碼",
+    "phoneRequired": "請輸入電話號碼",
+    "phonePlaceholder": "輸入電話號碼",
+    "email": "電子郵件",
+    "emailPlaceholder": "輸入電子郵件",
+    "region": "國家/地區/城市",
+    "regionRequired": "請選擇地區",
+    "regionPlaceholder": "選擇國家/地區/城市",
+    "postCode": "郵遞區號",
+    "postCodePlaceholder": "輸入郵遞區號",
+    "addressDetail": "詳細地址",
+    "addressDetailPlaceholder": "輸入詳細地址",
+    "isDefault": "預設地址",
+    "cancel": "取消",
+    "confirm": "確認"
+  },
+  "CustomerServiceChat": {
+    "title": "客服",
+    "inputPlaceholder": "輸入",
+    "noMessage": "無訊息",
+    "imageAlt": "圖片",
+    "heicUnsupported": "當前瀏覽器不支援上傳HEIC檔案。",
+    "heicUploadFailed": "HEIC檔案上傳失敗。"
+  },
+  "DepositForm": {
+    "currency": "充值幣種",
+    "selectCurrency": "選擇充值幣種",
+    "network": "區塊鏈網絡",
+    "selectNetwork": "選擇區塊鏈網絡",
+    "addressLabel": "充值地址",
+    "amount": "充值金額",
+    "enterAmount": "輸入充值金額",
+    "estimatedArrival": "預計到帳（當前匯率{{rate}}）",
+    "proof": "付款憑證（上傳截圖）",
+    "uploadProof": "上傳付款憑證",
+    "submit": "確認",
+    "success": "處理成功",
+    "addressCopied": "地址已複製！"
+  },
+  "OtpModal": {
+    "enterTransactionPassword": "輸入交易密碼",
+    "enter6Digits": "輸入6位驗證碼",
+    "verifyFailed": "驗證失敗，請重試",
+    "cancel": "取消",
+    "confirm": "確認"
+  },
+  "ProductDetailMain": {
+    "basicInfo": "基本資訊",
+    "sales": "銷量",
+    "views": "瀏覽",
+    "originalPrice": "原價",
+    "currentPrice": "現價",
+    "shipping": "運費",
+    "freeShipping": "免運費",
+    "quantity": "數量",
+    "totalPrice": "總價",
+    "buyNow": "立即購買",
+    "addToCart": "加入購物車",
+    "pleaseSelect": "請選擇",
+    "noStock": "缺貨",
+    "shippingDesc": "訂單後24小時內發貨。如訂單涉及物流管制，可能延遲發貨。請追蹤訂單物流資訊或聯繫客服。"
+  },
+  "ProductDetailModal": {
+    "title": "商品詳情",
+    "noGoods": "無商品資訊",
+    "addSuccess": "新增成功"
+  },
+  "UploadImg": {
+    "upload": "上傳",
+    "preview": "圖片預覽",
+    "onlyImage": "僅支援JPG/PNG/WEBP/HEIC格式圖片！",
+    "maxSize": "圖片大小不可超過。",
+    "unsupportedHeic": "當前瀏覽器不支援上傳HEIC檔案。",
+    "uploadFailed": "上傳失敗，請稍後再試"
+  },
+  "UploadMultiple": {
+    "upload": "上傳",
+    "uploadSuccess": "上傳成功",
+    "uploadFailed": "上傳失敗"
+  },
+  "WithdrawForm": {
+    "withdrawMethod": "提現方式",
+    "selectWithdrawMethod": "選擇提現方式",
+    "crypto": "加密貨幣",
+    "bankCard": "銀行卡",
+    "coinType": "提現幣種",
+    "selectCoin": "選擇幣種",
+    "enterUSDT": "輸入USDT",
+    "blockchainNetwork": "區塊鏈網絡",
+    "withdrawAddress": "提現地址",
+    "enterWithdrawAddress": "輸入提現地址",
+    "copy": "複製",
+    "bankName": "銀行名稱",
+    "enterBankName": "輸入銀行名稱",
+    "bankBranch": "銀行分行",
+    "enterBankBranch": "輸入銀行分行",
+    "bankCardNumber": "銀行卡號",
+    "enterBankCardNumber": "輸入銀行卡號",
+    "withdrawAmount": "提現金額",
+    "enterWithdrawAmount": "輸入提現金額",
+    "amountMustBeGreaterZero": "提現金額必須大於0。",
+    "currentBalance": "當前餘額",
+    "actualReceived": "實收金額",
+    "fee": "手續費",
+    "confirmSubmit": "確認提交",
+    "copied": "已複製！",
+    "inputAddressFirst": "請先輸入提現地址/銀行卡號",
+    "operationSuccess": "操作成功"
+  },
+  "order": {
+    "pendingPayment": "待付款",
+    "pendingShipment": "待發貨",
+    "pendingReceive": "待收貨",
+    "pendingReview": "待評價",
+    "refund": "退款/售後"
+  },
+  "refund": {
+    "pending": "審核中",
+    "success": "成功",
+    "failed": "失敗"
+  },
+  "DeliveryInformation": {
+    "title": "運送到哪裡？",
+    "desc1": "輸入欲購買商品的郵遞區號，確認是否可配送至您的地區。",
+    "desc2": "商品直接從供應商發貨，擁有遍佈112個國家/地區的全球倉庫。",
+    "pickup": {
+      "title": "去哪裡取貨？",
+      "desc1": "設有24小時自取點。",
+      "highlight1": "APP-NAME專賣店、Sainsbury's超市",
+      "desc2": "以及全球倉庫",
+      "desc3": "對於符合即時配送的商品，您可根據所在位置選擇多個時間段。訂單將送達門口並放置在安全可靠的位置。",
+      "alert1": "在英格蘭、蘇格蘭、威爾斯，大型及重型商品（需2人以上搬運，例如：沙發、床）將送貨上門並安全運送至您指定的位置。",
+      "alert2": "友善的司機會在當天聯繫並討論配送詳情。如您正在自我隔離，請告知我們以重新安排配送日期。",
+      "warning": "目前大型商品配送需求很高。如有配送延誤，我們會盡快發送訊息。我們正努力為客戶提供最佳服務。感謝您的耐心與持續支持。"
+    },
+    "faq": {
+      "title": "常見問題",
+      "q1": "如果同時訂購大型與小型商品會怎樣？",
+      "a1_1": "最快配送方式是分開發貨。",
+      "a1_2": "別擔心，運費僅收取一次。",
+      "a1_3": "請查看訂單確認電子郵件中的詳情。",
+      "q2": "如果我不在家怎麼辦？",
+      "a2_1": "小型商品將放置在安全且不顯眼的位置，或在您要求下交給鄰居。",
+      "a2_2": "熱線電話",
+      "a2_3": "聯繫並重新安排最適合的日期與時間！",
+      "q3": "大型商品由幾人配送？",
+      "a3_1": "沙發、冰箱等大型商品",
+      "a3_2": "由2人",
+      "a3_3": "配送。友善的司機會在配送當天聯繫並安全運送至您指定的位置。",
+      "q4": "COVID-19：對配送有何影響？",
+      "a4_1": "我們仍為許多商品提供配送服務，包括遊戲主機預購。您將在配送前收到通知訊息與配送員追蹤號碼。",
+      "a4_2": "商品將放置在安全位置。大型商品將放置在安全位置，友善的司機會在當天聯繫並討論大型商品運輸詳情。如您正在自我隔離，請告知我們以重新安排配送日期。"
+    },
+    "cta": "查看配送覆蓋區域"
+  },
+  "PrivacyPolicy": {
+    "header": {
+      "label": "隱私政策",
+      "title": "APP-NAME隱私政策",
+      "desc": "最後更新：2025年10月 | 您的隱私保護是我們的首要任務。"
+    },
+    "sections": {
+      "1": {
+        "title": "1. 簡介",
+        "content": {
+          "welcome": "1.1 歡迎來到APP-NAME購物網站。",
+          "desc1": "APP-NAME嚴格遵守相關隱私法律法規（「隱私法」）所定義的責任，並盡最大努力尊重APP-NAME網站與行動應用程式（「平台」）所有用戶的隱私權與關注。",
+          "alert": "我們認識到您託付給我們的個人資訊的重要性，並相信我們有責任適當管理、保護與處理這些資訊。",
+          "definition": "個人資訊指可從該資訊或組織擁有或可能擁有的其他資訊識別個人的資訊。",
+          "consent": "使用本服務即表示您明確同意我們可根據本隱私政策收集、使用、披露及處理您的個人資訊。"
+        }
+      },
+      "2": {
+        "title": "2. APP-NAME何時收集個人資訊？",
+        "content": {
+          "scenariosTitle": "常見收集情境",
+          "online": "線上互動",
+          "onlineItems": [
+            "存取網站",
+            "提交表單",
+            "儲存Cookie"
+          ],
+          "offline": "線下互動",
+          "offlineItems": [
+            "電話通訊",
+            "面對面會面",
+            "電子郵件往來"
+          ],
+          "thirdParty": "我們可能從第三方（物流、支付服務商等）收到您的資訊。"
+        }
+      },
+      "3": {
+        "title": "3. APP-NAME收集哪些個人資訊？",
+        "categories": [
+          {
+            "icon": "基本資訊",
+            "label": "基本資訊",
+            "items": [
+              "姓名",
+              "電子郵件",
+              "電話號碼",
+              "地址"
+            ]
+          },
+          {
+            "icon": "身份資訊",
+            "label": "身份資訊",
+            "items": [
+              "出生日期",
+              "性別"
+            ]
+          },
+          {
+            "icon": "多媒體",
+            "label": "多媒體",
+            "items": [
+              "照片",
+              "音訊",
+              "影片"
+            ]
+          },
+          {
+            "icon": "職業資訊",
+            "label": "職業資訊",
+            "items": [
+              "教育程度",
+              "職業"
+            ]
+          },
+          {
+            "icon": "位置資訊",
+            "label": "位置資訊",
+            "items": [
+              "地理位置"
+            ]
+          },
+          {
+            "icon": "行為資訊",
+            "label": "行為資訊",
+            "items": [
+              "瀏覽歷史",
+              "偏好設定"
+            ]
+          }
+        ],
+        "warning": "您可隨時選擇不參與資訊收集，但這可能影響部分功能使用。"
+      },
+      "4": {
+        "title": "4. 其他資訊收集",
+        "device": {
+          "title": "裝置資訊",
+          "items": [
+            "IP地址",
+            "作業系統",
+            "瀏覽器類型",
+            "唯一裝置ID"
+          ]
+        },
+        "location": {
+          "title": "定位服務",
+          "desc": "使用GPS/Wi-Fi收集精確位置資訊。",
+          "note": "可隨時在裝置設定中停用。"
+        }
+      },
+      "5": {
+        "title": "5. Cookie",
+        "titleLabel": "Cookie政策",
+        "purpose": {
+          "title": "用途",
+          "items": [
+            "提供個人化內容推薦",
+            "廣告客製化",
+            "網站使用分析"
+          ]
+        },
+        "management": {
+          "title": "管理方式",
+          "items": [
+            "在瀏覽器設定中停用",
+            "在行動裝置上停用個人化廣告",
+            "可能影響部分功能"
+          ]
+        }
+      },
+      "6": {
+        "title": "6. 我們如何使用您提供的資訊？",
+        "mainUse": "主要用途",
+        "items": [
+          {
+            "icon": "提供服務"
+          },
+          {
+            "icon": "通訊聯繫"
+          },
+          {
+            "icon": "資料分析"
+          },
+          {
+            "icon": "功能改善"
+          },
+          {
+            "icon": "行銷推廣"
+          },
+          {
+            "icon": "法律合規"
+          }
+        ],
+        "unsubscribe": "可隨時取消接收行銷資訊。"
+      },
+      "7": {
+        "title": "7. 哪些資訊會被儲存，APP-NAME如何保護用戶資訊？",
+        "security": {
+          "title": "安全措施",
+          "items": [
+            "實體保護",
+            "系統管理保障",
+            "電子加密技術",
+            "權限控制存取"
+          ]
+        },
+        "retention": {
+          "title": "儲存期限",
+          "desc": "僅在必要期間儲存，滿足以下條件即刪除：",
+          "items": [
+            "終止關係",
+            "達成目的",
+            "符合法律要求"
+          ]
+        }
+      },
+      "8": {
+        "title": "8. APP-NAME是否向第三方披露收集的資訊？",
+        "recipients": [
+          "關聯公司/子公司",
+          "承包商",
+          "服務供應商",
+          "政府機構",
+          "併購承包商",
+          "廣告合作夥伴"
+        ],
+        "note": "所有第三方均保證遵守相同資料保護標準。"
+      }
+    },
+    "quickAccess": {
+      "title": "快速存取",
+      "items": [
+        {
+          "label": "撤銷同意",
+          "icon": "撤銷"
+        },
+        {
+          "label": "存取資訊",
+          "icon": "查看"
+        },
+        {
+          "label": "Cookie設定",
+          "icon": "Cookie"
+        },
+        {
+          "label": "聯絡我們",
+          "icon": "電子郵件"
+        }
+      ]
+    },
+    "footer": {
+      "contact": "如有疑問，請聯繫我們的資料保護官。",
+      "email": "support@APP-NAME.com",
+      "copyright": "© 2025 APP-NAME 版權所有"
+    },
+    "toggle": {
+      "expand": "展開",
+      "collapse": "收合"
+    }
+  },
+  "PrivacyPolicyPage": {
+    "header": "隱私政策",
+    "title": "APP-NAME隱私政策",
+    "lastUpdated": "最後更新：2025年10月 | 您的隱私保護是我們的首要任務。",
+    "expand": "展開",
+    "collapse": "收合",
+    "section1Title": "1. 簡介",
+    "section1_1": "1.1 歡迎來到APP-NAME購物網站。",
+    "section1_2": "APP-NAME嚴格遵守相關隱私法律法規（「隱私法」）所定義的責任，並盡最大努力尊重平台所有用戶的隱私權。",
+    "section1_3": "我們認識到您託付給我們的個人資訊的重要性，並相信我們有責任適當管理、保護與處理這些資訊。",
+    "section1_4": "個人資訊是可識別個人的資訊。",
+    "section1_5": "使用本服務即表示您同意我們可根據本隱私政策收集、使用、披露及處理您的個人資訊。",
+    "section2Title": "2. APP-NAME何時收集個人資訊？",
+    "section2_1": "常見收集情境",
+    "section2_2": "線上互動",
+    "section2_3": "存取網站",
+    "section2_4": "提交表單",
+    "section2_5": "儲存Cookie",
+    "section2_6": "線下互動",
+    "section2_7": "電話通訊",
+    "section2_8": "面對面會面",
+    "section2_9": "電子郵件往來",
+    "section2_10": "我們可能從第三方收到您的資訊。",
+    "section3Title": "3. APP-NAME收集哪些個人資訊？",
+    "section3_1_label": "基本資訊",
+    "section3_1_1": "姓名",
+    "section3_1_2": "電子郵件",
+    "section3_1_3": "電話號碼",
+    "section3_1_4": "地址",
+    "section3_2_label": "身份資訊",
+    "section3_2_1": "出生日期",
+    "section3_2_2": "性別",
+    "section3_3_label": "多媒體",
+    "section3_3_1": "照片",
+    "section3_3_2": "音訊",
+    "section3_3_3": "影片",
+    "section3_4_label": "職業資訊",
+    "section3_4_1": "教育程度",
+    "section3_4_2": "職業",
+    "section3_5_label": "位置資訊",
+    "section3_5_1": "地理位置",
+    "section3_6_label": "行為資訊",
+    "section3_6_1": "瀏覽歷史",
+    "section3_6_2": "偏好設定",
+    "section3_warning": "您可隨時選擇不參與資訊收集，但這可能影響部分功能使用。",
+    "section4Title": "4. 資訊使用方式",
+    "section4_1": "如何使用資訊",
+    "section4_2": "提供與改善服務",
+    "section4_3": "個人化推薦",
+    "section4_4": "安全防護",
+    "section4_5": "法律合規",
+    "section4_6": "資訊共享",
+    "section4_7": "可能與第三方共享資訊以提供服務。",
+    "section4_8": "共享資訊嚴格遵守本隱私政策與法律。",
+    "section5Title": "5. Cookie與追蹤技術",
+    "section5_1": "如何使用Cookie",
+    "section5_2": "必要Cookie",
+    "section5_3": "確保網站基本功能",
+    "section5_4": "記住登入狀態",
+    "section5_5": "防範詐騙",
+    "section5_6": "效能Cookie",
+    "section5_7": "分析網站使用情況",
+    "section5_8": "改善服務",
+    "section5_9": "可停用",
+    "section6Title": "6. 資料保護措施",
+    "section6_1": "採取的安全措施",
+    "section6_2": "存取控制",
+    "section6_3": "加密技術",
+    "section6_4": "定期備份",
+    "section6_5": "安全培訓",
+    "section6_6": "系統監控",
+    "section6_7": "審計與合規",
+    "section6_8": "請勿分享帳戶密碼，確保個人資訊安全。",
+    "section7Title": "7. 用戶權利",
+    "section7_1": "存取與控制權利",
+    "section7_2": "查看儲存的個人資訊",
+    "section7_3": "更正不準確資訊",
+    "section7_4": "請求刪除資訊",
+    "section7_5": "限制或拒絕處理",
+    "section7_6": "其他權利",
+    "section7_7": "可隨時撤銷同意並提出隱私問題。",
+    "section7_8": "資料可攜權",
+    "section7_9": "反對處理權",
+    "section7_10": "申訴權",
+    "section8Title": "8. 聯絡我們",
+    "section8_1": "如對隱私政策有疑問",
+    "section8_2": "透過客服電子郵件聯繫",
+    "section8_3": "客服熱線電話",
+    "section8_4": "線上即時對談",
+    "section8_5": "社群媒體帳戶",
+    "section8_6": "書面郵寄",
+    "section8_7": "提交網站反饋表單",
+    "section8_warning": "申請將在合理時間內處理，但部分操作可能需額外驗證。"
+  },
+  "ReturnsPolicy": {
+    "title": "改變心意",
+    "subtitle1": "收貨或配送後 ",
+    "subtitle2": "15天內",
+    "subtitle3": " 可退貨",
+    "mustBe": "商品須符合以下條件：",
+    "refundMethod": "退款將透過原付款方式處理：",
+    "refundUsdtEth": "若使用USDT或ETH，將於1個工作日內顯示於帳戶。",
+    "refundWire": "若使用銀行轉帳，視銀行而定可能需時最多30天。",
+    "requirements1": "未使用且包含所有原裝組件",
+    "requirements2": "原包裝（如可能，含標籤）",
+    "requirements3": "可再售狀態",
+    "requirements4": "包含購買憑證",
+    "requirements5": "包含隨商品贈送的禮品",
+    "productSupport": "商品支援",
+    "productSupportDesc1": "在大多數情況下，若商品出現問題，您可輕鬆從家中透過",
+    "productSupportDesc2": "商品支援網站",
+    "productSupportDesc3": " 解決。在此您可存取我們商品與公司的常見問題、配送與收貨、退貨與退款資訊。",
+    "goodsIssue": "問題商品",
+    "issueNotice1": "若您希望在首15天內退貨，我們提供換貨、更換或退款。",
+    "issueNotice2": "此期限後，只要商品在保固期內，我們將透過專屬維修代理安排維修，或在無法維修時更換或替換商品。",
+    "issueDesc": "最快退貨方式是透過遍佈112個國家/地區的全球倉庫中心。我們接受大多數商品，但大型商品除外。若最初為送貨上門且仍希望退回大型商品，請向下捲動以啟動即時對談或撥打熱線。",
+    "precautionsTitle": "注意事項",
+    "precautionsDesc": "某些商品如食品、穿刺首飾、內衣僅在瑕疵時可退換。不可退款商品將在網站明確標示。",
+    "precautions1": "退回DVD、音樂或軟體時，必須未使用且在原封裝內。",
+    "precautions2": "若商品或包裝嚴重損壞，我們有權扣減退款金額。",
+    "precautions3": "我們可能要求商品序號或其他類似資訊以確認由我們供應該商品。",
+    "precautions4": "當然，這不影響您的法定權利。",
+    "precautionsNote": "我們將在退款前檢查商品。若發現未按指示退回商品，我們有權拒絕退款或根據商品狀況提供部分退款。",
+    "proof1_1": "現金收據",
+    "proof1_2": "電子收據",
+    "proof1_3": "訂單號碼",
+    "proof1_4": "確認電子郵件",
+    "proof2_1": "交易發票",
+    "proof2_2": "用於購買商品的電子郵件地址",
+    "faqTitle": "常見問題",
+    "cta": "開始退貨流程"
+  },
+  "sellerRating": {
+    "title": "賣家評分系統",
+    "intro": "簡介",
+    "introContent": "在此介紹賣家評分系統及其創建與使用方法。",
+    "website": "相關網站",
+    "parties": "相關方",
+    "allSellers": "所有賣家",
+    "section1": {
+      "title": "如何進入賣家評分系統？",
+      "encourage": "賣家評分系統鼓勵賣家維持高標準服務，為我們的買家提供良好購物體驗。",
+      "deduction": "未能達到承諾目標將導致扣分。",
+      "accessPath": {
+        "prefix": "[",
+        "path": "賣家中心 >> 賣家信用分數",
+        "suffix": "] 頁面查看分數。"
+      }
+    },
+    "section2": {
+      "title": "分數如何產生？",
+      "deductionCondition": "僅在未滿足買家最低期望時扣分，並警示賣家需改進的領域。",
+      "updateTime": "賣家評分系統每月1日根據上月賣家違規情況更新。點擊相關評分維度關鍵字查看完整政策。"
+    },
+    "table1": {
+      "headers": {
+        "measure": "評分指標",
+        "spec": "說明",
+        "deduction": "月度扣分"
+      },
+      "max10": "最高10分",
+      "max20": "最高20分",
+      "rows": {
+        "nfr": {
+          "title": "不滿足率 NFR",
+          "desc": "近7天內賣家取消或退貨訂單數達總訂單數30%"
+        },
+        "lsr": {
+          "title": "延遲發貨率 LSR",
+          "desc": "近7天內延遲超過72小時的訂單數達總訂單數20%"
+        },
+        "customerService": {
+          "title": "客戶服務",
+          "rude": "對談或評論中粗魯或侮辱",
+          "cancelRequests": "本月買家訂單取消請求超過5次"
+        },
+        "breach": {
+          "title": "違規",
+          "lowResponse": "買家回應率低於80%",
+          "violatePromise": "賣家未向買家提供承諾服務，影響買家權益"
+        }
+      }
+    },
+    "section3": {
+      "title": "特定分數相關的懲罰是什麼？"
+    },
+    "table2": {
+      "headers": {
+        "points": "總分數",
+        "level": "懲罰等級"
+      },
+      "level1": "1級",
+      "level2": "2級",
+      "level3": "3級",
+      "level4": "4級",
+      "level5": "5級",
+      "level6": "6級",
+      "penalties": {
+        "marketingBan": "行銷活動禁令（28天）",
+        "freeShippingRemoval": "免運費或運費退款移除（28天）",
+        "deboost": "商品曝光降低（28天）",
+        "loanRestriction": "賣家貸款限制（28天）",
+        "listingBlock": "商品上架與編輯限制（28天）",
+        "accountFreeze": "帳戶凍結（28天）"
+      }
+    },
+    "section4": {
+      "title": "客戶服務違規規則與詳情",
+      "rudeQuestion": "什麼是對談或評論粗魯或侮辱？",
+      "rudeDefinition": "惡意威脅指會員侮辱、謾罵、威脅、評論等方式針對某人，或以不當方式威脅某人，影響他方合法權益。",
+      "rudeHandling": "粗魯或侮辱對談或評論如何處理？",
+      "rudePenalty": "一般與嚴重違規將扣除相關商業、管理、控制權益分數。",
+      "rudeScenario": "適用情境：惡意威脅指會員侮辱、謾罵、威脅等方式針對某人，或以不當方式威脅某人，影響他方合法權益。"
+    },
+    "section5": {
+      "title": "違規應對措施",
+      "breachQuestion": "什麼是違規？",
+      "breachDefinition": "違規指賣家未向買家提供服務或影響買家權益，或未履行與APP-NAME承諾的義務。賣家須遵守法律或約定關於變更、退貨、退款的義務。",
+      "measure": "採取措施：扣分",
+      "specificMeasures": "具體措施",
+      "generalViolation": "1. 在特定情況下，若賣家需履行已付款訂單或相關商品/服務的其他承諾，每一般違規扣5分",
+      "seriousViolation": {
+        "prefix": "2. 若賣家違反以下任一承諾，每嚴重違規扣10分：",
+        "item1": "1) APP-NAME判定賣家需負責退款與售後擔保但賣家拒絕",
+        "item2": "2) APP-NAME判定賣家需負責7天無理由退換貨但賣家拒絕",
+        "item3": "3) 拒絕或延遲向買家發貨承諾試用商品且未與買家協商",
+        "item4": "4) 賣家在付款後72小時內未處理訂單",
+        "activity": "參與APP-NAME官方活動的賣家未遵守活動要求（不含發貨時間），違反APP-NAME官方公告的其他管理內容（包括但不限於類別管理標準、行業標準等）。若特定要求符合特定情況，則遵循該要求"
+      }
+    },
+    "section6": {
+      "title": "懲罰期限多久？",
+      "duration": {
+        "prefix": "懲罰於 ",
+        "days": "28天",
+        "suffix": " 後結束。採取相關措施並改善當前店鋪表現並保持合規，受懲罰賣家可恢復部分賣家權益。"
+      }
+    },
+    "section7": {
+      "title": "違規管理",
+      "generalCase": "一般情況",
+      "generalDesc": "消費者提交投訴且APP-NAME認定投訴有效，每一般違規扣5分，完成5筆訂單後恢復5分",
+      "seriousCase": "嚴重情況",
+      "seriousDesc": "消費者提交投訴且APP-NAME認定投訴有效且嚴重，每商品扣20分，完成20筆訂單後恢復20分",
+      "extremeCase": "極端嚴重情況",
+      "extremeDesc": "28天內帳戶凍結，店鋪關閉",
+      "example1": {
+        "title": "範例1：賣家A於第三週扣3分，第七週恢復權益"
+      },
+      "example2": {
+        "title": "範例2：賣家B於第三週扣3分，第五週扣3分，該分數累計決定等級，第九週恢復權益"
+      },
+      "example3": {
+        "title": "範例3：賣家C於季度開始前一週扣3分，季度開始後扣3分，新分數決定新等級"
+      }
+    },
+    "section8": {
+      "title": "如何對評分提出異議？",
+      "appeal": {
+        "prefix": " ",
+        "link": "熱線連結",
+        "suffix": " 提出異議。異議成功則取消扣分並恢復相關賣家權益。"
+      }
+    }
+  }
+}

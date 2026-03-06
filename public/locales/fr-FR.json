@@ -1,0 +1,1226 @@
+{
+  "common": {
+     "store": "Magasin",
+  "goods": "Produits",
+    "category": "Catégorie",
+    "categories": "Toutes les catégories",
+    "wishlist": "Liste de souhaits",
+    "checkout": "Passer la commande",
+    "order": "Commande",
+    "account": "Compte",
+    "settings": "Paramètres",
+    "language": "Langue",
+    "currency": "Devise",
+    "search": "Rechercher",
+    "searchPlaceholder": "Rechercher des produits, marques ou catégories",
+    "buyNow": "Acheter maintenant",
+    "viewMore": "Voir plus",
+    "viewAll": "Voir tout",
+    "loadMore": "Charger plus",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "save": "Enregistrer",
+    "submit": "Soumettre",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "yes": "Oui",
+    "no": "Non",
+    "success": "Succès",
+    "failed": "Échec",
+    "loading": "Chargement...",
+    "noData": "Aucune donnée",
+    "outOfStock": "Rupture de stock",
+    "inStock": "En stock",
+    "soldOut": "Épuisé",
+    "newArrival": "Nouveautés",
+    "bestSeller": "Meilleures ventes",
+    "discount": "Réduction",
+    "price": "Prix",
+    "quantity": "Quantité",
+    "total": "Total",
+    "subtotal": "Sous-total",
+    "shipping": "Livraison",
+    "tax": "Taxes",
+    "grandTotal": "Montant total",
+    "payment": "Paiement",
+    "paymentMethod": "Mode de paiement",
+    "delivery": "Livraison",
+    "contactUs": "Nous contacter",
+    "helpCenter": "Centre d’aide",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d’utilisation",
+    "logout": "Déconnexion",
+    "forgotPassword": "Mot de passe oublié ?",
+    "rememberMe": "Se souvenir de moi",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "welcomeBack": "Bon retour",
+    "or": "ou",
+    "continue": "Continuer",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "clear": "Effacer",
+    "viewDetails": "Voir les détails",
+    "reviews": "Avis",
+    "addReview": "Ajouter un avis",
+    "rating": "Note",
+    "share": "Partager",
+    "copy": "Copier",
+    "copied": "Copié",
+    "backToHome": "Retour à l’accueil",
+    "404Title": "Page non trouvée",
+    "404Desc": "Désolé, la page que vous recherchez n’existe pas.",
+    "retry": "Réessayer"
+  },
+  "login": {
+    "title": "Connexion au compte",
+    "subtitle": "Bienvenue ! Veuillez saisir vos informations de compte.",
+    "tabEmail": "Connexion par e-mail",
+    "tabPhone": "Connexion par téléphone",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "Saisir l’e-mail",
+    "emailRequired": "Veuillez saisir l’e-mail",
+    "phoneLabel": "Numéro de téléphone",
+    "phonePlaceholder": "Saisir le numéro de téléphone",
+    "phoneRequired": "Veuillez saisir le numéro de téléphone",
+    "areaCodePlaceholder": "Code pays",
+    "areaCodeRequired": "Veuillez sélectionner le code pays",
+    "passwordLabel": "Mot de passe",
+    "passwordPlaceholder": "Saisir le mot de passe",
+    "passwordRequired": "Veuillez saisir le mot de passe",
+    "passwordPattern": "Le mot de passe doit contenir 6 à 12 caractères sans espaces.",
+    "noAccount": "Pas de compte ?",
+    "register": "S’inscrire",
+    "forgotPassword": "Mot de passe oublié ?",
+    "loginButton": "Connexion",
+    "successMessage": "Connexion réussie !"
+  },
+  "register": {
+    "title": "Inscription",
+    "subtitle": "Bienvenue ! Veuillez saisir vos informations.",
+    "tabEmail": "E-mail",
+    "tabPhone": "Téléphone",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "Saisir l’e-mail",
+    "emailRequired": "Veuillez saisir l’e-mail",
+    "emailInvalid": "Format d’e-mail invalide.",
+    "phoneLabel": "Numéro de téléphone",
+    "phonePlaceholder": "Saisir le numéro de téléphone",
+    "phoneRequired": "Veuillez saisir le numéro de téléphone",
+    "areaCodePlaceholder": "Code pays",
+    "areaCodeRequired": "Veuillez sélectionner le code pays",
+    "passwordLabel": "Mot de passe",
+    "passwordPlaceholder": "Saisir le mot de passe",
+    "passwordRequired": "Veuillez saisir le mot de passe",
+    "passwordPattern": "Le mot de passe doit contenir 6 à 12 caractères sans espaces.",
+    "confirmPasswordLabel": "Confirmer le mot de passe",
+    "confirmPasswordPlaceholder": "Saisir à nouveau le mot de passe",
+    "confirmPasswordRequired": "Veuillez saisir à nouveau le mot de passe",
+    "passwordMismatch": "Les mots de passe ne correspondent pas !",
+    "hasAccount": "Déjà un compte ?",
+    "login": "Connexion",
+    "registerButton": "S’inscrire",
+    "successMessage": "Inscription réussie !"
+  },
+  "home": {
+    "bannerTitleLine1": "Mettez à jour votre style",
+    "bannerTitleLine2": "Adoptez le luxe",
+    "bannerSubtitle": "Découvrez les dernières collections sélectionnées, conçues pour l’élégance moderne. Réinventez votre garde-robe avec une mode intemporelle.",
+    "recommendCategory": "Catégories recommandées",
+    "dailyNewArrival": "Nouveautés quotidiennes",
+    "recommendProduct": "Produits recommandés",
+    "recommendStore": "Magasins recommandés",
+    "hotRecommend": "Recommandations populaires",
+    "featureAuthentic": "100 % authentique",
+    "featureReturn7Days": "Retour sous 7 jours",
+    "featureShippingDiscount": "Réduction sur les frais de port",
+    "featureSecurePayment": "Paiement sécurisé"
+  },
+  "products": {
+    "category": "Catégorie",
+    "allProducts": "Tous les produits",
+    "comprehensive": "Global",
+    "sales": "Ventes",
+    "price": "Prix",
+    "newArrival": "Nouveautés"
+  },
+  "merchantRegister": {
+    "title": "Inscription vendeur",
+    "header": "Inscription vendeur APP-NAME",
+    "loginTipPrefix": "Si vous avez déjà un compte vendeur, ",
+    "login": "cliquez pour vous connecter",
+    "description": "Notre programme de partenariat offre un soutien complet en marketing et en services. L’équipe de support client fournit une assistance et des conseils professionnels pour optimiser l’exposition des produits et les stratégies de vente. Rejoignez-nous maintenant ! Créez plus d’opportunités commerciales et grandissez ensemble !",
+    "merchantInfo": "Informations du vendeur",
+    "storeLogo": "Logo du magasin",
+    "storeLogoTip": "Télécharger le logo du magasin",
+    "shopName": "Nom du magasin",
+    "shopNameTip": "Saisir le nom du magasin",
+    "shopNamePlaceholder": "Saisir le nom du magasin, caractères spéciaux interdits",
+    "shopAddress": "Adresse du magasin",
+    "shopAddressTip": "Saisir l’adresse du magasin",
+    "shopAddressPlaceholder": "Saisir l’adresse du magasin, caractères spéciaux interdits",
+    "country": "Pays",
+    "countryTip": "Sélectionner le pays",
+    "countryPlaceholder": "Sélectionner le pays",
+    "idNumber": "Numéro d’ID/passeport",
+    "idNumberTip": "Saisir le numéro d’ID",
+    "idNumberPlaceholder": "Saisir le numéro d’ID",
+    "realName": "Nom réel",
+    "realNameTip": "Saisir le nom réel",
+    "realNamePlaceholder": "Saisir le nom réel",
+    "idCardFront": "Face avant de la carte d’identité",
+    "idCardFrontTip": "Télécharger la face avant de la carte d’identité",
+    "idCardBack": "Face arrière de la carte d’identité",
+    "idCardBackTip": "Télécharger la face arrière de la carte d’identité",
+    "verifyType": "Méthode de vérification",
+    "verifyTypeTip": "Sélectionner la méthode de vérification",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "contact": "Nom d’utilisateur (e-mail ou téléphone)",
+    "contactTip": "Saisir le nom d’utilisateur",
+    "contactPlaceholder": "Saisir l’e-mail ou le téléphone",
+    "password": "Mot de passe de connexion",
+    "passwordTip": "Saisir le mot de passe de connexion",
+    "passwordPattern": "Le mot de passe doit contenir 6 à 12 caractères sans espaces.",
+    "passwordPlaceholder": "Saisir le mot de passe de connexion",
+    "confirmPassword": "Confirmer le mot de passe",
+    "confirmPasswordTip": "Les mots de passe ne correspondent pas",
+    "confirmPasswordPlaceholder": "Saisir à nouveau le mot de passe de connexion",
+    "inviteCode": "Code d’invitation",
+    "inviteCodePlaceholder": "Saisir le code d’invitation (facultatif)",
+    "submit": "Soumettre la demande",
+    "submitSuccess": "Demande soumise avec succès, en attente d’approbation !",
+    "areaCodeTip": "Sélectionner le code pays",
+    "areaCodePlaceholder": "Sélectionner le code pays",
+    "phonePlaceholder": "Saisir le numéro de téléphone"
+  },
+  "mineDetail": {
+    "goodsCollect": "Collection de produits",
+    "storeCollect": "Magasins suivis",
+    "defaultAddress": "Adresse par défaut",
+    "addAddress": "Ajouter une adresse",
+    "followedStores": "Magasins suivis",
+    "collectedGoods": "Produits collectionnés"
+  },
+  "favoriteProducts": {
+    "collectedGoods": "Produits collectionnés"
+  },
+  "mineMerchant": {
+    "followedShops": "Magasins suivis"
+  },
+  "mine": {
+    "shop": "Inscription vendeur",
+    "userIdPrefix": "ID :",
+    "balanceLabel": "Solde",
+    "deposit": "Recharger",
+    "withdraw": "Retirer",
+    "myOrders": "Mes commandes",
+    "all": "Tout",
+    "orderStatus": {
+      "pending": "En attente de paiement",
+      "shipping": "En attente d’expédition",
+      "receiving": "En attente de réception",
+      "review": "En attente d’évaluation",
+      "refund": "Remboursement/SAV"
+    },
+    "moreFeatures": "Plus de fonctionnalités",
+    "setting": "Paramètres",
+    "language": "Langue",
+    "wallet": "Portefeuille",
+    "favorite": "Favoris"
+  },
+  "OrderDetail": {
+    "myOrders": "Mes commandes",
+    "orderInfo": "Informations sur la commande",
+    "orderNo": "Numéro de commande",
+    "time": "Heure",
+    "orderPrice": "Montant de la commande",
+    "orderState": "État de la commande",
+    "refundState": "État du remboursement",
+    "recipientInfo": "Informations du destinataire",
+    "name": "Nom",
+    "phone": "Téléphone",
+    "country": "Pays",
+    "addressDetail": "Adresse détaillée",
+    "productInfo": "Informations sur le produit",
+    "unitPrice": "Prix unitaire",
+    "quantity": "Quantité",
+    "subtotal": "Sous-total",
+    "total": "Total",
+    "unknown": "Inconnu"
+  },
+  "Orders": {
+    "all": "Tout",
+    "pending": "En attente de paiement",
+    "shipping": "En attente d’expédition",
+    "receiving": "En attente de réception",
+    "review": "En attente d’évaluation",
+    "refund": "Remboursement/SAV",
+    "confirmReceivingTitle": "Confirmer la réception du produit ?",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "orderNo": "Numéro de commande",
+    "orderDesc": "Description de la commande",
+    "orderPrice": "Montant",
+    "status": "État",
+    "actions": "Actions",
+    "viewOrder": "Voir la commande",
+    "remindShipping": "Rappeler l’expédition",
+    "remindShippingSuccess": "Le vendeur a été notifié.",
+    "refundRequest": "Demande de remboursement",
+    "confirmReceiving": "Confirmer la réception",
+    "addComment": "Ajouter un commentaire",
+    "unknown": "Inconnu"
+  },
+  "Wallet": {
+    "balance": "Solde",
+    "recharge": "Recharger",
+    "withdraw": "Retirer",
+    "history": "Historique du portefeuille",
+    "createTime": "Date de création",
+    "rechargeNo": "Numéro de recharge",
+    "rechargeAmount": "Montant de la recharge",
+    "rechargeType": "Protocole de devise",
+    "rechargeAddress": "Adresse de recharge",
+    "withdrawNo": "Numéro de retrait",
+    "withdrawAmount": "Montant du retrait",
+    "withdrawType": "Protocole de devise",
+    "withdrawAddress": "Adresse de réception",
+    "fee": "Frais",
+    "realAmount": "Montant réel",
+    "status": "État",
+    "unpaid": "Non payé",
+    "success": "Succès",
+    "fail": "Échec",
+    "pending": "En cours",
+    "processed": "Traité",
+    "rejected": "Rejeté",
+    "orderNo": "Numéro"
+  },
+  "AccountPanel": {
+    "balance": "Solde",
+    "recharge": "Recharger",
+    "withdraw": "Retirer"
+  },
+  "LogisticsDialog": {
+    "title": "Informations logistiques",
+    "empty": "Aucune information logistique",
+    "close": "Fermer"
+  },
+  "OrderCard": {
+    "viewOrder": "Voir la commande",
+    "remindShipping": "Rappeler l’expédition",
+    "requestRefund": "Demande de remboursement",
+    "confirmReceiving": "Confirmer la réception",
+    "payNow": "Payer maintenant",
+    "cancelOrder": "Annuler la commande",
+    "addComment": "Ajouter un commentaire",
+    "refunded": "Remboursé"
+  },
+  "RefundDialog": {
+    "title": "Demande de remboursement",
+    "refundReason": "Raison du remboursement",
+    "refundReasonPlaceholder": "Saisir la raison du remboursement",
+    "refundRemark": "Remarque sur le retour",
+    "refundRemarkPlaceholder": "Saisir la remarque sur le retour",
+    "cancel": "Annuler",
+    "submit": "Soumettre"
+  },
+  "Search": {
+    "comprehensive": "Global",
+    "soldNum": "Ventes",
+    "price": "Prix",
+    "newest": "Plus récent"
+  },
+  "Address": {
+    "setting": "Paramètres",
+    "defaultAddress": "Adresse par défaut",
+    "addAddress": "Ajouter une adresse",
+    "confirmDelete": "Confirmer la suppression",
+    "confirmDeleteContent": "Souhaitez-vous supprimer cette adresse ?",
+    "ok": "OK",
+    "cancel": "Annuler",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "deleted": "Supprimé"
+  },
+  "DeleteAccount": {
+    "setting": "Paramètres",
+    "title": "Supprimer le compte",
+    "description": "Supprimez définitivement le compte APP-NAME, toutes les informations personnelles et données associées seront supprimées. Les données ne pourront pas être récupérées après suppression, veuillez agir avec prudence. Veuillez sauvegarder les données importantes ou finaliser les tâches en cours avant de supprimer.",
+    "account": "Votre compte",
+    "enterAccount": "Saisir",
+    "reason": "Raison de la sortie",
+    "submit": "Soumettre la demande",
+    "submitSuccess": "Demande soumise avec succès"
+  },
+  "Setting": {
+    "title": "Paramètres",
+    "description": "Gérez facilement, en toute sécurité et commodément votre compte APP-NAME ! Changez le mot de passe de connexion en un clic. Utilisez un mot de passe fort avec des lettres, des chiffres, des symboles et mettez-le à jour régulièrement pour renforcer la sécurité du compte. Définissez un mot de passe de transaction distinct pour les opérations sensibles. Mettez à jour l’adresse de livraison précise pour des notifications et livraisons fluides sur la plateforme. Opérations simples, expérience confortable !",
+    "loginPassword": "Mot de passe de connexion",
+    "tradePassword": "Mot de passe de transaction",
+    "address": "Adresse de livraison",
+    "deleteAccount": "Supprimer le compte",
+    "submitSuccess": "Demande soumise avec succès !"
+  },
+  "LoginPassword": {
+    "setting": "Paramètres",
+    "title": "Mot de passe de connexion",
+    "description": "Modifiez ou réinitialisez le mot de passe. Utilisez un mot de passe fort avec des lettres, des chiffres, des symboles et mettez-le à jour régulièrement pour protéger le compte.",
+    "oldPassword": "Ancien mot de passe",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "enterOldPassword": "Saisir l’ancien mot de passe",
+    "enterNewPassword": "Saisir le nouveau mot de passe",
+    "passwordMinLength": "Le mot de passe doit contenir au moins 6 caractères.",
+    "confirmPasswordMsg": "Confirmer le mot de passe",
+    "passwordMismatch": "Les mots de passe ne correspondent pas.",
+    "submit": "Soumettre la demande",
+    "success": "Traitement réussi"
+  },
+  "PayPassword": {
+    "setting": "Paramètres",
+    "title": "Mot de passe de transaction",
+    "description": "Définissez un mot de passe de transaction distinct du mot de passe de connexion, utilisé pour les enchères, les retraits, etc. Renforcez la sécurité des transactions.",
+    "oldPassword": "Ancien mot de passe",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "enterOldPassword": "Saisir l’ancien mot de passe",
+    "enterNewPassword": "Saisir le nouveau mot de passe",
+    "passwordMinLength": "Le mot de passe doit contenir au moins 6 caractères.",
+    "confirmPasswordMsg": "Confirmer le mot de passe",
+    "passwordMismatch": "Les mots de passe ne correspondent pas.",
+    "submit": "Soumettre la demande",
+    "success": "Traitement réussi"
+  },
+  "MerchantHeader": {
+    "follow": "Suivre le magasin",
+    "followed": "Suivi",
+    "followSuccess": "Suivi avec succès",
+    "unfollow": "Ne plus suivre",
+    "products": "Produits",
+    "sales": "Ventes",
+    "rate": "Satisfaction"
+  },
+  "Products": {
+    "allProducts": "Tous les produits",
+    "category": "Catégorie",
+    "comprehensive": "Global",
+    "sales": "Ventes",
+    "price": "Prix",
+    "newArrival": "Nouveautés"
+  },
+  "Store": {
+    "recommend": "Recommandés",
+    "allProducts": "Tous les produits"
+  },
+  "Withdraw": {
+    "myWallet": "Mon portefeuille",
+    "withdraw": "Retirer",
+    "description": "Prise en charge de plusieurs canaux de réception, traitement rapide des demandes de retrait, sécurité de chaque opération garantie par des mesures de sécurité et de conformité."
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Page non trouvée",
+    "description": "Désolé, la page que vous recherchez n’existe pas.",
+    "backHome": "Retour à l’accueil"
+  },
+  "CheckForms": {
+    "checkout": "Passer la commande",
+    "addressTitle": "1. Adresse de livraison",
+    "changeAddress": "Changer l’adresse",
+    "addressInfo": "Informations de livraison",
+    "recipientName": "Nom du destinataire",
+    "phone": "Contact",
+    "nation": "Pays/région",
+    "addressDetail": "Adresse détaillée",
+    "noAddress": "Aucune adresse",
+    "addAddress": "Ajouter une adresse",
+    "paymentTitle": "2. Mode de paiement",
+    "selectPayment": "Sélectionner le mode de paiement",
+    "balance": "Solde",
+    "paypal": "PayPal (en développement)",
+    "visa": "VISA (en développement)",
+    "mastercard": "MasterCard (en développement)",
+    "orderSummary": "Résumé de la commande",
+    "total": "Total",
+    "submitOrder": "Soumettre la commande",
+    "submitSuccess": "Commande soumise avec succès",
+    "tip": "Astuce",
+    "selectAddressFirst": "Veuillez d’abord sélectionner l’adresse de livraison",
+    "selectAddress": "Sélectionner l’adresse de livraison",
+    "noAvailableAddress": "Aucune adresse disponible"
+  },
+  "OrderResult": {
+    "paymentSuccess": "Paiement réussi",
+    "recipient": "Destinataire",
+    "address": "Adresse de livraison",
+    "continueShopping": "Continuer les achats",
+    "viewOrders": "Voir les commandes"
+  },
+  "Deposit": {
+    "myWallet": "Mon portefeuille",
+    "deposit": "Recharger",
+    "description": "Recharge rapide et stable, opération simple et fluide, rechargez le solde du compte à tout moment, utilisez en toute tranquillité."
+  },
+  "BottomNav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "cart": "Panier",
+    "mine": "Mon compte"
+  },
+  "Footer": {
+    "solutions": {
+      "title": "Service client",
+      "contactUs": "Nous contacter"
+    },
+    "support": {
+      "title": "Retour et échange",
+      "privacyPolicy": "Politique de confidentialité",
+      "returnsPolicy": "Politique de retour",
+      "deliveryInformation": "Livraison et réception",
+      "sellerScoreSystem": "Politique des vendeurs"
+    },
+    "company": {
+      "title": "Centre utilisateur",
+      "register": "Inscription utilisateur",
+      "orderQuery": "Requête de commande",
+      "favoriteProducts": "Collection de produits",
+      "wallet": "Mon portefeuille"
+    },
+    "legal": {
+      "title": "À propos de nous",
+      "aboutUs": "À propos de nous",
+      "careers": "Carrières",
+      "news": "Actualités",
+      "modernSlavery": "Déclaration sur l’esclavage moderne"
+    },
+    "description": "Les utilisateurs mondiaux de APP-NAME proviennent de 112 pays et paient avec USDT/ETH/BTC. USDT/ETH/BTC est un mode de transaction transfrontalier, permettant des transactions mondiales instantanées et à faible coût sans attente ni frais internationaux.",
+    "copyright": "© APP-NAME Limited 2023 Tous droits réservés"
+  },
+  "Header": {
+    "title": "APP-NAME",
+    "home": "Accueil",
+    "category": "Catégorie",
+    "products": "Produits",
+    "sales": "Produits en promotion",
+    "merchantOnboarding": "Inscription vendeur",
+    "profile": "Centre personnel",
+    "logout": "Déconnexion",
+    "logoutSuccess": "Déconnexion réussie",
+    "search": "Rechercher"
+  },
+  "SearchWithHistory": {
+    "placeholder": "Contenu de recherche",
+    "clearAll": "Tout effacer"
+  },
+  "CartDrawer": {
+    "items": "articles",
+    "myCart": "Mon panier"
+  },
+  "CartPanel": {
+    "totalItems": "Nombre total d’articles",
+    "items": "pcs",
+    "totalPrice": "Prix total",
+    "submitOrder": "Soumettre la commande"
+  },
+  "MerchantCard": {
+    "unfollow": "Ne plus suivre",
+    "follow": "Suivre",
+    "visitNow": "Visiter maintenant",
+    "sold": "Vendu",
+    "views": "Vues",
+    "rating": "Note du magasin"
+  },
+  "Mine": {
+    "dashboard": "Tableau de bord",
+    "wallet": "Mon portefeuille",
+    "orders": "Mes commandes",
+    "favoriteProducts": "Collection de produits",
+    "followedMerchants": "Magasins suivis",
+    "settings": "Paramètres",
+    "userId": "ID"
+  },
+  "PageTitle": {
+    "more": "Voir plus"
+  },
+  "ProductCard": {
+    "addCartSuccess": "Ajouté au panier",
+    "collected": "Dans la collection",
+    "unCollected": "Retiré de la collection",
+    "off": "réduction",
+    "addToCart": "Ajouter au panier",
+    "soldViews": "Ventes",
+    "viewsNum": "Vues"
+  },
+  "AddGoodsCommentDialog": {
+    "title": "Évaluation",
+    "addCommentSuccess": "Commentaire ajouté avec succès",
+    "selectProduct": "Sélectionner le produit",
+    "selectProductRequired": "Veuillez sélectionner l’état de l’évaluation",
+    "selectPlaceholder": "Sélectionner",
+    "userName": "E-mail/téléphone du membre",
+    "userNameRequired": "Veuillez saisir l’e-mail ou le téléphone du membre",
+    "userNamePlaceholder": "Saisir l’e-mail ou le téléphone du membre",
+    "commentContent": "Contenu de l’évaluation",
+    "commentContentRequired": "Veuillez saisir le contenu de l’évaluation",
+    "commentContentPlaceholder": "Saisir le contenu de l’évaluation",
+    "rating": "Note",
+    "ratingRequired": "Veuillez sélectionner une note",
+    "commentImages": "Images de l’évaluation",
+    "cancel": "Annuler",
+    "confirm": "Confirmer"
+  },
+  "AddressDialog": {
+    "editAddress": "Modifier l’adresse de livraison",
+    "addAddress": "Ajouter une adresse de livraison",
+    "recipientName": "Nom du destinataire",
+    "recipientNameRequired": "Veuillez saisir le nom du destinataire",
+    "recipientNamePlaceholder": "Saisir le nom du destinataire",
+    "phone": "Numéro de téléphone",
+    "nationRequired": "Veuillez sélectionner le code pays",
+    "nationPlaceholder": "Code pays",
+    "phoneRequired": "Veuillez saisir le numéro de téléphone",
+    "phonePlaceholder": "Saisir le numéro de téléphone",
+    "email": "E-mail",
+    "emailPlaceholder": "Saisir l’e-mail",
+    "region": "Pays/région/ville",
+    "regionRequired": "Veuillez sélectionner la région",
+    "regionPlaceholder": "Sélectionner le pays/région/ville",
+    "postCode": "Code postal",
+    "postCodePlaceholder": "Saisir le code postal",
+    "addressDetail": "Adresse détaillée",
+    "addressDetailPlaceholder": "Saisir l’adresse détaillée",
+    "isDefault": "Adresse par défaut",
+    "cancel": "Annuler",
+    "confirm": "Confirmer"
+  },
+  "CustomerServiceChat": {
+    "title": "Service client",
+    "inputPlaceholder": "Saisir",
+    "noMessage": "Aucun message",
+    "imageAlt": "Image",
+    "heicUnsupported": "Le navigateur actuel ne prend pas en charge le téléchargement de fichiers HEIC.",
+    "heicUploadFailed": "Échec du téléchargement du fichier HEIC."
+  },
+  "DepositForm": {
+    "currency": "Devise de recharge",
+    "selectCurrency": "Sélectionner la devise de recharge",
+    "network": "Réseau blockchain",
+    "selectNetwork": "Sélectionner le réseau blockchain",
+    "addressLabel": "Adresse de recharge",
+    "amount": "Montant de la recharge",
+    "enterAmount": "Saisir le montant de la recharge",
+    "estimatedArrival": "Arrivée estimée (taux actuel {{rate}})",
+    "proof": "Preuve de paiement (télécharger une capture d’écran)",
+    "uploadProof": "Télécharger la preuve de paiement",
+    "submit": "Confirmer",
+    "success": "Traitement réussi",
+    "addressCopied": "Adresse copiée !"
+  },
+  "OtpModal": {
+    "enterTransactionPassword": "Saisir le mot de passe de transaction",
+    "enter6Digits": "Saisir le code de vérification à 6 chiffres",
+    "verifyFailed": "Vérification échouée, veuillez réessayer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer"
+  },
+  "ProductDetailMain": {
+    "basicInfo": "Informations de base",
+    "sales": "Ventes",
+    "views": "Vues",
+    "originalPrice": "Prix d’origine",
+    "currentPrice": "Prix actuel",
+    "shipping": "Livraison",
+    "freeShipping": "Livraison gratuite",
+    "quantity": "Quantité",
+    "totalPrice": "Prix total",
+    "buyNow": "Acheter maintenant",
+    "addToCart": "Ajouter au panier",
+    "pleaseSelect": "Veuillez sélectionner",
+    "noStock": "Rupture de stock",
+    "shippingDesc": "Expédition dans les 24 heures suivant la commande. Si la commande est soumise à un contrôle logistique, l’expédition peut être retardée. Veuillez suivre les informations logistiques de la commande ou contacter le service client."
+  },
+  "ProductDetailModal": {
+    "title": "Détails du produit",
+    "noGoods": "Aucune information sur le produit",
+    "addSuccess": "Ajouté avec succès"
+  },
+  "UploadImg": {
+    "upload": "Télécharger",
+    "preview": "Aperçu de l’image",
+    "onlyImage": "Seuls les formats JPG/PNG/WEBP/HEIC sont pris en charge !",
+    "maxSize": "La taille de l’image ne doit pas dépasser.",
+    "unsupportedHeic": "Le navigateur actuel ne prend pas en charge le téléchargement de fichiers HEIC.",
+    "uploadFailed": "Échec du téléchargement, veuillez réessayer ultérieurement"
+  },
+  "UploadMultiple": {
+    "upload": "Télécharger",
+    "uploadSuccess": "Téléchargement réussi",
+    "uploadFailed": "Échec du téléchargement"
+  },
+  "WithdrawForm": {
+    "withdrawMethod": "Méthode de retrait",
+    "selectWithdrawMethod": "Sélectionner la méthode de retrait",
+    "crypto": "Cryptomonnaie",
+    "bankCard": "Carte bancaire",
+    "coinType": "Devise de retrait",
+    "selectCoin": "Sélectionner la devise",
+    "enterUSDT": "Saisir USDT",
+    "blockchainNetwork": "Réseau blockchain",
+    "withdrawAddress": "Adresse de retrait",
+    "enterWithdrawAddress": "Saisir l’adresse de retrait",
+    "copy": "Copier",
+    "bankName": "Nom de la banque",
+    "enterBankName": "Saisir le nom de la banque",
+    "bankBranch": "Agence bancaire",
+    "enterBankBranch": "Saisir l’agence bancaire",
+    "bankCardNumber": "Numéro de carte bancaire",
+    "enterBankCardNumber": "Saisir le numéro de carte bancaire",
+    "withdrawAmount": "Montant du retrait",
+    "enterWithdrawAmount": "Saisir le montant du retrait",
+    "amountMustBeGreaterZero": "Le montant du retrait doit être supérieur à 0.",
+    "currentBalance": "Solde actuel",
+    "actualReceived": "Montant réellement reçu",
+    "fee": "Frais",
+    "confirmSubmit": "Confirmer la soumission",
+    "copied": "Copié !",
+    "inputAddressFirst": "Veuillez d’abord saisir l’adresse de retrait/numéro de carte bancaire",
+    "operationSuccess": "Opération réussie"
+  },
+  "order": {
+    "pendingPayment": "En attente de paiement",
+    "pendingShipment": "En attente d’expédition",
+    "pendingReceive": "En attente de réception",
+    "pendingReview": "En attente d’évaluation",
+    "refund": "Remboursement/SAV"
+  },
+  "refund": {
+    "pending": "En cours d’examen",
+    "success": "Succès",
+    "failed": "Échec"
+  },
+  "DeliveryInformation": {
+    "title": "Où livrons-nous ?",
+    "desc1": "Saisissez le code postal du produit que vous souhaitez acheter pour vérifier si la livraison est disponible dans votre région.",
+    "desc2": "Les produits sont expédiés directement depuis les fournisseurs, disposant d’entrepôts mondiaux dans 112 pays/régions.",
+    "pickup": {
+      "title": "Où retirer ?",
+      "desc1": "Des points de retrait 24h/24 sont disponibles.",
+      "highlight1": "Magasins APP-NAME, supermarchés Sainsbury’s",
+      "desc2": "et entrepôts mondiaux",
+      "desc3": "Pour les produits éligibles à la livraison immédiate, vous pouvez choisir plusieurs créneaux horaires en fonction de votre emplacement. La commande sera livrée à votre porte et placée dans un endroit sûr et fiable.",
+      "alert1": "En Angleterre, Écosse, Pays de Galles, les articles volumineux et lourds (nécessitant 2 personnes ou plus, par exemple : canapé, lit) seront livrés à domicile et transportés en toute sécurité jusqu’à l’emplacement souhaité.",
+      "alert2": "Le chauffeur amical vous contactera le jour même pour discuter des détails de livraison. Si vous êtes en auto-isolement, veuillez nous en informer pour réorganiser la date de livraison.",
+      "warning": "La demande de livraison d’articles volumineux est actuellement élevée. En cas de retard de livraison, nous vous enverrons un message dès que possible. Nous travaillons dur pour offrir le meilleur service à nos clients. Merci pour votre patience et votre soutien continu."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "q1": "Que se passe-t-il si je commande des articles volumineux et petits ensemble ?",
+      "a1_1": "Le moyen le plus rapide de livraison est d’expédier séparément.",
+      "a1_2": "Ne vous inquiétez pas, les frais de port ne sont facturés qu’une seule fois.",
+      "a1_3": "Veuillez vérifier les détails dans l’e-mail de confirmation de commande.",
+      "q2": "Que se passe-t-il si je ne suis pas à la maison ?",
+      "a2_1": "Les petits articles seront placés dans un endroit sûr et discret ou remis à un voisin à votre demande.",
+      "a2_2": "Ligne d’assistance",
+      "a2_3": "contactez-nous et reprogrammez la livraison à la date et à l’heure les plus pratiques !",
+      "q3": "Combien de personnes livrent les articles volumineux ?",
+      "a3_1": "Les articles volumineux, tels que les canapés, réfrigérateurs",
+      "a3_2": "sont livrés par 2 personnes",
+      "a3_3": ". Le chauffeur amical vous contactera le jour de la livraison et transportera en toute sécurité jusqu’à l’emplacement indiqué.",
+      "q4": "COVID-19 : Quel impact sur la livraison ?",
+      "a4_1": "Nous continuons à proposer la livraison pour de nombreux articles, y compris les précommandes de consoles de jeux. Vous recevrez une notification et un numéro de suivi du coursier avant la livraison.",
+      "a4_2": "Les articles seront placés dans un endroit sûr. Les articles volumineux seront placés dans un endroit sûr, le chauffeur amical vous contactera le jour même pour discuter des détails de transport des articles volumineux. Si vous êtes en auto-isolement, veuillez nous en informer pour réorganiser la date de livraison."
+    },
+    "cta": "Voir les zones de couverture de livraison"
+  },
+  "PrivacyPolicy": {
+    "header": {
+      "label": "Politique de confidentialité",
+      "title": "Politique de confidentialité APP-NAME",
+      "desc": "Dernière mise à jour : octobre 2025 | La protection de votre vie privée est notre priorité absolue."
+    },
+    "sections": {
+      "1": {
+        "title": "1. Introduction",
+        "content": {
+          "welcome": "1.1 Bienvenue sur le site d’achat APP-NAME.",
+          "desc1": "APP-NAME respecte strictement les obligations définies par les lois et réglementations pertinentes en matière de confidentialité (« Lois sur la confidentialité ») et fait tout son possible pour respecter les droits et préoccupations de confidentialité de tous les utilisateurs du site APP-NAME et de l’application mobile (« Plateforme »).",
+          "alert": "Nous reconnaissons l’importance des informations personnelles que vous nous confiez et croyons qu’il est de notre responsabilité de les gérer, protéger et traiter de manière appropriée.",
+          "definition": "Les informations personnelles désignent les informations relatives à une personne identifiable à partir de ces informations ou d’autres informations auxquelles l’organisation a ou peut avoir accès.",
+          "consent": "En utilisant les services, vous acceptez explicitement que nous puissions collecter, utiliser, divulguer et traiter vos informations personnelles conformément à la présente Politique de confidentialité."
+        }
+      },
+      "2": {
+        "title": "2. Quand APP-NAME collecte-t-elle des informations personnelles ?",
+        "content": {
+          "scenariosTitle": "Scénarios de collecte courants",
+          "online": "Interactions en ligne",
+          "onlineItems": [
+            "Accès au site",
+            "Soumission de formulaires",
+            "Stockage des cookies"
+          ],
+          "offline": "Interactions hors ligne",
+          "offlineItems": [
+            "Communication téléphonique",
+            "Rencontres en personne",
+            "Échanges d’e-mails"
+          ],
+          "thirdParty": "Nous pouvons recevoir vos informations de tiers (logistique, fournisseurs de services de paiement, etc.)."
+        }
+      },
+      "3": {
+        "title": "3. Quelles informations personnelles APP-NAME collecte-t-elle ?",
+        "categories": [
+          {
+            "icon": "Informations de base",
+            "label": "Informations de base",
+            "items": [
+              "Nom",
+              "E-mail",
+              "Numéro de téléphone",
+              "Adresse"
+            ]
+          },
+          {
+            "icon": "Informations d’identification",
+            "label": "Informations d’identification",
+            "items": [
+              "Date de naissance",
+              "Sexe"
+            ]
+          },
+          {
+            "icon": "Multimédia",
+            "label": "Multimédia",
+            "items": [
+              "Photos",
+              "Audio",
+              "Vidéos"
+            ]
+          },
+          {
+            "icon": "Informations professionnelles",
+            "label": "Informations professionnelles",
+            "items": [
+              "Niveau d’éducation",
+              "Profession"
+            ]
+          },
+          {
+            "icon": "Informations de localisation",
+            "label": "Informations de localisation",
+            "items": [
+              "Position géographique"
+            ]
+          },
+          {
+            "icon": "Informations comportementales",
+            "label": "Informations comportementales",
+            "items": [
+              "Historique de navigation",
+              "Paramètres de préférences"
+            ]
+          }
+        ],
+        "warning": "Vous pouvez choisir de ne pas participer à la collecte d’informations à tout moment, mais cela peut affecter l’utilisation de certaines fonctionnalités."
+      },
+      "4": {
+        "title": "4. Collecte d’autres informations",
+        "device": {
+          "title": "Informations sur l’appareil",
+          "items": [
+            "Adresse IP",
+            "Système d’exploitation",
+            "Type de navigateur",
+            "ID unique de l’appareil"
+          ]
+        },
+        "location": {
+          "title": "Services de localisation",
+          "desc": "Collecte d’informations de localisation précises à l’aide du GPS/Wi-Fi.",
+          "note": "Peut être désactivé à tout moment dans les paramètres de l’appareil."
+        }
+      },
+      "5": {
+        "title": "5. Cookies",
+        "titleLabel": "Politique des cookies",
+        "purpose": {
+          "title": "Objectifs",
+          "items": [
+            "Fournir des recommandations de contenu personnalisées",
+            "Personnalisation publicitaire",
+            "Analyse de l’utilisation du site"
+          ]
+        },
+        "management": {
+          "title": "Gestion",
+          "items": [
+            "Désactiver dans les paramètres du navigateur",
+            "Désactiver la publicité personnalisée sur les appareils mobiles",
+            "Peut affecter certaines fonctionnalités"
+          ]
+        }
+      },
+      "6": {
+        "title": "6. Comment utilisons-nous les informations fournies ?",
+        "mainUse": "Utilisation principale",
+        "items": [
+          {
+            "icon": "Fournir des services"
+          },
+          {
+            "icon": "Communication"
+          },
+          {
+            "icon": "Analyse de données"
+          },
+          {
+            "icon": "Amélioration des fonctionnalités"
+          },
+          {
+            "icon": "Marketing"
+          },
+          {
+            "icon": "Conformité légale"
+          }
+        ],
+        "unsubscribe": "La réception d’informations marketing peut être annulée à tout moment."
+      },
+      "7": {
+        "title": "7. Quelles informations sont stockées et comment APP-NAME protège-t-elle les informations des utilisateurs ?",
+        "security": {
+          "title": "Mesures de sécurité",
+          "items": [
+            "Protection physique",
+            "Garantie de gestion système",
+            "Technologie de chiffrement électronique",
+            "Contrôle d’accès basé sur les autorisations"
+          ]
+        },
+        "retention": {
+          "title": "Durée de conservation",
+          "desc": "Stockées uniquement pendant la période nécessaire et supprimées lorsque les conditions suivantes sont remplies :",
+          "items": [
+            "Fin de la relation",
+            "Atteinte de l’objectif",
+            "Conformité aux exigences légales"
+          ]
+        }
+      },
+      "8": {
+        "title": "8. APP-NAME divulgue-t-elle les informations collectées à des tiers ?",
+        "recipients": [
+          "Sociétés affiliées/filiales",
+          "Sous-traitants",
+          "Fournisseurs de services",
+          "Organismes gouvernementaux",
+          "Sous-traitants de fusions/acquisitions",
+          "Partenaires publicitaires"
+        ],
+        "note": "Tous les tiers sont tenus de respecter les mêmes normes de protection des données."
+      }
+    },
+    "quickAccess": {
+      "title": "Accès rapide",
+      "items": [
+        {
+          "label": "Révoquer le consentement",
+          "icon": "Révoquer"
+        },
+        {
+          "label": "Accéder aux informations",
+          "icon": "Voir"
+        },
+        {
+          "label": "Paramètres des cookies",
+          "icon": "Cookies"
+        },
+        {
+          "label": "Nous contacter",
+          "icon": "E-mail"
+        }
+      ]
+    },
+    "footer": {
+      "contact": "En cas de questions, veuillez contacter notre responsable de la protection des données.",
+      "email": "support@APP-NAME.com",
+      "copyright": "© 2025 APP-NAME Tous droits réservés"
+    },
+    "toggle": {
+      "expand": "Développer",
+      "collapse": "Réduire"
+    }
+  },
+  "PrivacyPolicyPage": {
+    "header": "Politique de confidentialité",
+    "title": "Politique de confidentialité APP-NAME",
+    "lastUpdated": "Dernière mise à jour : octobre 2025 | La protection de votre vie privée est notre priorité absolue.",
+    "expand": "Développer",
+    "collapse": "Réduire",
+    "section1Title": "1. Introduction",
+    "section1_1": "1.1 Bienvenue sur le site d’achat APP-NAME.",
+    "section1_2": "APP-NAME respecte strictement les obligations définies par les lois et réglementations pertinentes en matière de confidentialité (« Lois sur la confidentialité ») et fait tout son possible pour respecter les droits de confidentialité de tous les utilisateurs de la plateforme.",
+    "section1_3": "Nous reconnaissons l’importance des informations personnelles que vous nous confiez et croyons qu’il est de notre responsabilité de les gérer, protéger et traiter de manière appropriée.",
+    "section1_4": "Les informations personnelles sont des informations relatives à une personne identifiable.",
+    "section1_5": "En utilisant les services, vous acceptez que nous puissions collecter, utiliser, divulguer et traiter vos informations personnelles conformément à la présente Politique de confidentialité.",
+    "section2Title": "2. Quand APP-NAME collecte-t-elle des informations personnelles ?",
+    "section2_1": "Scénarios de collecte courants",
+    "section2_2": "Interactions en ligne",
+    "section2_3": "Accès au site",
+    "section2_4": "Soumission de formulaires",
+    "section2_5": "Stockage des cookies",
+    "section2_6": "Interactions hors ligne",
+    "section2_7": "Communication téléphonique",
+    "section2_8": "Rencontres en personne",
+    "section2_9": "Échanges d’e-mails",
+    "section2_10": "Nous pouvons recevoir vos informations de tiers.",
+    "section3Title": "3. Quelles informations personnelles APP-NAME collecte-t-elle ?",
+    "section3_1_label": "Informations de base",
+    "section3_1_1": "Nom",
+    "section3_1_2": "E-mail",
+    "section3_1_3": "Numéro de téléphone",
+    "section3_1_4": "Adresse",
+    "section3_2_label": "Informations d’identification",
+    "section3_2_1": "Date de naissance",
+    "section3_2_2": "Sexe",
+    "section3_3_label": "Multimédia",
+    "section3_3_1": "Photos",
+    "section3_3_2": "Audio",
+    "section3_3_3": "Vidéos",
+    "section3_4_label": "Informations professionnelles",
+    "section3_4_1": "Niveau d’éducation",
+    "section3_4_2": "Profession",
+    "section3_5_label": "Informations de localisation",
+    "section3_5_1": "Position géographique",
+    "section3_6_label": "Informations comportementales",
+    "section3_6_1": "Historique de navigation",
+    "section3_6_2": "Paramètres de préférences",
+    "section3_warning": "Vous pouvez choisir de ne pas participer à la collecte d’informations à tout moment, mais cela peut affecter l’utilisation de certaines fonctionnalités.",
+    "section4Title": "4. Méthodes d’utilisation des informations",
+    "section4_1": "Comment les informations sont utilisées",
+    "section4_2": "Fournir et améliorer les services",
+    "section4_3": "Recommandations personnalisées",
+    "section4_4": "Protection de la sécurité",
+    "section4_5": "Conformité légale",
+    "section4_6": "Partage d’informations",
+    "section4_7": "Peut partager des informations avec des tiers pour fournir des services.",
+    "section4_8": "Les informations partagées respectent strictement la présente Politique de confidentialité et les lois.",
+    "section5Title": "5. Cookies et technologies de suivi",
+    "section5_1": "Comment les cookies sont utilisés",
+    "section5_2": "Cookies nécessaires",
+    "section5_3": "Assurent les fonctions de base du site",
+    "section5_4": "Mémorisent l’état de connexion",
+    "section5_5": "Prévention de la fraude",
+    "section5_6": "Cookies de performance",
+    "section5_7": "Analyse de l’utilisation du site",
+    "section5_8": "Amélioration des services",
+    "section5_9": "Peut être désactivé",
+    "section6Title": "6. Mesures de protection des données",
+    "section6_1": "Mesures de sécurité adoptées",
+    "section6_2": "Contrôle d’accès",
+    "section6_3": "Technologie de chiffrement",
+    "section6_4": "Sauvegarde régulière",
+    "section6_5": "Formation à la sécurité",
+    "section6_6": "Surveillance du système",
+    "section6_7": "Audit et conformité",
+    "section6_8": "Ne partagez pas le mot de passe du compte et assurez la sécurité des informations personnelles.",
+    "section7Title": "7. Droits des utilisateurs",
+    "section7_1": "Droits d’accès et de contrôle",
+    "section7_2": "Voir les informations personnelles stockées",
+    "section7_3": "Corriger les informations inexactes",
+    "section7_4": "Demander la suppression des informations",
+    "section7_5": "Limiter ou refuser le traitement",
+    "section7_6": "Autres droits",
+    "section7_7": "Peut révoquer le consentement à tout moment et poser des questions sur la confidentialité.",
+    "section7_8": "Droit à la portabilité des données",
+    "section7_9": "Droit d’opposition au traitement",
+    "section7_10": "Droit de plainte",
+    "section8Title": "8. Nous contacter",
+    "section8_1": "En cas de doutes sur la Politique de confidentialité",
+    "section8_2": "Contactez via l’e-mail du service client",
+    "section8_3": "Ligne d’assistance du service client",
+    "section8_4": "Chat en direct en ligne",
+    "section8_5": "Comptes de réseaux sociaux",
+    "section8_6": "Courrier écrit",
+    "section8_7": "Soumettre le formulaire de retour d’information du site",
+    "section8_warning": "Les demandes seront trait traité dans un délai raisonnable, mais certaines opérations peuvent nécessiter une vérification supplémentaire."
+  },
+  "ReturnsPolicy": {
+    "title": "Changement d’avis",
+    "subtitle1": "Après réception ou livraison ",
+    "subtitle2": "dans les 15 jours",
+    "subtitle3": " peut être retourné",
+    "mustBe": "Le produit doit remplir les conditions suivantes :",
+    "refundMethod": "Le remboursement sera traité via le mode de paiement d’origine :",
+    "refundUsdtEth": "Si USDT ou ETH a été utilisé, il sera affiché sur le compte dans un délai d’un jour ouvrable.",
+    "refundWire": "Si un virement bancaire a été utilisé, cela peut prendre jusqu’à 30 jours selon la banque.",
+    "requirements1": "Non utilisé et contenant tous les composants d’origine",
+    "requirements2": "Emballage d’origine (si possible, avec étiquettes)",
+    "requirements3": "État revendable",
+    "requirements4": "Inclut la preuve d’achat",
+    "requirements5": "Inclut les cadeaux fournis avec le produit",
+    "productSupport": "Support produit",
+    "productSupportDesc1": "Dans la plupart des cas, si un problème survient avec le produit, vous pouvez facilement le résoudre depuis chez vous via",
+    "productSupportDesc2": "le site de support produit",
+    "productSupportDesc3": ". Ici, vous pouvez accéder aux FAQ sur les produits et notre entreprise, la livraison et la réception, le retour et le remboursement.",
+    "goodsIssue": "Produits défectueux",
+    "issueNotice1": "Si vous souhaitez retourner dans les 15 premiers jours, nous offrons un échange, un remplacement ou un remboursement.",
+    "issueNotice2": "Après cette période, tant que le produit est sous garantie, nous organiserons la réparation via notre agent de réparation dédié ou remplacerons ou compenserons le produit s’il n’est pas réparable.",
+    "issueDesc": "Le moyen le plus rapide de retour est via les centres d’entrepôts mondiaux dans 112 pays/régions. Nous acceptons la plupart des produits, mais les articles volumineux sont exclus. Si la livraison initiale était à domicile et que vous souhaitez toujours retourner un article volumineux, faites défiler vers le bas pour démarrer un chat en direct ou appeler la ligne d’assistance.",
+    "precautionsTitle": "Précautions",
+    "precautionsDesc": "Certains produits tels que la nourriture, les bijoux percés, les sous-vêtements ne peuvent être échangés ou retournés qu’en cas de défaut. Les produits non remboursables seront clairement indiqués sur le site.",
+    "precautions1": "Lors du retour de DVD, musique ou logiciels, ils doivent être non utilisés et dans leur emballage scellé d’origine.",
+    "precautions2": "Si le produit ou l’emballage est gravement endommagé, nous avons le droit de réduire le montant du remboursement.",
+    "precautions3": "Nous pouvons demander le numéro de série du produit ou des informations similaires pour confirmer que le produit a été fourni par nous.",
+    "precautions4": "Bien sûr, cela n’affecte pas vos droits légaux.",
+    "precautionsNote": "Nous vérifierons le produit avant le remboursement. Si le produit n’est pas retourné conformément aux instructions, nous avons le droit de refuser le remboursement ou d’offrir un remboursement partiel en fonction de l’état du produit.",
+    "proof1_1": "Reçu en espèces",
+    "proof1_2": "Reçu électronique",
+    "proof1_3": "Numéro de commande",
+    "proof1_4": "E-mail de confirmation",
+    "proof2_1": "Facture de transaction",
+    "proof2_2": "Adresse e-mail utilisée pour l’achat du produit",
+    "faqTitle": "Questions fréquentes",
+    "cta": "Démarrer le processus de retour"
+  },
+  "sellerRating": {
+    "title": "Système de notation des vendeurs",
+    "intro": "Introduction",
+    "introContent": "Ici est présenté le système de notation des vendeurs ainsi que les méthodes de création et d’utilisation.",
+    "website": "Sites associés",
+    "parties": "Parties associées",
+    "allSellers": "Tous les vendeurs",
+    "section1": {
+      "title": "Comment accéder au système de notation des vendeurs ?",
+      "encourage": "Le système de notation des vendeurs encourage les vendeurs à maintenir un haut niveau de service pour offrir une bonne expérience d’achat à nos acheteurs.",
+      "deduction": "Le non-respect des objectifs promis entraînera une déduction de points.",
+      "accessPath": {
+        "prefix": "[",
+        "path": "Centre vendeur >> Score de crédit vendeur",
+        "suffix": "] page pour voir les points."
+      }
+    },
+    "section2": {
+      "title": "Comment les points sont-ils générés ?",
+      "deductionCondition": "Les points ne sont déduits que lorsque les attentes minimales de l’acheteur ne sont pas satisfaites et avertissent le vendeur des domaines à améliorer.",
+      "updateTime": "Le système de notation des vendeurs est mis à jour le 1er de chaque mois en fonction des violations du vendeur du mois précédent. Cliquez sur les mots-clés de mesure de notation pour voir la politique complète."
+    },
+    "table1": {
+      "headers": {
+        "measure": "Mesure de notation",
+        "spec": "Description",
+        "deduction": "Déduction mensuelle"
+      },
+      "max10": "Maximum 10 points",
+      "max20": "Maximum 20 points",
+      "rows": {
+        "nfr": {
+          "title": "Taux d’insatisfaction NFR",
+          "desc": "Le nombre de commandes annulées ou retournées par le vendeur au cours des 7 derniers jours atteint 30 % du total des commandes"
+        },
+        "lsr": {
+          "title": "Taux de retard d’expédition LSR",
+          "desc": "Le nombre de commandes retardées de plus de 72 heures au cours des 7 derniers jours atteint 20 % du total des commandes"
+        },
+        "customerService": {
+          "title": "Service client",
+          "rude": "Rudesse ou insulte dans le chat ou les commentaires",
+          "cancelRequests": "Les demandes d’annulation de commande des acheteurs ce mois-ci dépassent 5 fois"
+        },
+        "breach": {
+          "title": "Violation",
+          "lowResponse": "Taux de réponse à l’acheteur inférieur à 80 %",
+          "violatePromise": "Le vendeur n’a pas fourni les services promis à l’acheteur, affectant les droits de l’acheteur"
+        }
+      }
+    },
+    "section3": {
+      "title": "Quelle est la pénalité associée à certains points ?"
+    },
+    "table2": {
+      "headers": {
+        "points": "Nombre total de points",
+        "level": "Niveau de pénalité"
+      },
+      "level1": "Niveau 1",
+      "level2": "Niveau 2",
+      "level3": "Niveau 3",
+      "level4": "Niveau 4",
+      "level5": "Niveau 5",
+      "level6": "Niveau 6",
+      "penalties": {
+        "marketingBan": "Interdiction des activités marketing (28 jours)",
+        "freeShippingRemoval": "Suppression de la livraison gratuite ou du remboursement des frais de port (28 jours)",
+        "deboost": "Réduction de l’exposition des produits (28 jours)",
+        "loanRestriction": "Restriction des prêts vendeur (28 jours)",
+        "listingBlock": "Restriction de la mise en ligne et de l’édition des produits (28 jours)",
+        "accountFreeze": "Gel du compte (28 jours)"
+      }
+    },
+    "section4": {
+      "title": "Règles et détails des violations du service client",
+      "rudeQuestion": "Qu’est-ce qu’un chat ou commentaire grossier ou insultant ?",
+      "rudeDefinition": "Une menace malveillante désigne le fait pour un membre d’insulter, injurier, menacer, commenter, etc. quelqu’un ou de menacer quelqu’un de manière inappropriée, affectant les droits légitimes de l’autre partie.",
+      "rudeHandling": "Comment les chats ou commentaires grossiers ou insultants sont-ils traités ?",
+      "rudePenalty": "Les violations générales et graves entraîneront une déduction des points correspondants pour les droits commerciaux, de gestion, de contrôle.",
+      "rudeScenario": "Scénarios d’application : Une menace malveillante désigne le fait pour un membre d’insulter, injurier, menacer, etc. quelqu’un ou de menacer quelqu’un de manière inappropriée, affectant les droits légitimes de l’autre partie."
+    },
+    "section5": {
+      "title": "Mesures contre les violations",
+      "breachQuestion": "Qu’est-ce qu’une violation ?",
+      "breachDefinition": "Une violation désigne le fait pour le vendeur de ne pas fournir de services à l’acheteur ou d’affecter les droits de l’acheteur ou de ne pas remplir les obligations promises à APP-NAME. Le vendeur doit respecter les obligations légales ou convenues concernant les modifications, retours, remboursements.",
+      "measure": "Mesures prises : Déduction de points",
+      "specificMeasures": "Mesures spécifiques",
+      "generalViolation": "1. Dans certaines situations, si le vendeur doit remplir d’autres promesses pour la commande payée ou les produits/services associés, déduction de 5 points pour chaque violation générale",
+      "seriousViolation": {
+        "prefix": "2. Si le vendeur viole l’une des promesses suivantes, déduction de 10 points pour chaque violation grave :",
+        "item1": "1) APP-NAME détermine que le vendeur doit être responsable du remboursement et de la garantie après-vente mais le vendeur refuse",
+        "item2": "2) APP-NAME détermine que le vendeur doit être responsable du retour/échange sans raison dans les 7 jours de garantie mais le vendeur refuse",
+        "item3": "3) Refus ou retard de l’envoi du produit d’essai promis à l’acheteur sans discussion avec l’acheteur",
+        "item4": "4) Le vendeur ne traite pas la commande dans les 72 heures suivant le paiement",
+        "activity": "Le vendeur participant aux activités officielles de APP-NAME ne respecte pas les exigences de l’activité (à l’exception du temps d’expédition), viole d’autres contenus de gestion officiellement annoncés par APP-NAME (y compris, mais sans s’y limiter, les normes de gestion des catégories, les normes industrielles, etc.). Si des exigences spécifiques correspondent à une situation spécifique, suivez ces exigences"
+      }
+    },
+    "section6": {
+      "title": "Quelle est la durée de la période de pénalité ?",
+      "duration": {
+        "prefix": "La pénalité se termine après ",
+        "days": "28 jours",
+        "suffix": ". Prenez les mesures appropriées et améliorez les performances actuelles du magasin tout en maintenant la conformité, le vendeur pénalisé peut récupérer une partie des droits du vendeur."
+      }
+    },
+    "section7": {
+      "title": "Gestion des violations",
+      "generalCase": "Cas général",
+      "generalDesc": "Le consommateur soumet une plainte et APP-NAME détermine que la plainte est valide, déduction de 5 points pour chaque violation générale, récupération de 5 points après avoir complété 5 commandes",
+      "seriousCase": "Cas grave",
+      "seriousDesc": "Le consommateur soumet une plainte et APP-NAME détermine que la plainte est valide et grave, déduction de 20 points par produit, récupération de 20 points après avoir complété 20 commandes",
+      "extremeCase": "Cas extrêmement grave",
+      "extremeDesc": "Gel du compte pendant 28 jours, fermeture du magasin",
+      "example1": {
+        "title": "Exemple 1 : Le vendeur A a été déduit de 3 points à la troisième semaine, les droits récupérés à la septième semaine"
+      },
+      "example2": {
+        "title": "Exemple 2 : Le vendeur B a été déduit de 3 points à la troisième semaine, 3 points à la cinquième semaine, ces points s’accumulent pour déterminer le niveau, les droits récupérés à la neuvième semaine"
+      },
+      "example3": {
+        "title": "Exemple 3 : Le vendeur C a été déduit de 3 points une semaine avant le début du trimestre, 3 points après le début du trimestre, les nouveaux points déterminent le nouveau niveau"
+      }
+    },
+    "section8": {
+      "title": "Comment contester une notation ?",
+      "appeal": {
+        "prefix": " ",
+        "link": "lien vers la ligne d’assistance",
+        "suffix": " pour contester. En cas de contestation réussie, la déduction de points est annulée et les droits correspondants du vendeur sont restaurés."
+      }
+    }
+  }
+}
