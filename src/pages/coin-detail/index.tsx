@@ -1,110 +1,114 @@
-
-import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
-
-import { useMemo, useState } from "react";
-import TabsScroll from "@/components/TabsScroll";
-import { Chart } from "./components/Chart";
-import { useUserContext } from "@/contexts/user/userContext";
-import SelectBi from "@/components/SelectBi";
-import UserAccount from "@/components/UserAccount";
+﻿import { useMemo, useState } from "react";
+import { useParams } from "react-router-dom";
 import AppNav from "@/components/AppNav";
+import { useQuery } from "@/hooks/useQuery";
+import { ApiPub } from "@/apis/public";
+import { Chart } from "./components/Chart";
 
+const fmtCny = (v: any) => {
+    if (v === null || v === undefined || v === "") return "-";
+    const n = Number(v);
+    return Number.isNaN(n) ? `￥${v}` : `￥${n.toFixed(4)}`;
+};
 
+const fmtPct = (v: any) => {
+    if (v === null || v === undefined || v === "") return "-";
+    const n = Number(v);
+    return `${n >= 0 ? "+" : ""}${n.toFixed(2)}%`;
+};
 
 const CoinDetail = () => {
-    const [isOpenBi, setIsOpenBi] = useState(false);
-    const [isOpenUsers, setIsOpenUsers] = useState(false);
-    const [searchParams] = useSearchParams();
-    const page = searchParams.get("page");
+    const { id } = useParams();
+    const coinId = Number(id);
+    const [days, setDays] = useState<7 | 30 | 180 | 365>(7);
 
-    const userContext = useUserContext();
-    const { loading: userLoading, userInfo, amountInfo } = userContext.store;
-    console.log(userInfo)
+    const { data: coin, loading: coinLoading } = useQuery({
+        fetcher: () => ApiPub.coinDetail({ id: coinId }),
+        deps: [coinId],
+    });
 
+    const { data: chartRows, loading: chartLoading } = useQuery({
+        fetcher: () => ApiPub.coinChart({ id: coinId, days }),
+        deps: [coinId, days],
+    });
 
-    return <main className="pb-10 text-sm">
-             <AppNav title="" right={ <div className=" border-1 rounded-full text-xs px-2 py-1" onClick={() => setIsOpenBi(true)}>选择</div>} />
+    const chartData = useMemo(() => (chartRows || []).map((i: any) => ({
+        time: Number(i.time),
+        priceCny: Number(i.priceCny ?? 0),
+        changePct: Number(i.changePct ?? 0),
+    })), [chartRows]);
 
-     {/*    <section className="flex justify-between">
-            <div onClick={() => setIsOpenUsers(true)}>{userInfo?.username}</div>
-           
-        </section> */}
-        <Chart />
-        <div className="px-4">
-            <section className="flex text-xs text-gray-400 px-4 py-5 rounded shadow">
-        {/*         <div className="flex-1 text-center">
-                    <div>24小时平均算力</div>
-                    <div className=" text-blue-700 mb-5"><span className=" text-lg">0.00</span> H/s</div>
-                    <div>昨日收益</div>
-                    <div className=" text-blue-700"><span className=" text-lg">0.00</span> KDA</div>
-                </div>
-                <div className="flex-1 text-center">
-                    <div>矿机</div>
-                    <div className="flex justify-between items-center">
-                        <div className="flex items-center gap-1">在线<span className=" text-blue-700 text-lg ">0</span></div>
-                        <div className="flex items-center gap-1">离线<span className=" text-gray-700 text-lg">0</span></div>
-                    </div>
-                    <div className="mt-5">今日已挖（预估）</div>
-                    <div className=" text-blue-700"><span className=" text-lg">0.00</span> KDA</div>
-                </div> */}
+    const riseDownClass = Number(coin?.priceChange24h ?? 0) >= 0 ? "text-[#0f9f64]" : "text-[#cf3f56]";
+
+    return (
+        <main className="pb-10 px-3 text-sm fade-stagger">
+            <AppNav title={coin?.symbol ? `${coin.symbol} 详情` : "币种详情"} />
+
+            <section className="glass-card p-4 mt-3">
+                {coinLoading ? (
+                    <div className="text-[#6a7f9f] text-xs">加载中...</div>
+                ) : (
+                    <>
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <div className="text-xl font-bold finance-title">{coin?.symbol || "-"}</div>
+                                <div className="text-xs text-[#6a7f9f]">{coin?.name || "-"}</div>
+                            </div>
+                            <img src={coin?.logo} className="w-10 h-10 rounded-full" />
+                        </div>
+
+                        <div className="mt-3">
+                            <div className="text-2xl font-extrabold text-[#16305a]">{fmtCny(coin?.priceCny)}</div>
+                            <div className={`text-xs mt-1 ${riseDownClass}`}>24h涨跌: {fmtPct(coin?.priceChange24h)}</div>
+                        </div>
+                    </>
+                )}
             </section>
-        </div>
 
-    
-        <section className="mt-4">
-            <h1 className="!px-4 !py-2 bg-gray-100">币种价格</h1>
-            <div className="flex flex-col gap-3 px-4 py-2">
-                <div className="flex justify-between items-center">
-                    <div className=" text-xs text-gray-400">BTC</div>
-                    <div>12</div>
+            <section className="mt-3 flex gap-2">
+                <button
+                    className={`px-3 py-1.5 rounded-lg border text-xs ${days === 7 ? "finance-btn-primary" : "finance-btn-ghost"}`}
+                    onClick={() => setDays(7)}
+                >
+                    7天走势
+                </button>
+                <button
+                    className={`px-3 py-1.5 rounded-lg border text-xs ${days === 30 ? "finance-btn-primary" : "finance-btn-ghost"}`}
+                    onClick={() => setDays(30)}
+                >
+                    30天走势
+                </button>
+                <button
+                    className={`px-3 py-1.5 rounded-lg border text-xs ${days === 180 ? "finance-btn-primary" : "finance-btn-ghost"}`}
+                    onClick={() => setDays(180)}
+                >
+                    6月走势
+                </button>
+                <button
+                    className={`px-3 py-1.5 rounded-lg border text-xs ${days === 365 ? "finance-btn-primary" : "finance-btn-ghost"}`}
+                    onClick={() => setDays(365)}
+                >
+                    1年走势
+                </button>
+            </section>
+
+            {chartLoading ? <div className="text-[#6a7f9f] text-xs mt-3">走势图加载中...</div> : <Chart data={chartData} />}
+
+            <section className="glass-card mt-3 p-4">
+                <div className="font-bold finance-title mb-3">关键指标</div>
+                <div className="finance-kv">
+                    <div className="flex justify-between"><span>全网算力</span><span>{coin?.networkHashrate || "-"}</span></div>
+                    <div className="flex justify-between"><span>矿机算力（矿池）</span><span>{coin?.poolHashrate || "-"}</span></div>
+                    <div className="flex justify-between"><span>每P收益</span><span>{fmtCny(coin?.dailyRevenuePerP)}</span></div>
+                    <div className="flex justify-between"><span>算法</span><span>{coin?.algorithm || "-"}</span></div>
+                    <div className="flex justify-between"><span>24h最高</span><span>{fmtCny(coin?.high24h)}</span></div>
+                    <div className="flex justify-between"><span>24h最低</span><span>{fmtCny(coin?.low24h)}</span></div>
+                    <div className="flex justify-between"><span>流通市值</span><span>{coin?.marketCap ?? "-"}</span></div>
+                    <div className="flex justify-between"><span>24h成交量</span><span>{coin?.totalVolume ?? "-"}</span></div>
                 </div>
-                <div className="flex justify-between items-center">
-                    <div className=" text-xs text-gray-400">每T日收益</div>
-                    <div>12</div>
-                </div>
-                <div className="flex justify-between items-center">
-                    <div className=" text-xs text-gray-400">当前难度</div>
-                    <div>12</div>
-                </div>
-                <div className="flex justify-between items-center">
-                    <div className=" text-xs text-gray-400">币价</div>
-                    <div>12</div>
-                </div>
-            </div>
-            <div className="line my-2" />
-            <h1 className="!px-4 !py-2 ">矿池信息</h1>
-            <div className="flex flex-col gap-3 px-4 py-2">
-                <div className="flex justify-between items-center">
-                    <div className=" text-xs text-gray-400">矿池算力</div>
-                    <div>12</div>
-                </div>
-                <div className="flex justify-between items-center">
-                    <div className=" text-xs text-gray-400">起付额</div>
-                    <div>12</div>
-                </div>
-                <div className="flex justify-between items-center">
-                    <div className=" text-xs text-gray-400">支付时间</div>
-                    <div>12</div>
-                </div>
-                <div className="flex justify-between items-center">
-                    <div className=" text-xs text-gray-400">大算力用户VIP申请</div>
-                    <div>12</div>
-                </div>
-            </div>
-            <div className="line my-2" />
-            <h1 className="!px-4 !py-2 ">挖矿地址</h1>
-        </section>
-
-
-
-        <SelectBi open={isOpenBi} onOpenChange={setIsOpenBi} />
-        <UserAccount open={isOpenUsers} onOpenChange={setIsOpenUsers} />
-
-
-
-
-
-    </main>
-}
+            </section>
+        </main>
+    );
+};
 
 export default CoinDetail;

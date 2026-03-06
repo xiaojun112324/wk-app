@@ -17,9 +17,9 @@ export default function Deposit() {
     });
 
     return (
-        <section>
+        <section className="px-3 pb-8 fade-stagger">
             <AppNav title="提交充值" />
-            <div className="px-5 mt-4">
+            <div className="glass-card px-4 py-4 mt-3">
                 <Form
                     form={form}
                     layout="vertical"
@@ -41,9 +41,10 @@ export default function Deposit() {
                         <Input placeholder="例如 /upload/recharge-proof-001.png" />
                     </Form.Item>
 
-                    <Button type="submit" className="w-full" loading={loading}>提交充值</Button>
+                    <Button type="submit" className="w-full finance-btn-primary" loading={loading}>提交充值</Button>
                 </Form>
             </div>
         </section>
     );
 }
+

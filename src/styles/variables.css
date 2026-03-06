@@ -1,132 +1,79 @@
-:root {
-    /* 圆角基准值（用于卡片、按钮、输入框等） */
+﻿:root {
     --radius: 0.625rem;
 
-    /* 全局页面背景色 */
-    --background: oklch(1 0 0);
+    --background: #f4f7fc;
+    --foreground: #0f1f38;
 
-    /* 全局默认前景色（正文文字颜色） */
-    --foreground: oklch(24.776% 0.00003 271.152);
+    --card: #ffffff;
+    --card-foreground: #0f1f38;
 
-    /* 卡片背景色 */
-    --card: oklch(1 0 0);
+    --popover: #ffffff;
+    --popover-foreground: #0f1f38;
 
-    /* 卡片中的文字 / 图标颜色 */
-    --card-foreground: oklch(0.145 0 0);
+    --primary: #1c4fb4;
+    --primary-foreground: #ffffff;
 
-    /* 弹出层背景色（Popover、Dropdown、Tooltip 等） */
-    --popover: oklch(1 0 0);
+    --secondary: #e9eef8;
+    --secondary-foreground: #152b4e;
 
-    /* 弹出层中的文字 / 图标颜色 */
-    --popover-foreground: oklch(0.145 0 0);
+    --muted: #eef2f8;
+    --muted-foreground: #5e6f8d;
 
-    /* 主色（品牌色 / 主要按钮 / 高亮操作） */
-    --primary: rgb(247, 78, 81);
+    --accent: #e4ebf8;
+    --accent-foreground: #162f55;
 
-    /* 主色背景上的文字 / 图标颜色 */
-    --primary-foreground: oklch(0.985 0 0);
+    --destructive: #cc3653;
 
-    /* 次要背景色（用于次级按钮、区块背景等） */
-    --secondary: oklch(0.97 0 0);
+    --border: #d8e1f2;
+    --input: #d3ddef;
+    --ring: #4c75c6;
 
-    /* 次要背景上的文字 / 图标颜色 */
-    --secondary-foreground: oklch(0.205 0 0);
+    --chart-1: #1c4fb4;
+    --chart-2: #2a76d2;
+    --chart-3: #4a8ce0;
+    --chart-4: #7aa8e6;
+    --chart-5: #1b345f;
 
-    /* 弱化背景色（禁用态、占位区、辅助区域） */
-    --muted: oklch(0.97 0 0);
-
-    /* 弱化背景上的文字颜色（说明性文字、次要信息） */
-    --muted-foreground: oklch(0.556 0 0);
-
-    /* 强调背景色（选中态、Hover、强调区块） */
-    --accent: oklch(0.97 0 0);
-
-    /* 强调背景上的文字 / 图标颜色 */
-    --accent-foreground: oklch(0.205 0 0);
-
-    /* 危险 / 破坏性操作颜色（删除、警告） */
-    --destructive: oklch(0.577 0.245 27.325);
-
-    /* 边框颜色（卡片、分割线、表单边框） */
-    --border: oklch(0.922 0 0);
-
-    /* 输入框背景或边框颜色 */
-    --input: oklch(0.922 0 0);
-
-    /* 焦点高亮颜色（Focus Ring、Outline） */
-    --ring: oklch(0.708 0 0);
-
-    /* 图表配色 1（数据可视化） */
-    --chart-1: oklch(0.646 0.222 41.116);
-
-    /* 图表配色 2 */
-    --chart-2: oklch(0.6 0.118 184.704);
-
-    /* 图表配色 3 */
-    --chart-3: oklch(0.398 0.07 227.392);
-
-    /* 图表配色 4 */
-    --chart-4: oklch(0.828 0.189 84.429);
-
-    /* 图表配色 5 */
-    --chart-5: oklch(0.769 0.188 70.08);
-
-    /* 侧边栏背景色 */
-    --sidebar: oklch(0.985 0 0);
-
-    /* 侧边栏默认文字 / 图标颜色 */
-    --sidebar-foreground: oklch(0.145 0 0);
-
-    /* 侧边栏主色（当前菜单、激活项） */
-    --sidebar-primary: oklch(0.205 0 0);
-
-    /* 侧边栏主色上的文字 / 图标颜色 */
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-
-    /* 侧边栏强调背景色（Hover、选中辅助态） */
-    --sidebar-accent: oklch(0.97 0 0);
-
-    /* 侧边栏强调背景上的文字 / 图标颜色 */
-    --sidebar-accent-foreground: oklch(0.205 0 0);
-
-    /* 侧边栏边框颜色 */
-    --sidebar-border: oklch(0.922 0 0);
-
-    /* 侧边栏焦点高亮颜色 */
-    --sidebar-ring: oklch(0.708 0 0);
-
+    --sidebar: #f4f7fc;
+    --sidebar-foreground: #172a49;
+    --sidebar-primary: #1c4fb4;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #e8eef9;
+    --sidebar-accent-foreground: #162f55;
+    --sidebar-border: #d8e1f2;
+    --sidebar-ring: #4c75c6;
 }
 
 .dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: #fe6145;
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: rgba(255,255,255,0.85);
-    --accent: oklch(0.269 0 0); 
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.488 0.243 264.376);
-    --chart-2: oklch(0.696 0.17 162.48);
-    --chart-3: oklch(0.769 0.188 70.08);
-    --chart-4: oklch(0.627 0.265 303.9);
-    --chart-5: oklch(0.645 0.246 16.439);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+    --background: #0a1322;
+    --foreground: #e6edf8;
+    --card: #111f36;
+    --card-foreground: #e6edf8;
+    --popover: #111f36;
+    --popover-foreground: #e6edf8;
+    --primary: #4f7ed1;
+    --primary-foreground: #081020;
+    --secondary: #162846;
+    --secondary-foreground: #d4e0f5;
+    --muted: #16253f;
+    --muted-foreground: #9bb0d3;
+    --accent: #1d3257;
+    --accent-foreground: #d4e0f5;
+    --destructive: #f15878;
+    --border: #253c61;
+    --input: #253c61;
+    --ring: #6a90d9;
+    --chart-1: #4f7ed1;
+    --chart-2: #689de6;
+    --chart-3: #8cb1ec;
+    --chart-4: #9bc4f2;
+    --chart-5: #5f8fd5;
+    --sidebar: #0f1d34;
+    --sidebar-foreground: #dde8fa;
+    --sidebar-primary: #4f7ed1;
+    --sidebar-primary-foreground: #081020;
+    --sidebar-accent: #16253f;
+    --sidebar-accent-foreground: #dde8fa;
+    --sidebar-border: #253c61;
+    --sidebar-ring: #6a90d9;
 }

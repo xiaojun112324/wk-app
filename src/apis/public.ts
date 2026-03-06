@@ -14,5 +14,11 @@ export const ApiPub = {
     calculator: async (params: { symbol: string; hashrate: number | string; unitFactor?: number | string }) => {
         return await $get("/api/public/tool/calculator", params, { toast: false });
     },
+    coinDetail: async (params: { id?: number; symbol?: string }) => {
+        return await $get("/api/public/coin/detail", params, { toast: false });
+    },
+    coinChart: async (params: { id?: number; symbol?: string; days?: number }) => {
+        return await $get("/api/public/coin/chart", params, { toast: false });
+    },
 
 };

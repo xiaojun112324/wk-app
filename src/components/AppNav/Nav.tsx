@@ -1,10 +1,6 @@
-import { ChevronLeftIcon, MagnifyingGlassIcon, UserIcon } from '@heroicons/react/24/outline'
-import { useCurrentRoute } from "@/contexts/route/useCurrentRoute";
-import { useMemo, useState, useRef, useEffect, ReactNode } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+﻿import { ChevronLeftIcon } from '@heroicons/react/24/outline'
+import { ReactNode } from 'react';
 import { useBack } from "@/hooks/useBack";
-import { useUserContext } from '@/contexts/user/userContext';
-import { useTranslation } from "react-i18next";
 import clsx from 'clsx';
 
 interface IProps {
@@ -14,83 +10,26 @@ interface IProps {
 }
 
 export default function Nav({ title, right, className }: IProps) {
-    const { t } = useTranslation();
-    const nav = useNavigate();
-    const currentRoute: any = useCurrentRoute();
-    const userContext = useUserContext();
-    const { refresh } = userContext;
     const goBack = useBack("/");
-    const searchRef = useRef<HTMLDivElement | null>(null);
-    const profileRef = useRef<HTMLDivElement | null>(null);
-    const searchButtonRefs = useRef<HTMLButtonElement[]>([]);
-
-    useEffect(() => {
-
-        const handleClickOutside = (event: MouseEvent) => {
-            const target = event.target as Node;
-            const clickedSearchButton = searchButtonRefs.current.some(btn => btn && btn.contains(target));
-
-            // 判断是否点击了 AntD Select 下拉框
-            const isAntdDropdown = (target as HTMLElement).closest(".ant-select-dropdown");
-
-            if (
-                searchRef.current &&
-                !searchRef.current.contains(target) &&
-                !clickedSearchButton &&
-                !isAntdDropdown
-            ) {
-
-            }
-
-            if (profileRef.current && !profileRef.current.contains(target)) {
-
-            }
-        };
-        const handleKeyDown = (event: KeyboardEvent) => {
-            if (event.key === "Escape") {
-
-
-            }
-        };
-        document.addEventListener("mousedown", handleClickOutside);
-        document.addEventListener("keydown", handleKeyDown);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-            document.removeEventListener("keydown", handleKeyDown);
-        };
-    }, []);
-
-
 
     return (
-        <header className={clsx('relative bg-background', className)}>
-            <div className="px-2 sm:px-4 lg:px-8">
-                <div className="relative flex h-14 justify-between overflow-hidden min-w-0">
-                    {/* 返回按钮 */}
-                    <div className="relative z-10 flex px-2 w-10 lg:px-0 ">
-                        <div className="flex shrink-0 items-center">
-                            <ChevronLeftIcon className='w-5 font-bold ' onClick={goBack} />
+        <header className={clsx('sticky top-0 z-20', className)}>
+            <div className="mx-3 mt-2 rounded-2xl border border-[#cfe0ff] bg-white/85 backdrop-blur-md shadow-[0_8px_24px_rgba(20,99,255,0.12)]">
+                <div className="relative flex h-12 items-center justify-between px-2 min-w-0">
+                    <button className="relative z-10 flex h-9 w-9 items-center justify-center rounded-xl text-[#1a4da8] hover:bg-[#edf3ff]" onClick={goBack}>
+                        <ChevronLeftIcon className='w-5 font-bold' />
+                    </button>
 
-                        </div>
-                    </div>
-
-                    {/* 标题 */}
-                    <div className="min-w-0 absolute px-10 z-0   left-1/2 top-1/2 -translate-1/2 w-full ellipsis text-base text-center font-semibold">
+                    <div className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 px-12 text-center text-[15px] font-extrabold tracking-[0.2px] text-[#163665] truncate">
                         {title}
                     </div>
 
-                    {/* 右侧功能区 */}
-                    <div className="relative z-10 flex items-center">
+                    <div className="relative z-10 flex items-center min-w-[36px] justify-end">
                         {right}
                     </div>
-
-
                 </div>
-
-
             </div>
-
-
         </header>
     );
 }
+

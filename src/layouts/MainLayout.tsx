@@ -1,32 +1,22 @@
-import { useCurrentRoute } from "@/contexts/route/useCurrentRoute";
-import { ReactNode } from "react";
-
-import AnimatedHeaderWrapper from "./components/AnimatedHeaderWrapper";
+﻿import { ReactNode } from "react";
 import BottomNav from "./components/BottomNav";
+
 interface MainLayoutProps {
   children: ReactNode;
 }
-export default function MainLayout({ children }: MainLayoutProps) {
-  const currentRoute = useCurrentRoute();
 
+export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <>
-      {/*    <AnimatedHeaderWrapper><Header /></AnimatedHeaderWrapper> */}
-
-
-      <div className="main-layout">
+      <div className="main-layout finance-page">
         {children}
       </div>
-      {/*    <div className="">
-        <Footer />
-      </div> */}
       <div className="ios-safe-bottom">
-        <div className=" h-[61px]">
+        <div className="h-[70px]">
           <BottomNav />
         </div>
-
       </div>
-
     </>
   );
 }
+

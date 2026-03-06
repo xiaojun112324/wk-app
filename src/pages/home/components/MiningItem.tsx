@@ -1,53 +1,42 @@
-import React from "react";
-
+﻿import React from "react";
 import clsx from "clsx";
 
 interface IProps {
-    miningItem: any
-    className?: string
-    onClick?:(item:any)=>void
+    miningItem: any;
+    className?: string;
+    onClick?: (item: any) => void;
 }
 
-const MiningItem: React.FC<IProps> = ({ miningItem, className,onClick }) => {
+const MiningItem: React.FC<IProps> = ({ miningItem, className, onClick }) => {
+    const formatCny = (value: any) => {
+        if (value === null || value === undefined || value === "") return "-";
+        const n = Number(value);
+        return Number.isNaN(n) ? `￥${value}` : `￥${n}`;
+    };
+
     return (
-        <div className={clsx(' text-sm', className)} onClick={()=>onClick?.(miningItem)}>
-            <div className="flex items-center justify-between py-4 border-b" >
-                {/* 左侧 */}
-                <div className="flex items-center gap-3">
-                    <img src={miningItem.logo} className="w-10 h-10 rounded-full" />
-
-                    <div>
+        <div className={clsx("finance-list-row", className)} onClick={() => onClick?.(miningItem)}>
+            <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-3 min-w-0">
+                    <img src={miningItem.logo} className="w-11 h-11 rounded-full ring-2 ring-[#d8e6ff]" />
+                    <div className="min-w-0">
                         <div className="flex items-center gap-2">
-                            <span className="font-semibold ">{miningItem.symbol}</span>
-                           {/*  <span className="text-xs bg-blue-500 text-white px-2 py-0.5 rounded">
-                                赠币
-                            </span> */}
+                            <span className="font-bold text-[#153966]">{miningItem.symbol}</span>
+                            <span className="finance-chip">{miningItem?.algorithm || "-"}</span>
                         </div>
-
-                        <div className="text-gray-400 text-sm">{miningItem?.algorithm}</div>
+                        <div className="text-[#6b85ad] text-xs truncate">全网算力: {miningItem?.networkHashrate || "-"}</div>
+                        <div className="text-[#6b85ad] text-xs truncate">矿机算力（矿池）: {miningItem?.poolHashrate || "-"}</div>
                     </div>
                 </div>
 
-                {/* 中间 */}
-                <div className="text-right">
-                    <div className=" font-medium">
-                        {miningItem?.poolHashrate} <span className="text-gray-500">/ {miningItem?.dailyRevenuePerP}</span>
-                    </div>
-
-                    <div className="text-sm text-gray-400 flex items-center justify-end gap-1">
-                        {miningItem?.networkHashrate} / {miningItem?.priceCny}
-                       {/*  <span className="text-red-500">↘</span> */}
-                    </div>
+                <div className="text-right shrink-0">
+                    <div className="text-[12px] text-[#5d7ca8]">每P收益: {formatCny(miningItem?.dailyRevenuePerP)}</div>
+                    <div className="text-[12px] text-[#5d7ca8]">币价: {formatCny(miningItem?.priceCny)}</div>
                 </div>
-
-                {/* 右侧 */}
-                <button className="ml-4 w-9 h-9 flex items-center justify-center rounded-full border text-gray-500">
-                    ☰
-                </button>
             </div>
-
         </div>
     );
 };
 
 export default MiningItem;
+

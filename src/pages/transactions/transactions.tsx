@@ -28,9 +28,9 @@ const Transactions = () => {
     const rows = tab === 1 ? fundRows || [] : tab === 4 ? rechargeRows || [] : withdrawRows || [];
 
     return (
-        <main className="min-h-screen px-4 pb-8">
+        <main className="min-h-screen px-3 pb-8 fade-stagger">
             <AppNav title="资金流水" />
-            <div className="mt-3">
+            <div className="mt-3 glass-card p-3">
                 <TabsScroll tabs={tabs} value={tab} onChange={(rawKey) => {
                     const key = Number(rawKey);
                     setTab(key);
@@ -40,18 +40,18 @@ const Transactions = () => {
                 }} />
             </div>
 
-            <section className="mt-3 border rounded-xl p-3 text-xs">
-                {rows.length === 0 && <div className="text-gray-400">暂无数据</div>}
+            <section className="mt-3 glass-card p-3 text-xs">
+                {rows.length === 0 && <div className="text-[#7086a8]">暂无数据</div>}
                 {rows.map((item: any, idx: number) => (
-                    <div key={item.id || idx} className="py-2 border-b">
+                    <div key={item.id || idx} className="finance-list-row">
                         {tab === 1 && (
                             <div className="flex justify-between">
                                 <span>{item.coinSymbol || "BTC"} / type {item.type}</span>
-                                <span>{item.amount}</span>
+                                <span className="font-semibold text-[#10418e]">{item.amount}</span>
                             </div>
                         )}
                         {tab === 4 && (
-                            <div className="grid grid-cols-2 gap-y-1">
+                            <div className="finance-kv">
                                 <div>资产网络: {item.asset}/{item.network}</div>
                                 <div>金额(CNY): {item.amountCny}</div>
                                 <div>状态: {item.status}</div>
@@ -59,7 +59,7 @@ const Transactions = () => {
                             </div>
                         )}
                         {tab === 5 && (
-                            <div className="grid grid-cols-2 gap-y-1">
+                            <div className="finance-kv">
                                 <div>资产网络: {item.asset}/{item.network}</div>
                                 <div>金额(CNY): {item.amountCny}</div>
                                 <div>状态: {item.status}</div>
@@ -74,3 +74,4 @@ const Transactions = () => {
 };
 
 export default Transactions;
+
