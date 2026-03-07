@@ -1,34 +1,27 @@
 export const navListData = [
-    {
-        icon: 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/cn-2/home-nav/nab-1.png',
-        title: '收益排行',
-        path: '#',
-
-    },
-
-    {
-        icon: 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/cn-2/home-nav/nav-2.png',
-        title: '全球矿场',
-        path: '#',
-    },
-    {
-        icon: 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/cn-2/home-nav/nav-3.png',
-        title: 'PoW排行榜',
-        path: '#',
-    },
-    {
-        icon: 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/cn-2/home-nav/nav-4.png',
-        iconSelected: 'nav2-4',
-        title: '计算器',
-        path: '/calculator',
-    },
-     {
-        icon: 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/cn-2/home-nav/nav-4.png',
-        iconSelected: 'nav2-4',
-        title: '我的自选',
-        path: '#',
-    },
- 
-
+  {
+    iconKey: 'rank',
+    title: '\u6536\u76ca\u6392\u884c',
+    path: '/pow-rank',
+  },
+  {
+    iconKey: 'farm',
+    title: '\u5168\u7403\u77ff\u573a',
+    path: '/global-farms',
+  },
+  {
+    iconKey: 'calculator',
+    title: '\u8ba1\u7b97\u5668',
+    path: '/calculator',
+  },
+  {
+    iconKey: 'favorite',
+    title: '\u6211\u7684\u81ea\u9009',
+    path: '/favorites',
+  },
+  {
+    iconKey: 'support',
+    title: '\u5728\u7ebf\u5ba2\u670d',
+    path: '/support',
+  },
 ]
-

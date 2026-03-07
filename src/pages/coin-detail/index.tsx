@@ -1,8 +1,11 @@
-﻿import { useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import AppNav from "@/components/AppNav";
 import { useQuery } from "@/hooks/useQuery";
 import { ApiPub } from "@/apis/public";
+import { ApiFavorite } from "@/apis/favorite";
+import { StarIcon as StarSolid } from "@heroicons/react/24/solid";
+import { StarIcon as StarOutline } from "@heroicons/react/24/outline";
 import { Chart } from "./components/Chart";
 
 const fmtCny = (v: any) => {
@@ -17,11 +20,20 @@ const fmtPct = (v: any) => {
   return `${n >= 0 ? "+" : ""}${n.toFixed(2)}%`;
 };
 
+const calcPerPRevenueCny = (coin: any) => {
+  const price = Number(coin?.priceCny || 0);
+  const dailyCoin = Number(coin?.dailyRevenuePerP || 0);
+  if (!Number.isFinite(price) || !Number.isFinite(dailyCoin)) return 0;
+  return Number((price * dailyCoin).toFixed(8));
+};
+
 const CoinDetail = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const coinId = Number(id);
   const [days, setDays] = useState<7 | 30 | 180 | 365>(7);
+  const [favorite, setFavorite] = useState(false);
+  const [favLoading, setFavLoading] = useState(false);
 
   const { data: coin, loading: coinLoading } = useQuery({
     fetcher: () => ApiPub.coinDetail({ id: coinId }),
@@ -44,10 +56,43 @@ const CoinDetail = () => {
   );
 
   const riseDownClass = Number(coin?.priceChange24h ?? 0) >= 0 ? "text-[#0f9f64]" : "text-[#cf3f56]";
+  const perPRevenueCny = useMemo(() => calcPerPRevenueCny(coin), [coin?.priceCny, coin?.dailyRevenuePerP]);
+
+  useEffect(() => {
+    const symbol = coin?.symbol;
+    if (!symbol) return;
+    ApiFavorite.check(symbol).then((res: any) => {
+      setFavorite(!!res?.data?.favorite);
+    }).catch(() => {});
+  }, [coin?.symbol]);
+
+  const toggleFavorite = async () => {
+    const symbol = coin?.symbol;
+    if (!symbol || favLoading) return;
+    setFavLoading(true);
+    try {
+      if (favorite) {
+        const res: any = await ApiFavorite.remove(symbol);
+        setFavorite(!!res?.data?.favorite);
+      } else {
+        const res: any = await ApiFavorite.add(symbol);
+        setFavorite(!!res?.data?.favorite);
+      }
+    } finally {
+      setFavLoading(false);
+    }
+  };
 
   return (
     <main className="pb-10 px-3 text-sm fade-stagger">
-      <AppNav title={coin?.symbol ? `${coin.symbol} 详情` : "币种详情"} />
+      <AppNav
+        title={coin?.symbol ? `${coin.symbol} 详情` : "币种详情"}
+        right={
+          <button onClick={toggleFavorite} disabled={favLoading} className="p-1" title={favorite ? "取消自选" : "加入自选"}>
+            {favorite ? <StarSolid className="w-5 h-5 text-[#f4b400]" /> : <StarOutline className="w-5 h-5 text-[#6f88ac]" />}
+          </button>
+        }
+      />
 
       <section className="glass-card p-4 mt-3">
         {coinLoading ? (
@@ -103,8 +148,8 @@ const CoinDetail = () => {
         <div className="font-bold finance-title mb-3">关键指标</div>
         <div className="finance-kv">
           <div className="flex justify-between"><span>全网算力</span><span>{coin?.networkHashrate || "-"}</span></div>
-          <div className="flex justify-between"><span>矿机算力（矿池）</span><span>{coin?.poolHashrate || "-"}</span></div>
-          <div className="flex justify-between"><span>每P收益</span><span>{fmtCny(coin?.dailyRevenuePerP)}</span></div>
+          <div className="flex justify-between"><span>矿机算力</span><span>{coin?.poolHashrate || "-"}</span></div>
+          <div className="flex justify-between"><span>每P收益</span><span>{fmtCny(perPRevenueCny)}</span></div>
           <div className="flex justify-between"><span>算法</span><span>{coin?.algorithm || "-"}</span></div>
           <div className="flex justify-between"><span>24h最高</span><span>{fmtCny(coin?.high24h)}</span></div>
           <div className="flex justify-between"><span>24h最低</span><span>{fmtCny(coin?.low24h)}</span></div>
@@ -125,3 +170,4 @@ const CoinDetail = () => {
 };
 
 export default CoinDetail;
+

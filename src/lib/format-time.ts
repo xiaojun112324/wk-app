@@ -4,6 +4,20 @@ import utc from 'dayjs/plugin/utc'
 import timezone from 'dayjs/plugin/timezone'
 dayjs.extend(utc)
 dayjs.extend(timezone)
+const CN_TIMEZONE = 'Asia/Shanghai'
+dayjs.tz.setDefault(CN_TIMEZONE)
+
+const parseCnDate = (input: any) => {
+  if (!input) return null
+  if (typeof input === 'string') {
+    const text = input.trim()
+    // If backend returns a naive string like "2026-03-07 08:00:00",
+    // parse it directly in China timezone to avoid local-time offset.
+    const hasZone = /[zZ]|[+\-]\d{2}:?\d{2}$/.test(text)
+    return hasZone ? dayjs(text).tz(CN_TIMEZONE) : dayjs.tz(text, CN_TIMEZONE)
+  }
+  return dayjs(input).tz(CN_TIMEZONE)
+}
 
 export const formatTime = (seconds: number, template = 'HH:mm:ss') => {
   const hours = Math.floor(seconds / 3600)
@@ -23,24 +37,24 @@ export const formatTime = (seconds: number, template = 'HH:mm:ss') => {
 
 export const formatDate = (date: any, format?: string) => {
   if (date) {
-    return dayjs(date).format(format || 'YYYY-MM-DD HH:mm:ss')
+    const parsed = parseCnDate(date)
+    return (parsed ? parsed : dayjs(date).tz(CN_TIMEZONE)).format(format || 'YYYY-MM-DD HH:mm:ss')
   }
   return '-'
 
 }
 
 export const getTimeAgo = (time: string, formatStr?: string): string => {
-  const currentTime = new Date()
-  const targetTime = new Date(time)
-
-  const timeDifference = currentTime.getTime() - targetTime.getTime()
+  const currentTime = dayjs().tz(CN_TIMEZONE)
+  const targetTime = parseCnDate(time) || dayjs(time).tz(CN_TIMEZONE)
+  const timeDifference = currentTime.valueOf() - targetTime.valueOf()
   const seconds = Math.floor(timeDifference / 1000)
   const minutes = Math.floor(seconds / 60)
   const hours = Math.floor(minutes / 60)
   const days = Math.floor(hours / 24)
 
   if (days > 1) {
-    return formatDate(targetTime, formatStr)
+    return formatDate(targetTime.toDate(), formatStr)
   }
 
   if (days === 1) {

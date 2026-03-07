@@ -62,7 +62,11 @@ const Lang = lazy(() => import('@/pages/agreement/lang'))
 
 const CoinDetail=lazy(() => import('@/pages/coin-detail'))
 const CoinBuyDetail=lazy(() => import('@/pages/coin-detail/buy'))
+const GlobalFarms=lazy(() => import('@/pages/global-farms'))
+const GlobalFarmDetail=lazy(() => import('@/pages/global-farms/detail'))
 const Calculator=lazy(()=>import('@/pages/calculator'))
+const PowRank=lazy(()=>import('@/pages/pow-rank'))
+const Favorites=lazy(()=>import('@/pages/favorites'))
 
 export const routes = [
   {
@@ -89,12 +93,44 @@ export const routes = [
     permission: 'CoinBuyDetail',
     meta: {},
   },
+  {
+    path: '/global-farms',
+    element: <GlobalFarms />,
+    title: "",
+    isUserInfo: true,
+    permission: 'GlobalFarms',
+    meta: {},
+  },
+  {
+    path: '/global-farms/:id',
+    element: <GlobalFarmDetail />,
+    title: "",
+    isUserInfo: true,
+    permission: 'GlobalFarmDetail',
+    meta: {},
+  },
       {
     path: '/calculator',
     element: <Calculator />,
     title: "",
     isUserInfo: true,
     permission: 'Calculator',
+    meta: {},
+  },
+  {
+    path: '/pow-rank',
+    element: <PowRank />,
+    title: "",
+    isUserInfo: true,
+    permission: 'PowRank',
+    meta: {},
+  },
+  {
+    path: '/favorites',
+    element: <Favorites />,
+    title: "",
+    isUserInfo: true,
+    permission: 'Favorites',
     meta: {},
   },
 

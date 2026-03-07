@@ -2,23 +2,29 @@
 import { useMutation } from "@/hooks/useMutation";
 import { apiOrder } from "@/apis/order";
 import AppNav from "@/components/AppNav";
+import { formatDate } from "@/lib/format-time";
 import { toast } from "sonner";
-import { useState } from "react";
+
+const getMachineOrderStatusText = (status: any) => {
+    const s = Number(status);
+    if (s === 1) return "持有中";
+    if (s === 2) return "已卖出";
+    if (s === 3) return "已取消";
+    if (s === 0) return "待生效";
+    return "未知状态";
+};
+
+const getMachineOrderStatusClass = (status: any) => {
+    const s = Number(status);
+    if (s === 1) return "bg-[#eaf7ef] text-[#0f9f64] border-[#b9e7ca]";
+    if (s === 2) return "bg-[#eef4ff] text-[#1d5fd0] border-[#c8d9ff]";
+    if (s === 3) return "bg-[#fff1f3] text-[#cf3f56] border-[#ffc9d0]";
+    return "bg-[#f4f7fb] text-[#5d7ca8] border-[#d7e2f1]";
+};
 
 const Position = () => {
-    const [machineId, setMachineId] = useState("");
-    const [quantity, setQuantity] = useState("1");
-
     const { data, refresh, loading } = useQuery({
         fetcher: apiOrder.listMachineOrders,
-    });
-
-    const { mutate: doCreate, loading: createLoading } = useMutation({
-        fetcher: (payload: any) => apiOrder.createMachineOrder(payload),
-        onSuccess: () => {
-            toast.success("下单成功");
-            refresh();
-        },
     });
 
     const { mutate: doSell, loading: sellLoading } = useMutation({
@@ -29,52 +35,11 @@ const Position = () => {
         },
     });
 
-    const { mutate: doCancel, loading: cancelLoading } = useMutation({
-        fetcher: (payload: any) => apiOrder.cancelMachineOrder(payload.id, {}),
-        onSuccess: () => {
-            toast.success("取消成功");
-            refresh();
-        },
-    });
-
     const list = data || [];
 
     return (
         <main className="min-h-[calc(100vh-70px)] px-3 pb-8 fade-stagger">
             <AppNav title="矿机订单" />
-
-            <section className="glass-card p-3 mt-3 text-xs">
-                <div className="font-bold finance-title mb-2">创建订单</div>
-                <div className="flex gap-2">
-                    <input
-                        className="border border-[#cddfff] bg-[#f7fbff] rounded-xl px-3 py-2 flex-1 outline-none"
-                        placeholder="machineId"
-                        value={machineId}
-                        onChange={(e) => setMachineId(e.target.value)}
-                    />
-                    <input
-                        className="border border-[#cddfff] bg-[#f7fbff] rounded-xl px-3 py-2 w-20 outline-none"
-                        placeholder="数量"
-                        value={quantity}
-                        onChange={(e) => setQuantity(e.target.value)}
-                    />
-                    <button
-                        className="finance-btn-primary px-3 py-2 rounded-xl"
-                        disabled={createLoading}
-                        onClick={() => {
-                            const mId = Number(machineId);
-                            const qty = Number(quantity);
-                            if (!mId || !qty) {
-                                toast.warning("请输入 machineId 和数量");
-                                return;
-                            }
-                            doCreate({ machineId: mId, quantity: qty });
-                        }}
-                    >
-                        下单
-                    </button>
-                </div>
-            </section>
 
             {loading && <div className="text-xs text-[#7086a8] mt-3">加载中...</div>}
             {!loading && list.length === 0 && <div className="text-xs text-[#7086a8] mt-3">暂无订单</div>}
@@ -84,15 +49,19 @@ const Position = () => {
                     <div key={item.id} className="glass-card p-3 text-xs">
                         <div className="flex justify-between mb-2">
                             <div className="font-bold text-[#173a69]">{item.machineName} ({item.coinSymbol})</div>
-                            <div className="finance-chip">状态: {item.status}</div>
+                            <div className={`finance-chip border ${getMachineOrderStatusClass(item.status)}`}>
+                                {getMachineOrderStatusText(item.status)}
+                            </div>
                         </div>
                         <div className="finance-kv">
                             <div>订单ID: {item.id}</div>
                             <div>数量: {item.quantity}</div>
                             <div>总投资: {item.totalInvest}</div>
-                            <div>总算力TH: {item.totalHashrateTH}</div>
-                            <div>今日收益币: {item.todayRevenueCoin}</div>
-                            <div>总收益币: {item.totalRevenueCoin}</div>
+                            <div>总算力PH/s: {(Number(item.totalHashrateTH || 0) / 1000).toFixed(8)}</div>
+                            <div>今日收益(BTC): <span className="text-[#cf3f56] font-semibold">{item.todayRevenueCoin}</span></div>
+                            <div>总收益(BTC): <span className="text-[#cf3f56] font-semibold">{item.totalRevenueCoin}</span></div>
+                            <div className="col-span-2">买入时间: {formatDate(item.createTime)}</div>
+                            {Number(item.status) === 1 && <div className="col-span-2">锁定到期时间: {formatDate(item.lockUntil)}</div>}
                         </div>
 
                         {Number(item.status) === 1 && (
@@ -104,14 +73,10 @@ const Position = () => {
                                 >
                                     卖出
                                 </button>
-                                <button
-                                    className="finance-btn-ghost px-3 py-1.5 rounded-xl"
-                                    disabled={cancelLoading}
-                                    onClick={() => doCancel({ id: item.id })}
-                                >
-                                    取消
-                                </button>
                             </div>
+                        )}
+                        {(Number(item.status) === 2 || Number(item.status) === 3) && (
+                            <div className="mt-2 text-[#7b90b3]">卖出时间: {formatDate(item.sellTime)}</div>
                         )}
                     </div>
                 ))}

@@ -1,310 +1,199 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Modal, Input, Button, Spin } from "antd";
-import {
-    SendOutlined,
-    PictureOutlined,
-    CustomerServiceOutlined,
-    CloseOutlined
-} from "@ant-design/icons";
+﻿import React, { useEffect, useMemo, useRef, useState } from "react";
+import { Button, Input, Spin } from "antd";
+import { SendOutlined, PictureOutlined } from "@ant-design/icons";
 import type { RcFile } from "antd/es/upload/interface";
-import { $post } from "@/lib/http";
-import { useMutation } from "@/hooks/useMutation";
-import { useQuery } from "@/hooks/useQuery";
-import { apiChat } from "@/apis/chat";
-import { useTranslation } from "react-i18next";
-import { useMessageCountContext } from "@/contexts/news/messageCountContext";
-import { formatDate, getTimeAgo } from "@/lib/format-time";
-import { toast } from "sonner";
-import { CheckIcon } from "@heroicons/react/24/outline";
-import { getChatUserId } from "@/lib/getChatUserId";
 import AppNav from "@/components/AppNav";
+import { apiChat } from "@/apis/chat";
+import { $post } from "@/lib/http";
+import { formatDate } from "@/lib/format-time";
 
 const Support: React.FC = () => {
-    const { count } = useMessageCountContext();
-    const { t } = useTranslation();
-    const [open, setOpen] = useState(false);
-    const [message, setMessage] = useState("");
-    const [initialLoading, setInitialLoading] = useState(false);
-    const fileInputRef = useRef<HTMLInputElement | null>(null);
-    const chatContainerRef = useRef<HTMLDivElement | null>(null);
-    const pollingRef = useRef<any>(null);
-    const prevMessagesRef = useRef<number>(0);
+  const [roomId, setRoomId] = useState<number | null>(null);
+  const [messages, setMessages] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [text, setText] = useState("");
+  const fileRef = useRef<HTMLInputElement | null>(null);
+  const chatRef = useRef<HTMLDivElement | null>(null);
+  const lastIdRef = useRef<number>(0);
 
-    const uploadUrl = "/user/upload.do";
+  const sortedMessages = useMemo(() => {
+    const list = [...messages];
+    list.sort((a, b) => Number(a.id || 0) - Number(b.id || 0));
+    return list;
+  }, [messages]);
 
-    /** 获取聊天室id */
-    const { data: chatRoom, run: $getChatRoom } = useQuery({
-        fetcher: (params) => apiChat.createCustomerImRoom(params),
-        immediate: false,
+  const scrollBottom = () => {
+    requestAnimationFrame(() => {
+      chatRef.current?.scrollTo({
+        top: chatRef.current.scrollHeight + 100,
+        behavior: "smooth",
+      });
     });
+  };
 
-    /** 获取聊天记录 */
-    const { data: messageRes, run: getMessageData } = useQuery({
-        fetcher: (params) => apiChat.selectChatDetail(params),
-        immediate: false,
+  const mergeMessages = (rows: any[]) => {
+    if (!rows?.length) return;
+    setMessages((prev) => {
+      const map = new Map<number, any>();
+      [...prev, ...rows].forEach((m) => {
+        const id = Number(m.id || 0);
+        if (id > 0) {
+          map.set(id, m);
+        }
+      });
+      const merged = Array.from(map.values());
+      const maxId = merged.reduce((acc, cur) => Math.max(acc, Number(cur.id || 0)), lastIdRef.current);
+      lastIdRef.current = maxId;
+      return merged;
     });
-    const messageData = useMemo(() => {
-        if (messageRes?.data?.chatMessage?.length > 0) {
-            return messageRes?.data?.chatMessage
-        }
-        return []
-    }, [messageRes])
+  };
 
-    /** 滚动到底部 */
-    const scrollToBottom = () => {
-        setTimeout(() => {
-            requestAnimationFrame(() => {
-                chatContainerRef.current?.scrollTo({
-                    top: chatContainerRef.current.scrollHeight + 100,
-                    behavior: "smooth",
-                });
-            });
-        }, 600)
-    };
-
-    /** 发送消息 */
-    const { mutate: sendChat, loading } = useMutation({
-        fetcher: apiChat.sendChat,
-        onSuccess: async () => {
-            setMessage("");
-            await getMessageData({ userId: getChatUserId(), chatRoomId: chatRoom.chatRoomId });
-        },
+  const pullMessages = async (rid: number, incremental = true) => {
+    const res: any = await apiChat.listMessages({
+      roomId: rid,
+      afterId: incremental ? lastIdRef.current : 0,
+      limit: 100,
     });
+    const rows = res?.data || [];
+    mergeMessages(rows);
+    await apiChat.markRead(rid);
+  };
 
-    /** 上传图片 */
-    const handleUpload = async (file: RcFile) => {
-        const isHeicFile = (file: RcFile) => {
-            const ext = file.name.split('.').pop()?.toLowerCase();
-            return file.type === 'image/heic' || file.type === 'image/heif' || ext === 'heic' || ext === 'heif';
-        };
-
-        const convertHeicToJpg = async (file: RcFile) => {
-            try {
-                const heic2any = (await import('heic2any')).default;
-                const blob = await heic2any({ blob: file, toType: 'image/jpeg', quality: 0.9 });
-                return new File([blob as Blob], file.name.replace(/\.(heic|heif)$/i, '.jpg'), { type: 'image/jpeg' }) as RcFile;
-            } catch (err) {
-                throw new Error(t('CustomerServiceChat.heicUnsupported'));
-            }
-        };
-
-        if (isHeicFile(file)) {
-            try {
-                file = await convertHeicToJpg(file);
-            } catch (err: any) {
-                console.error(err);
-                toast.warning(err.message || t('CustomerServiceChat.heicUploadFailed'));
-                return;
-            }
-        }
-        const formData = new FormData();
-        formData.append('upload_file', file);
-
-
-        try {
-            const res: any = await $post(uploadUrl, formData, {
-                isForm: false,
-                headers: { 'Content-Type': 'multipart/form-data' },
-            });
-
-            if (res.status == 0 && res.data?.url) {
-                await sendChat({
-                    userId: getChatUserId(),
-                    messageType: 2,
-                    chatRoomId: chatRoom.chatRoomId,
-                    messageContent: res.data.url,
-                });
-            }
-        } catch (error) {
-            console.error('上传错误：', error);
-        }
-    };
-
-    /** 文件选择 */
-    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0] as RcFile | undefined;
-        if (file) handleUpload(file);
-        e.target.value = "";
-    };
-
-    /** 发送文字消息 */
-    const handleSend = () => {
-        if (!message.trim()) return;
-        sendChat({
-            userId: getChatUserId(),
-            messageType: 1,
-            chatRoomId: chatRoom.chatRoomId,
-            messageContent: message,
-        });
-    };
-
-    /** 打开弹窗后第一次加载 + 开启轮询 */
-    useEffect(() => {
-        setInitialLoading(true);
-        $getChatRoom().then(res => {
-            if (res?.chatRoomId) {
-                getMessageData({ userId: getChatUserId(), chatRoomId: res.chatRoomId }).finally(() => setInitialLoading(false));
-
-                pollingRef.current = setInterval(() => {
-                    getMessageData({ userId: getChatUserId(), chatRoomId: res.chatRoomId });
-                }, 2000);
-            }
-        })
-        return () => {
-            if (pollingRef.current) clearInterval(pollingRef.current);
-        };
-    }, []);
-
-    /** 监听消息数据变化自动滚动到底部 */
-    useEffect(() => {
-        if (open && messageData?.length > prevMessagesRef.current) {
-            scrollToBottom();
-        }
-        prevMessagesRef.current = messageData?.length || 0;
-    }, [messageData]);
-    useEffect(() => {
-        return () => {
-            prevMessagesRef.current = 0
-        }
-    }, []);
-
-    /** 渲染文本消息，换行显示 */
-    const renderTextMessage = (content: string) =>
-        content.split("\n").map((line, i) => (
-            <React.Fragment key={i}>
-                {line}
-                <br />
-            </React.Fragment>
-        ));
-
-    const onOpenService = () => {
-        setOpen(true)
+  const init = async () => {
+    setLoading(true);
+    try {
+      const roomRes: any = await apiChat.initRoom();
+      const rid = Number(roomRes?.data?.roomId || 0);
+      if (!rid) return;
+      setRoomId(rid);
+      await pullMessages(rid, false);
+    } finally {
+      setLoading(false);
     }
-    /*   console.log(messageData) */
+  };
 
-    return (
-        <div className=" h-screen flex flex-col">
-            <AppNav title="客服" />
+  useEffect(() => {
+    init();
+  }, []);
 
-            {/* 顶部栏 */}
-            {/*       <div className="flex items-center justify-between bg-blue-600 text-white px-4 py-2">
-                    <div className="flex items-center space-x-2">
-                        <CustomerServiceOutlined />
-                        <span className="font-medium">{t('CustomerServiceChat.title')}</span>
-                    </div>
-            
-                </div> */}
+  useEffect(() => {
+    if (!roomId) return;
+    const timer = setInterval(() => {
+      pullMessages(roomId, true);
+    }, 2000);
+    return () => clearInterval(timer);
+  }, [roomId]);
 
-            {/* 聊天内容 */}
-            <div
-                ref={chatContainerRef}
-                className=" flex flex-col gap-3 overflow-y-auto px-3 py-4 flex-1 text-sm"
-            >
-                {initialLoading ? (
-                    <div className="flex justify-center items-center h-full">
-                        <Spin />
-                    </div>
-                ) : messageData?.length ? (
-                    messageData
-                        .sort((a: any, b: any) => a.createTime - b.createTime)
-                        .map((msg: any, index: number) => {
-                            const isSelf = msg.messageDirection == "0";
+  useEffect(() => {
+    if (sortedMessages.length) {
+      scrollBottom();
+    }
+  }, [sortedMessages.length]);
 
-                            const messageContent =
-                                msg.messageType == "1"
-                                    ? renderTextMessage(msg.messageContent)
-                                    : (
-                                        <img
-                                            src={msg.messageContent}
-                                            alt={t('CustomerServiceChat.imageAlt')}
-                                            className="rounded-xl max-w-[180px] cursor-pointer"
-                                            onClick={() => window.open(msg.messageContent)}
-                                        />
-                                    );
+  const sendMessage = async (messageType: number, messageContent: string) => {
+    if (!roomId || !messageContent) return;
+    setSending(true);
+    try {
+      const res: any = await apiChat.sendMessage({ roomId, messageType, messageContent });
+      const one = res?.data;
+      if (one) {
+        mergeMessages([one]);
+      }
+      if (messageType === 1) {
+        setText("");
+      }
+    } finally {
+      setSending(false);
+    }
+  };
 
-                            return isSelf ? (
-                                <div key={index} className="flex items-end justify-end">
-                                    <div className="flex flex-col items-end">
-                                        <div className={msg.messageType == "1" ? "px-3 py-2 rounded-2xl bg-blue-500 text-white" : ""}>
-                                            {messageContent}
-                                        </div>
-                                      {/*   {msg.messageType == "1" && (  )} */}
-                                            <div className="text-xs text-gray-500 mt-1 text-right flex ">
-                                                {getTimeAgo(msg.createTime)}  {msg.isRead ? <CheckIcon className="w-4 font-bold text-blue-500 ml-1" /> : <span />}
-                                            </div>
-                                      
-                                    </div>
-                                    <img
-                                        src={msg.headImg || 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/cn-2/user-default.jpg'}
-                                        alt="avatar"
-                                        className="w-8 h-8 rounded-full ml-2"
-                                    />
-                                </div>
-                            ) : (
-                                <div key={index} className="flex items-end justify-start">
-                                    <img
-                                        src={msg.headImg || 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/cn-2/user-default.jpg'}
-                                        alt="avatar"
-                                        className="w-8 h-8 rounded-full mr-2"
-                                    />
-                                    <div className="flex flex-col items-start">
-                                        <div className={msg.messageType == "1" ? "px-3 py-2 rounded-2xl  text-gray-800 shadow" : ""}>
-                                            {messageContent}
-                                        </div>
-                                      {/*   {msg.messageType == "1" && (  )} */}
-                                            <div className="text-xs text-gray-400 mt-1">
-                                                {getTimeAgo(msg.createTime)}
-                                            </div>
-                                      
-                                    </div>
-                                </div>
-                            );
-                        })
-                ) : (
-                    <div className="text-gray-400 text-center my-10">{t('CustomerServiceChat.noMessage')}</div>
-                )}
-            </div>
+  const onSendText = async () => {
+    const msg = text.trim();
+    if (!msg) return;
+    await sendMessage(1, msg);
+  };
 
-            {/* 输入区域 */}
-            <div className="flex items-end border-t  px-3 py-2 gap-2">
-                <div
-                    className="cursor-pointer text-gray-500 hover:text-blue-500 text-xl"
-                    onClick={() => fileInputRef.current?.click()}
-                >
-                    <PictureOutlined />
+  const uploadImage = async (file: RcFile) => {
+    const fd = new FormData();
+    fd.append("file", file);
+    const upRes: any = await $post("/api/file/upload", fd, {
+      toast: false,
+      headers: { "Content-Type": "multipart/form-data" },
+      isCheckToken: true,
+    });
+    const url = upRes?.data?.url || upRes?.data?.image || upRes?.data?.relativePath;
+    if (url) {
+      await sendMessage(2, url);
+    }
+  };
+
+  const onFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] as RcFile | undefined;
+    if (file) {
+      await uploadImage(file);
+    }
+    e.target.value = "";
+  };
+
+  return (
+    <main className="h-screen flex flex-col">
+      <AppNav title="在线客服" />
+
+      <div ref={chatRef} className="flex-1 overflow-y-auto px-3 py-4 flex flex-col gap-3">
+        {loading ? (
+          <div className="h-full flex items-center justify-center"><Spin /></div>
+        ) : sortedMessages.length === 0 ? (
+          <div className="text-center text-[#7990b2] mt-10">暂无消息</div>
+        ) : (
+          sortedMessages.map((msg) => {
+            const isSelf = !!msg.isSelf;
+            const isImage = Number(msg.messageType) === 2;
+            return (
+              <div key={msg.id} className={`flex ${isSelf ? "justify-end" : "justify-start"}`}>
+                <div className="max-w-[78%]">
+                  <div className={isSelf ? "rounded-2xl bg-[#1d63dd] text-white px-3 py-2" : "rounded-2xl bg-white text-[#203a64] px-3 py-2 border border-[#d7e5ff]"}>
+                    {isImage ? (
+                      <img src={msg.messageContent} alt="chat" className="rounded-xl max-w-[180px]" onClick={() => window.open(msg.messageContent)} />
+                    ) : (
+                      <span className="whitespace-pre-wrap break-all">{msg.messageContent}</span>
+                    )}
+                  </div>
+                  <div className={`text-[11px] mt-1 ${isSelf ? "text-right text-[#6784ad]" : "text-[#89a0c0]"}`}>
+                    {formatDate(msg.createTime)}
+                  </div>
                 </div>
+              </div>
+            );
+          })
+        )}
+      </div>
 
-                <input
-                    type="file"
-                    accept="image/*"
-                    ref={fileInputRef}
-                    onChange={handleFileChange}
-                    className="hidden"
-                />
+      <div className="border-t border-[#d9e6ff] px-3 py-2 flex items-end gap-2 bg-white">
+        <button className="text-xl text-[#5c7cab]" onClick={() => fileRef.current?.click()}>
+          <PictureOutlined />
+        </button>
+        <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={onFileChange} />
 
-                <Input.TextArea
-                    placeholder={t('CustomerServiceChat.inputPlaceholder')}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    autoSize={{ minRows: 1, maxRows: 4 }}
-                    className="flex-1 resize-none focus:shadow-none focus:ring-0"
-                    onPressEnter={(e) => {
-                        if (!e.shiftKey) {
-                            e.preventDefault();
-                            handleSend();
-                        }
-                    }}
-                />
+        <Input.TextArea
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          autoSize={{ minRows: 1, maxRows: 4 }}
+          placeholder="请输入消息"
+          className="flex-1"
+          onPressEnter={(e) => {
+            if (!e.shiftKey) {
+              e.preventDefault();
+              onSendText();
+            }
+          }}
+        />
 
-                <Button
-                    loading={loading}
-                    type="text"
-                    icon={<SendOutlined className="text-blue-500 text-xl" />}
-                    onClick={handleSend}
-                />
-            </div>
-        </div>
-    );
+        <Button type="text" loading={sending} icon={<SendOutlined className="text-[#1d63dd] text-xl" />} onClick={onSendText} />
+      </div>
+    </main>
+  );
 };
 
 export default Support;
+

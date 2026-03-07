@@ -51,7 +51,7 @@ const BottomNav: React.FC = () => {
                 const IconComp = isActive ? item.ActiveIcon : item.Icon;
                 return (
                   <div className="relative flex flex-col items-center justify-center">
-                    {isActive ? <span className="ky-nav-indicator" /> : <span className="h-[9px]" />}
+                    <span className="h-[9px]" />
                     <IconComp className="size-6" />
                     {!!item.count && (
                       <span className="absolute top-0 right-0 text-[10px] bg-red-500 text-white rounded-full px-1">

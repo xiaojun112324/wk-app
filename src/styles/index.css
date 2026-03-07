@@ -160,14 +160,6 @@
   transition: color 180ms ease;
 }
 
-.ky-nav-indicator {
-  width: 22px;
-  height: 2px;
-  border-radius: 2px;
-  margin: 0 auto 7px;
-  background: #1c4fb4;
-}
-
 .fade-stagger > * {
   animation: fade-up 0.38s ease both;
 }

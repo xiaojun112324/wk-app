@@ -5,18 +5,14 @@ import { useQuery } from '@/hooks/useQuery'
 import BigNumber from 'bignumber.js'
 import { clearToken, getToken } from '@/lib/token'
 
-/* =========================
- * 鏁版嵁缁撴瀯瀹氫箟
- * ========================= */
-
-// 鍗曚釜璧勪骇
+// User asset item
 export interface UserAssetItem {
     tokenName: string
     tokenLogoUrl: string
     userAmount: number
 }
 
-// 鐢ㄦ埛鍩虹淇℃伅
+// User basic info
 export interface UserInfo {
     userId: number
     agentId: number
@@ -24,7 +20,7 @@ export interface UserInfo {
     phone: string
     nickName?: string
     realName?: string
-    isActive: number //0 寰呰璇?1 寰呭鏍?2 璁よ瘉鎴愬姛 3 椹冲洖 
+    isActive: number // 0 pending, 1 reviewing, 2 passed, 3 rejected
     isLock: number
     regTime: number
     idCard: string
@@ -32,11 +28,10 @@ export interface UserInfo {
     img2Key: string
     authMsg: string
     avatar: string
-    username:string
-
+    username: string
 }
 
-// 璧勯噾姒傝
+// User amount info
 export interface UserAmountInfo {
     userAmt: number
     enableAmt: number
@@ -44,7 +39,6 @@ export interface UserAmountInfo {
     canWithdrawAmt: number
     tradingAmount: number
     totalMarkValue: number
-
     positionProfitAndLoss: number
     allProfitAndLose: number
     postion_value: number
@@ -52,7 +46,6 @@ export interface UserAmountInfo {
     positionRate: number
 }
 
-// Context 鏈€缁堢粨鏋?
 export interface UserContextValue {
     userInfo?: UserInfo
     amountInfo?: UserAmountInfo
@@ -61,10 +54,6 @@ export interface UserContextValue {
     loading: boolean
     refetchHandler?: () => void
 }
-
-/* =========================
- * 榛樿 Store
- * ========================= */
 
 const KEY = 'user'
 
@@ -77,21 +66,12 @@ const defaultStore: UserContextValue = {
     refetchHandler: undefined,
 }
 
-/* =========================
- * Provider
- * ========================= */
-
 export const connectUser = connectFactory(KEY, defaultStore)
 
-/* =========================
- * 鎺ュ彛鏁版嵁 鈫?Store 鏄犲皠
- * ========================= */
-
 const mapUserResponseToStore = (res: any): Partial<UserContextValue> => {
-
     return {
         userInfo: {
-            username:res.username,
+            username: res.username,
             userId: res.id,
             agentId: res.agentId,
             agentName: res.agentName,
@@ -115,26 +95,20 @@ const mapUserResponseToStore = (res: any): Partial<UserContextValue> => {
             canWithdrawAmt: Number(res.canWithdrawAmt ?? 0),
             tradingAmount: Number(res.tradingAmount ?? 0),
             totalMarkValue: Number(res.totalMarkValue ?? 0),
-      
             positionProfitAndLoss: Number(res.positionProfitAndLoss ?? 0),
             allProfitAndLose: Number(res.allProfitAndLose ?? 0),
             postion_value: Number(res.postion_value ?? 0),
             positionRate: Number(res.ositionRate ?? 0),
             userCNYTotal: new BigNumber(res.canWithdrawAmt ?? 0)
                 .plus(res.markValue ?? 0)
-                .decimalPlaces(2, BigNumber.ROUND_DOWN) // 鍏抽敭锛氱洿鎺ヨ垗鍘?
+                .decimalPlaces(2, BigNumber.ROUND_DOWN)
                 .toFixed(2)
         },
 
         assets: Array.isArray(res.userAsset) ? res.userAsset : [],
-
         unreadMessageCount: res.unreadMessageCount ?? 0,
     }
 }
-
-/* =========================
- * useUserContext
- * ========================= */
 
 export const useUserContext = () => {
     const { store, setStore } = useAppContext<UserContextValue>(KEY)
@@ -179,15 +153,9 @@ export const useUserContext = () => {
         }
     }
 
-    /**
-     * 閫€鍑虹櫥褰?
-     */
     const logout = () => {
-        // 娓呴櫎鏈湴 token / 鐧诲綍鎬?
         clearToken()
         localStorage.removeItem('refreshToken')
-        // 濡傛灉浣跨敤 cookie锛屼篃鍙互鍦ㄨ繖閲屾竻鐞?
-        // 閲嶇疆 Store
         setStore({
             ...defaultStore,
             loading: false,
@@ -200,6 +168,6 @@ export const useUserContext = () => {
         loading: store.loading || queryLoading,
         refresh: fetchUser,
         fetchUser,
-        logout, // 鏂板閫€鍑虹櫥褰?
+        logout,
     }
 }

@@ -20,5 +20,8 @@ export const ApiPub = {
     coinChart: async (params: { id?: number; symbol?: string; days?: number }) => {
         return await $get("/api/public/coin/chart", params, { toast: false });
     },
+    machineBuyConfig: async () => {
+        return await $get("/api/public/order/buy-config", {}, { toast: false, isCheckToken: false });
+    },
 
 };

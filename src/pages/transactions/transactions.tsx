@@ -4,11 +4,20 @@ import { useQuery } from "@/hooks/useQuery";
 import { useState } from "react";
 import { apiCash } from "@/apis/cash";
 
+const getBillSource = (txId?: string) => {
+    const val = String(txId || "").toUpperCase();
+    if (val.startsWith("MACHINE_BUY_P_") || val.startsWith("MACHINE_BUY_")) return "矿机购买";
+    if (val.startsWith("MACHINE_SELL_")) return "矿机卖出返还";
+    if (val.startsWith("MACHINE_CANCEL_")) return "矿机取消返还";
+    if (val.startsWith("MACHINE_DAILY_SETTLE_")) return "矿机每日收益结算";
+    return "-";
+};
+
 const Transactions = () => {
     const [tab, setTab] = useState(1);
 
     const { data: fundRows, refresh: refreshFund } = useQuery({
-        fetcher: () => apiCash.fundOrderList({ coin: "BTC" }),
+        fetcher: () => apiCash.fundOrderList({}),
     });
 
     const { data: rechargeRows, refresh: refreshRecharge } = useQuery({
@@ -45,15 +54,19 @@ const Transactions = () => {
                 {rows.map((item: any, idx: number) => (
                     <div key={item.id || idx} className="finance-list-row">
                         {tab === 1 && (
-                            <div className="flex justify-between">
-                                <span>{item.coinSymbol || "BTC"} / type {item.type}</span>
-                                <span className="font-semibold text-[#10418e]">{item.amount}</span>
+                            <div className="finance-kv">
+                                <div className="flex justify-between">
+                                    <span>{item.coinSymbol || "-"} / {item.type === 1 ? "收入" : item.type === 2 ? "支出" : "-"}</span>
+                                    <span className="font-semibold text-[#10418e]">{item.amount}</span>
+                                </div>
+                                <div>来源: {getBillSource(item.txId)}</div>
+                                <div>时间: {item.createTime || "-"}</div>
                             </div>
                         )}
                         {tab === 4 && (
                             <div className="finance-kv">
                                 <div>资产网络: {item.asset}/{item.network}</div>
-                                <div>金额(CNY): {item.amountCny}</div>
+                                <div>数量: {item.amount ?? item.amountCny}</div>
                                 <div>状态: {item.status}</div>
                                 <div>时间: {item.createTime || "-"}</div>
                             </div>
@@ -61,7 +74,7 @@ const Transactions = () => {
                         {tab === 5 && (
                             <div className="finance-kv">
                                 <div>资产网络: {item.asset}/{item.network}</div>
-                                <div>金额(CNY): {item.amountCny}</div>
+                                <div>数量: {item.amount ?? item.amountCny}</div>
                                 <div>状态: {item.status}</div>
                                 <div>时间: {item.createTime || "-"}</div>
                             </div>
