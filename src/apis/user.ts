@@ -15,7 +15,7 @@ export const apiUser = {
 
     },
     updateUserPassword: async (params: any) => {
-        return await $get("/user/updatePwd.do", params);
+        return await $post("/api/auth/password/login/update", params);
 
     },
 
@@ -29,11 +29,11 @@ export const apiUser = {
     },
 
     updatewithdrawalpwd: async (params: any) => {
-        return await $post("/user/updatewithdrawalpwd.do", params);
+        return await $post("/api/auth/password/withdraw/update", params);
 
     },
-    logoutUser: async (params: any) => {
-        return await $post("/api/customer/user/logoutUser", params);
+    logoutUser: async (params?: any) => {
+        return await $post("/api/auth/logout", params || {});
 
     },
     withdraw: async (params: any) => {
@@ -51,6 +51,9 @@ export const apiUser = {
 
     getWalletAccount: async () => {
         return await $get("/api/wallet/account", {}, { toast: false });
+    },
+    getWithdrawPasswordStatus: async () => {
+        return await $get("/api/auth/password/withdraw/status", {}, { toast: false });
     },
     getRechargeAddress: async () => {
         return await $get("/api/wallet/recharge/address", {}, { toast: false });

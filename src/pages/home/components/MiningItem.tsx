@@ -8,6 +8,17 @@ interface IProps {
 }
 
 const MiningItem: React.FC<IProps> = ({ miningItem, className, onClick }) => {
+  const hashUnits = ["H", "K", "M", "G", "T", "P", "E"];
+  const hashPowerMap: Record<string, number> = {
+    H: 1,
+    K: 1e3,
+    M: 1e6,
+    G: 1e9,
+    T: 1e12,
+    P: 1e15,
+    E: 1e18,
+  };
+
   const formatCny = (value: any) => {
     if (value === null || value === undefined || value === "") return "-";
     const n = Number(value);
@@ -16,9 +27,25 @@ const MiningItem: React.FC<IProps> = ({ miningItem, className, onClick }) => {
 
   const perPRevenueCny = (() => {
     const price = Number(miningItem?.priceCny || 0);
-    const dailyCoin = Number(miningItem?.dailyRevenuePerP || 0);
+    const dailyPerP = Number(miningItem?.dailyRevenuePerP || 0);
+    const dailyPerT = Number(miningItem?.dailyRevenuePerT || 0);
+    const dailyCoin = dailyPerP > 0 ? dailyPerP : dailyPerT > 0 ? dailyPerT * 1000 : 0;
     if (!Number.isFinite(price) || !Number.isFinite(dailyCoin)) return 0;
     return Number((price * dailyCoin).toFixed(8));
+  })();
+
+  const dynamicRevenue = (() => {
+    const text = String(miningItem?.networkHashrate || "");
+    const matched = text.match(/([kKmMgGtTpPeE]?)[hH]\s*\/?\s*[sS]/);
+    const unit = ((matched?.[1] || "H").toUpperCase() || "H");
+    const index = Math.max(0, hashUnits.indexOf(unit));
+    const targetUnit = hashUnits[Math.max(0, index - 1)];
+    const factor = (hashPowerMap[targetUnit] || 1) / (hashPowerMap.P || 1);
+    const value = Number((perPRevenueCny * factor).toFixed(8));
+    return {
+      unit: targetUnit,
+      value,
+    };
   })();
 
   return (
@@ -37,7 +64,7 @@ const MiningItem: React.FC<IProps> = ({ miningItem, className, onClick }) => {
         </div>
 
         <div className="text-right shrink-0">
-          <div className="text-[12px] text-[#5d7ca8]">{"\u6bcfP\u65e5\u6536\u76ca"}: {formatCny(perPRevenueCny)}</div>
+          <div className="text-[12px] text-[#5d7ca8]">日收益率: {formatCny(dynamicRevenue.value)}/{dynamicRevenue.unit}</div>
           <div className="text-[12px] text-[#5d7ca8]">{"\u5e01\u4ef7"}: {formatCny(miningItem?.priceCny)}</div>
         </div>
       </div>

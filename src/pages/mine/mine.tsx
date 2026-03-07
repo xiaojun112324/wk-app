@@ -1,5 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import { ShieldCheck } from "lucide-react";
+import { Modal } from "antd";
 import { toast } from "sonner";
 import { useQuery } from "@/hooks/useQuery";
 import { apiUser } from "@/apis/user";
@@ -25,6 +26,23 @@ export default function Mine() {
     } catch {
       toast.error(`${label}复制失败`);
     }
+  };
+
+  const onLogout = () => {
+    Modal.confirm({
+      title: "确定退出登录？",
+      okText: "确定",
+      cancelText: "取消",
+      onOk: async () => {
+        try {
+          await apiUser.logoutUser({});
+        } catch {
+          // JWT 无状态场景下，本地登出依然生效
+        } finally {
+          userContext.logout();
+        }
+      },
+    });
   };
 
   return (
@@ -70,13 +88,24 @@ export default function Mine() {
         </div>
       </section>
 
-      <section className="mt-3 grid grid-cols-2 gap-3 text-xs">
-        <Link className="finance-btn-primary rounded-xl px-3 py-2 text-center" to="/deposit">提交充值</Link>
-        <Link className="finance-btn-primary rounded-xl px-3 py-2 text-center" to="/withdraw">提交提现</Link>
-        <Link className="glass-card rounded-xl px-3 py-2 text-center font-semibold text-[#1c4d9d]" to="/transactions">资金记录</Link>
-        <Link className="glass-card rounded-xl px-3 py-2 text-center font-semibold text-[#1c4d9d]" to="/position">矿机订单</Link>
+      <section className="mt-3 space-y-3 text-sm">
+        <div className="grid grid-cols-2 gap-3">
+          <Link className="finance-btn-primary rounded-xl px-3 py-3 text-center font-semibold" to="/deposit">充值</Link>
+          <Link className="finance-btn-primary rounded-xl px-3 py-3 text-center font-semibold" to="/withdraw">提现</Link>
+        </div>
+        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/transactions">资金记录</Link>
+        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/setting/login-password">修改登录密码</Link>
+        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/setting/pay-password">修改提现密码</Link>
+        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/support">联系客服</Link>
+        <div className="h-px bg-[#dbe5f6] my-1" />
+        <button
+          type="button"
+          onClick={onLogout}
+          className="finance-btn-primary rounded-xl px-3 py-3 text-center font-semibold text-white block w-full"
+        >
+          退出登录
+        </button>
       </section>
     </div>
   );
 }
-

@@ -84,25 +84,14 @@ const Follow = () => {
       </section>
 
       <section className="glass-card p-4 mt-3">
-        <div className="text-base font-extrabold finance-title mb-3">{"\u6536\u76ca\u603b\u89c8 - \u6316\u77ff\u4e0e\u8fd4\u5229"}</div>
-        <div className="finance-kv">
-          <div>{"\u603b\u6536\u76ca"}: {financeAccount?.totalRevenue ?? 0}</div>
-          <div>{"\u603b\u6536\u76ca(\u4eba\u6c11\u5e01)"}: {"\uffe5"}{fmt(financeAccount?.totalRevenueCny, 2)}</div>
-          <div>{"\u603b\u652f\u51fa"}: {financeAccount?.totalPaid ?? 0}</div>
-          <div>{"\u8d26\u6237\u4f59\u989d"}: {financeAccount?.balance ?? 0}</div>
-          <div>{"\u5e01\u79cd"}: {financeAccount?.coinSymbol || "BTC"}</div>
-        </div>
-      </section>
-
-      <section className="glass-card p-4 mt-3">
         <div className="text-base font-extrabold finance-title mb-2">{"\u9080\u8bf7\u8fd4\u5229"}</div>
         <div className="finance-kv">
           <div>{"\u603b\u9080\u8bf7\u4eba\u6570"}: {inviteSummary?.totalInviteCount ?? 0}</div>
           <div>{"\u4e00\u7ea7/\u4e8c\u7ea7"}: {inviteSummary?.level1Count ?? 0} / {inviteSummary?.level2Count ?? 0}</div>
           <div>{"\u4e00\u7ea7\u6bd4\u4f8b"}: {inviteSummary?.level1Rate ?? 0}</div>
           <div>{"\u4e8c\u7ea7\u6bd4\u4f8b"}: {inviteSummary?.level2Rate ?? 0}</div>
-          <div>{"\u603b\u8fd4\u5229(CNY)"}: {inviteSummary?.totalRebateCny ?? 0}</div>
-          <div>{"\u4e0b\u7ea7\u603b\u5145\u503c(CNY)"}: {inviteSummary?.totalSourceRechargeCny ?? 0}</div>
+          <div>{"\u603b\u8fd4\u5229(USDT)"}: {fmt(inviteSummary?.totalRebateUsdt ?? inviteSummary?.totalRebateCny ?? 0)}</div>
+          <div>{"\u4e0b\u7ea7\u603b\u5145\u503c(USDT)"}: {fmt(inviteSummary?.totalSourceRechargeUsdt ?? inviteSummary?.totalSourceRechargeCny ?? 0)}</div>
         </div>
       </section>
 

@@ -6,13 +6,21 @@ import { useQuery } from "@/hooks/useQuery";
 import { apiUser } from "@/apis/user";
 import { toast } from "sonner";
 import AppNav from "@/components/AppNav";
+import { Link } from "react-router-dom";
 
 export default function Withdraw() {
   const [form] = Form.useForm();
   const asset = Form.useWatch("asset", form) || "USDT";
   const { data: wallet } = useQuery({ fetcher: apiUser.getWalletAccount });
+  const { data: withdrawPwdStatus } = useQuery({ fetcher: apiUser.getWithdrawPasswordStatus });
 
   useEffect(() => {
+    form.setFieldsValue({
+      amount: undefined,
+      receiveAddress: undefined,
+      withdrawPassword: undefined,
+    });
+
     if (asset === "BTC") {
       form.setFieldValue("network", "BTC");
       return;
@@ -40,6 +48,9 @@ export default function Withdraw() {
     BTC: pickBalance(["btcBalance", "balanceBtc", "btc", "btcAmount"]),
   };
   const currentBalance = balanceMap[asset] ?? 0;
+  const fillAllAmount = () => {
+    form.setFieldValue("amount", `${currentBalance ?? 0}`);
+  };
 
   const { mutate: submitWithdraw, loading } = useMutation({
     fetcher: apiUser.withdraw,
@@ -53,7 +64,23 @@ export default function Withdraw() {
     <section className="px-3 pb-8 fade-stagger">
       <AppNav title="提交提现" />
       <div className="glass-card px-4 py-4 mt-3">
-        <Form form={form} layout="vertical" onFinish={(values) => submitWithdraw(values)}>
+        {!withdrawPwdStatus?.hasWithdrawPassword ? (
+          <div className="mb-3 rounded-lg border border-[#ffd6db] bg-[#fff2f4] px-3 py-2 text-xs text-[#c0354f]">
+            未设置提现密码，暂时不能提现。请先
+            <Link className="ml-1 text-[#1a57aa] font-semibold" to="/setting/pay-password">去设置提现密码</Link>
+          </div>
+        ) : null}
+        <Form
+          form={form}
+          layout="vertical"
+          onFinish={(values) => {
+            if (!withdrawPwdStatus?.hasWithdrawPassword) {
+              toast.warning("请先设置提现密码");
+              return;
+            }
+            submitWithdraw(values);
+          }}
+        >
           <Form.Item label="资产" name="asset" initialValue="USDT" rules={[{ required: true }]}>
             <Select
               options={[
@@ -81,11 +108,26 @@ export default function Withdraw() {
           </Form.Item>
 
           <Form.Item label="提现数量" name="amount" rules={[{ required: true, message: "请输入数量" }]}>
-            <Input type="number" placeholder="请输入提现数量" />
+            <Input
+              type="number"
+              placeholder="请输入提现数量"
+              suffix={
+                <span
+                  className="text-[#1a57aa] font-semibold cursor-pointer select-none"
+                  onClick={fillAllAmount}
+                >
+                  全部
+                </span>
+              }
+            />
           </Form.Item>
 
           <Form.Item label="收款地址" name="receiveAddress" rules={[{ required: true, message: "请输入收款地址" }]}>
             <Input placeholder="请输入收款地址" />
+          </Form.Item>
+
+          <Form.Item label="提现密码" name="withdrawPassword" rules={[{ required: true, message: "请输入提现密码" }]}>
+            <Input.Password placeholder="请输入提现密码" />
           </Form.Item>
 
           <Button type="submit" className="w-full finance-btn-primary" loading={loading}>

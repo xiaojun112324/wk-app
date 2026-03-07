@@ -1,85 +1,65 @@
-import { Form, Input } from "antd";
-import { Button } from "@/components/Button";
-import { Link } from "react-router-dom";
-import { useMutation } from "@/hooks/useMutation";
-import { apiUser } from "@/apis/user";
-import { toast } from "sonner";
-import { useTranslation } from "react-i18next";
+﻿import { Form, Input } from "antd";
 import AppNav from "@/components/AppNav";
+import { Button } from "@/components/Button";
+import { apiUser } from "@/apis/user";
+import { useMutation } from "@/hooks/useMutation";
+import { toast } from "sonner";
 
 export default function LoginPassword() {
-    const [form] = Form.useForm();
-    const { t } = useTranslation();
+  const [form] = Form.useForm();
 
-    const { mutate: updateUserPassword, loading } = useMutation({
-        fetcher: apiUser.updateUserPassword,
-        onSuccess: () => {
-            toast.success(t("LoginPassword.success"));
-            form.resetFields(); // 成功后清空表单
-        },
-    });
+  const { mutate, loading } = useMutation({
+    fetcher: apiUser.updateUserPassword,
+    onSuccess: () => {
+      toast.success("登录密码修改成功");
+      form.resetFields();
+    },
+  });
 
-    const handleSubmit = (values: any) => {
-        console.log("表单提交:", values);
-        updateUserPassword({
-            oldPassword: values.oldPassword,
-            newPassword: values.newPassword,
-            passwordType: 0,
-        });
-    };
+  return (
+    <main>
+      <AppNav title="修改登录密码" />
+      <div className="px-5 mt-6">
+        <Form form={form} layout="vertical" onFinish={(values) => mutate(values)}>
+          <Form.Item label="旧密码" name="oldPassword" rules={[{ required: true, message: "请输入旧密码" }]}>
+            <Input.Password placeholder="请输入旧密码" />
+          </Form.Item>
 
-    return (
-        <main className="">
-            <AppNav title="修改登录密码" />
+          <Form.Item
+            label="新密码"
+            name="newPassword"
+            rules={[
+              { required: true, message: "请输入新密码" },
+              { min: 6, message: "新密码至少 6 位" },
+            ]}
+          >
+            <Input.Password placeholder="请输入新密码" />
+          </Form.Item>
 
+          <Form.Item
+            label="确认新密码"
+            name="confirmPassword"
+            dependencies={["newPassword"]}
+            rules={[
+              { required: true, message: "请再次输入新密码" },
+              ({ getFieldValue }) => ({
+                validator(_, value) {
+                  if (!value || getFieldValue("newPassword") === value) {
+                    return Promise.resolve();
+                  }
+                  return Promise.reject(new Error("两次输入的新密码不一致"));
+                },
+              }),
+            ]}
+          >
+            <Input.Password placeholder="请再次输入新密码" />
+          </Form.Item>
 
-            <div className="mt-6 lg:mt-0 w-full  px-5">
-                <Form form={form} layout="vertical" onFinish={handleSubmit}>
-                    <Form.Item
-                        label={t("LoginPassword.oldPassword")}
-                        name="oldPassword"
-                        rules={[{ required: true, message: t("LoginPassword.enterOldPassword") }]}
-                    >
-                        <Input.Password placeholder={t("LoginPassword.enterOldPassword")} />
-                    </Form.Item>
-
-                    <Form.Item
-                        label={t("LoginPassword.newPassword")}
-                        name="newPassword"
-                        rules={[
-                            { required: true, message: t("LoginPassword.enterNewPassword") },
-                            { min: 6, message: t("LoginPassword.passwordMinLength") },
-                        ]}
-                    >
-                        <Input.Password placeholder={t("LoginPassword.enterNewPassword")} />
-                    </Form.Item>
-
-                    <Form.Item
-                        label={t("LoginPassword.confirmPassword")}
-                        name="confirmPassword"
-                        dependencies={['newPassword']}
-                        rules={[
-                            { required: true, message: t("LoginPassword.confirmPasswordMsg") },
-                            ({ getFieldValue }) => ({
-                                validator(_, value) {
-                                    if (!value || getFieldValue('newPassword') === value) {
-                                        return Promise.resolve();
-                                    }
-                                    return Promise.reject(new Error(t("LoginPassword.passwordMismatch")));
-                                },
-                            }),
-                        ]}
-                    >
-                        <Input.Password placeholder={t("LoginPassword.confirmPasswordMsg")} />
-                    </Form.Item>
-
-                    <Form.Item>
-                        <Button type="submit" className="w-full" loading={loading}>
-                            {t("LoginPassword.submit")}
-                        </Button>
-                    </Form.Item>
-                </Form>
-            </div>
-        </main>
-    );
+          <Button type="submit" className="w-full !text-white" loading={loading}>
+            提交
+          </Button>
+        </Form>
+      </div>
+    </main>
+  );
 }

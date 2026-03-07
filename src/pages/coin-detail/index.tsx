@@ -1,5 +1,6 @@
 ﻿import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "sonner";
 import AppNav from "@/components/AppNav";
 import { useQuery } from "@/hooks/useQuery";
 import { ApiPub } from "@/apis/public";
@@ -57,13 +58,16 @@ const CoinDetail = () => {
 
   const riseDownClass = Number(coin?.priceChange24h ?? 0) >= 0 ? "text-[#0f9f64]" : "text-[#cf3f56]";
   const perPRevenueCny = useMemo(() => calcPerPRevenueCny(coin), [coin?.priceCny, coin?.dailyRevenuePerP]);
+  const canBuy = useMemo(() => String(coin?.symbol || "").toUpperCase() === "BTC", [coin?.symbol]);
 
   useEffect(() => {
     const symbol = coin?.symbol;
     if (!symbol) return;
-    ApiFavorite.check(symbol).then((res: any) => {
-      setFavorite(!!res?.data?.favorite);
-    }).catch(() => {});
+    ApiFavorite.check(symbol)
+      .then((res: any) => {
+        setFavorite(!!res?.data?.favorite);
+      })
+      .catch(() => {});
   }, [coin?.symbol]);
 
   const toggleFavorite = async () => {
@@ -116,28 +120,16 @@ const CoinDetail = () => {
       </section>
 
       <section className="mt-3 flex gap-2">
-        <button
-          className={`px-3 py-1.5 rounded-lg border text-xs ${days === 7 ? "finance-btn-primary" : "finance-btn-ghost"}`}
-          onClick={() => setDays(7)}
-        >
+        <button className={`px-3 py-1.5 rounded-lg border text-xs ${days === 7 ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setDays(7)}>
           7天走势
         </button>
-        <button
-          className={`px-3 py-1.5 rounded-lg border text-xs ${days === 30 ? "finance-btn-primary" : "finance-btn-ghost"}`}
-          onClick={() => setDays(30)}
-        >
+        <button className={`px-3 py-1.5 rounded-lg border text-xs ${days === 30 ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setDays(30)}>
           30天走势
         </button>
-        <button
-          className={`px-3 py-1.5 rounded-lg border text-xs ${days === 180 ? "finance-btn-primary" : "finance-btn-ghost"}`}
-          onClick={() => setDays(180)}
-        >
+        <button className={`px-3 py-1.5 rounded-lg border text-xs ${days === 180 ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setDays(180)}>
           6月走势
         </button>
-        <button
-          className={`px-3 py-1.5 rounded-lg border text-xs ${days === 365 ? "finance-btn-primary" : "finance-btn-ghost"}`}
-          onClick={() => setDays(365)}
-        >
+        <button className={`px-3 py-1.5 rounded-lg border text-xs ${days === 365 ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setDays(365)}>
           1年走势
         </button>
       </section>
@@ -160,8 +152,17 @@ const CoinDetail = () => {
 
       <section className="glass-card mt-3 p-4">
         <div className="font-bold finance-title mb-3">购买</div>
-        <div className="text-xs text-[#6a7f9f] mb-3">点击后进入购买详情页，按 P 数量提交订单。</div>
-        <button className="finance-btn-primary w-full py-2.5 rounded-xl" onClick={() => navigate(`/coin-detail/${coinId}/buy`)}>
+        <div className="text-xs text-[#6a7f9f] mb-3">点击后进入购买详情页</div>
+        <button
+          className="finance-btn-primary w-full py-2.5 rounded-xl"
+          onClick={() => {
+            if (!canBuy) {
+              toast.warning("暂未开通此矿池");
+              return;
+            }
+            navigate(`/coin-detail/${coinId}/buy`);
+          }}
+        >
           立即购买
         </button>
       </section>
@@ -170,4 +171,3 @@ const CoinDetail = () => {
 };
 
 export default CoinDetail;
-

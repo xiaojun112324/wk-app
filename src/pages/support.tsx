@@ -1,5 +1,5 @@
 ﻿import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Button, Input, Spin } from "antd";
+import { Input, Spin } from "antd";
 import { SendOutlined, PictureOutlined } from "@ant-design/icons";
 import type { RcFile } from "antd/es/upload/interface";
 import AppNav from "@/components/AppNav";
@@ -13,8 +13,10 @@ const Support: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [sending, setSending] = useState(false);
   const [text, setText] = useState("");
+  const [keyboardInset, setKeyboardInset] = useState(0);
   const fileRef = useRef<HTMLInputElement | null>(null);
   const chatRef = useRef<HTMLDivElement | null>(null);
+  const bottomRef = useRef<HTMLDivElement | null>(null);
   const lastIdRef = useRef<number>(0);
 
   const sortedMessages = useMemo(() => {
@@ -25,10 +27,7 @@ const Support: React.FC = () => {
 
   const scrollBottom = () => {
     requestAnimationFrame(() => {
-      chatRef.current?.scrollTo({
-        top: chatRef.current.scrollHeight + 100,
-        behavior: "smooth",
-      });
+      bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
     });
   };
 
@@ -75,6 +74,30 @@ const Support: React.FC = () => {
 
   useEffect(() => {
     init();
+  }, []);
+
+  useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, []);
+
+  useEffect(() => {
+    const vv = window.visualViewport;
+    if (!vv) return;
+    const updateKeyboardInset = () => {
+      const inset = Math.max(0, window.innerHeight - vv.height - vv.offsetTop);
+      setKeyboardInset(Math.round(inset));
+    };
+    updateKeyboardInset();
+    vv.addEventListener("resize", updateKeyboardInset);
+    vv.addEventListener("scroll", updateKeyboardInset);
+    return () => {
+      vv.removeEventListener("resize", updateKeyboardInset);
+      vv.removeEventListener("scroll", updateKeyboardInset);
+    };
   }, []);
 
   useEffect(() => {
@@ -137,10 +160,14 @@ const Support: React.FC = () => {
   };
 
   return (
-    <main className="h-screen flex flex-col">
+    <main className="fixed inset-0 z-40 h-[100dvh] overflow-hidden flex flex-col bg-[#f4f8ff]">
       <AppNav title="在线客服" />
 
-      <div ref={chatRef} className="flex-1 overflow-y-auto px-3 py-4 flex flex-col gap-3">
+      <div
+        ref={chatRef}
+        className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-3 pt-2 flex flex-col gap-3"
+        style={{ paddingBottom: `${12 + keyboardInset}px` }}
+      >
         {loading ? (
           <div className="h-full flex items-center justify-center"><Spin /></div>
         ) : sortedMessages.length === 0 ? (
@@ -167,11 +194,20 @@ const Support: React.FC = () => {
             );
           })
         )}
+        <div ref={bottomRef} />
       </div>
 
-      <div className="border-t border-[#d9e6ff] px-3 py-2 flex items-end gap-2 bg-white">
-        <button className="text-xl text-[#5c7cab]" onClick={() => fileRef.current?.click()}>
-          <PictureOutlined />
+      <div
+        className="border-t border-[#d9e6ff] px-3 py-3 flex items-end gap-2 bg-[linear-gradient(180deg,#ffffff_0%,#f7fbff_100%)]"
+        style={{ marginBottom: keyboardInset ? `${keyboardInset}px` : "0px" }}
+      >
+        <button
+          className="h-10 px-3 rounded-xl border border-[#cfe0fb] bg-white text-[#2a66d9] shadow-[0_6px_14px_rgba(39,99,206,0.12)] flex items-center gap-1.5 hover:shadow-[0_10px_20px_rgba(39,99,206,0.18)] transition"
+          onClick={() => fileRef.current?.click()}
+          type="button"
+        >
+          <PictureOutlined className="text-base" />
+          <span className="text-xs font-semibold">图片</span>
         </button>
         <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={onFileChange} />
 
@@ -181,6 +217,7 @@ const Support: React.FC = () => {
           autoSize={{ minRows: 1, maxRows: 4 }}
           placeholder="请输入消息"
           className="flex-1"
+          onFocus={() => setTimeout(scrollBottom, 120)}
           onPressEnter={(e) => {
             if (!e.shiftKey) {
               e.preventDefault();
@@ -189,7 +226,17 @@ const Support: React.FC = () => {
           }}
         />
 
-        <Button type="text" loading={sending} icon={<SendOutlined className="text-[#1d63dd] text-xl" />} onClick={onSendText} />
+        <button
+          type="button"
+          onClick={onSendText}
+          disabled={sending || !text.trim()}
+          className="h-10 px-4 rounded-xl text-white text-sm font-semibold bg-gradient-to-r from-[#1d63dd] to-[#3e8bff] shadow-[0_8px_18px_rgba(29,99,221,0.32)] disabled:opacity-55 disabled:shadow-none transition"
+        >
+          <span className="inline-flex items-center gap-1.5 text-white">
+            <SendOutlined className="!text-white" />
+            发送
+          </span>
+        </button>
       </div>
     </main>
   );

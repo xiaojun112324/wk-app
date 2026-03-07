@@ -19,6 +19,7 @@ const fmtU = (v: any, digits = 4) => {
   const n = Number(v || 0);
   return Number.isFinite(n) ? n.toFixed(digits) : "0.0000";
 };
+
 const fmtNum = (v: any, digits = 8) => {
   const n = Number(v || 0);
   if (!Number.isFinite(n)) return "0";
@@ -69,11 +70,13 @@ const CoinBuyDetail = () => {
 
   const pricePerPUsd = useMemo(() => Number(buyConfig?.pricePerPUsd || 0), [buyConfig]);
   const perPRevenueCny = useMemo(() => calcPerPRevenueCny(coin), [coin?.priceCny, coin?.dailyRevenuePerP]);
+  const isBtc = useMemo(() => String(coin?.symbol || "").toUpperCase() === "BTC", [coin?.symbol]);
 
   const totalAmountUsd = useMemo(() => {
     if (!pNum || !pricePerPUsd) return 0;
     return Number((pNum * pricePerPUsd).toFixed(8));
   }, [pNum, pricePerPUsd]);
+
   const dailyRevenueApprox = useMemo(() => {
     if (!pNum || !perPRevenueCny) return 0;
     return Number((pNum * perPRevenueCny).toFixed(8));
@@ -101,8 +104,8 @@ const CoinBuyDetail = () => {
   });
 
   const canSubmit = useMemo(() => {
-    return !!coin?.symbol && pNum > 0 && pricePerPUsd > 0 && !insufficient;
-  }, [coin?.symbol, pNum, pricePerPUsd, insufficient]);
+    return !!coin?.symbol && isBtc && pNum > 0 && pricePerPUsd > 0 && !insufficient;
+  }, [coin?.symbol, isBtc, pNum, pricePerPUsd, insufficient]);
 
   return (
     <main className="pb-10 px-3 text-sm fade-stagger">
@@ -168,6 +171,10 @@ const CoinBuyDetail = () => {
             className="finance-btn-primary w-full py-2.5 rounded-xl"
             disabled={!canSubmit || buying}
             onClick={() => {
+              if (!isBtc) {
+                toast.warning("暂未开通此矿池");
+                return;
+              }
               if (!pNum) {
                 toast.warning("请输入大于 0 的 P 数量");
                 return;
