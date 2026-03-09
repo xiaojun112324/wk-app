@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
+import { Activity } from "lucide-react";
 import { Modal, Select } from "antd";
 import { toast } from "sonner";
 import { useQuery } from "@/hooks/useQuery";
@@ -124,6 +125,21 @@ const StockQuotes = () => {
 
   return (
     <main className="pb-10 text-sm px-3 fade-stagger">
+      <section className="mt-3 rounded-2xl border border-[#d8e7ff] bg-gradient-to-br from-[#f3f8ff] via-[#edf5ff] to-[#e6f0ff] px-4 py-3 shadow-[0_10px_24px_rgba(33,91,168,0.12)]">
+        <div className="flex items-center justify-between gap-3">
+          <div className="min-w-0">
+            <div className="text-[18px] font-extrabold text-[#163a68] leading-none">算力面板</div>
+            <div className="text-[12px] text-[#5f7faa] mt-1">矿机状态、收益与可提取资产总览</div>
+          </div>
+          <div className="size-10 shrink-0 rounded-xl bg-white/85 border border-[#cfe0fb] flex items-center justify-center">
+            <Activity size={18} className="text-[#255cae]" />
+          </div>
+        </div>
+        <div className="mt-2.5 flex items-center justify-between gap-2 text-[11px] text-[#5f7faa]">
+          <span>总矿机 {overview?.totalWorkers ?? workerStats?.total ?? 0} 台</span>
+          <span className="px-2 py-0.5 rounded-full bg-white/80 border border-[#d7e5fb] text-[#3e6494]">实时数据同步中</span>
+        </div>
+      </section>
       <section className="glass-card p-4 mt-3">
         <div className="text-base font-extrabold finance-title mb-3">矿机面板</div>
         <div className="finance-kv">
@@ -294,3 +310,5 @@ const StockQuotes = () => {
 };
 
 export default StockQuotes;
+
+

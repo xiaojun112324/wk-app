@@ -1,5 +1,6 @@
 ﻿import { Link } from "react-router-dom";
 import {
+  AlertCircle,
   ArrowDownUp,
   CheckCircle2,
   ChevronRight,
@@ -9,6 +10,7 @@ import {
   MapPin,
   ReceiptText,
   ShieldCheck,
+  UserRound,
 } from "lucide-react";
 import { Modal } from "antd";
 import { toast } from "sonner";
@@ -22,10 +24,25 @@ export default function Mine() {
   const { userInfo } = userContext.store;
 
   const { data: me } = useQuery({ fetcher: apiUser.selectUserBase, params: {} });
+  const {
+    data: fundPwdStatus,
+    initLoading: fundPwdInitLoading,
+    loading: fundPwdLoading,
+  } = useQuery({ fetcher: apiUser.getWithdrawPasswordStatus });
+  const {
+    data: addressRows,
+    res: addressRes,
+    initLoading: addressInitLoading,
+    loading: addressLoading,
+  } = useQuery({ fetcher: apiUser.getReceiveAddressList });
 
   const userId = me?.id ?? userInfo?.userId ?? "-";
   const inviteCode = me?.inviteCode || "-";
   const email = me?.email || "-";
+  const fundPwdReady = !fundPwdInitLoading && !fundPwdLoading;
+  const hasFundPassword = !!fundPwdStatus?.hasWithdrawPassword;
+  const addressReady = !addressInitLoading && !addressLoading && Number((addressRes as any)?.code) === 200;
+  const hasReceiveAddress = Array.isArray(addressRows) && addressRows.length > 0;
 
   const onCopy = async (value: string | number, label: string) => {
     const text = String(value || "").trim();
@@ -57,6 +74,17 @@ export default function Mine() {
 
   return (
     <div className="text-sm pb-8 px-3 fade-stagger">
+      <section className="mt-3 rounded-2xl border border-[#d8e7ff] bg-gradient-to-br from-[#f3f8ff] via-[#edf5ff] to-[#e6f0ff] px-4 py-3 shadow-[0_10px_24px_rgba(33,91,168,0.12)]">
+        <div className="flex items-center justify-between gap-3">
+          <div className="min-w-0">
+            <div className="text-[18px] font-extrabold text-[#163a68] leading-none">我的</div>
+            <div className="text-[12px] text-[#5f7faa] mt-1">账户信息、安全设置与常用功能</div>
+          </div>
+          <div className="size-10 shrink-0 rounded-xl bg-white/85 border border-[#cfe0fb] flex items-center justify-center">
+            <UserRound size={18} className="text-[#255cae]" />
+          </div>
+        </div>
+      </section>
       <section className="glass-card px-4 py-4 mt-3">
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0 flex-1">
@@ -149,14 +177,20 @@ export default function Mine() {
               <LockKeyhole size={16} />
               <span>资金密码</span>
             </div>
-            <ChevronRight size={16} className="text-[#8ea0b8]" />
+            <div className="flex items-center gap-1.5">
+              {fundPwdReady && !hasFundPassword ? <AlertCircle size={16} className="text-[#f59e0b]" /> : null}
+              <ChevronRight size={16} className="text-[#8ea0b8]" />
+            </div>
           </Link>
           <Link className="px-3 py-3 flex items-center justify-between text-[#24364f]" to="/receive-address">
             <div className="flex items-center gap-2 font-semibold">
               <MapPin size={16} />
               <span>收款地址绑定</span>
             </div>
-            <ChevronRight size={16} className="text-[#8ea0b8]" />
+            <div className="flex items-center gap-1.5">
+              {addressReady && !hasReceiveAddress ? <AlertCircle size={16} className="text-[#f59e0b]" /> : null}
+              <ChevronRight size={16} className="text-[#8ea0b8]" />
+            </div>
           </Link>
           <Link className="px-3 py-3 flex items-center justify-between text-[#24364f]" to="/security-check">
             <div className="flex items-center gap-2 font-semibold">
@@ -182,3 +216,5 @@ export default function Mine() {
     </div>
   );
 }
+
+

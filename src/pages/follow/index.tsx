@@ -1,5 +1,6 @@
 ﻿import { Pagination } from "antd";
 import { useEffect, useMemo, useState } from "react";
+import { WalletCards } from "lucide-react";
 import { useQuery } from "@/hooks/useQuery";
 import { apiUser } from "@/apis/user";
 import { apiDashboard } from "@/apis/dashboard";
@@ -92,6 +93,17 @@ const Follow = () => {
 
   return (
     <main className="pb-10 text-sm px-3 fade-stagger">
+      <section className="mt-3 rounded-2xl border border-[#d8e7ff] bg-gradient-to-br from-[#f3f8ff] via-[#edf5ff] to-[#e6f0ff] px-4 py-3 shadow-[0_10px_24px_rgba(33,91,168,0.12)]">
+        <div className="flex items-center justify-between gap-3">
+          <div className="min-w-0">
+            <div className="text-[18px] font-extrabold text-[#163a68] leading-none">钱包</div>
+            <div className="text-[12px] text-[#5f7faa] mt-1">资产估值、累计收益与资金明细</div>
+          </div>
+          <div className="size-10 shrink-0 rounded-xl bg-white/85 border border-[#cfe0fb] flex items-center justify-center">
+            <WalletCards size={18} className="text-[#255cae]" />
+          </div>
+        </div>
+      </section>
       <section className="glass-card p-4 mt-3">
         <div className="flex items-start justify-between gap-3">
           <div>
@@ -186,3 +198,5 @@ const Follow = () => {
 };
 
 export default Follow;
+
+
