@@ -64,6 +64,18 @@ export const apiUser = {
     getWithdrawList: async (params?: any) => {
         return await $get("/api/wallet/withdraw/list", params || {}, { toast: false });
     },
+    getReceiveAddressList: async () => {
+        return await $get("/api/wallet/receive-address/list", {}, { toast: false });
+    },
+    addReceiveAddress: async (params: any) => {
+        return await $post("/api/wallet/receive-address/add", params);
+    },
+    updateReceiveAddress: async (params: any) => {
+        return await $post("/api/wallet/receive-address/update", params);
+    },
+    deleteReceiveAddress: async (params: any) => {
+        return await $post("/api/wallet/receive-address/delete", params);
+    },
     getInviteSummary: async () => {
         return await $get("/api/wallet/invite/summary", {}, { toast: false });
     },

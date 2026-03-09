@@ -1,7 +1,7 @@
-export const navListData = [
+﻿export const navListData = [
   {
     iconKey: 'rank',
-    title: '\u6536\u76ca\u6392\u884c',
+    title: 'PoW排行',
     path: '/pow-rank',
   },
   {
@@ -16,7 +16,7 @@ export const navListData = [
   },
   {
     iconKey: 'favorite',
-    title: '\u6211\u7684\u81ea\u9009',
+    title: '\u7b97\u529b\u8d2d\u4e70',
     path: '/favorites',
   },
   {

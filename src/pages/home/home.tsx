@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Trophy, Globe2, Calculator, Star, Headset } from "lucide-react";
+import { Trophy, Globe2, Calculator, ShoppingCart, Headset } from "lucide-react";
 import { useQuery } from "@/hooks/useQuery";
 import { usePolling } from "@/hooks/usePolling";
 import { ApiPub } from "@/apis/public";
@@ -12,7 +12,7 @@ const navIconMap: Record<string, any> = {
   rank: Trophy,
   farm: Globe2,
   calculator: Calculator,
-  favorite: Star,
+  favorite: ShoppingCart,
   support: Headset,
 };
 

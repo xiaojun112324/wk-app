@@ -94,8 +94,9 @@ export default function Mine() {
           <Link className="finance-btn-primary rounded-xl px-3 py-3 text-center font-semibold" to="/withdraw">提现</Link>
         </div>
         <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/transactions">资金记录</Link>
-        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/setting/login-password">修改登录密码</Link>
-        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/setting/pay-password">修改提现密码</Link>
+        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/setting/login-password">登录密码</Link>
+        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/setting/pay-password">资金密码</Link>
+        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/receive-address">收款地址绑定</Link>
         <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/support">联系客服</Link>
         <div className="h-px bg-[#dbe5f6] my-1" />
         <button

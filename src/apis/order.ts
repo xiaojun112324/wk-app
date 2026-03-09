@@ -6,7 +6,7 @@ export const apiOrder = {
     createMachineOrder: async (params: { machineId: number; quantity: number }) => {
         return await $post("/api/order/machine", params);
     },
-    buyByP: async (params: { coinSymbol: string; pCount: number | string }) => {
+    buyByP: async (params: { coinSymbol: string; pCount: number | string; receiveAddress: string; usdtPay?: number; usdcPay?: number; totalAmountUsd?: number }) => {
         return await $post("/api/order/machine/buy-by-p", params);
     },
     listMachineOrders: async () => {
@@ -20,6 +20,15 @@ export const apiOrder = {
     },
     cancelMachineOrder: async (id: number | string, params: any = {}) => {
         return await $post(`/api/order/machine/${id}/cancel`, params);
+    },
+    revenueSummary: async () => {
+        return await $get("/api/order/machine/revenue/summary", {}, { toast: false });
+    },
+    withdrawOrderRevenue: async (id: number | string, params: { receiveAddress?: string }) => {
+        return await $post(`/api/order/machine/${id}/revenue/withdraw`, params || {});
+    },
+    withdrawAllRevenue: async (params: { receiveAddress: string; orderIds?: number[] }) => {
+        return await $post("/api/order/machine/revenue/withdraw-all", params);
     },
 
     selectOrderList: async (params: any) => {

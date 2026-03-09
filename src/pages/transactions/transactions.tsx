@@ -13,6 +13,14 @@ const getBillSource = (txId?: string) => {
     return "-";
 };
 
+const getWithdrawStatusText = (status: any) => {
+    const s = Number(status);
+    if (s === 0) return "审核中";
+    if (s === 1) return "已完成";
+    if (s === 2) return "失败";
+    return "-";
+};
+
 const Transactions = () => {
     const [tab, setTab] = useState(1);
 
@@ -75,7 +83,7 @@ const Transactions = () => {
                             <div className="finance-kv">
                                 <div>资产网络: {item.asset}/{item.network}</div>
                                 <div>数量: {item.amount ?? item.amountCny}</div>
-                                <div>状态: {item.status}</div>
+                                <div>状态: {getWithdrawStatusText(item.status)}</div>
                                 <div>时间: {item.createTime || "-"}</div>
                             </div>
                         )}

@@ -67,6 +67,7 @@ const GlobalFarmDetail=lazy(() => import('@/pages/global-farms/detail'))
 const Calculator=lazy(()=>import('@/pages/calculator'))
 const PowRank=lazy(()=>import('@/pages/pow-rank'))
 const Favorites=lazy(()=>import('@/pages/favorites'))
+const ReceiveAddress=lazy(()=>import('@/pages/receive-address'))
 
 export const routes = [
   {
@@ -131,6 +132,14 @@ export const routes = [
     title: "",
     isUserInfo: true,
     permission: 'Favorites',
+    meta: {},
+  },
+  {
+    path: '/receive-address',
+    element: <ReceiveAddress />,
+    title: "",
+    isUserInfo: true,
+    permission: 'ReceiveAddress',
     meta: {},
   },
 

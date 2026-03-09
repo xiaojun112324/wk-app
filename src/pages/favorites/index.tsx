@@ -1,43 +1,47 @@
-﻿import { useMemo } from "react";
+﻿import { useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
+
 import AppNav from "@/components/AppNav";
 import { useQuery } from "@/hooks/useQuery";
-import { ApiFavorite } from "@/apis/favorite";
-import MiningItem from "@/pages/home/components/MiningItem";
+import { ApiPub } from "@/apis/public";
 
 export default function FavoritesPage() {
   const navigate = useNavigate();
 
-  const { data, refresh } = useQuery({
-    fetcher: ApiFavorite.list,
+  const { data, loading, refresh } = useQuery({
+    fetcher: ApiPub.poolStats,
     params: {},
   });
 
-  const list = useMemo(() => data || [], [data]);
+  const btcCoin = useMemo(() => {
+    const list = data || [];
+    return list.find((item: any) => String(item?.symbol || "").toUpperCase() === "BTC");
+  }, [data]);
 
-  const onDetail = (item: any) => {
-    if (!item?.id) return;
-    navigate(`/coin-detail/${item.id}`);
-  };
+  useEffect(() => {
+    if (loading) return;
+    if (btcCoin?.id) {
+      navigate(`/coin-detail/${btcCoin.id}/buy`, { replace: true });
+      return;
+    }
+
+  }, [loading, btcCoin?.id, navigate]);
 
   return (
     <main className="pb-8 px-3 text-sm fade-stagger">
-      <AppNav title="我的自选" />
-      <section className="glass-card px-3 py-3 mt-3">
-        <div className="flex items-center justify-between mb-2">
-          <div className="font-bold finance-title">自选币种</div>
-          <button className="text-xs text-[#1a57aa]" onClick={() => refresh()}>刷新</button>
-        </div>
-
-        {list.length ? (
-          list.map((item: any) => (
-            <MiningItem key={`${item.symbol}-${item.id}`} miningItem={item} onClick={onDetail} />
-          ))
+      <AppNav title="算力购买" />
+      <section className="glass-card px-3 py-6 mt-3 text-center">
+        {loading ? (
+          <div className="text-[#6f89af]">正在跳转购买详情...</div>
         ) : (
-          <div className="py-10 text-center text-[#6f89af]">暂无自选，去币种详情点击星标收藏</div>
+          <>
+            <div className="text-[#6f89af] mb-3">未找到 BTC 矿池，请稍后重试</div>
+            <button className="finance-btn-primary px-4 py-2 rounded-xl" onClick={() => refresh()}>
+              刷新
+            </button>
+          </>
         )}
       </section>
     </main>
   );
 }
-

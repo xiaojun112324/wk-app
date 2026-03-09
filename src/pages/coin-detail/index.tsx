@@ -1,6 +1,6 @@
 ﻿import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { toast } from "sonner";
+import { useParams } from "react-router-dom";
+
 import AppNav from "@/components/AppNav";
 import { useQuery } from "@/hooks/useQuery";
 import { ApiPub } from "@/apis/public";
@@ -13,6 +13,12 @@ const fmtCny = (v: any) => {
   if (v === null || v === undefined || v === "") return "-";
   const n = Number(v);
   return Number.isNaN(n) ? `￥${v}` : `￥${n.toFixed(4)}`;
+};
+
+const fmtUsdt = (v: any) => {
+  if (v === null || v === undefined || v === "") return "-";
+  const n = Number(v);
+  return Number.isNaN(n) ? `$${v}` : `$${n.toFixed(4)}`;
 };
 
 const fmtPct = (v: any) => {
@@ -29,7 +35,7 @@ const calcPerPRevenueCny = (coin: any) => {
 };
 
 const CoinDetail = () => {
-  const navigate = useNavigate();
+
   const { id } = useParams();
   const coinId = Number(id);
   const [days, setDays] = useState<7 | 30 | 180 | 365>(7);
@@ -58,7 +64,13 @@ const CoinDetail = () => {
 
   const riseDownClass = Number(coin?.priceChange24h ?? 0) >= 0 ? "text-[#0f9f64]" : "text-[#cf3f56]";
   const perPRevenueCny = useMemo(() => calcPerPRevenueCny(coin), [coin?.priceCny, coin?.dailyRevenuePerP]);
-  const canBuy = useMemo(() => String(coin?.symbol || "").toUpperCase() === "BTC", [coin?.symbol]);
+  const priceUsdt = useMemo(() => {
+    const direct = Number(coin?.priceUsd);
+    if (Number.isFinite(direct) && direct > 0) return direct;
+    const cny = Number(coin?.priceCny || 0);
+    if (!Number.isFinite(cny) || cny <= 0) return 0;
+    return Number((cny / 7.2).toFixed(8));
+  }, [coin?.priceUsd, coin?.priceCny]);
 
   useEffect(() => {
     const symbol = coin?.symbol;
@@ -113,6 +125,7 @@ const CoinDetail = () => {
 
             <div className="mt-3">
               <div className="text-2xl font-extrabold text-[#16305a]">{fmtCny(coin?.priceCny)}</div>
+              <div className="text-sm text-[#486b98] mt-1">{fmtUsdt(priceUsdt)}</div>
               <div className={`text-xs mt-1 ${riseDownClass}`}>24h涨跌: {fmtPct(coin?.priceChange24h)}</div>
             </div>
           </>
@@ -150,22 +163,6 @@ const CoinDetail = () => {
         </div>
       </section>
 
-      <section className="glass-card mt-3 p-4">
-        <div className="font-bold finance-title mb-3">购买</div>
-        <div className="text-xs text-[#6a7f9f] mb-3">点击后进入购买详情页</div>
-        <button
-          className="finance-btn-primary w-full py-2.5 rounded-xl"
-          onClick={() => {
-            if (!canBuy) {
-              toast.warning("暂未开通此矿池");
-              return;
-            }
-            navigate(`/coin-detail/${coinId}/buy`);
-          }}
-        >
-          立即购买
-        </button>
-      </section>
     </main>
   );
 };

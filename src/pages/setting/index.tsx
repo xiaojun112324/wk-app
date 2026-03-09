@@ -31,7 +31,7 @@ export default function Setting() {
         </Link>
 
         <Link to="/setting/pay-password" className="rounded-lg py-4 flex items-center justify-between border-b">
-          <span>提现密码</span>
+          <span>资金密码</span>
           <span className="text-accent-foreground flex items-center gap-1">
             设置/修改
             <ChevronRightIcon className="size-4" />

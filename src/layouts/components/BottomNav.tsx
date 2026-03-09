@@ -1,6 +1,5 @@
 ﻿import React from "react";
 import { NavLink } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import {
   HomeIcon as HomeOutline,
@@ -24,13 +23,11 @@ interface NavItem {
 }
 
 const BottomNav: React.FC = () => {
-  const { t } = useTranslation();
-
   const navItems: NavItem[] = [
-    { name: t("BottomNav.home"), path: "/", Icon: HomeOutline, ActiveIcon: HomeSolid },
-    { name: t("BottomNav.mianban"), path: "/stock-quotes", Icon: SquaresOutline, ActiveIcon: SquaresSolid },
-    { name: t("BottomNav.shouyi"), path: "/follow", Icon: ChartOutline, ActiveIcon: ChartSolid },
-    { name: t("BottomNav.mine"), path: "/mine", Icon: UserOutline, ActiveIcon: UserSolid },
+    { name: "首页", path: "/", Icon: HomeOutline, ActiveIcon: HomeSolid },
+    { name: "算力面板", path: "/stock-quotes", Icon: SquaresOutline, ActiveIcon: SquaresSolid },
+    { name: "收益", path: "/follow", Icon: ChartOutline, ActiveIcon: ChartSolid },
+    { name: "我的", path: "/mine", Icon: UserOutline, ActiveIcon: UserSolid },
   ];
 
   return (
@@ -71,4 +68,3 @@ const BottomNav: React.FC = () => {
 };
 
 export default BottomNav;
-

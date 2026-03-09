@@ -15,7 +15,6 @@ const fmtCny = (v: any, d = 4) => {
 
 const Calculator = () => {
   const { data: poolStats } = useQuery({ fetcher: ApiPub.poolStats, params: {} });
-  const { data: buyConfig } = useQuery({ fetcher: ApiPub.machineBuyConfig, params: {} });
 
   const options = useMemo(
     () => (poolStats || []).map((c: any) => ({ label: `${c.symbol} (${c.name || ""})`, value: c.symbol })),
@@ -43,8 +42,6 @@ const Calculator = () => {
   const dailyCoin = useMemo(() => Number((phNum * dailyCoinPerP).toFixed(12)), [phNum, dailyCoinPerP]);
   const dailyRevenueCny = useMemo(() => Number((dailyCoin * priceCny).toFixed(8)), [dailyCoin, priceCny]);
 
-  const pricePerPUsd = Number(buyConfig?.pricePerPUsd || 0);
-  const totalCostU = useMemo(() => Number((phNum * pricePerPUsd).toFixed(8)), [phNum, pricePerPUsd]);
 
   return (
     <main className="min-h-screen px-3 pb-8 fade-stagger text-sm">
@@ -83,7 +80,6 @@ const Calculator = () => {
           <div className="flex justify-between items-center gap-2"><span className="whitespace-nowrap">输入算力</span><span className="whitespace-nowrap">{fmt(phNum, 4)} PH/s</span></div>
           <div className="flex justify-between items-center gap-2"><span className="whitespace-nowrap">预计日产币</span><span className="whitespace-nowrap">{fmt(dailyCoin, 12)} {currentCoin?.symbol || symbol}</span></div>
           <div className="flex justify-between items-center gap-2"><span className="whitespace-nowrap">预计日收益</span><span className="whitespace-nowrap">{fmtCny(dailyRevenueCny)}</span></div>
-          <div className="flex justify-between items-center gap-2"><span className="whitespace-nowrap">按P总价</span><span className="whitespace-nowrap">{fmt(totalCostU)} U</span></div>
         </div>
 
         <div className="mt-3 rounded-xl bg-[#f5f9ff] border border-[#d8e5fb] p-3 text-xs text-[#355782]">
