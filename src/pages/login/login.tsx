@@ -6,14 +6,11 @@ import { useMutation } from "@/hooks/useMutation";
 import { apiUser } from "@/apis/user";
 import { toast } from "sonner";
 import { useUserContext } from "@/contexts/user/userContext";
-import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
 import { setToken } from "@/lib/token";
 
 export default function Login() {
-  const { t } = useTranslation();
-
   const [formEmail] = Form.useForm();
   const nav = useNavigate();
   const userContext = useUserContext();
@@ -24,7 +21,7 @@ export default function Login() {
   const { mutate: doLogin, loading } = useMutation({
     fetcher: apiUser.doLogin,
     onSuccess: (res) => {
-      toast.success(t("login.successMessage"));
+      toast.success("登录成功");
       setToken(res?.token || res?.accessToken || null);
       const params = new URLSearchParams(location.search);
       const orgUrl = params.get("orgUrl");
@@ -41,7 +38,7 @@ export default function Login() {
 
   const handleSubmit = (values: any) => {
     if (!istap) {
-      toast.warning(t("login.securityCheckRequired"));
+      toast.warning("请先完成安全验证");
       return;
     }
     doLogin({
@@ -79,17 +76,17 @@ export default function Login() {
           </Form.Item>
 
           <Form.Item
-            label={t("login.passwordLabel")}
+            label="密码"
             name="password"
             rules={[
-              { required: true, message: t("login.passwordRequired") },
-              { pattern: /^[\S]{6,12}$/, message: t("login.passwordPattern") },
+              { required: true, message: "请输入密码" },
+              { pattern: /^[\S]{6,12}$/, message: "密码需为 6-12 位，且不能包含空格" },
             ]}
           >
-            <Input.Password placeholder={t("login.passwordPlaceholder")} />
+            <Input.Password placeholder="请输入密码" />
           </Form.Item>
 
-          <Form.Item label={t("login.securityLabel")}>
+          <Form.Item label="安全验证">
             <AnimatePresence mode="wait">
               {!istap ? (
                 <motion.div
@@ -115,7 +112,7 @@ export default function Login() {
                   />
 
                   <ShieldCheck className="w-4 h-4 text-gray-600 relative z-10" />
-                  <span className="relative z-10">{t("login.securityButton")}</span>
+                  <span className="relative z-10">点击安全验证</span>
                 </motion.div>
               ) : (
                 <motion.div
@@ -153,7 +150,7 @@ export default function Login() {
                     transition={{ delay: 0.15 }}
                     className="relative z-10"
                   >
-                    {t("login.securitySuccess")}
+                    安全验证成功
                   </motion.span>
                 </motion.div>
               )}
@@ -171,7 +168,7 @@ export default function Login() {
             ]}
           >
             <Checkbox>
-              {t("register.agreementText")}
+              我已阅读并同意
               <a href="/agreement/user" target="_blank" className="ml-1 text-blue-500">
                 《用户协议》
               </a>
@@ -182,12 +179,12 @@ export default function Login() {
           </Form.Item>
 
           <Button type="submit" className="w-full !text-white" loading={loading} size="lg">
-            {t("login.loginButton")}
+            登录
           </Button>
 
           <div className="flex items-center mb-5 mt-3 justify-center">
             <div className="text-sm text-gray-500">
-              {t("login.noAccount")}&nbsp;
+              还没有账号？&nbsp;
               <button type="button" onClick={goRegister} className="text-blue-500">
                 快捷注册
               </button>
