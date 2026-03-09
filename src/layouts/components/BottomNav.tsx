@@ -26,7 +26,7 @@ const BottomNav: React.FC = () => {
   const navItems: NavItem[] = [
     { name: "首页", path: "/", Icon: HomeOutline, ActiveIcon: HomeSolid },
     { name: "算力面板", path: "/stock-quotes", Icon: SquaresOutline, ActiveIcon: SquaresSolid },
-    { name: "收益", path: "/follow", Icon: ChartOutline, ActiveIcon: ChartSolid },
+    { name: "钱包", path: "/follow", Icon: ChartOutline, ActiveIcon: ChartSolid },
     { name: "我的", path: "/mine", Icon: UserOutline, ActiveIcon: UserSolid },
   ];
 
@@ -68,3 +68,4 @@ const BottomNav: React.FC = () => {
 };
 
 export default BottomNav;
+

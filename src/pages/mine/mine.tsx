@@ -1,5 +1,15 @@
 ﻿import { Link } from "react-router-dom";
-import { ShieldCheck } from "lucide-react";
+import {
+  ArrowDownUp,
+  CheckCircle2,
+  ChevronRight,
+  Headset,
+  KeyRound,
+  LockKeyhole,
+  MapPin,
+  ReceiptText,
+  ShieldCheck,
+} from "lucide-react";
 import { Modal } from "antd";
 import { toast } from "sonner";
 import { useQuery } from "@/hooks/useQuery";
@@ -59,46 +69,108 @@ export default function Mine() {
           </div>
         </div>
 
-        <div className="text-xs text-[#5d7ca8] mt-2">邮箱：{email}</div>
-
-        <div className="text-xs text-[#3d5f90] mt-2 flex items-center gap-2">
-          <span>ID：{userId}</span>
-          {String(userId) !== "-" ? (
-            <button
-              type="button"
-              onClick={() => onCopy(userId, "用户ID")}
-              className="px-2 py-0.5 rounded-md border border-[#c8d8f1] text-[#1f5fb8] bg-[#f4f9ff]"
-            >
-              复制
-            </button>
-          ) : null}
-        </div>
-
-        <div className="text-xs text-[#3d5f90] mt-2 flex items-center gap-2">
-          <span>邀请码：{inviteCode}</span>
-          {inviteCode !== "-" ? (
-            <button
-              type="button"
-              onClick={() => onCopy(inviteCode, "邀请码")}
-              className="px-2 py-0.5 rounded-md border border-[#c8d8f1] text-[#1f5fb8] bg-[#f4f9ff]"
-            >
-              复制
-            </button>
-          ) : null}
+        <div className="mt-3 rounded-xl border border-[#d8e5fb] bg-[#f7fbff] px-3 py-2.5 space-y-2">
+          <div className="flex items-center justify-between gap-3 text-xs">
+            <span className="text-[#6c85aa] shrink-0">邮箱</span>
+            <span className="text-[#2a4a78] font-medium text-right break-all">{email}</span>
+          </div>
+          <div className="flex items-center justify-between gap-3 text-xs">
+            <span className="text-[#6c85aa] shrink-0">用户ID</span>
+            <div className="flex items-center gap-2">
+              <span className="text-[#2a4a78] font-medium">{userId}</span>
+              {String(userId) !== "-" ? (
+                <button
+                  type="button"
+                  onClick={() => onCopy(userId, "用户ID")}
+                  className="px-2 py-0.5 rounded-md border border-[#c8d8f1] text-[#1f5fb8] bg-white"
+                >
+                  复制
+                </button>
+              ) : null}
+            </div>
+          </div>
+          <div className="flex items-center justify-between gap-3 text-xs">
+            <span className="text-[#6c85aa] shrink-0">邀请码</span>
+            <div className="flex items-center gap-2">
+              <span className="text-[#2a4a78] font-medium">{inviteCode}</span>
+              {inviteCode !== "-" ? (
+                <button
+                  type="button"
+                  onClick={() => onCopy(inviteCode, "邀请码")}
+                  className="px-2 py-0.5 rounded-md border border-[#c8d8f1] text-[#1f5fb8] bg-white"
+                >
+                  复制
+                </button>
+              ) : null}
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="mt-3 space-y-3 text-sm">
-        <div className="grid grid-cols-2 gap-3">
-          <Link className="finance-btn-primary rounded-xl px-3 py-3 text-center font-semibold" to="/deposit">充值</Link>
-          <Link className="finance-btn-primary rounded-xl px-3 py-3 text-center font-semibold" to="/withdraw">提现</Link>
+      <section className="mt-3 space-y-2.5">
+        <div className="grid grid-cols-2 gap-2.5">
+          <Link className="finance-btn-primary rounded-xl px-3 py-3 text-center font-semibold flex items-center justify-center gap-1.5" to="/deposit">
+            <ArrowDownUp size={15} />
+            <span>充值</span>
+          </Link>
+          <Link className="finance-btn-primary rounded-xl px-3 py-3 text-center font-semibold flex items-center justify-center gap-1.5" to="/withdraw">
+            <ArrowDownUp size={15} />
+            <span>提现</span>
+          </Link>
         </div>
-        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/transactions">资金记录</Link>
-        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/setting/login-password">登录密码</Link>
-        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/setting/pay-password">资金密码</Link>
-        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/receive-address">收款地址绑定</Link>
-        <Link className="glass-card rounded-xl px-3 py-3 text-center font-semibold text-[#1c4d9d] block" to="/support">联系客服</Link>
-        <div className="h-px bg-[#dbe5f6] my-1" />
+
+        <div className="glass-card rounded-xl divide-y divide-[#e2ebfb]">
+          <Link className="px-3 py-3 flex items-center justify-between text-[#24364f]" to="/transactions">
+            <div className="flex items-center gap-2 font-semibold">
+              <ReceiptText size={16} />
+              <span>资金记录</span>
+            </div>
+            <ChevronRight size={16} className="text-[#8ea0b8]" />
+          </Link>
+          <Link className="px-3 py-3 flex items-center justify-between text-[#24364f]" to="/support">
+            <div className="flex items-center gap-2 font-semibold">
+              <Headset size={16} />
+              <span>联系客服</span>
+            </div>
+            <ChevronRight size={16} className="text-[#8ea0b8]" />
+          </Link>
+        </div>
+
+        <div className="glass-card rounded-xl divide-y divide-[#e2ebfb]">
+          <Link className="px-3 py-3 flex items-center justify-between text-[#24364f]" to="/setting/login-password">
+            <div className="flex items-center gap-2 font-semibold">
+              <KeyRound size={16} />
+              <span>登录密码</span>
+            </div>
+            <ChevronRight size={16} className="text-[#8ea0b8]" />
+          </Link>
+          <Link className="px-3 py-3 flex items-center justify-between text-[#24364f]" to="/setting/pay-password">
+            <div className="flex items-center gap-2 font-semibold">
+              <LockKeyhole size={16} />
+              <span>资金密码</span>
+            </div>
+            <ChevronRight size={16} className="text-[#8ea0b8]" />
+          </Link>
+          <Link className="px-3 py-3 flex items-center justify-between text-[#24364f]" to="/receive-address">
+            <div className="flex items-center gap-2 font-semibold">
+              <MapPin size={16} />
+              <span>收款地址绑定</span>
+            </div>
+            <ChevronRight size={16} className="text-[#8ea0b8]" />
+          </Link>
+          <Link className="px-3 py-3 flex items-center justify-between text-[#24364f]" to="/security-check">
+            <div className="flex items-center gap-2 font-semibold">
+              <ShieldCheck size={16} />
+              <span>环境安全检测</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 size={16} className="text-[#16a34a]" />
+              <ChevronRight size={16} className="text-[#8ea0b8]" />
+            </div>
+          </Link>
+        </div>
+
+        <div className="h-px bg-[#dbe5f6] my-0.5" />
         <button
           type="button"
           onClick={onLogout}

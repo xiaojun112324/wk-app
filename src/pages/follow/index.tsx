@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+﻿import { Pagination } from "antd";
+import { useEffect, useMemo, useState } from "react";
 import { useQuery } from "@/hooks/useQuery";
 import { apiUser } from "@/apis/user";
 import { apiDashboard } from "@/apis/dashboard";
@@ -15,27 +16,57 @@ const getBillSource = (txId?: string) => {
   if (val.startsWith("MACHINE_SELL_")) return "矿机回收返还";
   if (val.startsWith("MACHINE_CANCEL_")) return "矿机取消返还";
   if (val.startsWith("MACHINE_DAILY_SETTLE_")) return "矿机每日收益";
+  if (val.startsWith("WITHDRAW_")) return "提现";
+  if (val.startsWith("RECHARGE_")) return "充值";
   return "账户资金变动";
 };
 
 const getBillDirection = (type: any) => (Number(type) === 1 ? "收入" : Number(type) === 2 ? "支出" : "变动");
+
 const getMachineOrderId = (txId?: string) => {
   const val = String(txId || "").toUpperCase();
   const m = val.match(/^MACHINE_(?:BUY_P|BUY|SELL|CANCEL|DAILY_SETTLE)_(?:\d{8}_)?(\d+)$/);
   return m?.[1] || "";
 };
+
 const formatDate = (val: any) => {
   if (!val) return "-";
   return String(val).replace("T", " ").replace(/\.\d+$/, "").replace("+00:00", "");
 };
 
 const Follow = () => {
+  const [page, setPage] = useState(1);
+  const pageSize = 10;
+
   const { data: wallet } = useQuery({ fetcher: apiUser.getWalletAccount });
-  const { data: financeAccount } = useQuery({ fetcher: () => apiUser.getFinanceAccount({ coin: "BTC" }) });
-  const { data: billList } = useQuery({ fetcher: () => apiUser.getFinanceBillList({ coin: "BTC" }) });
+  const { data: financeAccount } = useQuery({ fetcher: () => apiUser.getFinanceAccount({}) });
+  const { data: billList, run: runBillList, loading: billLoading } = useQuery({
+    fetcher: (params?: any) => apiUser.getFinanceBillList(params || {}),
+    params: { pageNum: 1, pageSize },
+  });
   const { data: revenueOverview } = useQuery({ fetcher: apiDashboard.revenueOverview });
 
-  const rows = useMemo(() => billList || [], [billList]);
+  const parsed = useMemo(() => {
+    if (Array.isArray(billList)) {
+      return { rows: billList, total: billList.length, isServerPage: false };
+    }
+    const records = (billList as any)?.records || (billList as any)?.list || [];
+    if (Array.isArray(records)) {
+      return { rows: records, total: Number((billList as any)?.total ?? records.length), isServerPage: true };
+    }
+    return { rows: [], total: 0, isServerPage: false };
+  }, [billList]);
+
+  const rows = useMemo(
+    () => (parsed.isServerPage ? parsed.rows : parsed.rows.slice((page - 1) * pageSize, page * pageSize)),
+    [parsed, page]
+  );
+
+  useEffect(() => {
+    if (parsed.isServerPage) {
+      runBillList({ pageNum: page, pageSize });
+    }
+  }, [page, parsed.isServerPage, runBillList]);
 
   const rates = wallet?.exchangeRates || {};
   const coinSymbol = String(financeAccount?.coinSymbol || "").toUpperCase();
@@ -47,73 +78,107 @@ const Follow = () => {
 
   const revenueCoinFromOverview = Number(revenueOverview?.totalRevenueCoin ?? 0);
   const overviewCoin = String(revenueOverview?.coinSymbol || "BTC").toUpperCase();
+  const totalRevenueBtc = Number(revenueOverview?.totalRevenueCoin ?? financeAccount?.totalRevenue ?? 0);
+  const btcToCnyRate = Number(rates.BTC_CNY || coinRateMap.BTC || 0);
   const minedRevenueCny = Number(
-    financeAccount?.totalRevenueCny ??
-      (Number(financeAccount?.totalRevenue || 0) > 0
-        ? Number(financeAccount?.totalRevenue || 0) * Number(coinRateMap[coinSymbol] || 0)
-        : revenueCoinFromOverview * Number(coinRateMap[overviewCoin] || 0))
+    totalRevenueBtc > 0
+      ? totalRevenueBtc * btcToCnyRate
+      : wallet?.totalRevenueCny ??
+          financeAccount?.totalRevenueCny ??
+          (Number(financeAccount?.totalRevenue || 0) > 0
+            ? Number(financeAccount?.totalRevenue || 0) * Number(coinRateMap[coinSymbol] || 0)
+            : revenueCoinFromOverview * Number(coinRateMap[overviewCoin] || 0))
   );
 
   return (
     <main className="pb-10 text-sm px-3 fade-stagger">
       <section className="glass-card p-4 mt-3">
-        <div className="text-base font-extrabold finance-title mb-3">收益总览 - 钱包估值</div>
-        <div className="space-y-2 text-[#1a3560]">
-          <div className="flex items-start justify-between gap-2">
-            <span className="shrink-0">总资产估值</span>
-            <span className="font-semibold text-right break-all max-w-[65%] tabular-nums">￥{fmt(wallet?.totalAssetCny, 2)}</span>
-          </div>
-          <div className="flex items-start justify-between gap-2">
-            <span className="shrink-0">累计收益</span>
-            <span className="font-semibold text-right break-all max-w-[65%] tabular-nums">￥{fmt(minedRevenueCny, 2)}</span>
-          </div>
-          <div className="flex items-start justify-between gap-2">
-            <span className="shrink-0">USDT 余额</span>
-            <span className="text-right break-all max-w-[65%] tabular-nums">{fmt(wallet?.usdtBalance)}</span>
-          </div>
-          <div className="flex items-start justify-between gap-2">
-            <span className="shrink-0">USDC 余额</span>
-            <span className="text-right break-all max-w-[65%] tabular-nums">{fmt(wallet?.usdcBalance)}</span>
-          </div>
-          <div className="flex items-start justify-between gap-2">
-            <span className="shrink-0">BTC 余额</span>
-            <span className="text-right break-all max-w-[65%] tabular-nums">{fmt(wallet?.btcBalance)}</span>
-          </div>
-          <div className="flex items-start justify-between gap-2">
-            <span className="shrink-0">矿机余额(USDT)</span>
-            <span className="text-right break-all max-w-[65%] tabular-nums">{fmt(wallet?.machineBalanceUsdt)}</span>
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <div className="text-xs text-[#6f87ab] mb-1">钱包总资产估值</div>
+            <div className="text-[28px] font-extrabold leading-[1.1] text-[#173a67] tabular-nums">￥{fmt(wallet?.totalAssetCny, 2)}</div>
           </div>
         </div>
 
+        <div className="mt-3 mb-4 rounded-xl bg-[#f0f6ff] border border-[#d8e5fb] px-3 py-2.5">
+          <div className="text-[11px] text-[#6f87ab]">累计收益</div>
+          <div className="text-base font-extrabold text-[#cf3f56] tabular-nums mt-0.5">
+            {fmt(totalRevenueBtc, 8)} BTC
+          </div>
+          <div className="text-[13px] text-[#4f6f98] font-semibold mt-1 tabular-nums">
+            ≈ ￥{fmt(minedRevenueCny, 2)}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-3 gap-2 mt-3">
+          <div className="rounded-xl border border-[#d9e6fb] bg-white/80 px-2.5 py-2">
+            <div className="text-[11px] text-[#6f87ab]">USDT</div>
+            <div className="text-sm font-bold text-[#163a66] tabular-nums">{fmt(wallet?.usdtBalance, 4)}</div>
+          </div>
+          <div className="rounded-xl border border-[#d9e6fb] bg-white/80 px-2.5 py-2">
+            <div className="text-[11px] text-[#6f87ab]">USDC</div>
+            <div className="text-sm font-bold text-[#163a66] tabular-nums">{fmt(wallet?.usdcBalance, 4)}</div>
+          </div>
+          <div className="rounded-xl border border-[#d9e6fb] bg-white/80 px-2.5 py-2">
+            <div className="text-[11px] text-[#6f87ab]">BTC</div>
+            <div className="text-sm font-bold text-[#163a66] tabular-nums">{fmt(wallet?.btcBalance, 8)}</div>
+          </div>
+        </div>
+
+        <div className="mt-2 rounded-xl border border-[#d9e6fb] bg-[#f8fbff] px-3 py-2 text-xs text-[#355782] flex items-center justify-between">
+          <span>矿机余额(USDT)</span>
+          <span className="font-semibold tabular-nums text-[#173a67]">{fmt(wallet?.machineBalanceUsdt, 4)}</span>
+        </div>
+
         <div className="mt-3 rounded-lg border border-[#d5e2f7] bg-white/70 p-2 text-xs text-[#46658f]">
-          <div className="mb-1">国际汇率</div>
-          <div className="flex items-start justify-between gap-2"><span className="shrink-0">USDT/CNY</span><span className="text-right break-all max-w-[65%] tabular-nums">{fmt(rates.USDT_CNY, 4)}</span></div>
-          <div className="flex items-start justify-between gap-2"><span className="shrink-0">USDC/CNY</span><span className="text-right break-all max-w-[65%] tabular-nums">{fmt(rates.USDC_CNY, 4)}</span></div>
-          <div className="flex items-start justify-between gap-2"><span className="shrink-0">BTC/CNY</span><span className="text-right break-all max-w-[65%] tabular-nums">{fmt(rates.BTC_CNY, 2)}</span></div>
+          <div className="mb-1 font-semibold">国际汇率</div>
+          <div className="flex items-center justify-between"><span>USDT/CNY</span><span className="tabular-nums">{fmt(rates.USDT_CNY, 4)}</span></div>
+          <div className="flex items-center justify-between"><span>USDC/CNY</span><span className="tabular-nums">{fmt(rates.USDC_CNY, 4)}</span></div>
+          <div className="flex items-center justify-between"><span>BTC/CNY</span><span className="tabular-nums">{fmt(rates.BTC_CNY, 2)}</span></div>
         </div>
       </section>
 
       <section className="mt-4 glass-card p-3">
-        <div className="mt-1 rounded-xl bg-white/70 border border-[#dce8ff] p-3">
-          {rows.length === 0 && <div className="text-xs text-[#7086a8]">暂无数据</div>}
+        <div className="flex items-center justify-between mb-2">
+          <div className="text-base font-extrabold finance-title">资金明细</div>
+          <div className="text-[11px] text-[#6f87ab]">第 {page} 页</div>
+        </div>
+
+        <div className="rounded-xl bg-white/70 border border-[#dce8ff] p-3">
+          {billLoading && <div className="text-xs text-[#7086a8] mb-2">加载中...</div>}
+          {rows.length === 0 && !billLoading && <div className="text-xs text-[#7086a8]">暂无数据</div>}
+
           {rows.map((item: any, idx: number) => (
             <div key={item.id || idx} className="finance-list-row">
-              <div className="space-y-1 text-[#1a3560] text-xs">
-                <div className="flex justify-between items-center gap-2">
-                  <span className="font-semibold">{getBillSource(item.txId)}</span>
-                  <span className={`font-semibold ${Number(item.type) === 1 ? "text-[#cf3f56]" : "text-[#1a57aa]"}`}>
+              <div className="flex items-center justify-between gap-2">
+                <div className="min-w-0">
+                  <div className="font-semibold text-[#173a67] truncate">{getBillSource(item.txId)}</div>
+                  <div className="text-[11px] text-[#6a80a2] mt-0.5">{formatDate(item.createTime)}</div>
+                </div>
+                <div className="text-right shrink-0">
+                  <div className={`font-bold tabular-nums ${Number(item.type) === 1 ? "text-[#cf3f56]" : "text-[#1a57aa]"}`}>
                     {Number(item.type) === 1 ? "+" : Number(item.type) === 2 ? "-" : ""}
-                    {fmt(item.amount, 8)} {item.coinSymbol || "BTC"}
-                  </span>
+                    {fmt(item.amount, 8)} {item.coinSymbol || "-"}
+                  </div>
+                  <div className="text-[11px] text-[#6a80a2]">{getBillDirection(item.type)}</div>
                 </div>
-                <div className="flex justify-between items-center gap-2 text-[#6a80a2]">
-                  <span>类型: {getBillDirection(item.type)}</span>
-                  <span>时间: {formatDate(item.createTime)}</span>
-                </div>
-                {!!getMachineOrderId(item.txId) && <div className="text-[#6a80a2]">矿机订单ID: {getMachineOrderId(item.txId)}</div>}
               </div>
+              {!!getMachineOrderId(item.txId) && <div className="mt-1 text-[11px] text-[#6a80a2]">矿机订单ID: {getMachineOrderId(item.txId)}</div>}
             </div>
           ))}
+
+          {(parsed.total || 0) > pageSize && (
+            <div className="mt-3 flex justify-end">
+              <Pagination
+                size="small"
+                current={page}
+                pageSize={pageSize}
+                total={parsed.total}
+                showSizeChanger={false}
+                onChange={(p) => setPage(p)}
+              />
+            </div>
+          )}
         </div>
       </section>
     </main>

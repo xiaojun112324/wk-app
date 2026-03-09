@@ -1,4 +1,4 @@
-import { lazy } from "react";
+﻿import { lazy } from "react";
 import { Navigate } from 'react-router-dom';
 import NotFound from '../pages/not-found'
 /* const Login = lazy(() => import("@/pages/login/login")) */
@@ -68,12 +68,13 @@ const Calculator=lazy(()=>import('@/pages/calculator'))
 const PowRank=lazy(()=>import('@/pages/pow-rank'))
 const Favorites=lazy(()=>import('@/pages/favorites'))
 const ReceiveAddress=lazy(()=>import('@/pages/receive-address'))
+const SecurityCheck=lazy(()=>import('@/pages/security-check'))
 
 export const routes = [
   {
     path: '/follow/help/:id',
     element: <FollowHelp />,
-    title: "帮助",
+    title: "甯姪",
     isUserInfo: true,
     permission: 'follow:help',
     meta: {},
@@ -142,11 +143,19 @@ export const routes = [
     permission: 'ReceiveAddress',
     meta: {},
   },
+  {
+    path: '/security-check',
+    element: <SecurityCheck />,
+    title: "",
+    isUserInfo: true,
+    permission: 'SecurityCheck',
+    meta: {},
+  },
 
   {
     path: '/',
     element: <Home />,
-    title: "首页",
+    title: "棣栭〉",
     permission: 'home',
     isUserInfo: true,
     layout: 'main',
@@ -155,7 +164,7 @@ export const routes = [
   {
     path: '/stock/hot',
     element: <StockHot />,
-    title: "热门股票",
+    title: "鐑棬鑲＄エ",
     permission: 'stock:hot',
     isUserInfo: true,
 
@@ -164,7 +173,7 @@ export const routes = [
   {
     path: '/withdraw',
     element: <Withdraw />,
-    title: "提款",
+    title: "鎻愭",
     permission: 'withdraw',
     isUserInfo: true,
 
@@ -173,7 +182,7 @@ export const routes = [
   {
     path: '/deposit',
     element: <Deposit />,
-    title: "入款",
+    title: "鍏ユ",
     permission: 'deposit',
     isUserInfo: true,
 
@@ -182,7 +191,7 @@ export const routes = [
   {
     path: '/msg/notice',
     element: <Notice />,
-    title: "公告",
+    title: "鍏憡",
     permission: 'msg:notice',
     isUserInfo: true,
 
@@ -191,7 +200,7 @@ export const routes = [
   {
     path: '/msg/list',
     element: <MsgList />,
-    title: "站内消息",
+    title: "绔欏唴娑堟伅",
     permission: 'msg:list',
     isUserInfo: true,
 
@@ -209,7 +218,7 @@ export const routes = [
   {
     path: '/center',
     element: <Center />,
-    title: "团队中心",
+    title: "鍥㈤槦涓績",
     permission: 'center',
     isUserInfo: true,
 
@@ -219,7 +228,7 @@ export const routes = [
   {
     path: '/task',
     element: <Task />,
-    title: "任务",
+    title: "浠诲姟",
     permission: 'task',
     isUserInfo: true,
     meta: {},
@@ -227,7 +236,7 @@ export const routes = [
   {
     path: '/red',
     element: <Red />,
-    title: "红包",
+    title: "绾㈠寘",
     permission: 'red',
     isUserInfo: true,
     meta: {},
@@ -235,7 +244,7 @@ export const routes = [
   {
     path: '/sign',
     element: <Sign />,
-    title: "签到",
+    title: "绛惧埌",
     permission: 'sign',
     isUserInfo: true,
 
@@ -244,7 +253,7 @@ export const routes = [
   {
     path: '/dzong',
     element: <Dzong />,
-    title: "大宗交易",
+    title: "澶у畻浜ゆ槗",
     permission: 'dzong',
     isUserInfo: true,
     meta: {},
@@ -252,7 +261,7 @@ export const routes = [
   {
     path: '/fund/buy',
     element: <FundBuy />,
-    title: "基金购买",
+    title: "鍩洪噾璐拱",
     permission: 'fund:buy',
 
     isUserInfo: true,
@@ -261,7 +270,7 @@ export const routes = [
   {
     path: '/fund/order/detail',
     element: <FundOrderDetail />,
-    title: "基金订单详情",
+    title: "鍩洪噾璁㈠崟璇︽儏",
     permission: 'fund:order:detail',
 
     isUserInfo: true,
@@ -270,7 +279,7 @@ export const routes = [
   {
     path: '/follow/earnings',
     element: <Earnings />,
-    title: "跟单收益",
+    title: "璺熷崟鏀剁泭",
     permission: 'follow:earnings',
 
     isUserInfo: true,
@@ -280,7 +289,7 @@ export const routes = [
   {
     path: '/ipo',
     element: <Ipo />,
-    title: "大宗交易",
+    title: "澶у畻浜ゆ槗",
     permission: 'ipo',
     isUserInfo: true,
     meta: {},
@@ -288,7 +297,7 @@ export const routes = [
   {
     path: '/fund',
     element: <Fund />,
-    title: "基金",
+    title: "鍩洪噾",
     permission: 'fund',
     layout: 'main',
     isUserInfo: true,
@@ -297,7 +306,7 @@ export const routes = [
   {
     path: '/fund/history',
     element: <FundHistory />,
-    title: "基金记录",
+    title: "鍩洪噾璁板綍",
     permission: 'fund:history',
     isUserInfo: true,
     meta: {},
@@ -305,7 +314,7 @@ export const routes = [
   {
     path: '/follow',
     element: <Follow />,
-    title: "跟单",
+    title: "璺熷崟",
     permission: 'follow',
     layout: 'main',
     isUserInfo: true,
@@ -314,7 +323,7 @@ export const routes = [
   {
     path: '/follow/operator',
     element: <Operator />,
-    title: "量化策略库",
+    title: "量化策略",
     permission: 'follow:operator',
     isUserInfo: true,
     meta: {},
@@ -322,7 +331,7 @@ export const routes = [
   {
     path: '/follow/search',
     element: <FollowSearch />,
-    title: "跟单搜索",
+    title: "璺熷崟鎼滅储",
     permission: 'follow:search',
     isUserInfo: true,
     meta: {},
@@ -330,7 +339,7 @@ export const routes = [
   {
     path: '/follow/history',
     element: <FollowHistory />,
-    title: "托管记录",
+    title: "鎵樼璁板綍",
     permission: 'follow:history',
     isUserInfo: true,
     meta: {},
@@ -338,7 +347,7 @@ export const routes = [
   {
     path: '/follow/buy/:id',
     element: <FollowBuy />,
-    title: "跟单购买",
+    title: "璺熷崟璐拱",
     permission: 'follow:buy',
     isUserInfo: true,
     meta: {},
@@ -361,7 +370,7 @@ export const routes = [
   {
     path: '/support',
     element: <Support />,
-    title: "客服",
+    title: "瀹㈡湇",
     permission: 'support',
     isUserInfo: true,
     meta: {},
@@ -369,7 +378,7 @@ export const routes = [
   {
     path: '/stockk/:code',
     element: <StockK />,
-    title: "股票k线",
+    title: "股票K线",
     isUserInfo: true,
     permission: 'stockk',
     meta: {},
@@ -377,7 +386,7 @@ export const routes = [
   {
     path: '/stock-quotes',
     element: <StockQuotes />,
-    title: "行情",
+    title: "琛屾儏",
     permission: 'StockQuotes',
     isUserInfo: true,
     layout: 'main',
@@ -418,7 +427,7 @@ export const routes = [
   {
     path: '/transactions',
     element: <Transactions />,
-    title: "资金流水",
+    title: "璧勯噾娴佹按",
     permission: 'transactions',
     isUserInfo: true,
     meta: {},
@@ -430,7 +439,7 @@ export const routes = [
   {
     path: '/mine',
     element: <Mine />,
-    title: "我的",
+    title: "鎴戠殑",
     permission: 'mine',
     isUserInfo: true,
     layout: 'main',
@@ -440,7 +449,7 @@ export const routes = [
   {
     path: '/setting',
     element: <Setting />,
-    title: "个人信息",
+    title: "涓汉淇℃伅",
     permission: 'setting:login-password',
     isUserInfo: true,
     meta: {},
@@ -450,7 +459,7 @@ export const routes = [
   {
     path: '/setting/login-password',
     element: <LoginPassword />,
-    title: "登录密码",
+    title: "鐧诲綍瀵嗙爜",
     permission: 'setting:login-password',
     isUserInfo: true,
     meta: {},
@@ -459,7 +468,7 @@ export const routes = [
   {
     path: '/setting/pay-password',
     element: <PayPassword />,
-    title: "交易密码",
+    title: "浜ゆ槗瀵嗙爜",
     permission: 'setting:pay-password',
     isUserInfo: true,
     meta: {},
@@ -472,7 +481,7 @@ export const routes = [
   {
     path: '/login',
     element: <Login />,
-    title: "登录",
+    title: "鐧诲綍",
     permission: 'login',
     isUserInfo: false,
     meta: {},
@@ -480,7 +489,7 @@ export const routes = [
   {
     path: '/register',
     element: <Register />,
-    title: "注册",
+    title: "娉ㄥ唽",
     permission: 'register',
     isUserInfo: false,
     meta: {},
@@ -490,7 +499,7 @@ export const routes = [
   {
     path: '/test',
     element: <Test />,
-    title: "测试",
+    title: "娴嬭瘯",
     permission: 'test',
     isUserInfo: true,
     layout: '',
@@ -502,7 +511,7 @@ export const routes = [
     path: '/news/detail/:id',
     key: 'news-detail',
     element: <NewsDetail />,
-    title: "消息",
+    title: "娑堟伅",
     permission: '',
     isUserInfo: false,
     meta: { layout: "" },
@@ -521,7 +530,7 @@ export const routes = [
     path: '/stock-ting',
     key: 'stock-ting',
     element: <StockTing />,
-    title: "每日停盘",
+    title: "姣忔棩鍋滅洏",
     permission: '',
     isUserInfo: false,
     meta: { layout: "" },
@@ -530,7 +539,7 @@ export const routes = [
     path: '/stock-zhang',
     key: 'stock-zhang',
     element: <StockZhang />,
-    title: "每日涨停",
+    title: "姣忔棩娑ㄥ仠",
     permission: '',
     isUserInfo: false,
     meta: { layout: "" },
@@ -603,4 +612,6 @@ export const routes = [
     element: <NotFound />,
     meta: { layout: "EmptyLayout" },
   }]
+
+
 
