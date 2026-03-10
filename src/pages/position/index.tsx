@@ -1,20 +1,37 @@
 import { useMemo, useState } from "react";
 import { Modal, Select } from "antd";
+import { toast } from "sonner";
 import { useQuery } from "@/hooks/useQuery";
 import { useMutation } from "@/hooks/useMutation";
 import { apiOrder } from "@/apis/order";
 import { apiUser } from "@/apis/user";
 import AppNav from "@/components/AppNav";
 import { formatDate } from "@/lib/format-time";
-import { toast } from "sonner";
 
 const fmt = (v: any, d = 8) => {
   const n = Number(v || 0);
   if (!Number.isFinite(n)) return "0";
   return n.toFixed(d).replace(/\.?0+$/, "");
 };
+const RECOVER_LOCK_DAYS = 180;
+const FULL_REFUND_DAYS = 365;
+const calcRemainingRecoverDays = (createTime: any) => {
+  if (!createTime) return 0;
+  const createAt = new Date(createTime);
+  if (Number.isNaN(createAt.getTime())) return 0;
+  const now = Date.now();
+  const unlockAt = createAt.getTime() + RECOVER_LOCK_DAYS * 24 * 60 * 60 * 1000;
+  if (now >= unlockAt) return 0;
+  return Math.ceil((unlockAt - now) / (24 * 60 * 60 * 1000));
+};
+const calcHoldDays = (createTime: any) => {
+  if (!createTime) return 0;
+  const createAt = new Date(createTime);
+  if (Number.isNaN(createAt.getTime())) return 0;
+  return Math.max(0, Math.floor((Date.now() - createAt.getTime()) / (24 * 60 * 60 * 1000)));
+};
 
-const getMachineOrderStatusText = (status: any) => {
+const getOrderStatusText = (status: any) => {
   const s = Number(status);
   if (s === 1) return "持有中";
   if (s === 2) return "已回收";
@@ -23,7 +40,7 @@ const getMachineOrderStatusText = (status: any) => {
   return "未知状态";
 };
 
-const getMachineOrderStatusClass = (status: any) => {
+const getOrderStatusClass = (status: any) => {
   const s = Number(status);
   if (s === 1) return "bg-[#eaf7ef] text-[#0f9f64] border-[#b9e7ca]";
   if (s === 2) return "bg-[#eef4ff] text-[#1d5fd0] border-[#c8d9ff]";
@@ -31,7 +48,7 @@ const getMachineOrderStatusClass = (status: any) => {
   return "bg-[#f4f7fb] text-[#5d7ca8] border-[#d7e2f1]";
 };
 
-const Position = () => {
+export default function Position() {
   const { data, refresh, loading } = useQuery({ fetcher: apiOrder.listMachineOrders });
   const { data: addressRows } = useQuery({ fetcher: apiUser.getReceiveAddressList });
   const { data: revenueSummary, refresh: refreshRevenueSummary } = useQuery({ fetcher: apiOrder.revenueSummary });
@@ -55,6 +72,7 @@ const Position = () => {
     onSuccess: () => {
       toast.success("回收算力成功");
       refresh();
+      refreshRevenueSummary();
     },
   });
 
@@ -89,6 +107,10 @@ const Position = () => {
       toast.warning("无可提取收益");
       return;
     }
+    if (!addressOptions.length) {
+      toast.warning("请先绑定收款地址后提取收益");
+      return;
+    }
     const fallback = item?.receiveAddress || addressOptions?.[0]?.value || "";
     setExtractingOrder(item);
     setExtractAddress(fallback);
@@ -105,7 +127,7 @@ const Position = () => {
         <div className="glass-card p-3 text-xs">
           <div className="flex items-center justify-between">
             <div>
-              总可提取收益(BTC):
+              可提取收益(BTC)：
               <span className={totalWithdrawable > 0 ? "text-[#cf3f56] font-semibold ml-1" : "ml-1"}>
                 {fmt(totalWithdrawable, 8)}
               </span>
@@ -136,9 +158,7 @@ const Position = () => {
             <div key={item.id} className="glass-card p-3 text-xs">
               <div className="flex justify-between mb-2">
                 <div className="font-bold text-[#173a69]">{item.machineName} ({item.coinSymbol})</div>
-                <div className={`finance-chip border ${getMachineOrderStatusClass(item.status)}`}>
-                  {getMachineOrderStatusText(item.status)}
-                </div>
+                <div className={`finance-chip border ${getOrderStatusClass(item.status)}`}>{getOrderStatusText(item.status)}</div>
               </div>
 
               <div className="finance-kv">
@@ -146,9 +166,24 @@ const Position = () => {
                 <div>数量: {item.quantity}</div>
                 <div>总投资(USDT): {fmt(item.totalInvest, 2)}</div>
                 <div>总算力(PH/s): {fmt(Number(item.totalHashrateTH || 0) / 1000, 4)}</div>
-                <div>今日收益(BTC): <span className={Number(item.todayRevenueCoin || 0) > 0 ? "text-[#cf3f56] font-semibold" : ""}>{fmt(item.todayRevenueCoin, 8)}</span></div>
-                <div>总收益(BTC): <span className={Number(item.totalRevenueCoin || 0) > 0 ? "text-[#cf3f56] font-semibold" : ""}>{fmt(item.totalRevenueCoin, 8)}</span></div>
-                <div className="col-span-2">当前可提取收益(BTC): <span className={canWithdraw ? "text-[#cf3f56] font-semibold" : ""}>{fmt(item.withdrawableRevenueCoin, 8)}</span></div>
+                <div>
+                  今日收益(BTC):
+                  <span className={Number(item.todayRevenueCoin || 0) > 0 ? "text-[#cf3f56] font-semibold ml-1" : "ml-1"}>
+                    {fmt(item.todayRevenueCoin, 8)}
+                  </span>
+                </div>
+                <div>
+                  总收益(BTC):
+                  <span className={Number(item.totalRevenueCoin || 0) > 0 ? "text-[#cf3f56] font-semibold ml-1" : "ml-1"}>
+                    {fmt(item.totalRevenueCoin, 8)}
+                  </span>
+                </div>
+                <div className="col-span-2">
+                  当前可提取收益(BTC):
+                  <span className={canWithdraw ? "text-[#cf3f56] font-semibold ml-1" : "ml-1"}>
+                    {fmt(item.withdrawableRevenueCoin, 8)}
+                  </span>
+                </div>
                 <div className="col-span-2">买入时间: {formatDate(item.createTime)}</div>
                 {item.receiveAddress ? <div className="col-span-2 break-all">绑定收款地址: {item.receiveAddress}</div> : null}
               </div>
@@ -158,7 +193,35 @@ const Position = () => {
                   <button
                     className="finance-btn-primary px-3 py-1.5 rounded-xl"
                     disabled={sellLoading}
-                    onClick={() => doSell({ id: item.id })}
+                    onClick={() => {
+                      const remainingDays = calcRemainingRecoverDays(item.createTime);
+                      if (remainingDays > 0) {
+                        toast.warning(`还剩${remainingDays}天可回收`);
+                        return;
+                      }
+                      const holdDays = calcHoldDays(item.createTime);
+                      const totalInvest = Number(item.totalInvest || 0);
+                      const feeRate = holdDays >= FULL_REFUND_DAYS ? 0 : 0.03;
+                      const feeAmount = Number((totalInvest * feeRate).toFixed(8));
+                      const actualAmount = Number((totalInvest - feeAmount).toFixed(8));
+                      Modal.confirm({
+                        title: "确认回收算力",
+                        centered: true,
+                        okText: "确认回收",
+                        cancelText: "取消",
+                        content: (
+                          <div className="text-sm space-y-1">
+                            <div>锁仓周期：180天</div>
+                            <div>当前持有：{holdDays}天</div>
+                            <div>手续费：{feeRate === 0 ? "免手续费" : "3%"}</div>
+                            <div>手续费金额：{feeAmount.toFixed(8)} USDT</div>
+                            <div>实际到账：{actualAmount.toFixed(8)} USDT</div>
+                            {feeRate > 0 ? <div className="text-[#cf3f56]">说明：满365天回收可免手续费。</div> : null}
+                          </div>
+                        ),
+                        onOk: () => doSell({ id: item.id }),
+                      });
+                    }}
                   >
                     回收算力
                   </button>
@@ -198,7 +261,7 @@ const Position = () => {
         {extractingOrder ? (
           <div className="space-y-2 text-sm">
             <div>确认提取收益吗？</div>
-            <div>当前矿机绑定提取地址为：</div>
+            <div>当前算力绑定提取地址为：</div>
             <div className="break-all text-[#1a57aa]">{extractingOrder.receiveAddress || "未绑定"}</div>
             <div className="pt-1">
               <div className="text-xs text-[#6a7f9f] mb-1">修改地址（可选）</div>
@@ -210,7 +273,10 @@ const Position = () => {
                 onChange={(v) => setExtractAddress(v)}
               />
             </div>
-            <div>可提取金额：<span className="text-[#cf3f56] font-semibold">{fmt(extractingOrder.withdrawableRevenueCoin, 8)} BTC</span></div>
+            <div>
+              可提取金额：
+              <span className="text-[#cf3f56] font-semibold ml-1">{fmt(extractingOrder.withdrawableRevenueCoin, 8)} BTC</span>
+            </div>
           </div>
         ) : null}
       </Modal>
@@ -234,7 +300,7 @@ const Position = () => {
         confirmLoading={withdrawAllLoading}
       >
         <div className="space-y-2 text-sm">
-          <div>以下订单将整合为一个提现审核单：</div>
+          <div>以下订单将整合为一个提取审核单：</div>
           <div className="max-h-44 overflow-auto rounded-lg border border-[#d7e5ff] p-2 bg-[#f8fbff]">
             {(allRows || []).length === 0 ? (
               <div className="text-xs text-[#6a7f9f]">暂无可提取订单</div>
@@ -247,7 +313,10 @@ const Position = () => {
               ))
             )}
           </div>
-          <div>总提取金额：<span className="text-[#cf3f56] font-semibold">{fmt(totalWithdrawable, 8)} BTC</span></div>
+          <div>
+            总提取金额：
+            <span className="text-[#cf3f56] font-semibold ml-1">{fmt(totalWithdrawable, 8)} BTC</span>
+          </div>
           <Select
             className="w-full"
             placeholder="请选择已绑定收款地址"
@@ -259,6 +328,4 @@ const Position = () => {
       </Modal>
     </main>
   );
-};
-
-export default Position;
+}

@@ -3,6 +3,7 @@ import { Select } from "antd";
 import AppNav from "@/components/AppNav";
 import { useQuery } from "@/hooks/useQuery";
 import { ApiPub } from "@/apis/public";
+import { calcDailyCoinPerDisplayUnit, calcDailyRevenueCnyPerDisplayUnit } from "@/lib/hashrate-revenue";
 
 const fmt = (v: any, d = 8) => {
   const n = Number(v || 0);
@@ -12,32 +13,6 @@ const fmt = (v: any, d = 8) => {
 const fmtCny = (v: any, d = 4) => {
   const n = Number(v || 0);
   return Number.isFinite(n) ? `￥${n.toFixed(d).replace(/\.?0+$/, "")}` : "￥0";
-};
-
-const UNIT_STEP: Record<string, string> = {
-  EH: "PH",
-  PH: "TH",
-  TH: "GH",
-  GH: "MH",
-  MH: "KH",
-  KH: "H",
-  H: "H",
-};
-
-const P_FACTOR: Record<string, number> = {
-  EH: 1000,
-  PH: 1,
-  TH: 0.001,
-  GH: 0.000001,
-  MH: 0.000000001,
-  KH: 0.000000000001,
-  H: 0.000000000000001,
-};
-
-const parseHashrateUnit = (val: any) => {
-  const raw = String(val || "").toUpperCase();
-  const m = raw.match(/([KMGTPE]?H)\/S/);
-  return m?.[1] || "PH";
 };
 
 const Calculator = () => {
@@ -63,23 +38,18 @@ const Calculator = () => {
     return n;
   }, [hashInput]);
 
-  const inputUnit = useMemo(() => {
-    const netUnit = parseHashrateUnit(currentCoin?.networkHashrate);
-    return UNIT_STEP[netUnit] || "PH";
-  }, [currentCoin?.networkHashrate]);
-
-  const inputToPFactor = useMemo(() => P_FACTOR[inputUnit] || 1, [inputUnit]);
+  const unitAndRevenue = useMemo(
+    () => calcDailyRevenueCnyPerDisplayUnit(currentCoin?.dailyRevenuePerP, currentCoin?.networkHashrate, currentCoin?.priceCny),
+    [currentCoin?.dailyRevenuePerP, currentCoin?.networkHashrate, currentCoin?.priceCny]
+  );
+  const inputUnit = unitAndRevenue.unit;
 
   const priceCny = Number(currentCoin?.priceCny || 0);
-  const dailyCoinPerP = Number(currentCoin?.dailyRevenuePerP || 0);
   const dailyCoinPerInputUnit = useMemo(
-    () => Number((dailyCoinPerP * inputToPFactor).toFixed(12)),
-    [dailyCoinPerP, inputToPFactor]
+    () => calcDailyCoinPerDisplayUnit(currentCoin?.dailyRevenuePerP, currentCoin?.networkHashrate).dailyCoin,
+    [currentCoin?.dailyRevenuePerP, currentCoin?.networkHashrate]
   );
-  const perUnitRevenueCny = useMemo(
-    () => Number((priceCny * dailyCoinPerInputUnit).toFixed(8)),
-    [priceCny, dailyCoinPerInputUnit]
-  );
+  const perUnitRevenueCny = unitAndRevenue.revenueCny;
   const dailyCoin = useMemo(() => Number((hashNum * dailyCoinPerInputUnit).toFixed(12)), [hashNum, dailyCoinPerInputUnit]);
   const dailyRevenueCny = useMemo(() => Number((dailyCoin * priceCny).toFixed(8)), [dailyCoin, priceCny]);
 
@@ -113,10 +83,10 @@ const Calculator = () => {
         <div className="font-bold finance-title mb-3">计算结果</div>
         <div className="finance-kv text-[11px]">
           <div className="flex justify-between items-center gap-2"><span className="whitespace-nowrap">当前币价</span><span className="whitespace-nowrap">{fmtCny(priceCny, 2)}</span></div>
-          <div className="flex justify-between items-center gap-2"><span className="whitespace-nowrap">每{inputUnit}日产币</span><span className="whitespace-nowrap">{fmt(dailyCoinPerInputUnit, 12)} {currentCoin?.symbol || symbol}</span></div>
-          <div className="flex justify-between items-center gap-2"><span className="whitespace-nowrap">每{inputUnit}日收益</span><span className="whitespace-nowrap">{fmtCny(perUnitRevenueCny)}</span></div>
+          <div className="flex justify-between items-start gap-2"><span className="whitespace-nowrap">每{inputUnit}日产币</span><span className="text-right break-all leading-tight">{fmt(dailyCoinPerInputUnit, 8)} {currentCoin?.symbol || symbol}</span></div>
+          <div className="flex justify-between items-center gap-2"><span className="whitespace-nowrap">每{inputUnit}预计日收益</span><span className="whitespace-nowrap">{fmtCny(perUnitRevenueCny)}</span></div>
           <div className="flex justify-between items-center gap-2"><span className="whitespace-nowrap">输入算力</span><span className="whitespace-nowrap">{fmt(hashNum, 4)} {inputUnit}/s</span></div>
-          <div className="flex justify-between items-center gap-2"><span className="whitespace-nowrap">预计日产币</span><span className="whitespace-nowrap">{fmt(dailyCoin, 12)} {currentCoin?.symbol || symbol}</span></div>
+          <div className="flex justify-between items-start gap-2"><span className="whitespace-nowrap">预计日产币</span><span className="text-right break-all leading-tight">{fmt(dailyCoin, 8)} {currentCoin?.symbol || symbol}</span></div>
           <div className="flex justify-between items-center gap-2"><span className="whitespace-nowrap">预计日收益</span><span className="whitespace-nowrap">{fmtCny(dailyRevenueCny)}</span></div>
         </div>
 

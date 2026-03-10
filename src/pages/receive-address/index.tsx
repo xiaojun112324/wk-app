@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import AppNav from "@/components/AppNav";
 import { Button } from "@/components/Button";
-import { useQuery } from "@/hooks/useQuery";
 import { useMutation } from "@/hooks/useMutation";
-import { apiUser } from "@/apis/user";
+import { useQuery } from "@/hooks/useQuery";
 import { formatDate } from "@/lib/format-time";
+import { apiUser } from "@/apis/user";
 
 const NETWORK_OPTIONS = [
   { label: "TRC20", value: "TRC20" },
@@ -24,7 +24,13 @@ export default function ReceiveAddressPage() {
   const [deleteOpen, setDeleteOpen] = useState(false);
   const [currentItem, setCurrentItem] = useState<any>(null);
 
-  const { data: pwdStatus } = useQuery({ fetcher: apiUser.getWithdrawPasswordStatus });
+  const {
+    data: pwdStatus,
+    res: pwdRes,
+    initLoading: pwdInitLoading,
+    loading: pwdLoading,
+  } = useQuery({ fetcher: apiUser.getWithdrawPasswordStatus });
+
   const {
     data: rows,
     res: addressRes,
@@ -32,7 +38,18 @@ export default function ReceiveAddressPage() {
     initLoading: addressInitLoading,
     loading: addressLoading,
   } = useQuery({ fetcher: apiUser.getReceiveAddressList });
-  const addressLoadedOk = !addressInitLoading && !addressLoading && Number((addressRes as any)?.code) === 200;
+
+  const pwdLoadedOk =
+    !pwdInitLoading &&
+    !pwdLoading &&
+    Number((pwdRes as any)?.code) === 200;
+  const hasFundPassword = !!pwdStatus?.hasWithdrawPassword;
+  const canOperateAddress = pwdLoadedOk && hasFundPassword;
+
+  const addressLoadedOk =
+    !addressInitLoading &&
+    !addressLoading &&
+    Number((addressRes as any)?.code) === 200;
 
   const { mutate: addAddress, loading: addLoading } = useMutation({
     fetcher: apiUser.addReceiveAddress,
@@ -70,9 +87,9 @@ export default function ReceiveAddressPage() {
       <AppNav title="收款地址绑定" />
 
       <section className="glass-card px-4 py-4 mt-3">
-        {!pwdStatus?.hasWithdrawPassword ? (
+        {pwdLoadedOk && !hasFundPassword ? (
           <div className="mb-3 rounded-lg border border-[#ffd6db] bg-[#fff2f4] px-3 py-2 text-xs text-[#c0354f]">
-            未设置资金密码，暂时不能添加收款地址。请先
+            未设置资金密码，暂时不能绑定收款地址。请先
             <Link className="ml-1 text-[#1a57aa] font-semibold" to="/setting/pay-password">
               去设置资金密码
             </Link>
@@ -84,7 +101,7 @@ export default function ReceiveAddressPage() {
           layout="vertical"
           initialValues={{ network: "BTC" }}
           onFinish={(values) => {
-            if (!pwdStatus?.hasWithdrawPassword) {
+            if (!canOperateAddress) {
               toast.warning("请先设置资金密码");
               return;
             }
@@ -92,23 +109,31 @@ export default function ReceiveAddressPage() {
           }}
         >
           <Form.Item label="网络" name="network" rules={[{ required: true, message: "请选择网络" }]}>
-            <Select options={NETWORK_OPTIONS} placeholder="请选择网络" />
+            <Select options={NETWORK_OPTIONS} placeholder="请选择网络" disabled={!canOperateAddress} />
           </Form.Item>
 
-          <Form.Item label="收款地址" name="receiveAddress" rules={[{ required: true, message: "请输入收款地址" }]}>
-            <Input placeholder="请输入收款地址" />
+          <Form.Item
+            label="收款地址"
+            name="receiveAddress"
+            rules={[{ required: true, message: "请输入收款地址" }]}
+          >
+            <Input placeholder="请输入收款地址" disabled={!canOperateAddress} />
           </Form.Item>
 
           <Form.Item label="备注" name="remark">
-            <Input placeholder="例如：币安主账户" />
+            <Input placeholder="例如：币安主账户" disabled={!canOperateAddress} />
           </Form.Item>
 
-          <Form.Item label="资金密码" name="fundPassword" rules={[{ required: true, message: "请输入资金密码" }]}>
-            <Input.Password placeholder="请输入资金密码" />
+          <Form.Item
+            label="资金密码"
+            name="fundPassword"
+            rules={[{ required: true, message: "请输入资金密码" }]}
+          >
+            <Input.Password placeholder="请输入资金密码" disabled={!canOperateAddress} />
           </Form.Item>
 
-          <Button type="submit" className="w-full !text-white" loading={addLoading}>
-            添加地址
+          <Button type="submit" className="w-full !text-white" loading={addLoading} disabled={!canOperateAddress}>
+            绑定地址
           </Button>
         </Form>
       </section>
@@ -126,11 +151,18 @@ export default function ReceiveAddressPage() {
                 <div className="text-[#133a73] break-all">{item.receiveAddress}</div>
                 <div className="mt-1 text-[#456896]">网络：{item.network || "-"}</div>
                 <div className="mt-1 text-[#6a7f9f]">备注：{item.remark || "-"}</div>
-                <div className="mt-1 text-[#6a7f9f]">最后修改时间：{formatDate(item.updateTime || item.createTime)}</div>
+                <div className="mt-1 text-[#6a7f9f]">
+                  最后修改时间：{formatDate(item.updateTime || item.createTime)}
+                </div>
                 <div className="mt-2 flex gap-2">
                   <button
-                    className="finance-btn-ghost px-3 py-1 rounded-lg"
+                    className="finance-btn-ghost px-3 py-1 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled={!canOperateAddress}
                     onClick={() => {
+                      if (!canOperateAddress) {
+                        toast.warning("请先设置资金密码");
+                        return;
+                      }
                       setCurrentItem(item);
                       editForm.setFieldsValue({
                         id: item.id,
@@ -145,8 +177,13 @@ export default function ReceiveAddressPage() {
                     修改
                   </button>
                   <button
-                    className="px-3 py-1 rounded-lg border border-[#f3c7ce] text-[#cf3f56] bg-[#fff5f7]"
+                    className="px-3 py-1 rounded-lg border border-[#f3c7ce] text-[#cf3f56] bg-[#fff5f7] disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled={!canOperateAddress}
                     onClick={() => {
+                      if (!canOperateAddress) {
+                        toast.warning("请先设置资金密码");
+                        return;
+                      }
                       setCurrentItem(item);
                       deleteForm.setFieldsValue({ id: item.id, fundPassword: undefined });
                       setDeleteOpen(true);
@@ -173,24 +210,28 @@ export default function ReceiveAddressPage() {
         cancelText="取消"
         confirmLoading={updateLoading}
       >
-        <Form
-          form={editForm}
-          layout="vertical"
-          onFinish={(values) => updateAddress(values)}
-        >
+        <Form form={editForm} layout="vertical" onFinish={(values) => updateAddress(values)}>
           <Form.Item name="id" hidden>
             <Input />
           </Form.Item>
           <Form.Item label="网络" name="network" rules={[{ required: true, message: "请选择网络" }]}>
             <Select options={NETWORK_OPTIONS} placeholder="请选择网络" />
           </Form.Item>
-          <Form.Item label="收款地址" name="receiveAddress" rules={[{ required: true, message: "请输入收款地址" }]}>
+          <Form.Item
+            label="收款地址"
+            name="receiveAddress"
+            rules={[{ required: true, message: "请输入收款地址" }]}
+          >
             <Input placeholder="请输入收款地址" />
           </Form.Item>
           <Form.Item label="备注" name="remark">
             <Input placeholder="请输入备注" />
           </Form.Item>
-          <Form.Item label="资金密码" name="fundPassword" rules={[{ required: true, message: "请输入资金密码" }]}>
+          <Form.Item
+            label="资金密码"
+            name="fundPassword"
+            rules={[{ required: true, message: "请输入资金密码" }]}
+          >
             <Input.Password placeholder="请输入资金密码" />
           </Form.Item>
         </Form>
@@ -209,13 +250,18 @@ export default function ReceiveAddressPage() {
         confirmLoading={deleteLoading}
       >
         <div className="text-sm text-[#2d4d78] mb-3">
-          确认删除地址：<span className="break-all text-[#133a73]">{currentItem?.receiveAddress || "-"}</span>
+          确认删除地址：
+          <span className="break-all text-[#133a73]">{currentItem?.receiveAddress || "-"}</span>
         </div>
         <Form form={deleteForm} layout="vertical" onFinish={(values) => deleteAddress(values)}>
           <Form.Item name="id" hidden>
             <Input />
           </Form.Item>
-          <Form.Item label="资金密码" name="fundPassword" rules={[{ required: true, message: "请输入资金密码" }]}>
+          <Form.Item
+            label="资金密码"
+            name="fundPassword"
+            rules={[{ required: true, message: "请输入资金密码" }]}
+          >
             <Input.Password placeholder="请输入资金密码" />
           </Form.Item>
         </Form>

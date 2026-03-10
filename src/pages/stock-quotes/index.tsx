@@ -44,6 +44,25 @@ const fmt = (v: any, d = 8) => {
 };
 
 const valueClass = (v: any) => (num(v) > 0 ? "text-[#cf3f56] font-semibold" : "text-[#2d4d78]");
+const RECOVER_LOCK_DAYS = 180;
+const FULL_REFUND_DAYS = 365;
+
+const calcRemainingRecoverDays = (createTime: any) => {
+  if (!createTime) return 0;
+  const createAt = new Date(createTime);
+  if (Number.isNaN(createAt.getTime())) return 0;
+  const now = Date.now();
+  const unlockAt = createAt.getTime() + RECOVER_LOCK_DAYS * 24 * 60 * 60 * 1000;
+  if (now >= unlockAt) return 0;
+  const diffMs = unlockAt - now;
+  return Math.ceil(diffMs / (24 * 60 * 60 * 1000));
+};
+const calcHoldDays = (createTime: any) => {
+  if (!createTime) return 0;
+  const createAt = new Date(createTime);
+  if (Number.isNaN(createAt.getTime())) return 0;
+  return Math.max(0, Math.floor((Date.now() - createAt.getTime()) / (24 * 60 * 60 * 1000)));
+};
 
 const StockQuotes = () => {
   const [orderTab, setOrderTab] = useState<"all" | "holding" | "ended">("all");
@@ -129,32 +148,29 @@ const StockQuotes = () => {
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
             <div className="text-[18px] font-extrabold text-[#163a68] leading-none">算力面板</div>
-            <div className="text-[12px] text-[#5f7faa] mt-1">矿机状态、收益与可提取资产总览</div>
+            <div className="text-[12px] text-[#5f7faa] mt-1">算力状态、收益与可提取资产总览</div>
           </div>
           <div className="size-10 shrink-0 rounded-xl bg-white/85 border border-[#cfe0fb] flex items-center justify-center">
             <Activity size={18} className="text-[#255cae]" />
           </div>
         </div>
         <div className="mt-2.5 flex items-center justify-between gap-2 text-[11px] text-[#5f7faa]">
-          <span>总矿机 {overview?.totalWorkers ?? workerStats?.total ?? 0} 台</span>
+          <span>算力单位 {overview?.hashrateUnit || "PH/s"}</span>
           <span className="px-2 py-0.5 rounded-full bg-white/80 border border-[#d7e5fb] text-[#3e6494]">实时数据同步中</span>
         </div>
       </section>
       <section className="glass-card p-4 mt-3">
-        <div className="text-base font-extrabold finance-title mb-3">矿机面板</div>
+        <div className="text-base font-extrabold finance-title mb-3">算力面板</div>
         <div className="finance-kv">
-          <div>总矿机：{overview?.totalWorkers ?? workerStats?.total ?? 0}</div>
-          <div>在线/离线：{overview?.onlineWorkers ?? workerStats?.online ?? 0} / {overview?.offlineWorkers ?? workerStats?.offline ?? 0}</div>
-          <div>24h 平均算力：{overview?.avgHashrate24h ?? 0} {overview?.hashrateUnit || "PH/s"}</div>
+          <div>运行中算力：{overview?.avgHashrate24h ?? 0} {overview?.hashrateUnit || "PH/s"}</div>
           <div>昨日收益：<span className={valueClass(overview?.yesterdayRevenueCoin)}>{overview?.yesterdayRevenueCoin ?? 0} {overview?.coinSymbol || "BTC"}</span></div>
-          <div>今日挖矿：<span className={valueClass(overview?.todayMinedCoin)}>{overview?.todayMinedCoin ?? 0} {overview?.coinSymbol || "BTC"}</span></div>
-          <div>总收益：<span className={valueClass(overview?.totalRevenueCoin)}>{overview?.totalRevenueCoin ?? 0} {overview?.coinSymbol || "BTC"}</span></div>
-          <div className="col-span-2">
+          <div>
             总可提取收益(BTC)：
             <span className={totalWithdrawable > 0 ? "text-[#cf3f56] font-semibold ml-1" : "ml-1"}>
               {fmt(totalWithdrawable, 8)}
             </span>
           </div>
+          <div>总收益：<span className={valueClass(overview?.totalRevenueCoin)}>{overview?.totalRevenueCoin ?? 0} {overview?.coinSymbol || "BTC"}</span></div>
         </div>
         <div className="mt-3">
           <button
@@ -178,7 +194,7 @@ const StockQuotes = () => {
       </section>
 
       <section className="glass-card p-4 mt-3">
-        <div className="text-base font-extrabold finance-title mb-2">矿机订单列表</div>
+        <div className="text-base font-extrabold finance-title mb-2">算力订单列表</div>
         <div className="flex gap-2 mb-3">
           <button className={`px-3 py-1.5 rounded-lg border text-xs ${orderTab === "all" ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setOrderTab("all")}>全部</button>
           <button className={`px-3 py-1.5 rounded-lg border text-xs ${orderTab === "holding" ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setOrderTab("holding")}>持有中</button>
@@ -207,7 +223,39 @@ const StockQuotes = () => {
                 </div>
                 {Number(item.status) === 1 ? (
                   <div className="flex gap-2 mt-3">
-                    <button className="finance-btn-primary px-3 py-1.5 rounded-xl" disabled={sellLoading} onClick={() => doSell({ id: item.id })}>
+                    <button
+                      className="finance-btn-primary px-3 py-1.5 rounded-xl"
+                      disabled={sellLoading}
+                      onClick={() => {
+                        const remainingDays = calcRemainingRecoverDays(item.createTime);
+                        if (remainingDays > 0) {
+                          toast.warning(`还剩${remainingDays}天可回收`);
+                          return;
+                        }
+                        const holdDays = calcHoldDays(item.createTime);
+                        const totalInvest = Number(item.totalInvest || 0);
+                        const feeRate = holdDays >= FULL_REFUND_DAYS ? 0 : 0.03;
+                        const feeAmount = Number((totalInvest * feeRate).toFixed(8));
+                        const actualAmount = Number((totalInvest - feeAmount).toFixed(8));
+                        Modal.confirm({
+                          title: "确认回收算力",
+                          centered: true,
+                          okText: "确认回收",
+                          cancelText: "取消",
+                          content: (
+                            <div className="text-sm space-y-1">
+                              <div>锁仓周期：180天</div>
+                              <div>当前持有：{holdDays}天</div>
+                              <div>手续费：{feeRate === 0 ? "免手续费" : "3%"}</div>
+                              <div>手续费金额：{feeAmount.toFixed(8)} USDT</div>
+                              <div>实际到账：{actualAmount.toFixed(8)} USDT</div>
+                              {feeRate > 0 ? <div className="text-[#cf3f56]">说明：满365天回收可免手续费。</div> : null}
+                            </div>
+                          ),
+                          onOk: () => doSell({ id: item.id }),
+                        });
+                      }}
+                    >
                       回收算力
                     </button>
                     <button
@@ -246,7 +294,7 @@ const StockQuotes = () => {
         {extractingOrder ? (
           <div className="space-y-2 text-sm">
             <div>确认提取收益吗？</div>
-            <div>当前矿机绑定提取地址为：</div>
+            <div>当前算力绑定提取地址为：</div>
             <div className="break-all text-[#1a57aa]">{extractingOrder.receiveAddress || "未绑定"}</div>
             <div className="pt-1">
               <div className="text-xs text-[#6a7f9f] mb-1">修改地址（可选，仅BTC网络）</div>

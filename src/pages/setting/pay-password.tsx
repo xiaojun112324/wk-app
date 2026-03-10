@@ -1,12 +1,18 @@
-﻿import { Form, Input } from "antd";
+import { Form, Input } from "antd";
 import AppNav from "@/components/AppNav";
 import { Button } from "@/components/Button";
 import { apiUser } from "@/apis/user";
 import { useMutation } from "@/hooks/useMutation";
+import { useQuery } from "@/hooks/useQuery";
 import { toast } from "sonner";
 
 export default function PayPassword() {
   const [form] = Form.useForm();
+  const { data: pwdStatus, res: statusRes, initLoading, loading: statusLoading } = useQuery({
+    fetcher: apiUser.getWithdrawPasswordStatus,
+  });
+  const statusLoaded = !initLoading && !statusLoading && Number((statusRes as any)?.code) === 200;
+  const hasOldPassword = !!pwdStatus?.hasWithdrawPassword;
 
   const { mutate, loading } = useMutation({
     fetcher: apiUser.updatewithdrawalpwd,
@@ -20,11 +26,19 @@ export default function PayPassword() {
     <main>
       <AppNav title="设置/修改资金密码" />
       <div className="px-5 mt-6">
-        <div className="text-xs text-[#5d7ca8] mb-3">首次设置可不填旧资金密码</div>
+        <div className="text-xs text-[#5d7ca8] mb-3">
+          {!statusLoaded ? "正在加载密码状态..." : hasOldPassword ? "修改资金密码需填写旧资金密码" : "首次设置无需旧资金密码"}
+        </div>
         <Form form={form} layout="vertical" onFinish={(values) => mutate(values)}>
-          <Form.Item label="旧资金密码（首次可留空）" name="oldPassword">
-            <Input.Password placeholder="请输入旧资金密码（首次可留空）" />
-          </Form.Item>
+          {statusLoaded && hasOldPassword ? (
+            <Form.Item
+              label="旧资金密码"
+              name="oldPassword"
+              rules={[{ required: true, message: "请输入旧资金密码" }]}
+            >
+              <Input.Password placeholder="请输入旧资金密码" />
+            </Form.Item>
+          ) : null}
 
           <Form.Item
             label="新资金密码"

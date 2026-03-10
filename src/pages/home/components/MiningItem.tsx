@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import clsx from "clsx";
 
 interface IProps {
@@ -11,7 +11,7 @@ const MiningItem: React.FC<IProps> = ({ miningItem, className, onClick }) => {
   const formatCny = (value: any) => {
     if (value === null || value === undefined || value === "") return "-";
     const n = Number(value);
-    return Number.isNaN(n) ? `\uffe5${value}` : `\uffe5${n}`;
+    return Number.isNaN(n) ? `￥${value}` : `￥${n}`;
   };
 
   const formatUsd = (value: any) => {
@@ -20,6 +20,7 @@ const MiningItem: React.FC<IProps> = ({ miningItem, className, onClick }) => {
     if (Number.isNaN(n)) return `$${value}`;
     return `$${n.toFixed(4).replace(/\.?0+$/, "")}`;
   };
+
   const priceUsd = (() => {
     const direct = Number(miningItem?.priceUsd);
     if (Number.isFinite(direct) && direct > 0) return direct;
@@ -40,14 +41,15 @@ const MiningItem: React.FC<IProps> = ({ miningItem, className, onClick }) => {
               <span className="font-bold text-[#153966]">{miningItem.symbol}</span>
               <span className="finance-chip">{miningItem?.algorithm || "-"}</span>
             </div>
-            <div className="text-[#6b85ad] text-xs truncate">{"\u5168\u7f51\u7b97\u529b"}: {miningItem?.networkHashrate || "-"}</div>
-            <div className="text-[#6b85ad] text-xs truncate">{"\u77ff\u673a\u7b97\u529b"}: {miningItem?.poolHashrate || "-"}</div>
+            <div className="text-[#6b85ad] text-xs truncate">{"全网算力"}: {miningItem?.networkHashrate || "-"}</div>
+            <div className="text-[#6b85ad] text-xs truncate">{"算力"}: {miningItem?.poolHashrate || "-"}</div>
           </div>
         </div>
 
         <div className="text-right shrink-0">
+          <div className="text-[11px] text-[#7b8faa] mb-0.5">币价</div>
           <div className="text-[12px] text-[#5d7ca8]">$ {formatUsd(priceUsd).replace("$", "")}</div>
-          <div className="text-[12px] text-[#5d7ca8]">￥ {formatCny(miningItem?.priceCny).replace("￥", "")}</div>
+          <div className="text-[12px] text-[#5d7ca8]">¥ {formatCny(miningItem?.priceCny).replace("￥", "").replace("¥", "")}</div>
         </div>
       </div>
     </div>

@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom";
 
 import AppNav from "@/components/AppNav";
 import { useQuery } from "@/hooks/useQuery";
+import { usePolling } from "@/hooks/usePolling";
 import { ApiPub } from "@/apis/public";
 import { ApiFavorite } from "@/apis/favorite";
 import { StarIcon as StarSolid } from "@heroicons/react/24/solid";
 import { StarIcon as StarOutline } from "@heroicons/react/24/outline";
 import { Chart } from "./components/Chart";
+import { calcDailyRevenueCnyPerDisplayUnit } from "@/lib/hashrate-revenue";
 
 const fmtCny = (v: any) => {
   if (v === null || v === undefined || v === "") return "-";
@@ -27,13 +29,6 @@ const fmtPct = (v: any) => {
   return `${n >= 0 ? "+" : ""}${n.toFixed(2)}%`;
 };
 
-const calcPerPRevenueCny = (coin: any) => {
-  const price = Number(coin?.priceCny || 0);
-  const dailyCoin = Number(coin?.dailyRevenuePerP || 0);
-  if (!Number.isFinite(price) || !Number.isFinite(dailyCoin)) return 0;
-  return Number((price * dailyCoin).toFixed(8));
-};
-
 const CoinDetail = () => {
 
   const { id } = useParams();
@@ -42,10 +37,13 @@ const CoinDetail = () => {
   const [favorite, setFavorite] = useState(false);
   const [favLoading, setFavLoading] = useState(false);
 
-  const { data: coin, loading: coinLoading } = useQuery({
+  const { data: coin, loading: coinLoading, refresh: refreshCoin } = useQuery({
     fetcher: () => ApiPub.coinDetail({ id: coinId }),
     deps: [coinId],
   });
+  usePolling(async () => {
+    await refreshCoin();
+  }, { delay: 3000, enabled: !!coinId, immediateOnActivate: false });
 
   const { data: chartRows, loading: chartLoading } = useQuery({
     fetcher: () => ApiPub.coinChart({ id: coinId, days }),
@@ -63,7 +61,10 @@ const CoinDetail = () => {
   );
 
   const riseDownClass = Number(coin?.priceChange24h ?? 0) >= 0 ? "text-[#0f9f64]" : "text-[#cf3f56]";
-  const perPRevenueCny = useMemo(() => calcPerPRevenueCny(coin), [coin?.priceCny, coin?.dailyRevenuePerP]);
+  const unitRevenue = useMemo(
+    () => calcDailyRevenueCnyPerDisplayUnit(coin?.dailyRevenuePerP, coin?.networkHashrate, coin?.priceCny),
+    [coin?.dailyRevenuePerP, coin?.networkHashrate, coin?.priceCny]
+  );
   const priceUsdt = useMemo(() => {
     const direct = Number(coin?.priceUsd);
     if (Number.isFinite(direct) && direct > 0) return direct;
@@ -153,8 +154,8 @@ const CoinDetail = () => {
         <div className="font-bold finance-title mb-3">关键指标</div>
         <div className="finance-kv">
           <div className="flex justify-between"><span>全网算力</span><span>{coin?.networkHashrate || "-"}</span></div>
-          <div className="flex justify-between"><span>矿机算力</span><span>{coin?.poolHashrate || "-"}</span></div>
-          <div className="flex justify-between"><span>每P收益</span><span>{fmtCny(perPRevenueCny)}</span></div>
+          <div className="flex justify-between"><span>算力</span><span>{coin?.poolHashrate || "-"}</span></div>
+          <div className="flex justify-between"><span>每{unitRevenue.unit}预计日收益</span><span>{fmtCny(unitRevenue.revenueCny)}</span></div>
           <div className="flex justify-between"><span>算法</span><span>{coin?.algorithm || "-"}</span></div>
           <div className="flex justify-between"><span>24h最高</span><span>{fmtCny(coin?.high24h)}</span></div>
           <div className="flex justify-between"><span>24h最低</span><span>{fmtCny(coin?.low24h)}</span></div>

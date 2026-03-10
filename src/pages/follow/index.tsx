@@ -13,10 +13,10 @@ const fmt = (v: any, d = 8) => {
 
 const getBillSource = (txId?: string) => {
   const val = String(txId || "").toUpperCase();
-  if (val.startsWith("MACHINE_BUY_P_") || val.startsWith("MACHINE_BUY_")) return "矿机购买";
-  if (val.startsWith("MACHINE_SELL_")) return "矿机回收返还";
-  if (val.startsWith("MACHINE_CANCEL_")) return "矿机取消返还";
-  if (val.startsWith("MACHINE_DAILY_SETTLE_")) return "矿机每日收益";
+  if (val.startsWith("MACHINE_BUY_P_") || val.startsWith("MACHINE_BUY_")) return "算力购买";
+  if (val.startsWith("MACHINE_SELL_")) return "算力回收返还";
+  if (val.startsWith("MACHINE_CANCEL_")) return "算力取消返还";
+  if (val.startsWith("MACHINE_DAILY_SETTLE_")) return "算力每日收益";
   if (val.startsWith("WITHDRAW_")) return "提现";
   if (val.startsWith("RECHARGE_")) return "充值";
   return "账户资金变动";
@@ -138,7 +138,7 @@ const Follow = () => {
         </div>
 
         <div className="mt-2 rounded-xl border border-[#d9e6fb] bg-[#f8fbff] px-3 py-2 text-xs text-[#355782] flex items-center justify-between">
-          <span>矿机余额(USDT)</span>
+          <span>算力余额(USDT)</span>
           <span className="font-semibold tabular-nums text-[#173a67]">{fmt(wallet?.machineBalanceUsdt, 4)}</span>
         </div>
 
@@ -175,7 +175,7 @@ const Follow = () => {
                   <div className="text-[11px] text-[#6a80a2]">{getBillDirection(item.type)}</div>
                 </div>
               </div>
-              {!!getMachineOrderId(item.txId) && <div className="mt-1 text-[11px] text-[#6a80a2]">矿机订单ID: {getMachineOrderId(item.txId)}</div>}
+              {!!getMachineOrderId(item.txId) && <div className="mt-1 text-[11px] text-[#6a80a2]">算力订单ID: {getMachineOrderId(item.txId)}</div>}
             </div>
           ))}
 

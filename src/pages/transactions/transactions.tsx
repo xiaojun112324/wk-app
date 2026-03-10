@@ -6,10 +6,10 @@ import { apiCash } from "@/apis/cash";
 
 const getBillSource = (txId?: string) => {
     const val = String(txId || "").toUpperCase();
-    if (val.startsWith("MACHINE_BUY_P_") || val.startsWith("MACHINE_BUY_")) return "矿机购买";
-    if (val.startsWith("MACHINE_SELL_")) return "矿机卖出返还";
-    if (val.startsWith("MACHINE_CANCEL_")) return "矿机取消返还";
-    if (val.startsWith("MACHINE_DAILY_SETTLE_")) return "矿机每日收益结算";
+    if (val.startsWith("MACHINE_BUY_P_") || val.startsWith("MACHINE_BUY_")) return "算力购买";
+    if (val.startsWith("MACHINE_SELL_")) return "算力卖出返还";
+    if (val.startsWith("MACHINE_CANCEL_")) return "算力取消返还";
+    if (val.startsWith("MACHINE_DAILY_SETTLE_")) return "算力每日收益结算";
     return "-";
 };
 

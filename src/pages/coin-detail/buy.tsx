@@ -7,7 +7,9 @@ import { ApiPub } from "@/apis/public";
 import { apiOrder } from "@/apis/order";
 import { apiUser } from "@/apis/user";
 import { useQuery } from "@/hooks/useQuery";
+import { usePolling } from "@/hooks/usePolling";
 import { useMutation } from "@/hooks/useMutation";
+import { calcDailyRevenueCnyPerDisplayUnit } from "@/lib/hashrate-revenue";
 
 const fmtCny = (v: any) => {
   if (v === null || v === undefined || v === "") return "-";
@@ -27,13 +29,6 @@ const fmtNum = (v: any, digits = 8) => {
   return n.toFixed(digits).replace(/\.?0+$/, "");
 };
 
-const calcPerPRevenueCny = (coin: any) => {
-  const price = Number(coin?.priceCny || 0);
-  const dailyCoin = Number(coin?.dailyRevenuePerP || 0);
-  if (!Number.isFinite(price) || !Number.isFinite(dailyCoin)) return 0;
-  return Number((price * dailyCoin).toFixed(8));
-};
-
 const CoinBuyDetail = () => {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -42,10 +37,13 @@ const CoinBuyDetail = () => {
   const [profitAddress, setProfitAddress] = useState("");
   const [confirmOpen, setConfirmOpen] = useState(false);
 
-  const { data: coin, loading } = useQuery({
+  const { data: coin, loading, refresh: refreshCoin } = useQuery({
     fetcher: () => ApiPub.coinDetail({ id: coinId }),
     deps: [coinId],
   });
+  usePolling(async () => {
+    await refreshCoin();
+  }, { delay: 3000, enabled: !!coinId, immediateOnActivate: false });
 
   const { data: buyConfig } = useQuery({
     fetcher: ApiPub.machineBuyConfig,
@@ -73,7 +71,10 @@ const CoinBuyDetail = () => {
   }, [pCount]);
 
   const pricePerPUsd = useMemo(() => Number(buyConfig?.pricePerPUsd || 0), [buyConfig]);
-  const perPRevenueCny = useMemo(() => calcPerPRevenueCny(coin), [coin?.priceCny, coin?.dailyRevenuePerP]);
+  const unitRevenue = useMemo(
+    () => calcDailyRevenueCnyPerDisplayUnit(coin?.dailyRevenuePerP, coin?.networkHashrate, coin?.priceCny),
+    [coin?.dailyRevenuePerP, coin?.networkHashrate, coin?.priceCny]
+  );
   const isBtc = useMemo(() => String(coin?.symbol || "").toUpperCase() === "BTC", [coin?.symbol]);
 
   const totalAmountUsd = useMemo(() => {
@@ -82,9 +83,9 @@ const CoinBuyDetail = () => {
   }, [pNum, pricePerPUsd]);
 
   const dailyRevenueApprox = useMemo(() => {
-    if (!pNum || !perPRevenueCny) return 0;
-    return Number((pNum * perPRevenueCny).toFixed(8));
-  }, [pNum, perPRevenueCny]);
+    if (!pNum || !unitRevenue.revenueCny) return 0;
+    return Number((pNum * unitRevenue.revenueCny).toFixed(8));
+  }, [pNum, unitRevenue.revenueCny]);
 
   const payByUsdt = useMemo(() => {
     if (!totalAmountUsd) return 0;
@@ -162,7 +163,7 @@ const CoinBuyDetail = () => {
               <img src={coin?.logo} className="w-10 h-10 rounded-full" />
             </div>
             <div className="mt-3 text-[#16305a] font-bold">当前币价: {fmtCny(coin?.priceCny)}</div>
-            <div className="text-xs text-[#6a7f9f] mt-1">每P收益: {fmtCny(perPRevenueCny)}</div>
+            <div className="text-xs text-[#6a7f9f] mt-1">每{unitRevenue.unit}预计日收益: {fmtCny(unitRevenue.revenueCny)}</div>
           </>
         )}
       </section>
