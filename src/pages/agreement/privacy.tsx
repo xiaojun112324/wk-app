@@ -1,136 +1,188 @@
-import { useTranslation } from "react-i18next";
 import AppNav from "@/components/AppNav";
-import { useQuery } from "@/hooks/useQuery";
-import { News } from "@/apis/news";
-import { useParams } from "react-router-dom";
-import LoadingOrEmpty from "@/components/LoadingOrEmpty";
-import { formatDate } from "@/lib/format-time";
 
+const sectionTitleClass = "text-lg font-semibold text-[#19325f] mt-8 mb-3";
+const subTitleClass = "text-base font-semibold text-[#1d417c] mt-5 mb-2";
+const listClass = "list-disc pl-5 space-y-1";
 
-const Privacy = () => {
-    const { t } = useTranslation();
-    return <main className=" min-h-screen px-5">
-        <AppNav title="隐私协议" />
-        <h2 className="py-4 text-xl font-semibold text-black"></h2>
-        <div className=" text-sm  leading-6" >
+export default function Privacy() {
+  return (
+    <main className="min-h-screen px-5 pb-12">
+      <AppNav title="CServer 隐私协议" backFallback="/login" />
 
-            <section className="mb-12">
-                <p className="mb-6">本《隐私政策》将帮助您了解以下内容：</p>
-                <ol className="list-decimal list-inside space-y-4 ml-6">
-                    <li>我们会遵循隐私政策收集、使用您的信息，但不会仅因您同意本隐私政策而采用强制捆绑的方式一揽子收集个人信息。特别需要指出的是，您首次打开应用时，在未获得您授权同意的情况下，我们不会采集您的个人信息。</li>
-                    <li>当您使用或开启相关功能或使用服务时，为实现功能、服务所必需，我们会收集、使用相关信息。除非是为实现基本业务功能或根据法律法规要求所必需的必要信息，您均可以拒绝提供且不影响其他功能或服务。我们将在隐私政策中逐项说明哪些是必要信息。</li>
-                    <li>如果您未登录账号，我们会通过设备对应的标识符信息来保障信息推送（例如行情、资讯等）的基本功能。如果您登录了账号，我们会根据账号信息实现信息推送。</li>
-                    <li>地理位置、生物识别、相机、麦克风、相册与手机储存、通知、网络与蓝牙、日历权限，均不会默认开启，只有经过您的明示授权才会在为实现特定功能或服务时使用，您也可以撤回授权。</li>
-                    <li>我们已经通过了国家信息安全等级保护（三级）的测评和备案。</li>
-                </ol>
-            </section>
+      <div className="mt-3 rounded-2xl border border-[#d8e6ff] bg-white p-4 leading-7 text-[14px] text-[#253858] sm:p-6">
+        <h1 className="text-2xl font-bold text-[#163665]">CServer 隐私协议</h1>
+        <p className="mt-2">最后更新日期：2024年9月13日</p>
+        <p className="mt-3">
+          本隐私协议适用于 Fram Farm Inc. 及其附属公司和子公司（以下简称“CServer”、“我们”、“我方”或“我们的”）对个人信息的处理，包括但不限于我们的网站
+          {" "}
+          <a className="text-blue-600 underline" href="https://cserverapp.com" target="_blank" rel="noreferrer">
+            https://cserverapp.com
+          </a>
+          {" "}
+          以及链接到本隐私协议或受本隐私协议约束的其他在线或线下服务（统称为“服务”）。
+        </p>
+        <p className="mt-3">
+          请仔细阅读本隐私协议。使用任何服务即表示您同意按照本隐私协议所述的方式收集、使用和披露您的信息。如果您不同意本隐私协议，请勿使用或访问本服务。如果您代表他人提供个人信息，则本协议亦适用于该等个人。请将本协议内容告知他们或引导他们阅读本协议。
+        </p>
 
-            <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6">目录</h2>
-                <ol className="list-decimal list-inside space-y-3 ml-6">
-                    <li>我司如何收集和使用您的个人信息</li>
-                    <li>关于存储和对外提供您的个人信息</li>
-                    <li>我司如何保护您的个人信息</li>
-                    <li>您控制个人信息的权利</li>
-                    <li>本政策如何更新</li>
-                </ol>
-            </section>
+        <h2 className={sectionTitleClass}>目录</h2>
+        <ol className="list-decimal pl-5 space-y-1">
+          <li>本隐私协议的更新</li>
+          <li>我们收集的个人信息</li>
+          <li>我们如何使用个人信息</li>
+          <li>我们如何披露个人信息</li>
+          <li>您的隐私选择权与权利</li>
+          <li>个人信息的跨境传输</li>
+          <li>个人信息的留存</li>
+          <li>EU/UK GDPR 补充协议</li>
+          <li>儿童个人信息</li>
+        </ol>
 
-            <section className="space-y-12">
-                <article>
-                    <h2 className="text-2xl font-semibold mb-6">一、我司如何收集和使用您的个人信息</h2>
+        <h2 className={sectionTitleClass}>1. 本隐私协议的更新</h2>
+        <p>我们可能不时自行决定更新本隐私协议。如有更新，我们将在网站上公布更新后的隐私协议，并/或通过其他方式通知您。</p>
 
-                    <h3 className="text-xl font-medium mb-4">（一）收集和使用个人信息的原则</h3>
-                    <p className="mb-6">
-                        我司收集使用您的个人信息将遵循合法、正当、必要的原则，按照法律法规要求以及业务需要收集您的个人信息，不会收集与业务无关的信息或采取不正当方式收集信息。
-                    </p>
+        <h2 className={sectionTitleClass}>2. 我们收集的个人信息</h2>
+        <p>我们收集您直接提供给我们的个人信息、在您使用服务时自动收集的个人信息，以及从第三方来源获得的个人信息，具体如下所述。</p>
 
-                    <h3 className="text-xl font-medium mb-4">（二）收集和使用个人信息的目的</h3>
-                    <p className="mb-6">
-                        为了遵守中国法律的规定、以及为了向您提供服务并保障您的账号安全与系统运行安全，提升用户使用体验，我们会收集您在使用我们的服务的过程中产生的相关信息，包括：
-                    </p>
+        <h3 className={subTitleClass}>A. 您直接提供给我们的个人信息</h3>
+        <p>我们可能收集您主动提供给我们的个人信息，包括但不限于：</p>
+        <ul className={listClass}>
+          <li>账户信息：创建或管理账户时可能收集的信息，例如用户名、电子邮件地址、数字钱包地址、数字钱包中资产的相关信息、身份识别信息以及您存储在账户中的其他信息。</li>
+          <li>交易信息：您在使用服务时进行的交易相关个人信息及详情（包括您的数字钱包信息）。</li>
+          <li>与我们的沟通：您通过电子邮件或网页聊天工具等与我们沟通时产生的信息（我们及我们的服务提供商可能会收集）。</li>
+          <li>问卷调查：我们可能邀请您参与调查，如您参与，我们可能会收集相关个人信息。</li>
+          <li>互动功能：您通过消息功能、评论区、论坛、博客、社交媒体账户互动等提交或公开的信息。使用服务的公开分享功能提供的信息将被视为“公开信息”。</li>
+          <li>抽奖或竞赛：您参与我们举办的抽奖或竞赛时提供的信息。在某些司法管辖区，我们可能需要公开获奖者信息。</li>
+          <li>会议、展会及其他活动：我们在参加或举办会议、展会等活动时收集的个人信息。</li>
+          <li>业务开发与战略合作：用于评估和追求潜在商业机会而从个人或第三方收集的信息。</li>
+          <li>求职申请：您申请我们职位时提供的联系方式、简历等个人信息。</li>
+        </ul>
 
-                    <ul className="list-disc list-inside space-y-6 ml-6">
-                        <li>
-                            <strong>1. 注册、登录与认证</strong>
-                            <ul className="list-circle list-inside ml-8 mt-2 space-y-2">
-                                <li>注册登录：手机号、头像、昵称、密码、第三方账号绑定等信息。</li>
-                                <li>实名认证：姓名、手机号、身份证号码（调用第三方API核验身份证有效性）。</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>2. 展示、播放与浏览</strong>
-                            <ul className="list-circle list-inside ml-8 mt-2 space-y-2">
-                                <li>需要网络权限加载金融数据、资讯、视频等内容。</li>
-                                <li>未登录状态下使用IMEI等设备标识符提供基础行情、资讯服务。</li>
-                                <li>使用第三方视频播放SDK（微吼）和推送SDK（极光push），会涉及设备信息、日志、网络信息等。</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>4. 搜索</strong>：收集搜索关键字、日志记录，暂存在本地以提供搜索历史。
-                        </li>
-                        <li>
-                            <strong>5. 消息通知</strong>：需推送、振动等权限，使用极光push SDK。
-                        </li>
-                        <li>
-                            <strong>7. 适当性管理要求</strong>：根据监管规定收集手机号、姓名、身份证号码等信息。
-                        </li>
-                        <li>
-                            <strong>8. 支付功能</strong>：调用第三方支付SDK，涉及姓名、银行卡号、有效期、手机号等敏感信息（拒绝提供将无法使用支付功能）。
-                        </li>
-                        <li>
-                            <strong>10. 安全运行</strong>：收集安装应用列表、运行进程、崩溃信息、设备标识符（IMEI、MAC等）用于防范恶意程序和保障安全。
-                        </li>
-                    </ul>
-                </article>
+        <h3 className={subTitleClass}>B. 自动收集的个人信息</h3>
+        <ul className={listClass}>
+          <li>设备信息：IP地址、用户设置、Cookie标识符、其他唯一标识符、浏览器或设备信息、互联网服务提供商、位置信息（包括通过IP地址推导的大致位置以及精确地理位置信息，如适用）。</li>
+          <li>使用信息：您访问的页面、搜索内容、交互的内容类型、点击的链接、使用频率与时长等使用服务相关信息。</li>
+          <li>Cookie及类似技术（详见下文）：我们及第三方可能使用Cookie、像素标签（web beacon）等技术自动收集信息。</li>
+        </ul>
+        <p className="mt-2">Cookie 协议（及其他技术）</p>
+        <ul className={listClass}>
+          <li>Cookie 是存储在您设备浏览器中的小型文本文件。</li>
+          <li>像素标签/网络信标是嵌入服务中的代码片段，用于记录页面访问、广告点击、邮件打开等行为。</li>
+          <li>有关这些技术的选择权，请参见下文“您的隐私选择权与权利”部分。</li>
+        </ul>
 
-                <article>
-                    <h2 className="text-2xl font-semibold mb-6">三、关于存储和对外提供您的个人信息</h2>
-                    <p className="mb-4">个人信息存储于中华人民共和国境内，仅在法律法规要求或实现本政策目的必需的期限内保留。</p>
-                    <p className="mb-6">我们不会主动共享或公开披露您的个人信息，除非：</p>
-                    <ul className="list-disc list-inside ml-6 space-y-2">
-                        <li>获得您的明确同意；</li>
-                        <li>法律法规或政府主管部门强制要求；</li>
-                        <li>合并、收购等交易中转让个人信息（将要求新持有方继续受本政策约束）。</li>
-                    </ul>
-                </article>
+        <h3 className={subTitleClass}>C. 从第三方收集的个人信息</h3>
+        <ul className={listClass}>
+          <li>通过第三方服务登录时，根据您的隐私设置从该服务获取的信息。</li>
+          <li>服务用户上传或提供的关于他人的信息。</li>
+          <li>通过区块链数据分析或公开可用来源获得的信息。</li>
+        </ul>
 
-                <article>
-                    <h2 className="text-2xl font-semibold mb-6">四、我司如何保护您的个人信息</h2>
-                    <p className="mb-6">
-                        我们已采用符合业界标准的安全防护措施（加密、访问控制等）保护您的个人信息。尽管如此，由于技术局限及可能存在的恶意攻击，互联网并非绝对安全的环境。请使用复杂密码配合我们保障账号安全。
-                    </p>
-                    <p>如发生个人信息安全事件，我们将按法律法规要求及时告知您并上报监管部门。</p>
-                </article>
+        <h2 className={sectionTitleClass}>3. 我们如何使用个人信息</h2>
+        <p>我们将个人信息用于多种商业目的，包括提供服务、行政管理以及向您提供营销内容等。</p>
 
-                <article>
-                    <h2 className="text-2xl font-semibold mb-6">五、您控制个人信息的权利</h2>
-                    <p className="mb-6">您可通过App内功能：</p>
-                    <ul className="list-disc list-inside ml-6 space-y-2">
-                        <li>访问、更正、更新个人信息；</li>
-                        <li>删除个人信息（特定情形下）；</li>
-                        <li>注销账号（个人中心 → 账户安全）；</li>
-                        <li>撤回授权、清除缓存与搜索历史。</li>
-                    </ul>
-                    <p className="mt-6">我们将在验证身份后及时响应您的合理请求，但法律法规另有规定或涉及国家安全、公共利益等情形除外。</p>
-                </article>
+        <h3 className={subTitleClass}>A. 提供服务（履行与您的合同）</h3>
+        <ul className={listClass}>
+          <li>管理您的信息和账户。</li>
+          <li>提供特定区域、功能和特性访问。</li>
+          <li>响应支持请求。</li>
+          <li>与您沟通。</li>
+          <li>为提供服务所需与第三方共享。</li>
+          <li>促成您进行的交易。</li>
+          <li>验证身份（包括遵守KYC、反洗钱等法律法规）。</li>
+          <li>处理求职申请。</li>
+          <li>允许您注册活动等。</li>
+        </ul>
 
-                <article>
-                    <h2 className="text-2xl font-semibold mb-6">六、本政策如何更新</h2>
-                    <p>
-                        根据国家法律法规变化及服务需要，我们将不时修改本政策，更新后的版本将在App及官网公布并取代旧版本。
-                        如您不同意更新内容，请立即停止使用服务并注销账号；继续使用即视为接受更新后的政策。
-                    </p>
-                </article>
-            </section>
+        <h3 className={subTitleClass}>B. 行政目的</h3>
+        <ul className={listClass}>
+          <li>追求合法利益（如直接营销、研发、网络与信息安全、欺诈预防）。</li>
+          <li>检测安全事件、防范恶意/欺诈/非法活动。</li>
+          <li>进行数据分析。</li>
+          <li>衡量服务兴趣与参与度。</li>
+          <li>改进、升级或增强服务。</li>
+          <li>开发新产品和服务。</li>
+          <li>创建去标识化/聚合信息（且不会尝试重新识别，除非法律要求）。</li>
+          <li>内部质量控制与安全。</li>
+          <li>身份验证及权利行使确认。</li>
+          <li>调试修复错误。</li>
+          <li>审计、执行协议与政策。</li>
+          <li>遵守法律义务等。</li>
+        </ul>
 
-            <footer className="mt-16 text-center text-gray-600">
-                <p>请您在“同意”前仔细阅读本隐私政策。您点击“同意”即表示您已充分理解并接受本政策全部内容。</p>
-            </footer>
+        <h3 className={subTitleClass}>C. 营销</h3>
+        <p>我们可能根据适用法律使用个人信息向您发送定制化营销内容。</p>
 
-        </div>
+        <h3 className={subTitleClass}>D. 基于您的同意或指示</h3>
+        <p>在您提供信息时明确告知的其他目的，或经您同意、或您明确指示的目的。</p>
 
+        <h3 className={subTitleClass}>E. 自动化决策</h3>
+        <p>我们可能进行包括用户画像在内的自动化决策。如有疑问可联系我们。</p>
+
+        <h2 className={sectionTitleClass}>4. 我们如何披露个人信息</h2>
+        <h3 className={subTitleClass}>A. 为提供服务而披露</h3>
+        <ul className={listClass}>
+          <li>区块链：使用区块链相关功能时，交互/交易信息将被发送至相应区块链网络，并因区块链协议特性可能被第三方访问。</li>
+          <li>服务提供商：托管、客服、分析、营销、IT支持、身份验证等服务商。</li>
+          <li>向公众披露：如公开热门矿工表现等。</li>
+          <li>您互动的第三方服务：链接或集成的第三方服务，受其自身隐私协议约束。</li>
+          <li>商业合作伙伴：联合提供产品/服务时共享。</li>
+          <li>关联公司。</li>
+          <li>广告合作伙伴：用于兴趣类/定向广告（个性化广告）。</li>
+        </ul>
+
+        <h3 className={subTitleClass}>B. 为保护我们或他人</h3>
+        <p>在善意相信有必要时，为遵守法律请求、保护权利财产安全、执行政策、追收欠款、协助调查等目的披露。</p>
+
+        <h3 className={subTitleClass}>C. 企业交易</h3>
+        <p>合并、收购、资产转让、破产等重大交易中，个人信息可能被披露、出售或转移。</p>
+
+        <h2 className={sectionTitleClass}>5. 您的隐私选择权与权利</h2>
+        <h3 className={subTitleClass}>隐私选择权</h3>
+        <ul className={listClass}>
+          <li>电子邮件：可通过邮件底部退订链接取消营销邮件（交易相关邮件及必要通知除外）。</li>
+          <li>移动设备：可通过设备设置关闭推送通知、精确位置收集。</li>
+          <li>Do Not Track (DNT)：我们目前不响应浏览器DNT信号。</li>
+          <li>Cookie：可通过浏览器/设备设置限制或删除，但可能影响服务正常使用。</li>
+          <li>可访问 NAI、DAA、EDAA 等网站选择退出部分定向广告（需逐浏览器/设备操作）。</li>
+        </ul>
+
+        <h3 className={subTitleClass}>隐私权利（依适用法律）</h3>
+        <ul className={listClass}>
+          <li>访问、复制（可携权）</li>
+          <li>更正</li>
+          <li>删除</li>
+          <li>限制处理 / 反对处理</li>
+          <li>停止/拒绝直接营销</li>
+          <li>撤回同意（仅对未来有效）</li>
+          <li>向主管监管机构投诉</li>
+        </ul>
+        <p className="mt-2">行使权利请通过下方“联系我们”方式联系。</p>
+
+        <h2 className={sectionTitleClass}>6. 个人信息的跨境传输</h2>
+        <p>
+          您的个人信息可能被传输、处理并存储于全球任何地方（包括美国及其他国家），这些国家的数据保护水平可能与您所在国家不同。从欧盟/EEA、瑞士、英国向无充分保护水平国家传输时，我们可能使用欧盟标准合同条款（SCC）等保障措施。详情可联系我们咨询。
+        </p>
+
+        <h2 className={sectionTitleClass}>7. 个人信息的留存</h2>
+        <p>我们将根据您使用服务期间、收集目的、法律要求、争议解决、审计、合法商业目的等因素决定留存期限。</p>
+
+        <h2 className={sectionTitleClass}>8. EU/UK GDPR 补充协议</h2>
+        <p>（仅适用于受欧盟或英国GDPR管辖的个人信息处理）</p>
+        <p className="mt-2">
+          在某些情况下，提供个人信息可能是法律要求、合同要求或订立合同的必要条件。如您拒绝提供，我们将在当时告知您可能的后果。
+        </p>
+        <p className="mt-2">我们处理个人信息的合法依据包括：</p>
+        <img
+          src="/1111.jpg"
+          alt="我们处理个人信息的合法依据"
+          className="mt-3 w-full max-w-3xl rounded-xl border border-[#d8e6ff] shadow-sm"
+        />
+
+        <h2 className={sectionTitleClass}>9. 儿童个人信息</h2>
+        <p>服务并非面向18岁以下儿童，我们不会故意收集儿童个人信息。如家长/监护人认为儿童未经允许上传个人信息，请联系我们。</p>
+
+      </div>
     </main>
+  );
 }
-
-export default Privacy;

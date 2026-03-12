@@ -5,6 +5,7 @@ interface IProps {
     title: string;
     right?: ReactNode;
     className?: string;
+    backFallback?: string;
 }
 
 

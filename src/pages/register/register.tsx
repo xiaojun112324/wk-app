@@ -1,197 +1,184 @@
-import { useEffect, useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Checkbox, Form, Input, Select, Space, message } from "antd";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useCallback, useEffect, useState } from "react";
+import { Checkbox, Form, Input } from "antd";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/Button";
 import { apiUser } from "@/apis/user";
 import { useMutation } from "@/hooks/useMutation";
 import { toast } from "sonner";
-import { useQuery } from "@/hooks/useQuery";
-import { apiCommon } from "@/apis/common";
-import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
+const CODES = [
+  {
+    label: "https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/A/icons/code1.png",
+    value: "3n3d",
+  },
+  {
+    label: "https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/A/icons/code2.png",
+    value: "vrvt",
+  },
+  {
+    label: "https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/A/icons/code3.png",
+    value: "m8k2",
+  },
+  {
+    label: "https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/A/icons/code4.png",
+    value: "7wob",
+  },
+  {
+    label: "https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/A/icons/code5.png",
+    value: "xzih",
+  },
+];
+
+type RegisterValues = {
+  username: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+  VerificationCode: string;
+  inviteCode?: string;
+};
+
 export default function Register() {
-    const [searchParams] = useSearchParams();
-    const inviteCode = searchParams.get("inviteCode");
-    const { t } = useTranslation();
-    const nav = useNavigate();
-    const [form] = Form.useForm();
-    const [currentCode, setCurrentCode] = useState<any>(null)
-    const [isLeaving, setIsLeaving] = useState(false);
-    const codes = [{
-        label: 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/A/icons/code1.png',
-        value: '3n3d'
-    }, {
-        label: 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/A/icons/code2.png',
-        value: 'vrvt'
-    }, {
-        label: 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/A/icons/code3.png',
-        value: 'm8k2'
-    }, {
-        label: 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/A/icons/code4.png',
-        value: '7wob'
-    }, {
-        label: 'https://nineu-stock.oss-ap-southeast-1.aliyuncs.com/web/stock/A/icons/code5.png',
-        value: 'xzih'
-    }]
-    const getRandomCode = () => {
-        const index = Math.floor(Math.random() * codes.length);
-        setCurrentCode(codes[index]);
+  const [searchParams] = useSearchParams();
+  const inviteCode = searchParams.get("inviteCode");
+  const nav = useNavigate();
+  const [form] = Form.useForm<RegisterValues>();
+  const [currentCode, setCurrentCode] = useState<{ label: string; value: string } | null>(null);
+  const [isLeaving, setIsLeaving] = useState(false);
+
+  const getRandomCode = useCallback(() => {
+    const index = Math.floor(Math.random() * CODES.length);
+    setCurrentCode(CODES[index]);
+  }, []);
+
+  useEffect(() => {
+    getRandomCode();
+  }, [getRandomCode]);
+
+  useEffect(() => {
+    if (inviteCode) {
+      form.setFieldsValue({ inviteCode });
     }
-    useEffect(() => {
-        getRandomCode()
-    }, [])
+  }, [inviteCode, form]);
 
-    useEffect(() => {
-        if (inviteCode) {
-            form.setFieldsValue({
-                inviteCode: inviteCode,
-            });
-        }
-    }, [inviteCode])
+  const { mutate: doRegister, loading } = useMutation({
+    fetcher: apiUser.doRegister,
+    onSuccess: () => {
+      toast.success("注册成功");
+      form.resetFields();
+      setTimeout(() => nav("/login"), 1000);
+    },
+  });
 
-    const { mutate: doRegister, loading } = useMutation({
-        fetcher: apiUser.doRegister,
-        onSuccess: () => {
-            toast.success(t('register.successMessage'));
-            form.resetFields()
-            setTimeout(() => nav("/login"), 1000);
-        },
+  const handleSubmit = (values: RegisterValues) => {
+    if (values.password !== values.confirmPassword) {
+      toast.warning("两次输入的密码不一致");
+      return;
+    }
+    if (!currentCode) {
+      toast.warning("验证码错误");
+      return;
+    }
+    if (values.VerificationCode.toLowerCase() !== currentCode.value.toLowerCase()) {
+      toast.warning("验证码错误");
+      return;
+    }
+
+    doRegister({
+      username: values.username,
+      email: values.email,
+      password: values.password,
+      inviteCode: values.inviteCode,
     });
+  };
 
-    const handleSubmit = (values: any) => {
-        if (values.password !== values.confirmPassword) {
-            toast.warning(t('register.passwordMismatch'));
-            return;
-        }
-        if (values.VerificationCode.toLowerCase() !== currentCode.value.toLowerCase()) {
-            toast.warning(t('register.codeError'))
-            return
-        } 
+  const goLogin = () => {
+    setIsLeaving(true);
+    setTimeout(() => nav("/login"), 220);
+  };
 
-        let params =
-        {
-            "username": values.username,
-            "email": values.email,
-            "password": values.password,
-            "inviteCode": values.inviteCode
-        };
+  return (
+    <motion.div
+      className=" min-h-full max-w-6xl mx-auto mt-10 px-5"
+      initial={{ opacity: 0, y: 10 }}
+      animate={isLeaving ? { opacity: 0, y: -10 } : { opacity: 1, y: 0 }}
+      transition={{ duration: 0.22, ease: "easeInOut" }}
+    >
+      <div className="mt-10">
+        <Form form={form} layout="vertical" onFinish={handleSubmit} key="phoneForm">
+          <Form.Item label="用户名" name="username" rules={[{ required: true, message: "请输入用户名" }]}>
+            <Input placeholder="请输入用户名" />
+          </Form.Item>
 
-        doRegister(params);
-    };
+          <Form.Item label="邮箱" name="email" rules={[{ required: true, message: "请输入邮箱" }]}>
+            <Input placeholder="请输入邮箱" />
+          </Form.Item>
 
-    const goLogin = () => {
-        setIsLeaving(true);
-        setTimeout(() => nav("/login"), 220);
-    };
+          <Form.Item
+            label="密码"
+            name="password"
+            rules={[
+              { required: true, message: "请输入密码" },
+              { pattern: /^[\S]{6,12}$/, message: "密码需为 6-12 位，且不能包含空格" },
+            ]}
+          >
+            <Input.Password placeholder="请输入密码" />
+          </Form.Item>
 
-    return (
-        <motion.div
-            className=" min-h-full max-w-6xl mx-auto mt-10 px-5"
-            initial={{ opacity: 0, y: 10 }}
-            animate={isLeaving ? { opacity: 0, y: -10 } : { opacity: 1, y: 0 }}
-            transition={{ duration: 0.22, ease: "easeInOut" }}
-        >
-            <div className="mt-10">
-                <Form
-                    form={form}
-                    layout="vertical"
-                    onFinish={handleSubmit}
-                    key="phoneForm"
-                >
-                      <Form.Item label={t('register.username')} name="username" rules={[
-                        { required: true, message: t('register.usernamePlaceholder') },
-                    ]}>
-                        <Input
-                            placeholder={t('register.usernamePlaceholder')}
+          <Form.Item label="确认密码" name="confirmPassword" rules={[{ required: true, message: "请再次输入密码" }]}>
+            <Input.Password placeholder="请再次输入密码" />
+          </Form.Item>
 
-                        />
-                    </Form.Item>
+          <Form.Item label="邀请码" name="inviteCode" rules={[{ required: false, message: "请输入邀请码" }]}>
+            <Input placeholder="请输入邀请码" />
+          </Form.Item>
 
-                    <Form.Item label={t('register.emailLabel')} name="email" rules={[
-                        { required: true, message: t('register.emailRequired') },
-                    ]}>
-                        <Input
-                            placeholder={t('register.emailPlaceholder')}
-
-                        />
-                    </Form.Item>
-
-                    <Form.Item
-                        label={t('register.passwordLabel')}
-                        name="password"
-                        rules={[
-                            { required: true, message: t('register.passwordRequired') },
-                            { pattern: /^[\S]{6,12}$/, message: t('register.passwordPattern') }
-                        ]}
-                    >
-                        <Input.Password placeholder={t('register.passwordPlaceholder')} />
-                    </Form.Item>
-
-                    <Form.Item
-                        label={t('register.confirmPasswordLabel')}
-                        name="confirmPassword"
-                        rules={[{ required: true, message: t('register.confirmPasswordRequired') }]}
-                    >
-                        <Input.Password placeholder={t('register.confirmPasswordPlaceholder')} />
-                    </Form.Item>
-                 
-                    <Form.Item
-                        label={t('register.a1')}
-                        name="inviteCode"
-                        rules={[{ required: false, message: t('register.a2') }]}
-                    >
-                        <Input placeholder={t('register.a2')} />
-                    </Form.Item>
-                    <Form.Item
-                        label={t('register.a3')}
-                        name="VerificationCode"
-                        rules={[{ required: true, message: t('register.a4') }]}
-                    >
-                        <div className="flex items-center -mt-1">
-                            <Input placeholder={t('register.a4')} /><img className="h-12 ml-1 rounded relative !pointer-events-auto object-cover bg-center " onClick={getRandomCode} src={currentCode?.label} />
-                        </div>
-                    </Form.Item> 
-
-
-                    <Form.Item
-                        name="agreement"
-                        valuePropName="checked"
-                        rules={[
-                            {
-                                validator: (_, value) =>
-                                    value
-                                        ? Promise.resolve()
-                                        : Promise.reject(new Error(t('register.agreementRequired'))),
-                            },
-                        ]}
-                    >
-                        <Checkbox>
-                            {t('register.agreementText')}
-                            <a href="/agreement/privacy" target="_blank" className="ml-1 text-blue-500">
-                                《隐私政策》
-                            </a>
-                        </Checkbox>
-                    </Form.Item>
-
-
-                    <Form.Item>
-                        <Button type="submit" className="w-full !text-white" loading={loading}>
-                            {t('register.registerButton')}
-                        </Button>
-                    </Form.Item>
-
-                    <div className="flex items-center mb-5 mt-3 justify-center">
-                        <div className="text-sm text-gray-500">
-                            {t('register.hasAccount')}&nbsp;
-                            <button type="button" onClick={goLogin} className="text-gray-900">
-                                {t('register.login')}
-                            </button>
-                        </div>
-                    </div>
-                </Form>
+          <Form.Item label="验证码" name="VerificationCode" rules={[{ required: true, message: "请输入验证码" }]}>
+            <div className="flex items-center -mt-1">
+              <Input placeholder="请输入验证码" />
+              <img
+                className="h-12 ml-1 rounded relative !pointer-events-auto object-cover bg-center "
+                onClick={getRandomCode}
+                src={currentCode?.label}
+              />
             </div>
-        </motion.div>
-    );
+          </Form.Item>
+
+          <Form.Item
+            name="agreement"
+            valuePropName="checked"
+            rules={[
+              {
+                validator: (_, value) =>
+                  value ? Promise.resolve() : Promise.reject(new Error("请阅读并同意《隐私协议》")),
+              },
+            ]}
+          >
+            <Checkbox>
+              我已阅读并同意
+              <Link to="/agreement/privacy?from=register" className="ml-1 text-blue-500">
+                《隐私协议》
+              </Link>
+            </Checkbox>
+          </Form.Item>
+
+          <Form.Item>
+            <Button type="submit" className="w-full !text-white" loading={loading}>
+              注册
+            </Button>
+          </Form.Item>
+
+          <div className="flex items-center mb-5 mt-3 justify-center">
+            <div className="text-sm text-gray-500">
+              已有账号？&nbsp;
+              <button type="button" onClick={goLogin} className="text-gray-900">
+                去登录
+              </button>
+            </div>
+          </div>
+        </Form>
+      </div>
+    </motion.div>
+  );
 }
