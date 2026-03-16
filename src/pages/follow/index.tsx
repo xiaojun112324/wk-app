@@ -70,6 +70,7 @@ const Follow = () => {
   }, [page, parsed.isServerPage, runBillList]);
 
   const rates = wallet?.exchangeRates || {};
+  const stableRateCny = Number(rates.USDT_CNY || rates.USDC_CNY || 0);
   const coinSymbol = String(financeAccount?.coinSymbol || "").toUpperCase();
   const coinRateMap: Record<string, number> = {
     USDT: Number(rates.USDT_CNY || 0),
@@ -144,8 +145,7 @@ const Follow = () => {
 
         <div className="mt-3 rounded-lg border border-[#d5e2f7] bg-white/70 p-2 text-xs text-[#46658f]">
           <div className="mb-1 font-semibold">国际汇率</div>
-          <div className="flex items-center justify-between"><span>USDT/CNY</span><span className="tabular-nums">{fmt(rates.USDT_CNY, 4)}</span></div>
-          <div className="flex items-center justify-between"><span>USDC/CNY</span><span className="tabular-nums">{fmt(rates.USDC_CNY, 4)}</span></div>
+          <div className="flex items-center justify-between"><span>USDT/USDC/CNY</span><span className="tabular-nums">{fmt(stableRateCny, 4)}</span></div>
           <div className="flex items-center justify-between"><span>BTC/CNY</span><span className="tabular-nums">{fmt(rates.BTC_CNY, 2)}</span></div>
         </div>
       </section>
