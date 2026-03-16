@@ -1,5 +1,6 @@
 ﻿import { useMemo, useState } from "react";
 import { Activity } from "lucide-react";
+import { DocumentDuplicateIcon } from "@heroicons/react/24/outline";
 import { Modal, Select } from "antd";
 import { toast } from "sonner";
 import { useQuery } from "@/hooks/useQuery";
@@ -7,6 +8,7 @@ import { useMutation } from "@/hooks/useMutation";
 import { apiDashboard } from "@/apis/dashboard";
 import { apiOrder } from "@/apis/order";
 import { apiUser } from "@/apis/user";
+import { copyToClipboard } from "@/lib/copyToClipboard";
 import { formatDate } from "@/lib/format-time";
 
 const getStatusText = (status: any) => {
@@ -117,6 +119,15 @@ const StockQuotes = () => {
     },
   });
 
+  const handleCopyOrderId = async (orderId: any) => {
+    if (orderId === null || orderId === undefined || orderId === "") return;
+    try {
+      await copyToClipboard(String(orderId));
+      toast.success("订单ID已复制");
+    } catch {
+      toast.error("复制失败");
+    }
+  };
   const filteredOrders = useMemo(() => {
     const list = orders || [];
     if (orderTab === "holding") return list.filter((i: any) => Number(i.status) === 1);
@@ -212,7 +223,17 @@ const StockQuotes = () => {
                   <div className={`finance-chip border ${getStatusClass(item.status)}`}>{getStatusText(item.status)}</div>
                 </div>
                 <div className="finance-kv">
-                  <div>订单ID：{item.id}</div>
+                  <div className="flex items-center gap-1.5">
+                    <span>订单ID：{item.id}</span>
+                    <button
+                      type="button"
+                      className="inline-flex h-5 w-5 items-center justify-center rounded-md text-[#5f7faa] transition hover:bg-[#e9f2ff] hover:text-[#1d63dd]"
+                      onClick={() => handleCopyOrderId(item.id)}
+                      aria-label={`Copy order id ${item.id}`}
+                    >
+                      <DocumentDuplicateIcon className="h-[18px] w-[18px]" />
+                    </button>
+                  </div>
                   <div>数量：{toIntPositive(item.quantity)}</div>
                   <div>总投资：{item.totalInvest} USDT</div>
                   <div>算力：{toIntPositive(Number(item.totalHashrateTH || 0) / 1000)} PH/s</div>

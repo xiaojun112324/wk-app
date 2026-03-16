@@ -36,8 +36,11 @@ const CoinBuyDetail = () => {
   const [pCount, setPCount] = useState("1");
   const [profitAddress, setProfitAddress] = useState("");
   const [confirmOpen, setConfirmOpen] = useState(false);
+  const [coinHeader, setCoinHeader] = useState({ symbol: "", name: "", logo: "" });
+  const [livePriceCny, setLivePriceCny] = useState<any>(null);
+  const [liveUnitRevenueCny, setLiveUnitRevenueCny] = useState<any>(null);
 
-  const { data: coin, loading, refresh: refreshCoin } = useQuery({
+  const { data: coin, initLoading: coinInitLoading, refresh: refreshCoin } = useQuery({
     fetcher: () => ApiPub.coinDetail({ id: coinId }),
     deps: [coinId],
   });
@@ -132,6 +135,32 @@ const CoinBuyDetail = () => {
   }, [payByUsdt, payByUsdc]);
 
   useEffect(() => {
+    setCoinHeader({ symbol: "", name: "", logo: "" });
+    setLivePriceCny(null);
+    setLiveUnitRevenueCny(null);
+  }, [coinId]);
+
+  useEffect(() => {
+    setCoinHeader((prev) => ({
+      symbol: coin?.symbol || prev.symbol,
+      name: coin?.name || prev.name,
+      logo: coin?.logo || prev.logo,
+    }));
+  }, [coin?.symbol, coin?.name, coin?.logo]);
+
+  useEffect(() => {
+    if (coin?.priceCny !== null && coin?.priceCny !== undefined && coin?.priceCny !== "") {
+      setLivePriceCny(coin.priceCny);
+    }
+  }, [coin?.priceCny]);
+
+  useEffect(() => {
+    if (unitRevenue.revenueCny !== null && unitRevenue.revenueCny !== undefined && unitRevenue.revenueCny !== "") {
+      setLiveUnitRevenueCny(unitRevenue.revenueCny);
+    }
+  }, [unitRevenue.revenueCny]);
+
+  useEffect(() => {
     if (!profitAddress && addressOptions.length > 0) {
       setProfitAddress(String(addressOptions[0].value || ""));
     }
@@ -151,19 +180,19 @@ const CoinBuyDetail = () => {
       <AppNav title="购买详情" />
 
       <section className="glass-card p-4 mt-3">
-        {loading ? (
+        {coinInitLoading ? (
           <div className="text-[#6a7f9f] text-xs">加载中...</div>
         ) : (
           <>
             <div className="flex items-center justify-between">
               <div>
-                <div className="text-xl font-bold finance-title">{coin?.symbol || "-"}</div>
-                <div className="text-xs text-[#6a7f9f]">{coin?.name || "-"}</div>
+                <div className="text-xl font-bold finance-title">{coinHeader.symbol || "-"}</div>
+                <div className="text-xs text-[#6a7f9f]">{coinHeader.name || "-"}</div>
               </div>
-              <img src={coin?.logo} className="w-10 h-10 rounded-full" />
+              {coinHeader.logo ? <img src={coinHeader.logo} className="w-10 h-10 rounded-full" /> : null}
             </div>
-            <div className="mt-3 text-[#16305a] font-bold">当前币价: {fmtCny(coin?.priceCny)}</div>
-            <div className="text-xs text-[#6a7f9f] mt-1">每{unitRevenue.unit}预计日收益: {fmtCny(unitRevenue.revenueCny)}</div>
+            <div className="mt-3 text-[#16305a] font-bold">当前币价: {fmtCny(livePriceCny)}</div>
+            <div className="text-xs text-[#6a7f9f] mt-1">每{unitRevenue.unit}预计日收益: {fmtCny(liveUnitRevenueCny)}</div>
           </>
         )}
       </section>
