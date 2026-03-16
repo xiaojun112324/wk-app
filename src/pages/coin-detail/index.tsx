@@ -56,7 +56,7 @@ const CoinDetail = () => {
 
   const { id } = useParams();
   const coinId = Number(id);
-  const [days, setDays] = useState<7 | 30 | 180 | 365>(7);
+  const [days, setDays] = useState<7 | 30 | 180 | 365>(30);
   const [favorite, setFavorite] = useState(false);
   const [favLoading, setFavLoading] = useState(false);
 
@@ -156,17 +156,17 @@ const CoinDetail = () => {
         )}
       </section>
 
-      <section className="mt-3 flex gap-2">
-        <button className={`px-3 py-1.5 rounded-lg border text-xs ${days === 7 ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setDays(7)}>
+      <section className="mt-3 grid grid-cols-4 gap-2">
+        <button className={`w-full px-3 py-1.5 rounded-lg border text-xs ${days === 7 ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setDays(7)}>
           7天走势
         </button>
-        <button className={`px-3 py-1.5 rounded-lg border text-xs ${days === 30 ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setDays(30)}>
+        <button className={`w-full px-3 py-1.5 rounded-lg border text-xs ${days === 30 ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setDays(30)}>
           30天走势
         </button>
-        <button className={`px-3 py-1.5 rounded-lg border text-xs ${days === 180 ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setDays(180)}>
+        <button className={`w-full px-3 py-1.5 rounded-lg border text-xs ${days === 180 ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setDays(180)}>
           6月走势
         </button>
-        <button className={`px-3 py-1.5 rounded-lg border text-xs ${days === 365 ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setDays(365)}>
+        <button className={`w-full px-3 py-1.5 rounded-lg border text-xs ${days === 365 ? "finance-btn-primary" : "finance-btn-ghost"}`} onClick={() => setDays(365)}>
           1年走势
         </button>
       </section>
