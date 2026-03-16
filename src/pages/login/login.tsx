@@ -172,9 +172,16 @@ export default function Login() {
           <div className="flex items-center mb-5 mt-3 justify-center">
             <div className="text-sm text-gray-500">
               还没有账号？&nbsp;
-              <button type="button" onClick={goRegister} className="text-blue-500">
+              <Link
+                to="/register"
+                onClick={(e) => {
+                  e.preventDefault();
+                  goRegister();
+                }}
+                className="ml-1 text-blue-500 hover:underline"
+              >
                 快捷注册
-              </button>
+              </Link>
             </div>
           </div>
         </Form>
