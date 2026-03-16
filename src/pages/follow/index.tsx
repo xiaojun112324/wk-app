@@ -1,9 +1,12 @@
 ﻿import { Pagination } from "antd";
 import { useEffect, useMemo, useState } from "react";
 import { WalletCards } from "lucide-react";
+import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import { useQuery } from "@/hooks/useQuery";
 import { apiUser } from "@/apis/user";
 import { apiDashboard } from "@/apis/dashboard";
+
+const BALANCE_VISIBILITY_KEY = "wallet_balance_hidden";
 
 const fmt = (v: any, d = 8) => {
   const n = Number(v || 0);
@@ -37,6 +40,10 @@ const formatDate = (val: any) => {
 
 const Follow = () => {
   const [page, setPage] = useState(1);
+  const [hideBalance, setHideBalance] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.localStorage.getItem(BALANCE_VISIBILITY_KEY) === "1";
+  });
   const pageSize = 10;
 
   const { data: wallet } = useQuery({ fetcher: apiUser.getWalletAccount });
@@ -69,6 +76,11 @@ const Follow = () => {
     }
   }, [page, parsed.isServerPage, runBillList]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    window.localStorage.setItem(BALANCE_VISIBILITY_KEY, hideBalance ? "1" : "0");
+  }, [hideBalance]);
+
   const rates = wallet?.exchangeRates || {};
   const stableRateCny = Number(rates.USDT_CNY || rates.USDC_CNY || 0);
   const coinSymbol = String(financeAccount?.coinSymbol || "").toUpperCase();
@@ -92,6 +104,8 @@ const Follow = () => {
             : revenueCoinFromOverview * Number(coinRateMap[overviewCoin] || 0))
   );
 
+  const maskValue = (value: string) => (hideBalance ? "******" : value);
+
   return (
     <main className="pb-10 text-sm px-3 fade-stagger">
       <section className="mt-3 rounded-2xl border border-[#d8e7ff] bg-gradient-to-br from-[#f3f8ff] via-[#edf5ff] to-[#e6f0ff] px-4 py-3 shadow-[0_10px_24px_rgba(33,91,168,0.12)]">
@@ -106,47 +120,56 @@ const Follow = () => {
         </div>
       </section>
       <section className="glass-card p-4 mt-3">
-        <div className="flex items-start justify-between gap-3">
+        <div className="flex items-center justify-between gap-3">
           <div>
             <div className="text-xs text-[#6f87ab] mb-1">钱包总资产估值</div>
-            <div className="text-[28px] font-extrabold leading-[1.1] text-[#173a67] tabular-nums">￥{fmt(wallet?.totalAssetCny, 2)}</div>
+            <div className="text-[28px] font-extrabold leading-[1.1] text-[#173a67] tabular-nums">{maskValue(`￥${fmt(wallet?.totalAssetCny, 2)}`)}</div>
           </div>
+          <button
+            type="button"
+            className="rounded-lg p-1.5 text-[#5f7faa] hover:bg-[#edf5ff] hover:text-[#255cae]"
+            onClick={() => setHideBalance((prev) => !prev)}
+            aria-label={hideBalance ? "显示余额" : "隐藏余额"}
+            title={hideBalance ? "显示余额" : "隐藏余额"}
+          >
+            {hideBalance ? <EyeSlashIcon className="h-6 w-6" /> : <EyeIcon className="h-6 w-6" />}
+          </button>
         </div>
 
-        <div className="mt-3 mb-4 rounded-xl bg-[#f0f6ff] border border-[#d8e5fb] px-3 py-2.5">
+        <div className="mt-4 mb-4 rounded-xl bg-[#f0f6ff] border border-[#d8e5fb] px-3 py-2.5">
           <div className="text-[11px] text-[#6f87ab]">累计收益</div>
           <div className="text-base font-extrabold text-[#cf3f56] tabular-nums mt-0.5">
-            {fmt(totalRevenueBtc, 8)} BTC
+            {maskValue(`${fmt(totalRevenueBtc, 8)} BTC`)}
           </div>
           <div className="text-[13px] text-[#4f6f98] font-semibold mt-1 tabular-nums">
-            ≈ ￥{fmt(minedRevenueCny, 2)}
+            {maskValue(`≈ ￥${fmt(minedRevenueCny, 2)}`)}
           </div>
         </div>
 
         <div className="grid grid-cols-3 gap-2 mt-3">
           <div className="rounded-xl border border-[#d9e6fb] bg-white/80 px-2.5 py-2">
             <div className="text-[11px] text-[#6f87ab]">USDT</div>
-            <div className="text-sm font-bold text-[#163a66] tabular-nums">{fmt(wallet?.usdtBalance, 4)}</div>
+            <div className="text-sm font-bold text-[#163a66] tabular-nums">{maskValue(fmt(wallet?.usdtBalance, 4))}</div>
           </div>
           <div className="rounded-xl border border-[#d9e6fb] bg-white/80 px-2.5 py-2">
             <div className="text-[11px] text-[#6f87ab]">USDC</div>
-            <div className="text-sm font-bold text-[#163a66] tabular-nums">{fmt(wallet?.usdcBalance, 4)}</div>
+            <div className="text-sm font-bold text-[#163a66] tabular-nums">{maskValue(fmt(wallet?.usdcBalance, 4))}</div>
           </div>
           <div className="rounded-xl border border-[#d9e6fb] bg-white/80 px-2.5 py-2">
             <div className="text-[11px] text-[#6f87ab]">BTC</div>
-            <div className="text-sm font-bold text-[#163a66] tabular-nums">{fmt(wallet?.btcBalance, 8)}</div>
+            <div className="text-sm font-bold text-[#163a66] tabular-nums">{maskValue(fmt(wallet?.btcBalance, 8))}</div>
           </div>
         </div>
 
         <div className="mt-2 rounded-xl border border-[#d9e6fb] bg-[#f8fbff] px-3 py-2 text-xs text-[#355782] flex items-center justify-between">
           <span>算力余额(USDT)</span>
-          <span className="font-semibold tabular-nums text-[#173a67]">{fmt(wallet?.machineBalanceUsdt, 4)}</span>
+          <span className="font-semibold tabular-nums text-[#173a67]">{maskValue(fmt(wallet?.machineBalanceUsdt, 4))}</span>
         </div>
 
         <div className="mt-3 rounded-lg border border-[#d5e2f7] bg-white/70 p-2 text-xs text-[#46658f]">
           <div className="mb-1 font-semibold">国际汇率</div>
-          <div className="flex items-center justify-between"><span>USDT/USDC/CNY</span><span className="tabular-nums">{fmt(stableRateCny, 4)}</span></div>
-          <div className="flex items-center justify-between"><span>BTC/CNY</span><span className="tabular-nums">{fmt(rates.BTC_CNY, 2)}</span></div>
+          <div className="flex items-center justify-between"><span>USDT/USDC/CNY</span><span className="tabular-nums">{maskValue(fmt(stableRateCny, 4))}</span></div>
+          <div className="flex items-center justify-between"><span>BTC/CNY</span><span className="tabular-nums">{maskValue(fmt(rates.BTC_CNY, 2))}</span></div>
         </div>
       </section>
 
@@ -170,7 +193,7 @@ const Follow = () => {
                 <div className="text-right shrink-0">
                   <div className={`font-bold tabular-nums ${Number(item.type) === 1 ? "text-[#cf3f56]" : "text-[#1a57aa]"}`}>
                     {Number(item.type) === 1 ? "+" : Number(item.type) === 2 ? "-" : ""}
-                    {fmt(item.amount, 8)} {item.coinSymbol || "-"}
+                    {hideBalance ? "******" : `${fmt(item.amount, 8)} ${item.coinSymbol || "-"}`}
                   </div>
                   <div className="text-[11px] text-[#6a80a2]">{getBillDirection(item.type)}</div>
                 </div>
@@ -198,5 +221,3 @@ const Follow = () => {
 };
 
 export default Follow;
-
-
