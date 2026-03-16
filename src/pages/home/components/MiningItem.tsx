@@ -42,7 +42,7 @@ const MiningItem: React.FC<IProps> = ({ miningItem, className, onClick }) => {
               <span className="finance-chip">{miningItem?.algorithm || "-"}</span>
             </div>
             <div className="text-[#6b85ad] text-xs truncate">{"全网算力"}: {miningItem?.networkHashrate || "-"}</div>
-            <div className="text-[#6b85ad] text-xs truncate">{"算力"}: {miningItem?.poolHashrate || "-"}</div>
+            <div className="text-[#6b85ad] text-xs truncate">{"矿池算力"}: {miningItem?.poolHashrate || "-"}</div>
           </div>
         </div>
 

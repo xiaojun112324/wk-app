@@ -29,6 +29,29 @@ const fmtPct = (v: any) => {
   return `${n >= 0 ? "+" : ""}${n.toFixed(2)}%`;
 };
 
+const fmtMaybe = (v: any) => {
+  if (v === null || v === undefined || v === "") return "-";
+  return String(v);
+};
+
+const fmtNum = (v: any, digits = 2) => {
+  if (v === null || v === undefined || v === "") return "-";
+  const n = Number(v);
+  if (!Number.isFinite(n)) return String(v);
+  return n.toFixed(digits).replace(/\.?0+$/, "");
+};
+
+const fmtCoinAmount = (v: any, digits = 8) => {
+  if (v === null || v === undefined || v === "") return "-";
+  const raw = String(v).trim();
+  const m = raw.match(/^([0-9]+(?:\.[0-9]+)?)\s*([A-Za-z0-9]+)?$/);
+  if (!m) return raw;
+  const num = Number(m[1]);
+  if (!Number.isFinite(num)) return raw;
+  const amount = num.toFixed(digits).replace(/\.?0+$/, "");
+  return m[2] ? `${amount} ${m[2]}` : amount;
+};
+
 const CoinDetail = () => {
 
   const { id } = useParams();
@@ -154,13 +177,25 @@ const CoinDetail = () => {
         <div className="font-bold finance-title mb-3">关键指标</div>
         <div className="finance-kv">
           <div className="flex justify-between"><span>全网算力</span><span>{coin?.networkHashrate || "-"}</span></div>
-          <div className="flex justify-between"><span>算力</span><span>{coin?.poolHashrate || "-"}</span></div>
+          <div className="flex justify-between"><span>矿池算力</span><span>{coin?.poolHashrate || "-"}</span></div>
           <div className="flex justify-between"><span>每{unitRevenue.unit}预计日收益</span><span>{fmtCny(unitRevenue.revenueCny)}</span></div>
           <div className="flex justify-between"><span>算法</span><span>{coin?.algorithm || "-"}</span></div>
           <div className="flex justify-between"><span>24h最高</span><span>{fmtCny(coin?.high24h)}</span></div>
           <div className="flex justify-between"><span>24h最低</span><span>{fmtCny(coin?.low24h)}</span></div>
           <div className="flex justify-between"><span>流通市值</span><span>{coin?.marketCap ?? "-"}</span></div>
-          <div className="flex justify-between"><span>24h成交量</span><span>{coin?.totalVolume ?? "-"}</span></div>
+          <div className="flex justify-between"><span>24h成交量</span><span>{fmtNum(coin?.totalVolume, 2)}</span></div>
+        </div>
+      </section>
+
+      <section className="glass-card mt-3 p-4">
+        <div className="font-bold finance-title mb-3">挖矿数据</div>
+        <div className="finance-kv">
+          <div className="flex justify-between"><span>当前区块</span><span>{fmtMaybe(coin?.currentBlockHeight)}</span></div>
+          <div className="flex justify-between"><span>当前挖矿难度</span><span>{fmtMaybe(coin?.networkDifficulty)}</span></div>
+          <div className="flex justify-between"><span>区块奖励</span><span>{fmtMaybe(coin?.blockReward)}</span></div>
+          <div className="flex justify-between"><span>出块时间</span><span>{fmtMaybe(coin?.blockTime)}</span></div>
+          <div className="flex justify-between"><span>理论日产出币</span><span>{fmtCoinAmount(coin?.estimatedDailyOutputCoin, 4)}</span></div>
+          <div className="flex justify-between"><span>费率</span><span>{fmtMaybe(coin?.feeRate)}</span></div>
         </div>
       </section>
 
