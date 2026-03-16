@@ -1,5 +1,4 @@
 ﻿import { useMemo } from "react";
-import { Link } from "react-router-dom";
 import AppNav from "@/components/AppNav";
 import { useQuery } from "@/hooks/useQuery";
 import { usePolling } from "@/hooks/usePolling";
@@ -79,7 +78,7 @@ export default function PowRankPage() {
 
   return (
     <main className="text-sm pb-8 px-3 fade-stagger">
-      <AppNav title="PoW排行" right={<Link to="/support" className="text-xs text-[#1a57aa]">在线客服</Link>} />
+      <AppNav title="PoW排行" />
       <section className="glass-card px-3 py-3 mt-4">
         <div className="font-bold finance-title">PoW排行</div>
         <div className="text-[12px] text-[#5f7ba3] mt-1">按全网 PoW 24小时产出排行（人民币）</div>
