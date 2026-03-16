@@ -37,7 +37,7 @@ const CoinDetail = () => {
   const [favorite, setFavorite] = useState(false);
   const [favLoading, setFavLoading] = useState(false);
 
-  const { data: coin, loading: coinLoading, refresh: refreshCoin } = useQuery({
+  const { data: coin, initLoading: coinInitLoading, refresh: refreshCoin } = useQuery({
     fetcher: () => ApiPub.coinDetail({ id: coinId }),
     deps: [coinId],
   });
@@ -112,7 +112,7 @@ const CoinDetail = () => {
       />
 
       <section className="glass-card p-4 mt-3">
-        {coinLoading ? (
+        {coinInitLoading ? (
           <div className="text-[#6a7f9f] text-xs">加载中...</div>
         ) : (
           <>
