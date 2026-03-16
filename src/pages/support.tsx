@@ -171,7 +171,7 @@ const Support: React.FC = () => {
       <AppNav
         title={
           <div className="inline-flex items-center justify-center gap-1.5">
-            <span>CServer-在线客服</span>
+            <span>CServer-官方客服</span>
             <CheckBadgeIcon className="h-5 w-5 text-[#1d63dd]" />
           </div>
         }
