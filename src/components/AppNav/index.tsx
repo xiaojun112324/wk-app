@@ -2,7 +2,7 @@ import AnimatedHeaderWrapper from "@/layouts/components/AnimatedHeaderWrapper";
 import Nav from "./Nav";
 import { ReactNode } from "react";
 interface IProps {
-    title: string;
+    title: ReactNode;
     right?: ReactNode;
     className?: string;
     backFallback?: string;

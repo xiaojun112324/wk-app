@@ -5,7 +5,7 @@ import { useBack } from "@/hooks/useBack";
 import clsx from "clsx";
 
 interface IProps {
-    title: string;
+    title: ReactNode;
     right?: ReactNode;
     className?: string;
     backFallback?: string;

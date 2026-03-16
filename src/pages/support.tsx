@@ -1,6 +1,8 @@
 ﻿import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Input, Spin } from "antd";
 import { SendOutlined, PictureOutlined } from "@ant-design/icons";
+import { CheckBadgeIcon } from "@heroicons/react/24/solid";
+import { AnimatePresence, motion } from "framer-motion";
 import type { RcFile } from "antd/es/upload/interface";
 import AppNav from "@/components/AppNav";
 import { apiChat } from "@/apis/chat";
@@ -14,6 +16,7 @@ const Support: React.FC = () => {
   const [sending, setSending] = useState(false);
   const [text, setText] = useState("");
   const [keyboardInset, setKeyboardInset] = useState(0);
+  const [previewImage, setPreviewImage] = useState("");
   const fileRef = useRef<HTMLInputElement | null>(null);
   const chatRef = useRef<HTMLDivElement | null>(null);
   const bottomRef = useRef<HTMLDivElement | null>(null);
@@ -25,9 +28,12 @@ const Support: React.FC = () => {
     return list;
   }, [messages]);
 
-  const scrollBottom = () => {
+  const scrollBottom = (behavior: ScrollBehavior = "smooth") => {
     requestAnimationFrame(() => {
-      bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+      chatRef.current?.scrollTo({
+        top: chatRef.current.scrollHeight + 200,
+        behavior,
+      });
     });
   };
 
@@ -67,6 +73,7 @@ const Support: React.FC = () => {
       if (!rid) return;
       setRoomId(rid);
       await pullMessages(rid, false);
+      setTimeout(() => scrollBottom("auto"), 80);
     } finally {
       setLoading(false);
     }
@@ -110,9 +117,9 @@ const Support: React.FC = () => {
 
   useEffect(() => {
     if (sortedMessages.length) {
-      scrollBottom();
+      scrollBottom(loading ? "auto" : "smooth");
     }
-  }, [sortedMessages.length]);
+  }, [sortedMessages.length, loading]);
 
   const sendMessage = async (messageType: number, messageContent: string) => {
     if (!roomId || !messageContent) return;
@@ -161,15 +168,24 @@ const Support: React.FC = () => {
 
   return (
     <main className="fixed inset-0 z-40 h-[100dvh] overflow-hidden flex flex-col bg-[#f4f8ff]">
-      <AppNav title="在线客服" />
+      <AppNav
+        title={
+          <div className="inline-flex items-center justify-center gap-1.5">
+            <span>CServer-在线客服</span>
+            <CheckBadgeIcon className="h-5 w-5 text-[#1d63dd]" />
+          </div>
+        }
+      />
 
       <div
         ref={chatRef}
-        className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-3 pt-2 flex flex-col gap-3"
+        className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-3 pt-4 flex flex-col gap-3"
         style={{ paddingBottom: `${12 + keyboardInset}px` }}
       >
         {loading ? (
-          <div className="h-full flex items-center justify-center"><Spin /></div>
+          <div className="h-full flex items-center justify-center">
+            <Spin />
+          </div>
         ) : sortedMessages.length === 0 ? (
           <div className="text-center text-[#7990b2] mt-10">暂无消息</div>
         ) : (
@@ -181,7 +197,18 @@ const Support: React.FC = () => {
                 <div className="max-w-[78%]">
                   <div className={isSelf ? "rounded-2xl bg-[#1d63dd] text-white px-3 py-2" : "rounded-2xl bg-white text-[#203a64] px-3 py-2 border border-[#d7e5ff]"}>
                     {isImage ? (
-                      <img src={msg.messageContent} alt="chat" className="rounded-xl max-w-[180px]" onClick={() => window.open(msg.messageContent)} />
+                      <button
+                        type="button"
+                        className="block cursor-zoom-in"
+                        onClick={() => setPreviewImage(msg.messageContent)}
+                        onTouchEnd={() => setPreviewImage(msg.messageContent)}
+                      >
+                        <img
+                          src={msg.messageContent}
+                          alt="chat"
+                          className="rounded-xl max-w-[180px] pointer-events-none transition-transform duration-200 hover:scale-[1.02]"
+                        />
+                      </button>
                     ) : (
                       <span className="whitespace-pre-wrap break-all">{msg.messageContent}</span>
                     )}
@@ -217,7 +244,7 @@ const Support: React.FC = () => {
           autoSize={{ minRows: 1, maxRows: 4 }}
           placeholder="请输入消息"
           className="flex-1"
-          onFocus={() => setTimeout(scrollBottom, 120)}
+          onFocus={() => setTimeout(() => scrollBottom(), 120)}
           onPressEnter={(e) => {
             if (!e.shiftKey) {
               e.preventDefault();
@@ -238,9 +265,36 @@ const Support: React.FC = () => {
           </span>
         </button>
       </div>
+
+      <AnimatePresence>
+        {previewImage ? (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-[#081120]/80 px-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.22, ease: "easeInOut" }}
+            onClick={() => setPreviewImage("")}
+          >
+            <motion.img
+              key={previewImage}
+              src={previewImage}
+              alt="preview"
+              className="max-h-[88vh] max-w-[92vw] rounded-2xl shadow-[0_24px_60px_rgba(0,0,0,0.38)] cursor-zoom-out"
+              initial={{ opacity: 0, scale: 0.82 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.88 }}
+              transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
+              onClick={(e) => {
+                e.stopPropagation();
+                setPreviewImage("");
+              }}
+            />
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </main>
   );
 };
 
 export default Support;
-
