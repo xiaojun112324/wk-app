@@ -100,12 +100,12 @@ export default function Register() {
 
   return (
     <motion.div
-      className=" min-h-full max-w-6xl mx-auto mt-10 px-5"
+      className=" min-h-full max-w-6xl mx-auto pt-3 px-5"
       initial={{ opacity: 0, y: 10 }}
       animate={isLeaving ? { opacity: 0, y: -10 } : { opacity: 1, y: 0 }}
       transition={{ duration: 0.22, ease: "easeInOut" }}
     >
-      <div className="mt-10">
+      <div className="mt-2">
         <Form form={form} layout="vertical" onFinish={handleSubmit} key="phoneForm">
           <Form.Item label="用户名" name="username" rules={[{ required: true, message: "请输入用户名" }]}>
             <Input placeholder="请输入用户名" />

@@ -7,6 +7,7 @@ import { apiUser } from "@/apis/user";
 import { toast } from "sonner";
 import { useUserContext } from "@/contexts/user/userContext";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import { ShieldCheck } from "lucide-react";
 import { setToken } from "@/lib/token";
 
@@ -66,8 +67,17 @@ export default function Login() {
       animate={isLeaving ? { opacity: 0, y: -10 } : { opacity: 1, y: 0 }}
       transition={{ duration: 0.22, ease: "easeInOut" }}
     >
+      <div className="px-4 pt-4">
+        <button
+          type="button"
+          onClick={() => nav("/")}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-[#1a4da8] hover:bg-[#edf3ff]"
+        >
+          <ChevronLeftIcon className="w-5" />
+        </button>
+      </div>
       <section className=" pb-10 ">
-        <div className=" px-5 pt-15  font-semibold text-2xl ">
+        <div className=" px-5 pt-8 font-semibold text-2xl ">
           <div>Hi</div>
           <div>欢迎来到 CServer</div>
         </div>
@@ -171,7 +181,7 @@ export default function Login() {
 
           <div className="flex items-center mb-5 mt-3 justify-center">
             <div className="text-sm text-gray-500">
-              还没有账号？&nbsp;
+              {"\u8fd8\u6ca1\u6709\u8d26\u53f7\uff1f"}&nbsp;
               <Link
                 to="/register"
                 onClick={(e) => {
@@ -180,10 +190,11 @@ export default function Login() {
                 }}
                 className="ml-1 text-blue-500 hover:underline"
               >
-                快捷注册
+                {"\u5feb\u6377\u6ce8\u518c"}
               </Link>
             </div>
           </div>
+
         </Form>
       </div>
     </motion.div>

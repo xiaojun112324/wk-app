@@ -1,11 +1,13 @@
 ﻿import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from "sonner";
 
 import AppNav from "@/components/AppNav";
 import { useQuery } from "@/hooks/useQuery";
 import { usePolling } from "@/hooks/usePolling";
 import { ApiPub } from "@/apis/public";
 import { ApiFavorite } from "@/apis/favorite";
+import { getToken } from "@/lib/token";
 import { StarIcon as StarSolid } from "@heroicons/react/24/solid";
 import { StarIcon as StarOutline } from "@heroicons/react/24/outline";
 import { Chart } from "./components/Chart";
@@ -56,6 +58,7 @@ const CoinDetail = () => {
 
   const { id } = useParams();
   const coinId = Number(id);
+  const hasToken = !!getToken();
   const [days, setDays] = useState<7 | 30 | 180 | 365>(30);
   const [favorite, setFavorite] = useState(false);
   const [favLoading, setFavLoading] = useState(false);
@@ -98,17 +101,24 @@ const CoinDetail = () => {
 
   useEffect(() => {
     const symbol = coin?.symbol;
-    if (!symbol) return;
+    if (!symbol || !hasToken) {
+      setFavorite(false);
+      return;
+    }
     ApiFavorite.check(symbol)
       .then((res: any) => {
         setFavorite(!!res?.data?.favorite);
       })
       .catch(() => {});
-  }, [coin?.symbol]);
+  }, [coin?.symbol, hasToken]);
 
   const toggleFavorite = async () => {
     const symbol = coin?.symbol;
     if (!symbol || favLoading) return;
+    if (!hasToken) {
+      toast.warning("\u8bf7\u5148\u767b\u5f55");
+      return;
+    }
     setFavLoading(true);
     try {
       if (favorite) {
