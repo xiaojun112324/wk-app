@@ -176,7 +176,7 @@ const StockQuotes = () => {
           <div>运行中算力：{overview?.avgHashrate24h ?? 0} {overview?.hashrateUnit || "PH/s"}</div>
           <div>昨日收益：<span className={valueClass(overview?.yesterdayRevenueCoin)}>{overview?.yesterdayRevenueCoin ?? 0} {overview?.coinSymbol || "BTC"}</span></div>
           <div>
-            总可提取收益(BTC)：
+            总可提取收益(BTC) ≈
             <span className={totalWithdrawable > 0 ? "text-[#cf3f56] font-semibold ml-1" : "ml-1"}>
               {fmt(totalWithdrawable, 8)}
             </span>
@@ -237,9 +237,9 @@ const StockQuotes = () => {
                   <div>数量：{toIntPositive(item.quantity)}</div>
                   <div>总投资：{item.totalInvest} USDT</div>
                   <div>算力：{toIntPositive(Number(item.totalHashrateTH || 0) / 1000)} PH/s</div>
-                  <div>今日收益(BTC)：<span className={valueClass(item.todayRevenueCoin)}>{item.todayRevenueCoin}</span></div>
-                  <div>总收益(BTC)：<span className={valueClass(item.totalRevenueCoin)}>{item.totalRevenueCoin}</span></div>
-                  <div className="col-span-2">可提取收益(BTC)：<span className={canWithdraw ? "text-[#cf3f56] font-semibold" : ""}>{fmt(item.withdrawableRevenueCoin, 8)}</span></div>
+                  <div>今日收益(BTC) ≈ <span className={valueClass(item.todayRevenueCoin)}>{item.todayRevenueCoin}</span></div>
+                  <div>总收益(BTC) ≈ <span className={valueClass(item.totalRevenueCoin)}>{item.totalRevenueCoin}</span></div>
+                  <div className="col-span-2">可提取收益(BTC) ≈ <span className={canWithdraw ? "text-[#cf3f56] font-semibold" : ""}>{fmt(item.withdrawableRevenueCoin, 8)}</span></div>
                   <div className="col-span-2">买入时间：{formatDate(item.createTime)}</div>
                 </div>
                 {Number(item.status) === 1 ? (
@@ -327,7 +327,7 @@ const StockQuotes = () => {
                 onChange={(v) => setExtractAddress(v)}
               />
             </div>
-            <div>可提取金额：<span className="text-[#cf3f56] font-semibold">{fmt(extractingOrder.withdrawableRevenueCoin, 8)} BTC</span></div>
+            <div>可提取金额 ≈ <span className="text-[#cf3f56] font-semibold">{fmt(extractingOrder.withdrawableRevenueCoin, 8)} BTC</span></div>
           </div>
         ) : null}
       </Modal>
@@ -359,12 +359,12 @@ const StockQuotes = () => {
               (allRows || []).map((row: any) => (
                 <div key={row.orderId} className="flex justify-between text-xs py-1 border-b border-[#e7efff] last:border-b-0">
                   <span>订单#{row.orderId}</span>
-                  <span>{fmt(row.withdrawableRevenueCoin, 8)} BTC</span>
+                  <span>≈ {fmt(row.withdrawableRevenueCoin, 8)} BTC</span>
                 </div>
               ))
             )}
           </div>
-          <div>总提取金额：<span className="text-[#cf3f56] font-semibold">{fmt(totalWithdrawable, 8)} BTC</span></div>
+          <div>总提取金额 ≈ <span className="text-[#cf3f56] font-semibold">{fmt(totalWithdrawable, 8)} BTC</span></div>
           <Select
             className="w-full"
             placeholder="请选择BTC网络收款地址"
