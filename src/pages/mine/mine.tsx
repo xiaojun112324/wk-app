@@ -88,8 +88,9 @@ export default function Mine() {
       <section className="glass-card px-4 py-4 mt-3">
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0 flex-1">
-            <div className="text-lg font-extrabold finance-title">个人信息</div>
-            <div className="text-xs text-[#5d7ca8] mt-1 truncate">{me?.username || userInfo?.username || "-"}</div>
+            <div className="text-[22px] font-extrabold text-[#163a68] leading-tight truncate">
+              {me?.username || userInfo?.username || "-"}
+            </div>
           </div>
           <div className="shrink-0 rounded-xl px-3 py-2 bg-gradient-to-r from-[#17b464] to-[#4ddc8a] text-white shadow-[0_8px_18px_rgba(22,163,74,0.28)] flex items-center justify-center gap-1.5">
             <ShieldCheck size={14} className="animate-pulse" />
@@ -118,7 +119,7 @@ export default function Mine() {
             </div>
           </div>
           <div className="flex items-center justify-between gap-3 text-xs">
-            <span className="text-[#6c85aa] shrink-0">邀请码</span>
+            <span className="text-[#6c85aa] shrink-0">我的邀请码</span>
             <div className="flex items-center gap-2">
               <span className="text-[#2a4a78] font-medium">{inviteCode}</span>
               {inviteCode !== "-" ? (
