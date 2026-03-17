@@ -57,6 +57,10 @@ const Calculator = () => {
     <main className="min-h-screen px-3 pb-8 fade-stagger text-sm">
       <AppNav title="收益计算器" />
 
+      <section className="mt-3 rounded-2xl border border-[#d9e7ff] bg-[#f7fbff] px-4 py-3 text-xs leading-5 text-[#4d6892]">
+        当前数据为以 FPPS 模式结算、未扣除矿池费率的理论值，可能与您的实际收益存在偏差，仅供参考。
+      </section>
+
       <section className="glass-card mt-3 p-4">
         <div className="font-bold finance-title mb-3">参数输入</div>
 
