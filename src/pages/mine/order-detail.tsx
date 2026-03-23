@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next'
 import BigNumber from "bignumber.js";
 import { formatDate } from '@/lib/format-time'
 import { useRefreshOnLanguageChange } from '@/hooks/useRefreshOnLanguageChange'
+import { FinanceCardSkeleton, FinanceListSkeleton } from "@/components/finance-skeleton"
 
 export default function OrderDetail() {
     const { id } = useParams<{ id: string }>()
@@ -45,7 +46,14 @@ export default function OrderDetail() {
                     </h2>
                 </div>
 
-                <LoadingOrEmpty loading={loading} data={orderData?.orderDetailList} />
+                {loading ? (
+                    <>
+                        <FinanceCardSkeleton lines={5} />
+                        <FinanceListSkeleton rows={2} />
+                    </>
+                ) : null}
+
+                <LoadingOrEmpty loading={false} data={orderData?.orderDetailList} />
 
                 {!loading && orderData ? (
                     <form className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">

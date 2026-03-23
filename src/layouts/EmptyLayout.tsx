@@ -6,7 +6,7 @@ interface EmptyLayoutProps {
 
 export default function EmptyLayout({ children }: EmptyLayoutProps) {
   return (
-    <div className="empty-layout">
+    <div className="empty-layout ios-safe-top">
       {children}
     </div>
   );

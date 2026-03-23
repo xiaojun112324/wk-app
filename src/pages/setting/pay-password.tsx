@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { apiUser } from "@/apis/user";
 import { useMutation } from "@/hooks/useMutation";
 import { useQuery } from "@/hooks/useQuery";
+import { FinanceFormSkeleton } from "@/components/finance-skeleton";
 import { toast } from "sonner";
 
 export default function PayPassword() {
@@ -26,6 +27,10 @@ export default function PayPassword() {
     <main>
       <AppNav title="设置/修改资金密码" />
       <div className="px-5 mt-6">
+        {initLoading ? (
+          <FinanceFormSkeleton rows={3} />
+        ) : (
+        <>
         <div className="text-xs text-[#5d7ca8] mb-3">
           {!statusLoaded ? "正在加载密码状态..." : hasOldPassword ? "修改资金密码需填写旧资金密码" : "首次设置无需旧资金密码"}
         </div>
@@ -74,6 +79,8 @@ export default function PayPassword() {
             提交
           </Button>
         </Form>
+        </>
+        )}
       </div>
     </main>
   );

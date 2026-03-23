@@ -51,7 +51,7 @@ export default function AnimatedHeaderWrapper({
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-full z-50"
+      className="fixed top-0 left-0 ios-safe-offset-top w-full z-50"
       initial={false} // 初始不隐藏
       animate={controls}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}

@@ -8,6 +8,7 @@ import { useMutation } from "@/hooks/useMutation";
 import { useQuery } from "@/hooks/useQuery";
 import { formatDate } from "@/lib/format-time";
 import { apiUser } from "@/apis/user";
+import { FinanceFormSkeleton, FinanceListSkeleton } from "@/components/finance-skeleton";
 
 const NETWORK_OPTIONS = [
   { label: "TRC20", value: "TRC20" },
@@ -45,6 +46,8 @@ export default function ReceiveAddressPage() {
     Number((pwdRes as any)?.code) === 200;
   const hasFundPassword = !!pwdStatus?.hasWithdrawPassword;
   const canOperateAddress = pwdLoadedOk && hasFundPassword;
+
+  const pageInitLoading = pwdInitLoading || addressInitLoading;
 
   const addressLoadedOk =
     !addressInitLoading &&
@@ -86,7 +89,7 @@ export default function ReceiveAddressPage() {
     <main className="px-3 pb-8 fade-stagger">
       <AppNav title="收款地址绑定" />
 
-      <section className="glass-card px-4 py-4 mt-3">
+      {pageInitLoading ? <FinanceFormSkeleton rows={3} /> : <section className="glass-card px-4 py-4 mt-3">
         {pwdLoadedOk && !hasFundPassword ? (
           <div className="mb-3 rounded-lg border border-[#ffd6db] bg-[#fff2f4] px-3 py-2 text-xs text-[#c0354f]">
             未设置资金密码，暂时不能绑定收款地址。请先
@@ -136,9 +139,9 @@ export default function ReceiveAddressPage() {
             绑定地址
           </Button>
         </Form>
-      </section>
+      </section>}
 
-      <section className="glass-card px-4 py-4 mt-3">
+      {pageInitLoading ? <FinanceListSkeleton rows={3} /> : <section className="glass-card px-4 py-4 mt-3">
         <div className="font-bold finance-title mb-2">已绑定地址</div>
         {!addressLoadedOk ? (
           <div className="text-xs text-[#6a7f9f]">加载中...</div>
@@ -196,7 +199,7 @@ export default function ReceiveAddressPage() {
             ))}
           </div>
         )}
-      </section>
+      </section>}
 
       <Modal
         title="修改收款地址"

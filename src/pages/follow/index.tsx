@@ -5,6 +5,7 @@ import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import { useQuery } from "@/hooks/useQuery";
 import { apiUser } from "@/apis/user";
 import { apiDashboard } from "@/apis/dashboard";
+import { FinanceCardSkeleton, FinanceHeroSkeleton, FinanceListSkeleton } from "@/components/finance-skeleton";
 
 const BALANCE_VISIBILITY_KEY = "wallet_balance_hidden";
 
@@ -46,13 +47,14 @@ const Follow = () => {
   });
   const pageSize = 10;
 
-  const { data: wallet } = useQuery({ fetcher: apiUser.getWalletAccount });
-  const { data: financeAccount } = useQuery({ fetcher: () => apiUser.getFinanceAccount({}) });
+  const { data: wallet, initLoading: walletInitLoading } = useQuery({ fetcher: apiUser.getWalletAccount });
+  const { data: financeAccount, initLoading: financeInitLoading } = useQuery({ fetcher: () => apiUser.getFinanceAccount({}) });
   const { data: billList, run: runBillList, loading: billLoading } = useQuery({
     fetcher: (params?: any) => apiUser.getFinanceBillList(params || {}),
     params: { pageNum: 1, pageSize },
   });
-  const { data: revenueOverview } = useQuery({ fetcher: apiDashboard.revenueOverview });
+  const { data: revenueOverview, initLoading: revenueInitLoading } = useQuery({ fetcher: apiDashboard.revenueOverview });
+  const pageInitLoading = walletInitLoading || financeInitLoading || revenueInitLoading;
 
   const parsed = useMemo(() => {
     if (Array.isArray(billList)) {
@@ -108,7 +110,7 @@ const Follow = () => {
 
   return (
     <main className="pb-10 text-sm px-3 fade-stagger">
-      <section className="mt-3 rounded-2xl border border-[#d8e7ff] bg-gradient-to-br from-[#f3f8ff] via-[#edf5ff] to-[#e6f0ff] px-4 py-3 shadow-[0_10px_24px_rgba(33,91,168,0.12)]">
+      {pageInitLoading ? <FinanceHeroSkeleton /> : <section className="mt-3 rounded-2xl border border-[#d8e7ff] bg-gradient-to-br from-[#f3f8ff] via-[#edf5ff] to-[#e6f0ff] px-4 py-3 shadow-[0_10px_24px_rgba(33,91,168,0.12)]">
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
             <div className="text-[18px] font-extrabold text-[#163a68] leading-none">钱包</div>
@@ -118,8 +120,8 @@ const Follow = () => {
             <WalletCards size={18} className="text-[#255cae]" />
           </div>
         </div>
-      </section>
-      <section className="glass-card p-4 mt-3">
+      </section>}
+      {pageInitLoading ? <FinanceCardSkeleton lines={6} /> : <section className="glass-card p-4 mt-3">
         <div className="flex items-center justify-between gap-3">
           <div>
             <div className="text-xs text-[#6f87ab] mb-1">钱包总资产估值</div>
@@ -171,9 +173,9 @@ const Follow = () => {
           <div className="flex items-center justify-between"><span>USDT/USDC/CNY</span><span className="tabular-nums">{maskValue(fmt(stableRateCny, 4))}</span></div>
           <div className="flex items-center justify-between"><span>BTC/CNY</span><span className="tabular-nums">{maskValue(fmt(rates.BTC_CNY, 2))}</span></div>
         </div>
-      </section>
+      </section>}
 
-      <section className="mt-4 glass-card p-3">
+      {pageInitLoading ? <FinanceListSkeleton rows={4} /> : <section className="mt-4 glass-card p-3">
         <div className="flex items-center justify-between mb-2">
           <div className="text-base font-extrabold finance-title">资金明细</div>
           <div className="text-[11px] text-[#6f87ab]">第 {page} 页</div>
@@ -215,7 +217,7 @@ const Follow = () => {
             </div>
           )}
         </div>
-      </section>
+      </section>}
     </main>
   );
 };

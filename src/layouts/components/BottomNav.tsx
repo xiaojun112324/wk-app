@@ -31,38 +31,43 @@ const BottomNav: React.FC = () => {
   ];
 
   return (
-    <nav className="ky-bottom-nav fixed bottom-0 left-0 right-0 z-30 ios-safe-bottom">
-      <ul className="flex justify-around" style={{ margin: 0 }}>
-        {navItems.map((item) => (
-          <li key={item.name} className="w-full">
-            <NavLink
-              to={item.path}
-              className={({ isActive }) =>
-                clsx(
-                  "ky-nav-item flex items-center justify-center py-2.5 w-full transition-colors",
-                  isActive ? "text-[#1b437f]" : "text-[#7083a3]"
-                )
-              }
-            >
-              {({ isActive }) => {
-                const IconComp = isActive ? item.ActiveIcon : item.Icon;
-                return (
-                  <div className="relative flex flex-col items-center justify-center">
-                    <span className="h-[9px]" />
-                    <IconComp className="size-6" />
-                    {!!item.count && (
-                      <span className="absolute top-0 right-0 text-[10px] bg-red-500 text-white rounded-full px-1">
-                        {item.count}
-                      </span>
-                    )}
-                    <span className="text-[11px] mt-1 font-semibold tracking-[0.2px]">{item.name}</span>
-                  </div>
-                );
-              }}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+    <nav
+      className="ky-bottom-nav fixed bottom-0 left-0 right-0 z-30 ios-safe-bottom"
+      style={{ transform: "translateZ(0)" }}
+    >
+      <div className="mx-auto w-full max-w-[560px]">
+        <ul className="flex h-[70px] justify-around" style={{ margin: 0 }}>
+          {navItems.map((item) => (
+            <li key={item.name} className="w-full">
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  clsx(
+                    "ky-nav-item flex h-full items-center justify-center w-full transition-colors",
+                    isActive ? "text-[#1b437f]" : "text-[#7083a3]"
+                  )
+                }
+              >
+                {({ isActive }) => {
+                  const IconComp = isActive ? item.ActiveIcon : item.Icon;
+                  return (
+                    <div className="relative flex flex-col items-center justify-center">
+                      <span className="h-[9px]" />
+                      <IconComp className="size-6" />
+                      {!!item.count && (
+                        <span className="absolute top-0 right-0 text-[10px] bg-red-500 text-white rounded-full px-1">
+                          {item.count}
+                        </span>
+                      )}
+                      <span className="text-[11px] mt-1 font-semibold tracking-[0.2px]">{item.name}</span>
+                    </div>
+                  );
+                }}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 };

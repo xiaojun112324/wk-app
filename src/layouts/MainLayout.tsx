@@ -8,14 +8,11 @@ interface MainLayoutProps {
 export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <>
-      <div className="main-layout finance-page">
+      <div className="main-layout finance-page ios-safe-top">
         {children}
       </div>
-      <div className="ios-safe-bottom">
-        <div className="h-[70px]">
-          <BottomNav />
-        </div>
-      </div>
+      <div style={{ height: "calc(70px + var(--safe-area-bottom))" }} />
+      <BottomNav />
     </>
   );
 }

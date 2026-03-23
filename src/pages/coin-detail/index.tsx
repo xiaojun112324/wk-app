@@ -8,6 +8,7 @@ import { usePolling } from "@/hooks/usePolling";
 import { ApiPub } from "@/apis/public";
 import { ApiFavorite } from "@/apis/favorite";
 import { getToken } from "@/lib/token";
+import { FinanceCardSkeleton } from "@/components/finance-skeleton";
 import { StarIcon as StarSolid } from "@heroicons/react/24/solid";
 import { StarIcon as StarOutline } from "@heroicons/react/24/outline";
 import { Chart } from "./components/Chart";
@@ -183,7 +184,7 @@ const CoinDetail = () => {
 
       {chartLoading ? <div className="text-[#6a7f9f] text-xs mt-3">走势图加载中...</div> : <Chart data={chartData} />}
 
-      <section className="glass-card mt-3 p-4">
+      {coinInitLoading ? <FinanceCardSkeleton lines={8} /> : <section className="glass-card mt-3 p-4">
         <div className="font-bold finance-title mb-3">关键指标</div>
         <div className="finance-kv">
           <div className="flex justify-between"><span>全网算力</span><span>{coin?.networkHashrate || "-"}</span></div>
@@ -195,9 +196,9 @@ const CoinDetail = () => {
           <div className="flex justify-between"><span>流通市值</span><span>{coin?.marketCap ?? "-"}</span></div>
           <div className="flex justify-between"><span>24h成交量</span><span>{fmtNum(coin?.totalVolume, 2)}</span></div>
         </div>
-      </section>
+      </section>}
 
-      <section className="glass-card mt-3 p-4">
+      {coinInitLoading ? <FinanceCardSkeleton lines={6} /> : <section className="glass-card mt-3 p-4">
         <div className="font-bold finance-title mb-3">挖矿数据</div>
         <div className="finance-kv">
           <div className="flex justify-between"><span>当前区块</span><span>{fmtMaybe(coin?.currentBlockHeight)}</span></div>
@@ -207,7 +208,7 @@ const CoinDetail = () => {
           <div className="flex justify-between"><span>理论日产出币</span><span>{fmtCoinAmount(coin?.estimatedDailyOutputCoin, 4)}</span></div>
           <div className="flex justify-between"><span>费率</span><span>{fmtMaybe(coin?.feeRate)}</span></div>
         </div>
-      </section>
+      </section>}
 
     </main>
   );

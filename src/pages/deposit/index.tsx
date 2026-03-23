@@ -7,11 +7,12 @@ import { useQuery } from "@/hooks/useQuery";
 import { apiUser } from "@/apis/user";
 import { toast } from "sonner";
 import AppNav from "@/components/AppNav";
+import { FinanceFormSkeleton } from "@/components/finance-skeleton";
 
 export default function Deposit() {
   const [form] = Form.useForm();
   const asset = Form.useWatch("asset", form) || "USDT";
-  const { data: wallet } = useQuery({ fetcher: apiUser.getWalletAccount });
+  const { data: wallet, initLoading } = useQuery({ fetcher: apiUser.getWalletAccount });
 
   useEffect(() => {
     if (asset === "USDC") {
@@ -47,7 +48,7 @@ export default function Deposit() {
   return (
     <section className="px-3 pb-8 fade-stagger">
       <AppNav title="提交充值" />
-      <div className="glass-card px-4 py-4 mt-3">
+      {initLoading ? <FinanceFormSkeleton rows={4} /> : <div className="glass-card px-4 py-4 mt-3">
         <Form form={form} layout="vertical" onFinish={(values) => submitRecharge(values)}>
           <Form.Item label="资产" name="asset" initialValue="USDT" rules={[{ required: true }]}>
             <Select options={[{ label: "USDT", value: "USDT" }, { label: "USDC", value: "USDC" }]} />
@@ -79,7 +80,7 @@ export default function Deposit() {
             提交充值
           </Button>
         </Form>
-      </div>
+      </div>}
     </section>
   );
 }

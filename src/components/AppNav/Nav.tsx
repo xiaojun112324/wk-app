@@ -18,7 +18,7 @@ export default function Nav({ title, right, className, backFallback = "/" }: IPr
     const goBack = useBack(resolvedFallback);
 
     return (
-        <header className={clsx("sticky top-0 z-20", className)}>
+        <header className={clsx("sticky top-0 ios-safe-offset-top z-20", className)}>
             <div className="mx-3 mt-2 rounded-2xl border border-[#cfe0ff] bg-white/85 backdrop-blur-md shadow-[0_8px_24px_rgba(20,99,255,0.12)]">
                 <div className="relative flex h-12 items-center justify-between px-2 min-w-0">
                     <button className="relative z-10 flex h-9 w-9 items-center justify-center rounded-xl text-[#1a4da8] hover:bg-[#edf3ff]" onClick={goBack}>

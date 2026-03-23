@@ -3,6 +3,7 @@ import { Select } from "antd";
 import AppNav from "@/components/AppNav";
 import { useQuery } from "@/hooks/useQuery";
 import { ApiPub } from "@/apis/public";
+import { FinanceCardSkeleton, FinanceFormSkeleton } from "@/components/finance-skeleton";
 import { calcDailyCoinPerDisplayUnit, calcDailyRevenueCnyPerDisplayUnit } from "@/lib/hashrate-revenue";
 
 const fmt = (v: any, d = 8) => {
@@ -16,7 +17,7 @@ const fmtCny = (v: any, d = 4) => {
 };
 
 const Calculator = () => {
-  const { data: poolStats } = useQuery({ fetcher: ApiPub.poolStats, params: {} });
+  const { data: poolStats, initLoading } = useQuery({ fetcher: ApiPub.poolStats, params: {} });
 
   const options = useMemo(
     () => (poolStats || []).map((c: any) => ({ label: `${c.symbol} (${c.name || ""})`, value: c.symbol })),
@@ -61,7 +62,7 @@ const Calculator = () => {
         当前数据为以 FPPS 模式结算、未扣除矿池费率的理论值，可能与您的实际收益存在偏差，仅供参考。
       </section>
 
-      <section className="glass-card mt-3 p-4">
+      {initLoading ? <FinanceFormSkeleton rows={2} /> : <section className="glass-card mt-3 p-4">
         <div className="font-bold finance-title mb-3">参数输入</div>
 
         <div className="text-xs text-[#5f7ba3] mb-1">币种</div>
@@ -81,9 +82,9 @@ const Calculator = () => {
           className="w-full border border-[#cddfff] bg-[#f7fbff] rounded-xl px-3 py-2 outline-none"
           placeholder={`请输入算力，例如 1 ${inputUnit}/s`}
         />
-      </section>
+      </section>}
 
-      <section className="glass-card mt-3 p-4">
+      {initLoading ? <FinanceCardSkeleton lines={6} /> : <section className="glass-card mt-3 p-4">
         <div className="font-bold finance-title mb-3">计算结果</div>
         <div className="finance-kv text-[11px]">
           <div className="flex justify-between items-center gap-2"><span className="whitespace-nowrap">当前币价</span><span className="whitespace-nowrap">{fmtCny(priceCny, 2)}</span></div>
@@ -97,7 +98,7 @@ const Calculator = () => {
         <div className="mt-3 rounded-xl bg-[#f5f9ff] border border-[#d8e5fb] p-3 text-xs text-[#355782]">
           计算公式：每日收益(CNY) = 币价(CNY) × 每日币收益(每{inputUnit}) × 算力({inputUnit}/s)
         </div>
-      </section>
+      </section>}
     </main>
   );
 };

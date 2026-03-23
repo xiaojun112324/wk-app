@@ -87,7 +87,7 @@ const Task = () => {
         </div>
 
         <section className=" rounded-t-2xl  mt-5 px-5 ">
-            <section className="sticky top-0 left-0 w-full">
+            <section className="sticky top-0 left-0 ios-safe-offset-top w-full">
                 <div className="flex items-center justify-between  py-2 px-5 mb-2 ">
                     <Switch
                         value={positionType}

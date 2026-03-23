@@ -7,6 +7,7 @@ import AppNav from "@/components/AppNav";
 import { useMutation } from "@/hooks/useMutation";
 import { useQuery } from "@/hooks/useQuery";
 import { apiUser } from "@/apis/user";
+import { FinanceFormSkeleton } from "@/components/finance-skeleton";
 
 export default function Withdraw() {
   const [form] = Form.useForm();
@@ -52,6 +53,8 @@ export default function Withdraw() {
   };
   const currentBalance = balanceMap[asset] ?? 0;
 
+  const pageInitLoading = addressInitLoading;
+
   const addressOptions = useMemo(
     () =>
       (addressRows || [])
@@ -78,7 +81,7 @@ export default function Withdraw() {
   return (
     <section className="px-3 pb-8 fade-stagger">
       <AppNav title="提交提现" />
-      <div className="glass-card px-4 py-4 mt-3">
+      {pageInitLoading ? <FinanceFormSkeleton rows={5} /> : <div className="glass-card px-4 py-4 mt-3">
         {!fundPwdStatus?.hasWithdrawPassword ? (
           <div className="mb-3 rounded-lg border border-[#ffd6db] bg-[#fff2f4] px-3 py-2 text-xs text-[#c0354f]">
             未设置资金密码，暂时不能提现。请先
@@ -174,7 +177,7 @@ export default function Withdraw() {
             提交提现
           </Button>
         </Form>
-      </div>
+      </div>}
     </section>
   );
 }

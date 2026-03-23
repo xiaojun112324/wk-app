@@ -40,8 +40,8 @@ const UploadMultiple: React.FC<UploadMultipleProps> = ({
     setFileList(newList);
 
     const urls = newList
-      .filter((f) => f.status === "done" && (f.url || f.response?.data?.imgUrl))
-      .map((f) => f.url || f.response?.data?.imgUrl)
+      .filter((f) => f.status === "done" && (f.url || f.response?.data?.url))
+      .map((f) => f.url || f.response?.data?.url)
       .filter(Boolean) as string[];
 
     onChange?.(urls);
@@ -57,8 +57,8 @@ const UploadMultiple: React.FC<UploadMultipleProps> = ({
         headers: { "Content-Type": "multipart/form-data" },
       });
 
-      if (res?.code === 200 && res.data?.imgUrl) {
-        file.url = res.data.imgUrl;
+      if (res?.code === 200 && res.data?.url) {
+        file.url = res.data.url;
         onSuccess?.(res, file);
         toast.success(t("UploadMultiple.uploadSuccess"));
       } else {

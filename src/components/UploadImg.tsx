@@ -47,7 +47,7 @@ const UploadSingleImg: React.FC<UploadSingleImgProps> = ({
     className,
     disabled = false,
     accept = 'image/*',
-    uploadUrl = '/user/upload.do',
+    uploadUrl = '/api/file/upload',
     isModal = true
 }) => {
     const { t } = useTranslation();
@@ -69,14 +69,14 @@ const UploadSingleImg: React.FC<UploadSingleImgProps> = ({
         try {
             setLoading(true);
             const formData = new FormData();
-            formData.append('upload_file', file as RcFile);
+            formData.append('file', file as RcFile);
 
             const res: any = await $post(uploadUrl, formData, {
                 isForm: false,
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
 
-            if (res.status === 0 && res.data?.url) {
+            if (res?.code === 200 && res.data?.url) {
                 const newFile: UploadFile = {
                     uid: (file as RcFile).uid,
                     name: (file as RcFile).name,

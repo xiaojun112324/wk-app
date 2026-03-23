@@ -10,6 +10,7 @@ import { useQuery } from "@/hooks/useQuery";
 import { usePolling } from "@/hooks/usePolling";
 import { useMutation } from "@/hooks/useMutation";
 import { calcDailyRevenueCnyPerDisplayUnit } from "@/lib/hashrate-revenue";
+import { FinanceCardSkeleton, FinanceFormSkeleton } from "@/components/finance-skeleton";
 
 const fmtCny = (v: any) => {
   if (v === null || v === undefined || v === "") return "-";
@@ -48,13 +49,14 @@ const CoinBuyDetail = () => {
     await refreshCoin();
   }, { delay: 3000, enabled: !!coinId, immediateOnActivate: false });
 
-  const { data: buyConfig } = useQuery({
+  const { data: buyConfig, initLoading: buyConfigInitLoading } = useQuery({
     fetcher: ApiPub.machineBuyConfig,
     params: {},
   });
 
-  const { data: wallet } = useQuery({ fetcher: apiUser.getWalletAccount, params: {} });
+  const { data: wallet, initLoading: walletInitLoading } = useQuery({ fetcher: apiUser.getWalletAccount, params: {} });
   const { data: addressRows, res: addressRes, initLoading: addressInitLoading, loading: addressLoading } = useQuery({ fetcher: apiUser.getReceiveAddressList });
+  const pageInitLoading = coinInitLoading || buyConfigInitLoading || walletInitLoading || addressInitLoading;
 
   const pickBalance = (candidates: string[]) => {
     for (const key of candidates) {
@@ -155,7 +157,7 @@ const CoinBuyDetail = () => {
   }, [coin?.priceCny]);
 
   useEffect(() => {
-    if (unitRevenue.revenueCny !== null && unitRevenue.revenueCny !== undefined && unitRevenue.revenueCny !== "") {
+    if (unitRevenue.revenueCny !== null && unitRevenue.revenueCny !== undefined) {
       setLiveUnitRevenueCny(unitRevenue.revenueCny);
     }
   }, [unitRevenue.revenueCny]);
@@ -179,11 +181,14 @@ const CoinBuyDetail = () => {
     <main className="pb-10 px-3 text-sm fade-stagger">
       <AppNav title="购买详情" />
 
-      <section className="glass-card p-4 mt-3">
-        {coinInitLoading ? (
-          <div className="text-[#6a7f9f] text-xs">加载中...</div>
-        ) : (
-          <>
+      {pageInitLoading ? (
+        <>
+          <FinanceCardSkeleton lines={4} />
+          <FinanceFormSkeleton rows={5} />
+        </>
+      ) : (
+        <>
+          <section className="glass-card p-4 mt-3">
             <div className="flex items-center justify-between">
               <div>
                 <div className="text-xl font-bold finance-title">{coinHeader.symbol || "-"}</div>
@@ -193,103 +198,103 @@ const CoinBuyDetail = () => {
             </div>
             <div className="mt-3 text-[#16305a] font-bold">当前币价: {fmtCny(livePriceCny)}</div>
             <div className="text-xs text-[#6a7f9f] mt-1">每{unitRevenue.unit}预计日收益: {fmtCny(liveUnitRevenueCny)}</div>
-          </>
-        )}
-      </section>
+          </section>
 
-      <section className="glass-card mt-3 p-4">
-        <div className="font-bold finance-title mb-3">按 P 购买</div>
-        <input
-          type="number"
-          inputMode="decimal"
-          step="0.0001"
-          min="0"
-          className="border border-[#cddfff] bg-[#f7fbff] rounded-xl px-3 py-2 w-full outline-none"
-          placeholder="请输入购买数量 (P)"
-          value={pCount}
-          onChange={(e) => setPCount(e.target.value.replace(",", "."))}
-        />
+          <section className="glass-card mt-3 p-4">
+            <div className="font-bold finance-title mb-3">按 P 购买</div>
+            <input
+              type="number"
+              inputMode="decimal"
+              step="0.0001"
+              min="0"
+              className="border border-[#cddfff] bg-[#f7fbff] rounded-xl px-3 py-2 w-full outline-none"
+              placeholder="请输入购买数量 (P)"
+              value={pCount}
+              onChange={(e) => setPCount(e.target.value.replace(",", "."))}
+            />
 
-        {noAddress ? (
-          <div className="mt-3 rounded-lg border border-[#ffd6db] bg-[#fff2f4] px-3 py-2 text-xs text-[#c0354f]">
-            请先绑定BTC网络收款地址后购买算力。
-            <Link className="ml-1 text-[#1a57aa] font-semibold" to="/receive-address">去绑定收款地址</Link>
-          </div>
-        ) : null}
+            {noAddress ? (
+              <div className="mt-3 rounded-lg border border-[#ffd6db] bg-[#fff2f4] px-3 py-2 text-xs text-[#c0354f]">
+                请先绑定BTC网络收款地址后购买算力。
+                <Link className="ml-1 text-[#1a57aa] font-semibold" to="/receive-address">去绑定收款地址</Link>
+              </div>
+            ) : null}
 
-        <div className="mt-3">
-          <div className="text-xs text-[#5f7ba3] mb-1">收益到账地址</div>
-          <Select
-            className="w-full"
-            value={profitAddress || undefined}
-            onChange={(v) => setProfitAddress(String(v || ""))}
-            options={addressOptions}
-            placeholder={!addressLoadedOk ? "收款地址加载中..." : "请选择已绑定BTC收款地址"}
-            loading={!addressLoadedOk}
-          />
-        </div>
+            <div className="mt-3">
+              <div className="text-xs text-[#5f7ba3] mb-1">收益到账地址</div>
+              <Select
+                className="w-full"
+                value={profitAddress || undefined}
+                onChange={(v) => setProfitAddress(String(v || ""))}
+                options={addressOptions}
+                placeholder={!addressLoadedOk ? "收款地址加载中..." : "请选择已绑定BTC收款地址"}
+                loading={!addressLoadedOk}
+              />
+            </div>
 
-        <div className="mt-3 text-[11px] text-[#5f7ba3] space-y-2">
-          <div className="grid grid-cols-2 gap-2">
-            <span className="whitespace-nowrap">1P单价: {fmtU(pricePerPUsd)} U</span>
-            <span className="whitespace-nowrap text-right">数量: {fmtNum(pNum, 8)} P</span>
-          </div>
-          <div className="grid grid-cols-2 gap-2">
-            <span className="whitespace-nowrap font-semibold text-[#1b437f]">总金额: {fmtU(totalAmountUsd)} U</span>
-            <span className="whitespace-nowrap text-right">预计日收益: {fmtCny(dailyRevenueApprox)}</span>
-          </div>
-        </div>
+            <div className="mt-3 text-[11px] text-[#5f7ba3] space-y-2">
+              <div className="grid grid-cols-2 gap-2">
+                <span className="whitespace-nowrap">1P单价: {fmtU(pricePerPUsd)} U</span>
+                <span className="whitespace-nowrap text-right">数量: {fmtNum(pNum, 8)} P</span>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <span className="whitespace-nowrap font-semibold text-[#1b437f]">总金额: {fmtU(totalAmountUsd)} U</span>
+                <span className="whitespace-nowrap text-right">预计日收益: {fmtCny(dailyRevenueApprox)}</span>
+              </div>
+            </div>
 
-        <div className="mt-3 rounded-xl bg-[#f5f9ff] border border-[#d8e5fb] p-3 text-xs text-[#355782] space-y-2">
-          <div>USDT 可用: {fmtU(usdtBalance)}</div>
-          <div>USDC 可用: {fmtU(usdcBalance)}</div>
-          <div className="pt-1 border-t border-[#d8e5fb]">
-            <div>应付总额: {fmtU(totalAmountUsd)} U</div>
-            <div className="mt-1">支付货币：{payMethodText}</div>
-          </div>
-          {insufficient ? <div className="text-[#cf3f56]">余额不足，无法完成购买</div> : null}
-        </div>
+            <div className="mt-3 rounded-xl bg-[#f5f9ff] border border-[#d8e5fb] p-3 text-xs text-[#355782] space-y-2">
+              <div>USDT 可用: {fmtU(usdtBalance)}</div>
+              <div>USDC 可用: {fmtU(usdcBalance)}</div>
+              <div className="pt-1 border-t border-[#d8e5fb]">
+                <div>应付总额: {fmtU(totalAmountUsd)} U</div>
+                <div className="mt-1">支付货币：{payMethodText}</div>
+              </div>
+              {insufficient ? <div className="text-[#cf3f56]">余额不足，无法完成购买</div> : null}
+            </div>
 
-        <div className="pt-3 mt-5">
-          <button
-            className="finance-btn-primary w-full py-2.5 rounded-xl"
-            disabled={buying}
-            onClick={() => {
-              if (!isBtc) {
-                toast.warning("暂未开通此矿池");
-                return;
-              }
-              if (!addressLoadedOk) {
-                toast.warning("收款地址加载中，请稍后");
-                return;
-              }
-              if (noAddress) {
-                toast.warning("请先绑定BTC网络收款地址后购买算力");
-                return;
-              }
-              if (!profitAddress) {
-                toast.warning("请选择收益到账地址");
-                return;
-              }
-              if (!pNum) {
-                toast.warning("请输入大于 0 的 P 数量");
-                return;
-              }
-              if (!pricePerPUsd) {
-                toast.warning("1P 单价未配置，请联系管理员");
-                return;
-              }
-              if (insufficient) {
-                toast.warning("USDT + USDC 余额不足");
-                return;
-              }
-              setConfirmOpen(true);
-            }}
-          >
-            立即购买
-          </button>
-        </div>
-      </section>
+            <div className="pt-3 mt-5">
+              <button
+                className="finance-btn-primary w-full py-2.5 rounded-xl"
+                disabled={buying}
+                onClick={() => {
+                  if (!isBtc) {
+                    toast.warning("暂未开通此矿池");
+                    return;
+                  }
+                  if (!addressLoadedOk) {
+                    toast.warning("收款地址加载中，请稍后");
+                    return;
+                  }
+                  if (noAddress) {
+                    toast.warning("请先绑定BTC网络收款地址后购买算力");
+                    return;
+                  }
+                  if (!profitAddress) {
+                    toast.warning("请选择收益到账地址");
+                    return;
+                  }
+                  if (!pNum) {
+                    toast.warning("请输入大于 0 的 P 数量");
+                    return;
+                  }
+                  if (!pricePerPUsd) {
+                    toast.warning("1P 单价未配置，请联系管理员");
+                    return;
+                  }
+                  if (insufficient) {
+                    toast.warning("USDT + USDC 余额不足");
+                    return;
+                  }
+                  setConfirmOpen(true);
+                }}
+              >
+                立即购买
+              </button>
+            </div>
+          </section>
+        </>
+      )}
 
       <Modal
         title="确认购买信息"

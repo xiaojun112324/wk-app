@@ -9,6 +9,7 @@ import { apiDashboard } from "@/apis/dashboard";
 import { apiOrder } from "@/apis/order";
 import { apiUser } from "@/apis/user";
 import { copyToClipboard } from "@/lib/copyToClipboard";
+import { FinanceCardSkeleton, FinanceHeroSkeleton, FinanceListSkeleton } from "@/components/finance-skeleton";
 import { formatDate } from "@/lib/format-time";
 
 const getStatusText = (status: any) => {
@@ -73,10 +74,10 @@ const StockQuotes = () => {
   const [extractAllOpen, setExtractAllOpen] = useState(false);
   const [extractAllAddress, setExtractAllAddress] = useState<string>("");
 
-  const { data: workerStats } = useQuery({ fetcher: apiDashboard.workerStats });
-  const { data: overview } = useQuery({ fetcher: apiDashboard.revenueOverview });
-  const { data: orders, refresh } = useQuery({ fetcher: apiOrder.listMachineOrders });
-  const { data: revenueSummary, refresh: refreshRevenueSummary } = useQuery({ fetcher: apiOrder.revenueSummary });
+  const { data: workerStats, initLoading: workerStatsInitLoading } = useQuery({ fetcher: apiDashboard.workerStats });
+  const { data: overview, initLoading: overviewInitLoading } = useQuery({ fetcher: apiDashboard.revenueOverview });
+  const { data: orders, refresh, initLoading: orderInitLoading } = useQuery({ fetcher: apiOrder.listMachineOrders });
+  const { data: revenueSummary, refresh: refreshRevenueSummary, initLoading: revenueSummaryInitLoading } = useQuery({ fetcher: apiOrder.revenueSummary });
   const { data: addressRows } = useQuery({ fetcher: apiUser.getReceiveAddressList });
 
   const btcAddressOptions = useMemo(
@@ -137,6 +138,7 @@ const StockQuotes = () => {
 
   const allRows = revenueSummary?.orders || [];
   const totalWithdrawable = Number(revenueSummary?.totalWithdrawableBtc || 0);
+  const pageInitLoading = workerStatsInitLoading || overviewInitLoading || orderInitLoading || revenueSummaryInitLoading;
 
   const openExtractModal = (item: any) => {
     const canWithdraw = Number(item?.withdrawableRevenueCoin || 0) > 0;
@@ -155,6 +157,9 @@ const StockQuotes = () => {
 
   return (
     <main className="pb-10 text-sm px-3 fade-stagger">
+      {pageInitLoading ? (
+        <FinanceHeroSkeleton />
+      ) : (
       <section className="mt-3 rounded-2xl border border-[#d8e7ff] bg-gradient-to-br from-[#f3f8ff] via-[#edf5ff] to-[#e6f0ff] px-4 py-3 shadow-[0_10px_24px_rgba(33,91,168,0.12)]">
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
@@ -170,6 +175,10 @@ const StockQuotes = () => {
           <span className="px-2 py-0.5 rounded-full bg-white/80 border border-[#d7e5fb] text-[#3e6494]">实时数据同步中</span>
         </div>
       </section>
+      )}
+      {pageInitLoading ? (
+        <FinanceCardSkeleton lines={4} />
+      ) : (
       <section className="glass-card p-4 mt-3">
         <div className="text-base font-extrabold finance-title mb-3">算力面板</div>
         <div className="finance-kv">
@@ -203,7 +212,11 @@ const StockQuotes = () => {
           </button>
         </div>
       </section>
+      )}
 
+      {pageInitLoading ? (
+        <FinanceListSkeleton rows={3} withTabs />
+      ) : (
       <section className="glass-card p-4 mt-3">
         <div className="text-base font-extrabold finance-title mb-2">算力订单列表</div>
         <div className="flex gap-2 mb-3">
@@ -295,6 +308,7 @@ const StockQuotes = () => {
           })}
         </div>
       </section>
+      )}
 
       <Modal
         title="确认提取收益"

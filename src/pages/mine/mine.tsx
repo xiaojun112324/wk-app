@@ -18,6 +18,7 @@ import { useQuery } from "@/hooks/useQuery";
 import { apiUser } from "@/apis/user";
 import { useUserContext } from "@/contexts/user/userContext";
 import { copyToClipboard } from "@/lib/copyToClipboard";
+import { FinanceCardSkeleton, FinanceHeroSkeleton } from "@/components/finance-skeleton";
 
 export default function Mine() {
   const userContext = useUserContext();
@@ -43,6 +44,7 @@ export default function Mine() {
   const hasFundPassword = !!fundPwdStatus?.hasWithdrawPassword;
   const addressReady = !addressInitLoading && !addressLoading && Number((addressRes as any)?.code) === 200;
   const hasReceiveAddress = Array.isArray(addressRows) && addressRows.length > 0;
+  const pageInitLoading = !me && (fundPwdInitLoading || addressInitLoading);
 
   const onCopy = async (value: string | number, label: string) => {
     const text = String(value || "").trim();
@@ -74,7 +76,7 @@ export default function Mine() {
 
   return (
     <div className="text-sm pb-8 px-3 fade-stagger">
-      <section className="mt-3 rounded-2xl border border-[#d8e7ff] bg-gradient-to-br from-[#f3f8ff] via-[#edf5ff] to-[#e6f0ff] px-4 py-3 shadow-[0_10px_24px_rgba(33,91,168,0.12)]">
+      {pageInitLoading ? <FinanceHeroSkeleton /> : <section className="mt-3 rounded-2xl border border-[#d8e7ff] bg-gradient-to-br from-[#f3f8ff] via-[#edf5ff] to-[#e6f0ff] px-4 py-3 shadow-[0_10px_24px_rgba(33,91,168,0.12)]">
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
             <div className="text-[18px] font-extrabold text-[#163a68] leading-none">我的</div>
@@ -84,8 +86,8 @@ export default function Mine() {
             <UserRound size={18} className="text-[#255cae]" />
           </div>
         </div>
-      </section>
-      <section className="glass-card px-4 py-4 mt-3">
+      </section>}
+      {pageInitLoading ? <FinanceCardSkeleton lines={5} /> : <section className="glass-card px-4 py-4 mt-3">
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0 flex-1">
             <div className="text-[22px] font-extrabold text-[#163a68] leading-tight truncate">
@@ -134,7 +136,7 @@ export default function Mine() {
             </div>
           </div>
         </div>
-      </section>
+      </section>}
 
       <section className="mt-3 space-y-2.5">
         <div className="grid grid-cols-2 gap-2.5">

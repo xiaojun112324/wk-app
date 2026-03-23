@@ -13,7 +13,10 @@ export default function MineLayout({ children }: MainLayoutProps) {
   return (
     <>
 
-      <div className="h-[65px] sm:h-[116px]" />
+      <div
+        className="sm:h-[116px]"
+        style={{ height: "calc(65px + var(--safe-area-top))" }}
+      />
 
       <div className="mine-layout block md:flex ">
         <div className=" w-[374px] hidden md:block">

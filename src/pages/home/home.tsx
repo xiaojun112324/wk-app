@@ -5,6 +5,7 @@ import { useQuery } from "@/hooks/useQuery";
 import { usePolling } from "@/hooks/usePolling";
 import { ApiPub } from "@/apis/public";
 import { apiOther } from "@/apis/other";
+import { FinanceBannerSkeleton, FinanceListSkeleton, FinanceNavGridSkeleton } from "@/components/finance-skeleton";
 import MiningItem from "./components/MiningItem";
 import { navListData } from "./navListData";
 
@@ -19,12 +20,12 @@ const navIconMap: Record<string, any> = {
 export default function Home() {
   const navigate = useNavigate();
 
-  const { data: poolData, refresh: refreshPool } = useQuery({
+  const { data: poolData, refresh: refreshPool, initLoading: poolInitLoading } = useQuery({
     fetcher: ApiPub.poolStats,
     params: {},
   });
 
-  const { data: bannerData } = useQuery({
+  const { data: bannerData, initLoading: bannerInitLoading } = useQuery({
     fetcher: () => apiOther.getBannerList(),
     params: {},
   });
@@ -67,7 +68,9 @@ export default function Home() {
         <div className="text-[18px] font-extrabold tracking-[0.2px] text-[#143b75]">CServer</div>
       </div>
 
-      {topBannerUrl ? (
+      {bannerInitLoading ? (
+        <FinanceBannerSkeleton />
+      ) : topBannerUrl ? (
         <section className="glass-card p-1 overflow-hidden bg-[#eef5ff]">
           {topBannerJump ? (
             <a href={topBannerJump} target="_blank" rel="noreferrer">
@@ -89,26 +92,34 @@ export default function Home() {
         </section>
       ) : null}
 
-      <section className="grid grid-cols-5 gap-2 py-4">
-        {navListData.map((item: any) => {
-          const IconComp = navIconMap[item.iconKey] || Calculator;
-          return (
-            <Link to={item.path} key={`${item.path}-${item.title}`} className="glass-card flex flex-col justify-center py-2 px-1">
-              <div className="size-10 mx-auto rounded-xl bg-gradient-to-br from-[#e9f2ff] to-[#d8e9ff] border border-[#c9dcff] flex items-center justify-center">
-                <IconComp size={20} strokeWidth={2.2} className="text-[#2459a8]" />
-              </div>
-              <div className="text-[11px] mt-1 text-[#4a6794] text-center leading-4">{item.title}</div>
-            </Link>
-          );
-        })}
-      </section>
+      {bannerInitLoading ? (
+        <FinanceNavGridSkeleton />
+      ) : (
+        <section className="grid grid-cols-5 gap-2 py-4">
+          {navListData.map((item: any) => {
+            const IconComp = navIconMap[item.iconKey] || Calculator;
+            return (
+              <Link to={item.path} key={`${item.path}-${item.title}`} className="glass-card flex flex-col justify-center py-2 px-1">
+                <div className="size-10 mx-auto rounded-xl bg-gradient-to-br from-[#e9f2ff] to-[#d8e9ff] border border-[#c9dcff] flex items-center justify-center">
+                  <IconComp size={20} strokeWidth={2.2} className="text-[#2459a8]" />
+                </div>
+                <div className="text-[11px] mt-1 text-[#4a6794] text-center leading-4">{item.title}</div>
+              </Link>
+            );
+          })}
+        </section>
+      )}
 
-      <section className="glass-card px-3 py-2">
-        <div className="font-bold finance-title">{"\u77ff\u6c60\u7edf\u8ba1"}</div>
-        {list.map((item: any) => (
-          <MiningItem miningItem={item} key={item.id} onClick={onCoinDetail} />
-        ))}
-      </section>
+      {poolInitLoading ? (
+        <FinanceListSkeleton rows={4} />
+      ) : (
+        <section className="glass-card px-3 py-2">
+          <div className="font-bold finance-title">{"\u77ff\u6c60\u7edf\u8ba1"}</div>
+          {list.map((item: any) => (
+            <MiningItem miningItem={item} key={item.id} onClick={onCoinDetail} />
+          ))}
+        </section>
+      )}
     </div>
   );
 }

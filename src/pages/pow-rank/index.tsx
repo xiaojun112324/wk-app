@@ -3,6 +3,7 @@ import AppNav from "@/components/AppNav";
 import { useQuery } from "@/hooks/useQuery";
 import { usePolling } from "@/hooks/usePolling";
 import { ApiPub } from "@/apis/public";
+import { FinanceListSkeleton } from "@/components/finance-skeleton";
 
 const toNum = (v: any) => {
   const n = Number(v);
@@ -56,7 +57,7 @@ const calcPow24hOutputCny = (item: any) => {
 };
 
 export default function PowRankPage() {
-  const { data, refresh } = useQuery({
+  const { data, refresh, initLoading } = useQuery({
     fetcher: ApiPub.powRank,
     params: {},
   });
@@ -88,7 +89,11 @@ export default function PowRankPage() {
           <div className="text-right">流通市值 / PoW24h产出</div>
         </div>
 
-        {rankList.length ? (
+        {initLoading ? (
+          <div className="mt-3">
+            <FinanceListSkeleton rows={4} />
+          </div>
+        ) : rankList.length ? (
           rankList.map((item: any, index: number) => {
             return (
               <div key={item.id ?? item.symbol} className="finance-list-row">

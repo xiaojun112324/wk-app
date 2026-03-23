@@ -5,6 +5,7 @@ import { CheckBadgeIcon } from "@heroicons/react/24/solid";
 import { AnimatePresence, motion } from "framer-motion";
 import type { RcFile } from "antd/es/upload/interface";
 import AppNav from "@/components/AppNav";
+import { Skeleton } from "@/components/ui/skeleton";
 import { apiChat } from "@/apis/chat";
 import { $post } from "@/lib/http";
 import { formatDate } from "@/lib/format-time";
@@ -183,8 +184,15 @@ const Support: React.FC = () => {
         style={{ paddingBottom: `${12 + keyboardInset}px` }}
       >
         {loading ? (
-          <div className="h-full flex items-center justify-center">
-            <Spin />
+          <div className="flex flex-col gap-3 py-2">
+            {Array.from({ length: 5 }).map((_, idx) => (
+              <div key={idx} className={`flex ${idx % 2 === 0 ? "justify-start" : "justify-end"}`}>
+                <div className="max-w-[78%] space-y-2">
+                  <Skeleton className={`h-12 rounded-2xl ${idx % 2 === 0 ? "w-40" : "w-32"}`} />
+                  <Skeleton className="h-3 w-20" />
+                </div>
+              </div>
+            ))}
           </div>
         ) : sortedMessages.length === 0 ? (
           <div className="text-center text-[#7990b2] mt-10">暂无消息</div>
